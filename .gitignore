@@ -8,6 +8,7 @@
 *.blg
 *.fdb_latexmk
 *.fls
+*.dvi
 *.lof
 *.log
 *.lot
@@ -15,3 +16,4 @@
 *.run.xml
 *.synctex.gz
 *.toc
+*.xdv

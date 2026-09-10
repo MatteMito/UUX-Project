@@ -1,6 +1,6 @@
 LATEXMK ?= latexmk
 BUILD_DIR := build/latex
-MAIN := project-report.tex
+MAIN := hphp-project-report.tex
 OUTPUT := hphp-project-report.pdf
 
 .PHONY: pdf clean
@@ -12,3 +12,4 @@ pdf:
 
 clean:
 	$(LATEXMK) -C -outdir=$(BUILD_DIR) -jobname=hphp-project-report $(MAIN)
+	rm -rf build
