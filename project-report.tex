@@ -1,0 +1,93 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\usepackage[italian]{babel}
+\usepackage[a4paper,margin=2.4cm]{geometry}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{xurl}
+\usepackage{fancyhdr}
+
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{2}
+\setlength{\emergencystretch}{3em}
+\setlist{nosep}
+\urlstyle{same}
+
+\newcounter{none}
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{%
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox\pandoc@box\fi}
+\makeatother
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue,
+  pdftitle={HPHP Project Documentation},
+  pdfauthor={Team Affordance}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{HPHP Project Documentation}
+\fancyhead[R]{Team Affordance}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \vspace*{2.5cm}
+  {\Huge\bfseries HPHP Project Documentation\par}
+  \vspace{0.8cm}
+  {\Large Online Healthcare Booking Experience Redesign\par}
+  \vspace{0.5cm}
+  {\large CUPweb and ER Salute\par}
+  \vfill
+  {\large Team Affordance\par}
+  \vspace{0.4cm}
+  Matteo Boscherini\par
+  Alessandro Campedelli\par
+  Francesco Maria Fuligni\par
+  \vfill
+  Corso di Usability \& User Experience Design\par
+  Anno accademico 2025--2026\par
+\end{titlepage}
+
+\section{About This Document}
+
+Questo documento raccoglie le card testuali del progetto HPHP e il protocollo di test rapido. Il contenuto è suddiviso in quattro sorgenti LaTeX, uno per ogni fase, inclusi in ordine nel presente documento principale.
+
+I file nativi relativi a blueprint, wireframe, confronto Before/After, guideline e personas restano artefatti separati nelle rispettive directory, così da conservarne la piena modificabilità.
+
+\tableofcontents
+
+\input{phase-a/phase-a}
+\input{phase-b/phase-b}
+\input{phase-c/phase-c}
+\input{phase-d/phase-d}
+
+\end{document}

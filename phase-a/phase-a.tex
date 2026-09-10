@@ -1,0 +1,976 @@
+% Generated from HPHP_Documentazione_Completa_EDITABILE.docx.
+% The phase title is in English; the source content is preserved in Italian.
+\section{Phase A --- Ethnographic Research and Assessment}
+
+\emph{\textbf{FASE A --- Documento 01}}
+
+Team card
+
+\textbf{Nome del gruppo}
+
+Team Affordance
+
+\textbf{Membro del team}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3324}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6676}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Campo} & \textbf{Valore} \\
+Nome completo & Matteo Boscherini \\
+Matricola & 0001239423 \\
+E-mail & matteo.boscherini@studio.unibo.it \\
+Corso di studi & Informatica Magistrale --- Curriculum B \\
+\end{longtable}
+}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3324}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6676}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Campo} & \textbf{Valore} \\
+Nome completo & Alessandro Campedelli \\
+Matricola & 0001242904 \\
+E-mail & alessandr.campedell3@studio.unibo.it \\
+Corso di studi & Informatica Magistrale --- Curriculum B \\
+\end{longtable}
+}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3324}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6676}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Campo} & \textbf{Valore} \\
+Nome completo & Francesco Maria Fuligni \\
+Matricola & 0001246029 \\
+E-mail & francesco.fuligni@studio.unibo.it \\
+Corso di studi & Informatica Magistrale --- Curriculum C: Sistemi e
+Reti \\
+\end{longtable}
+}
+
+\emph{\textbf{FASE A --- Documento 02}}
+
+Client card
+
+\textbf{Nome del cliente}
+
+Regione Emilia-Romagna --- Assessorato alle Politiche per la Salute, in
+collaborazione con CUP 2000 S.c.p.A., società in-house che gestisce
+tecnicamente i sistemi regionali di prenotazione sanitaria (CUPweb, app
+ER Salute, Fascicolo Sanitario Elettronico) per conto delle Aziende USL
+e Ospedaliere del territorio.
+
+\textbf{Descrizione del cliente}
+
+Ente pubblico regionale che coordina i servizi sanitari di tutta
+l\textquotesingle Emilia-Romagna attraverso le Aziende Sanitarie locali
+(AUSL Bologna, AUSL Romagna, AUSL Modena, AUSL Parma, AUSL Reggio
+Emilia, AUSL Ferrara e le Aziende Ospedaliero-Universitarie). Il cliente
+ha già una presenza digitale matura e consolidata: gestisce il Fascicolo
+Sanitario Elettronico regionale, il portale di prenotazione CUPweb,
+l\textquotesingle app mobile ER Salute, un call center regionale (800
+numbers per singola AUSL) e una rete di sportelli fisici e farmacie
+convenzionate (FarmaCUP). Non lavoriamo direttamente per la Regione: la
+nostra società di consulenza UX è stata incaricata da un system
+integrator che opera per conto di CUP 2000 di proporre un redesign
+dell\textquotesingle esperienza di prenotazione, da presentare come case
+study per un possibile incarico più ampio.
+
+\textbf{Nome del tool}
+
+CUPweb (portale web, www.cupweb.it) e app mobile ER Salute --- sistema
+regionale di prenotazione online delle prestazioni sanitarie
+specialistiche (visite ed esami) della Regione Emilia-Romagna.
+
+\textbf{Come accedere al tool}
+
+Via browser su www.cupweb.it, tramite SPID, CIE o credenziali FSE/CUPweb
+rilasciate agli sportelli; oppure tramite l\textquotesingle app ER
+Salute (iOS/Android), che consente di prenotare/disdire visite per sé
+stessi e per i familiari associati (minori o persone tutelate).
+
+\textbf{Perché il cliente dovrebbe voler finanziare un nuovo tool?}
+
+Il canale digitale, pur gratuito e disponibile 24/7, resta
+sotto-utilizzato dalla fascia più anziana della popolazione, che
+continua a intasare call center e sportelli fisici o a delegare
+integralmente la prenotazione a un familiare. Questo genera costi
+operativi elevati per il servizio sanitario regionale (personale agli
+sportelli, call center), un alto tasso di mancate presentazioni
+("no-show", oggetto peraltro di una sanzione economica prevista dalla
+L.R. 2/2016), e non risponde agli obiettivi di digitalizzazione della
+sanità pubblica previsti dal PNRR (Missione 6). Un redesign mirato sulla
+fiducia e sull\textquotesingle autonomia degli utenti anziani, che
+valorizzi --- invece di scavalcare --- il ruolo del caregiver familiare,
+è coerente con questi obiettivi e giustificabile in termini di riduzione
+costi.
+
+\textbf{Product Objectives}
+
+Consentire ai pazienti anziani cronici di partecipare più attivamente
+alla gestione dei propri appuntamenti sanitari --- anche quando
+assistiti da un familiare --- riducendo l\textquotesingle ansia da
+interfaccia, aumentando la fiducia nel canale digitale e trasformando il
+caregiver da "esecutore" a "facilitatore/allenatore"
+dell\textquotesingle autonomia del proprio caro.
+
+\textbf{Business Goals}
+
+Riduzione dei costi operativi di call center e sportelli fisici;
+riduzione del tasso di mancata presentazione agli appuntamenti;
+incremento della quota di prenotazioni gestite sul canale digitale, in
+linea con i target nazionali di digitalizzazione della sanità pubblica
+(PNRR Missione 6, componente 2).
+
+\textbf{Brand identity}
+
+Rafforzare la percezione della sanità pubblica regionale come moderna,
+efficiente ma allo stesso tempo vicina e inclusiva verso i cittadini più
+fragili --- "la sanità digitale che non lascia indietro nessuno" ---
+differenziandosi da una digitalizzazione percepita come fredda o ostile
+dalla popolazione anziana.
+
+\textbf{Success metrics}
+
+\begin{itemize}
+\item
+  Aumento della quota di prenotazioni effettuate (anche in co-presenza
+  con un familiare) direttamente da utenti over 70
+\item
+  Riduzione del tempo medio necessario per completare una prenotazione
+\item
+  Punteggio SUS del nuovo prototipo superiore a 68 (soglia di buona
+  usabilità) sul segmento target
+\item
+  Riduzione del tasso di abbandono durante il flusso di prenotazione
+\item
+  Riduzione delle chiamate al call center motivate da difficoltà di
+  utilizzo del portale/app
+\end{itemize}
+
+\emph{\textbf{FASE A --- Documento 03}}
+
+User Segmentation card
+
+\textbf{Dimensioni di segmentazione scelte}
+
+\begin{itemize}
+\item
+  Demografica: età, presenza/assenza di una rete familiare di supporto
+\item
+  Comportamentale: frequenza di utilizzo del servizio, grado di delega
+  della prenotazione a terzi
+\item
+  Psicologica: livello di ansia/sfiducia verso gli strumenti digitali,
+  motivazione all\textquotesingle autonomia
+\item
+  Contestuale: dispositivo disponibile, presenza fisica o meno del
+  caregiver al momento del bisogno, distanza abitativa
+  caregiver--assistito
+\end{itemize}
+
+\textbf{Motivazione della scelta, relazione con il tool del cliente}
+
+Il progetto HPHP richiede di considerare due audience distinte ma
+interdipendenti: l\textquotesingle utente diretto (che deve usare il
+servizio ma non è ancora un utente attivo, ed è scettico/impaurito) e
+l\textquotesingle intermediario (che oggi lo sostituisce integralmente).
+Per CUPweb/ER Salute, l\textquotesingle utente diretto naturale è il
+paziente anziano cronico, che deve prenotare ricorrentemente visite ed
+esami; l\textquotesingle intermediario naturale è il caregiver
+familiare, che già oggi gestisce gran parte delle pratiche sanitarie del
+proprio caro. Le dimensioni scelte permettono di distinguere non solo
+per età anagrafica, ma per il reale grado di autonomia/dipendenza
+digitale delle due popolazioni, che è il fattore che il redesign deve
+realmente affrontare.
+
+\textbf{Segmenti nella dimensione \#1 --- Utenti diretti (per età e
+autonomia digitale)}
+
+\begin{itemize}
+\item
+  1. "Digital newcomer" --- 65-74 anni, competenze digitali di base
+  (messaggistica, videochiamate) ma bloccato/a su procedure strutturate
+  (SPID, moduli, pagamenti online)
+\item
+  2. "Digital avoider" --- 75-85+ anni, competenza tecnica quasi nulla,
+  delega totale delle pratiche digitali al caregiver, spesso patologie
+  croniche con necessità di prenotazioni ricorrenti
+\end{itemize}
+
+\textbf{Segmenti nella dimensione \#2 --- Intermediari (per relazione
+con l\textquotesingle assistito)}
+
+\begin{itemize}
+\item
+  1. Caregiver convivente --- vive con l\textquotesingle assistito,
+  gestisce le prenotazioni "di persona", spesso presente alle visite
+\item
+  2. Caregiver "always-on" a distanza --- figlio/a 45-60 anni che non
+  convive con il genitore, gestisce le pratiche da remoto (telefono/PC),
+  spesso lavoratore/lavoratrice a tempo pieno con poco tempo a
+  disposizione
+\end{itemize}
+
+\textbf{Numero totale di combinazioni di segmento}
+
+2 (utenti diretti) × 2 (intermediari) = 4 combinazioni possibili.
+
+\textbf{Combinazioni di segmentazione scelte}
+
+\begin{itemize}
+\item
+  A. Paziente anziano "digital avoider", 75-85 anni, patologia cronica,
+  con caregiver figlio/a disponibile ma non sempre fisicamente presente
+  (utente diretto)
+\item
+  B. Caregiver "always-on" a distanza, 45-60 anni, alta competenza
+  tecnica, gestisce da remoto le prenotazioni del genitore, vorrebbe
+  poter delegare gradualmente compiti semplici (intermediario)
+\end{itemize}
+
+\textbf{Perché le combinazioni scelte sono più rappresentative, sfidanti
+ed espressive delle altre}
+
+I due segmenti scelti rappresentano i due estremi della relazione di
+dipendenza digitale che il progetto HPHP vuole affrontare: da un lato
+l\textquotesingle utente completamente dipendente e più a rischio di
+esclusione digitale (dato Istat 2025: solo il 63,9\% delle famiglie di
+soli anziani ha una connessione internet domestica, contro il 95,1\%
+delle altre famiglie), dall\textquotesingle altro
+l\textquotesingle intermediario che il cliente vuole trasformare da
+"esecutore" a "trainer" dell\textquotesingle autonomia del genitore. È
+inoltre il caso più sfidante dal punto di vista del design (bassa
+competenza tecnica + alta necessità percepita di
+controllo/rassicurazione da parte del caregiver a distanza) e più
+rilevante numericamente: in Italia sono oltre 7 milioni le persone che
+svolgono attività di caregiving familiare almeno una volta a settimana,
+per il 58-60\% donne tra i 45 e i 64 anni.
+
+\textbf{Impatto atteso sul design}
+
+Sarà necessaria un\textquotesingle esperienza a due livelli, con
+percorsi guidati passo-passo e a basso carico cognitivo per
+l\textquotesingle utente anziano (linguaggio semplice, conferme
+esplicite, possibilità di richiamare assistenza umana in ogni momento),
+e strumenti di co-prenotazione/delega controllata per il caregiver a
+distanza (visibilità sullo stato delle prenotazioni del genitore,
+notifiche, possibilità di prenotare per conto di un familiare associato
+mantenendo però il genitore informato e coinvolto). Il design dovrà
+rendere visibile e graduale il passaggio di competenza dal caregiver al
+paziente, coerentemente con l\textquotesingle obiettivo di business del
+cliente.
+
+\emph{\textbf{FASE A --- Documento 04 (1/2)}}
+
+Market research card --- Segmento A
+
+\textbf{Segmento di scelta}
+
+Paziente anziano "digital avoider", 75-85 anni, patologia cronica,
+utente diretto del servizio, con caregiver familiare disponibile ma non
+sempre fisicamente presente.
+
+\textbf{Motivazione della scelta}
+
+È il segmento più esposto al rischio di esclusione digitale
+nell\textquotesingle accesso ai servizi sanitari essenziali, e quello su
+cui un redesign centrato sulla fiducia e sull\textquotesingle autonomia
+deve dimostrare il maggiore impatto.
+
+\textbf{Metodo di ricerca utilizzato --- Available statistics}
+
+Fonti: ISTAT, report "Cittadini e ICT" --- Anno 2024 (pubblicato 28
+aprile 2025) e Anno 2025 (pubblicato aprile 2026), istat.it;
+approfondimenti giornalistici di sintesi (Sanità Informazione,
+AboutPharma) che commentano gli stessi dati Istat.
+
+\begin{itemize}
+\item
+  Nel 2025 il 63,9\% delle famiglie composte esclusivamente da anziani
+  (65+) dispone di connessione a Internet da casa (era il 60,6\% nel
+  2024), contro il 95,1\% delle famiglie non esclusivamente anziane e il
+  98,7\% delle famiglie con almeno un minore.
+\item
+  Tra gli ultra 75enni il divario di genere nell\textquotesingle uso di
+  Internet è marcato: 38,3\% degli uomini contro il 26,5\% delle donne
+  (dato 2024).
+\item
+  Il 57,8\% delle famiglie senza connessione a Internet indica come
+  motivo principale la mancanza di capacità di utilizzo, non il costo
+  dei dispositivi o la mancanza di interesse.
+\item
+  Nel 2024 l\textquotesingle uso di siti/app della Pubblica
+  Amministrazione per scaricare moduli è calato di 9,6 punti percentuali
+  e per prenotare appuntamenti di 8 punti percentuali rispetto
+  all\textquotesingle anno precedente, un segnale di complessità o
+  insoddisfazione d\textquotesingle uso più che di disinteresse.
+\item
+  Il titolo di studio incide fortemente sull\textquotesingle uso di
+  Internet: 95,8\% tra i laureati, 91,6\% tra i diplomati, ma solo
+  69,7\% tra chi ha al massimo la licenza media --- titolo di studio
+  frequente nella coorte 75-85 anni.
+\end{itemize}
+
+\emph{(screenshot delle pagine dei report ISTAT da allegare al materiale
+supplementare)}
+
+\textbf{DA COMPLETARE --- Interviste one-to-one / osservazione sul campo
+con 3-5 pazienti anziani reali (anche solo telefoniche o in presenza di
+un familiare), per validare qualitativamente questi dati quantitativi.
+Traccia di intervista proposta: (1) Come prenoti di solito una visita
+medica? (2) Hai mai provato CUPweb o l\textquotesingle app ER Salute?
+Cosa è successo? (3) Chi ti aiuta di solito con queste pratiche? (4)
+Cosa ti spaventa di più nell\textquotesingle usare il computer/telefono
+per la sanità? (5) Cosa ti farebbe sentire più sicuro/a nel farlo da
+solo/a?}
+
+\textbf{Risultati complessivi dell\textquotesingle analisi}
+
+I dati confermano quantitativamente ciò che il progetto HPHP presume
+qualitativamente: gli anziani over 75, soprattutto donne e con basso
+titolo di studio, sono la fascia più esposta a esclusione digitale nei
+servizi essenziali come la sanità. La barriera principale non è
+l\textquotesingle assenza di device o di connessione, ma la percezione
+di mancanza di competenze --- un problema di fiducia e auto-efficacia
+più che di accesso tecnico.
+
+\textbf{Impatto sul design}
+
+Il design deve minimizzare il carico cognitivo e tecnico richiesto
+(evitare di esporre da subito procedure complesse come
+l\textquotesingle autenticazione SPID), offrire percorsi guidati
+passo-passo con conferme esplicite, validare esplicitamente il ruolo del
+caregiver come alleato e non sostituto, e prevedere sempre una via di
+fuga verso l\textquotesingle assistenza umana (call center, farmacia,
+sportello) senza che questa venga percepita come un fallimento.
+
+\emph{\textbf{FASE A --- Documento 04 (2/2)}}
+
+Market research card --- Segmento B
+
+\textbf{Segmento di scelta}
+
+Caregiver familiare "always-on" a distanza, 45-60 anni, alta competenza
+tecnica, gestisce da remoto le prenotazioni sanitarie di un genitore
+anziano, intermediario del servizio.
+
+\textbf{Motivazione della scelta}
+
+È il segmento che oggi sostiene il costo (tempo, stress, carico mentale)
+della mediazione digitale per conto dell\textquotesingle utente diretto,
+ed è quello che il cliente vuole trasformare da "esecutore" a
+"facilitatore/allenatore" dell\textquotesingle autonomia del proprio
+caro --- un obiettivo centrale del progetto HPHP.
+
+\textbf{Metodo di ricerca utilizzato --- Available statistics}
+
+Fonti: rapporto CNEL-Censis "Il valore sociale del caregiver" (per la
+Regione Lazio, ottobre 2024); sintesi Istat/EHIS su caregiver familiari
+riprese da AboutPharma (2026) e Associazione Carer; dati Istat sulla
+popolazione anziana al 1° gennaio 2026.
+
+\begin{itemize}
+\item
+  In Italia sono oltre 7 milioni le persone che svolgono attività di
+  caregiving familiare non retribuito, assistendo un anziano, un
+  disabile o un familiare non autosufficiente almeno una volta a
+  settimana.
+\item
+  Il 58-60\% dei caregiver familiari è composto da donne di età compresa
+  tra 45 e 64 anni.
+\item
+  Circa il 40\% dei caregiver, pur essendo in età lavorativa, dichiara
+  di non riuscire a conciliare lavoro e attività di assistenza, con
+  rischio di impoverimento del nucleo familiare.
+\item
+  Al 1° gennaio 2026 gli over 65 in Italia sono quasi 14,8 milioni
+  (25,1\% della popolazione) e gli over 85 hanno superato i 2,5 milioni,
+  con una crescita costante attesa nei prossimi decenni: il fenomeno del
+  caregiving è quindi strutturale e non residuale.
+\end{itemize}
+
+\emph{(screenshot dei report citati da allegare al materiale
+supplementare)}
+
+\textbf{DA COMPLETARE --- Intervista/focus group con 2-3 caregiver
+familiari reali (anche colleghi, conoscenti o parenti disponibili,
+dichiarandolo onestamente come da istruzioni del corso). Traccia
+proposta: (1) Come gestisci oggi le prenotazioni sanitarie di tuo
+padre/madre? (2) Quanto tempo/energia richiede questa attività? (3) Hai
+mai provato a far prenotare direttamente il tuo familiare? Cosa è
+successo? (4) Cosa ti darebbe fiducia per lasciargli più autonomia? (5)
+Che tipo di visibilità/controllo vorresti mantenere comunque?}
+
+\textbf{Risultati complessivi dell\textquotesingle analisi}
+
+Il caregiving familiare in Italia è un fenomeno di massa,
+prevalentemente femminile e concentrato nella fascia 45-64 anni, con un
+costo personale significativo in termini di tempo e possibilità
+lavorative. Questo rende particolarmente rilevante, anche dal punto di
+vista del cliente (riduzione indiretta dei costi sociali), un design che
+alleggerisca il carico del caregiver senza however toglierne il
+controllo percepito.
+
+\textbf{Impatto sul design}
+
+Il design dovrà offrire strumenti di co-gestione (visibilità sulle
+prenotazioni del familiare, notifiche, possibilità di intervenire solo
+quando necessario) piuttosto che di sostituzione totale, con una
+progressione esplicita e graduale di autonomia delegata al paziente, in
+modo che il caregiver possa fidarsi di "lasciare andare" un compito alla
+volta.
+
+\emph{\textbf{FASE A --- Documento 05a}}
+
+Assessment of existing resource card --- Tool del cliente
+
+\textbf{Nome del tool}
+
+CUPweb (portale, www.cupweb.it) e app mobile ER Salute --- Regione
+Emilia-Romagna.
+
+\textbf{Piattaforme}
+
+Sito web responsive-limitato (desktop e browser mobile); app nativa
+Android e iOS (una versione Windows Phone risulta dismessa).
+
+\textbf{Scopo principale, operazioni consentite, adeguatezza percepita
+agli standard professionali}
+
+Il tool consente di prenotare, disdire e modificare appuntamenti per
+prestazioni sanitarie specialistiche (SSN e Libera Professione), pagare
+online una prenotazione, consultare il Fascicolo Sanitario Elettronico e
+ristampare i promemoria degli appuntamenti. Dal punto di vista tecnico
+il sito è funzionante e integrato con gli standard nazionali di identità
+digitale (SPID, CIE, CNS), ma l\textquotesingle impostazione grafica e
+architetturale risulta datata rispetto agli standard di design
+contemporanei della Pubblica Amministrazione (confrontabile con le linee
+guida di design.gov.it): navigazione a menu testuali densi, assenza di
+una gerarchia visiva chiara, servizi distribuiti su domini diversi e
+visivamente scollegati tra loro (cupweb.it, pagonlinesanita.it,
+fascicolo-sanitario.it, support.fascicolo-sanitario.it).
+
+\textbf{Principali punti di forza, motivo della scelta}
+
+\begin{itemize}
+\item
+  Gratuito e disponibile 24/7, riduce la necessità di recarsi
+  fisicamente a uno sportello
+\item
+  Integrazione con gli standard nazionali di identità digitale
+  (SPID/CIE/CNS), coerente con l\textquotesingle infrastruttura pubblica
+\item
+  Copertura territoriale capillare su tutta la Regione Emilia-Romagna,
+  con canali alternativi complementari (farmacie FarmaCUP, call center,
+  sportelli fisici) per chi non può/vuole usare il digitale
+\item
+  È il vero tool che il cliente ci ha chiesto di ridisegnare:
+  analizzarlo nella sua forma reale, difetti inclusi, è indispensabile
+  per un redesign credibile
+\end{itemize}
+
+\textbf{Principali punti di debolezza}
+
+\begin{itemize}
+\item
+  Autenticazione obbligatoria complessa (SPID livello 2/CIE) anche solo
+  per prenotare, con re-autenticazioni periodiche forzate che gli utenti
+  reali segnalano come fonte di frustrazione ricorrente nelle recensioni
+  pubbliche dell\textquotesingle app
+\item
+  Servizi distribuiti su più domini/sottodomini esterni tra loro
+  visivamente scollegati, un pattern che in un utente anziano diffidente
+  può generare sospetto di phishing invece di fiducia
+\item
+  Problemi di accessibilità segnalati da utenti con lettori di schermo,
+  nonostante la dichiarazione di accessibilità pubblicata
+\item
+  Interfaccia informativa fortemente testuale, con bassa gerarchia
+  visiva e nessun elemento di orientamento per un utente al primo
+  utilizzo
+\item
+  Le funzioni disponibili senza autenticazione sono minime (solo
+  pagamento e disdetta), il che costringe da subito
+  l\textquotesingle utente meno esperto ad affrontare la parte più
+  complessa del flusso (identità digitale) prima ancora di capire il
+  valore del servizio
+\end{itemize}
+
+First Impressions --- Direct Analysis
+
+\emph{Analisi diretta secondo le categorie delle User Focus Guidelines
+(\url{https://www.userfocus.co.uk/resources/guidelines.html}): Navigation, Search, Content
+organisation \& layout, Content and titles, Page layout, Shopping/task
+completion (qui: prenotazione), Trust and credibility. Il foglio di
+valutazione completo con i punteggi guideline-per-guideline va compilato
+nel file Excel dedicato; qui riportiamo la sintesi delle criticità più
+rilevanti riscontrate.}
+
+\textbf{Elenco delle criticità principali}
+
+\begin{itemize}
+\item
+  {[}Navigation{]} I link di primo livello ("Disdici", "Prenota",
+  "Paga", "Informazioni") portano a domini esterni differenti senza
+  preavviso visivo --- viola la linearità di navigazione attesa
+\item
+  {[}Trust and credibility{]} Il passaggio tra domini diversi (cupweb.it
+  → pagonlinesanita.it, fascicolo-sanitario.it) senza un design coerente
+  indebolisce la percezione di affidabilità, un fattore critico proprio
+  per l\textquotesingle utente anziano diffidente che è il target del
+  progetto
+\item
+  {[}Page layout{]} Assenza di elementi visivi (icone, immagini, colori
+  distintivi) che aiutino il riconoscimento rapido delle azioni
+  disponibili; il testo è l\textquotesingle unico veicolo informativo
+\item
+  {[}Content and titles{]} Terminologia tecnico-burocratica non spiegata
+  in linguaggio semplice (es. "CNS", "SPID", "impegnativa
+  dematerializzata") esposta senza tooltip o spiegazioni contestuali
+\item
+  {[}Task completion{]} Il completamento della maggior parte delle
+  azioni richiede autenticazione forte fin dal primo passo, senza un
+  percorso dimostrativo o guidato per il nuovo utente
+\item
+  {[}Accessibility{]} Segnalazioni pubbliche di incompatibilità con
+  screen reader per utenti non vedenti, nonostante
+  l\textquotesingle esistenza di una dichiarazione di accessibilità
+  formale
+\end{itemize}
+
+First Impressions --- Reverse Analysis
+
+\emph{Analisi condotta simulando il task "disdire un appuntamento già
+fissato, partendo da un link ricevuto per SMS, senza credenziali SPID
+già pronte" --- scenario realistico per il segmento A (paziente
+anziano).}
+
+\textbf{Elenco delle criticità principali}
+
+\begin{itemize}
+\item
+  Il task di disdetta è tra i pochi eseguibili senza autenticazione
+  forte, ma non è immediatamente distinguibile in home page da quello di
+  prenotazione --- richiede comunque lettura attenta dei menu
+\item
+  Non è chiaro, senza leggere il testo esplicativo per intero, quale sia
+  la differenza fra i canali "Servizio Sanitario Nazionale" e "Libera
+  Professione" al momento della scelta, pur essendo un bivio obbligato
+  del flusso
+\item
+  Recensioni reali dell\textquotesingle app ER Salute segnalano che la
+  cronologia dei documenti/appuntamenti non è ordinabile o ricercabile
+  per data, costringendo a scorrimenti lunghi --- un problema di
+  efficienza soprattutto per un utente con minore dimestichezza con lo
+  scroll touch
+\item
+  Il cambio dell\textquotesingle obbligo di autenticazione (introduzione
+  dell\textquotesingle obbligo SPID dove prima bastava il riconoscimento
+  biometrico) è stato vissuto da utenti reali come un peggioramento
+  improvviso e non comunicato in modo comprensibile, minando la fiducia
+  già costruita
+\end{itemize}
+
+\emph{\textbf{FASE A --- Documento 05b}}
+
+Assessment of existing resource card --- Tool competitor
+
+\textbf{Nome del tool}
+
+MioDottore (Doctolib Italia) --- piattaforma privata di prenotazione di
+visite mediche.
+
+\textbf{Piattaforme}
+
+Sito web (miodottore.it) responsive, app nativa Android e iOS.
+
+\textbf{Scopo principale, operazioni consentite, adeguatezza percepita
+agli standard professionali}
+
+Piattaforma privata (non SSN) che permette di cercare oltre 240.000
+medici e specialisti per categoria, città o assicurazione sanitaria,
+leggere recensioni di altri pazienti, prenotare una visita in pochi
+passaggi, ricevere promemoria, gestire/annullare appuntamenti e
+contattare lo specialista via messaggi o videoconsulto. Il design è
+moderno, coerente con gli standard commerciali attuali (ricerca a
+faccette, mappa, card con foto, iconografia chiara).
+
+\textbf{Principali punti di forza, motivo della scelta}
+
+\begin{itemize}
+\item
+  Un solo dominio, un solo brand coerente per tutto il flusso --- nessun
+  salto percepito di fiducia come invece accade in CUPweb
+\item
+  Registrazione/accesso semplificato (email o numero di telefono), senza
+  richiedere un\textquotesingle identità digitale certificata come SPID
+  per la sola consultazione o prenotazione
+\item
+  Interfaccia fortemente visiva: foto dei professionisti, valutazioni a
+  stelle, filtri chiari, mappa --- riduce il carico cognitivo rispetto
+  al solo testo
+\item
+  Promemoria automatici e possibilità di messaggistica diretta col
+  professionista, elementi di rassicurazione assenti in CUPweb
+\item
+  È stato scelto come termine di paragone perché, pur avendo uno scopo
+  diverso (mercato privato vs. sanità pubblica), rappresenta un
+  benchmark di riferimento per gli standard di semplicità che un utente
+  anziano o il suo caregiver oggi si aspettano da un\textquotesingle app
+  di prenotazione sanitaria, avendola probabilmente già vista usare da
+  altri familiari
+\end{itemize}
+
+\textbf{Principali punti di debolezza}
+
+\begin{itemize}
+\item
+  Le recensioni sono moderate secondo linee guida della piattaforma
+  stessa, il che ha generato dubbi pubblici sulla loro
+  genuinità/affidabilità --- un problema di trasparenza che il progetto
+  HPHP (dove la fiducia è centrale) deve evitare di replicare
+\item
+  Alcuni utenti segnalano un flusso di login inutilmente frammentato tra
+  browser, modali e rimando all\textquotesingle app store, con
+  conseguente frustrazione
+\item
+  Il servizio è privato: non integra il Servizio Sanitario Nazionale, le
+  esenzioni ticket, o il Fascicolo Sanitario Elettronico --- quindi non
+  risolve da solo il caso d\textquotesingle uso del cliente, ma resta
+  valido come fonte di ispirazione sul piano
+  dell\textquotesingle esperienza
+\item
+  Il modello di business (i medici pagano per essere visibili) può
+  introdurre bias nei risultati di ricerca, un problema di trasparenza
+  inapplicabile ma da tenere presente come contro-esempio
+\end{itemize}
+
+First Impressions --- Direct Analysis
+
+\textbf{Elenco delle criticità principali}
+
+\begin{itemize}
+\item
+  {[}Trust and credibility{]} Il sistema di recensioni moderate genera
+  sospetto in una parte degli utenti, minando proprio
+  l\textquotesingle elemento di fiducia che dovrebbe essere il punto di
+  forza
+\item
+  {[}Task completion{]} Il login, secondo segnalazioni reali, può
+  risultare inutilmente lungo (redirect multipli tra app e browser) su
+  alcuni dispositivi
+\item
+  {[}Navigation{]} Buona nel complesso: ricerca a faccette e mappa
+  riducono il carico di navigazione libera, un pattern che vale la pena
+  studiare per il redesign
+\end{itemize}
+
+First Impressions --- Reverse Analysis
+
+\emph{Analisi condotta simulando il task "trovare e prenotare una visita
+specialistica vicino a casa, come utente al primo accesso".}
+
+\textbf{Elenco delle criticità principali}
+
+\begin{itemize}
+\item
+  Il primo accesso è comunque mediato da un passaggio di registrazione,
+  anche se più leggero di SPID --- un piccolo attrito resta anche nel
+  miglior competitor osservato
+\item
+  La grande quantità di filtri e opzioni (assicurazione, videoconsulto,
+  tipo di visita) può risultare eccessiva per un utente che cerca
+  semplicemente "la prossima visita disponibile", un rischio di
+  sovraccarico da tenere presente anche nel nostro redesign
+\end{itemize}
+
+\emph{\textbf{FASE A --- Documento 06a}}
+
+Preliminary User testing card --- Tool del cliente
+
+\emph{Questo test riguarda CUPweb / app ER Salute, il tool da
+ridisegnare.}
+
+\textbf{Nome del tool}
+
+CUPweb (portale) / app ER Salute
+
+Protocollo di test
+
+\textbf{Setup della sessione di test}
+
+Test in presenza, presso il domicilio del soggetto o in un luogo neutro
+familiare al soggetto (per ridurre l\textquotesingle ansia da contesto),
+su dispositivo del soggetto stesso quando possibile (smartphone o PC
+abitualmente usato), altrimenti su un dispositivo del team
+preconfigurato in modo identico. Un membro del team fa da
+assistente/osservatore, un secondo prende appunti.
+
+\textbf{Metodo di test}
+
+\begin{itemize}
+\item
+  Discount usability testing (3 soggetti, in linea con le indicazioni
+  del corso per test preliminari)
+\end{itemize}
+
+\textbf{Elenco dei task da testare}
+
+\begin{itemize}
+\item
+  T1 --- Accedere al portale/app e individuare come prenotare una visita
+  specialistica (senza completare la prenotazione)
+\item
+  T2 --- Disdire un appuntamento fittizio già presente
+  nell\textquotesingle account demo/test
+\item
+  T3 --- Individuare dove e come chiedere aiuto/assistenza in caso di
+  difficoltà
+\end{itemize}
+
+\textbf{Metodologia di test}
+
+\begin{itemize}
+\item
+  Thinking aloud per i task T1 e T3 (per comprendere il ragionamento e
+  le difficoltà percepite)
+\item
+  Bottom line data per il task T2 (per misurare efficienza/efficacia
+  reale senza interferenze)
+\end{itemize}
+
+\textbf{Metriche di test}
+
+\begin{itemize}
+\item
+  Success (task completato sì/no)
+\item
+  Efficiency (tempo impiegato)
+\item
+  Efficacy (accuratezza del risultato ottenuto)
+\item
+  Errors (numero e tipo di errori commessi)
+\item
+  Learnability (miglioramento fra primo e secondo tentativo, se
+  applicabile)
+\item
+  Satisfaction (tramite questionario SUS)
+\end{itemize}
+
+\textbf{Reclutamento dei soggetti}
+
+\textbf{DA COMPLETARE --- Da completare con soggetti reali. Requisiti
+minimi: almeno 2-3 persone che rientrino nel segmento A (65-85 anni,
+bassa/media competenza digitale) e/o segmento B (caregiver familiare
+45-60 anni). Per ciascun soggetto indicare: nome fittizio, età, genere,
+competenza tecnica e di dominio, somiglianza con il segmento scelto,
+relazione con il team (es. "nonna di un membro del team", "vicino di
+casa"). Almeno due di questi soggetti dovranno essere ricontattati nella
+Fase D per valutare il redesign: pianificare fin da ora una seconda
+sessione con loro.}
+
+\textbf{Modalità di reclutamento dei soggetti}
+
+\textbf{DA COMPLETARE --- Da completare: descrivere onestamente come
+sono stati trovati i soggetti (es. rete familiare/amicale dei membri del
+team, associazioni per anziani del quartiere, centri sociali,
+parrocchie, ecc.).}
+
+\textbf{Motivazione della scelta dei soggetti}
+
+\textbf{DA COMPLETARE --- Da completare con onestà, come richiesto
+esplicitamente dalla card originale: se i soggetti sono stati scelti per
+disponibilità/vicinanza più che per rappresentatività statistica, va
+dichiarato esplicitamente.}
+
+\emph{Le sezioni "Test \#1: Subject\ldots" (nome fittizio, data,
+assistente, contesto, dati qualitativi e quantitativi, punteggio SUS dal
+modulo Google fornito dal corso, suggerimenti dei soggetti, riflessioni
+utili per il design) andranno aggiunte --- una per ciascun soggetto
+reale testato --- non appena i test saranno stati condotti. Il
+protocollo sopra è pronto per essere eseguito.}
+
+\emph{\textbf{FASE A --- Documento 06b}}
+
+Preliminary User testing card --- Tool competitor
+
+\emph{Questo test riguarda MioDottore.}
+
+\textbf{Nome del tool}
+
+MioDottore (Doctolib Italia)
+
+Protocollo di test
+
+\textbf{Setup della sessione di test}
+
+Stesso setup del test sul tool del cliente (in presenza, dispositivo
+abituale del soggetto quando possibile), idealmente con gli stessi
+soggetti reclutati per il test su CUPweb, per poter confrontare le
+esperienze a parità di persona.
+
+\textbf{Metodo di test}
+
+\begin{itemize}
+\item
+  Discount usability testing (3 soggetti)
+\end{itemize}
+
+\textbf{Elenco dei task da testare}
+
+\begin{itemize}
+\item
+  T1 --- Cercare uno specialista di una categoria a scelta nella propria
+  città (senza completare la prenotazione)
+\item
+  T2 --- Individuare come si annullerebbe un appuntamento già fissato
+\item
+  T3 --- Individuare dove e come si contatta il professionista in caso
+  di dubbi
+\end{itemize}
+
+\textbf{Metodologia di test}
+
+\begin{itemize}
+\item
+  Thinking aloud per T1 e T3
+\item
+  Bottom line data per T2
+\end{itemize}
+
+\textbf{Metriche di test}
+
+\begin{itemize}
+\item
+  Success, Efficiency, Efficacy, Errors, Learnability, Satisfaction
+  (SUS)
+\end{itemize}
+
+\textbf{Reclutamento dei soggetti}
+
+\textbf{DA COMPLETARE --- Idealmente gli stessi soggetti del test 06a,
+per un confronto diretto delle due esperienze. Vedi istruzioni nella
+card 06a.}
+
+\textbf{Modalità di reclutamento dei soggetti}
+
+\textbf{DA COMPLETARE --- Vedi card 06a.}
+
+\textbf{Motivazione della scelta dei soggetti}
+
+\textbf{DA COMPLETARE --- Vedi card 06a.}
+
+\emph{Anche qui, le sezioni "Test \#1: Subject\ldots" per ciascun
+soggetto reale vanno aggiunte a valle dell\textquotesingle esecuzione
+dei test. Protocollo pronto per essere eseguito.}
+
+\emph{\textbf{FASE A --- Documento 07}}
+
+Conclusions and design recommendation card
+
+\textbf{Elenco delle criticità per importanza}
+
+\emph{Elenco preliminare basato sulle sole Assessment card (05a/05b).
+Andrà integrato e ri-prioritizzato con impatto/persistenza reali una
+volta raccolti i dati dello User testing (06a/06b).}
+
+\begin{itemize}
+\item
+  {[}ID-01{]} Autenticazione obbligatoria complessa (SPID/CIE) richiesta
+  fin dal primo passo, anche per compiti semplici --- impatto: alto;
+  persistenza: alta
+\item
+  {[}ID-02{]} Frammentazione tra domini/sottodomini scollegati tra loro
+  (cupweb.it, pagonlinesanita.it, fascicolo-sanitario.it) --- impatto:
+  alto (mina la fiducia); persistenza: alta
+\item
+  {[}ID-03{]} Interfaccia poco gerarchizzata, prevalentemente testuale,
+  priva di elementi visivi di orientamento --- impatto: medio;
+  persistenza: alta
+\item
+  {[}ID-04{]} Terminologia tecnico-burocratica non spiegata (SPID, CNS,
+  impegnativa dematerializzata) --- impatto: medio; persistenza: media
+\item
+  {[}ID-05{]} Assenza di un percorso guidato/dimostrativo per il nuovo
+  utente --- impatto: alto; persistenza: alta
+\item
+  {[}ID-06{]} Problemi di accessibilità per utenti con tecnologie
+  assistive --- impatto: alto (per il sottoinsieme di utenti coinvolti);
+  persistenza: media
+\item
+  {[}ID-07{]} Cronologia appuntamenti/documenti non ordinabile o
+  ricercabile nell\textquotesingle app --- impatto: basso-medio;
+  persistenza: media
+\end{itemize}
+
+\textbf{Tabella riassuntiva dei punteggi SUS}
+
+\textbf{DA COMPLETARE --- Da compilare con i punteggi reali ottenuti dal
+modulo Google SUS somministrato ai soggetti di test (card 06a e 06b).
+Struttura pronta: una colonna per soggetto, righe per le 10 domande
+standard SUS, riga Totale, Media, Varianza. Se la varianza tra soggetti
+risultasse elevata, andranno indagate le ragioni (es. soggetti con
+competenze digitali molto diverse tra loro) e valutata
+l\textquotesingle opportunità di soggetti aggiuntivi.}
+
+\textbf{Curva di urgenza}
+
+\textbf{DA COMPLETARE --- Da costruire (almeno impatto × persistenza)
+una volta confermate le criticità con i dati di test reali, usando gli
+identificatori {[}ID-01...ID-07{]} sopra elencati come base di partenza,
+integrati con quanto emerso dai test.}
+
+\textbf{Raccomandazioni di design preliminari}
+
+\emph{Raccomandazioni preliminari, connesse alle criticità individuate
+nell\textquotesingle assessment. Andranno arricchite/confermate con le
+evidenze dello user testing prima della stesura finale.}
+
+\begin{itemize}
+\item
+  {[}R-01{]} (collegata a ID-01, ID-05) Introdurre un percorso "a bassa
+  soglia" iniziale che permetta di esplorare il servizio (es. vedere
+  disponibilità, capire come funziona) prima di richiedere
+  l\textquotesingle autenticazione forte, spostando SPID/CIE solo al
+  momento realmente necessario
+\item
+  {[}R-02{]} (collegata a ID-02) Unificare visivamente tutti i
+  touchpoint del servizio (prenotazione, pagamento, fascicolo) sotto
+  un\textquotesingle unica identità grafica coerente, anche se
+  tecnicamente restano sistemi diversi, per non rompere la fiducia
+  dell\textquotesingle utente durante il percorso
+\item
+  {[}R-03{]} (collegata a ID-03, ID-04) Introdurre gerarchia visiva
+  (icone, colori, dimensioni) e microcopy in linguaggio semplice con
+  spiegazioni contestuali per i termini tecnici (tooltip, esempi)
+\item
+  {[}R-04{]} (collegata a ID-05) Progettare un flusso guidato
+  passo-passo per il primo utilizzo, con conferme esplicite ad ogni
+  passaggio e possibilità di richiamare assistenza (caregiver o
+  operatore) senza percepirlo come un fallimento
+\item
+  {[}R-05{]} (collegata a ID-06) Verificare e correggere la
+  compatibilità con tecnologie assistive (screen reader) in coerenza con
+  la dichiarazione di accessibilità già pubblicata dal cliente
+\item
+  {[}R-06{]} (collegata al segmento B / caregiver) Introdurre una
+  modalità di "co-gestione" che dia visibilità al caregiver sulle
+  prenotazioni del familiare pur lasciando che sia
+  quest\textquotesingle ultimo, quando possibile, a compiere
+  l\textquotesingle azione finale --- per costruire gradualmente
+  autonomia invece di sostituirla
+\end{itemize}

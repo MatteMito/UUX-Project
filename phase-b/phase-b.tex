@@ -1,0 +1,296 @@
+% Generated from HPHP_Documentazione_Completa_EDITABILE.docx.
+% The phase title is in English; the source content is preserved in Italian.
+\section{Phase B --- Feasibility Study}
+
+\emph{\textbf{FASE B --- Documento 01}}
+
+Team card
+
+Vedi Fase A, Documento 01 --- Team Affordance (Matteo Boscherini,
+Alessandro Campedelli, Francesco Maria Fuligni).
+
+\emph{\textbf{FASE B --- Documento 02a}}
+
+Persona and use case card --- Protagonista
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\emph{{[}Foto di Pina --- sostituire con immagine reale, es. da
+Unsplash/Pexels, licenza libera{]}} \\
+\end{longtable}
+}
+
+\textbf{Nome della persona}
+
+Giuseppina "Pina" Ferretti
+
+\begin{quote}
+\emph{``Se non c\textquotesingle è qualcuno che mi aiuta, io non riesco
+a prenotare niente da sola.''}
+\end{quote}
+
+\textbf{Segmento corrispondente}
+
+Segmento A di Fase A --- Paziente anziano "digital avoider", 75-85 anni,
+patologia cronica, utente diretto del servizio.
+
+Descrizione della persona
+
+\textbf{Dati di base}
+
+\begin{itemize}
+\item
+  78 anni, donna, italiana, pensionata (ex operaia tessile)
+\item
+  Vive sola in un appartamento a Ravenna; il marito è mancato 6 anni fa
+\item
+  Diabete di tipo 2 e ipertensione: visite diabetologiche ed esami del
+  sangue ogni 4-6 mesi
+\item
+  Lieve difficoltà visiva (porta occhiali da presbite) e un leggero
+  tremore alle mani che rende difficile toccare con precisione elementi
+  piccoli su schermo
+\item
+  Possiede uno smartphone Android semplice, regalato dalla figlia due
+  anni fa
+\end{itemize}
+
+\textbf{Background e caratteristiche psicologiche}
+
+Pina ha lavorato tutta la vita in una manifattura tessile, senza mai
+usare un computer per lavoro. È abituata a gestire le pratiche di
+persona: sportelli, farmacie, ambulatori. È una donna precisa,
+orgogliosa della propria indipendenza, ma consapevole dei propri limiti
+con la tecnologia. Teme di "rompere qualcosa" o di essere truffata
+online, e prova un certo imbarazzo nel dover chiedere aiuto
+continuamente alla figlia, pur dipendendo da lei per quasi tutte le
+pratiche digitali. Ha un desiderio latente --- mai dichiarato
+apertamente --- di riuscire a fare almeno le cose più semplici da sola.
+
+\includegraphics[width=3.95833in,height=3.95833in]{assets/phase-b-persona-pina-skills.png}
+
+Descrizione del caso d\textquotesingle uso \#1 --- La visita
+diabetologica di controllo
+
+\textbf{Narrativa del caso d\textquotesingle uso}
+
+Pina deve prenotare la visita diabetologica di controllo semestrale.
+Prova ad aprire l\textquotesingle app ER Salute sul suo telefono, ma non
+ricorda la password SPID e non riesce a distinguere tra i pulsanti
+"Prenota" e "Informazioni", entrambi presentati come semplice testo.
+Dopo due tentativi falliti e un messaggio di errore che non capisce,
+chiama la figlia Elena, interrompendola durante una riunione di lavoro.
+Pina si sente in colpa per il disturbo arrecato e, la volta successiva,
+rinuncia a riprovare da sola, rafforzando così la propria dipendenza
+dalla figlia invece di ridurla.
+
+Considerazioni conclusive
+
+\textbf{Impatto della persona sul design}
+
+\begin{itemize}
+\item
+  {[}P-01{]} L\textquotesingle autenticazione deve avere
+  un\textquotesingle alternativa a bassa soglia per compiti a basso
+  rischio (consultare, non modificare), rimandando SPID solo quando
+  serve davvero
+\item
+  {[}P-02{]} I pulsanti di azione devono essere visivamente distinti
+  (colore, forma, icona) e non semplice testo, per compensare le
+  difficoltà visive e di precisione motoria
+\item
+  {[}P-03{]} Il linguaggio deve essere semplice e rassicurante, con
+  conferme esplicite che riducano la paura di "sbagliare" o "rompere
+  qualcosa"
+\end{itemize}
+
+\textbf{Impatto del caso d\textquotesingle uso \#1 sul design}
+
+\begin{itemize}
+\item
+  {[}U1-01{]} Il flusso di prenotazione per patologie croniche dovrebbe
+  permettere di richiedere una visita di controllo ricorrente con un
+  numero minimo di passaggi, riconoscendo lo storico del paziente
+\item
+  {[}U1-02{]} In caso di errore, il sistema deve offrire un percorso di
+  recupero chiaro (es. \textquotesingle chiedi aiuto
+  ora\textquotesingle{} con contatto diretto) prima che
+  l\textquotesingle utente abbandoni e rinunci definitivamente
+\end{itemize}
+
+\emph{\textbf{FASE B --- Documento 02b}}
+
+Persona and use case card --- Non protagonista
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\emph{{[}Foto di Elena --- sostituire con immagine reale, es. da
+Unsplash/Pexels, licenza libera{]}} \\
+\end{longtable}
+}
+
+\textbf{Nome della persona}
+
+Elena Ferretti
+
+\begin{quote}
+\emph{``Vorrei che mia madre potesse cavarsela da sola per le cose
+semplici, così mi preoccuperei solo per l\textquotesingle importante.''}
+\end{quote}
+
+\textbf{Segmento corrispondente}
+
+Segmento B di Fase A --- Caregiver familiare "always-on" a distanza,
+45-60 anni, intermediario del servizio.
+
+Descrizione della persona
+
+\textbf{Dati di base}
+
+\begin{itemize}
+\item
+  52 anni, donna, italiana, impiegata amministrativa a tempo pieno
+\item
+  Vive a Bologna, a circa un\textquotesingle ora di auto/treno dalla
+  madre Pina, che vive a Ravenna
+\item
+  Sposata, due figli adolescenti; gestisce famiglia, lavoro e assistenza
+  alla madre contemporaneamente
+\item
+  Buona competenza digitale, usa quotidianamente PC e smartphone per
+  lavoro
+\end{itemize}
+
+\textbf{Background e caratteristiche psicologiche}
+
+Elena è cresciuta con la tecnologia e non ha alcuna difficoltà a usare
+app e siti web. Gestisce da anni le pratiche sanitarie della madre,
+spesso interrompendo il proprio lavoro per farlo. È una persona
+organizzata ed efficiente, ma il carico di responsabilità che si
+accumula col tempo --- lavoro, figli, madre --- la porta a momenti di
+stanchezza e frustrazione. Non vuole "sostituirsi" completamente alla
+madre: vorrebbe piuttosto che Pina potesse gestire in autonomia almeno i
+compiti più semplici, così da poter concentrare il proprio tempo
+limitato sulle situazioni davvero complesse.
+
+\includegraphics[width=3.95833in,height=3.95833in]{assets/phase-b-persona-elena-skills.png}
+
+Descrizione del caso d\textquotesingle uso \#1 --- La disdetta urgente
+dall\textquotesingle ufficio
+
+\textbf{Narrativa del caso d\textquotesingle uso}
+
+Elena riceve, durante l\textquotesingle orario di lavoro, una chiamata
+dalla madre Pina che non riesce a disdire una visita già prenotata
+perché è cambiato un impegno di famiglia. Elena deve interrompere il
+proprio lavoro, aprire l\textquotesingle app da remoto, capire quale
+prenotazione tra quelle associate al profilo del genitore va disdetta, e
+risolvere il problema in pochi minuti prima di tornare a una riunione.
+Vorrebbe che la madre potesse gestire da sola almeno la disdetta ---
+un\textquotesingle azione che considera semplice --- ma il sistema
+attuale non la rende comprensibile per lei.
+
+Considerazioni conclusive
+
+\textbf{Impatto della persona sul design}
+
+\begin{itemize}
+\item
+  {[}P-04{]} Il design deve offrire a un caregiver a distanza una
+  visibilità chiara (non invasiva) sulle prenotazioni del familiare
+  associato, senza dover richiamare a memoria dettagli specifici ogni
+  volta
+\item
+  {[}P-05{]} Deve esistere un meccanismo di delega progressiva: azioni
+  semplici e a basso rischio (es. disdetta) rese eseguibili in autonomia
+  dal paziente, con il caregiver informato ma non necessariamente
+  coinvolto
+\end{itemize}
+
+\textbf{Impatto del caso d\textquotesingle uso \#1 sul design}
+
+\begin{itemize}
+\item
+  {[}U2-01{]} La disdetta di un appuntamento dovrebbe essere
+  l\textquotesingle azione più semplice e accessibile del sistema
+  (minimo numero di passaggi, nessuna scelta ambigua tra più
+  prenotazioni simili)
+\item
+  {[}U2-02{]} Il caregiver dovrebbe poter ricevere notifiche automatiche
+  sullo stato delle prenotazioni del familiare, riducendo la necessità
+  di intervenire solo su chiamata d\textquotesingle emergenza
+\end{itemize}
+
+\emph{\textbf{FASE B --- Documento 03}}
+
+Cast card
+
+\textbf{Cast con ruoli e segmenti}
+
+\begin{itemize}
+\item
+  Protagonista: Giuseppina "Pina" Ferretti --- Segmento A (paziente
+  anziano, utente diretto)
+\item
+  Non protagonista: Elena Ferretti --- Segmento B (caregiver familiare,
+  intermediario)
+\end{itemize}
+
+\textbf{Grafico cumulativo dei tratti di personalità}
+
+\includegraphics[width=3.95833in,height=3.95833in]{assets/phase-b-personas-comparison.png}
+
+\emph{Il file Excel "HPHP\_FaseB\_PersonasAndCast.xlsx" allegato
+contiene i dati sorgente e i grafici radar nativi, modificabili.}
+
+Impact on design
+
+\textbf{Impatto del cast sul design (sintesi cumulativa)}
+
+\begin{itemize}
+\item
+  {[}C-01{]} (= P-01+P-02+P-03) Il design deve essere utilizzabile con
+  competenza tecnica minima, alta chiarezza visiva del linguaggio e
+  delle azioni, e un tono rassicurante che riduca
+  l\textquotesingle ansia da errore --- requisiti derivati dal profilo
+  di Pina, il più critico del cast su queste dimensioni
+\item
+  {[}C-02{]} (= P-04+P-05) Il design deve offrire al caregiver uno
+  strumento di supervisione leggera e delega progressiva, che riduca il
+  carico di intervento diretto senza eliminarne il controllo ---
+  requisito derivato dal profilo di Elena
+\item
+  {[}C-03{]} Poiché il cast comprende due profili agli estremi opposti
+  sulla dimensione Technical (Pina=1, Elena=5), il sistema deve poter
+  presentare esperienze differenziate (o adattive) per i due ruoli, pur
+  restando parte dello stesso ecosistema di prodotto
+\end{itemize}
+
+\textbf{Impatto dei casi d\textquotesingle uso sul design (sintesi
+cumulativa)}
+
+\begin{itemize}
+\item
+  {[}C-04{]} (= U1-01+U1-02) Le prenotazioni ricorrenti per patologie
+  croniche vanno semplificate riconoscendo lo storico del paziente, con
+  un percorso di recupero assistito in caso di errore
+\item
+  {[}C-05{]} (= U2-01+U2-02) La disdetta deve essere
+  l\textquotesingle azione più semplice del sistema, e il caregiver deve
+  poter essere informato automaticamente senza dover intervenire ogni
+  volta di persona
+\item
+  Questi requisiti, numerati con codice {[}C-0x{]}, saranno ripresi
+  esplicitamente nella Fase C in fase di Information Architecture,
+  Interaction Design e Wireframe.
+\end{itemize}
