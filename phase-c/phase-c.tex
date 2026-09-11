@@ -1,16 +1,15 @@
 % !TEX root = ../hphp-project-report.tex
 % Generated from HPHP_Documentazione_Completa_EDITABILE.docx.
-% The phase title is in English; the source content is preserved in Italian.
-\section{Phase C --- Design Proposal}
+% Il titolo della fase e le intestazioni sono tradotti in italiano.
+\clearpage
+\section{Fase C --- Proposta progettuale}
 
-\emph{\textbf{FASE C --- Documento 02}}
-
-Information Architecture card
+\subsection{Documento 02 --- Scheda dell'architettura dell'informazione}
 
 \textbf{Era necessaria una fase di progettazione specifica per
-l\textquotesingle Information Architecture del tool? Perché?}
+l\textquotesingle architettura dell'informazione dello strumento? Perché?}
 
-Sì. L\textquotesingle assessment di Fase A ha individuato come criticità
+Sì. La valutazione di Fase A ha individuato come criticità
 principale la frammentazione del servizio su più domini/sottosistemi
 (cupweb.it, pagonlinesanita.it, fascicolo-sanitario.it) organizzati
 secondo la struttura interna dei sistemi informativi regionali piuttosto
@@ -19,36 +18,36 @@ che secondo i compiti dell\textquotesingle utente (requisiti
 Una riprogettazione dell\textquotesingle interazione senza prima
 ridisegnare l\textquotesingle architettura informativa avrebbe lasciato
 intatta la causa principale di disorientamento e sfiducia rilevata
-nell\textquotesingle assessment. Una fase di IA dedicata è quindi
-necessaria e propedeutica a Interaction Design, Blueprint e Wireframe.
+nella valutazione. Una fase di architettura dell'informazione dedicata è quindi
+necessaria e propedeutica alla progettazione dell'interazione, al blueprint e ai wireframe.
 
 \textbf{È stato scelto un approccio top-down, bottom-up o misto per
-l\textquotesingle Information Architecture
+l\textquotesingle architettura dell'informazione
 dell\textquotesingle applicazione?}
 
 \begin{itemize}
 \item
   Approccio misto: top-down per definire le macro-categorie di primo
-  livello a partire dagli obiettivi di business e dai bisogni noti degli
+  livello a partire dagli obiettivi organizzativi e dai bisogni noti degli
   utenti (Fase A/B); bottom-up per validare etichette e raggruppamenti a
-  partire dai task concreti emersi dai casi d\textquotesingle uso delle
-  personas (booking, disdetta, consultazione, delega) e dalle criticità
-  reali osservate nell\textquotesingle assessment.
+  partire dai compiti concreti emersi dai casi d\textquotesingle uso delle
+  personas (prenotazione, disdetta, consultazione, delega) e dalle criticità
+  reali osservate nella valutazione.
 \end{itemize}
 
-\textbf{Se la scelta è diversa da quella del tool esistente, motivare la
+\textbf{Se la scelta è diversa da quella dello strumento esistente, motivare la
 scelta}
 
-Il tool esistente (CUPweb/ER Salute) riflette
+Lo strumento esistente (CUPweb/ER Salute) riflette
 un\textquotesingle organizzazione essenzialmente bottom-up e
-system-driven: ogni sistema informativo regionale (prenotazione,
+guidata dal sistema: ogni sistema informativo regionale (prenotazione,
 pagamento, fascicolo) espone la propria interfaccia separata, e
 l\textquotesingle utente deve ricostruire da solo il percorso tra i vari
 sistemi. Questo approccio è comprensibile dal punto di vista tecnico
 (sistemi sviluppati da fornitori/tempi diversi) ma è in diretto
 conflitto con i requisiti {[}P-01{]}/{[}P-02{]} di Fase B (Pina ha
 competenza tecnica minima e bisogno di percorsi chiari). Abbiamo scelto
-un approccio guidato dai task dell\textquotesingle utente (top-down)
+un approccio guidato dai compiti dell\textquotesingle utente (top-down)
 proprio per correggere questa criticità, mantenendo però una validazione
 bottom-up sui casi d\textquotesingle uso reali per evitare di creare
 un\textquotesingle architettura teoricamente elegante ma poco aderente
@@ -56,7 +55,7 @@ ai bisogni concreti.
 
 \textbf{Quali sono le principali decisioni
 sull\textquotesingle organizzazione e sul sistema di etichettatura? Sono
-diverse rispetto al tool esistente?}
+diverse rispetto allo strumento esistente?}
 
 Sì, sostanzialmente diverse. Le etichette passano da
 un\textquotesingle organizzazione per sistema ("CUPweb",
@@ -80,7 +79,7 @@ dell\textquotesingle utente:
   "Chi assisto" / "Chi mi assiste" (nuova sezione, esplicita la
   relazione caregiver-paziente prevista dai requisiti
   {[}P-04{]}/{[}P-05{]}/{[}C-02{]} di Fase B, oggi assente come concetto
-  esplicito nel tool)
+  esplicito nello strumento)
 \item
   "Serve aiuto?" (canale di assistenza sempre visibile e allo stesso
   livello delle altre voci principali, non relegato in fondo alla
@@ -94,16 +93,16 @@ disponibili ma non sono più usati come etichette di navigazione
 primaria.
 
 \textbf{Quali sono i campi di metadati più rilevanti? Sono diversi
-rispetto al tool esistente?}
+rispetto allo strumento esistente?}
 
-Rispetto al tool esistente, che tratta ogni prenotazione come un record
+Rispetto allo strumento esistente, che tratta ogni prenotazione come un record
 isolato, introduciamo metadati aggiuntivi funzionali agli obiettivi del
 redesign:
 
 \begin{itemize}
 \item
   Tipo di prestazione (visita, esame, screening) --- già presente nel
-  tool esistente
+  strumento esistente
 \item
   Ricorrenza (flag "prestazione ricorrente/cronica") --- nuovo, abilita
   il flusso semplificato {[}U1-01{]} di Fase B per pazienti cronici come
@@ -124,9 +123,9 @@ redesign:
 \end{itemize}
 
 \textbf{Come si intende progettare il sistema di navigazione? È diverso
-rispetto al tool esistente?}
+rispetto allo strumento esistente?}
 
-Sì. Il tool esistente non ha una vera navigazione unificata: ogni
+Sì. Lo strumento esistente non ha una vera navigazione unificata: ogni
 dominio ha il proprio menu locale. Proponiamo una navigazione a 5 voci
 di primo livello, identica per tutte le pagine e coerente su web e app
 (requisito {[}ID-02{]}/{[}ID-05{]} di Fase A): Prenota una visita, I
@@ -134,28 +133,28 @@ miei appuntamenti, Le mie prescrizioni, Chi assisto/Chi mi assiste,
 Serve aiuto? Le pagine profonde (es. dettaglio di una singola
 prenotazione) mantengono sempre un percorso di ritorno esplicito
 (breadcrumb semplificato: "\textless{} Torna ai miei appuntamenti")
-invece del semplice tasto "indietro" del browser, su cui il tool attuale
+invece del semplice tasto "indietro" del browser, su cui lo strumento attuale
 fa affidamento implicito.
 
-Descrivere brevemente le scelte su:
+\textbf{Descrizione sintetica delle scelte progettuali}
 
-Browsing aids
+\textbf{Ausili alla navigazione}
 
 \begin{itemize}
 \item
   Scorciatoia "Prenota di nuovo" per le prestazioni ricorrenti, in cima
-  a "I miei appuntamenti" (assente nel tool esistente)
+  a "I miei appuntamenti" (assente nello strumento esistente)
 \item
-  Sezione "Prossimo appuntamento" sempre visibile in home, per orientare
+  Sezione "Prossimo appuntamento" sempre visibile nella pagina iniziale, per orientare
   subito l\textquotesingle utente sulla prossima azione rilevante
 \item
   Per il caregiver: vista aggregata "Chi assisto" con lo stato sintetico
   delle prenotazioni di tutti i familiari collegati
 \end{itemize}
 
-Search aids
+\textbf{Ausili alla ricerca}
 
-Coerentemente con l\textquotesingle assessment di Fase A (il tool
+Coerentemente con la valutazione di Fase A (lo strumento
 esistente non ha una vera ricerca testuale libera), non introduciamo una
 ricerca a testo libero come elemento primario: il volume di contenuti
 non lo giustifica e rischierebbe di aggiungere complessità per il
@@ -164,18 +163,18 @@ di prenotazione (tipo di prestazione, ambito territoriale, fascia
 oraria), pensati per essere selezionati per tocchi successivi piuttosto
 che digitati.
 
-Contents and Tasks
+\textbf{Contenuti e compiti}
 
-Task primario: prenotare/disdire una visita o un esame. Task secondario
-ricorrente: consultare lo stato di una prescrizione. Task secondario per
+Compito primario: prenotare/disdire una visita o un esame. Compito secondario
+ricorrente: consultare lo stato di una prescrizione. Compito secondario per
 il caregiver: supervisionare le prenotazioni di un familiare e, se
 necessario, agire per suo conto in modo tracciabile. Contenuti puramente
 informativi (es. guide, normativa) restano accessibili ma vengono
 spostati fuori dal percorso primario, in una sezione "Serve aiuto?"
-dedicata, per non competere visivamente con le azioni di task (coerente
+  dedicata, per non competere visivamente con le azioni di compito (coerente
 con {[}ID-03{]}/{[}R-03{]} di Fase A).
 
-Invisible components
+\textbf{Componenti non visibili}
 
 \begin{itemize}
 \item
@@ -198,17 +197,15 @@ Invisible components
   caregiver collegato
 \end{itemize}
 
-\emph{\textbf{FASE C --- Documento 06}}
+\subsection{Documento 06 --- Sintesi del progetto}
 
-Design summary card
-
-Per ciascuna versione del design prodotta, create una cartella nella
+Per ciascuna versione del progetto prodotta, create una cartella nella
 cartella allegati con un nome significativo e aggiungetevi i file di
-design corrispondenti. Queste cartelle verranno usate in Fase D.
+progetto corrispondenti. Queste cartelle verranno usate in Fase D.
 
-Versioni del design come consegnate
+\textbf{Versioni del progetto consegnate}
 
-Version 0 (prima di qualsiasi valutazione formale)
+\textbf{Versione 0} (prima di qualsiasi valutazione formale)
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -224,13 +221,13 @@ di completamento{]} \\
 \end{longtable}
 }
 
-Corrisponde ai materiali già prodotti in questo pacchetto: Information
-Architecture card, Blueprint (Documento 03), Wireframes (Documento 04) e
-Before/After (Documento 05). Questa versione non ha ancora ricevuto
+Corrisponde ai materiali già prodotti in questo pacchetto: scheda
+dell'architettura dell'informazione, blueprint (Documento 03), wireframe (Documento 04) e
+confronto prima/dopo (Documento 05). Questa versione non ha ancora ricevuto
 alcuna valutazione formale (né ispezione né test utente) ed è quella che
 sarà sottoposta a valutazione in apertura di Fase D.
 
-Version 1 (duplicare se necessario)
+\textbf{Versione 1} (duplicare se necessario)
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -242,18 +239,18 @@ Version 1 (duplicare se necessario)
 \endlastfoot
 \textbf{Nome cartella} & {[}da compilare, es. v1\_dopo\_inspection{]} \\
 \textbf{Data / ora di completamento} & {[}da compilare{]} \\
-\textbf{Tipi di valutazione} & {[}da compilare --- es. cognitive
-walkthrough, action analysis, heuristic analysis: vedi Fase D{]} \\
+\textbf{Tipi di valutazione} & {[}da compilare --- es. Cognitive
+Walkthrough, analisi delle azioni, analisi euristica: vedi Fase D{]} \\
 \end{longtable}
 }
 
 \textbf{DA COMPLETARE --- Questa sezione va compilata dopo aver condotto
-le valutazioni di Fase D (inspection) sulla Version 0, e aver introdotto
-le modifiche conseguenti al design. Duplicare la tabella per ogni
-ulteriore iterazione (Version 2, Version 3...) se il team esegue più di
+le valutazioni di Fase D (ispezione) sulla Versione 0, e aver introdotto
+le modifiche conseguenti al progetto. Duplicare la tabella per ogni
+ulteriore iterazione (Versione 2, Versione 3...) se il team esegue più di
 un ciclo di revisione.}
 
-Final version (una sola, output principale della Fase C)
+\textbf{Versione finale} (una sola, risultato principale della Fase C)
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -263,23 +260,23 @@ Final version (una sola, output principale della Fase C)
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\textbf{Nome cartella} & main folder \\
+\textbf{Nome cartella} & cartella principale \\
 \textbf{Data / ora di completamento} & {[}da compilare{]} \\
 \textbf{Tipi di valutazione} & {[}da compilare --- riassumere tutte le
 valutazioni svolte fino a questa versione{]} \\
 \end{longtable}
 }
 
-\textbf{DA COMPLETARE --- La \textquotesingle Final
-version\textquotesingle{} è per definizione l\textquotesingle ultima
-versione del design prima della valutazione conclusiva di Fase D (User
-Testing sul prototipo). Finché Fase D non è stata condotta, Version 0
+\textbf{DA COMPLETARE --- La \textquotesingle versione
+finale\textquotesingle{} è per definizione l\textquotesingle ultima
+versione del progetto prima della valutazione conclusiva di Fase D (test
+utente sul prototipo). Finché Fase D non è stata condotta, la Versione 0
 coincide di fatto con la versione più recente disponibile: aggiornare
 questa sezione quando il design verrà rivisto in base alle valutazioni.}
 
-Elenco delle criticità gestite nel redesign, in ordine di importanza
+\textbf{Elenco delle criticità gestite nella riprogettazione, in ordine di importanza}
 
-Ogni criticità è collegata ai requisiti delle Conclusion card di Fase A
+Ogni criticità è collegata ai requisiti delle schede di conclusione di Fase A
 e Fase B, e alle sezioni di wireframe/blueprint che la indirizzano.
 
 \textbf{1. Autenticazione obbligatoria complessa fin dal primo passo}
@@ -289,8 +286,8 @@ e Fase B, e alle sezioni di wireframe/blueprint che la indirizzano.
   Riferimento: {[}ID-01{]} Fase A, {[}P-01{]} Fase B, raccomandazione
   {[}R-01{]}
 \item
-  Gestita in: Wireframe schermata 3 (Conferma identità leggera);
-  Blueprint, passo 3; Before/After, confronto \#2
+  Gestita in: wireframe schermata 3 (Conferma identità leggera);
+  blueprint, passo 3; confronto prima/dopo, confronto \#2
 \end{itemize}
 
 \textbf{2. Frammentazione tra domini/sottosistemi scollegati}
@@ -299,8 +296,8 @@ e Fase B, e alle sezioni di wireframe/blueprint che la indirizzano.
 \item
   Riferimento: {[}ID-02{]} Fase A, raccomandazione {[}R-02{]}
 \item
-  Gestita in: Information Architecture card (unificazione etichette e
-  navigazione); Before/After, confronto \#1
+  Gestita in: scheda dell'architettura dell'informazione (unificazione etichette e
+  navigazione); confronto prima/dopo, confronto \#1
 \end{itemize}
 
 \textbf{3. Assenza di un percorso guidato per il nuovo utente}
@@ -310,8 +307,8 @@ e Fase B, e alle sezioni di wireframe/blueprint che la indirizzano.
   Riferimento: {[}ID-05{]} Fase A, {[}P-03{]} Fase B, raccomandazione
   {[}R-04{]}
 \item
-  Gestita in: Wireframe schermate 1-2 (Home e scelta prestazione);
-  Blueprint, passi 1-2
+  Gestita in: wireframe schermate 1-2 (pagina iniziale e scelta prestazione);
+  blueprint, passi 1-2
 \end{itemize}
 
 \textbf{4. Interfaccia poco gerarchizzata, priva di elementi visivi}
@@ -331,19 +328,19 @@ e Fase B, e alle sezioni di wireframe/blueprint che la indirizzano.
 \item
   Riferimento: {[}ID-04{]} Fase A, raccomandazione {[}R-03{]}
 \item
-  Gestita in: Information Architecture card (sistema di etichettatura in
-  linguaggio naturale); Wireframe schermata 5 (riepilogo senza gergo)
+  Gestita in: scheda dell'architettura dell'informazione (sistema di etichettatura in
+  linguaggio naturale); wireframe schermata 5 (riepilogo senza gergo)
 \end{itemize}
 
 \textbf{6. Ruolo del caregiver assente come concetto esplicito}
 
 \begin{itemize}
 \item
-  Riferimento: {[}P-04{]}/{[}P-05{]} Fase B, {[}C-02{]} Cast card
+  Riferimento: {[}P-04{]}/{[}P-05{]} Fase B, {[}C-02{]} scheda dei ruoli
 \item
-  Gestita in: Information Architecture card (nuova sezione
-  \textquotesingle Chi assisto\textquotesingle); Wireframe schermata 7;
-  Before/After, confronto \#3
+  Gestita in: scheda dell'architettura dell'informazione (nuova sezione
+  \textquotesingle Chi assisto\textquotesingle); wireframe schermata 7;
+  confronto prima/dopo, confronto \#3
 \end{itemize}
 
 \textbf{7. Problemi di accessibilità per tecnologie assistive}
@@ -366,7 +363,7 @@ ricercabile}
 \item
   Riferimento: {[}ID-07{]} Fase A
 \item
-  Gestita parzialmente in: Wireframe schermata 6 (lista appuntamenti
+  Gestita parzialmente in: wireframe schermata 6 (lista appuntamenti
   unificata, ordine cronologico con il prossimo appuntamento in
   evidenza)
 \end{itemize}

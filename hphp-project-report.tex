@@ -18,12 +18,31 @@
 \usepackage{bookmark}
 \usepackage{xurl}
 \usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=numeric-comp,sorting=nyt,maxbibnames=99,defernumbers=true]{biblatex}
+\addbibresource{references/references.bib}
 
-\setcounter{secnumdepth}{0}
+\setcounter{secnumdepth}{1}
 \setcounter{tocdepth}{2}
 \setlength{\emergencystretch}{3em}
-\setlist{nosep}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55\baselineskip plus 0.15\baselineskip minus 0.1\baselineskip}
+\setlength{\LTpre}{0.8\baselineskip}
+\setlength{\LTpost}{0.8\baselineskip}
+\setlist[itemize]{leftmargin=*,topsep=0.5\baselineskip,itemsep=0.2\baselineskip,parsep=0pt,partopsep=0pt}
 \urlstyle{same}
+\AtBeginDocument{\renewcommand{\abstractname}{Abstract}}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{0.7em}{}
+\titlespacing*{\section}{0pt}{0pt}{1.1\baselineskip}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{0.65em}{}
+\titlespacing*{\subsection}{0pt}{2.2\baselineskip plus 0.4\baselineskip}{0.75\baselineskip}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsection}{0.55em}{}
+\titlespacing*{\subsubsection}{0pt}{1.4\baselineskip}{0.35\baselineskip}
 
 \newcounter{none}
 \providecommand{\tightlist}{%
@@ -45,13 +64,13 @@
   colorlinks=true,
   linkcolor=black,
   urlcolor=blue,
-  pdftitle={HPHP Project Documentation},
+  pdftitle={Documentazione del progetto HPHP},
   pdfauthor={Team Affordance}
 }
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{HPHP Project Documentation}
+\fancyhead[L]{Documentazione del progetto HPHP}
 \fancyhead[R]{Team Affordance}
 \fancyfoot[C]{\thepage}
 \setlength{\headheight}{14pt}
@@ -60,12 +79,18 @@
 
 \begin{titlepage}
   \centering
-  \vspace*{2.5cm}
-  {\Huge\bfseries HPHP Project Documentation\par}
-  \vspace{0.8cm}
-  {\Large Online Healthcare Booking Experience Redesign\par}
-  \vspace{0.5cm}
-  {\large CUPweb and ER Salute\par}
+  \vspace*{2cm}
+  {\Large Corso di Usability \& User Experience Design\par}
+  \vspace{1.5cm}
+  {\Huge\bfseries Documentazione del progetto HPHP\par}
+  \vspace{0.25cm}
+  {\Large\itshape Help People Help People\par}
+  \vspace{0.6cm}
+  {\LARGE Riprogettazione dell'esperienza di prenotazione sanitaria online\par}
+  \vspace{0.45cm}
+  {\large CUPweb ed ER Salute\par}
+  \vspace{0.9cm}
+  \rule{0.58\textwidth}{0.5pt}\par
   \vfill
   {\large Team Affordance\par}
   \vspace{0.4cm}
@@ -73,21 +98,48 @@
   Alessandro Campedelli\par
   Francesco Maria Fuligni\par
   \vfill
-  Corso di Usability \& User Experience Design\par
-  Anno accademico 2025--2026\par
+  {\large Anno accademico 2025--2026\par}
+  \vspace{0.7cm}
+  \small Repository del progetto:\\
+  \url{https://github.com/MatteMito/UUX-Project}
 \end{titlepage}
 
-\section{About This Document}
+\begin{abstract}
+Il presente elaborato documenta il progetto HPHP (\emph{Help People
+Help People}), dedicato alla
+riprogettazione dell'esperienza di prenotazione sanitaria online per
+CUPweb ed ER Salute della Regione Emilia-Romagna. L'analisi considera le
+barriere di accesso digitale degli utenti anziani e il ruolo dei
+caregiver familiari, traducendo le evidenze raccolte in requisiti di
+progettazione, personas, architettura dell'informazione, wireframe e
+protocolli di valutazione. Il lavoro è organizzato in quattro fasi:
+ricerca e valutazione, studio di fattibilità, proposta progettuale e
+valutazione. Gli artefatti nativi e aggiornabili sono disponibili nel
+repository del progetto:\\
+\url{https://github.com/MatteMito/UUX-Project}
 
-Questo documento raccoglie le card testuali del progetto HPHP e il protocollo di test rapido. Il contenuto è suddiviso in quattro sorgenti LaTeX, uno per ogni fase, inclusi in ordine nel presente documento principale.
+\textbf{Parole chiave:} sanità digitale; accessibilità; utenti anziani;
+caregiver; user experience; prenotazione sanitaria.
+\end{abstract}
 
-I file nativi relativi a blueprint, wireframe, confronto Before/After, guideline e personas restano artefatti separati nelle rispettive directory, così da conservarne la piena modificabilità.
+\subsection*{Materiali supplementari}
+Il report è corredato dagli artefatti progettuali mantenuti nei rispettivi
+formati nativi e modificabili: il \emph{service blueprint}, i wireframe
+delle versioni 0 e 1, il confronto prima/dopo, la checklist delle linee
+guida e le schede di personas e cast. I materiali sono organizzati nelle
+cartelle delle singole fasi e sono disponibili nel repository del progetto.
 
+\clearpage
 \tableofcontents
 
 \input{phase-a/phase-a.tex}
 \input{phase-b/phase-b.tex}
 \input{phase-c/phase-c.tex}
 \input{phase-d/phase-d.tex}
+
+\clearpage
+\section{Riferimenti}
+\printbibliography[type=report,title={Bibliografia},heading=subbibintoc]
+\printbibliography[type=online,title={Sitografia},heading=subbibintoc]
 
 \end{document}

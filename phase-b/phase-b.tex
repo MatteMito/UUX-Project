@@ -1,18 +1,15 @@
 % !TEX root = ../hphp-project-report.tex
 % Generated from HPHP_Documentazione_Completa_EDITABILE.docx.
-% The phase title is in English; the source content is preserved in Italian.
-\section{Phase B --- Feasibility Study}
+% Il titolo della fase e le intestazioni sono tradotti in italiano.
+\clearpage
+\section{Fase B --- Studio di fattibilità}
 
-\emph{\textbf{FASE B --- Documento 01}}
-
-Team card
+\subsection{Documento 01 --- Scheda del gruppo}
 
 Vedi Fase A, Documento 01 --- Team Affordance (Matteo Boscherini,
 Alessandro Campedelli, Francesco Maria Fuligni).
 
-\emph{\textbf{FASE B --- Documento 02a}}
-
-Persona and use case card --- Protagonista
+\subsection{Documento 02a --- Persona e caso d'uso: protagonista}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -37,10 +34,10 @@ a prenotare niente da sola.''}
 
 \textbf{Segmento corrispondente}
 
-Segmento A di Fase A --- Paziente anziano "digital avoider", 75-85 anni,
+Segmento A di Fase A --- Paziente anziano con bassa autonomia digitale, 75-85 anni,
 patologia cronica, utente diretto del servizio.
 
-Descrizione della persona
+\textbf{Descrizione della persona}
 
 \textbf{Dati di base}
 
@@ -61,7 +58,7 @@ Descrizione della persona
   anni fa
 \end{itemize}
 
-\textbf{Background e caratteristiche psicologiche}
+\textbf{Esperienza pregressa e caratteristiche psicologiche}
 
 Pina ha lavorato tutta la vita in una manifattura tessile, senza mai
 usare un computer per lavoro. È abituata a gestire le pratiche di
@@ -75,8 +72,9 @@ apertamente --- di riuscire a fare almeno le cose più semplici da sola.
 
 \includegraphics[width=3.95833in,height=3.95833in]{assets/phase-b-persona-pina-skills.png}
 
-Descrizione del caso d\textquotesingle uso \#1 --- La visita
+\textbf{Descrizione del caso d\textquotesingle uso \#1 --- La visita
 diabetologica di controllo
+}
 
 \textbf{Narrativa del caso d\textquotesingle uso}
 
@@ -90,7 +88,7 @@ Pina si sente in colpa per il disturbo arrecato e, la volta successiva,
 rinuncia a riprovare da sola, rafforzando così la propria dipendenza
 dalla figlia invece di ridurla.
 
-Considerazioni conclusive
+\textbf{Considerazioni conclusive}
 
 \textbf{Impatto della persona sul design}
 
@@ -124,9 +122,7 @@ Considerazioni conclusive
   l\textquotesingle utente abbandoni e rinunci definitivamente
 \end{itemize}
 
-\emph{\textbf{FASE B --- Documento 02b}}
-
-Persona and use case card --- Non protagonista
+\subsection{Documento 02b --- Persona e caso d'uso: non protagonista}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -151,10 +147,10 @@ semplici, così mi preoccuperei solo per l\textquotesingle importante.''}
 
 \textbf{Segmento corrispondente}
 
-Segmento B di Fase A --- Caregiver familiare "always-on" a distanza,
+Segmento B di Fase A --- Caregiver familiare sempre reperibile a distanza,
 45-60 anni, intermediario del servizio.
 
-Descrizione della persona
+\textbf{Descrizione della persona}
 
 \textbf{Dati di base}
 
@@ -172,7 +168,7 @@ Descrizione della persona
   lavoro
 \end{itemize}
 
-\textbf{Background e caratteristiche psicologiche}
+\textbf{Esperienza pregressa e caratteristiche psicologiche}
 
 Elena è cresciuta con la tecnologia e non ha alcuna difficoltà a usare
 app e siti web. Gestisce da anni le pratiche sanitarie della madre,
@@ -186,8 +182,9 @@ limitato sulle situazioni davvero complesse.
 
 \includegraphics[width=3.95833in,height=3.95833in]{assets/phase-b-persona-elena-skills.png}
 
-Descrizione del caso d\textquotesingle uso \#1 --- La disdetta urgente
+\textbf{Descrizione del caso d\textquotesingle uso \#1 --- La disdetta urgente
 dall\textquotesingle ufficio
+}
 
 \textbf{Narrativa del caso d\textquotesingle uso}
 
@@ -201,7 +198,7 @@ Vorrebbe che la madre potesse gestire da sola almeno la disdetta ---
 un\textquotesingle azione che considera semplice --- ma il sistema
 attuale non la rende comprensibile per lei.
 
-Considerazioni conclusive
+\textbf{Considerazioni conclusive}
 
 \textbf{Impatto della persona sul design}
 
@@ -232,9 +229,7 @@ Considerazioni conclusive
   di intervenire solo su chiamata d\textquotesingle emergenza
 \end{itemize}
 
-\emph{\textbf{FASE B --- Documento 03}}
-
-Cast card
+\subsection{Documento 03 --- Scheda dei ruoli}
 
 \textbf{Cast con ruoli e segmenti}
 
@@ -254,7 +249,7 @@ Cast card
 \emph{Il file Excel "HPHP\_FaseB\_PersonasAndCast.xlsx" allegato
 contiene i dati sorgente e i grafici radar nativi, modificabili.}
 
-Impact on design
+\textbf{Impatto sul design}
 
 \textbf{Impatto del cast sul design (sintesi cumulativa)}
 
@@ -272,7 +267,7 @@ Impact on design
   requisito derivato dal profilo di Elena
 \item
   {[}C-03{]} Poiché il cast comprende due profili agli estremi opposti
-  sulla dimensione Technical (Pina=1, Elena=5), il sistema deve poter
+  sulla dimensione tecnica (Pina=1, Elena=5), il sistema deve poter
   presentare esperienze differenziate (o adattive) per i due ruoli, pur
   restando parte dello stesso ecosistema di prodotto
 \end{itemize}
@@ -292,6 +287,6 @@ cumulativa)}
   volta di persona
 \item
   Questi requisiti, numerati con codice {[}C-0x{]}, saranno ripresi
-  esplicitamente nella Fase C in fase di Information Architecture,
-  Interaction Design e Wireframe.
+  esplicitamente nella Fase C, nelle fasi di architettura
+  dell'informazione, progettazione dell'interazione e wireframe.
 \end{itemize}

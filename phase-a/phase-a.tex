@@ -1,11 +1,10 @@
 % !TEX root = ../hphp-project-report.tex
 % Generated from HPHP_Documentazione_Completa_EDITABILE.docx.
-% The phase title is in English; the source content is preserved in Italian.
-\section{Phase A --- Ethnographic Research and Assessment}
+% Il titolo della fase e le intestazioni sono tradotti in italiano.
+\clearpage
+\section{Fase A --- Ricerca etnografica e valutazione}
 
-\emph{\textbf{FASE A --- Documento 01}}
-
-Team card
+\subsection{Documento 01 --- Scheda del gruppo}
 
 \textbf{Nome del gruppo}
 
@@ -62,9 +61,7 @@ Reti \\
 \end{longtable}
 }
 
-\emph{\textbf{FASE A --- Documento 02}}
-
-Client card
+\subsection{Documento 02 --- Scheda del committente}
 
 \textbf{Nome del cliente}
 
@@ -82,7 +79,7 @@ l\textquotesingle Emilia-Romagna attraverso le Aziende Sanitarie locali
 Emilia, AUSL Ferrara e le Aziende Ospedaliero-Universitarie). Il cliente
 ha già una presenza digitale matura e consolidata: gestisce il Fascicolo
 Sanitario Elettronico regionale, il portale di prenotazione CUPweb,
-l\textquotesingle app mobile ER Salute, un call center regionale (800
+l\textquotesingle app mobile ER Salute, un centro telefonico regionale (800
 numbers per singola AUSL) e una rete di sportelli fisici e farmacie
 convenzionate (FarmaCUP). Non lavoriamo direttamente per la Regione: la
 nostra società di consulenza UX è stata incaricata da un system
@@ -90,36 +87,37 @@ integrator che opera per conto di CUP 2000 di proporre un redesign
 dell\textquotesingle esperienza di prenotazione, da presentare come case
 study per un possibile incarico più ampio.
 
-\textbf{Nome del tool}
+\textbf{Nome dello strumento}
 
 CUPweb (portale web, www.cupweb.it) e app mobile ER Salute --- sistema
 regionale di prenotazione online delle prestazioni sanitarie
-specialistiche (visite ed esami) della Regione Emilia-Romagna.
+specialistiche (visite ed esami) della Regione Emilia-Romagna
+\cite{rerPrenotare}.
 
-\textbf{Come accedere al tool}
+\textbf{Come accedere allo strumento}
 
 Via browser su www.cupweb.it, tramite SPID, CIE o credenziali FSE/CUPweb
 rilasciate agli sportelli; oppure tramite l\textquotesingle app ER
 Salute (iOS/Android), che consente di prenotare/disdire visite per sé
 stessi e per i familiari associati (minori o persone tutelate).
 
-\textbf{Perché il cliente dovrebbe voler finanziare un nuovo tool?}
+\textbf{Perché il committente dovrebbe voler finanziare un nuovo strumento?}
 
 Il canale digitale, pur gratuito e disponibile 24/7, resta
 sotto-utilizzato dalla fascia più anziana della popolazione, che
-continua a intasare call center e sportelli fisici o a delegare
+continua a intasare i centri telefonici e gli sportelli fisici o a delegare
 integralmente la prenotazione a un familiare. Questo genera costi
 operativi elevati per il servizio sanitario regionale (personale agli
-sportelli, call center), un alto tasso di mancate presentazioni
-("no-show", oggetto peraltro di una sanzione economica prevista dalla
-L.R. 2/2016), e non risponde agli obiettivi di digitalizzazione della
-sanità pubblica previsti dal PNRR (Missione 6). Un redesign mirato sulla
+sportelli, centri telefonici), un alto tasso di mancate presentazioni
+("no-show", oggetto di una sanzione economica in caso di mancata
+disdetta nei termini), e non risponde agli obiettivi di digitalizzazione della
+sanità pubblica previsti dal PNRR (Missione 6) \cite{rerTempiAttesa,pnrrM6}. Un redesign mirato sulla
 fiducia e sull\textquotesingle autonomia degli utenti anziani, che
 valorizzi --- invece di scavalcare --- il ruolo del caregiver familiare,
 è coerente con questi obiettivi e giustificabile in termini di riduzione
 costi.
 
-\textbf{Product Objectives}
+\textbf{Obiettivi di prodotto}
 
 Consentire ai pazienti anziani cronici di partecipare più attivamente
 alla gestione dei propri appuntamenti sanitari --- anche quando
@@ -128,15 +126,15 @@ interfaccia, aumentando la fiducia nel canale digitale e trasformando il
 caregiver da "esecutore" a "facilitatore/allenatore"
 dell\textquotesingle autonomia del proprio caro.
 
-\textbf{Business Goals}
+\textbf{Obiettivi organizzativi}
 
-Riduzione dei costi operativi di call center e sportelli fisici;
+Riduzione dei costi operativi di centri telefonici e sportelli fisici;
 riduzione del tasso di mancata presentazione agli appuntamenti;
 incremento della quota di prenotazioni gestite sul canale digitale, in
 linea con i target nazionali di digitalizzazione della sanità pubblica
-(PNRR Missione 6, componente 2).
+(PNRR Missione 6, componente 2) \cite{pnrrM6}.
 
-\textbf{Brand identity}
+\textbf{Identità del servizio}
 
 Rafforzare la percezione della sanità pubblica regionale come moderna,
 efficiente ma allo stesso tempo vicina e inclusiva verso i cittadini più
@@ -144,7 +142,7 @@ fragili --- "la sanità digitale che non lascia indietro nessuno" ---
 differenziandosi da una digitalizzazione percepita come fredda o ostile
 dalla popolazione anziana.
 
-\textbf{Success metrics}
+\textbf{Metriche di successo}
 
 \begin{itemize}
 \item
@@ -158,13 +156,11 @@ dalla popolazione anziana.
 \item
   Riduzione del tasso di abbandono durante il flusso di prenotazione
 \item
-  Riduzione delle chiamate al call center motivate da difficoltà di
+  Riduzione delle chiamate al centro telefonico motivate da difficoltà di
   utilizzo del portale/app
 \end{itemize}
 
-\emph{\textbf{FASE A --- Documento 03}}
-
-User Segmentation card
+\subsection{Documento 03 --- Scheda di segmentazione degli utenti}
 
 \textbf{Dimensioni di segmentazione scelte}
 
@@ -183,7 +179,7 @@ User Segmentation card
   caregiver--assistito
 \end{itemize}
 
-\textbf{Motivazione della scelta, relazione con il tool del cliente}
+\textbf{Motivazione della scelta, relazione con lo strumento del committente}
 
 Il progetto HPHP richiede di considerare due audience distinte ma
 interdipendenti: l\textquotesingle utente diretto (che deve usare il
@@ -203,11 +199,11 @@ autonomia digitale)}
 
 \begin{itemize}
 \item
-  1. "Digital newcomer" --- 65-74 anni, competenze digitali di base
+  1. "Nuovo utente digitale" --- 65-74 anni, competenze digitali di base
   (messaggistica, videochiamate) ma bloccato/a su procedure strutturate
   (SPID, moduli, pagamenti online)
 \item
-  2. "Digital avoider" --- 75-85+ anni, competenza tecnica quasi nulla,
+  2. "Utente con bassa autonomia digitale" --- 75-85+ anni, competenza tecnica quasi nulla,
   delega totale delle pratiche digitali al caregiver, spesso patologie
   croniche con necessità di prenotazioni ricorrenti
 \end{itemize}
@@ -220,7 +216,7 @@ con l\textquotesingle assistito)}
   1. Caregiver convivente --- vive con l\textquotesingle assistito,
   gestisce le prenotazioni "di persona", spesso presente alle visite
 \item
-  2. Caregiver "always-on" a distanza --- figlio/a 45-60 anni che non
+  2. Caregiver sempre reperibile a distanza --- figlio/a 45-60 anni che non
   convive con il genitore, gestisce le pratiche da remoto (telefono/PC),
   spesso lavoratore/lavoratrice a tempo pieno con poco tempo a
   disposizione
@@ -234,11 +230,11 @@ con l\textquotesingle assistito)}
 
 \begin{itemize}
 \item
-  A. Paziente anziano "digital avoider", 75-85 anni, patologia cronica,
+  A. Paziente anziano con bassa autonomia digitale, 75-85 anni, patologia cronica,
   con caregiver figlio/a disponibile ma non sempre fisicamente presente
   (utente diretto)
 \item
-  B. Caregiver "always-on" a distanza, 45-60 anni, alta competenza
+  B. Caregiver sempre reperibile a distanza, 45-60 anni, alta competenza
   tecnica, gestisce da remoto le prenotazioni del genitore, vorrebbe
   poter delegare gradualmente compiti semplici (intermediario)
 \end{itemize}
@@ -249,9 +245,9 @@ ed espressive delle altre}
 I due segmenti scelti rappresentano i due estremi della relazione di
 dipendenza digitale che il progetto HPHP vuole affrontare: da un lato
 l\textquotesingle utente completamente dipendente e più a rischio di
-esclusione digitale (dato Istat 2025: solo il 63,9\% delle famiglie di
-soli anziani ha una connessione internet domestica, contro il 95,1\%
-delle altre famiglie), dall\textquotesingle altro
+esclusione digitale (nel 2025 solo il 63,9\% delle famiglie di soli
+anziani dispone di una connessione Internet domestica, contro il 95,1\%
+delle altre famiglie senza minori) \cite{istatICT2025}, dall\textquotesingle altro
 l\textquotesingle intermediario che il cliente vuole trasformare da
 "esecutore" a "trainer" dell\textquotesingle autonomia del genitore. È
 inoltre il caso più sfidante dal punto di vista del design (bassa
@@ -259,7 +255,8 @@ competenza tecnica + alta necessità percepita di
 controllo/rassicurazione da parte del caregiver a distanza) e più
 rilevante numericamente: in Italia sono oltre 7 milioni le persone che
 svolgono attività di caregiving familiare almeno una volta a settimana,
-per il 58-60\% donne tra i 45 e i 64 anni.
+per il 58\% donne e per il 56\% di età compresa tra 45 e 64 anni
+\cite{cnelCaregiver2024}.
 
 \textbf{Impatto atteso sul design}
 
@@ -272,16 +269,14 @@ distanza (visibilità sullo stato delle prenotazioni del genitore,
 notifiche, possibilità di prenotare per conto di un familiare associato
 mantenendo però il genitore informato e coinvolto). Il design dovrà
 rendere visibile e graduale il passaggio di competenza dal caregiver al
-paziente, coerentemente con l\textquotesingle obiettivo di business del
+  paziente, coerentemente con l\textquotesingle obiettivo organizzativo del
 cliente.
 
-\emph{\textbf{FASE A --- Documento 04 (1/2)}}
-
-Market research card --- Segmento A
+\subsection{Documento 04a --- Ricerca di mercato: segmento A}
 
 \textbf{Segmento di scelta}
 
-Paziente anziano "digital avoider", 75-85 anni, patologia cronica,
+Paziente anziano con bassa autonomia digitale, 75-85 anni, patologia cronica,
 utente diretto del servizio, con caregiver familiare disponibile ma non
 sempre fisicamente presente.
 
@@ -292,44 +287,46 @@ nell\textquotesingle accesso ai servizi sanitari essenziali, e quello su
 cui un redesign centrato sulla fiducia e sull\textquotesingle autonomia
 deve dimostrare il maggiore impatto.
 
-\textbf{Metodo di ricerca utilizzato --- Available statistics}
+\textbf{Metodo di ricerca utilizzato --- Statistiche disponibili}
 
-Fonti: ISTAT, report "Cittadini e ICT" --- Anno 2024 (pubblicato 28
-aprile 2025) e Anno 2025 (pubblicato aprile 2026), istat.it;
-approfondimenti giornalistici di sintesi (Sanità Informazione,
-AboutPharma) che commentano gli stessi dati Istat.
+Fonte primaria: ISTAT, \emph{Cittadini e ICT --- Anno 2024}
+\cite{istatICT2024} e \emph{Cittadini e ICT --- Anno 2025}
+\cite{istatICT2025}. Sono state escluse dalla sintesi le fonti
+giornalistiche, poiché i dati sono disponibili nei comunicati e nelle
+tavole dell\textquotesingle Istituto.
 
 \begin{itemize}
 \item
   Nel 2025 il 63,9\% delle famiglie composte esclusivamente da anziani
   (65+) dispone di connessione a Internet da casa (era il 60,6\% nel
   2024), contro il 95,1\% delle famiglie non esclusivamente anziane e il
-  98,7\% delle famiglie con almeno un minore.
+  98,7\% delle famiglie con almeno un minore \cite{istatICT2025}.
 \item
   Tra gli ultra 75enni il divario di genere nell\textquotesingle uso di
   Internet è marcato: 38,3\% degli uomini contro il 26,5\% delle donne
-  (dato 2024).
+  (dato 2024) \cite{istatICT2024}.
 \item
   Il 57,8\% delle famiglie senza connessione a Internet indica come
   motivo principale la mancanza di capacità di utilizzo, non il costo
-  dei dispositivi o la mancanza di interesse.
+  dei dispositivi o la mancanza di interesse \cite{istatICT2024}.
 \item
   Nel 2024 l\textquotesingle uso di siti/app della Pubblica
   Amministrazione per scaricare moduli è calato di 9,6 punti percentuali
   e per prenotare appuntamenti di 8 punti percentuali rispetto
   all\textquotesingle anno precedente, un segnale di complessità o
-  insoddisfazione d\textquotesingle uso più che di disinteresse.
+  insoddisfazione d\textquotesingle uso più che di disinteresse
+  \cite{istatICT2024}.
 \item
   Il titolo di studio incide fortemente sull\textquotesingle uso di
   Internet: 95,8\% tra i laureati, 91,6\% tra i diplomati, ma solo
   69,7\% tra chi ha al massimo la licenza media --- titolo di studio
-  frequente nella coorte 75-85 anni.
+  frequente nella coorte 75-85 anni \cite{istatICT2024}.
 \end{itemize}
 
-\emph{(screenshot delle pagine dei report ISTAT da allegare al materiale
+\emph{(schermate delle pagine dei report ISTAT da allegare al materiale
 supplementare)}
 
-\textbf{DA COMPLETARE --- Interviste one-to-one / osservazione sul campo
+\textbf{DA COMPLETARE --- Interviste individuali / osservazione sul campo
 con 3-5 pazienti anziani reali (anche solo telefoniche o in presenza di
 un familiare), per validare qualitativamente questi dati quantitativi.
 Traccia di intervista proposta: (1) Come prenoti di solito una visita
@@ -356,16 +353,14 @@ Il design deve minimizzare il carico cognitivo e tecnico richiesto
 l\textquotesingle autenticazione SPID), offrire percorsi guidati
 passo-passo con conferme esplicite, validare esplicitamente il ruolo del
 caregiver come alleato e non sostituto, e prevedere sempre una via di
-fuga verso l\textquotesingle assistenza umana (call center, farmacia,
+fuga verso l\textquotesingle assistenza umana (centro telefonico, farmacia,
 sportello) senza che questa venga percepita come un fallimento.
 
-\emph{\textbf{FASE A --- Documento 04 (2/2)}}
-
-Market research card --- Segmento B
+\subsection{Documento 04b --- Ricerca di mercato: segmento B}
 
 \textbf{Segmento di scelta}
 
-Caregiver familiare "always-on" a distanza, 45-60 anni, alta competenza
+Caregiver familiare sempre reperibile a distanza, 45-60 anni, alta competenza
 tecnica, gestisce da remoto le prenotazioni sanitarie di un genitore
 anziano, intermediario del servizio.
 
@@ -377,37 +372,37 @@ ed è quello che il cliente vuole trasformare da "esecutore" a
 "facilitatore/allenatore" dell\textquotesingle autonomia del proprio
 caro --- un obiettivo centrale del progetto HPHP.
 
-\textbf{Metodo di ricerca utilizzato --- Available statistics}
+\textbf{Metodo di ricerca utilizzato --- Statistiche disponibili}
 
-Fonti: rapporto CNEL-Censis "Il valore sociale del caregiver" (per la
-Regione Lazio, ottobre 2024); sintesi Istat/EHIS su caregiver familiari
-riprese da AboutPharma (2026) e Associazione Carer; dati Istat sulla
-popolazione anziana al 1° gennaio 2026.
+Fonti primarie: CNEL--Censis, \emph{Il valore sociale del caregiver}
+(2024) \cite{cnelCaregiver2024}; ISTAT, \emph{Indicatori demografici
+--- Anno 2025} (dati al 1° gennaio 2026) \cite{istatDemografia2025}.
 
 \begin{itemize}
 \item
   In Italia sono oltre 7 milioni le persone che svolgono attività di
   caregiving familiare non retribuito, assistendo un anziano, un
   disabile o un familiare non autosufficiente almeno una volta a
-  settimana.
+  settimana \cite{cnelCaregiver2024}.
 \item
-  Il 58-60\% dei caregiver familiari è composto da donne di età compresa
-  tra 45 e 64 anni.
+  Il 58\% dei caregiver familiari è composto da donne e il 56\% ha
+  un\textquotesingle età compresa tra 45 e 64 anni \cite{cnelCaregiver2024}.
 \item
-  Circa il 40\% dei caregiver, pur essendo in età lavorativa, dichiara
-  di non riuscire a conciliare lavoro e attività di assistenza, con
-  rischio di impoverimento del nucleo familiare.
+  Le difficoltà di conciliazione tra lavoro e assistenza riguardano il
+  38\% delle donne caregiver e il 34\% degli uomini caregiver
+  \cite{cnelCaregiver2024}.
 \item
   Al 1° gennaio 2026 gli over 65 in Italia sono quasi 14,8 milioni
   (25,1\% della popolazione) e gli over 85 hanno superato i 2,5 milioni,
   con una crescita costante attesa nei prossimi decenni: il fenomeno del
-  caregiving è quindi strutturale e non residuale.
+  caregiving è quindi strutturale e non residuale
+  \cite{istatDemografia2025}.
 \end{itemize}
 
-\emph{(screenshot dei report citati da allegare al materiale
+\emph{(schermate dei report citati da allegare al materiale
 supplementare)}
 
-\textbf{DA COMPLETARE --- Intervista/focus group con 2-3 caregiver
+\textbf{DA COMPLETARE --- Intervista/discussione di gruppo con 2-3 caregiver
 familiari reali (anche colleghi, conoscenti o parenti disponibili,
 dichiarandolo onestamente come da istruzioni del corso). Traccia
 proposta: (1) Come gestisci oggi le prenotazioni sanitarie di tuo
@@ -423,7 +418,7 @@ prevalentemente femminile e concentrato nella fascia 45-64 anni, con un
 costo personale significativo in termini di tempo e possibilità
 lavorative. Questo rende particolarmente rilevante, anche dal punto di
 vista del cliente (riduzione indiretta dei costi sociali), un design che
-alleggerisca il carico del caregiver senza however toglierne il
+alleggerisca il carico del caregiver senza tuttavia toglierne il
 controllo percepito.
 
 \textbf{Impatto sul design}
@@ -435,11 +430,9 @@ progressione esplicita e graduale di autonomia delegata al paziente, in
 modo che il caregiver possa fidarsi di "lasciare andare" un compito alla
 volta.
 
-\emph{\textbf{FASE A --- Documento 05a}}
+\subsection{Documento 05a --- Valutazione della risorsa esistente: strumento del committente}
 
-Assessment of existing resource card --- Tool del cliente
-
-\textbf{Nome del tool}
+\textbf{Nome dello strumento}
 
 CUPweb (portale, www.cupweb.it) e app mobile ER Salute --- Regione
 Emilia-Romagna.
@@ -452,7 +445,7 @@ Android e iOS (una versione Windows Phone risulta dismessa).
 \textbf{Scopo principale, operazioni consentite, adeguatezza percepita
 agli standard professionali}
 
-Il tool consente di prenotare, disdire e modificare appuntamenti per
+Lo strumento consente di prenotare, disdire e modificare appuntamenti per
 prestazioni sanitarie specialistiche (SSN e Libera Professione), pagare
 online una prenotazione, consultare il Fascicolo Sanitario Elettronico e
 ristampare i promemoria degli appuntamenti. Dal punto di vista tecnico
@@ -476,10 +469,10 @@ fascicolo-sanitario.it, support.fascicolo-sanitario.it).
   (SPID/CIE/CNS), coerente con l\textquotesingle infrastruttura pubblica
 \item
   Copertura territoriale capillare su tutta la Regione Emilia-Romagna,
-  con canali alternativi complementari (farmacie FarmaCUP, call center,
+  con canali alternativi complementari (farmacie FarmaCUP, centri telefonici,
   sportelli fisici) per chi non può/vuole usare il digitale
 \item
-  È il vero tool che il cliente ci ha chiesto di ridisegnare:
+  È il vero strumento che il committente ci ha chiesto di ridisegnare:
   analizzarlo nella sua forma reale, difetti inclusi, è indispensabile
   per un redesign credibile
 \end{itemize}
@@ -511,12 +504,12 @@ fascicolo-sanitario.it, support.fascicolo-sanitario.it).
   valore del servizio
 \end{itemize}
 
-First Impressions --- Direct Analysis
+\textbf{Prime impressioni --- Analisi diretta}
 
-\emph{Analisi diretta secondo le categorie delle User Focus Guidelines
-(\url{https://www.userfocus.co.uk/resources/guidelines.html}): Navigation, Search, Content
-organisation \& layout, Content and titles, Page layout, Shopping/task
-completion (qui: prenotazione), Trust and credibility. Il foglio di
+\emph{Analisi diretta secondo categorie consolidate di usabilità:
+navigazione, ricerca, organizzazione e
+struttura dei contenuti, contenuti e titoli, impaginazione,
+completamento del compito (qui: prenotazione), fiducia e credibilità. Il foglio di
 valutazione completo con i punteggi guideline-per-guideline va compilato
 nel file Excel dedicato; qui riportiamo la sintesi delle criticità più
 rilevanti riscontrate.}
@@ -525,25 +518,25 @@ rilevanti riscontrate.}
 
 \begin{itemize}
 \item
-  {[}Navigation{]} I link di primo livello ("Disdici", "Prenota",
+  {[}Navigazione{]} I link di primo livello ("Disdici", "Prenota",
   "Paga", "Informazioni") portano a domini esterni differenti senza
   preavviso visivo --- viola la linearità di navigazione attesa
 \item
-  {[}Trust and credibility{]} Il passaggio tra domini diversi (cupweb.it
+  {[}Fiducia e credibilità{]} Il passaggio tra domini diversi (cupweb.it
   → pagonlinesanita.it, fascicolo-sanitario.it) senza un design coerente
   indebolisce la percezione di affidabilità, un fattore critico proprio
   per l\textquotesingle utente anziano diffidente che è il target del
   progetto
 \item
-  {[}Page layout{]} Assenza di elementi visivi (icone, immagini, colori
+  {[}Impaginazione{]} Assenza di elementi visivi (icone, immagini, colori
   distintivi) che aiutino il riconoscimento rapido delle azioni
   disponibili; il testo è l\textquotesingle unico veicolo informativo
 \item
-  {[}Content and titles{]} Terminologia tecnico-burocratica non spiegata
+  {[}Contenuti e titoli{]} Terminologia tecnico-burocratica non spiegata
   in linguaggio semplice (es. "CNS", "SPID", "impegnativa
   dematerializzata") esposta senza tooltip o spiegazioni contestuali
 \item
-  {[}Task completion{]} Il completamento della maggior parte delle
+  {[}Completamento del compito{]} Il completamento della maggior parte delle
   azioni richiede autenticazione forte fin dal primo passo, senza un
   percorso dimostrativo o guidato per il nuovo utente
 \item
@@ -553,9 +546,9 @@ rilevanti riscontrate.}
   formale
 \end{itemize}
 
-First Impressions --- Reverse Analysis
+\textbf{Prime impressioni --- Analisi inversa}
 
-\emph{Analisi condotta simulando il task "disdire un appuntamento già
+\emph{Analisi condotta simulando il compito "disdire un appuntamento già
 fissato, partendo da un link ricevuto per SMS, senza credenziali SPID
 già pronte" --- scenario realistico per il segmento A (paziente
 anziano).}
@@ -564,8 +557,8 @@ anziano).}
 
 \begin{itemize}
 \item
-  Il task di disdetta è tra i pochi eseguibili senza autenticazione
-  forte, ma non è immediatamente distinguibile in home page da quello di
+  Il compito di disdetta è tra i pochi eseguibili senza autenticazione
+  forte, ma non è immediatamente distinguibile nella pagina iniziale da quello di
   prenotazione --- richiede comunque lettura attenta dei menu
 \item
   Non è chiaro, senza leggere il testo esplicativo per intero, quale sia
@@ -586,11 +579,9 @@ anziano).}
   già costruita
 \end{itemize}
 
-\emph{\textbf{FASE A --- Documento 05b}}
+\subsection{Documento 05b --- Valutazione della risorsa esistente: strumento concorrente}
 
-Assessment of existing resource card --- Tool competitor
-
-\textbf{Nome del tool}
+\textbf{Nome dello strumento}
 
 MioDottore (Doctolib Italia) --- piattaforma privata di prenotazione di
 visite mediche.
@@ -660,29 +651,29 @@ faccette, mappa, card con foto, iconografia chiara).
   inapplicabile ma da tenere presente come contro-esempio
 \end{itemize}
 
-First Impressions --- Direct Analysis
+\textbf{Prime impressioni --- Analisi diretta}
 
 \textbf{Elenco delle criticità principali}
 
 \begin{itemize}
 \item
-  {[}Trust and credibility{]} Il sistema di recensioni moderate genera
+  {[}Fiducia e credibilità{]} Il sistema di recensioni moderate genera
   sospetto in una parte degli utenti, minando proprio
   l\textquotesingle elemento di fiducia che dovrebbe essere il punto di
   forza
 \item
-  {[}Task completion{]} Il login, secondo segnalazioni reali, può
+  {[}Completamento del compito{]} Il login, secondo segnalazioni reali, può
   risultare inutilmente lungo (redirect multipli tra app e browser) su
   alcuni dispositivi
 \item
-  {[}Navigation{]} Buona nel complesso: ricerca a faccette e mappa
+  {[}Navigazione{]} Buona nel complesso: ricerca a faccette e mappa
   riducono il carico di navigazione libera, un pattern che vale la pena
   studiare per il redesign
 \end{itemize}
 
-First Impressions --- Reverse Analysis
+\textbf{Prime impressioni --- Analisi inversa}
 
-\emph{Analisi condotta simulando il task "trovare e prenotare una visita
+\emph{Analisi condotta simulando il compito "trovare e prenotare una visita
 specialistica vicino a casa, come utente al primo accesso".}
 
 \textbf{Elenco delle criticità principali}
@@ -699,20 +690,18 @@ specialistica vicino a casa, come utente al primo accesso".}
   sovraccarico da tenere presente anche nel nostro redesign
 \end{itemize}
 
-\emph{\textbf{FASE A --- Documento 06a}}
+\subsection{Documento 06a --- Test utente preliminare: strumento del committente}
 
-Preliminary User testing card --- Tool del cliente
-
-\emph{Questo test riguarda CUPweb / app ER Salute, il tool da
+\emph{Questo test riguarda CUPweb / app ER Salute, lo strumento da
 ridisegnare.}
 
-\textbf{Nome del tool}
+\textbf{Nome dello strumento}
 
 CUPweb (portale) / app ER Salute
 
-Protocollo di test
+\textbf{Protocollo di test}
 
-\textbf{Setup della sessione di test}
+\textbf{Configurazione della sessione di test}
 
 Test in presenza, presso il domicilio del soggetto o in un luogo neutro
 familiare al soggetto (per ridurre l\textquotesingle ansia da contesto),
@@ -725,11 +714,11 @@ assistente/osservatore, un secondo prende appunti.
 
 \begin{itemize}
 \item
-  Discount usability testing (3 soggetti, in linea con le indicazioni
+  Test di usabilità essenziale (3 soggetti, in linea con le indicazioni
   del corso per test preliminari)
 \end{itemize}
 
-\textbf{Elenco dei task da testare}
+\textbf{Elenco dei compiti da testare}
 
 \begin{itemize}
 \item
@@ -747,10 +736,10 @@ assistente/osservatore, un secondo prende appunti.
 
 \begin{itemize}
 \item
-  Thinking aloud per i task T1 e T3 (per comprendere il ragionamento e
+  Verbalizzazione del pensiero per i compiti T1 e T3 (per comprendere il ragionamento e
   le difficoltà percepite)
 \item
-  Bottom line data per il task T2 (per misurare efficienza/efficacia
+  Dati sul risultato finale per il compito T2 (per misurare efficienza/efficacia
   reale senza interferenze)
 \end{itemize}
 
@@ -758,18 +747,18 @@ assistente/osservatore, un secondo prende appunti.
 
 \begin{itemize}
 \item
-  Success (task completato sì/no)
+  Successo (compito completato sì/no)
 \item
-  Efficiency (tempo impiegato)
+  Efficienza (tempo impiegato)
 \item
-  Efficacy (accuratezza del risultato ottenuto)
+  Efficacia (accuratezza del risultato ottenuto)
 \item
-  Errors (numero e tipo di errori commessi)
+  Errori (numero e tipo di errori commessi)
 \item
-  Learnability (miglioramento fra primo e secondo tentativo, se
+  Apprendibilità (miglioramento fra primo e secondo tentativo, se
   applicabile)
 \item
-  Satisfaction (tramite questionario SUS)
+  Soddisfazione (tramite questionario SUS)
 \end{itemize}
 
 \textbf{Reclutamento dei soggetti}
@@ -798,28 +787,26 @@ esplicitamente dalla card originale: se i soggetti sono stati scelti per
 disponibilità/vicinanza più che per rappresentatività statistica, va
 dichiarato esplicitamente.}
 
-\emph{Le sezioni "Test \#1: Subject\ldots" (nome fittizio, data,
+\emph{Le sezioni "Test \#1: Soggetto\ldots" (nome fittizio, data,
 assistente, contesto, dati qualitativi e quantitativi, punteggio SUS dal
 modulo Google fornito dal corso, suggerimenti dei soggetti, riflessioni
 utili per il design) andranno aggiunte --- una per ciascun soggetto
 reale testato --- non appena i test saranno stati condotti. Il
 protocollo sopra è pronto per essere eseguito.}
 
-\emph{\textbf{FASE A --- Documento 06b}}
-
-Preliminary User testing card --- Tool competitor
+\subsection{Documento 06b --- Test utente preliminare: strumento concorrente}
 
 \emph{Questo test riguarda MioDottore.}
 
-\textbf{Nome del tool}
+\textbf{Nome dello strumento}
 
 MioDottore (Doctolib Italia)
 
 Protocollo di test
 
-\textbf{Setup della sessione di test}
+\textbf{Configurazione della sessione di test}
 
-Stesso setup del test sul tool del cliente (in presenza, dispositivo
+Stessa configurazione del test sullo strumento del committente (in presenza, dispositivo
 abituale del soggetto quando possibile), idealmente con gli stessi
 soggetti reclutati per il test su CUPweb, per poter confrontare le
 esperienze a parità di persona.
@@ -828,10 +815,10 @@ esperienze a parità di persona.
 
 \begin{itemize}
 \item
-  Discount usability testing (3 soggetti)
+  Test di usabilità essenziale (3 soggetti)
 \end{itemize}
 
-\textbf{Elenco dei task da testare}
+\textbf{Elenco dei compiti da testare}
 
 \begin{itemize}
 \item
@@ -848,16 +835,16 @@ esperienze a parità di persona.
 
 \begin{itemize}
 \item
-  Thinking aloud per T1 e T3
+  Verbalizzazione del pensiero per T1 e T3
 \item
-  Bottom line data per T2
+  Dati sul risultato finale per T2
 \end{itemize}
 
 \textbf{Metriche di test}
 
 \begin{itemize}
 \item
-  Success, Efficiency, Efficacy, Errors, Learnability, Satisfaction
+  Successo, efficienza, efficacia, errori, apprendibilità, soddisfazione
   (SUS)
 \end{itemize}
 
@@ -875,19 +862,17 @@ card 06a.}
 
 \textbf{DA COMPLETARE --- Vedi card 06a.}
 
-\emph{Anche qui, le sezioni "Test \#1: Subject\ldots" per ciascun
+\emph{Anche qui, le sezioni "Test \#1: Soggetto\ldots" per ciascun
 soggetto reale vanno aggiunte a valle dell\textquotesingle esecuzione
 dei test. Protocollo pronto per essere eseguito.}
 
-\emph{\textbf{FASE A --- Documento 07}}
-
-Conclusions and design recommendation card
+\subsection{Documento 07 --- Conclusioni e raccomandazioni di progettazione}
 
 \textbf{Elenco delle criticità per importanza}
 
-\emph{Elenco preliminare basato sulle sole Assessment card (05a/05b).
+\emph{Elenco preliminare basato sulle sole schede di valutazione (05a/05b).
 Andrà integrato e ri-prioritizzato con impatto/persistenza reali una
-volta raccolti i dati dello User testing (06a/06b).}
+volta raccolti i dati dei test utente (06a/06b).}
 
 \begin{itemize}
 \item
@@ -938,8 +923,8 @@ integrati con quanto emerso dai test.}
 \textbf{Raccomandazioni di design preliminari}
 
 \emph{Raccomandazioni preliminari, connesse alle criticità individuate
-nell\textquotesingle assessment. Andranno arricchite/confermate con le
-evidenze dello user testing prima della stesura finale.}
+nella valutazione. Andranno arricchite/confermate con le
+evidenze dei test utente prima della stesura finale.}
 
 \begin{itemize}
 \item
