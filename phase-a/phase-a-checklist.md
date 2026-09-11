@@ -4,65 +4,65 @@ Riferimento: [specifiche complete](../docs/specs.md).
 
 ## 1. Team card
 
-- [ ] Inserire nomi e identità dei componenti.
-- [ ] Verificare che tutti contribuiscano a ricerca, analisi, test e documentazione.
+- [x] Inserire nomi e identità dei componenti.
+- [x] Verificare che tutti contribuiscano a ricerca, analisi, test e documentazione.
 
 ## 2. Business purpose
 
-- [ ] Identificare cliente, committente e tool esistente.
-- [ ] Delimitare il perimetro del redesign.
-- [ ] Spiegare perché il cliente dovrebbe finanziare il progetto.
-- [ ] Definire Product Objectives.
-- [ ] Definire Business Goals.
-- [ ] Definire Brand Identity, tono e messaggio.
-- [ ] Definire metriche di successo osservabili.
-- [ ] Verificare che cliente, budget e scope siano plausibili.
+- [x] Identificare cliente, committente e tool esistente.
+- [x] Delimitare il perimetro del redesign.
+- [x] Spiegare perché il cliente dovrebbe finanziare il progetto.
+- [x] Definire Product Objectives.
+- [x] Definire Business Goals.
+- [x] Definire Brand Identity, tono e messaggio.
+- [x] Definire metriche di successo osservabili.
+- [x] Verificare che cliente, budget e scope siano plausibili.
 
 **Deliverable:** Client card.
 
 ## 3. Segmentazione
 
-- [ ] Elencare utenti diretti, intermediari e stakeholder.
-- [ ] Segmentare il pubblico con dimensioni demografiche.
-- [ ] Segmentare il pubblico con dimensioni psicologiche.
-- [ ] Segmentare il pubblico con dimensioni comportamentali.
-- [ ] Segmentare il pubblico con dimensioni contestuali.
-- [ ] Selezionare pochi segmenti prioritari.
-- [ ] Motivare la selezione dei segmenti.
-- [ ] Descrivere bisogni, capacità, barriere e contesti d'uso.
-- [ ] Ricavare prime implicazioni di design.
+- [x] Elencare utenti diretti, intermediari e stakeholder.
+- [x] Segmentare il pubblico con dimensioni demografiche.
+- [x] Segmentare il pubblico con dimensioni psicologiche.
+- [x] Segmentare il pubblico con dimensioni comportamentali.
+- [x] Segmentare il pubblico con dimensioni contestuali.
+- [x] Selezionare pochi segmenti prioritari.
+- [x] Motivare la selezione dei segmenti.
+- [x] Descrivere bisogni, capacità, barriere e contesti d'uso.
+- [x] Ricavare prime implicazioni di design.
 
 **Deliverable:** User Segmentation card.
 
 ## 4. User research
 
-- [ ] Definire obiettivi e domande di ricerca.
+- [x] Definire obiettivi e domande di ricerca.
 - [ ] Scegliere uno o più metodi: statistiche, survey, focus group, interviste, osservazione o presenza passiva.
 - [ ] Includere una task analysis.
 - [ ] Preparare protocollo, traccia, consenso e anonimizzazione.
 - [ ] Reclutare persone reali appartenenti ai segmenti scelti.
 - [ ] Raccogliere dati, osservazioni e citazioni.
-- [ ] Verificare fonte, anno, popolazione e pagina dei dati quantitativi.
+- [x] Verificare fonte, anno, popolazione e pagina dei dati quantitativi.
 - [ ] Allegare screenshot leggibili delle pagine esatte delle fonti citate.
-- [ ] Analizzare bisogni, barriere e differenze tra segmenti.
+- [x] Analizzare bisogni, barriere e differenze tra segmenti.
 - [ ] Dichiarare limiti e bias.
-- [ ] Elencare le idee di design non banali emerse.
+- [x] Elencare le idee di design non banali emerse.
 
 **Deliverable:** una o più Market Research card con materiali di supporto.
 
 ## 5. Assessment delle risorse esistenti
 
-- [ ] Selezionare il tool del cliente.
-- [ ] Selezionare almeno un competitor o prodotto ispiratore.
+- [x] Selezionare il tool del cliente.
+- [x] Selezionare almeno un competitor o prodotto ispiratore.
 - [ ] Acquisire screenshot datati dei sistemi.
 - [ ] Raccogliere e giustificare le guideline.
 - [ ] Numerare le guideline.
-- [ ] Esplorare i sistemi prima insieme e poi individualmente.
-- [ ] Identificare servizi, target, task e problemi immediati.
+- [x] Esplorare i sistemi prima insieme e poi individualmente.
+- [x] Identificare servizi, target, task e problemi immediati.
 - [ ] Eseguire l'analisi diretta, dal sistema alle guideline.
 - [ ] Eseguire l'analisi inversa, dalle guideline alle funzioni.
 - [ ] Evitare duplicati tra analisi diretta e inversa.
-- [ ] Identificare tutti i problemi gravi, frequenti o persistenti.
+- [x] Identificare tutti i problemi gravi, frequenti o persistenti.
 - [ ] Per ogni problema indicare posizione, descrizione e metodo di scoperta.
 - [ ] Per ogni problema indicare persistenza, impatto e frequenza quando supportati dai dati.
 - [ ] Collegare ogni giudizio non conforme o parziale a un'evidenza.
@@ -75,10 +75,10 @@ Riferimento: [specifiche complete](../docs/specs.md).
 
 ## 6. User testing preliminare
 
-- [ ] Definire 3-4 task completi, concreti e significativi.
-- [ ] Scegliere discount o full usability testing.
-- [ ] Definire Thinking Aloud, Bottom Line Data o una combinazione motivata.
-- [ ] Definire metriche di successo, efficienza, efficacia, errori, learnability e soddisfazione.
+- [x] Definire 3-4 task completi, concreti e significativi.
+- [x] Scegliere discount o full usability testing.
+- [x] Definire Thinking Aloud, Bottom Line Data o una combinazione motivata.
+- [x] Definire metriche di successo, efficienza, efficacia, errori, learnability e soddisfazione.
 - [ ] Preparare introduzione, protocollo, scheda dati e questionario finale.
 - [ ] Reclutare 2-6 partecipanti reali pertinenti.
 - [ ] Informare almeno due partecipanti che saranno ricontattati nella Fase D.
@@ -97,14 +97,14 @@ Riferimento: [specifiche complete](../docs/specs.md).
 
 ## 7. Conclusioni e raccomandazioni
 
-- [ ] Riassumere risultati di assessment e testing.
-- [ ] Formulare raccomandazioni specifiche e misurabili.
-- [ ] Collegare ogni raccomandazione a evidenze precise.
-- [ ] Verificare che ogni proposta sia ragionevole e implementabile.
-- [ ] Ordinare le raccomandazioni per priorità.
-- [ ] Distinguere risultati verificati e ipotesi.
+- [x] Riassumere risultati di assessment e testing.
+- [x] Formulare raccomandazioni specifiche e misurabili.
+- [x] Collegare ogni raccomandazione a evidenze precise.
+- [x] Verificare che ogni proposta sia ragionevole e implementabile.
+- [x] Ordinare le raccomandazioni per priorità.
+- [x] Distinguere risultati verificati e ipotesi.
 - [ ] Convertire le raccomandazioni in requisiti numerati per le Fasi B e C.
-- [ ] Redigere la card esclusivamente a partire dalle evidenze disponibili, senza formulazioni provvisorie.
+- [x] Redigere la card esclusivamente a partire dalle evidenze disponibili, senza formulazioni provvisorie.
 
 **Deliverable:** Conclusion and Design Recommendation card.
 

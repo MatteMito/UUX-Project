@@ -6,15 +6,15 @@ Questa checklist raccoglie esclusivamente le attività ancora da verificare o co
 
 ### Market research - Segmento A (sezione 04 1/2)
 
-- [ ] Recuperare le pagine esatte dei report ISTAT citati.
-- [ ] Inserire gli screenshot leggibili nel materiale supplementare.
-- [ ] Verificare che fonte, anno, pagina e didascalia coincidano con le citazioni nel report.
+- [x] Recuperare le pagine esatte dei report ISTAT citati.
+- [x] Inserire gli screenshot leggibili nel materiale supplementare.
+- [x] Verificare che fonte, anno, pagina e didascalia coincidano con le citazioni nel report.
 
 ### Market research - Segmento B (sezione 04 2/2)
 
-- [ ] Recuperare le pagine esatte di tutti i report citati.
-- [ ] Inserire gli screenshot leggibili nel materiale supplementare.
-- [ ] Verificare che fonte, anno, pagina e didascalia coincidano con le citazioni nel report.
+- [x] Recuperare le pagine esatte di tutti i report citati.
+- [x] Inserire gli screenshot leggibili nel materiale supplementare.
+- [x] Verificare che fonte, anno, pagina e didascalia coincidano con le citazioni nel report.
 
 ### Assessment delle risorse esistenti (sezioni 05a e 05b)
 

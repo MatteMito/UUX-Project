@@ -5,6 +5,7 @@
 \usepackage[italian]{babel}
 \usepackage[a4paper,inner=2.8cm,outer=2.3cm,top=2.5cm,bottom=2.6cm]{geometry}
 \usepackage{xcolor}
+\usepackage[most]{tcolorbox}
 \usepackage{amsmath,amssymb}
 \usepackage{microtype}
 \usepackage{parskip}
@@ -37,6 +38,9 @@
 
 \definecolor{headingcolor}{HTML}{24364B}
 \definecolor{rulecolor}{HTML}{A7B4C2}
+\definecolor{todobackground}{HTML}{FFF4CC}
+\definecolor{todoframe}{HTML}{C77800}
+\definecolor{todotext}{HTML}{6B3E00}
 
 \titleformat{\chapter}[display]
   {\normalfont\bfseries\color{headingcolor}}
@@ -61,6 +65,31 @@
   \par\addvspace{0.85\baselineskip}%
   {\noindent\color{headingcolor}\bfseries #1\par}%
   \nobreak\vspace{0.15\baselineskip}%
+}
+
+% Evidenzia in modo uniforme le attivita ancora da completare nel report.
+\newtcolorbox{projecttodobox}{
+  enhanced,
+  breakable,
+  colback=todobackground,
+  colframe=todoframe,
+  coltitle=todotext,
+  colbacktitle=todobackground,
+  boxrule=0.7pt,
+  arc=1.5pt,
+  left=8pt,
+  right=8pt,
+  top=7pt,
+  bottom=7pt,
+  before skip=0.8\baselineskip,
+  after skip=0.8\baselineskip,
+  title={TODO},
+  fonttitle=\bfseries
+}
+\newcommand{\projecttodo}[1]{\begin{projecttodobox}#1\end{projecttodobox}}
+\newcommand{\todoinline}[1]{%
+  \colorbox{todobackground}{\strut\textcolor{todotext}{\textbf{TODO}}}\enspace
+  \textcolor{todotext}{#1}%
 }
 
 \newcounter{none}
