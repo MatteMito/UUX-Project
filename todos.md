@@ -28,8 +28,8 @@ Questa checklist raccoglie esclusivamente le attività ancora da verificare o co
 
 ### Preliminary user testing (sezioni 06a e 06b)
 
-- [ ] Verificare e completare la card relativa al tool del cliente.
-- [ ] Verificare e completare la card relativa al competitor.
+- [x] Verificare e completare la card relativa al tool del cliente.
+- [x] Verificare e completare la card relativa al competitor.
 - [ ] Controllare che task, partecipanti, metriche, dati, SUS e limiti siano documentati per entrambi i tool.
 
 ### Conclusions and design recommendations (sezione 07)
