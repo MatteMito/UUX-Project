@@ -1,13 +1,12 @@
 % !TEX root = ../hphp-project-report.tex
 % Generated from HPHP_Documentazione_Completa_EDITABILE.docx.
-% Il titolo della fase e le intestazioni sono tradotti in italiano.
-\clearpage
-\section{Fase C --- Proposta progettuale}
+% I termini tecnici seguono la terminologia delle checklist di progetto.
+\chapter{Phase C --- Design Proposal}
 
-\subsection{Documento 02 --- Scheda dell'architettura dell'informazione}
+\section{Documento 02 --- Information Architecture card}
 
-\textbf{Era necessaria una fase di progettazione specifica per
-l\textquotesingle architettura dell'informazione dello strumento? Perché?}
+\fieldheading{Era necessaria una fase di progettazione specifica per
+l\textquotesingle Information Architecture del tool? Perché?}
 
 Sì. La valutazione di Fase A ha individuato come criticità
 principale la frammentazione del servizio su più domini/sottosistemi
@@ -15,15 +14,14 @@ principale la frammentazione del servizio su più domini/sottosistemi
 secondo la struttura interna dei sistemi informativi regionali piuttosto
 che secondo i compiti dell\textquotesingle utente (requisiti
 {[}ID-02{]}, {[}ID-05{]} di Fase A; {[}C-01{]}, {[}C-03{]} di Fase B).
-Una riprogettazione dell\textquotesingle interazione senza prima
-ridisegnare l\textquotesingle architettura informativa avrebbe lasciato
+Un redesign dell\textquotesingle interazione senza prima
+ridisegnare l\textquotesingle Information Architecture avrebbe lasciato
 intatta la causa principale di disorientamento e sfiducia rilevata
-nella valutazione. Una fase di architettura dell'informazione dedicata è quindi
-necessaria e propedeutica alla progettazione dell'interazione, al blueprint e ai wireframe.
+nell'Assessment. Una fase di Information Architecture dedicata è quindi
+necessaria e propedeutica all'Interaction Design, al blueprint e ai wireframe.
 
-\textbf{È stato scelto un approccio top-down, bottom-up o misto per
-l\textquotesingle architettura dell'informazione
-dell\textquotesingle applicazione?}
+\fieldheading{È stato scelto un approccio top-down, bottom-up o misto per
+l\textquotesingle Information Architecture dell\textquotesingle applicazione?}
 
 \begin{itemize}
 \item
@@ -35,10 +33,10 @@ dell\textquotesingle applicazione?}
   reali osservate nella valutazione.
 \end{itemize}
 
-\textbf{Se la scelta è diversa da quella dello strumento esistente, motivare la
+\fieldheading{Se la scelta è diversa da quella del tool esistente, motivare la
 scelta}
 
-Lo strumento esistente (CUPweb/ER Salute) riflette
+Il tool esistente (CUPweb/ER Salute) riflette
 un\textquotesingle organizzazione essenzialmente bottom-up e
 guidata dal sistema: ogni sistema informativo regionale (prenotazione,
 pagamento, fascicolo) espone la propria interfaccia separata, e
@@ -53,9 +51,9 @@ bottom-up sui casi d\textquotesingle uso reali per evitare di creare
 un\textquotesingle architettura teoricamente elegante ma poco aderente
 ai bisogni concreti.
 
-\textbf{Quali sono le principali decisioni
+\fieldheading{Quali sono le principali decisioni
 sull\textquotesingle organizzazione e sul sistema di etichettatura? Sono
-diverse rispetto allo strumento esistente?}
+diverse rispetto al tool esistente?}
 
 Sì, sostanzialmente diverse. Le etichette passano da
 un\textquotesingle organizzazione per sistema ("CUPweb",
@@ -79,7 +77,7 @@ dell\textquotesingle utente:
   "Chi assisto" / "Chi mi assiste" (nuova sezione, esplicita la
   relazione caregiver-paziente prevista dai requisiti
   {[}P-04{]}/{[}P-05{]}/{[}C-02{]} di Fase B, oggi assente come concetto
-  esplicito nello strumento)
+  esplicito nel tool)
 \item
   "Serve aiuto?" (canale di assistenza sempre visibile e allo stesso
   livello delle altre voci principali, non relegato in fondo alla
@@ -92,17 +90,17 @@ i termini burocratici (SPID, CNS, impegnativa dematerializzata) restano
 disponibili ma non sono più usati come etichette di navigazione
 primaria.
 
-\textbf{Quali sono i campi di metadati più rilevanti? Sono diversi
-rispetto allo strumento esistente?}
+\fieldheading{Quali sono i campi di metadati più rilevanti? Sono diversi
+rispetto al tool esistente?}
 
-Rispetto allo strumento esistente, che tratta ogni prenotazione come un record
+Rispetto al tool esistente, che tratta ogni prenotazione come un record
 isolato, introduciamo metadati aggiuntivi funzionali agli obiettivi del
 redesign:
 
 \begin{itemize}
 \item
   Tipo di prestazione (visita, esame, screening) --- già presente nel
-  strumento esistente
+  tool esistente
 \item
   Ricorrenza (flag "prestazione ricorrente/cronica") --- nuovo, abilita
   il flusso semplificato {[}U1-01{]} di Fase B per pazienti cronici come
@@ -122,10 +120,10 @@ redesign:
   paziente e caregiver
 \end{itemize}
 
-\textbf{Come si intende progettare il sistema di navigazione? È diverso
-rispetto allo strumento esistente?}
+\fieldheading{Come si intende progettare il sistema di navigazione? È diverso
+rispetto al tool esistente?}
 
-Sì. Lo strumento esistente non ha una vera navigazione unificata: ogni
+Sì. Il tool esistente non ha una vera navigazione unificata: ogni
 dominio ha il proprio menu locale. Proponiamo una navigazione a 5 voci
 di primo livello, identica per tutte le pagine e coerente su web e app
 (requisito {[}ID-02{]}/{[}ID-05{]} di Fase A): Prenota una visita, I
@@ -133,17 +131,17 @@ miei appuntamenti, Le mie prescrizioni, Chi assisto/Chi mi assiste,
 Serve aiuto? Le pagine profonde (es. dettaglio di una singola
 prenotazione) mantengono sempre un percorso di ritorno esplicito
 (breadcrumb semplificato: "\textless{} Torna ai miei appuntamenti")
-invece del semplice tasto "indietro" del browser, su cui lo strumento attuale
+invece del semplice tasto "indietro" del browser, su cui il tool attuale
 fa affidamento implicito.
 
-\textbf{Descrizione sintetica delle scelte progettuali}
+\fieldheading{Design Choices Summary}
 
-\textbf{Ausili alla navigazione}
+\fieldheading{Browsing Aids}
 
 \begin{itemize}
 \item
   Scorciatoia "Prenota di nuovo" per le prestazioni ricorrenti, in cima
-  a "I miei appuntamenti" (assente nello strumento esistente)
+  a "I miei appuntamenti" (assente nel tool esistente)
 \item
   Sezione "Prossimo appuntamento" sempre visibile nella pagina iniziale, per orientare
   subito l\textquotesingle utente sulla prossima azione rilevante
@@ -152,9 +150,9 @@ fa affidamento implicito.
   delle prenotazioni di tutti i familiari collegati
 \end{itemize}
 
-\textbf{Ausili alla ricerca}
+\fieldheading{Search Aids}
 
-Coerentemente con la valutazione di Fase A (lo strumento
+Coerentemente con l'Assessment di Phase A (il tool
 esistente non ha una vera ricerca testuale libera), non introduciamo una
 ricerca a testo libero come elemento primario: il volume di contenuti
 non lo giustifica e rischierebbe di aggiungere complessità per il
@@ -163,7 +161,7 @@ di prenotazione (tipo di prestazione, ambito territoriale, fascia
 oraria), pensati per essere selezionati per tocchi successivi piuttosto
 che digitati.
 
-\textbf{Contenuti e compiti}
+\fieldheading{Contents and Tasks}
 
 Compito primario: prenotare/disdire una visita o un esame. Compito secondario
 ricorrente: consultare lo stato di una prescrizione. Compito secondario per
@@ -174,7 +172,7 @@ spostati fuori dal percorso primario, in una sezione "Serve aiuto?"
   dedicata, per non competere visivamente con le azioni di compito (coerente
 con {[}ID-03{]}/{[}R-03{]} di Fase A).
 
-\textbf{Componenti non visibili}
+\fieldheading{Invisible Components}
 
 \begin{itemize}
 \item
@@ -197,15 +195,15 @@ con {[}ID-03{]}/{[}R-03{]} di Fase A).
   caregiver collegato
 \end{itemize}
 
-\subsection{Documento 06 --- Sintesi del progetto}
+\cardsection{Documento 06 --- Design Summary card}
 
 Per ciascuna versione del progetto prodotta, create una cartella nella
 cartella allegati con un nome significativo e aggiungetevi i file di
 progetto corrispondenti. Queste cartelle verranno usate in Fase D.
 
-\textbf{Versioni del progetto consegnate}
+\fieldheading{Delivered Design Versions}
 
-\textbf{Versione 0} (prima di qualsiasi valutazione formale)
+\fieldheading{Version 0 (prima di qualsiasi valutazione formale)}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -227,7 +225,7 @@ confronto prima/dopo (Documento 05). Questa versione non ha ancora ricevuto
 alcuna valutazione formale (né ispezione né test utente) ed è quella che
 sarà sottoposta a valutazione in apertura di Fase D.
 
-\textbf{Versione 1} (duplicare se necessario)
+\fieldheading{Version 1 (duplicare se necessario)}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -250,7 +248,7 @@ le modifiche conseguenti al progetto. Duplicare la tabella per ogni
 ulteriore iterazione (Versione 2, Versione 3...) se il team esegue più di
 un ciclo di revisione.}
 
-\textbf{Versione finale} (una sola, risultato principale della Fase C)
+\fieldheading{Final Version (una sola, risultato principale della Phase C)}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -274,12 +272,12 @@ utente sul prototipo). Finché Fase D non è stata condotta, la Versione 0
 coincide di fatto con la versione più recente disponibile: aggiornare
 questa sezione quando il design verrà rivisto in base alle valutazioni.}
 
-\textbf{Elenco delle criticità gestite nella riprogettazione, in ordine di importanza}
+\fieldheading{Elenco delle criticità gestite nella riprogettazione, in ordine di importanza}
 
 Ogni criticità è collegata ai requisiti delle schede di conclusione di Fase A
 e Fase B, e alle sezioni di wireframe/blueprint che la indirizzano.
 
-\textbf{1. Autenticazione obbligatoria complessa fin dal primo passo}
+\fieldheading{1. Autenticazione obbligatoria complessa fin dal primo passo}
 
 \begin{itemize}
 \item
@@ -290,7 +288,7 @@ e Fase B, e alle sezioni di wireframe/blueprint che la indirizzano.
   blueprint, passo 3; confronto prima/dopo, confronto \#2
 \end{itemize}
 
-\textbf{2. Frammentazione tra domini/sottosistemi scollegati}
+\fieldheading{2. Frammentazione tra domini/sottosistemi scollegati}
 
 \begin{itemize}
 \item
@@ -300,7 +298,7 @@ e Fase B, e alle sezioni di wireframe/blueprint che la indirizzano.
   navigazione); confronto prima/dopo, confronto \#1
 \end{itemize}
 
-\textbf{3. Assenza di un percorso guidato per il nuovo utente}
+\fieldheading{3. Assenza di un percorso guidato per il nuovo utente}
 
 \begin{itemize}
 \item
@@ -311,7 +309,7 @@ e Fase B, e alle sezioni di wireframe/blueprint che la indirizzano.
   blueprint, passi 1-2
 \end{itemize}
 
-\textbf{4. Interfaccia poco gerarchizzata, priva di elementi visivi}
+\fieldheading{4. Interfaccia poco gerarchizzata, priva di elementi visivi}
 
 \begin{itemize}
 \item
@@ -322,7 +320,7 @@ e Fase B, e alle sezioni di wireframe/blueprint che la indirizzano.
   gerarchia visiva per le azioni primarie)
 \end{itemize}
 
-\textbf{5. Terminologia tecnico-burocratica non spiegata}
+\fieldheading{5. Terminologia tecnico-burocratica non spiegata}
 
 \begin{itemize}
 \item
@@ -332,7 +330,7 @@ e Fase B, e alle sezioni di wireframe/blueprint che la indirizzano.
   linguaggio naturale); wireframe schermata 5 (riepilogo senza gergo)
 \end{itemize}
 
-\textbf{6. Ruolo del caregiver assente come concetto esplicito}
+\fieldheading{6. Ruolo del caregiver assente come concetto esplicito}
 
 \begin{itemize}
 \item
@@ -343,7 +341,7 @@ e Fase B, e alle sezioni di wireframe/blueprint che la indirizzano.
   confronto prima/dopo, confronto \#3
 \end{itemize}
 
-\textbf{7. Problemi di accessibilità per tecnologie assistive}
+\fieldheading{7. Problemi di accessibilità per tecnologie assistive}
 
 \begin{itemize}
 \item
@@ -356,7 +354,7 @@ esplicitamente in una eventuale versione ad alta fedeltà o nelle
 specifiche tecniche di implementazione, e da verificare concretamente in
 Fase D.}
 
-\textbf{8. Cronologia appuntamenti/documenti non ordinabile o
+\fieldheading{8. Cronologia appuntamenti/documenti non ordinabile o
 ricercabile}
 
 \begin{itemize}

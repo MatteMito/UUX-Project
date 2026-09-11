@@ -1,9 +1,9 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[11pt,a4paper,twoside,openright]{report}
 
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 \usepackage[italian]{babel}
-\usepackage[a4paper,margin=2.4cm]{geometry}
+\usepackage[a4paper,inner=2.8cm,outer=2.3cm,top=2.5cm,bottom=2.6cm]{geometry}
 \usepackage{xcolor}
 \usepackage{amsmath,amssymb}
 \usepackage{microtype}
@@ -19,30 +19,49 @@
 \usepackage{xurl}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
+\usepackage{emptypage}
 \usepackage{csquotes}
 \usepackage[backend=biber,style=numeric-comp,sorting=nyt,maxbibnames=99,defernumbers=true]{biblatex}
 \addbibresource{references/references.bib}
 
-\setcounter{secnumdepth}{1}
+\setcounter{secnumdepth}{2}
 \setcounter{tocdepth}{2}
 \setlength{\emergencystretch}{3em}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0.55\baselineskip plus 0.15\baselineskip minus 0.1\baselineskip}
+\setlength{\parskip}{0.65\baselineskip plus 0.18\baselineskip minus 0.1\baselineskip}
 \setlength{\LTpre}{0.8\baselineskip}
 \setlength{\LTpost}{0.8\baselineskip}
 \setlist[itemize]{leftmargin=*,topsep=0.5\baselineskip,itemsep=0.2\baselineskip,parsep=0pt,partopsep=0pt}
 \urlstyle{same}
 \AtBeginDocument{\renewcommand{\abstractname}{Abstract}}
 
+\definecolor{headingcolor}{HTML}{24364B}
+\definecolor{rulecolor}{HTML}{A7B4C2}
+
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\color{headingcolor}}
+  {\Large\MakeUppercase{\chaptername}\ \thechapter}
+  {0.55em}
+  {\Huge}
+  [\vspace{0.7em}\color{rulecolor}\titlerule]
+\titlespacing*{\chapter}{0pt}{-1.1cm}{1.8\baselineskip}
 \titleformat{\section}
-  {\normalfont\Large\bfseries}{\thesection}{0.7em}{}
-\titlespacing*{\section}{0pt}{0pt}{1.1\baselineskip}
+  {\normalfont\Large\bfseries\color{headingcolor}}{\thesection}{0.7em}{}
+  [\vspace{0.3em}\color{rulecolor}\titlerule]
+\titlespacing*{\section}{0pt}{0pt}{1.25\baselineskip}
 \titleformat{\subsection}
-  {\normalfont\large\bfseries}{\thesubsection}{0.65em}{}
-\titlespacing*{\subsection}{0pt}{2.2\baselineskip plus 0.4\baselineskip}{0.75\baselineskip}
+  {\normalfont\large\bfseries\color{headingcolor}}{\thesubsection}{0.65em}{}
+\titlespacing*{\subsection}{0pt}{1.8\baselineskip plus 0.4\baselineskip}{0.6\baselineskip}
 \titleformat{\subsubsection}
   {\normalfont\normalsize\bfseries}{\thesubsubsection}{0.55em}{}
 \titlespacing*{\subsubsection}{0pt}{1.4\baselineskip}{0.35\baselineskip}
+
+\newcommand{\cardsection}[1]{\clearpage\section{#1}}
+\newcommand{\fieldheading}[1]{%
+  \par\addvspace{0.85\baselineskip}%
+  {\noindent\color{headingcolor}\bfseries #1\par}%
+  \nobreak\vspace{0.15\baselineskip}%
+}
 
 \newcounter{none}
 \providecommand{\tightlist}{%
@@ -70,10 +89,17 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{Documentazione del progetto HPHP}
-\fancyhead[R]{Team Affordance}
-\fancyfoot[C]{\thepage}
+\fancyhead[LE]{\small\nouppercase{\leftmark}}
+\fancyhead[RO]{\small\nouppercase{\rightmark}}
+\fancyfoot[LE,RO]{\thepage}
 \setlength{\headheight}{14pt}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter\quad #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\quad #1}}
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[LE,RO]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
 
 \begin{document}
 
@@ -104,6 +130,8 @@
   \url{https://github.com/MatteMito/UUX-Project}
 \end{titlepage}
 
+\cleardoublepage
+\pagenumbering{roman}
 \begin{abstract}
 Il presente elaborato documenta il progetto HPHP (\emph{Help People
 Help People}), dedicato alla
@@ -129,16 +157,22 @@ delle versioni 0 e 1, il confronto prima/dopo, la checklist delle linee
 guida e le schede di personas e cast. I materiali sono organizzati nelle
 cartelle delle singole fasi e sono disponibili nel repository del progetto.
 
-\clearpage
+\subsection*{Nota terminologica}
+Per assicurare coerenza con le checklist e i deliverable del corso, le
+denominazioni tecniche di card, metodi, metriche e artefatti sono mantenute
+in inglese; il testo argomentativo e descrittivo resta in italiano.
+
+\cleardoublepage
 \tableofcontents
 
+\cleardoublepage
+\pagenumbering{arabic}
 \input{phase-a/phase-a.tex}
 \input{phase-b/phase-b.tex}
 \input{phase-c/phase-c.tex}
 \input{phase-d/phase-d.tex}
 
-\clearpage
-\section{Riferimenti}
+\chapter{Riferimenti}
 \printbibliography[type=report,title={Bibliografia},heading=subbibintoc]
 \printbibliography[type=online,title={Sitografia},heading=subbibintoc]
 

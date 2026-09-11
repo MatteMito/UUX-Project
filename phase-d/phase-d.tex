@@ -1,22 +1,21 @@
 % !TEX root = ../hphp-project-report.tex
 % Generated from HPHP_Documentazione_Completa_EDITABILE.docx.
-% Il titolo della fase e le intestazioni sono tradotti in italiano.
-\clearpage
-\section{Fase D --- Valutazione}
+% I termini tecnici seguono la terminologia delle checklist di progetto.
+\chapter{Phase D --- Evaluation}
 
-\subsection{Documento 01 --- Scheda del gruppo}
+\section{Documento 01 --- Team card}
 
 Vedi Fase A, Documento 01 --- Team Affordance (Matteo Boscherini,
 Alessandro Campedelli, Francesco Maria Fuligni).
 
-\subsection{Documento 02a --- Scheda d'ispezione: Cognitive Walkthrough}
+\cardsection{Documento 02a --- Inspection card: Cognitive Walkthrough}
 
-\textbf{Nome della versione valutata}
+\fieldheading{Evaluated Version}
 
 Versione 0 --- v0\_wireframe\_iniziale (Fase C, Documenti 03-05:
 blueprint, wireframe, confronto prima/dopo)
 
-\textbf{Dati di contesto dell\textquotesingle ispezione}
+\fieldheading{Inspection Context}
 
 \begin{itemize}
 \item
@@ -29,14 +28,14 @@ blueprint, wireframe, confronto prima/dopo)
   domande impersonando Pina in base al suo profilo di Fase B)
 \end{itemize}
 
-\textbf{Metodo di ispezione}
+\fieldheading{Inspection Method}
 
 \begin{itemize}
 \item
   Cognitive Walkthrough
 \end{itemize}
 
-\textbf{Compito valutato}
+\fieldheading{Evaluated Task}
 
 Compito equivalente a quello di Fase B (scheda della persona protagonista): Pina
 prenota la visita diabetologica di controllo semestrale, usando le
@@ -82,7 +81,7 @@ schermata 2, con transizione visibile e nuovo titolo in alto. \\
 \end{longtable}
 }
 
-\textbf{Esito del passo}
+\fieldheading{Step Outcome}
 
 Successo previsto. Nessuna criticità rilevata su questo passo.
 
@@ -117,16 +116,16 @@ identità\textquotesingle). \\
 \end{longtable}
 }
 
-\textbf{Esito del passo}
+\fieldheading{Step Outcome}
 
 Successo previsto, con un\textquotesingle incertezza minore sul punto
 (3).
 
-\textbf{Grado assegnato}
+\fieldheading{Assigned Rating}
 
 Buono (non Eccellente, per l\textquotesingle incertezza sul punto 3).
 
-\textbf{Raccomandazione di design}
+\fieldheading{Design Recommendation}
 
 {[}W-01{]} Sostituire o affiancare l\textquotesingle icona
 \textquotesingle R\textquotesingle{} con un\textquotesingle icona più
@@ -164,12 +163,12 @@ schermata 4 (calendario), con contenuto chiaramente diverso. \\
 \end{longtable}
 }
 
-\textbf{Grado assegnato}
+\fieldheading{Assigned Rating}
 
 Scarso, per il punto (3): è il passo più a rischio
 dell\textquotesingle intero flusso per il profilo di Pina.
 
-\textbf{Raccomandazione di design}
+\fieldheading{Design Recommendation}
 
 {[}W-02{]} Aggiungere un\textquotesingle istruzione esplicita e
 illustrata (\textquotesingle Controlla i messaggi SMS del tuo telefono,
@@ -204,7 +203,7 @@ lo slot scelto prima di passare al riepilogo. \\
 \end{longtable}
 }
 
-\textbf{Grado assegnato}
+\fieldheading{Assigned Rating}
 
 Eccellente.
 
@@ -235,18 +234,18 @@ restare incerto se l\textquotesingle azione sia realmente completata. \\
 \end{longtable}
 }
 
-\textbf{Grado assegnato}
+\fieldheading{Assigned Rating}
 
 Buono.
 
-\textbf{Raccomandazione di design}
+\fieldheading{Design Recommendation}
 
 {[}W-03{]} Aggiungere alla versione successiva una schermata di conferma
 esplicita post-azione (\textquotesingle Prenotazione confermata
 $\checkmark$\textquotesingle, con riepilogo e opzione per aggiungere al calendario
 del telefono), oggi non presente nel set di wireframe.
 
-\textbf{Esito complessivo del Cognitive Walkthrough}
+\fieldheading{Cognitive Walkthrough Outcome}
 
 Il flusso è nel complesso ben allineato al profilo di Pina, con due
 punti di attenzione: il passo 3 (autenticazione leggera via SMS) resta
@@ -256,21 +255,20 @@ di conferma esplicita a fine flusso (punto 4 del passo 5) rischia di
 lasciare l\textquotesingle utente in una condizione di incertezza subito
 dopo l\textquotesingle azione più importante del compito.
 
-\textbf{Nome della versione ridisegnata (se esistente come esito
-dell\textquotesingle ispezione)}
+\fieldheading{Redesigned Version (se esistente come esito dell\textquotesingle Inspection)}
 
 \textbf{DA COMPLETARE --- Da produrre come v1\_dopo\_ispezione se il
 team decide di implementare le raccomandazioni {[}W-01{]}, {[}W-02{]},
 {[}W-03{]} prima di procedere con i test formativi/conclusivi. In tal caso,
 aggiornare anche la scheda di sintesi del progetto di Fase C (Documento 06).}
 
-\subsection{Documento 02b --- Scheda d'ispezione: analisi euristica}
+\cardsection{Documento 02b --- Inspection card: Heuristic Analysis}
 
-\textbf{Nome della versione valutata}
+\fieldheading{Evaluated Version}
 
 Versione 0 --- v0\_wireframe\_iniziale (Fase C, Documenti 03-05)
 
-\textbf{Dati di contesto dell\textquotesingle ispezione}
+\fieldheading{Inspection Context}
 
 \begin{itemize}
 \item
@@ -281,11 +279,11 @@ Versione 0 --- v0\_wireframe\_iniziale (Fase C, Documenti 03-05)
   standard dell\textquotesingle analisi euristica
 \end{itemize}
 
-\textbf{Metodo di ispezione}
+\fieldheading{Inspection Method}
 
 \begin{itemize}
 \item
-  Analisi euristica --- 10 euristiche di Nielsen, applicate
+  Heuristic Analysis --- 10 euristiche di Nielsen, applicate
   all\textquotesingle intero insieme di wireframe (schermate 1-7) e al
   blueprint
 \end{itemize}
@@ -343,7 +341,7 @@ suo contenuto interno non è stato ancora progettato in questa iterazione
 \end{longtable}
 }
 
-\textbf{Raccomandazioni di design}
+\fieldheading{Design Recommendations}
 
 \begin{itemize}
 \item
@@ -363,27 +361,26 @@ suo contenuto interno non è stato ancora progettato in questa iterazione
   gestisce più familiari o più appuntamenti contemporaneamente
 \end{itemize}
 
-\textbf{Nome della versione ridisegnata (se esistente come esito
-dell\textquotesingle ispezione)}
+\fieldheading{Redesigned Version (se esistente come esito dell\textquotesingle Inspection)}
 
 \textbf{DA COMPLETARE --- Come per il Cognitive Walkthrough: da produrre
 come v1\_dopo\_ispezione se le raccomandazioni
 {[}H-01{]}/{[}H-02{]}/{[}H-03{]} vengono implementate prima delle fasi
 di test con utenti reali.}
 
-\subsection{Documento 03 --- Scheda del test formativo}
+\cardsection{Documento 03 --- Formative Test card}
 
 \emph{Una scheda per ogni versione testata. Questa scheda riguarda la
 Versione 0 (o la v1\_dopo\_ispezione, se prodotta). Il protocollo
 sottostante è pronto per l\textquotesingle esecuzione; le sezioni che
 richiedono soggetti reali sono segnalate esplicitamente.}
 
-\textbf{Nome della versione}
+\fieldheading{Version Name}
 
 {[}da compilare --- Versione 0 oppure v1\_dopo\_ispezione, secondo
 quanto deciso dal team dopo la scheda d'ispezione{]}
 
-\textbf{Configurazione della sessione di test}
+\fieldheading{Test Session Setup}
 
 Test in presenza, sugli stessi dispositivi/soggetti già coinvolti nello
 test utente preliminare di Fase A quando possibile (per continuità e
@@ -394,14 +391,14 @@ alternativa, tramite simulazione \textquotesingle Mago di
 Oz\textquotesingle{} guidata da un membro del team che mostra la
 schermata successiva a ogni tocco del soggetto.
 
-\textbf{Metodo di test}
+\fieldheading{Test Method}
 
 \begin{itemize}
 \item
   Test di usabilità essenziale (3-5 persone)
 \end{itemize}
 
-\textbf{Elenco dei compiti da testare}
+\fieldheading{Test Tasks}
 
 \begin{itemize}
 \item
@@ -416,24 +413,24 @@ schermata successiva a ogni tocco del soggetto.
   (schermata 7)
 \end{itemize}
 
-\textbf{Metodologia di test}
+\fieldheading{Testing Methodology}
 
 \begin{itemize}
 \item
-  Verbalizzazione del pensiero per T1 e T3
+  Thinking Aloud per T1 e T3
 \item
-  Dati sul risultato finale per T2
+  Bottom Line Data per T2
 \end{itemize}
 
-\textbf{Metriche di test}
+\fieldheading{Test Metrics}
 
 \begin{itemize}
 \item
-  Successo, efficienza, efficacia, errori, apprendibilità, soddisfazione
+  Success, Efficiency, Efficacy, Errors, Learnability, Satisfaction
   (SUS)
 \end{itemize}
 
-\textbf{Reclutamento dei soggetti (persone reali)}
+\fieldheading{Reclutamento dei soggetti (persone reali)}
 
 \textbf{DA COMPLETARE --- Da completare con soggetti reali, con le
 stesse caratteristiche indicate per il test utente preliminare di Fase
@@ -441,12 +438,12 @@ A (segmento A: 65-85 anni, bassa/media competenza digitale; segmento B:
 caregiver familiare 45-60 anni). Nome fittizio, età, genere, competenza
 tecnica, somiglianza al segmento, relazione col team.}
 
-\textbf{Modalità di reclutamento dei soggetti}
+\fieldheading{Modalità di reclutamento dei soggetti}
 
 \textbf{DA COMPLETARE --- Da completare, dichiarando onestamente come
 sono stati trovati i soggetti.}
 
-\textbf{Motivazione della scelta dei soggetti}
+\fieldheading{Motivazione della scelta dei soggetti}
 
 \textbf{DA COMPLETARE --- Da completare con onestà.}
 
@@ -459,26 +456,26 @@ riflessioni utili per il design) e la sezione conclusiva
 ridisegnata\textquotesingle{} vanno aggiunte non appena i test saranno
 stati condotti. Il protocollo sopra è pronto per essere eseguito.}
 
-\subsection{Documento 04 --- Scheda del test conclusivo}
+\cardsection{Documento 04 --- Summative Test card}
 
 \emph{Una sola scheda, sulla versione finale del progetto ("o la va o la
 spacca"). Da eseguire solo dopo aver chiuso il ciclo di test formativi e
 le relative modifiche.}
 
-\textbf{Nome della versione finale}
+\fieldheading{Final Version Name}
 
 \textbf{DA COMPLETARE --- Da compilare con il nome della versione finale
 (cartella principale di Fase C, eventualmente aggiornata in base agli esiti dei
 test formativi).}
 
-\textbf{Configurazione della sessione di test}
+\fieldheading{Test Session Setup}
 
 Stesso impianto metodologico del test formativo, preferibilmente con
 soggetti nuovi rispetto a quelli già esposti al progetto nei cicli
 precedenti, per evitare effetti di apprendimento che falsino il
 risultato conclusivo.
 
-\textbf{Metodo di test}
+\fieldheading{Test Method}
 
 \begin{itemize}
 \item
@@ -487,7 +484,7 @@ risultato conclusivo.
   scelta effettiva
 \end{itemize}
 
-\textbf{Elenco dei compiti da testare}
+\fieldheading{Test Tasks}
 
 \begin{itemize}
 \item
@@ -495,29 +492,29 @@ risultato conclusivo.
   confrontabilità dei risultati prima/dopo
 \end{itemize}
 
-\textbf{Metodologia di test}
+\fieldheading{Testing Methodology}
 
 \begin{itemize}
 \item
-  Verbalizzazione del pensiero per T1/T3, dati sul risultato finale per T2, coerentemente con
+  Thinking Aloud per T1/T3, Bottom Line Data per T2, coerentemente con
   il test formativo
 \end{itemize}
 
-\textbf{Metriche di test}
+\fieldheading{Test Metrics}
 
 \begin{itemize}
 \item
-  Successo, efficienza, efficacia, errori, apprendibilità, soddisfazione
-  (SUS) --- obbligatoria la soddisfazione come richiesto dalla scheda
+  Success, Efficiency, Efficacy, Errors, Learnability, Satisfaction
+  (SUS) --- obbligatoria la Satisfaction come richiesto dalla card
 \end{itemize}
 
-\textbf{Reclutamento dei soggetti (persone reali)}
+\fieldheading{Reclutamento dei soggetti (persone reali)}
 
 \textbf{DA COMPLETARE --- Da completare con soggetti reali al termine
 del ciclo di test formativi, seguendo gli stessi criteri di
 rappresentatività dei segmenti A e B.}
 
-\textbf{Motivazione della scelta dei soggetti}
+\fieldheading{Motivazione della scelta dei soggetti}
 
 \textbf{DA COMPLETARE --- Da completare con onestà.}
 
@@ -528,20 +525,20 @@ aggiunte al termine dell\textquotesingle esecuzione dei test. Questa è
 la valutazione conclusiva dell\textquotesingle intero progetto HPHP: va
 condotta per ultima, a valle di tutte le altre fasi.}
 
-\textbf{Protocollo sintetico di test}
+\fieldheading{Rapid Test Protocol}
 
 Sessione unica --- 15/20 minuti a persona
 
 \emph{Copre insieme: test utente preliminare (Fase A) + test formativo
 (Fase D)}
 
-\textbf{Team Affordance --- HPHP}
+\fieldheading{Team Affordance --- HPHP}
 
 Stampate questo documento e portatelo con voi durante il test.
 
 Prima di iniziare
 
-\textbf{Cosa vi serve}
+\fieldheading{Cosa vi serve}
 
 \begin{itemize}
 \item
@@ -561,7 +558,7 @@ Prima di iniziare
   Il link al modulo Google SUS fornito dal corso, aperto e pronto
 \end{itemize}
 
-\textbf{Chi coinvolgere}
+\fieldheading{Chi coinvolgere}
 
 Bastano 2-3 persone. L\textquotesingle ideale è chi assomiglia il più
 possibile ai due segmenti di Fase A: una persona 65-85 anni con
@@ -570,7 +567,7 @@ anni che gestisce le pratiche di un familiare anziano (segmento B). Va
 benissimo se sono conoscenti o parenti: basta dichiararlo onestamente
 nella card, come richiesto dal corso stesso.
 
-\textbf{Ruoli nel team (se siete in due)}
+\fieldheading{Ruoli nel team (se siete in due)}
 
 \begin{itemize}
 \item
@@ -591,7 +588,7 @@ vuoi."}
 
 Parte 1 --- Il sito/app reale (5 minuti)
 
-\textbf{Tempo stimato: circa 5 minuti}
+\fieldheading{Tempo stimato: circa 5 minuti}
 
 \emph{Copre: scheda del test utente preliminare, Fase A (Documento 06a).}
 
@@ -600,19 +597,19 @@ l\textquotesingle app ER Salute) come se dovessi prenotare una visita di
 controllo per te stesso/a. Dimmi ad alta voce cosa stai guardando e cosa
 faresti."}
 
-\textbf{Compito A --- Trovare come prenotare (senza completare la
+\fieldheading{Task A --- Trovare come prenotare (senza completare la
 prenotazione)}
 
 Lascia che la persona esplori per un massimo di 2 minuti. Non
 intervenire, annota dove clicca, dove esita, cosa dice.
 
-\textbf{Compito B --- Trovare come si disdirebbe un appuntamento}
+\fieldheading{Task B --- Trovare come si disdirebbe un appuntamento}
 
 Chiedi: "Se avessi già una visita prenotata e non potessi più andarci,
 dove andresti a guardare per disdirla?" Lascia indicare senza completare
 l\textquotesingle azione.
 
-\textbf{Annotazioni --- Compiti A e B}
+\fieldheading{Annotazioni --- Task A e B}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -632,7 +629,7 @@ Commenti spontanei rilevanti (citazioni dirette) & \\
 
 Parte 2 --- Il nuovo progetto, wireframe v1 (7 minuti)
 
-\textbf{Tempo stimato: circa 7 minuti}
+\fieldheading{Tempo stimato: circa 7 minuti}
 
 \emph{Copre: scheda del test formativo, Fase D (Documento 03). Mostrate le
 schermate del wireframe v1 una alla volta, come se fosse
@@ -642,19 +639,19 @@ l\textquotesingle app vera.}
 come potrebbe diventare questa app. Immagina che sia già installata sul
 tuo telefono. Ti chiedo di nuovo di pensare ad alta voce."}
 
-\textbf{Compito C --- Prenotare la visita ricorrente (schermate 1→5b)}
+\fieldheading{Task C --- Prenotare la visita ricorrente (schermate 1→5b)}
 
 Mostra la schermata 1 (pagina iniziale). Chiedi: "Come prenoteresti la tua prossima
 visita di controllo?" Segui il suo percorso mostrando le schermate
 corrispondenti a ogni tocco/scelta indicata.
 
-\textbf{Compito D --- Disdire un appuntamento (schermata 6)}
+\fieldheading{Task D --- Disdire un appuntamento (schermata 6)}
 
 Mostra la schermata 6. Chiedi: "E se dovessi disdire, cosa faresti qui?"
 --- questo compito va lasciato ai dati sul risultato finale: osserva senza
 commentare durante l\textquotesingle esecuzione.
 
-\textbf{Annotazioni --- Compiti C e D}
+\fieldheading{Annotazioni --- Task C e D}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -678,7 +675,7 @@ semplice/difficile) & \\
 
 Parte 3 --- Questionario e chiusura (3-5 minuti)
 
-\textbf{Tempo stimato: circa 3--5 minuti}
+\fieldheading{Tempo stimato: circa 3--5 minuti}
 
 \textbf{DA LEGGERE AD ALTA VOCE:} \emph{"Ultima cosa: ti faccio 10
 semplici domande a cui rispondere con un punteggio da 1 a 5, riferendoti
@@ -720,7 +717,7 @@ questo sistema \\
 \end{longtable}
 }
 
-\textbf{Domande di chiusura (facoltative, in linguaggio libero)}
+\fieldheading{Domande di chiusura (facoltative, in linguaggio libero)}
 
 \begin{itemize}
 \item

@@ -1,15 +1,14 @@
 % !TEX root = ../hphp-project-report.tex
 % Generated from HPHP_Documentazione_Completa_EDITABILE.docx.
-% Il titolo della fase e le intestazioni sono tradotti in italiano.
-\clearpage
-\section{Fase B --- Studio di fattibilità}
+% I termini tecnici seguono la terminologia delle checklist di progetto.
+\chapter{Phase B --- Feasibility Study}
 
-\subsection{Documento 01 --- Scheda del gruppo}
+\section{Documento 01 --- Team card}
 
 Vedi Fase A, Documento 01 --- Team Affordance (Matteo Boscherini,
 Alessandro Campedelli, Francesco Maria Fuligni).
 
-\subsection{Documento 02a --- Persona e caso d'uso: protagonista}
+\cardsection{Documento 02a --- Persona and Use Case card: protagonista}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -23,7 +22,7 @@ Unsplash/Pexels, licenza libera{]}} \\
 \end{longtable}
 }
 
-\textbf{Nome della persona}
+\fieldheading{Nome della persona}
 
 Giuseppina "Pina" Ferretti
 
@@ -32,14 +31,14 @@ Giuseppina "Pina" Ferretti
 a prenotare niente da sola.''}
 \end{quote}
 
-\textbf{Segmento corrispondente}
+\fieldheading{Segmento corrispondente}
 
 Segmento A di Fase A --- Paziente anziano con bassa autonomia digitale, 75-85 anni,
 patologia cronica, utente diretto del servizio.
 
-\textbf{Descrizione della persona}
+\fieldheading{Descrizione della persona}
 
-\textbf{Dati di base}
+\fieldheading{Dati di base}
 
 \begin{itemize}
 \item
@@ -58,7 +57,7 @@ patologia cronica, utente diretto del servizio.
   anni fa
 \end{itemize}
 
-\textbf{Esperienza pregressa e caratteristiche psicologiche}
+\fieldheading{Esperienza pregressa e caratteristiche psicologiche}
 
 Pina ha lavorato tutta la vita in una manifattura tessile, senza mai
 usare un computer per lavoro. È abituata a gestire le pratiche di
@@ -72,11 +71,9 @@ apertamente --- di riuscire a fare almeno le cose più semplici da sola.
 
 \includegraphics[width=3.95833in,height=3.95833in]{assets/phase-b-persona-pina-skills.png}
 
-\textbf{Descrizione del caso d\textquotesingle uso \#1 --- La visita
-diabetologica di controllo
-}
+\fieldheading{Use Case \#1 --- La visita diabetologica di controllo}
 
-\textbf{Narrativa del caso d\textquotesingle uso}
+\fieldheading{Use Case Narrative}
 
 Pina deve prenotare la visita diabetologica di controllo semestrale.
 Prova ad aprire l\textquotesingle app ER Salute sul suo telefono, ma non
@@ -88,9 +85,9 @@ Pina si sente in colpa per il disturbo arrecato e, la volta successiva,
 rinuncia a riprovare da sola, rafforzando così la propria dipendenza
 dalla figlia invece di ridurla.
 
-\textbf{Considerazioni conclusive}
+\fieldheading{Considerazioni conclusive}
 
-\textbf{Impatto della persona sul design}
+\fieldheading{Impatto della persona sul design}
 
 \begin{itemize}
 \item
@@ -108,7 +105,7 @@ dalla figlia invece di ridurla.
   qualcosa"
 \end{itemize}
 
-\textbf{Impatto del caso d\textquotesingle uso \#1 sul design}
+\fieldheading{Impatto dello Use Case \#1 sul design}
 
 \begin{itemize}
 \item
@@ -122,7 +119,7 @@ dalla figlia invece di ridurla.
   l\textquotesingle utente abbandoni e rinunci definitivamente
 \end{itemize}
 
-\subsection{Documento 02b --- Persona e caso d'uso: non protagonista}
+\cardsection{Documento 02b --- Persona and Use Case card: non protagonista}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -136,7 +133,7 @@ Unsplash/Pexels, licenza libera{]}} \\
 \end{longtable}
 }
 
-\textbf{Nome della persona}
+\fieldheading{Nome della persona}
 
 Elena Ferretti
 
@@ -145,14 +142,14 @@ Elena Ferretti
 semplici, così mi preoccuperei solo per l\textquotesingle importante.''}
 \end{quote}
 
-\textbf{Segmento corrispondente}
+\fieldheading{Segmento corrispondente}
 
 Segmento B di Fase A --- Caregiver familiare sempre reperibile a distanza,
 45-60 anni, intermediario del servizio.
 
-\textbf{Descrizione della persona}
+\fieldheading{Descrizione della persona}
 
-\textbf{Dati di base}
+\fieldheading{Dati di base}
 
 \begin{itemize}
 \item
@@ -168,7 +165,7 @@ Segmento B di Fase A --- Caregiver familiare sempre reperibile a distanza,
   lavoro
 \end{itemize}
 
-\textbf{Esperienza pregressa e caratteristiche psicologiche}
+\fieldheading{Esperienza pregressa e caratteristiche psicologiche}
 
 Elena è cresciuta con la tecnologia e non ha alcuna difficoltà a usare
 app e siti web. Gestisce da anni le pratiche sanitarie della madre,
@@ -182,11 +179,9 @@ limitato sulle situazioni davvero complesse.
 
 \includegraphics[width=3.95833in,height=3.95833in]{assets/phase-b-persona-elena-skills.png}
 
-\textbf{Descrizione del caso d\textquotesingle uso \#1 --- La disdetta urgente
-dall\textquotesingle ufficio
-}
+\fieldheading{Use Case \#1 --- La disdetta urgente dall\textquotesingle ufficio}
 
-\textbf{Narrativa del caso d\textquotesingle uso}
+\fieldheading{Use Case Narrative}
 
 Elena riceve, durante l\textquotesingle orario di lavoro, una chiamata
 dalla madre Pina che non riesce a disdire una visita già prenotata
@@ -198,9 +193,9 @@ Vorrebbe che la madre potesse gestire da sola almeno la disdetta ---
 un\textquotesingle azione che considera semplice --- ma il sistema
 attuale non la rende comprensibile per lei.
 
-\textbf{Considerazioni conclusive}
+\fieldheading{Considerazioni conclusive}
 
-\textbf{Impatto della persona sul design}
+\fieldheading{Impatto della persona sul design}
 
 \begin{itemize}
 \item
@@ -215,7 +210,7 @@ attuale non la rende comprensibile per lei.
   coinvolto
 \end{itemize}
 
-\textbf{Impatto del caso d\textquotesingle uso \#1 sul design}
+\fieldheading{Impatto dello Use Case \#1 sul design}
 
 \begin{itemize}
 \item
@@ -229,9 +224,9 @@ attuale non la rende comprensibile per lei.
   di intervenire solo su chiamata d\textquotesingle emergenza
 \end{itemize}
 
-\subsection{Documento 03 --- Scheda dei ruoli}
+\cardsection{Documento 03 --- Cast card}
 
-\textbf{Cast con ruoli e segmenti}
+\fieldheading{Cast con ruoli e segmenti}
 
 \begin{itemize}
 \item
@@ -242,16 +237,16 @@ attuale non la rende comprensibile per lei.
   intermediario)
 \end{itemize}
 
-\textbf{Grafico cumulativo dei tratti di personalità}
+\fieldheading{Grafico cumulativo dei tratti di personalità}
 
 \includegraphics[width=3.95833in,height=3.95833in]{assets/phase-b-personas-comparison.png}
 
 \emph{Il file Excel "HPHP\_FaseB\_PersonasAndCast.xlsx" allegato
 contiene i dati sorgente e i grafici radar nativi, modificabili.}
 
-\textbf{Impatto sul design}
+\fieldheading{Impatto sul design}
 
-\textbf{Impatto del cast sul design (sintesi cumulativa)}
+\fieldheading{Impatto del cast sul design (sintesi cumulativa)}
 
 \begin{itemize}
 \item
@@ -272,8 +267,7 @@ contiene i dati sorgente e i grafici radar nativi, modificabili.}
   restando parte dello stesso ecosistema di prodotto
 \end{itemize}
 
-\textbf{Impatto dei casi d\textquotesingle uso sul design (sintesi
-cumulativa)}
+\fieldheading{Impatto degli Use Case sul design (sintesi cumulativa)}
 
 \begin{itemize}
 \item
