@@ -509,9 +509,49 @@ fascicolo-sanitario.it, support.fascicolo-sanitario.it).
 navigazione, ricerca, organizzazione e
 struttura dei contenuti, contenuti e titoli, impaginazione,
 completamento del compito (qui: prenotazione), fiducia e credibilità. Il foglio di
-valutazione completo con i punteggi guideline-per-guideline va compilato
-nel file Excel dedicato; qui riportiamo la sintesi delle criticità più
+valutazione completo con i punteggi guideline-per-guideline è riportato
+nel file \texttt{phase-a-guideline-checklist.xlsx}; qui riportiamo la sintesi delle criticità più
 rilevanti riscontrate.}
+
+\fieldheading{Sintesi quantitativa del workbook guideline (CUPweb vs.\ MioDottore)}
+
+Il workbook applica le 90 User Focus Guidelines (David Travis) --- qui
+un sottoinsieme rappresentativo di 88 voci su 9 categorie --- a entrambi
+i tool. Il riepilogo per categoria:
+
+\begin{center}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+ & \multicolumn{3}{c}{\textbf{CUPweb}} & \multicolumn{3}{c}{\textbf{MioDottore}} \\
+\textbf{Categoria} & Conf. & Parz. & Non conf. & Conf. & Parz. & Non conf. \\
+\midrule
+Home page usability & 1 & 1 & 1 & 2 & 0 & 0 \\
+Task orientation & 0 & 1 & 1 & 2 & 0 & 0 \\
+Navigation and IA & 0 & 0 & 2 & 2 & 0 & 0 \\
+Forms and data entry & 0 & 1 & 0 & 1 & 0 & 0 \\
+Trust and credibility & 2 & 0 & 1 & 1 & 1 & 0 \\
+Writing and content quality & 0 & 1 & 1 & 1 & 0 & 0 \\
+Page layout and visual design & 0 & 0 & 2 & 2 & 0 & 0 \\
+Search usability & 0 & 0 & 0 & 1 & 0 & 0 \\
+Help, feedback, error tolerance & 1 & 1 & 0 & 1 & 1 & 0 \\
+\midrule
+\textbf{Totale} & \textbf{4} & \textbf{5} & \textbf{8} & \textbf{13} & \textbf{2} & \textbf{0} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Sulle restanti voci, 70/88 per CUPweb e 73/88 per MioDottore (più 1
+\emph{N/A} per CUPweb) risultano \emph{Non verificato}: si tratta in
+larga parte di funzionalità raggiungibili solo dietro autenticazione
+(SPID/CIE/account personale), non ispezionabili senza credenziali reali
+durante l'expert review. Il dettaglio guideline-per-guideline, con
+giudizio ed evidenza per ciascuna voce, è mantenuto nel file separato
+\texttt{phase-a-guideline-checklist.xlsx}, allegato come materiale
+supplementare. Gli aspetti \emph{Non verificato} che richiedono
+autenticazione verranno verificati, dove possibile, nello User Testing
+preliminare (Documento 06a) con soggetti che dispongono di credenziali
+proprie; in caso contrario il rinvio della verifica resta dichiarato
+esplicitamente in questa sede.
 
 \fieldheading{Elenco delle criticità principali}
 
@@ -651,6 +691,22 @@ faccette, mappa, card con foto, iconografia chiara).
 \end{itemize}
 
 \fieldheading{First Impressions --- Direct Analysis}
+
+\emph{Analisi diretta secondo le stesse categorie consolidate di
+usabilità applicate a CUPweb (Documento 05a): navigazione, ricerca,
+organizzazione e struttura dei contenuti, contenuti e titoli,
+impaginazione, completamento del compito, fiducia e credibilità.}
+
+\fieldheading{Sintesi quantitativa del workbook guideline}
+
+Il riepilogo quantitativo comparato CUPweb / MioDottore, categoria per
+categoria, è riportato nel Documento 05a. Su 88 guideline valutate per
+MioDottore risultano 13 \emph{Conforme}, 2 \emph{Parzialmente
+conforme}, 0 \emph{Non conforme} e 73 \emph{Non verificato} (voci non
+ispezionabili senza un account attivo). Il dettaglio
+guideline-per-guideline con giudizio ed evidenza è mantenuto nel file
+\texttt{phase-a-guideline-checklist.xlsx}, allegato come materiale
+supplementare.
 
 \fieldheading{Elenco delle criticità principali}
 
@@ -956,4 +1012,51 @@ le evidenze dei test utente prima della stesura finale.}
   quest\textquotesingle ultimo, quando possibile, a compiere
   l\textquotesingle azione finale --- per costruire gradualmente
   autonomia invece di sostituirla
+\end{itemize}
+
+\fieldheading{Requisiti di design numerati per le Fasi B e C}
+
+\projecttodo{Ri-prioritizzare questi requisiti una volta integrate le
+evidenze reali dello User Testing preliminare (06a/06b): priorità e
+formulazione restano provvisorie finché non confermate dai dati.}
+
+\begin{itemize}
+\item
+  \textbf{REQ-01} (da R-01; evidenze ID-01, ID-05) --- Il sistema deve
+  permettere di esplorare le informazioni essenziali del servizio (es.
+  disponibilità indicativa, come funziona la prenotazione) senza
+  richiedere autenticazione SPID/CIE, spostando l\textquotesingle autenticazione
+  forte solo al passo in cui è strettamente necessaria per confermare
+  un\textquotesingle azione. Priorità: alta.
+\item
+  \textbf{REQ-02} (da R-02; evidenza ID-02) --- Tutti i touchpoint del
+  servizio (prenotazione, pagamento, fascicolo) devono condividere
+  un\textquotesingle identità visiva coerente (intestazione, palette,
+  iconografia), percepibile dall\textquotesingle utente come un unico
+  sistema anche quando restano tecnicamente distinti. Priorità: alta.
+\item
+  \textbf{REQ-03} (da R-03; evidenze ID-03, ID-04) --- Ogni schermata
+  deve avere una gerarchia visiva chiara (icone, colori, dimensioni dei
+  testi) e ogni termine tecnico-burocratico (es. SPID, CNS, impegnativa
+  dematerializzata) deve essere accompagnato da una spiegazione
+  contestuale in linguaggio semplice. Priorità: media.
+\item
+  \textbf{REQ-04} (da R-04; evidenza ID-05) --- Il primo utilizzo deve
+  essere guidato da un flusso passo-passo con conferme esplicite ad
+  ogni passaggio critico, e deve offrire sempre un\textquotesingle opzione
+  visibile per richiamare assistenza umana (caregiver o operatore)
+  senza che questa venga presentata come un fallimento. Priorità: alta.
+\item
+  \textbf{REQ-05} (da R-05; evidenza ID-06) --- L\textquotesingle interfaccia
+  deve essere verificata e resa compatibile con le principali
+  tecnologie assistive (screen reader), in coerenza con la
+  dichiarazione di accessibilità già pubblicata dal cliente, prima del
+  rilascio del prototipo finale. Priorità: media.
+\item
+  \textbf{REQ-06} (da R-06; segmento B) --- Il sistema deve offrire al
+  caregiver una vista di co-gestione con visibilità sulle prenotazioni
+  del familiare assistito, senza sostituirsi all\textquotesingle azione
+  finale di quest\textquotesingle ultimo quando è in grado di
+  compierla, e deve rendere visibile il progressivo trasferimento di
+  autonomia. Priorità: alta.
 \end{itemize}

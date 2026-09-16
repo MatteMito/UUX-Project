@@ -55,20 +55,20 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Selezionare il tool del cliente.
 - [x] Selezionare almeno un competitor o prodotto ispiratore.
 - [ ] Acquisire screenshot datati dei sistemi.
-- [ ] Raccogliere e giustificare le guideline.
-- [ ] Numerare le guideline.
+- [x] Raccogliere e giustificare le guideline.
+- [x] Numerare le guideline.
 - [x] Esplorare i sistemi prima insieme e poi individualmente.
 - [x] Identificare servizi, target, task e problemi immediati.
-- [ ] Eseguire l'analisi diretta, dal sistema alle guideline.
-- [ ] Eseguire l'analisi inversa, dalle guideline alle funzioni.
+- [x] Eseguire l'analisi diretta, dal sistema alle guideline.
+- [x] Eseguire l'analisi inversa, dalle guideline alle funzioni.
 - [ ] Evitare duplicati tra analisi diretta e inversa.
 - [x] Identificare tutti i problemi gravi, frequenti o persistenti.
 - [ ] Per ogni problema indicare posizione, descrizione e metodo di scoperta.
 - [ ] Per ogni problema indicare persistenza, impatto e frequenza quando supportati dai dati.
-- [ ] Collegare ogni giudizio non conforme o parziale a un'evidenza.
-- [ ] Includere i risultati quantitativi nella documentazione.
+- [x] Collegare ogni giudizio non conforme o parziale a un'evidenza.
+- [x] Includere i risultati quantitativi nella documentazione.
 - [ ] Conservare checklist completa e screenshot nei supplementi.
-- [ ] Individuare gli elementi `Non verificato` e distinguerli da quelli non conformi.
+- [x] Individuare gli elementi `Non verificato` e distinguerli da quelli non conformi.
 - [ ] Verificare con soggetti reali gli elementi che richiedono autenticazione oppure documentarne esplicitamente il rinvio.
 
 **Deliverable:** una Assessment card per ogni tool e workbook delle guideline.
@@ -103,7 +103,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Verificare che ogni proposta sia ragionevole e implementabile.
 - [x] Ordinare le raccomandazioni per priorità.
 - [x] Distinguere risultati verificati e ipotesi.
-- [ ] Convertire le raccomandazioni in requisiti numerati per le Fasi B e C.
+- [x] Convertire le raccomandazioni in requisiti numerati per le Fasi B e C.
 - [x] Redigere la card esclusivamente a partire dalle evidenze disponibili, senza formulazioni provvisorie.
 
 **Deliverable:** Conclusion and Design Recommendation card.
