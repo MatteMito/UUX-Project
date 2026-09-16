@@ -1,14 +1,14 @@
 % !TEX root = ../hphp-project-report.tex
 % Generated from HPHP_Documentazione_Completa_EDITABILE.docx.
 % I termini tecnici seguono la terminologia delle checklist di progetto.
-\chapter{Fase B --- Feasibility Study}
+\chapter{Fase B: Feasibility Study}
 
-\section{Documento 01 --- Team card}
+\section{Documento 01: Team card}
 
-Vedi Fase A, Documento 01 --- Team Affordance (Matteo Boscherini,
+Vedi Fase A, Documento 01, Team Affordance (Matteo Boscherini,
 Alessandro Campedelli, Francesco Maria Fuligni).
 
-\cardsection{Documento 02a --- Persona and Use Case card: protagonista}
+\cardsection{Documento 02a: Persona and Use Case card: protagonista}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -33,7 +33,7 @@ a prenotare niente da sola.''}
 
 \fieldheading{Segmento corrispondente}
 
-Segmento A di Fase A --- Paziente anziano con bassa autonomia digitale, 75-85 anni,
+Segmento A di Fase A: Paziente anziano con bassa autonomia digitale, 75-85 anni,
 patologia cronica, utente diretto del servizio.
 
 \fieldheading{Descrizione della persona}
@@ -66,12 +66,12 @@ orgogliosa della propria indipendenza, ma consapevole dei propri limiti
 con la tecnologia. Teme di "rompere qualcosa" o di essere truffata
 online, e prova un certo imbarazzo nel dover chiedere aiuto
 continuamente alla figlia, pur dipendendo da lei per quasi tutte le
-pratiche digitali. Ha un desiderio latente --- mai dichiarato
-apertamente --- di riuscire a fare almeno le cose più semplici da sola.
+pratiche digitali. Ha un desiderio latente, mai dichiarato
+apertamente, di riuscire a fare almeno le cose più semplici da sola.
 
 \includegraphics[width=3.95833in,height=3.95833in]{assets/phase-b-persona-pina-skills.png}
 
-\fieldheading{Use Case \#1 --- La visita diabetologica di controllo}
+\fieldheading{Use Case \#1: La visita diabetologica di controllo}
 
 \fieldheading{Use Case Narrative}
 
@@ -119,7 +119,7 @@ dalla figlia invece di ridurla.
   l\textquotesingle utente abbandoni e rinunci definitivamente
 \end{itemize}
 
-\cardsection{Documento 02b --- Persona and Use Case card: non protagonista}
+\cardsection{Documento 02b: Persona and Use Case card: non protagonista}
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -144,7 +144,7 @@ semplici, così mi preoccuperei solo per l\textquotesingle importante.''}
 
 \fieldheading{Segmento corrispondente}
 
-Segmento B di Fase A --- Caregiver familiare sempre reperibile a distanza,
+Segmento B di Fase A: Caregiver familiare sempre reperibile a distanza,
 45-60 anni, intermediario del servizio.
 
 \fieldheading{Descrizione della persona}
@@ -171,7 +171,7 @@ Elena è cresciuta con la tecnologia e non ha alcuna difficoltà a usare
 app e siti web. Gestisce da anni le pratiche sanitarie della madre,
 spesso interrompendo il proprio lavoro per farlo. È una persona
 organizzata ed efficiente, ma il carico di responsabilità che si
-accumula col tempo --- lavoro, figli, madre --- la porta a momenti di
+accumula col tempo, lavoro, figli, madre, la porta a momenti di
 stanchezza e frustrazione. Non vuole "sostituirsi" completamente alla
 madre: vorrebbe piuttosto che Pina potesse gestire in autonomia almeno i
 compiti più semplici, così da poter concentrare il proprio tempo
@@ -179,7 +179,7 @@ limitato sulle situazioni davvero complesse.
 
 \includegraphics[width=3.95833in,height=3.95833in]{assets/phase-b-persona-elena-skills.png}
 
-\fieldheading{Use Case \#1 --- La disdetta urgente dall\textquotesingle ufficio}
+\fieldheading{Use Case \#1: La disdetta urgente dall\textquotesingle ufficio}
 
 \fieldheading{Use Case Narrative}
 
@@ -189,8 +189,8 @@ perché è cambiato un impegno di famiglia. Elena deve interrompere il
 proprio lavoro, aprire l\textquotesingle app da remoto, capire quale
 prenotazione tra quelle associate al profilo del genitore va disdetta, e
 risolvere il problema in pochi minuti prima di tornare a una riunione.
-Vorrebbe che la madre potesse gestire da sola almeno la disdetta ---
-un\textquotesingle azione che considera semplice --- ma il sistema
+Vorrebbe che la madre potesse gestire da sola almeno la disdetta,
+un\textquotesingle azione che considera semplice, ma il sistema
 attuale non la rende comprensibile per lei.
 
 \fieldheading{Considerazioni conclusive}
@@ -224,16 +224,16 @@ attuale non la rende comprensibile per lei.
   di intervenire solo su chiamata d\textquotesingle emergenza
 \end{itemize}
 
-\cardsection{Documento 03 --- Cast card}
+\cardsection{Documento 03: Cast card}
 
 \fieldheading{Cast con ruoli e segmenti}
 
 \begin{itemize}
 \item
-  Protagonista: Giuseppina "Pina" Ferretti --- Segmento A (paziente
+  Protagonista: Giuseppina "Pina" Ferretti, Segmento A (paziente
   anziano, utente diretto)
 \item
-  Non protagonista: Elena Ferretti --- Segmento B (caregiver familiare,
+  Non protagonista: Elena Ferretti, Segmento B (caregiver familiare,
   intermediario)
 \end{itemize}
 
@@ -253,12 +253,12 @@ contiene i dati sorgente e i grafici radar nativi, modificabili.}
   {[}C-01{]} (= P-01+P-02+P-03) Il design deve essere utilizzabile con
   competenza tecnica minima, alta chiarezza visiva del linguaggio e
   delle azioni, e un tono rassicurante che riduca
-  l\textquotesingle ansia da errore --- requisiti derivati dal profilo
+  l\textquotesingle ansia da errore, requisiti derivati dal profilo
   di Pina, il più critico del cast su queste dimensioni
 \item
   {[}C-02{]} (= P-04+P-05) Il design deve offrire al caregiver uno
   strumento di supervisione leggera e delega progressiva, che riduca il
-  carico di intervento diretto senza eliminarne il controllo ---
+  carico di intervento diretto senza eliminarne il controllo,
   requisito derivato dal profilo di Elena
 \item
   {[}C-03{]} Poiché il cast comprende due profili agli estremi opposti
