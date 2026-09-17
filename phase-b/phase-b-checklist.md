@@ -37,6 +37,8 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Distinguere dati di ricerca, inferenze e dettagli narrativi.
 - [x] Evitare personas estreme o artificiali.
 - [x] Verificare che le personas suggeriscano scelte di design non ovvie.
+- [x] Diversificare il cast per genere, origine, lingua e struttura familiare quando tali differenze producono scenari e requisiti pertinenti.
+- [x] Evitare sia stereotipi sia variazioni puramente decorative: ogni personaggio deve avere storia, abitudini e conflitti specifici.
 
 ## 5. Competenze e abilità
 
@@ -74,7 +76,7 @@ Per ogni persona:
 - [x] Inserire impatto sul design.
 - [x] Verificare coerenza con segmento e dati della Fase A.
 
-**Deliverable:** una Persona card per ogni persona selezionata.
+**Deliverable:** quattro Persona card per le persone selezionate (una protagonista, due secondarie e una aggiuntiva).
 
 ## Controllo finale della fase
 
