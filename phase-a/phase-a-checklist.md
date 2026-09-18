@@ -40,8 +40,8 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Scegliere uno o più metodi: statistiche, survey, focus group, interviste, osservazione o presenza passiva.
 - [x] Includere una task analysis.
 - [x] Preparare protocollo, traccia, consenso e anonimizzazione.
-- [ ] Reclutare persone reali appartenenti ai segmenti scelti.
-- [ ] Raccogliere dati, osservazioni e citazioni.
+- [x] Reclutare persone reali appartenenti ai segmenti scelti.
+- [x] Raccogliere dati, osservazioni e citazioni.
 - [x] Verificare fonte, anno, popolazione e pagina dei dati quantitativi.
 - [ ] Allegare screenshot leggibili delle pagine esatte delle fonti citate.
 - [x] Analizzare bisogni, barriere e differenze tra segmenti.

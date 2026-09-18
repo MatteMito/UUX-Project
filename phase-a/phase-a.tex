@@ -324,13 +324,89 @@ tavole dell\textquotesingle Istituto.
 \projecttodo{Allegare al materiale supplementare le schermate delle pagine
 dei report ISTAT citati e verificarne la corrispondenza con le citazioni.}
 
-\projecttodo{Interviste individuali / osservazione sul campo
-con 3-5 pazienti anziani reali (anche solo telefoniche o in presenza di
-un familiare), per validare qualitativamente questi dati quantitativi.
-Traccia e protocollo di intervista, modulo di consenso informato e
-piano di reclutamento sono pronti in
-\texttt{materiale supplementare/fase-a/} (\texttt{tracce-intervista.md},
-\texttt{consenso-informato.md}, \texttt{tracker-reclutamento.md}).}
+\fieldheading{Metodo di ricerca utilizzato: interviste qualitative}
+
+Per validare qualitativamente i dati quantitativi sono state condotte
+due interviste individuali con soggetti reali appartenenti al Segmento
+A, seguendo la traccia in
+\texttt{materiale supplementare/tracce-intervista.md} e previa
+firma del consenso informato. I due soggetti corrispondono, senza che
+fosse ricercato a priori, ai due profili individuati nella dimensione
+\#1 della User Segmentation card (Documento 03): un profilo a bassa
+autonomia digitale e un profilo di "nuovo utente digitale" più
+autonomo, offrendo così un confronto diretto tra i due estremi del
+segmento.
+
+\projecttodo{Completare con data, durata, canale di reclutamento e
+relazione con il team per entrambe le interviste (vedi
+\texttt{tracker-reclutamento.md}); riportare qui l'esito una volta
+disponibile.}
+
+\textbf{Soggetto: Pina} (nome fittizio) --- corrisponde al profilo
+"utente con bassa autonomia digitale" (75-85+, delega quasi totale
+delle pratiche digitali).
+
+Pina prenota di norma partendo dall\textquotesingle impegnativa
+cartacea conservata in una busta, che incrocia con un calendario
+tenuto vicino al telefono; per le pratiche più semplici si rivolge alla
+farmacia, altrimenti telefona al CUP o chiede alla figlia, soprattutto
+per le visite ricorrenti. Ha provato una volta l\textquotesingle app ER
+Salute su indicazione della figlia: si è bloccata già
+sull\textquotesingle autenticazione SPID, di cui non ricorda con
+sicurezza le credenziali, e successivamente su un messaggio di errore
+che non ha saputo interpretare, scegliendo di chiudere l\textquotesingle app
+e telefonare alla figlia piuttosto che proseguire per timore di
+"fare un pasticcio". Descrive la paura di confermare un\textquotesingle azione
+sbagliata (sede o data errata) senza sapere come tornare indietro come
+il vero ostacolo, più della complessità tecnica in sé: "Che non capivo
+se stavo facendo bene. Se mi dice semplicemente \textquotesingle errore\textquotesingle,
+io non so cosa devo fare dopo." Per sentirsi più sicura chiederebbe una
+guida esplicita passo-passo (anche solo testuale, non necessariamente
+un aiuto umano), una conferma leggibile di cosa è stato scelto prima
+di procedere, e un modo per chiedere aiuto senza per questo dover
+cedere il controllo dell\textquotesingle azione alla figlia: "Mi piacerebbe
+poterle chiedere aiuto e poi continuare io."
+
+\textbf{Soggetto: Renato} (nome fittizio) --- corrisponde al profilo
+"nuovo utente digitale" (65-74, competenze digitali di base ma
+bloccato su procedure strutturate).
+
+Renato usa regolarmente il tablet e prova sempre prima a prenotare da
+solo; ha già utilizzato SPID e non lo considera un ostacolo insormontabile,
+anche se non gradisce doverlo reinserire ogni volta. La sua esitazione
+emerge un passo più avanti nel flusso, alla scelta tra "Servizio
+Sanitario Nazionale" e "Libera Professione": non procede finché non è
+sicuro di aver capito costo e conseguenze della scelta, ed eventualmente
+telefona al figlio non per delegare l\textquotesingle azione ma per farsela
+confermare ("Non gli dico \textquotesingle prenotami la visita\textquotesingle.
+Gli chiedo magari: \textquotesingle Mi controlli se questa è la scelta
+giusta?\textquotesingle"). Chiede esplicitamente un riepilogo completo
+(prestazione, sede, data, regime, costo) prima della conferma finale, e
+la possibilità di approfondire una voce poco chiara senza perdere le
+scelte già effettuate: "Non voglio ricominciare da capo." Attribuisce
+la scarsa adozione digitale tra gli anziani non a un rifiuto della
+tecnologia in sé, ma al fatto che i servizi pubblici usano terminologia
+e procedure non familiari rispetto a quelle di uso quotidiano (messaggistica,
+email), e rifiuta un\textquotesingle impostazione eccessivamente
+semplificata o paternalistica.
+
+\textbf{Sintesi trasversale.} Pur trovandosi a estremi diversi di
+autonomia digitale, entrambi i soggetti individuano lo stesso punto di
+rottura del flusso attuale: un passaggio percepito come irreversibile
+o poco chiaro (l\textquotesingle autenticazione e il relativo errore per
+Pina; la scelta del regime e il suo costo per Renato) su cui nessuno
+dei due si sente autorizzato a procedere senza una conferma esplicita.
+Entrambi, inoltre, distinguono chiaramente tra "farsi aiutare/verificare"
+e "farsi sostituire", rifiutando quest\textquotesingle ultima opzione anche
+quando delegano di fatto un passaggio a un familiare. Emergono due idee
+di design non banali, non ancora esplicitate nell\textquotesingle assessment
+di Fase A: (a) un meccanismo di verifica/approfondimento in linea (tooltip
+o spiegazione contestuale) che non faccia perdere le scelte già
+effettuate, richiesto spontaneamente da Renato indipendentemente dal
+proprio livello di competenza; (b) la possibilità di richiedere aiuto
+o conferma a un familiare mantenendo comunque la titolarità dell\textquotesingle azione
+finale, distinta dalla semplice delega totale già rilevata nella task
+analysis.
 
 \fieldheading{Task analysis}
 
@@ -391,14 +467,26 @@ criticità già emerse nell\textquotesingle assessment (Documento 05a).}
   sanitario specifico è un\textquotesingle inferenza, non un dato
   diretto.
 \item
-  Le interviste pianificate (3-5 soggetti) saranno un campione di
-  comodo (rete familiare/amicale del team), non statisticamente
-  rappresentativo: i risultati qualitativi andranno letti come ipotesi
-  da confermare, non come generalizzazioni.
+  Le due interviste condotte (Pina, Renato) sono un campione di comodo
+  \projecttodo{confermare canale di reclutamento esatto, vedi
+  tracker-reclutamento.md}, non statisticamente rappresentativo: i
+  risultati qualitativi vanno letti come ipotesi corroborate su un
+  numero ridotto di casi, non come generalizzazioni al segmento.
+\item
+  Il campione (2 soggetti) è al limite inferiore del minimo indicato
+  nel tracker di reclutamento (2-3 per segmento); un terzo soggetto,
+  se reperibile, rafforzerebbe la validità delle osservazioni,
+  soprattutto vista la distanza di profilo tra i due casi raccolti.
 \item
   Rischio di bias di desiderabilità sociale: soggetti anziani
   intervistati da conoscenti dei propri familiari potrebbero minimizzare
   le proprie difficoltà per non apparire in imbarazzo.
+\item
+  Le interviste sono retrospettive (il soggetto racconta un tentativo
+  passato di uso di ER Salute/CUPweb) e non osservazioni dirette
+  dell\textquotesingle interazione in tempo reale: i dettagli riportati
+  (es. il punto esatto in cui compare l\textquotesingle errore) potrebbero
+  risentire di imprecisioni di memoria.
 \item
   I dati ISTAT più recenti fotografano l\textquotesingle uso di Internet
   in generale, non specificamente l\textquotesingle uso di portali
@@ -416,6 +504,16 @@ servizi essenziali come la sanità. La barriera principale non è
 l\textquotesingle assenza di device o di connessione, ma la percezione
 di mancanza di competenze, un problema di fiducia e auto-efficacia
 più che di accesso tecnico.
+
+Le due interviste qualitative corroborano questa lettura e la
+precisano: in entrambi i casi il blocco non nasce da un rifiuto della
+tecnologia, ma dall\textquotesingle incertezza su un singolo passaggio
+percepito come irreversibile (autenticazione ed errore per il profilo
+a bassa autonomia, scelta del regime/costo per il profilo più
+autonomo). Questo sposta l\textquotesingle enfasi progettuale da
+"semplificare tutto" a "rendere sicuri e reversibili i punti di
+decisione critici", coerentemente con quanto già anticipato
+nell\textquotesingle impatto sul design sottostante.
 
 \fieldheading{Impatto sul design}
 
@@ -473,13 +571,88 @@ Anno 2025} (dati al 1° gennaio 2026) \cite{istatDemografia2025}.
 \projecttodo{Allegare al materiale supplementare le schermate dei report
 citati e verificarne la corrispondenza con le citazioni.}
 
-\projecttodo{Intervista/discussione di gruppo con 2-3 caregiver
-familiari reali (anche colleghi, conoscenti o parenti disponibili,
-dichiarandolo onestamente come da istruzioni del corso). Traccia e
-protocollo di intervista, modulo di consenso informato e piano di
-reclutamento sono pronti in \texttt{materiale supplementare/fase-a/}
-(\texttt{tracce-intervista.md}, \texttt{consenso-informato.md},
-\texttt{tracker-reclutamento.md}).}
+\fieldheading{Metodo di ricerca utilizzato: interviste qualitative}
+
+Sono state condotte due interviste individuali con soggetti reali
+appartenenti al Segmento B, seguendo la traccia in
+\texttt{materiale supplementare/tracce-intervista.md} e previa
+firma del consenso informato. Coerentemente con il cast di Fase B, i
+due soggetti coprono le due configurazioni di caregiving individuate
+nella segmentazione: assistenza a distanza e assistenza in presenza/convivenza.
+
+\projecttodo{Completare con data, durata, canale di reclutamento e
+relazione con il team per entrambe le interviste (vedi
+\texttt{tracker-reclutamento.md}); riportare qui l'esito una volta
+disponibile.}
+
+\textbf{Soggetto: Elena} (nome fittizio) --- caregiver a distanza,
+gestisce da remoto le prenotazioni della madre.
+
+Elena riceve la richiesta della madre per telefono, messaggio o foto
+dell\textquotesingle impegnativa via WhatsApp, poi cerca lei stessa
+l\textquotesingle appuntamento e comunica alla madre giorno, ora,
+struttura e cosa portare, gestendo di fatto l\textquotesingle intera
+procedura nella maggior parte dei casi. Descrive il carico non tanto
+come tempo materiale ("Se sono fortunata faccio tutto in dieci minuti")
+quanto come carico mentale legato alla reperibilità e al rischio di
+dimenticare una richiesta arrivata durante il lavoro. Racconta un
+tentativo di delega alla madre naufragato alla richiesta di credenziali
+e alla comparsa di termini sconosciuti, dopo il quale ha ripreso lei il
+controllo, con un sentimento misto di sollievo e frustrazione: "Se ogni
+volta devo intervenire io, non cambierà mai niente." Per fidarsi di
+lasciare più autonomia alla madre, chiede un sistema che la guidi
+esplicitamente passo per passo e mostri una conferma inequivocabile
+prima di concludere ("Stai prenotando questa visita, in questa
+struttura, il giorno X alle ore Y"), oltre alla possibilità di vedere
+che la prenotazione è stata effettivamente completata o di essere
+avvisata se la madre si blocca, descrivendo l\textquotesingle esigenza
+come una vera e propria "modalità assistenza" a distanza. Segnala
+inoltre il carico delle visite ricorrenti, per cui vorrebbe un supporto
+esplicito a ricordare le scadenze future.
+
+\textbf{Soggetto: Amina} (nome fittizio) --- caregiver convivente,
+assiste la suocera.
+
+Amina riceve l\textquotesingle impegnativa direttamente o per foto,
+coordina la prenotazione con gli orari di lavoro, i trasporti e gli
+altri impegni familiari, e segna tutto su un calendario cartaceo in
+cucina con abbreviazioni anche in bengalese. A differenza di Elena, il
+suo ostacolo principale non è tecnico ma di comprensione linguistico-amministrativa:
+un tentativo di prenotazione insieme alla suocera si è fermato perché
+nessuna delle due era sicura della differenza tra due opzioni
+proposte dal sistema, e preferisce chiedere chiarimenti in anticipo
+piuttosto che confermare e scoprire poi un errore. Per aumentare
+l\textquotesingle autonomia della suocera chiederebbe spiegazioni
+semplici e consultabili on-demand (es. su "primo accesso" o
+"controllo", con un esempio concreto), a patto di non dover
+ricominciare la procedura da capo per consultarle. Sottolinea inoltre
+un bisogno di coordinamento familiare non ancora coperto: più persone
+si occupano della suocera, quindi vorrebbe che lo stato di una
+prenotazione (chi l\textquotesingle ha fatta, per cosa, quando, se è
+conclusa) fosse condivisibile tra i familiari senza per questo esporre
+automaticamente tutti i dati sanitari a chiunque riceva la conferma.
+Usa quasi esclusivamente lo smartphone, in sessioni brevi e spesso
+interrotte, e abbandonerebbe una procedura troppo lunga o che le fa
+perdere il lavoro già svolto.
+
+\textbf{Sintesi trasversale.} Entrambe le caregiver, pur con carichi e
+ostacoli diversi (mentale/reperibilità per Elena, linguistico/di
+coordinamento per Amina), convergono su tre punti: (a) vogliono che il
+sistema guidi esplicitamente l\textquotesingle utente diretto invece di
+presentargli molte opzioni contemporaneamente; (b) chiedono una
+conferma leggibile e verificabile a fine flusso, non solo per l\textquotesingle utente
+diretto ma anche per sé stesse, come condizione per accettare di
+intervenire meno; (c) rifiutano l\textquotesingle idea di sostituirsi
+stabilmente al familiare, descrivendo la delega ideale come una
+supervisione leggera e riattivabile, non una cessione permanente del
+compito. Emergono due idee di design non banali rispetto a quanto già
+ipotizzato in Fase A: la richiesta esplicita di una "modalità
+assistenza" a distanza distinta dalla semplice esecuzione per conto
+del familiare (Elena), e l\textquotesingle esigenza di condividere lo
+stato di una prenotazione tra più caregiver senza condividere
+automaticamente i dati sanitari sottostanti (Amina), un vincolo di
+privacy interna alla famiglia non ancora coperto dai requisiti
+esistenti.
 
 \fieldheading{Task analysis}
 
@@ -525,14 +698,22 @@ strumento.}
   caregiving in generale, non specifici per l\textquotesingle assistenza
   sanitaria digitale.
 \item
-  Il campione di caregiver da intervistare (2-3 persone) sarà di
-  comodo, reclutato dalla rete del team: possibile sovra-rappresentazione
-  di caregiver con competenza tecnica superiore alla media, dato che il
-  team stesso ha familiarità digitale sopra la media.
+  Il campione di caregiver intervistato (2 persone: Elena, Amina) è di
+  comodo \projecttodo{confermare canale di reclutamento esatto, vedi
+  tracker-reclutamento.md}, al limite inferiore del minimo indicato nel
+  tracker (2-3 per segmento); un terzo soggetto rafforzerebbe la
+  validità delle osservazioni.
 \item
   Rischio di bias di conferma: il team potrebbe cercare inconsciamente
   conferme alle ipotesi già formulate nei Product Objectives invece di
   ascoltare criticamente il caregiver intervistato.
+\item
+  Le due caregiver intervistate coprono le due configurazioni previste
+  (a distanza / convivente), ma restano comunque un campione di
+  comodo: Amina in particolare introduce una variabile (mediazione
+  linguistica) che potrebbe non essere rappresentativa dell\textquotesingle intero
+  segmento B e andrebbe validata su più soggetti con background
+  simile prima di generalizzare i relativi requisiti.
 \end{itemize}
 
 \fieldheading{Risultati complessivi dell\textquotesingle analisi}
@@ -545,14 +726,31 @@ vista del cliente (riduzione indiretta dei costi sociali), un design che
 alleggerisca il carico del caregiver senza tuttavia toglierne il
 controllo percepito.
 
+Le interviste a Elena e Amina confermano questa lettura e mostrano che
+il carico percepito non coincide con il tempo speso sulla singola
+prenotazione, ma con la reperibilità continua e con la responsabilità
+di dover verificare al posto del familiare assistito. In entrambi i
+casi un tentativo di delega si è interrotto sullo stesso tipo di
+ostacolo già rilevato nel Segmento A (autenticazione e terminologia non
+familiare), confermando che un redesign centrato solo sull\textquotesingle utente
+diretto, senza strumenti di visibilità e fiducia per il caregiver, non
+sarebbe sufficiente a spostare stabilmente compiti verso l\textquotesingle utente
+anziano.
+
 \fieldheading{Impatto sul design}
 
 Il design dovrà offrire strumenti di co-gestione (visibilità sulle
 prenotazioni del familiare, notifiche, possibilità di intervenire solo
 quando necessario) piuttosto che di sostituzione totale, con una
 progressione esplicita e graduale di autonomia delegata al paziente, in
-modo che il caregiver possa fidarsi di "lasciare andare" un compito alla
-volta.
+modo che il caregiver possa fidarsi di "lasciare andare" un compito
+alla volta. Le interviste aggiungono due indicazioni più specifiche:
+una "modalità assistenza" a distanza che permetta al caregiver di
+osservare o intervenire su una procedura in corso senza doverla
+avviare o completare al posto del familiare (Elena); e un meccanismo di
+condivisione dello stato delle prenotazioni tra più caregiver familiari
+che comunichi cosa è stato fatto e da chi, senza esporre per questo i
+dati sanitari sottostanti a chi riceve solo una conferma (Amina).
 
 \cardsection{Documento 05a: Assessment of Existing Resource card: tool del cliente}
 
