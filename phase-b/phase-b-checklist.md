@@ -2,7 +2,7 @@
 
 Riferimento: [specifiche complete](../docs/specs.md).
 
-> Stato: struttura e contenuti progettuali completati; la validazione empirica delle personas resta in attesa delle interviste di Fase A.
+> Stato: struttura, contenuti, workbook, visual C\&A e PDF aggiornati e verificati; la validazione empirica delle personas resta in attesa delle interviste di Fase A.
 
 ## 1. Team card
 
@@ -77,6 +77,15 @@ Per ogni persona:
 - [x] Verificare coerenza con segmento e dati della Fase A.
 
 **Deliverable:** quattro Persona card per le persone selezionate (una protagonista, due secondarie e una aggiuntiva).
+
+## 8. Revisione degli artefatti
+
+- [x] Aggiornare e uniformare le quattro Persona card nel report e nel workbook.
+- [x] Rendere coerenti ruoli, segmenti, scenari, C\&A, requisiti e stato dell'evidenza.
+- [x] Realizzare quattro radar individuali, heatmap comparativa e radar sovrapposto del cast.
+- [x] Usare la scala diretta nei radar: 1 vicino al centro e 5 verso il bordo esterno.
+- [x] Verificare formule e riferimenti del workbook.
+- [x] Compilare il PDF e controllare la leggibilità delle pagine della Fase B.
 
 ## Controllo finale della fase
 

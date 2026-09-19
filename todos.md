@@ -41,9 +41,12 @@ Questa checklist raccoglie esclusivamente le attività ancora da verificare o co
 
 ## Fase B
 
-La todo list originale non segnala attività aperte per questa fase.
-
-- [ ] Eseguire soltanto un controllo finale di coerenza con eventuali modifiche introdotte nella Fase A.
+- [x] Consolidare il cast: Pina protagonista; Elena e Amina personaggi secondari; Renato personaggio aggiuntivo.
+- [x] Completare le quattro Persona card con storia, obiettivi, vincoli, scenario, criteri di successo e implicazioni di design.
+- [x] Aggiornare workbook e visual C\&A: quattro radar individuali, heatmap comparativa e radar sovrapposto con scala diretta (5 sul bordo esterno).
+- [x] Allineare le personas alle domande e ai segmenti della Fase A, dichiarando esplicitamente le ipotesi narrative da validare.
+- [x] Eseguire il controllo di coerenza con lo stato corrente della Fase A e verificare la resa del PDF e del workbook.
+- [ ] Rivalidare personas, citazioni, punteggi C\&A e requisiti dopo le interviste e le raccomandazioni finali della Fase A.
 
 ## Fase C
 
