@@ -61,15 +61,15 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Identificare servizi, target, task e problemi immediati.
 - [x] Eseguire l'analisi diretta, dal sistema alle guideline.
 - [x] Eseguire l'analisi inversa, dalle guideline alle funzioni.
-- [ ] Evitare duplicati tra analisi diretta e inversa.
+- [x] Evitare duplicati tra analisi diretta e inversa.
 - [x] Identificare tutti i problemi gravi, frequenti o persistenti.
-- [ ] Per ogni problema indicare posizione, descrizione e metodo di scoperta.
+- [x] Per ogni problema indicare posizione, descrizione e metodo di scoperta.
 - [ ] Per ogni problema indicare persistenza, impatto e frequenza quando supportati dai dati.
 - [x] Collegare ogni giudizio non conforme o parziale a un'evidenza.
 - [x] Includere i risultati quantitativi nella documentazione.
-- [ ] Conservare checklist completa e screenshot nei supplementi.
+- [x] Conservare checklist completa e screenshot nei supplementi.
 - [x] Individuare gli elementi `Non verificato` e distinguerli da quelli non conformi.
-- [ ] Verificare con soggetti reali gli elementi che richiedono autenticazione oppure documentarne esplicitamente il rinvio.
+- [x] Verificare con soggetti reali gli elementi che richiedono autenticazione oppure documentarne esplicitamente il rinvio.
 
 **Deliverable:** una Assessment card per ogni tool e workbook delle guideline.
 
