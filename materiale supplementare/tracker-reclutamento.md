@@ -1,4 +1,4 @@
-# Tracker di reclutamento --- Fase A
+# Tracker di reclutamento: Fase A
 
 Da tenere aggiornato durante interviste (Documento 04a/04b) e user testing preliminare (Documento 06a/06b). Non contiene dati identificativi reali: usare solo nomi fittizi già dalla prima riga.
 
@@ -7,20 +7,20 @@ Requisiti minimi (da `phase-a-checklist.md` / `docs/specs-summary.md`):
 - Segmento B: 2-3 persone, caregiver familiari, 45-60 anni.
 - Almeno **2 partecipanti totali** disponibili per essere ricontattati in Fase D.
 
-## Segmento A --- pazienti anziani
+## Segmento A: pazienti anziani
 
 | Nome fittizio | Età | Genere | Competenza tecnica/dominio | Relazione con il team | Canale/modalità di reclutamento | Data contatto | Consenso firmato | Intervista fatta | Test 06a fatto | Test 06b fatto | Disponibile per Fase D |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| | | | | | | | | | | | |
-| | | | | | | | | | | | |
+| Pina | 75-85+ | F | Bassa autonomia digitale | Nonna di Alessandro Campedelli | Rete familiare (nonna di un membro del team) | 19/09/2026 | Sì | Sì (in presenza, 17 min) | No | No | |
+| Renato | 65-74 | M | Nuovo utente digitale | Amico di famiglia di Francesco Maria Fuligni | Rete familiare/amicale | 20/09/2026 | Sì | Sì (telefonica, 13 min) | No | No | |
 | | | | | | | | | | | | |
 
-## Segmento B --- caregiver familiari
+## Segmento B: caregiver familiari
 
 | Nome fittizio | Età | Genere | Competenza tecnica/dominio | Relazione con il team | Canale/modalità di reclutamento | Data contatto | Consenso firmato | Intervista fatta | Test 06a fatto | Test 06b fatto | Disponibile per Fase D |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| | | | | | | | | | | | |
-| | | | | | | | | | | | |
+| Elena | 45-60 | F | Caregiver a distanza | Amica di Matteo Boscherini | Rete amicale | 21/09/2026 | Sì | Sì (telefonica, 10 min) | No | No | |
+| Amina | 45-60 | F | Caregiver convivente | Segretaria dell'azienda di tirocinio di Matteo Boscherini | Rete professionale | 21/09/2026 | Sì | Sì (in presenza, 17 min) | No | No | |
 | | | | | | | | | | | | |
 
 ## Note su modalità di reclutamento
