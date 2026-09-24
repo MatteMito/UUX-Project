@@ -1374,7 +1374,77 @@ sull\textquotesingle azione percepita come irreversibile
 suggerisce che un aiuto contestuale, presente nel punto della
 decisione, valga più di una pagina di assistenza separata.
 
-\projecttodo{Aggiungere le sezioni "Test \#3, \#4...: Soggetto\ldots"
+\fieldheading{Test \#3: Soggetto Elena}
+
+\textbf{Data:} 23/09/2026, ore 18:45
+
+\textbf{Assistente/conduttore:} Matteo Boscherini
+
+\textbf{Osservatore:} Francesco Maria Fuligni
+
+\textbf{Contesto:} Test individuale condotto da remoto, in
+videochiamata con condivisione dello schermo dal PC della soggetta,
+con CUPweb nel browser e credenziali demo. Il test segue
+immediatamente quello su MioDottore (Documento 06b). Nessuna
+prenotazione o disdetta reale.
+
+\textbf{Risultati per task:}
+
+\begin{itemize}
+\item
+  \textbf{T1 --- Individuare come prenotare una visita specialistica.}
+  Successo: sì. Tempo: 01:35. Errori: 0. La partecipante si autentica
+  senza esitazioni e individua il percorso di prenotazione. Nota
+  spontaneamente il cambio di dominio, che secondo lei spingerebbe la
+  madre ad abbandonare per timore di una truffa, e non trova subito
+  dove selezionare il familiare per cui prenota. Citazione: "Io lo so,
+  ma mia madre qui chiude tutto pensando a una truffa."
+\item
+  \textbf{T2 --- Disdire un appuntamento.} Successo: sì. Tempo: 02:05.
+  Errori: 1. La partecipante cerca inizialmente la disdetta dentro
+  "Modifica", poi individua "Disdici" e completa l\textquotesingle operazione,
+  ma critica la conferma finale, generica e priva di un riepilogo
+  della visita disdetta e del paziente. Citazione: "Mi dice solo
+  \textquotesingle operazione eseguita\textquotesingle. Quale visita?
+  Di chi?"
+\item
+  \textbf{T3 --- Individuare dove chiedere assistenza.} Successo:
+  parziale. Tempo: 02:50. Errori: 1. La partecipante trova le domande
+  frequenti e il numero verde, ma cerca un canale scritto compatibile
+  con i suoi orari di lavoro e non lo trova; un collegamento di
+  supporto la porta su un altro dominio. Citazione: "Ho trovato dove
+  chiamare. Ma non è quello che mi serve."
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Task} & \textbf{Successo} & \textbf{Tempo} & \textbf{Errori} \\
+\midrule
+T1 & Sì & 01:35 & 0 \\
+T2 & Sì & 02:05 & 1 \\
+T3 & Parziale & 02:50 & 1 \\
+\midrule
+\textbf{Totale} & & \textbf{06:30} & \textbf{2} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Punteggio SUS:} 55/100.
+
+\textbf{Suggerimenti del soggetto:} Una conferma chiara e inoltrabile
+al familiare, un canale di assistenza scritto, e la possibilità di
+vedere cosa fa il genitore con un avviso quando si blocca.
+
+\textbf{Riflessioni utili per il design:} Per la caregiver esperta lo
+strumento è usabile, ma non è progettato per due persone: la
+selezione del familiare non è visibile nel punto in cui serve
+({[}ID-10{]}) e la conferma di esito non è verificabile né
+condivisibile ({[}ID-09{]}). La sua condizione per delegare alla
+madre (vedere e poter intervenire) ricalca la "modalità assistenza"
+già emersa in intervista.
+
+\projecttodo{Aggiungere le sezioni "Test \#4, \#5...: Soggetto\ldots"
 per ciascun ulteriore soggetto reale testato, non appena le sessioni
 saranno state condotte.}
 
@@ -1747,6 +1817,22 @@ impatto e persistenza reali dopo la raccolta dei dati dei test utente
   frequenza: 2/2 soggetti testati finora sul task T2 (Renato e Pina,
   Documento 06a); metodo di scoperta: test utente (06a), non emerso
   dall\textquotesingle expert review
+\item
+  {[}ID-09{]} \textbf{Posizione:} messaggio di conferma dopo la
+  disdetta di un appuntamento (task T2). La conferma è generica
+  ("operazione eseguita") e priva di riepilogo (paziente, prestazione,
+  data), quindi non verificabile né condivisibile con il familiare
+  assistito; impatto: medio-alto (soprattutto per il Segmento B);
+  persistenza: alta; metodo di scoperta: test utente (06a), soggetto
+  Elena
+\item
+  {[}ID-10{]} \textbf{Posizione:} flusso di prenotazione per conto di
+  un familiare associato (task T1). La selezione del familiare per cui
+  si sta prenotando non è visibile o chiara nel punto del flusso in
+  cui serve; impatto: alto (ostacola l\textquotesingle uso
+  multi-profilo tipico del caregiver, centrale per il progetto HPHP);
+  persistenza: alta; metodo di scoperta: test utente (06a), soggetto
+  Elena
 \end{itemize}
 
 \projecttodo{La frequenza di ciascun problema (quante volte si
@@ -1768,7 +1854,7 @@ l\textquotesingle opportunità di soggetti aggiuntivi.}
 
 \projecttodo{Costruire almeno la relazione impatto × persistenza
 una volta confermate le criticità con i dati di test reali, usando gli
-identificatori {[}ID-01...ID-08{]} sopra elencati come base di partenza,
+identificatori {[}ID-01...ID-10{]} sopra elencati come base di partenza,
 integrati con quanto emerso dai test.}
 
 \fieldheading{Raccomandazioni di design preliminari}
