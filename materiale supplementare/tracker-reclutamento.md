@@ -12,7 +12,7 @@ Requisiti minimi (da `phase-a-checklist.md` / `docs/specs-summary.md`):
 | Nome fittizio | Età | Genere | Competenza tecnica/dominio | Relazione con il team | Canale/modalità di reclutamento | Data contatto | Consenso firmato | Intervista fatta | Test 06a fatto | Test 06b fatto | Disponibile per Fase D |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | Pina | 75-85+ | F | Bassa autonomia digitale | Nonna di Alessandro Campedelli | Rete familiare (nonna di un membro del team) | 19/09/2026 | Sì | Sì (in presenza, 17 min) | No | No | |
-| Renato | 65-74 | M | Nuovo utente digitale | Amico di famiglia di Francesco Maria Fuligni | Rete familiare/amicale | 20/09/2026 | Sì | Sì (telefonica, 13 min) | Sì (22/09/2026, SUS 40/100) | No | |
+| Renato | 65-74 | M | Nuovo utente digitale | Amico di famiglia di Francesco Maria Fuligni | Rete familiare/amicale | 20/09/2026 | Sì | Sì (telefonica, 13 min) | Sì (22/09/2026, SUS 40/100) | Sì (23/09/2026, SUS 72,5/100) | |
 | | | | | | | | | | | | |
 
 ## Segmento B: caregiver familiari
