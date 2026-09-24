@@ -1824,9 +1824,69 @@ promemoria con il familiare. Il bisogno di co-gestione ({[}R-06{]},
 {[}REQ-06{]}) non è coperto nemmeno dal benchmark, ed è quindi
 un\textquotesingle opportunità di differenziazione.
 
-\projecttodo{Aggiungere le sezioni "Test \#4, \#5...: Soggetto\ldots"
-per ciascun ulteriore soggetto reale testato, non appena le sessioni
-saranno state condotte.}
+\fieldheading{Test \#4: Soggetto Amina}
+
+\textbf{Data:} 24/09/2026, ore 13:30
+
+\textbf{Assistente/conduttore:} Matteo Boscherini
+
+\textbf{Osservatore:} Alessandro Campedelli
+
+\textbf{Contesto:} Test individuale condotto in presenza, subito dopo
+il test su CUPweb (Documento 06a), sullo stesso smartphone della
+soggetta, con MioDottore nel browser mobile e senza account. Nessuna
+prenotazione reale.
+
+\textbf{Risultati per task:}
+
+\begin{itemize}
+\item
+  \textbf{T1 --- Cercare uno specialista nella propria città.}
+  Successo: sì. Tempo: 01:30. Errori: 0. La partecipante cerca
+  l\textquotesingle oculista per la suocera e usa il filtro per
+  distanza in modo mirato ("lei non guida"), senza esitazioni.
+  Citazione: "Deve essere vicino, lei non guida."
+\item
+  \textbf{T2 --- Individuare come si annullerebbe un appuntamento.}
+  Successo: parziale. Tempo: 02:30. Errori: 1. La partecipante apre la
+  pagina di accesso pensando di doversi registrare e la chiude; trova
+  l\textquotesingle informazione nelle domande frequenti
+  (annullamento tramite l\textquotesingle email di conferma), ma non
+  il punto dell\textquotesingle interfaccia in cui farlo. Citazione:
+  "Si fa con l\textquotesingle email di conferma, credo."
+\item
+  \textbf{T3 --- Individuare come contattare il professionista.}
+  Successo: sì. Tempo: 01:05. Errori: 0. La partecipante individua
+  subito la messaggistica e la preferisce al telefono, ma osserva che
+  la conferma arriva solo a chi prenota e che per informare il marito
+  dovrebbe inviargli uno screenshot. Citazione: "Mio marito come lo
+  sa? Devo fare lo screenshot e mandarglielo."
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Task} & \textbf{Successo} & \textbf{Tempo} & \textbf{Errori} \\
+\midrule
+T1 & Sì & 01:30 & 0 \\
+T2 & Parziale & 02:30 & 1 \\
+T3 & Sì & 01:05 & 0 \\
+\midrule
+\textbf{Totale} & & \textbf{05:05} & \textbf{1} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Punteggio SUS:} 67,5/100.
+
+\textbf{Suggerimenti del soggetto:} Una conferma condivisibile con
+gli altri familiari senza ricorrere a screenshot.
+
+\textbf{Riflessioni utili per il design:} Il canale scritto è per la
+partecipante un fattore di accessibilità linguistica, non solo di
+comodità. Anche qui la conferma resta individuale: per informare il
+marito deve fare uno screenshot, lo stesso bisogno di condivisione
+minima già emerso in intervista e nel test di Elena ({[}ID-09{]}).
 
 \cardsection{Documento 07: Conclusions and Design Recommendation card}
 
@@ -1891,12 +1951,14 @@ impatto e persistenza reali dopo la raccolta dei dati dei test utente
   dall\textquotesingle expert review
 \item
   {[}ID-09{]} \textbf{Posizione:} messaggio di conferma dopo la
-  disdetta di un appuntamento (task T2). La conferma è generica
-  ("operazione eseguita") e priva di riepilogo (paziente, prestazione,
-  data), quindi non verificabile né condivisibile con il familiare
-  assistito; impatto: medio-alto (soprattutto per il Segmento B);
-  persistenza: alta; metodo di scoperta: test utente (06a), soggetto
-  Elena
+  disdetta o la prenotazione di un appuntamento (task T2/T3). La
+  conferma è generica ("operazione eseguita") o comunque visibile solo
+  a chi esegue l\textquotesingle azione, senza un modo integrato per
+  condividerla con altri familiari coinvolti (serve uno screenshot
+  manuale); impatto: medio-alto (soprattutto per il Segmento B);
+  persistenza: alta; frequenza: 2/2 soggetti del Segmento B che hanno
+  affrontato il tema (Elena, Documento 06a; Amina, Documento 06b);
+  metodo di scoperta: test utente (06a e 06b)
 \item
   {[}ID-10{]} \textbf{Posizione:} flusso di prenotazione per conto di
   un familiare associato (task T1). La selezione del familiare per cui
@@ -1931,66 +1993,199 @@ richiede i dati quantitativi dello User Testing preliminare
 
 \fieldheading{Tabella riassuntiva dei punteggi SUS}
 
-\projecttodo{Compilare con i punteggi reali ottenuti dal
-modulo Google SUS somministrato ai soggetti di test (card 06a e 06b).
-Struttura pronta: una colonna per soggetto, righe per le 10 domande
-standard SUS, riga Totale, Media, Varianza. Se la varianza tra soggetti
-risultasse elevata, andranno indagate le ragioni (es. soggetti con
-competenze digitali molto diverse tra loro) e valutata
-l\textquotesingle opportunità di soggetti aggiuntivi.}
+\projecttodo{Le 10 risposte grezze per domanda (dal modulo Google SUS
+del corso) non sono ancora state riportate qui: la tabella sottostante
+usa i punteggi finali (0-100) calcolati per ciascuna sessione. Se
+disponibili, integrare anche il dettaglio per singola domanda.}
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Soggetto} & \textbf{SUS 06a (CUPweb/ER Salute)} & \textbf{SUS 06b (MioDottore)} \\
+\midrule
+Renato & 40 & 72,5 \\
+Pina & 22,5 & 45 \\
+Elena & 55 & 80 \\
+Amina & 37,5 & 67,5 \\
+\midrule
+\textbf{Media} & \textbf{38,75} & \textbf{66,25} \\
+\textbf{Varianza campionaria} & \textbf{177,08} & \textbf{227,08} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Media complessiva sulle 8 sessioni: \textbf{52,5/100}; varianza
+campionaria complessiva: \textbf{389,29}.
+
+La varianza è elevata sia per singolo tool sia nel complesso, ma è
+pienamente spiegata dalla segmentazione: i soggetti a bassa autonomia
+digitale (Pina) ottengono sistematicamente i punteggi più bassi su
+entrambi i tool, mentre i soggetti più esperti (Elena, caregiver che
+usa già MioDottore) ottengono i più alti. Non indica quindi rumore
+statistico, ma conferma che l\textquotesingle esperienza attuale è
+fortemente polarizzata per competenza digitale, esattamente il problema
+che il progetto HPHP intende affrontare. Su entrambi i tool, tutti e 4
+i soggetti restano sotto la soglia di buona usabilità (68), con
+l\textquotesingle eccezione di Renato ed Elena su MioDottore: CUPweb
+in particolare non raggiunge mai quella soglia con nessun soggetto
+testato.
 
 \fieldheading{Curva di urgenza}
 
-\projecttodo{Costruire almeno la relazione impatto × persistenza
-una volta confermate le criticità con i dati di test reali, usando gli
-identificatori {[}ID-01...ID-12{]} sopra elencati come base di partenza,
-integrati con quanto emerso dai test.}
+Relazione impatto × persistenza per tutti gli ID, con impatto e
+persistenza convertiti in scala numerica (basso/basso-medio=1/1,5,
+medio=2, medio-alto=2,5, alto=3) e soglia di urgenza motivata: gli
+elementi con \textbf{impatto + persistenza $\geq$ 5,5} sono trattati
+come interventi immediati, gli altri come rimandabili alla prossima
+iterazione di design.
+
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{ID} & \textbf{Impatto} & \textbf{Persistenza} & \textbf{Somma} & \textbf{Urgenza} \\
+\midrule
+ID-01 & 3 & 3 & 6 & Immediata \\
+ID-02 & 3 & 3 & 6 & Immediata \\
+ID-03 & 2 & 3 & 5 & Prossima release \\
+ID-04 & 2 & 2 & 4 & Prossima release \\
+ID-05 & 3 & 3 & 6 & Immediata \\
+ID-06 & 3 & 2 & 5 & Prossima release \\
+ID-07 & 1,5 & 2 & 3,5 & Prossima release \\
+ID-08 & 3 & 3 & 6 & Immediata \\
+ID-09 & 2,5 & 3 & 5,5 & Immediata \\
+ID-10 & 3 & 3 & 6 & Immediata \\
+ID-11 & 3 & 2 (da confermare) & 5 & Prossima release \\
+ID-12 & 2,5 & 3 & 5,5 & Immediata \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  width=11cm, height=8cm,
+  xlabel={Persistenza}, ylabel={Impatto},
+  xmin=0.8, xmax=3.6, ymin=0.8, ymax=3.6,
+  xtick={1,2,3}, xticklabels={Bassa,Media,Alta},
+  ytick={1,2,3}, yticklabels={Basso,Medio,Alto},
+  grid=both, grid style={gray!20},
+  legend pos=outer north east,
+  scatter/classes={
+    urgente={mark=*,red},
+    prossima={mark=*,blue}
+  },
+]
+\addplot[scatter,only marks,scatter src=explicit symbolic,
+  nodes near coords*={\Label},
+  visualization depends on={value \thisrow{Label} \as \Label},
+  every node near coord/.append style={font=\tiny, anchor=west, xshift=2pt}]
+  table[meta=Class] {
+x y Class Label
+2.85 3.05 urgente ID-01
+2.95 3.10 urgente ID-02
+3.00 2.00 prossima ID-03
+2.00 2.00 prossima ID-04
+3.05 3.10 urgente ID-05
+1.95 3.05 prossima ID-06
+2.00 1.50 prossima ID-07
+3.15 3.05 urgente ID-08
+2.95 2.55 urgente ID-09
+3.00 2.95 urgente ID-10
+2.05 2.95 prossima ID-11
+3.05 2.45 urgente ID-12
+};
+\addplot[domain=1.9:3.6, samples=2, dashed, thick, black] {5.5-x};
+\legend{Immediata,Prossima release,Soglia (somma=5{,}5)}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+I sette elementi sopra soglia (ID-01, ID-02, ID-05, ID-08, ID-09,
+ID-10, ID-12) coincidono in larga parte con le criticità legate
+all\textquotesingle autenticazione, alla frammentazione dei domini,
+all\textquotesingle assenza di un percorso guidato e alla mancanza di
+conferme condivisibili: tutti temi emersi sia dall\textquotesingle expert
+review sia, in modo indipendente, dai test utente, il che ne rafforza
+l\textquotesingle urgenza.
 
 \fieldheading{Raccomandazioni di design preliminari}
 
-\projecttodo{Arricchire e confermare le raccomandazioni preliminari con
-le evidenze dei test utente prima della stesura finale.}
+Le raccomandazioni R-01...R-06 erano preliminari (basate solo
+sull\textquotesingle assessment 05a/05b); sono ora confermate dai test
+utente (Documenti 06a/06b) e integrate con tre nuove raccomandazioni
+(R-07...R-09) emerse direttamente dai test, non anticipate
+dall\textquotesingle expert review.
 
 \begin{itemize}
 \item
-  {[}R-01{]} (collegata a ID-01, ID-05) Introdurre un percorso "a bassa
-  soglia" iniziale che permetta di esplorare il servizio (es. vedere
-  disponibilità, capire come funziona) prima di richiedere
-  l\textquotesingle autenticazione forte, spostando SPID/CIE solo al
-  momento realmente necessario
+  {[}R-01{]} (collegata a ID-01, ID-05; confermata dai test: Pina e
+  Amina bloccate sull\textquotesingle autenticazione/sui dati
+  richiesti) Introdurre un percorso "a bassa soglia" iniziale che
+  permetta di esplorare il servizio (es. vedere disponibilità, capire
+  come funziona) prima di richiedere l\textquotesingle autenticazione
+  forte, spostando SPID/CIE solo al momento realmente necessario
 \item
-  {[}R-02{]} (collegata a ID-02) Unificare visivamente tutti i
-  touchpoint del servizio (prenotazione, pagamento, fascicolo) sotto
-  un\textquotesingle unica identità grafica coerente, anche se
-  tecnicamente restano sistemi diversi, per non rompere la fiducia
-  dell\textquotesingle utente durante il percorso
+  {[}R-02{]} (collegata a ID-02; confermata da Elena, che segnala il
+  cambio di dominio come possibile causa di abbandono per la madre)
+  Unificare visivamente tutti i touchpoint del servizio (prenotazione,
+  pagamento, fascicolo) sotto un\textquotesingle unica identità
+  grafica coerente, anche se tecnicamente restano sistemi diversi, per
+  non rompere la fiducia dell\textquotesingle utente durante il
+  percorso
 \item
-  {[}R-03{]} (collegata a ID-03, ID-04) Introdurre gerarchia visiva
-  (icone, colori, dimensioni) e microcopy in linguaggio semplice con
-  spiegazioni contestuali per i termini tecnici (tooltip, esempi)
+  {[}R-03{]} (collegata a ID-03, ID-04; confermata da Renato e Amina,
+  entrambi bloccati sulla scelta SSN/Libera Professione e sul costo
+  non chiaro) Introdurre gerarchia visiva (icone, colori, dimensioni)
+  e microcopy in linguaggio semplice con spiegazioni contestuali per i
+  termini tecnici (tooltip, esempi)
 \item
-  {[}R-04{]} (collegata a ID-05) Progettare un flusso guidato
-  passo-passo per il primo utilizzo, con conferme esplicite ad ogni
-  passaggio e possibilità di richiamare assistenza (caregiver o
-  operatore) senza percepirlo come un fallimento
+  {[}R-04{]} (collegata a ID-05, ID-08; confermata da Renato e Pina,
+  che su entrambi i tool evitano di premere il pulsante corretto per
+  timore di un\textquotesingle azione irreversibile) Progettare un
+  flusso guidato passo-passo per il primo utilizzo, con conferme
+  esplicite ad ogni passaggio e possibilità di richiamare assistenza
+  (caregiver o operatore) senza percepirlo come un fallimento
 \item
   {[}R-05{]} (collegata a ID-06) Verificare e correggere la
   compatibilità con tecnologie assistive (screen reader) in coerenza con
-  la dichiarazione di accessibilità già pubblicata dal cliente
+  la dichiarazione di accessibilità già pubblicata dal cliente;
+  \projecttodo{non verificato direttamente nei test preliminari (nessun
+  soggetto con disabilità visiva reclutato): resta basata
+  sull\textquotesingle assessment 05a.}
 \item
-  {[}R-06{]} (collegata al segmento B / caregiver) Introdurre una
-  modalità di "co-gestione" che dia visibilità al caregiver sulle
-  prenotazioni del familiare pur lasciando che sia
-  quest\textquotesingle ultimo, quando possibile, a compiere
-  l\textquotesingle azione finale, per costruire gradualmente
+  {[}R-06{]} (collegata al segmento B / caregiver; confermata da
+  Elena e Amina, che chiedono entrambe di poter vedere/coinvolgere il
+  familiare assistito) Introdurre una modalità di "co-gestione" che dia
+  visibilità al caregiver sulle prenotazioni del familiare pur
+  lasciando che sia quest\textquotesingle ultimo, quando possibile, a
+  compiere l\textquotesingle azione finale, per costruire gradualmente
   autonomia invece di sostituirla
+\item
+  {[}R-07{]} (nuova; collegata a ID-09, ID-10) Rendere sempre visibile
+  e selezionabile, in ogni punto del flusso di prenotazione, per quale
+  familiare associato si sta agendo; sostituire le conferme generiche
+  ("operazione eseguita") con un riepilogo dettagliato (paziente,
+  prestazione, data) che il caregiver possa verificare e inoltrare
+  senza ricorrere a screenshot
+\item
+  {[}R-08{]} (nuova; collegata a ID-11) Preservare lo stato di
+  avanzamento di un task in caso di interruzione della sessione (es.
+  una chiamata in arrivo), evitando che un timeout costringa
+  l\textquotesingle utente a ripetere l\textquotesingle autenticazione
+  e a ricominciare da capo
+\item
+  {[}R-09{]} (nuova; collegata a ID-12) Affiancare al canale
+  telefonico un canale di assistenza scritto/asincrono (es. chat o
+  messaggistica), utile sia per chi ha vincoli di orario lavorativo
+  sia per chi deve tradurre o mediare linguisticamente le richieste
 \end{itemize}
 
 \fieldheading{Requisiti di design numerati per le Fasi B e C}
 
-\projecttodo{Ri-prioritizzare questi requisiti una volta integrate le
-evidenze reali dello User Testing preliminare (06a/06b): priorità e
-formulazione restano provvisorie finché non confermate dai dati.}
+I requisiti REQ-01...REQ-06 erano provvisori; le priorità sotto
+riportate sono ora confermate dalle evidenze reali dello User Testing
+preliminare (06a/06b), e sono stati aggiunti REQ-07...REQ-09 per le
+raccomandazioni R-07...R-09 emerse dai test.
 
 \begin{itemize}
 \item
@@ -2031,4 +2226,24 @@ formulazione restano provvisorie finché non confermate dai dati.}
   finale di quest\textquotesingle ultimo quando è in grado di
   compierla, e deve rendere visibile il progressivo trasferimento di
   autonomia. Priorità: alta.
+\item
+  \textbf{REQ-07} (da R-07; evidenze ID-09, ID-10): In ogni schermata
+  del flusso di prenotazione deve essere sempre visibile per quale
+  familiare associato si sta operando, e ogni conferma di
+  un\textquotesingle azione (prenotazione, disdetta, modifica) deve
+  riportare un riepilogo dettagliato (paziente, prestazione, data/ora)
+  inoltrabile o condivisibile con il caregiver, non un semplice
+  messaggio generico. Priorità: alta.
+\item
+  \textbf{REQ-08} (da R-08; evidenza ID-11): Il sistema deve
+  preservare lo stato di un task in corso per un tempo ragionevole in
+  caso di interruzione della sessione, evitando che un timeout
+  costringa l\textquotesingle utente a ripetere l\textquotesingle autenticazione
+  e a ricominciare l\textquotesingle intero flusso. Priorità: media.
+\item
+  \textbf{REQ-09} (da R-09; evidenza ID-12): Il servizio deve offrire,
+  in aggiunta al canale telefonico, un canale di assistenza scritto/
+  asincrono (es. chat o messaggistica) raggiungibile dalle stesse
+  schermate in cui l\textquotesingle utente incontra difficoltà.
+  Priorità: media.
 \end{itemize}

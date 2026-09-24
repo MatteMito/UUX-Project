@@ -64,7 +64,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Evitare duplicati tra analisi diretta e inversa.
 - [x] Identificare tutti i problemi gravi, frequenti o persistenti.
 - [x] Per ogni problema indicare posizione, descrizione e metodo di scoperta.
-- [ ] Per ogni problema indicare persistenza, impatto e frequenza quando supportati dai dati.
+- [x] Per ogni problema indicare persistenza, impatto e frequenza quando supportati dai dati.
 - [x] Collegare ogni giudizio non conforme o parziale a un'evidenza.
 - [x] Includere i risultati quantitativi nella documentazione.
 - [x] Conservare checklist completa e screenshot nei supplementi.
@@ -80,18 +80,18 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Definire Thinking Aloud, Bottom Line Data o una combinazione motivata.
 - [x] Definire metriche di successo, efficienza, efficacia, errori, learnability e soddisfazione.
 - [x] Preparare introduzione, protocollo, scheda dati e questionario finale.
-- [ ] Reclutare 2-6 partecipanti reali pertinenti.
+- [x] Reclutare 2-6 partecipanti reali pertinenti.
 - [ ] Informare almeno due partecipanti che saranno ricontattati nella Fase D.
 - [ ] Eseguire un test pilota.
 - [ ] Condurre tutti i task senza guidare il partecipante.
 - [x] Registrare contesto, tempo, risultato, errori, esitazioni, aiuti e citazioni.
-- [ ] Compilare una Test Data card per partecipante.
-- [ ] Somministrare sempre il SUS standard e il questionario di gradimento.
-- [ ] Calcolare SUS individuale, media e varianza.
-- [ ] Analizzare dati soggettivi e oggettivi.
-- [ ] Integrare i problemi con quelli dell'expert review.
-- [ ] Costruire una curva d'urgenza con soglia motivata.
-- [ ] Verificare separatamente la completezza della card del tool cliente e di quella del competitor.
+- [x] Compilare una Test Data card per partecipante.
+- [x] Somministrare sempre il SUS standard e il questionario di gradimento.
+- [x] Calcolare SUS individuale, media e varianza.
+- [x] Analizzare dati soggettivi e oggettivi.
+- [x] Integrare i problemi con quelli dell'expert review.
+- [x] Costruire una curva d'urgenza con soglia motivata.
+- [x] Verificare separatamente la completezza della card del tool cliente e di quella del competitor.
 
 **Deliverable:** Preliminary User Testing card, card individuali, dati, SUS e curva d'urgenza.
 
@@ -110,12 +110,12 @@ Riferimento: [specifiche complete](../docs/specs.md).
 
 ## Controllo finale della fase
 
-- [ ] Team card completa.
-- [ ] Client card completa.
-- [ ] Segmentazione specifica e motivata.
-- [ ] Ricerca basata anche su persone reali.
-- [ ] Assessment del tool corrente e delle alternative.
-- [ ] Test preliminari documentati con dati reali.
-- [ ] SUS e curva d'urgenza verificabili.
-- [ ] Raccomandazioni collegate alle evidenze.
-- [ ] Dati grezzi, screenshot e checklist archiviati nei supplementi.
+- [x] Team card completa.
+- [x] Client card completa.
+- [x] Segmentazione specifica e motivata.
+- [x] Ricerca basata anche su persone reali.
+- [x] Assessment del tool corrente e delle alternative.
+- [x] Test preliminari documentati con dati reali.
+- [x] SUS e curva d'urgenza verificabili.
+- [x] Raccomandazioni collegate alle evidenze.
+- [x] Dati grezzi, screenshot e checklist archiviati nei supplementi.
