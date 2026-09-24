@@ -19,7 +19,7 @@ Requisiti minimi (da `phase-a-checklist.md` / `docs/specs-summary.md`):
 
 | Nome fittizio | Età | Genere | Competenza tecnica/dominio | Relazione con il team | Canale/modalità di reclutamento | Data contatto | Consenso firmato | Intervista fatta | Test 06a fatto | Test 06b fatto | Disponibile per Fase D |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Elena | 45-60 | F | Caregiver a distanza | Amica di Matteo Boscherini | Rete amicale | 21/09/2026 | Sì | Sì (telefonica, 10 min) | No | No | |
+| Elena | 45-60 | F | Caregiver a distanza | Amica di Matteo Boscherini | Rete amicale | 21/09/2026 | Sì | Sì (telefonica, 10 min) | No | Sì (23/09/2026, SUS 80/100) | |
 | Amina | 45-60 | F | Caregiver convivente | Segretaria dell'azienda di tirocinio di Matteo Boscherini | Rete professionale | 21/09/2026 | Sì | Sì (in presenza, 17 min) | No | No | |
 | | | | | | | | | | | | |
 
