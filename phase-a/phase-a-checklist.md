@@ -79,12 +79,12 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Scegliere discount o full usability testing.
 - [x] Definire Thinking Aloud, Bottom Line Data o una combinazione motivata.
 - [x] Definire metriche di successo, efficienza, efficacia, errori, learnability e soddisfazione.
-- [ ] Preparare introduzione, protocollo, scheda dati e questionario finale.
+- [x] Preparare introduzione, protocollo, scheda dati e questionario finale.
 - [ ] Reclutare 2-6 partecipanti reali pertinenti.
 - [ ] Informare almeno due partecipanti che saranno ricontattati nella Fase D.
 - [ ] Eseguire un test pilota.
 - [ ] Condurre tutti i task senza guidare il partecipante.
-- [ ] Registrare contesto, tempo, risultato, errori, esitazioni, aiuti e citazioni.
+- [x] Registrare contesto, tempo, risultato, errori, esitazioni, aiuti e citazioni.
 - [ ] Compilare una Test Data card per partecipante.
 - [ ] Somministrare sempre il SUS standard e il questionario di gradimento.
 - [ ] Calcolare SUS individuale, media e varianza.
