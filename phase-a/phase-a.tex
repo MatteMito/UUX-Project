@@ -1297,7 +1297,84 @@ decisioni. Il sistema dovrebbe offrire microcopy contestuale, conferme
 leggibili e la possibilità di verificare una scelta senza perdere il
 lavoro già svolto.
 
-\projecttodo{Aggiungere le sezioni "Test \#2, \#3...: Soggetto\ldots"
+\fieldheading{Test \#2: Soggetto Pina}
+
+\textbf{Data:} 23/09/2026
+
+\textbf{Assistente/conduttore:} Alessandro Campedelli
+
+\textbf{Osservatore:} Francesco Maria Fuligni
+
+\textbf{Contesto:} Test individuale condotto in presenza, presso il
+domicilio della soggetta, su un tablet del team con l\textquotesingle app
+ER Salute e un account demo (lo smartphone della soggetta ha uno
+schermo piccolo e un sistema non aggiornato). La partecipante
+appartiene al Segmento A, profilo "utente con bassa autonomia
+digitale". Il conduttore è il nipote della soggetta. Durata 26 minuti,
+con una pausa di 3 minuti richiesta dalla partecipante. Nessuna
+prenotazione o disdetta reale.
+
+\textbf{Risultati per task:}
+
+\begin{itemize}
+\item
+  \textbf{T1 --- Individuare come prenotare una visita specialistica.}
+  Successo: no. Tempo: 03:00. Errori: 2. La partecipante scambia "Paga
+  una prestazione", unica azione visibile senza accesso, per
+  l\textquotesingle ingresso alla prenotazione. Raggiunge poi
+  l\textquotesingle autenticazione SPID, ma sbaglia la digitazione
+  della password demo e non riesce a interpretare il messaggio di
+  errore; alla soglia dei 3 minuti il conduttore inserisce le
+  credenziali per permettere di proseguire. Citazione: "Mi dice che è
+  sbagliato. Non so cosa ho sbagliato."
+\item
+  \textbf{T2 --- Disdire un appuntamento.} Successo: parziale. Tempo:
+  06:10. Errori: 3. La partecipante trova la sezione delle
+  prenotazioni e riconosce con soddisfazione la propria visita, tocca
+  però "Modifica" invece di "Disdici" e, quando individua il pulsante
+  corretto, rinuncia a premerlo per timore di perdere definitivamente
+  l\textquotesingle appuntamento. Citazione: "Se poi me la tolgono e
+  non me la ridanno più? La visita l\textquotesingle ho aspettata tre
+  mesi."
+\item
+  \textbf{T3 --- Individuare dove chiedere assistenza.} Successo: no.
+  Tempo: 03:00. Errori: 1. La prima risposta della partecipante è
+  esterna allo strumento ("Io chiamo mia figlia"). Cerca poi
+  l\textquotesingle aiuto in "Impostazioni" senza trovarlo e conclude
+  che si rivolgerebbe alla farmacia; task non completato entro la
+  soglia. Citazione: "Non lo vedo. Io in farmacia vado, lì mi
+  aiutano."
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Task} & \textbf{Successo} & \textbf{Tempo} & \textbf{Errori} \\
+\midrule
+T1 & No & 03:00 & 2 \\
+T2 & Parziale & 06:10 & 3 \\
+T3 & No & 03:00 & 1 \\
+\midrule
+\textbf{Totale} & & \textbf{12:10} & \textbf{6} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Punteggio SUS:} 22,5/100.
+
+\textbf{Suggerimenti del soggetto:} Messaggi di errore che indichino
+cosa fare dopo; poter usare l\textquotesingle app con qualcuno vicino,
+senza doverla lasciare in mano a lui.
+
+\textbf{Riflessioni utili per il design:} Il blocco si presenta prima
+ancora del compito (schermata iniziale e autenticazione, {[}ID-01{]},
+{[}ID-03{]}) e, una volta superato con aiuto, si sposta
+sull\textquotesingle azione percepita come irreversibile
+({[}ID-08{]}). La richiesta di rassicurazione rivolta al conduttore
+suggerisce che un aiuto contestuale, presente nel punto della
+decisione, valga più di una pagina di assistenza separata.
+
+\projecttodo{Aggiungere le sezioni "Test \#3, \#4...: Soggetto\ldots"
 per ciascun ulteriore soggetto reale testato, non appena le sessioni
 saranno state condotte.}
 
@@ -1520,6 +1597,16 @@ impatto e persistenza reali dopo la raccolta dei dati dei test utente
   ricercabile per data, impatto: basso-medio; persistenza: media;
   metodo di scoperta: analisi inversa (05a), da recensioni reali
   dell\textquotesingle app
+\item
+  {[}ID-08{]} \textbf{Posizione:} schermata di modifica/disdetta di un
+  appuntamento (task T2). Assenza di conferma o rassicurazione
+  esplicita prima di un\textquotesingle azione percepita come
+  irreversibile: il soggetto individua il pulsante corretto ma non lo
+  preme, o lo evita, per timore di perdere definitivamente
+  l\textquotesingle appuntamento; impatto: alto; persistenza: alta;
+  frequenza: 2/2 soggetti testati finora sul task T2 (Renato e Pina,
+  Documento 06a); metodo di scoperta: test utente (06a), non emerso
+  dall\textquotesingle expert review
 \end{itemize}
 
 \projecttodo{La frequenza di ciascun problema (quante volte si
@@ -1541,7 +1628,7 @@ l\textquotesingle opportunità di soggetti aggiuntivi.}
 
 \projecttodo{Costruire almeno la relazione impatto × persistenza
 una volta confermate le criticità con i dati di test reali, usando gli
-identificatori {[}ID-01...ID-07{]} sopra elencati come base di partenza,
+identificatori {[}ID-01...ID-08{]} sopra elencati come base di partenza,
 integrati con quanto emerso dai test.}
 
 \fieldheading{Raccomandazioni di design preliminari}
