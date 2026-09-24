@@ -54,7 +54,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 
 - [x] Selezionare il tool del cliente.
 - [x] Selezionare almeno un competitor o prodotto ispiratore.
-- [ ] Acquisire screenshot datati dei sistemi.
+- [x] Acquisire screenshot datati dei sistemi.
 - [x] Raccogliere e giustificare le guideline.
 - [x] Numerare le guideline.
 - [x] Esplorare i sistemi prima insieme e poi individualmente.
