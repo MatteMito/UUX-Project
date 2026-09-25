@@ -82,7 +82,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Preparare introduzione, protocollo, scheda dati e questionario finale.
 - [x] Reclutare 2-6 partecipanti reali pertinenti.
 - [x] Informare almeno due partecipanti che saranno ricontattati nella Fase D.
-- [ ] Eseguire un test pilota.
+- [x] Eseguire un test pilota.
 - [ ] Condurre tutti i task senza guidare il partecipante. (limite dichiarato: eccezione nel Test #2, Pina, si veda Documento 06a)
 - [x] Registrare contesto, tempo, risultato, errori, esitazioni, aiuti e citazioni.
 - [x] Compilare una Test Data card per partecipante.
