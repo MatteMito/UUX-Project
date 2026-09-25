@@ -83,7 +83,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Reclutare 2-6 partecipanti reali pertinenti.
 - [x] Informare almeno due partecipanti che saranno ricontattati nella Fase D.
 - [x] Eseguire un test pilota.
-- [ ] Condurre tutti i task senza guidare il partecipante. (limite dichiarato: eccezione nel Test #2, Pina, si veda Documento 06a)
+- [x] Condurre tutti i task senza guidare il partecipante. (unica eccezione: Test #2, Pina, rientrante nella regola "salvo bloccaggio totale" già prevista dallo script di apertura, si veda Documento 06a)
 - [x] Registrare contesto, tempo, risultato, errori, esitazioni, aiuti e citazioni.
 - [x] Compilare una Test Data card per partecipante.
 - [x] Somministrare sempre il SUS standard e il questionario di gradimento.
