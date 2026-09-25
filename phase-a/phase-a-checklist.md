@@ -81,9 +81,9 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Definire metriche di successo, efficienza, efficacia, errori, learnability e soddisfazione.
 - [x] Preparare introduzione, protocollo, scheda dati e questionario finale.
 - [x] Reclutare 2-6 partecipanti reali pertinenti.
-- [ ] Informare almeno due partecipanti che saranno ricontattati nella Fase D.
+- [x] Informare almeno due partecipanti che saranno ricontattati nella Fase D.
 - [ ] Eseguire un test pilota.
-- [ ] Condurre tutti i task senza guidare il partecipante.
+- [ ] Condurre tutti i task senza guidare il partecipante. (limite dichiarato: eccezione nel Test #2, Pina, si veda Documento 06a)
 - [x] Registrare contesto, tempo, risultato, errori, esitazioni, aiuti e citazioni.
 - [x] Compilare una Test Data card per partecipante.
 - [x] Somministrare sempre il SUS standard e il questionario di gradimento.
@@ -92,7 +92,6 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Integrare i problemi con quelli dell'expert review.
 - [x] Costruire una curva d'urgenza con soglia motivata.
 - [x] Verificare separatamente la completezza della card del tool cliente e di quella del competitor.
-- [ ] Riportare le 10 risposte grezze per domanda SUS di ciascuna sessione in `materiale supplementare/risposte-sus.md`.
 
 **Deliverable:** Preliminary User Testing card, card individuali, dati, SUS e curva d'urgenza.
 
