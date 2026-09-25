@@ -39,7 +39,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Definire obiettivi e domande di ricerca.
 - [x] Scegliere uno o più metodi: statistiche, survey, focus group, interviste, osservazione o presenza passiva.
 - [x] Includere una task analysis.
-- [x] Preparare protocollo, traccia, consenso e anonimizzazione.
+- [x] Preparare protocollo, traccia e anonimizzazione.
 - [x] Reclutare persone reali appartenenti ai segmenti scelti.
 - [x] Raccogliere dati, osservazioni e citazioni.
 - [x] Verificare fonte, anno, popolazione e pagina dei dati quantitativi.

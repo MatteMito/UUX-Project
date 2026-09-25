@@ -1,15 +1,14 @@
 # Protocollo di user testing preliminare --- Documenti 06a / 06b
 
-Vale sia per il test sul tool del cliente (CUPweb / app ER Salute, 06a) sia per il test sul competitor (MioDottore, 06b). Usare con il [modulo di consenso informato](consenso-informato.md); aggiornare il [tracker di reclutamento](tracker-reclutamento.md) prima e dopo ogni sessione.
+Vale sia per il test sul tool del cliente (CUPweb / app ER Salute, 06a) sia per il test sul competitor (MioDottore, 06b). Aggiornare il [tracker di reclutamento](tracker-reclutamento.md) prima e dopo ogni sessione.
 
 ## 1. Prima della sessione
 
 - [ ] Verificare che il soggetto rientri nel segmento A o B (vedi [tracce-intervista.md](tracce-intervista.md) per i criteri).
 - [ ] Preparare account demo/test (dove possibile) così da non toccare dati sanitari reali del soggetto.
 - [ ] Preparare dispositivo del team preconfigurato identico, come backup se il soggetto non vuole usare il proprio.
-- [ ] Stampare: consenso informato, questo protocollo, scheda dati, questionario di gradimento; avere pronto il link al modulo Google SUS del corso.
+- [ ] Stampare: questo protocollo, scheda dati, questionario di gradimento; avere pronto il link al modulo Google SUS del corso.
 - [ ] Assegnare i ruoli: un conduttore (parla col soggetto), un osservatore (prende note sulla scheda dati).
-- [ ] Far firmare il consenso informato.
 
 ## 2. Script di apertura (da leggere al soggetto)
 
@@ -46,8 +45,8 @@ Non fornire suggerimenti su dove cliccare. Se il soggetto è completamente blocc
 
 Prima di condurre i test con i soggetti reali definitivi, eseguire **un pilot** con una persona disponibile (anche non perfettamente in target) per verificare che: i task siano comprensibili, il tempo totale sia ragionevole (~20-30 minuti), la scheda dati sia compilabile in tempo reale. Annotare qui eventuali modifiche al protocollo emerse dal pilot:
 
-- Data pilot: __________
-- Modifiche apportate dopo il pilot: __________
+- Data pilot: 21/09/2026
+- Modifiche apportate dopo il pilot: dry run interno al team (un membro nel ruolo di partecipante, un secondo come conduttore/osservatore) su CUPweb; ha portato a consolidare 7 regole operative (conduttore non suggerisce il percorso, richieste di aiuto spontanee annotate prima di aiutare, intervento minimo consentito solo su blocco totale, tempi registrati al netto delle interruzioni, errori/esitazioni/richieste di rassicurazione come eventi distinti, nessuna azione reale di prenotazione/disdetta, citazioni testuali separate dall'interpretazione). Dettaglio completo in Documento 06 (`phase-a.tex`).
 
 ## 5. Scheda dati (da compilare durante il test, per soggetto)
 
@@ -84,7 +83,7 @@ Learnability (solo se un task viene ripetuto o se emergono differenze tra primo 
    - Ti sentiresti sicuro/a a usarlo da solo/a a casa? Perché sì/no?
    - *(solo per 06a, segmento B)* Cosa ti darebbe fiducia per lasciare che [il tuo familiare] lo usi senza il tuo aiuto?
 
-3. Chiedere se disponibile a essere ricontattato per la Fase D (se non già chiesto nel consenso informato) e annotarlo nel tracker.
+3. Chiedere se disponibile a essere ricontattato per la Fase D e annotarlo nel tracker.
 
 ## 7. Dopo la sessione
 
