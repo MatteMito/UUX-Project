@@ -92,6 +92,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Integrare i problemi con quelli dell'expert review.
 - [x] Costruire una curva d'urgenza con soglia motivata.
 - [x] Verificare separatamente la completezza della card del tool cliente e di quella del competitor.
+- [ ] Riportare le 10 risposte grezze per domanda SUS di ciascuna sessione in `materiale supplementare/risposte-sus.md`.
 
 **Deliverable:** Preliminary User Testing card, card individuali, dati, SUS e curva d'urgenza.
 
