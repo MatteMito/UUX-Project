@@ -21,34 +21,34 @@ I punteggi finali (0-100) calcolati da questi dati sono già riportati nella tab
 
 | Item | Renato | Pina | Elena | Amina |
 |---|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
-| 6 | | | | |
-| 7 | | | | |
-| 8 | | | | |
-| 9 | | | | |
-| 10 | | | | |
+| 1 | 1 | 1 | 1 | 1 |
+| 2 | 1 | 2 | 1 | 1 |
+| 3 | 1 | 1 | 1 | 1 |
+| 4 | 1 | 2 | 1 | 2 |
+| 5 | 1 | 2 | 4 | 1 |
+| 6 | 5 | 5 | 2 | 4 |
+| 7 | 3 | 1 | 2 | 1 |
+| 8 | 3 | 5 | 1 | 3 |
+| 9 | 1 | 2 | 2 | 2 |
+| 10 | 1 | 4 | 3 | 1 |
 | **Punteggio SUS (0-100)** | 40 | 22,5 | 55 | 37,5 |
 
 ## Documento 06b: MioDottore
 
 | Item | Renato | Pina | Elena | Amina |
 |---|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
-| 6 | | | | |
-| 7 | | | | |
-| 8 | | | | |
-| 9 | | | | |
-| 10 | | | | |
+| 1 | 1 | 1 | 1 | 1 |
+| 2 | 1 | 1 | 1 | 1 |
+| 3 | 2 | 1 | 5 | 1 |
+| 4 | 1 | 1 | 1 | 1 |
+| 5 | 5 | 1 | 5 | 5 |
+| 6 | 1 | 4 | 1 | 3 |
+| 7 | 5 | 4 | 5 | 4 |
+| 8 | 3 | 1 | 4 | 1 |
+| 9 | 4 | 1 | 4 | 5 |
+| 10 | 2 | 3 | 1 | 3 |
 | **Punteggio SUS (0-100)** | 72,5 | 45 | 80 | 67,5 |
 
 ## Verifica
 
-I punteggi finali già calcolati (ultima riga di ciascuna tabella) devono coincidere con quelli ricavabili dalle risposte grezze tramite la formula standard: somma dei contributi normalizzati (item dispari: punteggio-1; item pari: 5-punteggio) moltiplicata per 2,5.
+I punteggi finali (ultima riga di ciascuna tabella) sono stati ricalcolati dalle risposte grezze tramite la formula standard (item dispari: punteggio-1; item pari: 5-punteggio; somma dei contributi moltiplicata per 2,5) e coincidono esattamente con quelli già riportati nel Documento 07.
