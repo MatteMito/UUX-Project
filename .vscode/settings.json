@@ -1,3 +1,43 @@
 {
-    "makefile.configureOnOpen": true
+    "makefile.configureOnOpen": true,
+
+    // LaTeX Workshop: usa xelatex (richiesto da fontspec)
+    "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (xelatex)",
+            "tools": ["latexmk-xelatex"]
+        },
+        {
+            "name": "latexmk (pdflatex)",
+            "tools": ["latexmk-pdflatex"]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk-xelatex",
+            "command": "latexmk",
+            "args": [
+                "-xelatex",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-recorder",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "latexmk-pdflatex",
+            "command": "latexmk",
+            "args": [
+                "-pdf",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-recorder",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.autoBuild.run": "onSave"
 }
