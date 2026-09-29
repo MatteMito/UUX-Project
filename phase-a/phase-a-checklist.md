@@ -43,7 +43,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Reclutare persone reali appartenenti ai segmenti scelti.
 - [x] Raccogliere dati, osservazioni e citazioni.
 - [x] Verificare fonte, anno, popolazione e pagina dei dati quantitativi.
-- [x] Allegare screenshot leggibili delle pagine esatte delle fonti citate.
+- [x] Allegare screenshot leggibili delle pagine esatte delle fonti citate (incorporati direttamente nel PDF).
 - [x] Analizzare bisogni, barriere e differenze tra segmenti.
 - [x] Dichiarare limiti e bias.
 - [x] Elencare le idee di design non banali emerse.
@@ -67,7 +67,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Per ogni problema indicare persistenza, impatto e frequenza quando supportati dai dati.
 - [x] Collegare ogni giudizio non conforme o parziale a un'evidenza.
 - [x] Includere i risultati quantitativi nella documentazione.
-- [x] Conservare checklist completa e screenshot nei supplementi.
+- [x] Conservare checklist completa e screenshot (checklist: file xlsx consegnato a parte; screenshot: incorporati nel PDF).
 - [x] Individuare gli elementi `Non verificato` e distinguerli da quelli non conformi.
 - [x] Verificare con soggetti reali gli elementi che richiedono autenticazione oppure documentarne esplicitamente il rinvio.
 
@@ -92,7 +92,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Integrare i problemi con quelli dell'expert review.
 - [x] Costruire una curva d'urgenza con soglia motivata.
 - [x] Verificare separatamente la completezza della card del tool cliente e di quella del competitor.
-- [x] Riportare le 10 risposte grezze per domanda SUS di ciascuna sessione in `materiale supplementare/risposte-sus.md`.
+- [x] Riportare le 10 risposte grezze per domanda SUS di ciascuna sessione (incorporate direttamente nel PDF, Documento 07).
 
 **Deliverable:** Preliminary User Testing card, card individuali, dati, SUS e curva d'urgenza.
 
@@ -119,4 +119,4 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Test preliminari documentati con dati reali.
 - [x] SUS e curva d'urgenza verificabili.
 - [x] Raccomandazioni collegate alle evidenze.
-- [x] Dati grezzi, screenshot e checklist archiviati nei supplementi.
+- [x] Dati grezzi e screenshot incorporati nel PDF; checklist guideline consegnata come file xlsx separato.
