@@ -1,15 +1,14 @@
 LATEXMK ?= latexmk
 BUILD_DIR := build/latex
 MAIN := hphp-project-report.tex
-OUTPUT := hphp-project-report.pdf
+AUX_EXTENSIONS := aux bbl bcf blg fdb_latexmk fls dvi lof log lot out run.xml synctex.gz toc xdv
 
 .PHONY: pdf clean
 
 pdf:
 	mkdir -p $(BUILD_DIR)
-	$(LATEXMK) -xelatex -interaction=nonstopmode -halt-on-error -outdir=$(BUILD_DIR) -jobname=hphp-project-report $(MAIN)
-	cp $(BUILD_DIR)/hphp-project-report.pdf $(OUTPUT)
+	$(LATEXMK) -xelatex -interaction=nonstopmode -halt-on-error -emulate-aux-dir -auxdir=$(BUILD_DIR) -outdir=. -jobname=hphp-project-report $(MAIN)
 
 clean:
-	$(LATEXMK) -C -outdir=$(BUILD_DIR) -jobname=hphp-project-report $(MAIN)
-	rm -rf build
+	rm -rf $(BUILD_DIR)
+	rm -f $(addprefix $(basename $(MAIN)).,$(AUX_EXTENSIONS))
