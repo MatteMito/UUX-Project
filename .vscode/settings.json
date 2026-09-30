@@ -1,3 +1,29 @@
 {
-    "makefile.configureOnOpen": true
+    "makefile.configureOnOpen": true,
+    "latex-workshop.latex.outDir": "%DIR%",
+    "latex-workshop.latex.auxDir": "%DIR%/build/latex",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatexmk (build/latex)",
+            "tools": [
+                "xelatexmk-build"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatexmk-build",
+            "command": "latexmk",
+            "args": [
+                "-xelatex",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-halt-on-error",
+                "-emulate-aux-dir",
+                "-auxdir=%AUXDIR%",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ]
+        }
+    ]
 }
