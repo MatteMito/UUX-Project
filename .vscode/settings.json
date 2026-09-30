@@ -24,7 +24,7 @@
                 "-outdir=%AUXDIR%",
                 "-out2dir=%OUTDIR%",
                 "-e",
-                "$out2_exts = [ 'pdf' ];",
+                "@out2_exts = ( 'pdf' );",
                 "%DOC%"
             ]
         }
