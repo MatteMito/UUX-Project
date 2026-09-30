@@ -6,8 +6,7 @@ MAIN := hphp-project-report.tex
 
 pdf:
 	mkdir -p $(BUILD_DIR)
-	$(LATEXMK) -xelatex -interaction=nonstopmode -halt-on-error -outdir=$(BUILD_DIR) -jobname=hphp-project-report $(MAIN)
+	$(LATEXMK) -xelatex -interaction=nonstopmode -halt-on-error -emulate-aux-dir -auxdir=$(BUILD_DIR) -outdir=. -jobname=hphp-project-report $(MAIN)
 
 clean:
-	$(LATEXMK) -C -outdir=$(BUILD_DIR) -jobname=hphp-project-report $(MAIN)
-	rm -rf build
+	rm -rf $(BUILD_DIR)
