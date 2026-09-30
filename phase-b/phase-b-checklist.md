@@ -39,6 +39,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Verificare che le personas suggeriscano scelte di design non ovvie.
 - [x] Diversificare il cast per genere, origine, lingua e struttura familiare quando tali differenze producono scenari e requisiti pertinenti.
 - [x] Evitare sia stereotipi sia variazioni puramente decorative: ogni personaggio deve avere storia, abitudini e conflitti specifici.
+- [ ] Inserire foto personas 
 
 ## 5. Competenze e abilità
 
