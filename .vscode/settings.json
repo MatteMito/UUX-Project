@@ -21,7 +21,10 @@
                 "-halt-on-error",
                 "-emulate-aux-dir",
                 "-auxdir=%AUXDIR%",
-                "-outdir=%OUTDIR%",
+                "-outdir=%AUXDIR%",
+                "-out2dir=%OUTDIR%",
+                "-e",
+                "$out2_exts = [ 'pdf' ];",
                 "%DOC%"
             ]
         }
