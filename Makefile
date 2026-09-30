@@ -1,6 +1,7 @@
 LATEXMK ?= latexmk
 BUILD_DIR := build/latex
 MAIN := hphp-project-report.tex
+AUX_EXTENSIONS := aux bbl bcf blg fdb_latexmk fls dvi lof log lot out run.xml synctex.gz toc xdv
 
 .PHONY: pdf clean
 
@@ -10,3 +11,4 @@ pdf:
 
 clean:
 	rm -rf $(BUILD_DIR)
+	rm -f $(addprefix $(basename $(MAIN)).,$(AUX_EXTENSIONS))
