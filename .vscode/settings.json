@@ -1,7 +1,7 @@
 {
     "makefile.configureOnOpen": true,
-
-    // LaTeX Workshop: usa xelatex (richiesto da fontspec)
+    "latex-workshop.latex.outDir": "%DIR%",
+    "latex-workshop.latex.auxDir": "%DIR%/build/latex",
     "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
     "latex-workshop.latex.recipes": [
         {
@@ -22,7 +22,10 @@
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
-                "-recorder",
+                "-halt-on-error",
+                "-emulate-aux-dir",
+                "-auxdir=%AUXDIR%",
+                "-outdir=%OUTDIR%",
                 "%DOC%"
             ]
         },
@@ -34,7 +37,9 @@
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
-                "-recorder",
+                "-emulate-aux-dir",
+                "-auxdir=%AUXDIR%",
+                "-outdir=%OUTDIR%",
                 "%DOC%"
             ]
         }
