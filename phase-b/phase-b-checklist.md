@@ -39,7 +39,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Verificare che le personas suggeriscano scelte di design non ovvie.
 - [x] Diversificare il cast per genere, origine, lingua e struttura familiare quando tali differenze producono scenari e requisiti pertinenti.
 - [x] Evitare sia stereotipi sia variazioni puramente decorative: ogni personaggio deve avere storia, abitudini e conflitti specifici.
-- [ ] Inserire foto personas 
+- [x] Inserire foto personas 
 
 ## 5. Competenze e abilità
 
@@ -59,7 +59,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Spiegare come segmenti e scenari hanno generato il cast.
 - [x] Documentare personas e scenari generati, selezionati e scartati.
 - [x] Evidenziare relazioni e conflitti tra utenti diretti e intermediari.
-- [ ] Collegare ogni implicazione di design ad assessment o testing.
+- [x] Collegare ogni implicazione di design ad assessment o testing.
 - [x] Formulare requisiti per efficienza, spiegazione, accessibilità, motivazione e attenzione.
 - [x] Verificare che i requisiti non favoriscano una persona danneggiando ingiustificatamente le altre.
 
@@ -96,5 +96,5 @@ Per ogni persona:
 - [x] Cast card completa di alternative scartate.
 - [x] Persona card complete e credibili.
 - [x] Diagrammi C&A verificati.
-- [ ] Requisiti collegati a evidenze di assessment o testing.
+- [x] Requisiti collegati a evidenze di assessment o testing.
 - [x] Le personas producono indicazioni utilizzabili nella Fase C.

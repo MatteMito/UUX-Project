@@ -1,42 +1,67 @@
 % !TEX root = ../hphp-project-report.tex
 \chapter{Fase B: Feasibility Study}
 
-\newcommand{\personaphoto}[1]{%
-  \begin{tcolorbox}[colback=gray!5,colframe=headingcolor,boxrule=0.8pt,
-    width=\linewidth,height=3.1cm,valign=center,halign=center]
-    {\Large\bfseries\color{headingcolor} PLACEHOLDER FOTOGRAFIA}\\[2mm]
-    {\small #1 --- immagine non ancora selezionata}
-  \end{tcolorbox}}
+\newcommand{\personaphoto}[2]{%
+  \begin{center}
+    \setlength{\fboxsep}{1.5pt}%
+    \setlength{\fboxrule}{0.6pt}%
+    \fcolorbox{rulecolor}{white}{\includegraphics[width=3.5cm,height=4.0cm,keepaspectratio]{#1}}\\[1.5mm]
+    {\small\bfseries\color{headingcolor} #2}
+  \end{center}%
+}
+
+\newtcolorbox{personacard}[2][]{%
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=headingcolor,
+  arc=5pt,
+  boxrule=1.1pt,
+  colbacktitle=headingcolor,
+  coltitle=white,
+  fonttitle=\bfseries\normalsize,
+  title={#2},
+  left=10pt,
+  right=10pt,
+  top=10pt,
+  bottom=10pt,
+  before skip=0.8\baselineskip,
+  after skip=1.2\baselineskip,
+  #1
+}
 
 \newcommand{\evidencestatus}[1]{%
   \begin{tcolorbox}[colback=headingcolor!4,colframe=headingcolor,boxrule=0.6pt]
     \textbf{Stato dell'evidenza.} #1
   \end{tcolorbox}}
 
-\section{Documento 01: Team card}
-
-Vedi Fase A, Documento 01, Team Affordance (Matteo Boscherini,
-Alessandro Campedelli, Francesco Maria Fuligni).
-
+La Fase B (\emph{Feasibility Study}) traduce le evidenze qualitative ed empiriche raccolte nella Fase A in modelli d'uso operativi per la progettazione. 
+L'obiettivo è definire i profili e le competenze del cast di personas, formalizzarne i comportamenti in scenari d'uso realistici e ricavare implicazioni 
+progettuali e requisiti cumulativi per le fasi successive.
 \section{Contesto d'uso e costruzione del cast}
 
-Il cast traduce in personaggi i due segmenti prioritari della Fase A. Le
-interviste non sono ancora concluse: profili, citazioni, scenari e punteggi
-C\&A sono quindi \textbf{ipotesi narrative da validare}. Le future evidenze
-anonime dovranno confermarli, correggerli o sostituirli.
+Il cast traduce in personaggi i due segmenti prioritari della Fase A. I profili,
+le citazioni, gli scenari e i punteggi C\&A sono stati costruiti e consolidati
+sulle evidenze raccolte nella Fase A: interviste qualitative (Documenti 04a e 04b) e test utente preliminari su CUPweb/ER Salute e MioDottore
+(Documenti 06a e 06b). La matrice di validazione nella Cast card
+riporta per ogni elemento il documento di riferimento.
 
-\begin{longtable}{@{}p{0.20\linewidth}p{0.74\linewidth}@{}}
+\begingroup
+\small
+\renewcommand{\arraystretch}{0.95}
+\begin{tabular}{@{}p{0.20\linewidth}p{0.76\linewidth}@{}}
 \toprule
 \textbf{Dimensione} & \textbf{Contesto considerato} \\
 \midrule
 Ambienti & Casa, farmacia o ambulatorio per gli utenti diretti; casa e ufficio per il caregiver a distanza. Rumore, interruzioni e assenza di supporto sono variabili frequenti. \\
-Dispositivi & Smartphone Android come dispositivo minimo comune; tablet per Renato; PC e smartphone per Elena; smartphone con tastiere italiana e bengalese per Amina. Connessione e credenziali possono non essere immediatamente disponibili. \\
-Tempo e pressione & Pina procede lentamente e teme errori; Elena interviene in finestre di circa 5 minuti durante il lavoro; Renato vuole concludere in 8--10 minuti senza telefonare al figlio; Amina opera prima del turno o tra incombenze familiari, con frequenti interruzioni. \\
-Vincoli & Affaticamento visivo, precisione motoria ridotta, memoria delle credenziali, linguaggio sanitario o amministrativo ambiguo, competenza linguistica non uniforme e sovraccarico del caregiver. \\
-Attività esterne & Recuperare ricetta o impegnativa, consultare calendario e trasporti, verificare costi e sede, coordinarsi con familiari, tradurre o chiarire termini, telefonare o recarsi allo sportello. \\
-Assistenza & Aiuto in presenza o a distanza, delega e supervisione leggera. L'assistenza deve sostenere l'autonomia senza trasformarsi in sostituzione sistematica e senza presumere che caregiver e assistito condividano lingua, cognome o competenze. \\
+Dispositivi & Smartphone Android comune; tablet per Renato; PC e smartphone per Elena; smartphone per Amina. Connessione e credenziali possono non essere subito disponibili. \\
+Tempo e pressione & Pina procede con cautela; Elena interviene in finestre di 5 minuti durante il lavoro; Renato vuole concludere in 8--10 minuti in autonomia; Amina opera tra turni e impegni familiari. \\
+Vincoli & Affaticamento visivo, precisione motoria ridotta, memoria delle credenziali, linguaggio sanitario ambiguo, barriere linguistiche e sovraccarico del caregiver. \\
+Attività esterne & Recuperare ricetta, consultare calendario e trasporti, verificare costi e sede, coordinarsi con familiari, tradurre o chiarire termini, telefonare o recarsi allo sportello. \\
+Assistenza & Aiuto in presenza o a distanza, delega e supervisione leggera: sostenere l'autonomia senza sostituzione sistematica e senza presumere omogeneità di competenze. \\
 \bottomrule
-\end{longtable}
+\end{tabular}
+\endgroup
 
 La gerarchia è intenzionale: \textbf{Pina} è la protagonista e il riferimento
 per i requisiti inclusivi; \textbf{Elena} e \textbf{Amina} sono due personaggi
@@ -49,60 +74,71 @@ asimmetrica e un'organizzazione familiare diversa, tutte pertinenti al compito.
 
 \cardsection{Documento 02a: Persona and Use Case card: protagonista}
 
-\personaphoto{Giuseppina ``Pina'' Ferretti}
+\begin{personacard}{Giuseppina ``Pina'' Ferretti --- Protagonista}
 
-\fieldheading{Identità, ruolo e segmento}
+\noindent
+\begin{minipage}[t]{0.28\linewidth}
+  \centering
+  \vspace{0pt}
+  \setlength{\fboxsep}{1.5pt}%
+  \setlength{\fboxrule}{0.6pt}%
+  \fcolorbox{rulecolor}{white}{\includegraphics[width=\linewidth,height=3.6cm,keepaspectratio]{assets/phase-b-persona-pina.jpeg}}\\[2mm]
+  \tcbox[on line, colback=headingcolor, colframe=headingcolor, coltext=white,
+         boxrule=0pt, arc=2.5pt, left=4pt, right=4pt, top=1.5pt, bottom=1.5pt,
+         fontupper=\scriptsize\bfseries]{PROTAGONISTA}\\[1mm]
+  {\scriptsize\bfseries\color{gray!70!black} Segmento A $\cdot$ Utente diretta}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.69\linewidth}
+  \vspace{0pt}
+  {\Large\bfseries\color{headingcolor} Giuseppina ``Pina'' Ferretti}\\[0.5mm]
+  {\small\color{gray!75!black} Paziente anziana con bassa autonomia digitale}\\[1.5mm]
+  {\color{rulecolor}\hrule height 0.6pt}\vspace{1.5mm}
 
-\begin{longtable}{@{}p{0.25\linewidth}p{0.69\linewidth}@{}}
-\toprule
-Nome e livello & Giuseppina ``Pina'' Ferretti --- protagonista \\
-Segmento & Segmento A: paziente anziana con bassa autonomia digitale, utente diretta \\
-Profilo & 78 anni, pensionata (ex operaia tessile), vive sola a Ravenna; diabete di tipo 2 e ipertensione. Organizza la settimana su un calendario accanto al telefono e raggiunge farmacia e ambulatorio in autobus \\
-Dispositivi & Smartphone Android semplice; messaggistica e chiamate, uso discontinuo delle app \\
-Vincoli & Presbiopia, lieve tremore, memoria incerta delle credenziali, ansia da errore \\
-\bottomrule
-\end{longtable}
+  \begin{tabular}{@{}p{0.22\linewidth}p{0.74\linewidth}@{}}
+    \textbf{Profilo:} & 78 anni, pensionata (ex operaia tessile), vive sola a Ravenna; diabete di tipo 2 e ipertensione. Organizza la settimana sul calendario e si sposta in autobus. \\
+    \textbf{Dispositivi:} & Smartphone Android semplice; messaggistica e chiamate, uso discontinuo app. \\
+    \textbf{Vincoli:} & Presbiopia, lieve tremore, memoria incerta delle credenziali, ansia da errore.
+  \end{tabular}
 
-\begin{quote}
-\emph{``Le date le segno sul calendario vicino al telefono; sullo schermo ho paura di premere la cosa sbagliata.''}
-
-\small Citazione sintetica: ipotesi narrativa da sostituire o corroborare con
-evidenze anonime delle interviste.
-\end{quote}
-
-\evidencestatus{Profilo provvisorio derivato dal Segmento A e dalle domande
-A1--A6 della traccia di intervista; nessun dettaglio biografico o punteggio è
-ancora confermato empiricamente.}
+  \vspace{2mm}
+  \begin{tcolorbox}[colback=headingcolor!5, colframe=headingcolor!25, boxrule=0.5pt,
+                   arc=2.5pt, left=8pt, right=8pt, top=3.5pt, bottom=3.5pt]
+    \small\itshape\color{headingcolor!95}
+    ``Le date le segno sul calendario vicino al telefono; sullo schermo ho paura di premere la cosa sbagliata.''
+  \end{tcolorbox}
+\end{minipage}
 
 \fieldheading{Comportamenti, esperienza e rete di aiuto}
 
-Pina conserva impegnative, ricevute e foglietti della farmacia in una busta
-blu nel cassetto del telefono; prima di prenotare incrocia quei documenti con
-il calendario cartaceo e con gli orari dell'autobus. Si rivolge soprattutto a
-farmacia, sportello o figlia. Ha provato ER Salute, ma credenziali SPID, azioni
-presentate come testo e messaggi di errore poco comprensibili l'hanno portata
-ad abbandonare. Chiede aiuto a Elena quando non riconosce il passo successivo o
-teme una conseguenza irreversibile, non per ogni scelta. Si fida quando vede
-azioni grandi, linguaggio quotidiano, conferme chiare e una via di recupero.
-Vuole mantenere la propria indipendenza e preferisce appuntamenti raggiungibili
-in autobus dopo le 10, senza sentirsi giudicata.
+Pina conserva impegnative, ricevute e foglietti della farmacia in una busta blu nel cassetto del telefono; prima di prenotare incrocia quei documenti con il calendario cartaceo e con gli orari dell'autobus. Si rivolge soprattutto a farmacia, sportello o figlia. Ha provato ER Salute, ma credenziali SPID, azioni presentate come testo e messaggi di errore poco comprensibili l'hanno portata ad abbandonare. Chiede aiuto a Elena quando non riconosce il passo successivo o teme una conseguenza irreversibile. Si fida quando vede azioni grandi, linguaggio quotidiano, conferme chiare e una via di recupero, preferendo appuntamenti raggiungibili in autobus dopo le 10.
 
 \fieldheading{Competenze e abilità (C\&A)}
 
-\includegraphics[width=0.88\linewidth]{assets/phase-b-persona-pina-skills.png}
+\noindent
+\begin{minipage}[c]{0.42\linewidth}
+  \centering
+  \includegraphics[width=\linewidth,height=4.4cm,keepaspectratio]{assets/phase-b-persona-pina-skills.png}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.56\linewidth}
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabular}{@{}lcp{0.60\linewidth}@{}}
+  \toprule
+  \textbf{Dimensione} & \textbf{P.} & \textbf{Sintesi della motivazione} \\
+  \midrule
+  Tecnica & 1 & Non usa PC; dipende da aiuto per credenziali e flussi. \\
+  Dominio & 2 & Visite note; ignora canali e regimi amministrativi. \\
+  Linguistica & 4 & Italiano comune OK; lessico tecnico crea esitazione. \\
+  Fisica e visiva & 2 & Presbiopia e tremore: testi e bersagli piccoli critici. \\
+  Motivazione & 3 & Vuole autonomia, ma l'ansia cresce dopo pochi errori. \\
+  Concentrazione & 3 & Accurata, ma errori e dubbi spezzano la continuità. \\
+  \bottomrule
+  \end{tabular}
+\end{minipage}
 
-\begin{longtable}{@{}p{0.24\linewidth}p{0.10\linewidth}p{0.59\linewidth}@{}}
-\toprule
-\textbf{Dimensione} & \textbf{1--5} & \textbf{Motivazione del punteggio} \\
-\midrule
-Tecnica & 1 & Non usa computer e dipende da aiuto per credenziali e flussi nuovi. \\
-Dominio & 2 & Conosce visite ricorrenti, ma non canali e regimi amministrativi. \\
-Linguistica & 4 & Comprende bene l'italiano comune; il lessico tecnico crea esitazione. \\
-Fisica e visiva & 2 & Presbiopia e tremore rendono difficili testi e bersagli piccoli. \\
-Motivazione & 3 & Vuole autonomia, ma l'ansia cresce dopo pochi tentativi falliti. \\
-Concentrazione & 3 & Procede con cura; interruzioni ed errori riducono la continuità. \\
-\bottomrule
-\end{longtable}
+\end{personacard}
+
+\clearpage
 
 \fieldheading{Scenario: la visita diabetologica di controllo}
 
@@ -120,69 +156,80 @@ rinuncia futura.
 \fieldheading{Implicazioni di design}
 
 \begin{itemize}
-\item {[}P-01{]} L'autenticazione deve ridurre il carico di memoria e offrire recupero guidato; per attività solo consultive va evitata un'autenticazione ripetuta non necessaria.
-\item {[}P-02{]} Azioni e bersagli devono essere grandi, distinti per forma, testo e icona, non soltanto per colore.
-\item {[}P-03{]} Il linguaggio deve essere semplice e rassicurante, con conseguenze e conferme esplicite.
-\item {[}U1-01{]} Il percorso per una visita ricorrente deve conservare il contesto e ridurre i passaggi senza decidere al posto dell'utente.
-\item {[}U1-02{]} Prima dell'abbandono, un errore deve indicare causa, recupero e modalità di richiesta d'aiuto.
+\item {[}P-01{]} (da ID-01, ID-05; REQ-01, REQ-04) L'autenticazione deve ridurre il carico di memoria e offrire recupero guidato; per attività solo consultive va evitata un'autenticazione ripetuta non necessaria.
+\item {[}P-02{]} (da ID-03; REQ-03) Azioni e bersagli devono essere grandi, distinti per forma, testo e icona, non soltanto per colore.
+\item {[}P-03{]} (da ID-04, ID-08; REQ-03, REQ-04) Il linguaggio deve essere semplice e rassicurante, con conseguenze e conferme esplicite.
+\item {[}U1-01{]} (da ID-05, ID-08; REQ-04) Il percorso per una visita ricorrente deve conservare il contesto e ridurre i passaggi senza decidere al posto dell'utente.
+\item {[}U1-02{]} (da ID-08; REQ-04) Prima dell'abbandono, un errore deve indicare causa, recupero e modalità di richiesta d'aiuto.
 \end{itemize}
 
 \cardsection{Documento 02b: Persona and Use Case card: personaggio secondario}
 
-\personaphoto{Elena Ferretti}
+\begin{personacard}{Elena Ferretti --- Personaggio Secondario}
 
-\fieldheading{Identità, ruolo e segmento}
+\noindent
+\begin{minipage}[t]{0.28\linewidth}
+  \centering
+  \vspace{0pt}
+  \setlength{\fboxsep}{1.5pt}%
+  \setlength{\fboxrule}{0.6pt}%
+  \fcolorbox{rulecolor}{white}{\includegraphics[width=\linewidth,height=3.6cm,keepaspectratio]{assets/phase-b-persona-elena.jpeg}}\\[2mm]
+  \tcbox[on line, colback=headingcolor, colframe=headingcolor, coltext=white,
+         boxrule=0pt, arc=2.5pt, left=2.5pt, right=2.5pt, top=1.5pt, bottom=1.5pt,
+         fontupper=\tiny\bfseries]{CAREGIVER A DISTANZA}\\[1mm]
+  {\scriptsize\bfseries\color{gray!70!black} Segmento B $\cdot$ Intermediaria}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.69\linewidth}
+  \vspace{0pt}
+  {\Large\bfseries\color{headingcolor} Elena Ferretti}\\[0.5mm]
+  {\small\color{gray!75!black} Caregiver familiare sempre reperibile a distanza}\\[1.5mm]
+  {\color{rulecolor}\hrule height 0.6pt}\vspace{1.5mm}
 
-\begin{longtable}{@{}p{0.25\linewidth}p{0.69\linewidth}@{}}
-\toprule
-Nome e livello & Elena Ferretti --- personaggio secondario, caregiver di Pina \\
-Segmento & Segmento B: caregiver familiare sempre reperibile a distanza, intermediaria \\
-Profilo & 52 anni, responsabile paghe in una cooperativa, vive a Bologna con il compagno e un figlio universitario; coordina a distanza l'assistenza alla madre a Ravenna \\
-Dispositivi & PC e smartphone usati quotidianamente; elevata familiarità con servizi digitali \\
-Vincoli & Poco tempo, interruzioni, carico emotivo e rischio di confondere profili o prenotazioni \\
-\bottomrule
-\end{longtable}
+  \begin{tabular}{@{}p{0.22\linewidth}p{0.74\linewidth}@{}}
+    \textbf{Profilo:} & 52 anni, responsabile paghe in cooperativa, vive a Bologna con compagno e figlio; coordina l'assistenza alla madre a Ravenna. \\
+    \textbf{Dispositivi:} & PC e smartphone quotidiani; elevata familiarità con servizi digitali. \\
+    \textbf{Vincoli:} & Poco tempo, interruzioni continue, carico emotivo e rischio di confondere profili.
+  \end{tabular}
 
-\begin{quote}
-\emph{``Se la guido al telefono per dieci minuti, poi non so se l'ho aiutata o se ho fatto tutto io.''}
-
-\small Citazione sintetica: ipotesi narrativa da sostituire o corroborare con
-evidenze anonime delle interviste.
-\end{quote}
-
-\evidencestatus{Profilo provvisorio derivato dal Segmento B e dalle domande
-B1--B6. La relazione con Pina esplicita il rapporto HPHP, ma frequenza e peso
-dell'assistenza devono essere validati.}
+  \vspace{2mm}
+  \begin{tcolorbox}[colback=headingcolor!5, colframe=headingcolor!25, boxrule=0.5pt,
+                   arc=2.5pt, left=8pt, right=8pt, top=3.5pt, bottom=3.5pt]
+    \small\itshape\color{headingcolor!95}
+    ``Se la guido al telefono per dieci minuti, poi non so se l'ho aiutata o se ho fatto tutto io.''
+  \end{tcolorbox}
+\end{minipage}
 
 \fieldheading{Comportamenti, esperienza e rete di aiuto}
 
-Elena contrassegna gli appuntamenti della madre con un'etichetta rossa nel
-proprio calendario digitale e conserva in una nota protetta numeri utili e
-domande da rivolgere al medico, ma rifiuta di ricevere password in chat.
-Gestisce prenotazioni e disdette da remoto, spesso tra l'elaborazione delle
-buste paga e una riunione. Conosce CUPweb ed ER Salute, ma deve ricostruire
-dati, credenziali e intenzione della madre a ogni richiesta. Accetta la delega
-solo se vede chiaramente per chi sta agendo, che cosa cambierà e se Pina sarà
-informata. Il suo obiettivo è ridurre le emergenze senza perdere la possibilità
-di intervenire nei casi complessi; teme errori sul profilo sbagliato, notifiche
-insufficienti e che l'efficienza trasformi l'aiuto in controllo permanente.
+Elena contrassegna gli appuntamenti della madre con un'etichetta rossa nel proprio calendario digitale e conserva in una nota protetta numeri utili e domande per il medico, rifiutando password in chat. Gestisce prenotazioni e disdette da remoto, spesso tra buste paga e riunioni. Conosce CUPweb ed ER Salute, ma deve ricostruire dati e credenziali a ogni richiesta. Accetta la delega solo se è chiaro per chi sta agendo e se Pina sarà informata; teme errori di profilo, notifiche carenti e che l'efficienza trasformi l'aiuto in controllo permanente.
 
 \fieldheading{Competenze e abilità (C\&A)}
 
-\includegraphics[width=0.88\linewidth]{assets/phase-b-persona-elena-skills.png}
+\noindent
+\begin{minipage}[c]{0.42\linewidth}
+  \centering
+  \includegraphics[width=\linewidth,height=4.4cm,keepaspectratio]{assets/phase-b-persona-elena-skills.png}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.56\linewidth}
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabular}{@{}lcp{0.60\linewidth}@{}}
+  \toprule
+  \textbf{Dimensione} & \textbf{P.} & \textbf{Sintesi della motivazione} \\
+  \midrule
+  Tecnica & 5 & Usa quotidianamente PC, smartphone e servizi autenticati. \\
+  Dominio & 3 & Esperienza pratica; deve verificare prescrizioni e regimi. \\
+  Linguistica & 5 & Legge e comprende rapidamente il testo amministrativo. \\
+  Fisica e visiva & 5 & Nessuna limitazione rilevante per il compito digitale. \\
+  Motivazione & 4 & Motivata a proteggere Pina e ridurre le emergenze. \\
+  Concentrazione & 3 & Richieste frammentate da carichi di lavoro e familiari. \\
+  \bottomrule
+  \end{tabular}
+\end{minipage}
 
-\begin{longtable}{@{}p{0.24\linewidth}p{0.10\linewidth}p{0.59\linewidth}@{}}
-\toprule
-\textbf{Dimensione} & \textbf{1--5} & \textbf{Motivazione del punteggio} \\
-\midrule
-Tecnica & 5 & Usa quotidianamente PC, smartphone e servizi autenticati. \\
-Dominio & 3 & Ha esperienza pratica, ma deve ricostruire prescrizioni e regimi. \\
-Linguistica & 5 & Legge rapidamente anche testi amministrativi. \\
-Fisica e visiva & 5 & Non emergono limitazioni rilevanti per il compito. \\
-Motivazione & 4 & È motivata a proteggere Pina e a ridurre le interruzioni. \\
-Concentrazione & 3 & Le richieste arrivano mentre lavora o gestisce la famiglia. \\
-\bottomrule
-\end{longtable}
+\end{personacard}
+
+\clearpage
 
 \fieldheading{Scenario: la disdetta urgente dall'ufficio}
 
@@ -197,70 +244,79 @@ velocità spinga Elena a sostituirsi stabilmente a Pina.
 \fieldheading{Implicazioni di design}
 
 \begin{itemize}
-\item {[}P-04{]} Il caregiver deve avere una visibilità chiara e proporzionata sulle prenotazioni autorizzate del familiare, con identità sempre evidente.
-\item {[}P-05{]} La delega deve essere progressiva: Pina conserva le azioni semplici, Elena interviene nei casi complessi senza sorveglianza continua.
-\item {[}U2-01{]} La disdetta deve richiedere pochi passaggi, distinguere appuntamenti simili e rendere esplicite le conseguenze.
-\item {[}U2-02{]} Lo stato aggiornato e notifiche concordate devono ridurre telefonate di verifica e interventi d'emergenza.
+\item {[}P-04{]} (da ID-09, ID-10; REQ-06, REQ-07) Il caregiver deve avere una visibilità chiara e proporzionata sulle prenotazioni autorizzate del familiare, con identità sempre evidente.
+\item {[}P-05{]} (da REQ-06) La delega deve essere progressiva: Pina conserva le azioni semplici, Elena interviene nei casi complessi senza sorveglianza continua.
+\item {[}U2-01{]} (da ID-08; REQ-04) La disdetta deve richiedere pochi passaggi, distinguere appuntamenti simili e rendere esplicite le conseguenze.
+\item {[}U2-02{]} (da ID-09; REQ-07) Lo stato aggiornato e notifiche concordate devono ridurre telefonate di verifica e interventi d'emergenza.
 \end{itemize}
 
 \cardsection{Documento 02c: Persona and Use Case card: personaggio aggiuntivo}
 
-\personaphoto{Renato Bellini}
+\begin{personacard}{Renato Bellini --- Personaggio Aggiuntivo}
 
-\fieldheading{Identità, ruolo e segmento}
+\noindent
+\begin{minipage}[t]{0.28\linewidth}
+  \centering
+  \vspace{0pt}
+  \setlength{\fboxsep}{1.5pt}%
+  \setlength{\fboxrule}{0.6pt}%
+  \fcolorbox{rulecolor}{white}{\includegraphics[width=\linewidth,height=3.6cm,keepaspectratio]{assets/phase-b-persona-renato.jpeg}}\\[2mm]
+  \tcbox[on line, colback=headingcolor, colframe=headingcolor, coltext=white,
+         boxrule=0pt, arc=2.5pt, left=4pt, right=4pt, top=1.5pt, bottom=1.5pt,
+         fontupper=\scriptsize\bfseries]{CONTROLLO}\\[1mm]
+  {\scriptsize\bfseries\color{gray!70!black} Segmento A $\cdot$ Utente diretto}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.69\linewidth}
+  \vspace{0pt}
+  {\Large\bfseries\color{headingcolor} Renato Bellini}\\[0.5mm]
+  {\small\color{gray!75!black} ``Nuovo utente digitale'' 65--74, moderatamente autonomo}\\[1.5mm]
+  {\color{rulecolor}\hrule height 0.6pt}\vspace{1.5mm}
 
-\begin{longtable}{@{}p{0.25\linewidth}p{0.69\linewidth}@{}}
-\toprule
-Nome e livello & Renato Bellini --- personaggio aggiuntivo di livello inferiore \\
-Segmento & Segmento A: ``nuovo utente digitale'' 65--74, utente diretto moderatamente autonomo \\
-Profilo & 70 anni, pensionato (ex assistente di biblioteca), vive a Forlì con la moglie Paola; due mattine a settimana cataloga fotografie per l'archivio storico di quartiere e il figlio adulto abita nelle vicinanze \\
-Dispositivi & Tablet e smartphone; messaggistica, e-mail e SPID usato occasionalmente \\
-Vincoli & Affaticamento visivo, rigidità delle mani, esitazione davanti a terminologia sanitaria o amministrativa ambigua \\
-\bottomrule
-\end{longtable}
+  \begin{tabular}{@{}p{0.22\linewidth}p{0.74\linewidth}@{}}
+    \textbf{Profilo:} & 70 anni, pensionato (ex bibliotecario), vive a Forlì con la moglie Paola; cataloga foto per l'archivio storico; figlio adulto vicino. \\
+    \textbf{Dispositivi:} & Tablet e smartphone; messaggistica, e-mail e SPID usato saltuariamente. \\
+    \textbf{Vincoli:} & Vista affaticata, rigidità articolare alle mani, esitazione su acronimi sanitari.
+  \end{tabular}
 
-\begin{quote}
-\emph{``Non mi serve che mi dicano che è facile: mi serve capire costo e conseguenze prima di confermare.''}
-
-\small Citazione sintetica: ipotesi narrativa da sostituire o corroborare con
-evidenze anonime delle interviste.
-\end{quote}
-
-\evidencestatus{Persona provvisoria costruita dal Segmento A e dalle domande
-A1--A6. Serve come controllo del progetto, non come risultato già validato:
-biografia, comportamenti, scenario e punteggi potranno cambiare dopo le
-interviste.}
+  \vspace{2mm}
+  \begin{tcolorbox}[colback=headingcolor!5, colframe=headingcolor!25, boxrule=0.5pt,
+                   arc=2.5pt, left=8pt, right=8pt, top=3.5pt, bottom=3.5pt]
+    \small\itshape\color{headingcolor!95}
+    ``Non mi serve che mi dicano che è facile: mi serve capire costo e conseguenze prima di confermare.''
+  \end{tcolorbox}
+\end{minipage}
 
 \fieldheading{Comportamenti, esperienza e rete di aiuto}
 
-Renato usa il tablet seduto al tavolo della cucina, annota su un quaderno i
-passaggi non familiari e stampa o salva in PDF le conferme da mettere nella
-bacheca condivisa con Paola. Prenota in autonomia quando riconosce il tipo di
-prestazione e il regime; in alternativa telefona o chiede al figlio di
-verificare, non di operare al suo posto. Ha già usato SPID e provato
-CUPweb/ER Salute, ma si ferma davanti a etichette come ``SSN'', ``libera
-professione'' o costi non immediatamente visibili. Teme una conferma onerosa o
-nella sede sbagliata. Si sente autonomo se può leggere con calma, tornare
-indietro senza perdere le scelte e verificare un riepilogo prima dell'invio.
-Descrive il proprio rapporto con il digitale come positivo, purché il servizio
-non lo tratti da inesperto.
+Renato usa il tablet sul tavolo della cucina, annota i passaggi su un quaderno e stampa o salva in PDF le conferme per la bacheca familiare. Prenota da solo se riconosce prestazione e regime; altrimenti telefona o chiede al figlio una verifica mirata, senza cedere l'azione. Ha provato CUPweb ed ER Salute, ma esita davanti a sigle come SSN o costi non immediati. Si sente autonomo se può procedere con calma, rileggere il riepilogo e tornare indietro senza perdere i dati inseriti, rifiutando un'interfaccia paternalistica.
 
 \fieldheading{Competenze e abilità (C\&A)}
 
-\includegraphics[width=0.88\linewidth]{assets/phase-b-persona-renato-skills.png}
+\noindent
+\begin{minipage}[c]{0.42\linewidth}
+  \centering
+  \includegraphics[width=\linewidth,height=4.4cm,keepaspectratio]{assets/phase-b-persona-renato-skills.png}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.56\linewidth}
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabular}{@{}lcp{0.60\linewidth}@{}}
+  \toprule
+  \textbf{Dimensione} & \textbf{P.} & \textbf{Sintesi della motivazione} \\
+  \midrule
+  Tecnica & 3 & Usa servizi comuni e SPID; non automatizza novità. \\
+  Dominio & 3 & Conosce il percorso di cura; esita su regimi e costi. \\
+  Linguistica & 5 & Ottima comprensione; terminologia ambigua è il limite. \\
+  Fisica e visiva & 3 & Vista e rigidità richiedono testo e comandi ampi. \\
+  Motivazione & 4 & Preferisce operare da solo; aiuto solo come controllo. \\
+  Concentrazione & 4 & Segue il flusso con pause; non deve perdere scelte. \\
+  \bottomrule
+  \end{tabular}
+\end{minipage}
 
-\begin{longtable}{@{}p{0.24\linewidth}p{0.10\linewidth}p{0.59\linewidth}@{}}
-\toprule
-\textbf{Dimensione} & \textbf{1--5} & \textbf{Motivazione del punteggio} \\
-\midrule
-Tecnica & 3 & Usa servizi comuni e SPID, ma non automatizza procedure nuove. \\
-Dominio & 3 & Conosce il percorso sanitario, non sempre regimi e conseguenze. \\
-Linguistica & 5 & Legge e comprende bene; l'ambiguità terminologica è il limite. \\
-Fisica e visiva & 3 & Affaticamento e rigidità richiedono buona leggibilità e bersagli ampi. \\
-Motivazione & 4 & Preferisce operare da solo e considera l'aiuto una verifica mirata. \\
-Concentrazione & 4 & Riesce a seguire il flusso se può fermarsi e riprendere senza perdere dati. \\
-\bottomrule
-\end{longtable}
+\end{personacard}
+
+\clearpage
 
 \fieldheading{Scenario: il controllo oculistico senza chiamare il figlio}
 
@@ -278,74 +334,83 @@ servizio paternalistico.
 \fieldheading{Implicazioni di design}
 
 \begin{itemize}
-\item {[}P-06{]} Le spiegazioni devono essere progressive e facoltative: disponibili nel punto di dubbio, senza rallentare chi ha già compreso.
-\item {[}P-07{]} Testo, spaziatura e bersagli devono restare leggibili e azionabili anche con affaticamento visivo e precisione ridotta.
-\item {[}P-08{]} Regime, costo e conseguenze devono essere visibili in linguaggio rispettoso, senza semplificazioni paternalistiche.
-\item {[}U3-01{]} Consultare una spiegazione, tornare indietro o chiedere aiuto non deve cancellare le scelte già effettuate.
-\item {[}U3-02{]} Prima della conferma, un riepilogo deve mostrare prestazione, sede, data, regime e costo.
+\item {[}P-06{]} (da ID-04; REQ-03) Le spiegazioni devono essere progressive e facoltative: disponibili nel punto di dubbio, senza rallentare chi ha già compreso.
+\item {[}P-07{]} (da ID-03; REQ-03) Testo, spaziatura e bersagli devono restare leggibili e azionabili anche con affaticamento visivo e precisione ridotta.
+\item {[}P-08{]} (da ID-04; REQ-03) Regime, costo e conseguenze devono essere visibili in linguaggio rispettoso, senza semplificazioni paternalistiche.
+\item {[}U3-01{]} (da ID-08, ID-11; REQ-04, REQ-08) Consultare una spiegazione, tornare indietro o chiedere aiuto non deve cancellare le scelte già effettuate.
+\item {[}U3-02{]} (da ID-08; REQ-04, REQ-07) Prima della conferma, un riepilogo deve mostrare prestazione, sede, data, regime e costo.
 \end{itemize}
 
 \cardsection{Documento 02d: Persona and Use Case card: personaggio secondario}
 
-\personaphoto{Amina Rahman}
+\begin{personacard}{Amina Rahman --- Personaggio Secondario}
 
-\fieldheading{Identità, ruolo e segmento}
+\noindent
+\begin{minipage}[t]{0.28\linewidth}
+  \centering
+  \vspace{0pt}
+  \setlength{\fboxsep}{1.5pt}%
+  \setlength{\fboxrule}{0.6pt}%
+  \fcolorbox{rulecolor}{white}{\includegraphics[width=\linewidth,height=3.6cm,keepaspectratio]{assets/phase-b-persona-amina.jpeg}}\\[2mm]
+  \tcbox[on line, colback=headingcolor, colframe=headingcolor, coltext=white,
+         boxrule=0pt, arc=2.5pt, left=1.5pt, right=1.5pt, top=1.5pt, bottom=1.5pt,
+         fontupper=\tiny\bfseries]{CAREGIVER CONVIVENTE}\\[1mm]
+  {\scriptsize\bfseries\color{gray!70!black} Segmento B $\cdot$ Intermediaria}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.69\linewidth}
+  \vspace{0pt}
+  {\Large\bfseries\color{headingcolor} Amina Rahman}\\[0.5mm]
+  {\small\color{gray!75!black} Caregiver familiare in presenza, competenza digitale media}\\[1.5mm]
+  {\color{rulecolor}\hrule height 0.6pt}\vspace{1.5mm}
 
-\begin{longtable}{@{}p{0.25\linewidth}p{0.69\linewidth}@{}}
-\toprule
-Nome e livello & Amina Rahman --- personaggio secondario, caregiver convivente \\
-Segmento & Segmento B: caregiver familiare in presenza, intermediaria con competenza digitale media \\
-Profilo & 47 anni, nata a Khulna in Bangladesh e residente a Ravenna dal 2004; lavora part-time in una mensa scolastica e vive con il marito, la figlia sedicenne e la suocera Nasima, 76 anni \\
-Dispositivi & Smartphone Android con interfaccia italiana e tastiere italiana e bengalese; usa ogni giorno WhatsApp, messaggi vocali e foto di documenti, mentre accede a SPID solo occasionalmente \\
-Vincoli & Italiano quotidiano funzionale ma lessico sanitario incerto, turni mattutini, interruzioni domestiche e responsabilità distribuite fra più familiari \\
-\bottomrule
-\end{longtable}
+  \begin{tabular}{@{}p{0.22\linewidth}p{0.74\linewidth}@{}}
+    \textbf{Profilo:} & 47 anni, a Ravenna dal 2004; part-time mensa; vive con marito, figlia e suocera Nasima (76 anni). \\
+    \textbf{Dispositivi:} & Smartphone Android (tastiere IT/bengalese); vocali, WhatsApp e foto; SPID saltuario. \\
+    \textbf{Vincoli:} & Lessico sanitario incerto, turni mattutini, interruzioni e responsabilità distribuite.
+  \end{tabular}
 
-\begin{quote}
-\emph{``Le cose di casa le organizzo io; con certe parole dell'ospedale, però, devo prima capire bene che cosa stanno chiedendo.''}
-
-\small Citazione sintetica: ipotesi narrativa da sostituire o corroborare con
-evidenze anonime delle interviste.
-\end{quote}
-
-\evidencestatus{Profilo provvisorio derivato dal Segmento B e dalle domande
-B1--B6. Origine, composizione familiare, lavoro, abitudini linguistiche e
-frequenza dell'assistenza sono dettagli narrativi plausibili ma non ancora
-confermati empiricamente.}
+  \vspace{2mm}
+  \begin{tcolorbox}[colback=headingcolor!5, colframe=headingcolor!25, boxrule=0.5pt,
+                   arc=2.5pt, left=8pt, right=8pt, top=3.5pt, bottom=3.5pt]
+    \small\itshape\color{headingcolor!95}
+    ``Le cose di casa le organizzo io; con certe parole dell'ospedale, però, devo prima capire bene che cosa stanno chiedendo.''
+  \end{tcolorbox}
+\end{minipage}
 
 \fieldheading{Comportamenti, esperienza e rete di aiuto}
 
-Amina coordina visite, farmaci e trasporti della suocera usando un calendario
-appeso in cucina, sul quale alterna abbreviazioni italiane e bengalesi. Prenota
-di solito dalla farmacia o per telefono; ha provato ER Salute dal proprio
-smartphone, ma si ferma quando deve distinguere ``primo accesso'', ``controllo''
-e classi di priorità. Non ha difficoltà a inviare documenti o seguire una
-sequenza nota: l'ostacolo è capire con precisione il significato amministrativo
-e verificare per chi sta agendo. Prima chiede chiarimenti alla figlia, poi al
-medico o alla farmacia; non vuole delegare tutto perché è lei a conoscere turni,
-trasporti e preferenze di Nasima. Teme di prenotare la prestazione corretta nel
-regime sbagliato o di creare due appuntamenti mentre più familiari si aiutano.
+Amina coordina visite, farmaci e trasporti della suocera usando un calendario in cucina con abbreviazioni bilingui. Prenota da farmacia o telefono; da smartphone esita su classi di priorità e primo accesso/controllo. Non ha difficoltà a inviare documenti o seguire sequenze note: l'ostacolo è il linguaggio amministrativo e verificare per chi sta operando. Chiede chiarimenti alla figlia, poi a medico o farmacia; non delega del tutto per non perdere il controllo su turni e preferenze di Nasima. Teme duplicazioni ed errori di regime.
 
 \fieldheading{Competenze e abilità (C\&A)}
 
-\includegraphics[width=0.88\linewidth]{assets/phase-b-persona-amina-skills.png}
+\noindent
+\begin{minipage}[c]{0.42\linewidth}
+  \centering
+  \includegraphics[width=\linewidth,height=4.4cm,keepaspectratio]{assets/phase-b-persona-amina-skills.png}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.56\linewidth}
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabular}{@{}lcp{0.60\linewidth}@{}}
+  \toprule
+  \textbf{Dimensione} & \textbf{P.} & \textbf{Sintesi della motivazione} \\
+  \midrule
+  Tecnica & 3 & Sicura su smartphone abituale; SPID da verificare. \\
+  Dominio & 3 & Conosce bisogni e routine; no deleghe e burocrazia. \\
+  Linguistica & 2 & Italiano parlato OK; lessico sanitario scritto ostico. \\
+  Fisica e visiva & 5 & Nessuna limitazione fisica o visiva rilevante. \\
+  Motivazione & 5 & Massima dedizione alla suocera e al coordinamento. \\
+  Concentrazione & 2 & Turni, cucina e famiglia frammentano l'attenzione. \\
+  \bottomrule
+  \end{tabular}
+\end{minipage}
 
-\begin{longtable}{@{}p{0.24\linewidth}p{0.10\linewidth}p{0.59\linewidth}@{}}
-\toprule
-\textbf{Dimensione} & \textbf{1--5} & \textbf{Motivazione del punteggio} \\
-\midrule
-Tecnica & 3 & Usa lo smartphone con sicurezza nei compiti abituali, ma SPID e procedure nuove richiedono verifica. \\
-Dominio & 3 & Conosce routine, sedi e bisogni della suocera; non padroneggia classificazioni e deleghe amministrative. \\
-Linguistica & 2 & Comunica bene nella vita quotidiana, ma il lessico sanitario scritto e le sfumature burocratiche producono errori di interpretazione. \\
-Fisica e visiva & 5 & Non emergono limitazioni fisiche o visive rilevanti per il compito. \\
-Motivazione & 5 & Vuole proteggere Nasima e mantenere il coordinamento familiare senza dipendere sempre dalla figlia. \\
-Concentrazione & 2 & Turni, cucina condivisa, telefonate e richieste simultanee frammentano l'attenzione. \\
-\bottomrule
-\end{longtable}
+\vspace{1.5mm}
+{\footnotesize\itshape Profilo di confine su lingua e concentrazione, credibile per far emergere indicazioni non ovvie.}
 
-Il profilo è intenzionalmente di confine su linguaggio e concentrazione, non
-su tutte le dimensioni: resta così credibile e capace di produrre indicazioni
-di design non ovvie, evitando una persona estrema costruita solo per il grafico.
+\end{personacard}
+
+\clearpage
 
 \fieldheading{Scenario: la fisioterapia prima del turno}
 
@@ -364,11 +429,11 @@ perdita del lavoro già svolto e abbandono verso il solo canale telefonico.
 \fieldheading{Implicazioni di design}
 
 \begin{itemize}
-\item {[}P-09{]} I termini sanitari e amministrativi critici devono avere spiegazioni in italiano semplice, esempi concreti e una struttura compatibile con traduzione o mediazione linguistica.
-\item {[}P-10{]} Identità dell'assistito, ruolo di chi opera e stato della delega devono restare visibili, anche quando cognomi e credenziali non coincidono.
-\item {[}P-11{]} Il sistema deve sostenere l'uso intermittente da smartphone, senza presumere attenzione continua o disponibilità di un computer.
-\item {[}U4-01{]} Un'interruzione o una richiesta di chiarimento non deve cancellare dati e scelte già inseriti; alla ripresa deve essere chiaro il punto raggiunto.
-\item {[}U4-02{]} L'esito deve essere condivisibile e distinguere chiaramente prenotazione conclusa, tentativo incompleto e azione ancora richiesta, per evitare duplicazioni familiari.
+\item {[}P-09{]} (da ID-04, ID-12; REQ-03, REQ-09) I termini sanitari e amministrativi critici devono avere spiegazioni in italiano semplice, esempi concreti e una struttura compatibile con traduzione o mediazione linguistica.
+\item {[}P-10{]} (da ID-09, ID-10; REQ-07) Identità dell'assistito, ruolo di chi opera e stato della delega devono restare visibili, anche quando cognomi e credenziali non coincidono.
+\item {[}P-11{]} (da ID-11; REQ-08) Il sistema deve sostenere l'uso intermittente da smartphone, senza presumere attenzione continua o disponibilità di un computer.
+\item {[}U4-01{]} (da ID-11; REQ-08) Un'interruzione o una richiesta di chiarimento non deve cancellare dati e scelte già inseriti; alla ripresa deve essere chiaro il punto raggiunto.
+\item {[}U4-02{]} (da ID-09, ID-12; REQ-07, REQ-09) L'esito deve essere condivisibile e distinguere chiaramente prenotazione conclusa, tentativo incompleto e azione ancora richiesta, per evitare duplicazioni familiari.
 \end{itemize}
 
 \cardsection{Documento 03: Cast card}
@@ -410,24 +475,6 @@ non genererebbe nuove implicazioni. Anche gli scenari di sola consultazione e di
 modifica anagrafica sono rinviati perché meno rappresentativi del problema di
 prenotazione e assistenza emerso in Fase A.
 
-\fieldheading{Matrice persona -- domande di Fase A -- validazione}
-
-\begin{longtable}{@{}p{0.15\linewidth}p{0.31\linewidth}p{0.28\linewidth}p{0.18\linewidth}@{}}
-\toprule
-\textbf{Persona} & \textbf{Elemento} & \textbf{Domanda/evidenza Fase A} & \textbf{Stato} \\
-\midrule
-Pina & Prenotazione attuale, tentativi digitali, aiuto, paure e autonomia & Segmento A, domande A1--A6 & Ipotesi da validare \\
-Pina & Vincoli visivi e motori; punteggi C\&A & Domande A4--A6; osservazione futura & Ipotesi da validare \\
-Elena & Carico, urgenza e gestione da remoto & Segmento B, domande B1--B2 e B6 & Ipotesi da validare \\
-Elena & Delega, fiducia, visibilità e controllo & Domande B3--B5 & Ipotesi da validare \\
-Renato & Canali attuali e tentativi CUPweb/ER Salute & Domande A1--A2 & Ipotesi da validare \\
-Renato & Quando chiede aiuto e che cosa teme & Domande A3--A4 & Ipotesi da validare \\
-Renato & Condizioni di autonomia e rapporto con il digitale & Domande A5--A6 & Ipotesi da validare \\
-Amina & Gestione convivente, carico e interruzioni & Segmento B, domande B1--B2 e B6 & Ipotesi da validare \\
-Amina & Fiducia, delega, coordinamento e comprensione & Domande B3--B5; osservazione futura & Ipotesi da validare \\
-\bottomrule
-\end{longtable}
-
 \fieldheading{Conflitti progettuali}
 
 \begin{itemize}
@@ -441,17 +488,30 @@ Amina & Fiducia, delega, coordinamento e comprensione & Domande B3--B5; osservaz
 
 \fieldheading{Requisiti cumulativi del cast}
 
-\begin{itemize}
-\item {[}C-01{]} (= P-01+P-02+P-03) Il servizio deve essere utilizzabile con competenza tecnica minima, azioni visibili e tono rassicurante.
-\item {[}C-02{]} (= P-04+P-05) Visibilità e delega devono sostenere una supervisione leggera, autorizzata e non sostitutiva.
-\item {[}C-03{]} (= U1-01+U2-01) Prenotazione ricorrente e disdetta devono ridurre passaggi e ambiguità mantenendo il controllo dell'utente.
-\item {[}C-04{]} (= U1-02+U2-02) Errori e cambi di stato devono offrire recupero comprensibile e notifiche concordate.
-\item {[}C-05{]} (= P-03+P-04) Identità, oggetto e conseguenze dell'azione devono essere espliciti per utente diretto e caregiver.
-\item {[}C-06{]} (= P-06+P-08) Spiegazioni progressive devono chiarire termini, regime, costo e conseguenze senza infantilizzare.
-\item {[}C-07{]} (= P-02+P-07) Gerarchia, leggibilità, spaziatura e dimensione dei bersagli devono supportare vincoli visivi e motori.
-\item {[}C-08{]} (= U3-01+U3-02) Il sistema deve conservare le scelte durante consultazione e aiuto, quindi mostrare un riepilogo completo prima della conferma.
-\item {[}C-09{]} (= P-09+P-03) Terminologia e conseguenze devono essere precise ma comprensibili, con spiegazioni progressive adatte anche alla mediazione linguistica.
-\item {[}C-10{]} (= P-10+P-04+P-05) Identità, ruolo, autorizzazione e confini della delega devono restare espliciti per tutte le forme di assistenza.
-\item {[}C-11{]} (= P-11+U4-01) I percorsi da smartphone devono tollerare interruzioni e consentire una ripresa riconoscibile senza perdita di lavoro.
-\item {[}C-12{]} (= U4-02+U2-02) Stati e conferme condivisibili devono coordinare i familiari senza creare duplicazioni o accessi impliciti ai dati.
-\end{itemize}
+\begingroup
+\renewcommand{\arraystretch}{1.35}
+\begin{longtable}{@{}p{0.16\linewidth}p{0.25\linewidth}p{0.53\linewidth}@{}}
+\toprule
+\textbf{Requisito del cast} & \textbf{Requisiti di origine} & \textbf{Descrizione} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Requisito del cast} & \textbf{Requisiti di origine} & \textbf{Descrizione} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+{[}C-01{]} & P-01 + P-02 + P-03 & Il servizio deve essere utilizzabile con competenza tecnica minima, azioni visibili e tono rassicurante. \\[3pt]
+{[}C-02{]} & P-04 + P-05 & Visibilità e delega devono sostenere una supervisione leggera, autorizzata e non sostitutiva. \\[3pt]
+{[}C-03{]} & U1-01 + U2-01 & Prenotazione ricorrente e disdetta devono ridurre passaggi e ambiguità mantenendo il controllo dell'utente. \\[3pt]
+{[}C-04{]} & U1-02 + U2-02 & Errori e cambi di stato devono offrire recupero comprensibile e notifiche concordate. \\[3pt]
+{[}C-05{]} & P-03 + P-04 & Identità, oggetto e conseguenze dell'azione devono essere espliciti per utente diretto e caregiver. \\[3pt]
+{[}C-06{]} & P-06 + P-08 & Spiegazioni progressive devono chiarire termini, regime, costo e conseguenze senza infantilizzare. \\[3pt]
+{[}C-07{]} & P-02 + P-07 & Gerarchia, leggibilità, spaziatura e dimensione dei bersagli devono supportare vincoli visivi e motori. \\[3pt]
+{[}C-08{]} & U3-01 + U3-02 & Il sistema deve conservare le scelte durante consultazione e aiuto, quindi mostrare un riepilogo completo prima della conferma. \\[3pt]
+{[}C-09{]} & P-09 + P-03 & Terminologia e conseguenze devono essere precise ma comprensibili, con spiegazioni progressive adatte anche alla mediazione linguistica. \\[3pt]
+{[}C-10{]} & P-10 + P-04 + P-05 & Identità, ruolo, autorizzazione e confini della delega devono restare espliciti per tutte le forme di assistenza. \\[3pt]
+{[}C-11{]} & P-11 + U4-01 & I percorsi da smartphone devono tollerare interruzioni e consentire una ripresa riconoscibile senza perdita di lavoro. \\[3pt]
+{[}C-12{]} & U4-02 + U2-02 & Stati e conferme condivisibili devono coordinare i familiari senza creare duplicazioni o accessi impliciti ai dati. \\
+\end{longtable}
+\endgroup
