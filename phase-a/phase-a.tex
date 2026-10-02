@@ -65,8 +65,8 @@ Corso di studi & Informatica Magistrale, Curriculum C \\
 
 Regione Emilia-Romagna, Assessorato alle Politiche per la Salute, in
 collaborazione con CUP 2000 S.c.p.A., società in-house che gestisce
-tecnicamente i sistemi regionali di prenotazione sanitaria (CUPweb, app
-ER Salute, Fascicolo Sanitario Elettronico) per conto delle Aziende USL
+tecnicamente i sistemi regionali di prenotazione sanitaria (CUPweb,
+Fascicolo Sanitario Elettronico) per conto delle Aziende USL
 e Ospedaliere del territorio.
 
 \fieldheading{Descrizione del cliente}
@@ -76,8 +76,8 @@ l\textquotesingle Emilia-Romagna attraverso le Aziende Sanitarie locali
 (AUSL Bologna, AUSL Romagna, AUSL Modena, AUSL Parma, AUSL Reggio
 Emilia, AUSL Ferrara e le Aziende Ospedaliero-Universitarie). Il cliente
 ha già una presenza digitale matura e consolidata: gestisce il Fascicolo
-Sanitario Elettronico regionale, il portale di prenotazione CUPweb,
-l\textquotesingle app mobile ER Salute, un centro telefonico regionale (800
+Sanitario Elettronico regionale, la piattaforma web di prenotazione CUPweb
+(fruibile sia da browser PC che da browser smartphone), un centro telefonico regionale (800
 numbers per singola AUSL) e una rete di sportelli fisici e farmacie
 convenzionate (FarmaCUP). Non lavoriamo direttamente per la Regione: la
 nostra società di consulenza UX è stata incaricata da un system
@@ -87,17 +87,17 @@ study per un possibile incarico più ampio.
 
 \fieldheading{Nome del tool}
 
-CUPweb (portale web, www.cupweb.it) e app mobile ER Salute, sistema
+CUPweb (web application fruibile da browser PC e smartphone, www.cupweb.it), sistema
 regionale di prenotazione online delle prestazioni sanitarie
 specialistiche (visite ed esami) della Regione Emilia-Romagna
 \cite{rerPrenotare}.
 
 \fieldheading{Come accedere al tool}
 
-Via browser su www.cupweb.it, tramite SPID, CIE o credenziali FSE/CUPweb
-rilasciate agli sportelli; oppure tramite l\textquotesingle app ER
-Salute (iOS/Android), che consente di prenotare/disdire visite per sé
-stessi e per i familiari associati (minori o persone tutelate).
+Via browser web all\textquotesingle indirizzo www.cupweb.it (da personal computer,
+notebook o da smartphone), tramite credenziali SPID, CIE o credenziali regionali
+CUPweb/FSE; consente di prenotare, disdire o modificare visite ed esami per sé
+stessi e per i familiari o assistiti delegati.
 
 \fieldheading{Perché il cliente dovrebbe voler finanziare un nuovo tool?}
 
@@ -155,7 +155,7 @@ dalla popolazione anziana.
   Riduzione del tasso di abbandono durante il flusso di prenotazione
 \item
   Riduzione delle chiamate al centro telefonico motivate da difficoltà di
-  utilizzo del portale/app
+  utilizzo della web application (sia da desktop che da smartphone)
 \end{itemize}
 
 \cardsection{Documento 03: User Segmentation card}
@@ -183,7 +183,7 @@ Il progetto HPHP richiede di considerare due audience distinte ma
 interdipendenti: l\textquotesingle utente diretto (che deve usare il
 servizio ma non è ancora un utente attivo, ed è scettico/impaurito) e
 l\textquotesingle intermediario (che oggi lo sostituisce integralmente).
-Per CUPweb/ER Salute, l\textquotesingle utente diretto naturale è il
+Per CUPweb, l\textquotesingle utente diretto naturale è il
 paziente anziano cronico, che deve prenotare ricorrentemente visite ed
 esami; l\textquotesingle intermediario naturale è il caregiver
 familiare, che già oggi gestisce gran parte delle pratiche sanitarie del
@@ -371,11 +371,12 @@ Pina prenota di norma partendo dall\textquotesingle impegnativa
 cartacea conservata in una busta, che incrocia con un calendario
 tenuto vicino al telefono; per le pratiche più semplici si rivolge alla
 farmacia, altrimenti telefona al CUP o chiede alla figlia, soprattutto
-per le visite ricorrenti. Ha provato una volta l\textquotesingle app ER
-Salute su indicazione della figlia: si è bloccata già
+per le visite ricorrenti. Ha provato una volta ad accedere a CUPweb
+dal browser dello smartphone su indicazione della figlia: si è bloccata già
 sull\textquotesingle autenticazione SPID, di cui non ricorda con
-sicurezza le credenziali, e successivamente su un messaggio di errore
-che non ha saputo interpretare, scegliendo di chiudere l\textquotesingle app
+sicurezza le credenziali, e successivamente su un layout con caratteri minuscoli
+non ottimizzato per schermi piccoli e su un messaggio di errore
+che non ha saputo interpretare, scegliendo di chiudere la scheda del browser
 e telefonare alla figlia piuttosto che proseguire per timore di
 "fare un pasticcio". Descrive la paura di confermare un\textquotesingle azione
 sbagliata (sede o data errata) senza sapere come tornare indietro come
@@ -444,7 +445,7 @@ criticità già emerse nell\textquotesingle assessment (Documento 05a).}
 \item
   \emph{[Esterno]} Il paziente decide come procedere: chiamare il
   centro prenotazioni telefonico, chiedere aiuto a un familiare, o
-  provare da solo con CUPweb/app ER Salute.
+  provare da solo con CUPweb da browser (PC o smartphone).
 \item
   \emph{[Esterno, via telefonica]} Se sceglie il telefono, attende in
   coda e ripete a voce dati anagrafici e codice fiscale
@@ -454,7 +455,7 @@ criticità già emerse nell\textquotesingle assessment (Documento 05a).}
   caregiver esegue la prenotazione, spesso senza comprendere i passaggi
   seguiti.
 \item
-  \emph{[Interno, se prova da solo]} Accede a CUPweb/app ER Salute e
+  \emph{[Interno, se prova da solo]} Accede a CUPweb (da browser PC o smartphone) e
   deve superare l\textquotesingle autenticazione SPID/CIE, il passo più
   critico e più spesso causa di abbandono (cfr. {[}ID-01{]}).
 \item
@@ -467,7 +468,7 @@ criticità già emerse nell\textquotesingle assessment (Documento 05a).}
   o a richiamare il familiare.
 \item
   \emph{[Interno]} Conferma la prenotazione e riceve un promemoria
-  (SMS o notifica app).
+  (SMS o email di conferma).
 \item
   \emph{[Esterno]} Annota l\textquotesingle appuntamento su un
   calendario cartaceo o lo comunica a voce a un familiare per non
@@ -483,7 +484,7 @@ criticità già emerse nell\textquotesingle assessment (Documento 05a).}
 \begin{itemize}
 \item
   I dati quantitativi provengono da statistiche nazionali ISTAT e non
-  da rilevazioni specifiche sugli utenti di CUPweb/ER Salute:
+  da rilevazioni specifiche sugli utenti di CUPweb:
   l\textquotesingle estrapolazione al contesto regionale e al servizio
   sanitario specifico è un\textquotesingle inferenza, non un dato
   diretto.
@@ -505,7 +506,7 @@ criticità già emerse nell\textquotesingle assessment (Documento 05a).}
   le proprie difficoltà per non apparire in imbarazzo.
 \item
   Le interviste sono retrospettive (il soggetto racconta un tentativo
-  passato di uso di ER Salute/CUPweb) e non osservazioni dirette
+  passato di uso di CUPweb da browser) e non osservazioni dirette
   dell\textquotesingle interazione in tempo reale: i dettagli riportati
   (es. il punto esatto in cui compare l\textquotesingle errore) potrebbero
   risentire di imprecisioni di memoria.
@@ -711,7 +712,7 @@ strumento.}
   (lavoro, impegni familiari) per dedicare tempo alla pratica, spesso in
   una finestra ridotta (es. pausa pranzo).
 \item
-  \emph{[Interno]} Accede a CUPweb/app ER Salute con le proprie
+  \emph{[Interno]} Accede a CUPweb (da browser PC dall\textquotesingle ufficio o da browser smartphone in mobilità) con le proprie
   credenziali, associate al profilo del genitore.
 \item
   \emph{[Interno]} Individua l\textquotesingle anagrafica corretta tra
@@ -798,13 +799,15 @@ dati sanitari sottostanti a chi riceve solo una conferma (Amina).
 
 \fieldheading{Nome del tool}
 
-CUPweb (portale, www.cupweb.it) e app mobile ER Salute, Regione
+CUPweb (web application, www.cupweb.it), Regione
 Emilia-Romagna.
 
 \fieldheading{Piattaforme}
 
-Sito web responsive-limitato (desktop e browser mobile); app nativa
-Android e iOS (una versione Windows Phone risulta dismessa).
+Web Application fruibile tramite browser web da personal computer
+(desktop) e da dispositivi mobili (smartphone/tablet). L\textquotesingle attuale
+implementazione presenta una responsività fortemente limitata su schermi
+piccoli (layout desktop miniaturizzato non ottimizzato per touch screen).
 
 \fieldheading{Scopo principale, operazioni consentite e adeguatezza percepita
 agli standard professionali}
@@ -847,8 +850,8 @@ fascicolo-sanitario.it, support.fascicolo-sanitario.it).
 \item
   Autenticazione obbligatoria complessa (SPID livello 2/CIE) anche solo
   per prenotare, con re-autenticazioni periodiche forzate che gli utenti
-  reali segnalano come fonte di frustrazione ricorrente nelle recensioni
-  pubbliche dell\textquotesingle app
+  reali segnalano come fonte di frustrazione ricorrente nei tentativi di
+  accesso da dispositivi mobili
 \item
   Servizi distribuiti su più domini/sottodomini esterni tra loro
   visivamente scollegati, un pattern che in un utente anziano diffidente
@@ -867,10 +870,10 @@ fascicolo-sanitario.it, support.fascicolo-sanitario.it).
   richiede sempre SPID/CIE/CNS, il che costringe da subito
   l\textquotesingle utente meno esperto ad affrontare la parte più
   complessa del flusso (identità digitale) prima ancora di capire il
-  valore del servizio (verificato su screenshot datati della home page
-  CUPweb e della home page dell\textquotesingle app ER Salute in stato
-  non autenticato, riportati di seguito, che mostrano come unica
-  azione disponibile "Paga una prestazione")
+  valore del servizio (verificato su screenshot della home page
+  CUPweb da desktop e della schermata di accesso da browser smartphone,
+  riportati di seguito, che mostrano come unica azione disponibile senza SPID
+  "Paga una prestazione" e confermano la mancata ottimizzazione responsive)
 \end{itemize}
 
 \begin{center}
@@ -878,7 +881,7 @@ fascicolo-sanitario.it, support.fascicolo-sanitario.it).
 \end{center}
 
 \begin{center}
-\includegraphics[width=0.6\linewidth]{materiali-di-ricerca/screenshot-cupweb-miodottore/er-salute-app-home-non-autenticato.png}
+\includegraphics[width=0.45\linewidth]{materiali-di-ricerca/screenshot-cupweb-miodottore/cupweb-accedi-sp.png}
 \end{center}
 
 \fieldheading{First Impressions: Direct Analysis}
@@ -992,17 +995,17 @@ anziano).}
   Professione" al momento della scelta, pur essendo un bivio obbligato
   del flusso
 \item
-  Recensioni reali dell\textquotesingle app ER Salute segnalano che la
-  cronologia dei documenti/appuntamenti non è ordinabile o ricercabile
-  per data, costringendo a scorrimenti lunghi, un problema di
-  efficienza soprattutto per un utente con minore dimestichezza con lo
-  scroll touch
+  Segnalazioni e riscontri di utenti reali sull\textquotesingle uso di CUPweb da
+  dispositivi mobili evidenziano come la consultazione delle prenotazioni attive
+  e la ricerca nello storico risultino difficoltose su schermi ridotti: le tabelle
+  non sono responsive e l\textquotesingle elenco non è agevolmente ordinabile o filtrabile,
+  costringendo a continui zoom e scorrimenti orizzontali, un problema critico
+  soprattutto per utenti con minore destrezza digitale
 \item
-  Il cambio dell\textquotesingle obbligo di autenticazione (introduzione
-  dell\textquotesingle obbligo SPID dove prima bastava il riconoscimento
-  biometrico) è stato vissuto da utenti reali come un peggioramento
-  improvviso e non comunicato in modo comprensibile, minando la fiducia
-  già costruita
+  L\textquotesingle introduzione dell\textquotesingle obbligo esclusivo di autenticazione
+  SPID/CIE al posto di credenziali più semplici o sessioni prolungate è stato
+  vissuto da utenti reali come una barriera improvvisa, minando la fiducia e
+  l\textquotesingle autonomia d\textquotesingle uso soprattutto da smartphone
 \end{itemize}
 
 \cardsection{Documento 05b: Assessment of Existing Resource card: competitor tool}
@@ -1054,7 +1057,7 @@ recensioni a stelle, iconografia chiara).
   È stato scelto come termine di paragone perché, pur avendo uno scopo
   diverso (mercato privato vs. sanità pubblica), rappresenta un
   benchmark di riferimento per gli standard di semplicità che un utente
-  anziano o il suo caregiver oggi si aspettano da un\textquotesingle app
+  anziano o il suo caregiver oggi si aspettano da un moderno servizio
   di prenotazione sanitaria, avendola probabilmente già vista usare da
   altri familiari
 \end{itemize}
@@ -1306,18 +1309,17 @@ numero dei partecipanti effettivi.
 
 \cardsection{Documento 06a: Preliminary User Testing card: tool del cliente}
 
-\emph{Questo test riguarda CUPweb / app ER Salute, lo strumento da
+\emph{Questo test riguarda la web application CUPweb (testata sia da browser PC che da browser smartphone), lo strumento da
 ridisegnare.}
 
 \fieldheading{Nome del tool}
 
-CUPweb (portale) / app ER Salute
+CUPweb (web application www.cupweb.it, testata su browser PC e smartphone)
 
 \fieldheading{Test Protocol}
 
 \textbf{Script di apertura} (letto al soggetto): "Grazie per il tuo
-tempo. Ti chiederò di provare a fare alcune cose su CUPweb/app ER
-Salute mentre osservo come le fai. Non sto valutando te, ma lo
+tempo. Ti chiederò di provare a fare alcune cose su CUPweb mentre osservo come le fai. Non sto valutando te, ma lo
 strumento: se qualcosa non è chiaro, è un problema dello strumento,
 non tuo. Prova a dire ad alta voce cosa stai pensando o cercando
 mentre lo fai, quando te lo chiederò esplicitamente. Puoi fermarti
@@ -1372,7 +1374,7 @@ assistente/osservatore, un secondo prende appunti.
 
 \begin{itemize}
 \item
-  T1: Accedere al portale/app e individuare come prenotare una visita
+  T1: Accedere a CUPweb dal browser e individuare come prenotare una visita
   specialistica (senza completare la prenotazione)
 \item
   T2: Disdire un appuntamento fittizio già presente
@@ -1516,10 +1518,10 @@ verificare una scelta senza perdere il lavoro già svolto.
 \textbf{Osservatore:} Francesco Maria Fuligni
 
 \textbf{Contesto:} Test individuale condotto in presenza, presso il
-domicilio della soggetta, su un tablet del team con l\textquotesingle app
-ER Salute e un account demo (lo smartphone della soggetta ha uno
-schermo piccolo e un sistema non aggiornato). La partecipante
-appartiene al Segmento A, profilo "utente con bassa autonomia
+domicilio della soggetta, su un dispositivo mobile (tablet/smartphone) del team
+aprendo la web application CUPweb da browser (Safari/Chrome) con un account demo
+(lo smartphone della soggetta ha uno schermo piccolo e un sistema non aggiornato).
+La partecipante appartiene al Segmento A, profilo "utente con bassa autonomia
 digitale". Il conduttore è il nipote della soggetta. Durata 26 minuti,
 con una pausa di 3 minuti richiesta dalla partecipante. Nessuna
 prenotazione o disdetta reale.
@@ -1573,8 +1575,8 @@ T3 & No & 03:00 & 1 \\
 \textbf{Punteggio SUS:} 22,5/100.
 
 \textbf{Suggerimenti del soggetto:} Messaggi di errore che indichino
-cosa fare dopo; poter usare l\textquotesingle app con qualcuno vicino,
-senza doverla lasciare in mano a lui.
+cosa fare dopo; poter usare il sito da smartphone con qualcuno vicino,
+senza dover lasciare il dispositivo in mano a lui.
 
 \textbf{Riflessioni utili per il design:} Il blocco si presenta prima
 ancora del compito (schermata iniziale e autenticazione, {[}ID-01{]},
@@ -1665,8 +1667,8 @@ già emersa in intervista.
 \textbf{Contesto:} Test individuale condotto in presenza, durante la
 pausa pranzo, in una sala riunioni dell\textquotesingle azienda di
 tirocinio. La partecipante appartiene al Segmento B, profilo
-"caregiver convivente", e usa il proprio smartphone Android con
-l\textquotesingle app ER Salute già installata e un account demo.
+"caregiver convivente", e usa il proprio smartphone Android accedendo
+a CUPweb tramite browser mobile (Chrome) con un account demo.
 Tempo disponibile limitato (35 minuti per entrambi i tool). Una
 telefonata di lavoro ha interrotto T2 per 40 secondi (cronometro
 fermato). Nessuna prenotazione o disdetta reale.
@@ -1685,8 +1687,8 @@ fermato). Nessuna prenotazione o disdetta reale.
 \item
   \textbf{T2 --- Disdire un appuntamento.} Successo: sì. Tempo: 03:15
   (escluse interruzioni). Errori: 1. Dopo un\textquotesingle interruzione
-  di 40 secondi la sessione dell\textquotesingle app è scaduta e la
-  partecipante deve ripetere l\textquotesingle accesso; tocca poi
+  di 40 secondi la sessione del browser su CUPweb è scaduta e la
+  partecipante deve ripetere l\textquotesingle autenticazione; tocca poi
   "Modifica" prima di individuare "Disdici" e completa la disdetta.
   Citazione: "Ecco, ho perso tutto. Sempre così."
 \item
@@ -2130,16 +2132,16 @@ Elenco integrato: ID-01...ID-07 emerse dall\textquotesingle assessment
   impatto: alto; persistenza: alta; metodo di scoperta: analisi diretta
   (05a), confermato da entrambe le interviste del segmento A
 \item
-  {[}ID-06{]} \textbf{Posizione:} intero sito/app, per utenti con
+  {[}ID-06{]} \textbf{Posizione:} intera web application (desktop e mobile), per utenti con
   tecnologie assistive. Problemi di accessibilità, impatto: alto (per
   il sottoinsieme di utenti coinvolti); persistenza: media; metodo di
   scoperta: analisi diretta (05a), da segnalazioni pubbliche
 \item
-  {[}ID-07{]} \textbf{Posizione:} sezione cronologia
-  appuntamenti/documenti dell\textquotesingle app. Non ordinabile o
-  ricercabile per data, impatto: basso-medio; persistenza: media;
-  metodo di scoperta: analisi inversa (05a), da recensioni reali
-  dell\textquotesingle app
+  {[}ID-07{]} \textbf{Posizione:} sezione cronologia e gestione appuntamenti
+  su browser mobile. Tabelle dense e non responsive, elenco non agevolmente
+  ordinabile o filtrabile per data su schermo piccolo, impatto: basso-medio;
+  persistenza: media; metodo di scoperta: analisi inversa (05a), da
+  segnalazioni di utenti reali su mobile
 \item
   {[}ID-08{]} \textbf{Posizione:} schermata di modifica/disdetta di un
   appuntamento (task T2). Assenza di conferma o rassicurazione
@@ -2202,7 +2204,7 @@ ciascuna sessione tramite la formula standard SUS.
 \begin{center}
 \begin{tabular}{lcc}
 \toprule
-\textbf{Soggetto} & \textbf{SUS 06a (CUPweb/ER Salute)} & \textbf{SUS 06b (MioDottore)} \\
+\textbf{Soggetto} & \textbf{SUS 06a (CUPweb)} & \textbf{SUS 06b (MioDottore)} \\
 \midrule
 Renato & 40 & 72,5 \\
 Pina & 22,5 & 45 \\
