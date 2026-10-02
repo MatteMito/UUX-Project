@@ -146,27 +146,32 @@ Pina conserva ricette dematerializzate (NRE stampati dal medico), ricevute e pro
 
 \clearpage
 
-\fieldheading{Scenario: la visita diabetologica di controllo}
+\fieldheading{Scenario: la visita diabetologica di controllo e il timore dell'errore irreversibile}
 
-Pina deve prenotare la visita semestrale. Recupera l'impegnativa dalla busta
-blu, controlla sul calendario di non sovrapporla al mercato del martedì e
-verifica se può arrivare in autobus. Poi prova ER Salute. Non ricorda la
-password SPID, confonde ``Prenota'' con ``Informazioni'' e non comprende un
-errore. Dopo due tentativi chiama Elena durante una riunione. Il compito richiede
-circa 10--15 minuti prima della richiesta di aiuto. Il successo consiste nel
-comprendere il passo corrente, scegliere sede e data consapevolmente e
-ricevere una conferma verificabile senza sostituzione da parte della figlia.
-I rischi principali sono errore di selezione, frustrazione, abbandono e
-rinuncia futura.
+\textbf{Contesto e innesco:} È il primo pomeriggio a Correggio; seduta al tavolo della cucina, Pina deve prenotare il controllo diabetologico semestrale prescritto dal diabetologo di Reggio Emilia. Recupera il promemoria cartaceo con il codice NRE dalla busta di plastica blu dove custodisce la documentazione medica e consulta il calendario murale di Frate Indovino per escludere il martedì mattina, riservato al mercato rionale. Non guidando su percorsi extraurbani, deve tassativamente verificare che la sede proposta sia raggiungibile con la linea~1 dell'autobus urbano.
 
-\fieldheading{Implicazioni di design}
+\textbf{Svolgimento dell'esperienza e attrito cognitivo:} Pina accende il tablet Android acquistato dalla figlia. L'accesso tramite SPID genera subito forte apprensione: l'attesa del codice OTP sul telefono cellulare e la digitazione a schermo con dita rese rigide dall'artrosi provocano ansia da scadenza del timer. Superata l'autenticazione, la densità informativa la disorienta: le voci \enquote{Prenota con ricetta} e \enquote{Consulta appuntamenti} risultano ambigue rispetto al suo modello mentale. Temendo che un tocco involontario cancelli visite precedenti o confermi una prestazione errata, si blocca davanti a un messaggio di errore generico. Dopo due tentativi a vuoto e con crescente frustrazione, decide di interrompere il flusso e telefonare alla figlia Elena in ufficio per chiederle rassicurazioni.
 
-\begin{itemize}
+\textbf{Stima temporale e criteri di successo:}
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item \textit{Stima temporale:} 10--15 minuti di navigazione prima dell'insorgenza del blocco e della richiesta d'aiuto.
+\item \textit{Criteri di successo:} Comprensione del passo corrente, selezione autonoma e consapevole di data e sede raggiungibile, rilascio di un promemoria finale stampabile e assenza di sostituzione passiva da parte del caregiver.
+\item \textit{Rischi principali:} Errore di selezione della struttura, frustrazione da time-out, esproprio operativo della figlia e rinuncia definitiva al canale digitale con ritorno allo sportello fisico.
+\end{itemize}
+
+\fieldheading{Considerazioni conclusive e implicazioni di design}
+
+\textbf{Impatto della persona sul design:} Le limitazioni motorie, l'ansia tecnologica e il timore di commettere errori irreversibili impongono un'interfaccia protettiva e rassicurante:
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
 \item {[}P-01{]} (da ID-01, ID-05; REQ-01, REQ-04) L'autenticazione deve ridurre il carico di memoria e offrire recupero guidato; per attività solo consultive va evitata un'autenticazione ripetuta non necessaria.
-\item {[}P-02{]} (da ID-03; REQ-03) Azioni e bersagli devono essere grandi, distinti per forma, testo e icona, non soltanto per colore.
-\item {[}P-03{]} (da ID-04, ID-08; REQ-03, REQ-04) Il linguaggio deve essere semplice e rassicurante, con conseguenze e conferme esplicite.
-\item {[}U1-01{]} (da ID-05, ID-08; REQ-04) Il percorso per una visita ricorrente deve conservare il contesto e ridurre i passaggi senza decidere al posto dell'utente.
-\item {[}U1-02{]} (da ID-08; REQ-04) Prima dell'abbandono, un errore deve indicare causa, recupero e modalità di richiesta d'aiuto.
+\item {[}P-02{]} (da ID-03; REQ-03) Azioni e bersagli devono essere grandi, distinti per forma, testo e icona, non soltanto per colore, prevenendo tocchi accidentali dovuti a ridotta precisione motoria.
+\item {[}P-03{]} (da ID-04, ID-08; REQ-03, REQ-04) Il linguaggio deve essere semplice e rassicurante, con conseguenze esplicite, conferme reversibili e assenza di tecnicismi informatici.
+\end{itemize}
+
+\textbf{Impatto del caso d'uso sul design:} La gestione di controlli clinici ricorrenti richiede continuità di contesto e supporto al recupero:
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item {[}U1-01{]} (da ID-05, ID-08; REQ-04) Il percorso per una visita ricorrente deve conservare il contesto, proporre sedi compatibili con la mobilità e ridurre i passaggi senza decidere al posto dell'utente.
+\item {[}U1-02{]} (da ID-08; REQ-04) Prima dell'abbandono, un errore deve indicare con chiarezza causa, modalità di recupero e canali di assistenza, senza azzerare i dati inseriti.
 \end{itemize}
 
 \cardsection{Documento 02b: Persona and Use Case card: personaggio secondario}
@@ -237,23 +242,31 @@ Elena contrassegna gli appuntamenti della madre con un'etichetta rossa nel propr
 
 \clearpage
 
-\fieldheading{Scenario: la disdetta urgente dall'ufficio}
+\fieldheading{Scenario: la disdetta urgente durante la chiusura paghe}
 
-Durante la chiusura mensile delle paghe Elena riceve una chiamata da Pina: una
-visita va disdetta. Ha una riunione tra cinque minuti e una collega attende una
-risposta. Deve identificare profilo e appuntamento corretti, controllare le
-conseguenze, completare l'azione e rassicurare la madre senza chiederle di
-inviare credenziali in chat. Il successo consiste in una disdetta verificabile,
-senza errore di persona o appuntamento, con stato visibile a entrambe. Il rischio è che la
-velocità spinga Elena a sostituirsi stabilmente a Pina.
+\textbf{Contesto e innesco:} È il 26 del mese, ore 11:20: Elena è nel suo ufficio presso la cooperativa sociale di Bologna, concentrata sulla complessa chiusura mensile dei cedolini paga. Tra meno di dieci minuti deve entrare in una riunione direzionale con il revisore dei conti. Lo smartphone sulla scrivania squilla: è la madre Pina, in preda all'agitazione perché un improvviso contrattempo le impedisce di recarsi alla visita diabetologica fissata per l'indomani, esponendola al rischio della sanzione economica da mancata disdetta (malus ticket).
 
-\fieldheading{Implicazioni di design}
+\textbf{Svolgimento dell'esperienza e attrito cognitivo:} Elena non ha tempo per telefonare al call center CUP né può assentarsi dal lavoro. Apre l'applicazione sanitaria dal suo smartphone mentre una collega le chiede a voce la convalida di un prospetto ferie. La tentazione operativa più rapida sarebbe farsi dettare le credenziali SPID materne in chat, ma Elena ne riconosce la scorrettezza e il rischio per la sicurezza. Attiva quindi la propria funzione di delega formale: necessita di passare istantaneamente al profilo della madre, individuare l'appuntamento specifico tra le visite pregresse senza confonderlo con i propri appuntamenti personali, e cancellarlo in pochi tocchi. La sua ansia principale è causata dal dubbio che l'azione non vada a buon fine prima del meeting o che il sistema non certifichi l'avvenuta disdetta a entrambe le parti.
 
-\begin{itemize}
-\item {[}P-04{]} (da ID-09, ID-10; REQ-06, REQ-07) Il caregiver deve avere una visibilità chiara e proporzionata sulle prenotazioni autorizzate del familiare, con identità sempre evidente.
-\item {[}P-05{]} (da REQ-06) La delega deve essere progressiva: Pina conserva le azioni semplici, Elena interviene nei casi complessi senza sorveglianza continua.
-\item {[}U2-01{]} (da ID-08; REQ-04) La disdetta deve richiedere pochi passaggi, distinguere appuntamenti simili e rendere esplicite le conseguenze.
-\item {[}U2-02{]} (da ID-09; REQ-07) Lo stato aggiornato e notifiche concordate devono ridurre telefonate di verifica e interventi d'emergenza.
+\textbf{Stima temporale e criteri di successo:}
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item \textit{Stima temporale:} 3--5 minuti, all'interno di una finestra lavorativa frammentata e sottoposta a severa pressione temporale.
+\item \textit{Criteri di successo:} Disdetta conclusa e verificabile con codice identificativo prima della riunione; invio contestuale di una notifica di avvenuto annullamento a Pina; certezza assoluta di aver operato sul profilo corretto.
+\item \textit{Rischi principali:} Annullamento della visita errata per fretta o distrazione, confusione tra profilo personale e delegato, e innesco di una dinamica di sostituzione permanente che espropria Pina di ogni autonomia residua.
+\end{itemize}
+
+\fieldheading{Considerazioni conclusive e implicazioni di design}
+
+\textbf{Impatto della persona sul design:} Il ruolo del caregiver a distanza in mobilità richiede un'architettura che prevenga scambi di identità e favorisca la cooperazione non invasiva:
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item {[}P-04{]} (da ID-09, ID-10; REQ-06, REQ-07) Il caregiver deve disporre di una visibilità chiara, proporzionata e sempre contestualizzata sulle prenotazioni del familiare, con un indicatore visivo persistente dell'identità attiva.
+\item {[}P-05{]} (da REQ-06) La delega deve essere progressiva e scalabile: Pina mantiene l'accesso alle operazioni ordinarie, mentre Elena interviene sulle criticità senza instaurare una sorveglianza continuativa.
+\end{itemize}
+
+\textbf{Impatto del caso d'uso sul design:} L'operazione di disdetta urgente deve garantire immediatezza esecutiva, trasparenza bilaterale e assenza di ambiguità:
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item {[}U2-01{]} (da ID-08; REQ-04) La procedura di disdetta deve richiedere pochissimi passaggi, distinguere chiaramente appuntamenti ravvicinati ed esplicitare l'assenza di penali prima della conferma finale.
+\item {[}U2-02{]} (da ID-09; REQ-07) L'aggiornamento di stato deve essere immediato e generare notifiche concordate verso entrambi i soggetti, azzerando la necessità di telefonate di verifica post-operazione.
 \end{itemize}
 
 \cardsection{Documento 02c: Persona and Use Case card: personaggio aggiuntivo}
@@ -324,27 +337,32 @@ Renato usa il tablet sul tavolo del soggiorno, tenendo accanto un taccuino dove 
 
 \clearpage
 
-\fieldheading{Scenario: il controllo oculistico senza chiamare il figlio}
+\fieldheading{Scenario: il controllo oculistico e il dilemma delle tariffe opache}
 
-Renato riceve l'impegnativa e prova a prenotare dal tablet dopo colazione.
-Confronta due sedi, consulta il calendario condiviso con Paola e controlla di
-non sovrapporre la visita al turno presso l'archivio. Si ferma quando non
-distingue con certezza SSN e libera professione. Vorrebbe verificare il
-significato senza perdere le scelte già fatte e archiviare una conferma
-leggibile. Stima di concludere in 8--10 minuti. Il successo consiste
-nel prenotare sede, data e regime voluti, comprendere il costo e conservare
-una conferma; chiedere una spiegazione non deve obbligarlo a cedere il compito
-al figlio. I rischi sono affaticamento, scelta costosa e percezione di un
-servizio paternalistico.
+\textbf{Contesto e innesco:} È giovedì mattina, ore 09:30, a Ravenna: terminata la colazione, Renato siede allo scrittoio con il suo tablet da 10'', un taccuino e gli occhiali bifocali per prenotare il controllo oculistico prescritto dal medico. Sul tavolo consulta l'agenda condivisa con la moglie Paola, per escludere con certezza i giorni dedicati al volontariato culturale presso l'archivio diocesano.
 
-\fieldheading{Implicazioni di design}
+\textbf{Svolgimento dell'esperienza e attrito cognitivo:} Renato esegue l'accesso SPID con familiarità tramite notifica sul cellulare. Giunto alla scelta delle date, trova però una presentazione opaca: il sistema propone disponibilità eterogenee tra SSN (con quota ticket) e libera professione intramoenia (ALPI, con tariffe e medici distinti). Renato non comprende se la prima data utile comporti una spesa privata elevata o una compartecipazione parziale, e teme costi occulti. Vorrebbe approfondire i dettagli della prestazione senza perdere la selezione temporale già effettuata. Rifiuta categoricamente di delegare la procedura al figlio, difendendo la propria autonomia, ma vive con frustrazione l'opacità burocratica e la rigidità del portale.
 
-\begin{itemize}
-\item {[}P-06{]} (da ID-04; REQ-03) Le spiegazioni devono essere progressive e facoltative: disponibili nel punto di dubbio, senza rallentare chi ha già compreso.
-\item {[}P-07{]} (da ID-03; REQ-03) Testo, spaziatura e bersagli devono restare leggibili e azionabili anche con affaticamento visivo e precisione ridotta.
-\item {[}P-08{]} (da ID-04; REQ-03) Regime, costo e conseguenze devono essere visibili in linguaggio rispettoso, senza semplificazioni paternalistiche.
-\item {[}U3-01{]} (da ID-08, ID-11; REQ-04, REQ-08) Consultare una spiegazione, tornare indietro o chiedere aiuto non deve cancellare le scelte già effettuate.
-\item {[}U3-02{]} (da ID-08; REQ-04, REQ-07) Prima della conferma, un riepilogo deve mostrare prestazione, sede, data, regime e costo.
+\textbf{Stima temporale e criteri di successo:}
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item \textit{Stima temporale:} 8--10 minuti di navigazione attenta condotta in piena autonomia decisionale.
+\item \textit{Criteri di successo:} Individuazione consapevole della combinazione ottimale tra data, sede e tariffa; comprensione anticipata dell'importo esatto dovuto; archiviazione di un promemoria PDF da stampare per la bacheca domestica.
+\item \textit{Rischi principali:} Affaticamento visivo dovuto a caratteri densi, prenotazione involontaria di prestazioni a tariffa privata e rigetto del servizio per percezione di scarsa trasparenza istituzionale.
+\end{itemize}
+
+\fieldheading{Considerazioni conclusive e implicazioni di design}
+
+\textbf{Impatto della persona sul design:} L'anziano competente e autonomo richiede un'interfaccia sobria, priva di paternalismo, che rispetti la dignità e assecondi un'esplorazione meticolosa:
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item {[}P-06{]} (da ID-04; REQ-03) Le note esplicative devono essere progressive e consultabili su richiesta nei punti di dubbio, evitando schermate dense che rallentino chi padroneggia già il flusso.
+\item {[}P-07{]} (da ID-03; REQ-03) Tipografia, spaziatura dei paragrafi e bersagli interattivi devono garantire leggibilità e accuratezza anche in presenza di affaticamento visivo o ridotta precisione del tocco.
+\item {[}P-08{]} (da ID-04; REQ-03) Regime erogativo, costi a carico del cittadino e vincoli di accesso devono essere dichiarati con linguaggio chiaro e neutrale, senza toni condiscendenti o paternalistici.
+\end{itemize}
+
+\textbf{Impatto del caso d'uso sul design:} Il confronto multicriterio tra strutture e regimi richiede navigazione persistente e trasparenza economica preventiva:
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item {[}U3-01{]} (da ID-08, ID-11; REQ-04, REQ-08) La consultazione di schede informative o il ritorno a passaggi precedenti non devono in alcun caso azzerare i criteri di ricerca e i filtri già impostati.
+\item {[}U3-02{]} (da ID-08; REQ-04, REQ-07) Prima della convalida definitiva, una schermata di riepilogo organica deve evidenziare con chiarezza prestazione, medico, presidio, data, regime contrattuale e costo effettivo.
 \end{itemize}
 
 \cardsection{Documento 02d: Persona and Use Case card: personaggio secondario}
@@ -415,28 +433,32 @@ Amina coordina visite, terapie e trasporto per la suocera Nasima usando un calen
 
 \clearpage
 
-\fieldheading{Scenario: la fisioterapia prima del turno}
+\fieldheading{Scenario: la fisioterapia all'alba e l'ostacolo del gergo amministrativo}
 
-Alle 5:50, prima di uscire per il lavoro, Amina deve prenotare il primo ciclo di
-fisioterapia prescritto a Nasima dopo una visita ortopedica. Tiene accanto
-impegnativa, orari dell'autobus e calendario di famiglia. Durante il compito la
-figlia le chiede informazioni per la scuola e Nasima non ricorda se un parente
-abbia già telefonato. Amina riconosce prestazione e sede, ma esita davanti alla
-classe di priorità e alla distinzione tra primo accesso e controllo. Il compito
-richiede 7--12 minuti e può essere interrotto. Il successo consiste nel
-prenotare una sola volta la prestazione corretta per Nasima, rispettando
-priorità, trasporto e turno di lavoro, e nel poter comunicare alla famiglia un
-esito non ambiguo. I rischi sono errore di interpretazione, duplicazione,
-perdita del lavoro già svolto e abbandono verso il solo canale telefonico.
+\textbf{Contesto e innesco:} Ore 5:50 a Ravenna: prima del turno delle 6:30 in mensa scolastica, Amina deve prenotare il primo ciclo di fisioterapia per la suocera convivente Nasima (76 anni, artrosi severa). Sul tavolo della cucina affianca il promemoria cartaceo NRE, gli orari del bus e il calendario familiare. Non disponendo di un PC, opera esclusivamente dallo smartphone Android personale nei ritagli di tempo mattutini.
 
-\fieldheading{Implicazioni di design}
+\textbf{Svolgimento dell'esperienza e attrito cognitivo:} Amina è abile sulle app quotidiane, ma il portale la blocca con un lessico burocratico ostico: codice prestazione specialistico, classi di priorità (D, P) e opzione tra \enquote{primo accesso} e \enquote{controllo}. Teme che un errore lessicale annulli la ricetta. Nel frattempo la figlia le chiede indicazioni per la scuola e Nasima solleva dubbi su contatti presi dal cognato. Lo smartphone va in standby: riattivandolo, Amina teme la perdita dei dati o il time-out di sessione mentre l'orario del turno incombe.
 
-\begin{itemize}
-\item {[}P-09{]} (da ID-04, ID-12; REQ-03, REQ-09) I termini sanitari e amministrativi critici devono avere spiegazioni in italiano semplice, esempi concreti e una struttura compatibile con traduzione o mediazione linguistica.
-\item {[}P-10{]} (da ID-09, ID-10; REQ-07) Identità dell'assistito, ruolo di chi opera e stato della delega devono restare visibili, anche quando cognomi e credenziali non coincidono.
-\item {[}P-11{]} (da ID-11; REQ-08) Il sistema deve sostenere l'uso intermittente da smartphone, senza presumere attenzione continua o disponibilità di un computer.
-\item {[}U4-01{]} (da ID-11; REQ-08) Un'interruzione o una richiesta di chiarimento non deve cancellare dati e scelte già inseriti; alla ripresa deve essere chiaro il punto raggiunto.
-\item {[}U4-02{]} (da ID-09, ID-12; REQ-07, REQ-09) L'esito deve essere condivisibile e distinguere chiaramente prenotazione conclusa, tentativo incompleto e azione ancora richiesta, per evitare duplicazioni familiari.
+\textbf{Stima temporale e criteri di successo:}
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item \textit{Stima temporale:} 7--12 minuti complessivi, frammentati da pause forzate, consultazioni verbali e interruzioni ambientali.
+\item \textit{Criteri di successo:} Conclusione della prenotazione in data compatibile con i turni di lavoro e i mezzi pubblici; conservazione dello stato durante le interruzioni; generazione di una conferma visuale condivisibile via WhatsApp con i familiari per certificare la chiusura della pratica.
+\item \textit{Rischi principali:} Interpretazione scorretta della priorità clinica, abbandono del flusso per timore del gergo burocratico e duplicazione involontaria della prenotazione da parte di altri membri del nucleo familiare.
+\end{itemize}
+
+\fieldheading{Considerazioni conclusive e implicazioni di design}
+
+\textbf{Impatto della persona sul design:} Il ruolo di caregiver convivente con background migratorio richiede resilienza tecnologica alle interruzioni e accessibilità linguistica:
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item {[}P-09{]} (da ID-04, ID-12; REQ-03, REQ-09) La terminologia clinica e burocratica essenziale deve essere affiancata da definizioni in linguaggio semplice (Plain Language), con glosse ed esempi applicativi concreti.
+\item {[}P-10{]} (da ID-09, ID-10; REQ-07) L'identità dell'assistito, il ruolo di chi effettua l'operazione e i canali di contatto devono restare chiaramente visibili durante tutto il percorso, gestendo anagrafiche non coincidenti.
+\item {[}P-11{]} (da ID-11; REQ-08) L'applicazione deve essere progettata prioritariamente per l'uso mobile discontinuo, tollerando sospensioni di schermo e cambi di contesto senza disconnessioni premature.
+\end{itemize}
+
+\textbf{Impatto del caso d'uso sul design:} Il flusso della prescrizione specialistica deve favorire il coordinamento all'interno della rete familiare e la salvaguardia del lavoro svolto:
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item {[}U4-01{]} (da ID-11; REQ-08) Le interruzioni temporanee o la consultazione di aiuti testuali non devono provocare la perdita dei dati inseriti; al rientro deve essere segnalato con esattezza il passo raggiunto.
+\item {[}U4-02{]} (da ID-09, ID-12; REQ-07, REQ-09) L'esito finale deve produrre un riepilogo sintetico e condivisibile sui canali di messaggistica ordinari, attestando lo stato concluso dell'operazione per prevenire prenotazioni doppie.
 \end{itemize}
 
 \cardsection{Documento 03: Cast card}
