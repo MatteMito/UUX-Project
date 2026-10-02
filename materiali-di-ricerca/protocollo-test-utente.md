@@ -1,6 +1,6 @@
 # Protocollo di user testing preliminare --- Documenti 06a / 06b
 
-Vale sia per il test sul tool del cliente (CUPweb / app ER Salute, 06a) sia per il test sul competitor (MioDottore, 06b). Aggiornare il [tracker di reclutamento](tracker-reclutamento.md) prima e dopo ogni sessione.
+Vale sia per il test sul tool del cliente (CUPweb, 06a) sia per il test sul competitor (MioDottore, 06b). Aggiornare il [tracker di reclutamento](tracker-reclutamento.md) prima e dopo ogni sessione.
 
 ## 1. Prima della sessione
 
@@ -12,7 +12,7 @@ Vale sia per il test sul tool del cliente (CUPweb / app ER Salute, 06a) sia per 
 
 ## 2. Script di apertura (da leggere al soggetto)
 
-> "Grazie per il tuo tempo. Ti chiederò di provare a fare alcune cose su [CUPweb / l'app ER Salute / MioDottore] mentre osservo come le fai. Non sto valutando te, ma lo strumento: se qualcosa non è chiaro, è un problema dello strumento, non tuo. Prova a dire ad alta voce cosa stai pensando o cercando mentre lo fai, quando te lo chiederò esplicitamente. Puoi fermarti quando vuoi. Non c'è fretta."
+> "Grazie per il tuo tempo. Ti chiederò di provare a fare alcune cose su [CUPweb / MioDottore] mentre osservo come le fai. Non sto valutando te, ma lo strumento: se qualcosa non è chiaro, è un problema dello strumento, non tuo. Prova a dire ad alta voce cosa stai pensando o cercando mentre lo fai, quando te lo chiederò esplicitamente. Puoi fermarti quando vuoi. Non c'è fretta."
 
 Chiarire inoltre:
 - che non verranno eseguite azioni reali irreversibili (nessuna prenotazione/disdetta vera, salvo account demo);
@@ -20,11 +20,11 @@ Chiarire inoltre:
 
 ## 3. Task ed esecuzione
 
-### 06a --- CUPweb / app ER Salute
+### 06a --- CUPweb (Browser PC / Smartphone)
 
 | # | Task | Metodologia |
 |---|---|---|
-| T1 | Accedere al portale/app e individuare come prenotare una visita specialistica (senza completare la prenotazione) | Thinking Aloud |
+| T1 | Accedere a CUPweb dal browser e individuare come prenotare una visita specialistica (senza completare la prenotazione) | Thinking Aloud |
 | T2 | Disdire un appuntamento fittizio già presente nell'account demo/test | Bottom Line Data (non interrompere, non aiutare) |
 | T3 | Individuare dove e come chiedere aiuto/assistenza in caso di difficoltà | Thinking Aloud |
 

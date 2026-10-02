@@ -3,7 +3,7 @@
 File operativi per condurre la ricerca sul campo e lo user testing preliminare richiesti da `phase-a-checklist.md`. Sono pensati per essere stampati/compilati durante le sessioni con soggetti reali, non per finire tali e quali nel PDF principale.
 
 - [tracce-intervista.md](tracce-intervista.md) --- traccia stampabile per le interviste ai segmenti A e B (Documento 04a/04b).
-- [protocollo-test-utente.md](protocollo-test-utente.md) --- protocollo completo per lo user testing preliminare su CUPweb/ER Salute e MioDottore (Documento 06a/06b): script di apertura, task, scheda dati, SUS, questionario di gradimento, template della card individuale per `phase-a.tex`.
+- [protocollo-test-utente.md](protocollo-test-utente.md) --- protocollo completo per lo user testing preliminare su CUPweb (browser PC e smartphone) e MioDottore (Documento 06a/06b): script di apertura, task, scheda dati, SUS, questionario di gradimento, template della card individuale per `phase-a.tex`.
 - [tracker-reclutamento.md](tracker-reclutamento.md) --- foglio di tracciamento partecipanti per segmento, da tenere aggiornato e da conservare come materiale supplementare per la consegna finale.
 
 ## Come usarli
