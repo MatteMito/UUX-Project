@@ -10,6 +10,12 @@
   \end{center}%
 }
 
+\newcommand{\cardfieldheading}[1]{%
+  \par\vspace{1.5mm}%
+  {\noindent\color{headingcolor}\bfseries #1\par}%
+  \vspace{1mm}%
+}
+
 \newtcolorbox{personacard}[2][]{%
   enhanced,
   breakable,
@@ -21,12 +27,12 @@
   coltitle=white,
   fonttitle=\bfseries\normalsize,
   title={#2},
-  left=10pt,
-  right=10pt,
-  top=10pt,
-  bottom=10pt,
-  before skip=0.8\baselineskip,
-  after skip=1.2\baselineskip,
+  left=8pt,
+  right=8pt,
+  top=6pt,
+  bottom=6pt,
+  before skip=0.2\baselineskip,
+  after skip=0.5\baselineskip,
   #1
 }
 
@@ -95,9 +101,9 @@ asimmetrica e un'organizzazione familiare diversa, tutte pertinenti al compito.
   {\color{rulecolor}\hrule height 0.6pt}\vspace{1.5mm}
 
   \begin{tabular}{@{}p{0.22\linewidth}p{0.74\linewidth}@{}}
-    \textbf{Profilo:} & 78 anni, pensionata (ex operaia tessile), vive sola a Ravenna; diabete di tipo 2 e ipertensione. Organizza la settimana sul calendario e si sposta in autobus. \\
-    \textbf{Dispositivi:} & Smartphone Android semplice; messaggistica e chiamate, uso discontinuo app. \\
-    \textbf{Vincoli:} & Presbiopia, lieve tremore, memoria incerta delle credenziali, ansia da errore.
+    \textbf{Profilo:} & 78 anni, vedova, ex operaia tessile a Ravenna (San Biagio); diabete di tipo 2 e ipertensione; forte attaccamento alla propria autonomia. \\
+    \textbf{Dispositivi:} & Smartphone Android semplice con caratteri grandi donato dal nipote; usa solo chiamate e messaggi vocali WhatsApp. \\
+    \textbf{Vincoli:} & Presbiopia marcata, lieve tremore e artrosi alle dita, memoria labile di SPID, ansia da errore (``paura di rompere qualcosa o cancellare la visita'').
   \end{tabular}
 
   \vspace{2mm}
@@ -108,21 +114,21 @@ asimmetrica e un'organizzazione familiare diversa, tutte pertinenti al compito.
   \end{tcolorbox}
 \end{minipage}
 
-\fieldheading{Comportamenti, esperienza e rete di aiuto}
+\cardfieldheading{Comportamenti, esperienza e rete di aiuto}
 
-Pina conserva impegnative, ricevute e foglietti della farmacia in una busta blu nel cassetto del telefono; prima di prenotare incrocia quei documenti con il calendario cartaceo e con gli orari dell'autobus. Si rivolge soprattutto a farmacia, sportello o figlia. Ha provato ER Salute, ma credenziali SPID, azioni presentate come testo e messaggi di errore poco comprensibili l'hanno portata ad abbandonare. Chiede aiuto a Elena quando non riconosce il passo successivo o teme una conseguenza irreversibile. Si fida quando vede azioni grandi, linguaggio quotidiano, conferme chiare e una via di recupero, preferendo appuntamenti raggiungibili in autobus dopo le 10.
+Pina conserva ricette dematerializzate (NRE stampati dal medico), ricevute e promemoria sanitari nella storica ``busta blu'' nel cassetto del corridoio. Il calendario murale di Frate Indovino in cucina è il suo database di riferimento: vi incrocia le scadenze dei farmaci, gli orari della linea bus 1 e il mercato del martedì mattina. La farmacia rionale e il medico di base sono i riferimenti fiduciari umani. Ha provato a usare ER Salute con lo SPID delle Poste, ma il timeout di sessione e il codice OTP via SMS l'hanno mandata nel panico, portandola a rinunciare. Chiede aiuto alla figlia Elena solo quando non riconosce il passo successivo o teme conseguenze irreversibili, provando forte disagio all'idea di essere un peso. Si fida quando vede pulsanti ampi, linguaggio quotidiano, conferme visibili e una via di recupero priva di giudizio, preferendo appuntamenti dopo le 10:00 per comodità con i mezzi pubblici.
 
-\fieldheading{Competenze e abilità (C\&A)}
+\cardfieldheading{Competenze e abilità (C\&A)}
 
 \noindent
-\begin{minipage}[c]{0.42\linewidth}
+\begin{minipage}[c]{0.44\linewidth}
   \centering
-  \includegraphics[width=\linewidth,height=4.4cm,keepaspectratio]{assets/phase-b-persona-pina-skills.png}
+  \includegraphics[width=\linewidth,height=3.8cm,keepaspectratio]{assets/phase-b-persona-pina-skills.png}
 \end{minipage}\hfill
-\begin{minipage}[c]{0.56\linewidth}
+\begin{minipage}[c]{0.54\linewidth}
   \small
   \setlength{\tabcolsep}{3pt}
-  \begin{tabular}{@{}lcp{0.60\linewidth}@{}}
+  \begin{tabular}{@{}lc>{\raggedright\arraybackslash}p{0.58\linewidth}@{}}
   \toprule
   \textbf{Dimensione} & \textbf{P.} & \textbf{Sintesi della motivazione} \\
   \midrule
@@ -186,9 +192,9 @@ rinuncia futura.
   {\color{rulecolor}\hrule height 0.6pt}\vspace{1.5mm}
 
   \begin{tabular}{@{}p{0.22\linewidth}p{0.74\linewidth}@{}}
-    \textbf{Profilo:} & 52 anni, responsabile paghe in cooperativa, vive a Bologna con compagno e figlio; coordina l'assistenza alla madre a Ravenna. \\
-    \textbf{Dispositivi:} & PC e smartphone quotidiani; elevata familiarità con servizi digitali. \\
-    \textbf{Vincoli:} & Poco tempo, interruzioni continue, carico emotivo e rischio di confondere profili.
+    \textbf{Profilo:} & 52 anni, resp.~amministrativa e paghe in una coop a Bologna; vive con compagno e figlio universitario; assiste a distanza Pina a Ravenna. \\
+    \textbf{Dispositivi:} & PC a doppio monitor in ufficio, smartphone personale sempre attivo con notifiche sincronizzate e app bancarie/sanitarie. \\
+    \textbf{Vincoli:} & Finestre di 3--5 min tra riunioni e buste paga, continue interruzioni, carico da \emph{sandwich generation} e timore di confondere profili.
   \end{tabular}
 
   \vspace{2mm}
@@ -199,21 +205,21 @@ rinuncia futura.
   \end{tcolorbox}
 \end{minipage}
 
-\fieldheading{Comportamenti, esperienza e rete di aiuto}
+\cardfieldheading{Comportamenti, esperienza e rete di aiuto}
 
-Elena contrassegna gli appuntamenti della madre con un'etichetta rossa nel proprio calendario digitale e conserva in una nota protetta numeri utili e domande per il medico, rifiutando password in chat. Gestisce prenotazioni e disdette da remoto, spesso tra buste paga e riunioni. Conosce CUPweb ed ER Salute, ma deve ricostruire dati e credenziali a ogni richiesta. Accetta la delega solo se è chiaro per chi sta agendo e se Pina sarà informata; teme errori di profilo, notifiche carenti e che l'efficienza trasformi l'aiuto in controllo permanente.
+Elena contrassegna gli appuntamenti della madre con un'etichetta rossa nel proprio Google Calendar e custodisce tessere sanitarie, codici fiscali e note per le visite in un'app protetta da impronta digitale, rifiutando scambi di credenziali in chat. Coordina prenotazioni e disdette da remoto durante le pause lavorative. Conosce bene CUPweb e Fascicolo Sanitario, ma si scontra con la rigidità dei cambi profilo e delle deleghe: per fare in fretta è spesso tentata di utilizzare le credenziali di Pina, pur sapendo che ciò espropria l'autonomia della madre e viola la sicurezza. Accetta la delega solo se il sistema rende inequivocabile per chi sta operando e se Pina riceve conferme chiare; teme notifiche carenti, errori di omonimia e che l'efficienza digitale trasformi l'assistenza affettuosa in controllo permanente.
 
-\fieldheading{Competenze e abilità (C\&A)}
+\cardfieldheading{Competenze e abilità (C\&A)}
 
 \noindent
-\begin{minipage}[c]{0.42\linewidth}
+\begin{minipage}[c]{0.44\linewidth}
   \centering
-  \includegraphics[width=\linewidth,height=4.4cm,keepaspectratio]{assets/phase-b-persona-elena-skills.png}
+  \includegraphics[width=\linewidth,height=3.8cm,keepaspectratio]{assets/phase-b-persona-elena-skills.png}
 \end{minipage}\hfill
-\begin{minipage}[c]{0.56\linewidth}
+\begin{minipage}[c]{0.54\linewidth}
   \small
   \setlength{\tabcolsep}{3pt}
-  \begin{tabular}{@{}lcp{0.60\linewidth}@{}}
+  \begin{tabular}{@{}lc>{\raggedright\arraybackslash}p{0.58\linewidth}@{}}
   \toprule
   \textbf{Dimensione} & \textbf{P.} & \textbf{Sintesi della motivazione} \\
   \midrule
@@ -273,9 +279,9 @@ velocità spinga Elena a sostituirsi stabilmente a Pina.
   {\color{rulecolor}\hrule height 0.6pt}\vspace{1.5mm}
 
   \begin{tabular}{@{}p{0.22\linewidth}p{0.74\linewidth}@{}}
-    \textbf{Profilo:} & 70 anni, pensionato (ex bibliotecario), vive a Forlì con la moglie Paola; cataloga foto per l'archivio storico; figlio adulto vicino. \\
-    \textbf{Dispositivi:} & Tablet e smartphone; messaggistica, e-mail e SPID usato saltuariamente. \\
-    \textbf{Vincoli:} & Vista affaticata, rigidità articolare alle mani, esitazione su acronimi sanitari.
+    \textbf{Profilo:} & 70 anni, ex bibliotecario comunale in pensione a Forlì; cataloga fondi fotografici per l'archivio storico; coniugato con Paola; figlio adulto vicino. \\
+    \textbf{Dispositivi:} & Tablet 10'' per lettura e ricerche al tavolo; smartphone Android con SPID personale (livello 2) e home banking. \\
+    \textbf{Vincoli:} & Vista affaticata (lenti progressive), rigidità articolare alle dita al mattino, forte esitazione su acronimi sanitari e tariffe opache.
   \end{tabular}
 
   \vspace{2mm}
@@ -286,21 +292,21 @@ velocità spinga Elena a sostituirsi stabilmente a Pina.
   \end{tcolorbox}
 \end{minipage}
 
-\fieldheading{Comportamenti, esperienza e rete di aiuto}
+\cardfieldheading{Comportamenti, esperienza e rete di aiuto}
 
-Renato usa il tablet sul tavolo della cucina, annota i passaggi su un quaderno e stampa o salva in PDF le conferme per la bacheca familiare. Prenota da solo se riconosce prestazione e regime; altrimenti telefona o chiede al figlio una verifica mirata, senza cedere l'azione. Ha provato CUPweb ed ER Salute, ma esita davanti a sigle come SSN o costi non immediati. Si sente autonomo se può procedere con calma, rileggere il riepilogo e tornare indietro senza perdere i dati inseriti, rifiutando un'interfaccia paternalistica.
+Renato usa il tablet sul tavolo del soggiorno, tenendo accanto un taccuino dove appunta date, codici ricetta e costi preventivati; prima di confermare consulta l'agenda condivisa con Paola per non sovrapporsi ai turni all'archivio storico. Salva o stampa sempre il riepilogo in PDF per la bacheca magnetica in corridoio. Prenota in autonomia se riconosce prestazione e regime; quando incontra sigle oscure (es. SSN vs libera professione, classi U/B/D/P) telefona o chiede al figlio una verifica puntuale, rifiutando categoricamente di cedergli l'azione. Si sente sicuro se può procedere con calma, rileggere il riepilogo e tornare indietro senza perdere le selezioni già fatte; rigetta con forza interfacce paternalistiche con grafiche infantili o spiegazioni ovvie non disattivabili.
 
-\fieldheading{Competenze e abilità (C\&A)}
+\cardfieldheading{Competenze e abilità (C\&A)}
 
 \noindent
-\begin{minipage}[c]{0.42\linewidth}
+\begin{minipage}[c]{0.44\linewidth}
   \centering
-  \includegraphics[width=\linewidth,height=4.4cm,keepaspectratio]{assets/phase-b-persona-renato-skills.png}
+  \includegraphics[width=\linewidth,height=3.8cm,keepaspectratio]{assets/phase-b-persona-renato-skills.png}
 \end{minipage}\hfill
-\begin{minipage}[c]{0.56\linewidth}
+\begin{minipage}[c]{0.54\linewidth}
   \small
   \setlength{\tabcolsep}{3pt}
-  \begin{tabular}{@{}lcp{0.60\linewidth}@{}}
+  \begin{tabular}{@{}lc>{\raggedright\arraybackslash}p{0.58\linewidth}@{}}
   \toprule
   \textbf{Dimensione} & \textbf{P.} & \textbf{Sintesi della motivazione} \\
   \midrule
@@ -364,9 +370,9 @@ servizio paternalistico.
   {\color{rulecolor}\hrule height 0.6pt}\vspace{1.5mm}
 
   \begin{tabular}{@{}p{0.22\linewidth}p{0.74\linewidth}@{}}
-    \textbf{Profilo:} & 47 anni, a Ravenna dal 2004; part-time mensa; vive con marito, figlia e suocera Nasima (76 anni). \\
-    \textbf{Dispositivi:} & Smartphone Android (tastiere IT/bengalese); vocali, WhatsApp e foto; SPID saltuario. \\
-    \textbf{Vincoli:} & Lessico sanitario incerto, turni mattutini, interruzioni e responsabilità distribuite.
+    \textbf{Profilo:} & 47 anni, originaria di Dhaka (Bangladesh), a Ravenna dal 2004 con cittadinanza; part-time mensa (6:30--12:30); vive con marito operaio, figlia studentessa e suocera convivente Nasima (76 anni, artrosi). \\
+    \textbf{Dispositivi:} & Smartphone Android (tastiere IT/bengalese); vocali, WhatsApp e foto ricette; no PC a casa; SPID usato saltuariamente. \\
+    \textbf{Vincoli:} & Lessico burocratico ostico, turni mattutini, attenzione frammentata da interruzioni familiari e responsabilità distribuite.
   \end{tabular}
 
   \vspace{2mm}
@@ -377,21 +383,21 @@ servizio paternalistico.
   \end{tcolorbox}
 \end{minipage}
 
-\fieldheading{Comportamenti, esperienza e rete di aiuto}
+\cardfieldheading{Comportamenti, esperienza e rete di aiuto}
 
-Amina coordina visite, farmaci e trasporti della suocera usando un calendario in cucina con abbreviazioni bilingui. Prenota da farmacia o telefono; da smartphone esita su classi di priorità e primo accesso/controllo. Non ha difficoltà a inviare documenti o seguire sequenze note: l'ostacolo è il linguaggio amministrativo e verificare per chi sta operando. Chiede chiarimenti alla figlia, poi a medico o farmacia; non delega del tutto per non perdere il controllo su turni e preferenze di Nasima. Teme duplicazioni ed errori di regime.
+Amina coordina visite, terapie e trasporto per la suocera Nasima usando un calendario murale in cucina con annotazioni miste bilingui. Non ha un computer e opera sullo smartphone nei ritagli di tempo: prima di uscire per il turno alle 5:45, in autobus o tra le faccende serali. Possiede ottima agilità pratica sulle app comuni, ma si blocca davanti al gergo amministrativo (classi di priorità, ``primo accesso'' vs ``controllo'', quesiti clinici). Per chiarimenti si rivolge prima alla figlia diciottenne, poi al medico di base o alla farmacia rionale; non delega all'esterno per non perdere il controllo sulle preferenze di Nasima. Teme sopra ogni cosa gli errori irreversibili, la perdita dei dati durante un'interruzione e le doppie prenotazioni familiari con il marito o i cognati.
 
-\fieldheading{Competenze e abilità (C\&A)}
+\cardfieldheading{Competenze e abilità (C\&A)}
 
 \noindent
-\begin{minipage}[c]{0.42\linewidth}
+\begin{minipage}[c]{0.44\linewidth}
   \centering
-  \includegraphics[width=\linewidth,height=4.4cm,keepaspectratio]{assets/phase-b-persona-amina-skills.png}
+  \includegraphics[width=\linewidth,height=3.8cm,keepaspectratio]{assets/phase-b-persona-amina-skills.png}
 \end{minipage}\hfill
-\begin{minipage}[c]{0.56\linewidth}
+\begin{minipage}[c]{0.54\linewidth}
   \small
   \setlength{\tabcolsep}{3pt}
-  \begin{tabular}{@{}lcp{0.60\linewidth}@{}}
+  \begin{tabular}{@{}lc>{\raggedright\arraybackslash}p{0.58\linewidth}@{}}
   \toprule
   \textbf{Dimensione} & \textbf{P.} & \textbf{Sintesi della motivazione} \\
   \midrule
@@ -404,9 +410,6 @@ Amina coordina visite, farmaci e trasporti della suocera usando un calendario in
   \bottomrule
   \end{tabular}
 \end{minipage}
-
-\vspace{1.5mm}
-{\footnotesize\itshape Profilo di confine su lingua e concentrazione, credibile per far emergere indicazioni non ovvie.}
 
 \end{personacard}
 
