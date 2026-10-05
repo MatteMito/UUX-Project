@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matrice di Tracciabilità Interattiva · CUPweb HPHP (Fasi A & B)</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #8b5cf6;
+      
+      --c-color: #a855f7;
+      --c-bg: rgba(168, 85, 247, 0.15);
+      --c-border: #9333ea;
+
+      --p-color: #22c55e;
+      --p-bg: rgba(34, 197, 94, 0.15);
+      --p-border: #16a34a;
+
+      --u-color: #38bdf8;
+      --u-bg: rgba(56, 189, 248, 0.15);
+      --u-border: #0284c7;
+
+      --req-color: #eab308;
+      --req-bg: rgba(234, 179, 8, 0.15);
+      --req-border: #ca8a04;
+
+      --r-color: #f97316;
+      --r-bg: rgba(249, 115, 22, 0.15);
+      --r-border: #ea580c;
+
+      --id-color: #ef4444;
+      --id-bg: rgba(239, 68, 68, 0.15);
+      --id-border: #dc2626;
+
+      --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-family);
+      line-height: 1.5;
+      padding: 24px;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #c084fc, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 900px;
+    }
+
+    /* BUBBLE SECTION */
+    .bubbles-section {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+
+    .bubbles-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .bubbles-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .bubbles-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .bubble-btn {
+      background: rgba(168, 85, 247, 0.1);
+      border: 1.5px solid rgba(168, 85, 247, 0.4);
+      color: #d8b4fe;
+      padding: 10px 16px;
+      border-radius: 9999px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      user-select: none;
+    }
+
+    .bubble-btn:hover {
+      background: rgba(168, 85, 247, 0.25);
+      border-color: #c084fc;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(168, 85, 247, 0.35);
+      color: #fff;
+    }
+
+    .bubble-btn.active {
+      background: linear-gradient(135deg, #9333ea, #c084fc);
+      border-color: #f3e8ff;
+      color: #ffffff;
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+      transform: scale(1.05) translateY(-2px);
+    }
+
+    .bubble-btn .bubble-desc-short {
+      font-size: 0.75rem;
+      font-weight: 400;
+      opacity: 0.85;
+      max-width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .bubble-reset {
+      background: #334155;
+      border: 1px solid #475569;
+      color: #cbd5e1;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .bubble-reset:hover {
+      background: #475569;
+      color: #fff;
+    }
+
+    /* CONTROLS & VIEWS */
+    .controls-bar {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .view-modes {
+      display: flex;
+      background: #1e293b;
+      padding: 4px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      gap: 4px;
+    }
+
+    .view-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .view-btn.active {
+      background: #334155;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* COLUMNS MATRIX VIEW */
+    .matrix-wrapper {
+      position: relative;
+      margin-bottom: 30px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+    }
+
+    #svg-connections {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .columns-container {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(260px, 1fr));
+      gap: 20px;
+      min-width: 1350px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .layer-column {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .col-header {
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .col-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .col-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .cards-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* NODE CARDS */
+    .node-card {
+      background: #1e293b;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 12px;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      user-select: none;
+    }
+
+    .node-card:hover {
+      transform: translateY(-2px);
+      border-color: #64748b;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    .node-card.dimmed {
+      opacity: 0.15;
+      filter: grayscale(80%);
+      transform: scale(0.98);
+    }
+
+    .node-card.highlighted {
+      opacity: 1;
+      filter: none;
+      transform: scale(1.02);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .node-card.active-target {
+      transform: scale(1.04);
+      box-shadow: 0 0 25px rgba(168, 85, 247, 0.6) !important;
+    }
+
+    /* Layer Colors for Cards */
+    .node-card[data-layer="0"].highlighted {
+      background: rgba(239, 68, 68, 0.12);
+      border-color: var(--id-border);
+    }
+    .node-card[data-layer="1"].highlighted {
+      background: rgba(249, 115, 22, 0.12);
+      border-color: var(--r-border);
+    }
+    .node-card[data-layer="2"].highlighted {
+      background: rgba(234, 179, 8, 0.12);
+      border-color: var(--req-border);
+    }
+    .node-card[data-layer="3"].highlighted {
+      background: rgba(56, 189, 248, 0.12);
+      border-color: var(--u-border);
+    }
+    .node-card[data-layer="3"][data-type="P"].highlighted {
+      background: rgba(34, 197, 94, 0.12);
+      border-color: var(--p-border);
+    }
+    .node-card[data-layer="4"].highlighted {
+      background: rgba(168, 85, 247, 0.18);
+      border-color: var(--c-border);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .card-id {
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 6px;
+    }
+
+    .id-tag { background: var(--id-bg); color: #fca5a5; border: 1px solid var(--id-border); }
+    .r-tag { background: var(--r-bg); color: #fdba74; border: 1px solid var(--r-border); }
+    .req-tag { background: var(--req-bg); color: #fde047; border: 1px solid var(--req-border); }
+    .p-tag { background: var(--p-bg); color: #86efac; border: 1px solid var(--p-border); }
+    .u-tag { background: var(--u-bg); color: #7dd3fc; border: 1px solid var(--u-border); }
+    .c-tag { background: var(--c-bg); color: #d8b4fe; border: 1px solid var(--c-border); }
+
+    .card-meta {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .card-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 4px;
+      color: #f1f5f9;
+    }
+
+    .card-desc-preview {
+      font-size: 0.76rem;
+      color: #94a3b8;
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* MODAL / DRAWER INSPECTOR */
+    .drawer {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: #0f172a;
+      border-top: 2px solid var(--accent);
+      padding: 20px 24px;
+      box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.6);
+      transform: translateY(105%);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 999;
+      max-height: 45vh;
+      overflow-y: auto;
+    }
+
+    .drawer.open {
+      transform: translateY(0);
+    }
+
+    .drawer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .drawer-badge-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .drawer-close {
+      background: #334155;
+      border: none;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .drawer-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+
+    .drawer-body {
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    .drawer-relations {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      padding-top: 12px;
+      border-top: 1px solid #334155;
+    }
+
+    .rel-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .rel-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .rel-badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .rel-badge-item {
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      background: #334155;
+      color: #f8fafc;
+      transition: transform 0.15s;
+    }
+
+    .rel-badge-item:hover {
+      transform: scale(1.05);
+      background: #475569;
+    }
+
+    /* SVG Connecting paths */
+    path.connector {
+      fill: none;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      transition: all 0.3s ease;
+    }
+
+    path.connector.default {
+      stroke: rgba(148, 163, 184, 0.15);
+      stroke-dasharray: 4 4;
+    }
+
+    path.connector.active {
+      stroke-width: 3.5;
+      filter: drop-shadow(0 0 5px currentColor);
+      stroke-dasharray: none;
+      animation: dash 1s linear infinite;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-top">
+      <h1>Matrice di Tracciabilità Interattiva</h1>
+    </div>
+    <p class="subtitle">
+      Seleziona una bolla <b>C-xx</b> (Requisiti del Cast) per isolare l'intera discendenza a ritroso fino alle criticità di Fase A, oppure clicca su una qualsiasi scheda per vederne i dettagli e le connessioni dirette.
+    </p>
+  </header>
+
+  <!-- BUBBLES SECTION -->
+  <section class="bubbles-section">
+    <div class="bubbles-header">
+      <div class="bubbles-title">
+        <span>🟣</span> <b>Bolle Requisiti Cumulativi del Cast (C-01 ... C-12)</b>
+        <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: normal;">— Clicca per attivare la traccia esclusiva</span>
+      </div>
+      <button class="bubble-reset" id="btn-reset" onclick="resetSelection()">✕ Mostra Tutto</button>
+    </div>
+    <div class="bubbles-grid" id="bubbles-container">
+      <!-- Generated via JS -->
+    </div>
+  </section>
+
+  <!-- CONTROLS -->
+  <div class="controls-bar">
+    <div class="view-modes">
+      <button class="view-btn active" id="btn-view-all" onclick="setViewMode('all')">Mappa Completa Evidenziata</button>
+      <button class="view-btn" id="btn-view-isolated" onclick="setViewMode('isolated')">Compatta: Solo Nodi Coinvolti</button>
+    </div>
+  </div>
+
+  <!-- 5-COLUMNS MATRIX -->
+  <div class="matrix-wrapper" id="matrix-wrapper">
+    <svg id="svg-connections"></svg>
+    <div class="columns-container" id="columns-container">
+      
+      <!-- LAYER 0: ID -->
+      <div class="layer-column" data-layer="0">
+        <div class="col-header">
+          <div class="col-title" style="color: #f87171;">
+            <span>🔴</span> Layer 0: Criticità (ID-xx)
+          </div>
+          <div class="col-sub">Doc 07 · Assessment & User Testing</div>
+        </div>
+        <div class="cards-list" id="list-layer-0"></div>
+      </div>
+
+      <!-- LAYER 1: R -->
+      <div class="layer-column" data-layer="1">
+        <div class="col-header">
+          <div class="col-title" style="color: #fb923c;">
+            <span>🟠</span> Layer 1: Raccomandazioni (R-xx)
+          </div>
+          <div class="col-sub">Doc 07 · Design Recommendations</div>
+        </div>
+        <div class="cards-list" id="list-layer-1"></div>
+      </div>
+
+      <!-- LAYER 2: REQ -->
+      <div class="layer-column" data-layer="2">
+        <div class="col-header">
+          <div class="col-title" style="color: #facc15;">
+            <span>🟡</span> Layer 2: Requisiti di Design (REQ-xx)
+          </div>
+          <div class="col-sub">Doc 07 · Requisiti numerati Fasi B/C</div>
+        </div>
+        <div class="cards-list" id="list-layer-2"></div>
+      </div>
+
+      <!-- LAYER 3: P & U* -->
+      <div class="layer-column" data-layer="3">
+        <div class="col-header">
+          <div class="col-title" style="color: #4ade80;">
+            <span>🟢</span> Layer 3: Persona (P) & Caso d'Uso (U*)
+          </div>
+          <div class="col-sub">Doc 02a-d · Implicazioni scenari specifici</div>
+        </div>
+        <div class="cards-list" id="list-layer-3"></div>
+      </div>
+
+      <!-- LAYER 4: C -->
+      <div class="layer-column" data-layer="4">
+        <div class="col-header">
+          <div class="col-title" style="color: #c084fc;">
+            <span>🟣</span> Layer 4: Requisiti del Cast (C-xx)
+          </div>
+          <div class="col-sub">Doc 03 · Requisiti cumulativi combinati</div>
+        </div>
+        <div class="cards-list" id="list-layer-4"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- INSPECTOR DRAWER -->
+  <div class="drawer" id="drawer">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <div class="drawer-badge-group">
+          <span class="card-id" id="drawer-id">ID-01</span>
+          <span class="card-meta" id="drawer-layer">Layer</span>
+          <span class="card-meta" id="drawer-extra">Extra</span>
+        </div>
+        <button class="drawer-close" onclick="closeDrawer()">✕ Chiudi</button>
+      </div>
+      <div class="drawer-title" id="drawer-title">Titolo del Requisito</div>
+      <div class="drawer-body" id="drawer-body">Descrizione completa...</div>
+      
+      <div class="drawer-relations" id="drawer-relations">
+        <div class="rel-group" id="drawer-incoming-group">
+          <span class="rel-title">⬅ Deriva da (Layer precedente)</span>
+          <div class="rel-badges" id="drawer-incoming"></div>
+        </div>
+        <div class="rel-group" id="drawer-outgoing-group">
+          <span class="rel-title">➡ Alimenta (Layer successivo)</span>
+          <div class="rel-badges" id="drawer-outgoing"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ==========================================
+    // 1. DATA DEFINITIONS
+    // ==========================================
+    const NODES = {
+      // LAYER 0: ID
+      "ID-01": { id: "ID-01", layer: 0, title: "Autenticazione complessa al 1° passo", urg: "Urgente (3+3=6)", desc: "Autenticazione obbligatoria complessa (SPID/CIE) richiesta fin dal primo passo, anche per compiti semplici di consultazione.", source: "05a, interviste Pina e Renato" },
+      "ID-02": { id: "ID-02", layer: 0, title: "Frammentazione tra domini", urg: "Urgente (3+3=6)", desc: "Passaggio tra domini/sottodomini del servizio (cupweb.it, pagonlinesanita.it, fascicolo-sanitario.it). Mina la fiducia.", source: "05a" },
+      "ID-03": { id: "ID-03", layer: 0, title: "Interfaccia poco gerarchizzata", urg: "Prossima release (2+3=5)", desc: "Interfaccia prevalentemente testuale, priva di elementi visivi di orientamento ed enfasi gerarchica.", source: "05a" },
+      "ID-04": { id: "ID-04", layer: 0, title: "Terminologia tecnico-burocratica", urg: "Prossima release (2+2=4)", desc: "Pagina di scelta SSN / Libera Professione: terminologia non spiegata (SPID, CNS, impegnativa dematerializzata).", source: "05a, intervista Renato" },
+      "ID-05": { id: "ID-05", layer: 0, title: "Assenza percorso guidato", urg: "Urgente (3+3=6)", desc: "Assenza di un percorso guidato o dimostrativo per il nuovo utente al primo accesso.", source: "05a, interviste segmento A" },
+      "ID-06": { id: "ID-06", layer: 0, title: "Problemi di accessibilità", urg: "Prossima release (3+2=5)", desc: "Problemi di accessibilità su web app desktop e mobile per utenti con tecnologie assistive.", source: "05a" },
+      "ID-07": { id: "ID-07", layer: 0, title: "Tabelle non responsive su smartphone", urg: "Prossima release (1.5+2=3.5)", desc: "Sezione cronologia e gestione appuntamenti: tabelle dense e non fruibili da schermo piccolo.", source: "05a (inversa)" },
+      "ID-08": { id: "ID-08", layer: 0, title: "Assenza conferma su azione irreversibile", urg: "Urgente (3+3=6)", desc: "Schermata disdetta: il cittadino teme di perdere la visita ed esita a premere il pulsante per timore di irreversibilità.", source: "06a (Renato e Pina)" },
+      "ID-09": { id: "ID-09", layer: 0, title: "Conferma generica e non condivisibile", urg: "Urgente (2.5+3=5.5)", desc: "Messaggio generico ('operazione eseguita') senza modo integrato per condividerlo o inoltrarlo a familiari.", source: "06a/06b (Elena e Amina)" },
+      "ID-10": { id: "ID-10", layer: 0, title: "Familiare associato non visibile", urg: "Urgente (3+3=6)", desc: "Nel flusso di prenotazione per conto di terzi la selezione dell'assistito non è chiara nel punto in cui serve.", source: "06a (Elena)" },
+      "ID-11": { id: "ID-11", layer: 0, title: "Timeout sessione su interruzione", urg: "Prossima release (3+2=5)", desc: "Interruzione esterna (telefonata, standby schermo) fa scadere la sessione autenticata con perdita dei dati.", source: "06a (Amina)" },
+      "ID-12": { id: "ID-12", layer: 0, title: "Assenza canale assistenza scritto", urg: "Urgente (2.5+3=5.5)", desc: "Solo numero verde telefonico, ostacolo per chi ha vincoli di lavoro o necessita di mediazione linguistica.", source: "06a (Elena e Amina)" },
+
+      // LAYER 1: R
+      "R-01": { id: "R-01", layer: 1, title: "Percorso a bassa soglia senza SPID", desc: "Percorso iniziale per esplorare disponibilità e capire il servizio prima di richiedere l'autenticazione forte." },
+      "R-02": { id: "R-02", layer: 1, title: "Unificazione visiva touchpoint", desc: "Unificare visivamente tutti i touchpoint (prenotazione, pagamento, fascicolo) sotto un'unica identità grafica coerente." },
+      "R-03": { id: "R-03", layer: 1, title: "Gerarchia visiva e Plain Language", desc: "Introdurre gerarchia visiva (icone, colori, dimensioni) e spiegazioni contestuali per termini burocratici." },
+      "R-04": { id: "R-04", layer: 1, title: "Flusso guidato con conferme", desc: "Flusso passo-passo per il primo utilizzo con conferme esplicite e supporto richiamabile senza ansia." },
+      "R-05": { id: "R-05", layer: 1, title: "Compatibilità tecnologie assistive", desc: "Verificare e correggere la compatibilità con screen reader secondo la dichiarazione di accessibilità." },
+      "R-06": { id: "R-06", layer: 1, title: "Modalità co-gestione caregiver", desc: "Modalità di co-gestione con visibilità al caregiver lasciando l'azione finale all'assistito se autonomo." },
+      "R-07": { id: "R-07", layer: 1, title: "Familiare visibile e riepilogo condivisibile", desc: "Rendere sempre visibile per quale familiare si agisce e generare un riepilogo dettagliato condivisibile." },
+      "R-08": { id: "R-08", layer: 1, title: "Preservazione stato su timeout", desc: "Preservare lo stato di avanzamento in caso di interruzione temporanea senza ri-autenticazioni distruttive." },
+      "R-09": { id: "R-09", layer: 1, title: "Canale di assistenza scritto asincrono", desc: "Affiancare al telefono un canale chat/messaggistica per chi lavora o deve tradurre i testi." },
+
+      // LAYER 2: REQ
+      "REQ-01": { id: "REQ-01", layer: 2, title: "Esplorazione senza autenticazione", prio: "Alta", desc: "Esplorare info essenziali (disponibilità, funzionamento) senza SPID, richiesto solo al momento della conferma." },
+      "REQ-02": { id: "REQ-02", layer: 2, title: "Identità visiva coerente", prio: "Alta", desc: "Tutti i touchpoint devono condividere header, palette e iconografia percepite come un unico sistema." },
+      "REQ-03": { id: "REQ-03", layer: 2, title: "Gerarchia visiva e spiegazioni", prio: "Media", desc: "Ogni schermata con chiara gerarchia visiva e termini tecnici accompagnati da glosse in linguaggio semplice." },
+      "REQ-04": { id: "REQ-04", layer: 2, title: "Flusso guidato con conferme", prio: "Alta", desc: "Primo utilizzo guidato passo-passo con conferme ad ogni step e opzione di supporto umano sempre visibile." },
+      "REQ-05": { id: "REQ-05", layer: 2, title: "Compatibilità screen reader", prio: "Media", desc: "Interfaccia compatibile con le principali tecnologie assistive prima del rilascio prototipo." },
+      "REQ-06": { id: "REQ-06", layer: 2, title: "Vista co-gestione caregiver", prio: "Alta", desc: "Vista al caregiver sulle prenotazioni del familiare senza sostituirsi passivamente alle sue decisioni." },
+      "REQ-07": { id: "REQ-07", layer: 2, title: "Familiare persistente e conferme ricche", prio: "Alta", desc: "Sempre visibile il profilo attivo; conferme con riepilogo dettagliato (paziente, data, sede) inoltrabile." },
+      "REQ-08": { id: "REQ-08", layer: 2, title: "Preservazione stato sessione", prio: "Media", desc: "Preservare lo stato del task per un tempo ragionevole in caso di timeout o interruzioni." },
+      "REQ-09": { id: "REQ-09", layer: 2, title: "Assistenza scritta integrata", prio: "Media", desc: "Canale scritto/asincrono accessibile contestualmente dalle stesse schermate di difficoltà." },
+
+      // LAYER 3: P & U*
+      "P-01": { id: "P-01", layer: 3, type: "P", persona: "Pina", device: "Smartphone", title: "Autenticazione leggera e recupero guidato", desc: "Autenticazione a basso carico mnemonico e recupero guidato; no login ripetuti per sola consultazione." },
+      "P-02": { id: "P-02", layer: 3, type: "P", persona: "Pina", device: "Smartphone", title: "Touch target ampi e distinti", desc: "Bersagli grandi e distinti per forma, testo e icona (prevenzione tocchi errati da artrosi)." },
+      "P-03": { id: "P-03", layer: 3, type: "P", persona: "Pina", device: "Smartphone", title: "Linguaggio rassicurante e reversibilità", desc: "Linguaggio semplice e rassicurante, conseguenze esplicite, conferme reversibili, assenza tecnicismi." },
+      
+      "P-04": { id: "P-04", layer: 3, type: "P", persona: "Elena", device: "PC Desktop", title: "Visibilità contestualizzata e profilo attivo", desc: "Visibilità chiara sulle prenotazioni del familiare con indicatore visivo persistente dell'identità attiva." },
+      "P-05": { id: "P-05", layer: 3, type: "P", persona: "Elena", device: "PC Desktop", title: "Delega progressiva e non invasiva", desc: "Delega scalabile: Pina mantiene autonomia ordinaria, Elena interviene solo su criticità." },
+
+      "P-06": { id: "P-06", layer: 3, type: "P", persona: "Renato", device: "PC Desktop", title: "Note progressive on-demand", desc: "Note esplicative consultabili su richiesta nei punti di dubbio, senza appesantire utenti esperti." },
+      "P-07": { id: "P-07", layer: 3, type: "P", persona: "Renato", device: "PC Desktop", title: "Tabelle e layout ampi per mouse", desc: "Tipografia, spaziatura e tabelle dense ben spaziate su monitor da 24'' con selezione mouse." },
+      "P-08": { id: "P-08", layer: 3, type: "P", persona: "Renato", device: "PC Desktop", title: "Linguaggio neutrale e trasparenza costi", desc: "Regime erogativo, costi e vincoli dichiarati con linguaggio neutrale senza toni paternalistici." },
+
+      "P-09": { id: "P-09", layer: 3, type: "P", persona: "Amina", device: "Smartphone", title: "Plain Language e glosse esplicative", desc: "Terminologia medica e burocratica affiancata da definizioni semplici, glosse ed esempi." },
+      "P-10": { id: "P-10", layer: 3, type: "P", persona: "Amina", device: "Smartphone", title: "Anagrafiche e ruoli sempre visibili", desc: "Identità assistito, ruolo operatore e contatti visibili lungo tutto il percorso multi-profilo." },
+      "P-11": { id: "P-11", layer: 3, type: "P", persona: "Amina", device: "Smartphone", title: "Resilienza mobile a standby e interruzioni", desc: "Web app responsive/PWA tollerante a standby dello schermo e cambi scheda senza log-out improvvisi." },
+
+      "U1-01": { id: "U1-01", layer: 3, type: "U", persona: "Pina", scenario: "Visita diabetologica", title: "Contesto conservato e bus urbano", desc: "Percorso visita ricorrente conserva contesto e propone sedi compatibili con mezzi pubblici." },
+      "U1-02": { id: "U1-02", layer: 3, type: "U", persona: "Pina", scenario: "Visita diabetologica", title: "Errore chiaro senza azzerare form", desc: "Errore esplicita causa, recupero e assistenza senza azzerare i dati inseriti." },
+      
+      "U2-01": { id: "U2-01", layer: 3, type: "U", persona: "Elena", scenario: "Disdetta urgente", title: "Disdetta rapida senza timore di penali", desc: "Procedura in pochissimi clic, distinzione visite ravvicinate, esplicitazione assenza malus ticket." },
+      "U2-02": { id: "U2-02", layer: 3, type: "U", persona: "Elena", scenario: "Disdetta urgente", title: "Notifiche bilaterali concordate", desc: "Aggiornamento immediato e notifica simultanea a caregiver e assistito senza telefonate di conferma." },
+
+      "U3-01": { id: "U3-01", layer: 3, type: "U", persona: "Renato", scenario: "Controllo oculistico", title: "Filtri e selezioni preservati", desc: "Consultazione schede o ritorno indietro non azzerano filtri e criteri già impostati." },
+      "U3-02": { id: "U3-02", layer: 3, type: "U", persona: "Renato", scenario: "Controllo oculistico", title: "Riepilogo organico con tariffa SSN/ALPI", desc: "Riepilogo organico prima della convalida con medico, sede, data, regime contrattuale e costo reale." },
+
+      "U4-01": { id: "U4-01", layer: 3, type: "U", persona: "Amina", scenario: "Fisioterapia all'alba", title: "Ripresa del passo dopo standby", desc: "Interruzioni o aiuti non causano perdita dati; segnalazione passo esatto al rientro." },
+      "U4-02": { id: "U4-02", layer: 3, type: "U", persona: "Amina", scenario: "Fisioterapia all'alba", title: "Riepilogo WhatsApp anti-duplicati", desc: "Riepilogo sintetico condivisibile via chat per coordinare la famiglia ed evitare doppie prenotazioni." },
+
+      // LAYER 4: C
+      "C-01": { id: "C-01", layer: 4, title: "Competenza tecnica minima", origin: "P-01 + P-02 + P-03", desc: "Il servizio deve essere utilizzabile con competenza tecnica minima, azioni visibili e tono rassicurante." },
+      "C-02": { id: "C-02", layer: 4, title: "Supervisione leggera e autorizzata", origin: "P-04 + P-05", desc: "Visibilità e delega devono sostenere una supervisione leggera, autorizzata e non sostitutiva." },
+      "C-03": { id: "C-03", layer: 4, title: "Controllo su visite e disdette", origin: "U1-01 + U2-01", desc: "Prenotazione ricorrente e disdetta devono ridurre passaggi e ambiguità mantenendo il controllo dell'utente." },
+      "C-04": { id: "C-04", layer: 4, title: "Recupero errori e notifiche concordate", origin: "U1-02 + U2-02", desc: "Errori e cambi di stato devono offrire recupero comprensibile e notifiche concordate." },
+      "C-05": { id: "C-05", layer: 4, title: "Identità e conseguenze esplicite", origin: "P-03 + P-04", desc: "Identità, oggetto e conseguenze dell'azione devono essere espliciti per utente diretto e caregiver." },
+      "C-06": { id: "C-06", layer: 4, title: "Spiegazioni progressive e rispetto", origin: "P-06 + P-08", desc: "Spiegazioni progressive devono chiarire termini, regime, costo e conseguenze senza infantilizzare." },
+      "C-07": { id: "C-07", layer: 4, title: "Gerarchia e bersagli ergonomici", origin: "P-02 + P-07", desc: "Gerarchia, leggibilità, spaziatura e dimensione dei bersagli devono supportare vincoli visivi e motori." },
+      "C-08": { id: "C-08", layer: 4, title: "Scelte conservate e riepilogo pre-conferma", origin: "U3-01 + U3-02", desc: "Il sistema deve conservare le scelte durante consultazione e aiuto, quindi mostrare un riepilogo completo prima della conferma." },
+      "C-09": { id: "C-09", layer: 4, title: "Terminologia chiara con mediazione", origin: "P-09 + P-03", desc: "Terminologia e conseguenze precise ma comprensibili, con spiegazioni progressive adatte anche alla mediazione linguistica." },
+      "C-10": { id: "C-10", layer: 4, title: "Confini della delega espliciti", origin: "P-10 + P-04 + P-05", desc: "Identità, ruolo, autorizzazione e confini della delega devono restare espliciti per tutte le forme di assistenza." },
+      "C-11": { id: "C-11", layer: 4, title: "Tolleranza interruzioni mobile", origin: "P-11 + U4-01", desc: "I percorsi da smartphone devono tollerare interruzioni e consentire una ripresa riconoscibile senza perdita di lavoro." },
+      "C-12": { id: "C-12", layer: 4, title: "Conferme condivisibili sicure", origin: "U4-02 + U2-02", desc: "Stati e conferme condivisibili devono coordinare i familiari senza creare duplicazioni o accessi impliciti ai dati." }
+    };
+
+    // ADJACENT LAYER EDGES ONLY (ID->R, R->REQ, REQ->P/U*, P/U*->C)
+    const EDGES = [
+      // ID -> R
+      { from: "ID-01", to: "R-01" },
+      { from: "ID-05", to: "R-01" },
+      { from: "ID-02", to: "R-02" },
+      { from: "ID-03", to: "R-03" },
+      { from: "ID-04", to: "R-03" },
+      { from: "ID-05", to: "R-04" },
+      { from: "ID-08", to: "R-04" },
+      { from: "ID-06", to: "R-05" },
+      { from: "ID-09", to: "R-07" },
+      { from: "ID-10", to: "R-07" },
+      { from: "ID-11", to: "R-08" },
+      { from: "ID-12", to: "R-09" },
+
+      // R -> REQ (1:1)
+      { from: "R-01", to: "REQ-01" },
+      { from: "R-02", to: "REQ-02" },
+      { from: "R-03", to: "REQ-03" },
+      { from: "R-04", to: "REQ-04" },
+      { from: "R-05", to: "REQ-05" },
+      { from: "R-06", to: "REQ-06" },
+      { from: "R-07", to: "REQ-07" },
+      { from: "R-08", to: "REQ-08" },
+      { from: "R-09", to: "REQ-09" },
+
+      // REQ -> P
+      { from: "REQ-01", to: "P-01" },
+      { from: "REQ-04", to: "P-01" },
+      { from: "REQ-03", to: "P-02" },
+      { from: "REQ-03", to: "P-03" },
+      { from: "REQ-04", to: "P-03" },
+      { from: "REQ-06", to: "P-04" },
+      { from: "REQ-07", to: "P-04" },
+      { from: "REQ-06", to: "P-05" },
+      { from: "REQ-03", to: "P-06" },
+      { from: "REQ-03", to: "P-07" },
+      { from: "REQ-03", to: "P-08" },
+      { from: "REQ-03", to: "P-09" },
+      { from: "REQ-09", to: "P-09" },
+      { from: "REQ-07", to: "P-10" },
+      { from: "REQ-08", to: "P-11" },
+
+      // REQ -> U*
+      { from: "REQ-04", to: "U1-01" },
+      { from: "REQ-04", to: "U1-02" },
+      { from: "REQ-04", to: "U2-01" },
+      { from: "REQ-07", to: "U2-02" },
+      { from: "REQ-04", to: "U3-01" },
+      { from: "REQ-08", to: "U3-01" },
+      { from: "REQ-04", to: "U3-02" },
+      { from: "REQ-07", to: "U3-02" },
+      { from: "REQ-08", to: "U4-01" },
+      { from: "REQ-07", to: "U4-02" },
+      { from: "REQ-09", to: "U4-02" },
+
+      // P/U* -> C
+      { from: "P-01", to: "C-01" },
+      { from: "P-02", to: "C-01" },
+      { from: "P-03", to: "C-01" },
+      { from: "P-04", to: "C-02" },
+      { from: "P-05", to: "C-02" },
+      { from: "U1-01", to: "C-03" },
+      { from: "U2-01", to: "C-03" },
+      { from: "U1-02", to: "C-04" },
+      { from: "U2-02", to: "C-04" },
+      { from: "P-03", to: "C-05" },
+      { from: "P-04", to: "C-05" },
+      { from: "P-06", to: "C-06" },
+      { from: "P-08", to: "C-06" },
+      { from: "P-02", to: "C-07" },
+      { from: "P-07", to: "C-07" },
+      { from: "U3-01", to: "C-08" },
+      { from: "U3-02", to: "C-08" },
+      { from: "P-09", to: "C-09" },
+      { from: "P-03", to: "C-09" },
+      { from: "P-10", to: "C-10" },
+      { from: "P-04", to: "C-10" },
+      { from: "P-05", to: "C-10" },
+      { from: "P-11", to: "C-11" },
+      { from: "U4-01", to: "C-11" },
+      { from: "U4-02", to: "C-12" },
+      { from: "U2-02", to: "C-12" }
+    ];
+
+    // Build Adjacency Map
+    const INCOMING = {};
+    const OUTGOING = {};
+    Object.keys(NODES).forEach(id => {
+      INCOMING[id] = [];
+      OUTGOING[id] = [];
+    });
+    EDGES.forEach(e => {
+      if (OUTGOING[e.from]) OUTGOING[e.from].push(e.to);
+      if (INCOMING[e.to]) INCOMING[e.to].push(e.from);
+    });
+
+    // ==========================================
+    // 2. STATE & HELPER FUNCTIONS
+    // ==========================================
+    let selectedC = null;
+    let selectedNode = null;
+    let viewMode = 'all'; // 'all' or 'isolated'
+
+    // Compute all ancestors of a target node backwards
+    function getAncestors(targetId) {
+      const ancestors = new Set();
+      const queue = [targetId];
+      while (queue.length > 0) {
+        const curr = queue.shift();
+        const parents = INCOMING[curr] || [];
+        parents.forEach(p => {
+          if (!ancestors.has(p)) {
+            ancestors.add(p);
+            queue.push(p);
+          }
+        });
+      }
+      return ancestors;
+    }
+
+    // Compute all descendants forward
+    function getDescendants(targetId) {
+      const descendants = new Set();
+      const queue = [targetId];
+      while (queue.length > 0) {
+        const curr = queue.shift();
+        const children = OUTGOING[curr] || [];
+        children.forEach(c => {
+          if (!descendants.has(c)) {
+            descendants.add(c);
+            queue.push(c);
+          }
+        });
+      }
+      return descendants;
+    }
+
+    // ==========================================
+    // 3. UI RENDERING
+    // ==========================================
+    function initUI() {
+      renderBubbles();
+      renderCards();
+      setTimeout(drawSvgConnections, 100);
+      window.addEventListener('resize', drawSvgConnections);
+    }
+
+    function renderBubbles() {
+      const container = document.getElementById('bubbles-container');
+      container.innerHTML = '';
+      
+      const cKeys = Object.keys(NODES).filter(k => NODES[k].layer === 4).sort();
+      cKeys.forEach(cid => {
+        const node = NODES[cid];
+        const btn = document.createElement('button');
+        btn.className = 'bubble-btn';
+        btn.id = `bubble-${cid}`;
+        btn.onclick = () => selectC(cid);
+
+        btn.innerHTML = `
+          <span><b>${cid}</b></span>
+          <span class="bubble-desc-short" title="${node.title}">${node.title}</span>
+        `;
+        container.appendChild(btn);
+      });
+    }
+
+    function renderCards() {
+      const lists = {
+        0: document.getElementById('list-layer-0'),
+        1: document.getElementById('list-layer-1'),
+        2: document.getElementById('list-layer-2'),
+        3: document.getElementById('list-layer-3'),
+        4: document.getElementById('list-layer-4'),
+      };
+
+      Object.keys(lists).forEach(l => lists[l].innerHTML = '');
+
+      Object.values(NODES).forEach(node => {
+        const card = document.createElement('div');
+        card.className = 'node-card';
+        card.id = `card-${node.id}`;
+        card.dataset.id = node.id;
+        card.dataset.layer = node.layer;
+        if (node.type) card.dataset.type = node.type;
+
+        // Tag styling
+        let tagClass = 'id-tag';
+        if (node.layer === 1) tagClass = 'r-tag';
+        else if (node.layer === 2) tagClass = 'req-tag';
+        else if (node.layer === 3) tagClass = node.type === 'P' ? 'p-tag' : 'u-tag';
+        else if (node.layer === 4) tagClass = 'c-tag';
+
+        let metaText = '';
+        if (node.urg) metaText = node.urg.split(' ')[0];
+        else if (node.prio) metaText = `Prio: ${node.prio}`;
+        else if (node.persona) metaText = `${node.persona} (${node.device || 'Scenario'})`;
+        else if (node.origin) metaText = node.origin;
+
+        card.innerHTML = `
+          <div class="card-top">
+            <span class="card-id ${tagClass}">${node.id}</span>
+            <span class="card-meta">${metaText}</span>
+          </div>
+          <div class="card-title">${node.title}</div>
+          <div class="card-desc-preview">${node.desc}</div>
+        `;
+
+        card.onclick = (e) => {
+          e.stopPropagation();
+          if (node.layer === 4) {
+            selectC(node.id);
+          } else {
+            inspectNode(node.id);
+          }
+        };
+
+        lists[node.layer].appendChild(card);
+      });
+    }
+
+    // ==========================================
+    // 4. INTERACTION & SELECTION
+    // ==========================================
+    function selectC(cid) {
+      if (selectedC === cid) {
+        resetSelection();
+        return;
+      }
+
+      selectedC = cid;
+      selectedNode = cid;
+
+      // Update bubbles active state
+      document.querySelectorAll('.bubble-btn').forEach(b => b.classList.remove('active'));
+      const activeBtn = document.getElementById(`bubble-${cid}`);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      applyFilter();
+      inspectNode(cid, false);
+    }
+
+    function resetSelection() {
+      selectedC = null;
+      selectedNode = null;
+      document.querySelectorAll('.bubble-btn').forEach(b => b.classList.remove('active'));
+      closeDrawer();
+
+      // Reset cards visibility
+      document.querySelectorAll('.node-card').forEach(card => {
+        card.classList.remove('dimmed', 'highlighted', 'active-target');
+        card.style.display = 'block';
+      });
+
+      drawSvgConnections();
+    }
+
+    function setViewMode(mode) {
+      viewMode = mode;
+      document.getElementById('btn-view-all').classList.toggle('active', mode === 'all');
+      document.getElementById('btn-view-isolated').classList.toggle('active', mode === 'isolated');
+      if (selectedC) {
+        applyFilter();
+      }
+    }
+
+    function applyFilter() {
+      if (!selectedC) {
+        resetSelection();
+        return;
+      }
+
+      const activeSet = getAncestors(selectedC);
+      activeSet.add(selectedC);
+
+      document.querySelectorAll('.node-card').forEach(card => {
+        const id = card.dataset.id;
+        const isActive = activeSet.has(id);
+
+        if (isActive) {
+          card.classList.remove('dimmed');
+          card.classList.add('highlighted');
+          card.classList.toggle('active-target', id === selectedC);
+          card.style.display = 'block';
+        } else {
+          card.classList.remove('highlighted', 'active-target');
+          if (viewMode === 'isolated') {
+            card.style.display = 'none';
+          } else {
+            card.style.display = 'block';
+            card.classList.add('dimmed');
+          }
+        }
+      });
+
+      setTimeout(drawSvgConnections, 50);
+    }
+
+    // ==========================================
+    // 5. SVG CONNECTIONS RENDERING
+    // ==========================================
+    function drawSvgConnections() {
+      const svg = document.getElementById('svg-connections');
+      const wrapper = document.getElementById('matrix-wrapper');
+      svg.innerHTML = '';
+
+      const wrapperRect = wrapper.getBoundingClientRect();
+      const scrollLeft = wrapper.scrollLeft;
+      const scrollTop = wrapper.scrollTop;
+
+      svg.setAttribute('width', wrapper.scrollWidth);
+      svg.setAttribute('height', wrapper.scrollHeight);
+
+      const activeSet = selectedC ? getAncestors(selectedC) : null;
+      if (activeSet) activeSet.add(selectedC);
+
+      EDGES.forEach(edge => {
+        const fromCard = document.getElementById(`card-${edge.from}`);
+        const toCard = document.getElementById(`card-${edge.to}`);
+
+        if (!fromCard || !toCard) return;
+
+        // Skip if either card is hidden in isolated mode
+        if (fromCard.style.display === 'none' || toCard.style.display === 'none') return;
+
+        const fromRect = fromCard.getBoundingClientRect();
+        const toRect = toCard.getBoundingClientRect();
+
+        // Coordinates relative to SVG wrapper canvas
+        const x1 = fromRect.right - wrapperRect.left + scrollLeft;
+        const y1 = fromRect.top + fromRect.height / 2 - wrapperRect.top + scrollTop;
+        const x2 = toRect.left - wrapperRect.left + scrollLeft;
+        const y2 = toRect.top + toRect.height / 2 - wrapperRect.top + scrollTop;
+
+        const isActive = activeSet && activeSet.has(edge.from) && activeSet.has(edge.to);
+
+        // In active mode, skip drawing inactive edges to keep it super clean!
+        if (selectedC && !isActive) return;
+
+        const dx = (x2 - x1) * 0.5;
+        const pathData = `M ${x1} ${y1} C ${x1 + dx} ${y1}, ${x2 - dx} ${y2}, ${x2} ${y2}`;
+
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', pathData);
+        path.setAttribute('class', `connector ${isActive ? 'active' : 'default'}`);
+
+        if (isActive) {
+          const targetNode = NODES[edge.to];
+          let color = '#a855f7';
+          if (targetNode.layer === 1) color = '#f97316';
+          else if (targetNode.layer === 2) color = '#eab308';
+          else if (targetNode.layer === 3) color = targetNode.type === 'P' ? '#22c55e' : '#38bdf8';
+          else if (targetNode.layer === 4) color = '#c084fc';
+
+          path.style.stroke = color;
+        }
+
+        svg.appendChild(path);
+      });
+    }
+
+    // ==========================================
+    // 6. INSPECTOR DRAWER
+    // ==========================================
+    function inspectNode(id, openDrawerUI = true) {
+      const node = NODES[id];
+      if (!node) return;
+
+      const drawer = document.getElementById('drawer');
+      const drawerId = document.getElementById('drawer-id');
+      const drawerLayer = document.getElementById('drawer-layer');
+      const drawerExtra = document.getElementById('drawer-extra');
+      const drawerTitle = document.getElementById('drawer-title');
+      const drawerBody = document.getElementById('drawer-body');
+      const drawerIncoming = document.getElementById('drawer-incoming');
+      const drawerOutgoing = document.getElementById('drawer-outgoing');
+
+      drawerId.innerText = node.id;
+      
+      let layerLabels = ['Layer 0: Criticità', 'Layer 1: Raccomandazione', 'Layer 2: Requisito Design', 'Layer 3: Implicazione Scenario', 'Layer 4: Requisito Cast'];
+      drawerLayer.innerText = layerLabels[node.layer];
+
+      let extra = '';
+      if (node.urg) extra = `Urgenza: ${node.urg} (Fonte: ${node.source || 'N/D'})`;
+      else if (node.prio) extra = `Priorità: ${node.prio}`;
+      else if (node.persona) extra = `Persona: ${node.persona} | Device: ${node.device || 'PC/Mobile'}`;
+      else if (node.origin) extra = `Origine: ${node.origin}`;
+      drawerExtra.innerText = extra;
+
+      drawerTitle.innerText = node.title;
+      drawerBody.innerText = node.desc;
+
+      // Incoming badges
+      drawerIncoming.innerHTML = '';
+      const parents = INCOMING[id] || [];
+      if (parents.length === 0) {
+        drawerIncoming.innerHTML = '<span style="color: #64748b; font-size: 0.8rem;">Nessun predecessore diretto (es. radice / segmento B).</span>';
+      } else {
+        parents.forEach(pid => {
+          const badge = document.createElement('span');
+          badge.className = 'rel-badge-item';
+          badge.innerHTML = `<b>${pid}</b> ${NODES[pid].title}`;
+          badge.onclick = () => inspectNode(pid);
+          drawerIncoming.appendChild(badge);
+        });
+      }
+
+      // Outgoing badges
+      drawerOutgoing.innerHTML = '';
+      const children = OUTGOING[id] || [];
+      if (children.length === 0) {
+        drawerOutgoing.innerHTML = '<span style="color: #64748b; font-size: 0.8rem;">Nessun successore (Requisito di fine catena).</span>';
+      } else {
+        children.forEach(cid => {
+          const badge = document.createElement('span');
+          badge.className = 'rel-badge-item';
+          badge.innerHTML = `<b>${cid}</b> ${NODES[cid].title}`;
+          badge.onclick = () => inspectNode(cid);
+          drawerOutgoing.appendChild(badge);
+        });
+      }
+
+      if (openDrawerUI) {
+        drawer.classList.add('open');
+      }
+    }
+
+    function closeDrawer() {
+      document.getElementById('drawer').classList.remove('open');
+    }
+
+    // Run on load
+    window.onload = initUI;
+  </script>
+</body>
+</html>
