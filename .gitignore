@@ -1,7 +1,8 @@
 .DS_Store
 
-# Local knowledge base and future handoff notes
+# Local knowledge base and agent operating notes
 /wiki/
+/AGENTS.md
 HANDOFF.md
 
 # LaTeX build output
