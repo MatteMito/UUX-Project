@@ -1,5 +1,9 @@
 .DS_Store
 
+# Local knowledge base and future handoff notes
+/wiki/
+HANDOFF.md
+
 # LaTeX build output
 /build/
 *.aux
