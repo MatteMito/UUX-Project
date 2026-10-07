@@ -1,0 +1,715 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2800 1680" width="2800" height="1680">
+<defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap');
+      text { font-family: 'Inter', system-ui, sans-serif; }
+      .title-main { font-size: 25px; font-weight: 800; fill: #0f172a; }
+      .title-sub { font-size: 13.5px; font-weight: 500; fill: #475569; }
+      .lane-title { font-size: 17px; font-weight: 700; }
+      .lane-sub { font-size: 12px; font-weight: 500; fill: #64748b; }
+      .phase-pill { font-size: 11px; font-weight: 800; letter-spacing: 0.08em; }
+      .phase-title { font-size: 14.5px; font-weight: 700; fill: #1e293b; }
+      .card-title { font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .card-body { font-size: 11.5px; font-weight: 400; fill: #334155; line-height: 1.45; }
+      .badge-txt { font-size: 10px; font-weight: 700; }
+      .line-label { font-size: 11px; font-weight: 700; letter-spacing: 0.05em; }
+    </style>
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+    <filter id="header-shadow" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.04"/>
+    </filter>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0284c7" />
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ea580c" />
+    </marker>
+    </defs>
+<rect width="2800" height="1680" fill="#f8fafc" />
+
+    <g filter="url(#header-shadow)">
+      <rect x="40" y="30" width="2720" height="160" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    </g>
+    <g transform="translate(70, 68)">
+      <rect x="0" y="0" width="165" height="24" rx="6" fill="#e0f2fe" />
+      <text x="82" y="16" class="badge-txt" fill="#0369a1" text-anchor="middle">HPHP DESIGN PROPOSAL</text>
+      
+      <rect x="175" y="0" width="150" height="24" rx="6" fill="#fef3c7" />
+      <text x="250" y="16" class="badge-txt" fill="#b45309" text-anchor="middle">SERVICE BLUEPRINT 03</text>
+
+      <rect x="335" y="0" width="165" height="24" rx="6" fill="#dcfce7" />
+      <text x="417" y="16" class="badge-txt" fill="#15803d" text-anchor="middle">STRADA B: SWIMLANES</text>
+
+      <text x="0" y="58" class="title-main">Delega Piena Asincrona (Caregiver Proxy Mode)</text>
+      <text x="0" y="85" class="title-sub">Scenario: Elena opera da Milano per la madre Pina non presente | Requisiti: REQ-06, P-04, P-05, C-02, C-10</text>
+    </g>
+    
+
+    <g transform="translate(2030, 58)">
+      <rect x="0" y="0" width="700" height="105" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="20" y="24" font-size="12" font-weight="700" fill="#334155">LEGENDA CORSIA E LIVELLI OPERATIVI</text>
+      
+      <rect x="20" y="38" width="14" height="14" rx="3" fill="#8b5cf6" />
+      <text x="40" y="50" font-size="11" font-weight="600" fill="#334155">Physical Evidence</text>
+      
+      <rect x="180" y="38" width="14" height="14" rx="3" fill="#0284c7" />
+      <text x="200" y="50" font-size="11" font-weight="600" fill="#334155">Customer Actions (Utente/Caregiver)</text>
+      
+      <rect x="440" y="38" width="14" height="14" rx="3" fill="#16a34a" />
+      <text x="460" y="50" font-size="11" font-weight="600" fill="#334155">Frontstage Actions (UI HPHP)</text>
+      
+      <rect x="20" y="66" width="14" height="14" rx="3" fill="#d97706" />
+      <text x="40" y="78" font-size="11" font-weight="600" fill="#334155">Backstage Actions (Server HPHP)</text>
+      
+      <rect x="260" y="66" width="14" height="14" rx="3" fill="#dc2626" />
+      <text x="280" y="78" font-size="11" font-weight="600" fill="#334155">Support Processes (STS / CUP / PagoPA)</text>
+
+      <line x1="530" y1="73" x2="570" y2="73" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="5 3"/>
+      <text x="578" y="77" font-size="10.5" font-weight="700" fill="#dc2626">Line of Visibility</text>
+    </g>
+    
+
+        <g transform="translate(410, 170)">
+          <rect x="0" y="0" width="380" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+          <rect x="8" y="8" width="68" height="26" rx="5" fill="#f1f5f9" />
+          <text x="42" y="25" class="phase-pill" fill="#475569" text-anchor="middle">FASE 01</text>
+          <text x="86" y="26" class="phase-title">Accesso SPID Caregiver</text>
+        </g>
+        
+
+        <g transform="translate(808, 170)">
+          <rect x="0" y="0" width="380" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+          <rect x="8" y="8" width="68" height="26" rx="5" fill="#f1f5f9" />
+          <text x="42" y="25" class="phase-pill" fill="#475569" text-anchor="middle">FASE 02</text>
+          <text x="86" y="26" class="phase-title">Selezione Assistito &amp; Switch</text>
+        </g>
+        
+
+        <g transform="translate(1206, 170)">
+          <rect x="0" y="0" width="380" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+          <rect x="8" y="8" width="68" height="26" rx="5" fill="#f1f5f9" />
+          <text x="42" y="25" class="phase-pill" fill="#475569" text-anchor="middle">FASE 03</text>
+          <text x="86" y="26" class="phase-title">Verifica Deleghe su Anagrafe</text>
+        </g>
+        
+
+        <g transform="translate(1604, 170)">
+          <rect x="0" y="0" width="380" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+          <rect x="8" y="8" width="68" height="26" rx="5" fill="#f1f5f9" />
+          <text x="42" y="25" class="phase-pill" fill="#475569" text-anchor="middle">FASE 04</text>
+          <text x="86" y="26" class="phase-title">Esecuzione Task in Delega</text>
+        </g>
+        
+
+        <g transform="translate(2002, 170)">
+          <rect x="0" y="0" width="380" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+          <rect x="8" y="8" width="68" height="26" rx="5" fill="#f1f5f9" />
+          <text x="42" y="25" class="phase-pill" fill="#475569" text-anchor="middle">FASE 05</text>
+          <text x="86" y="26" class="phase-title">Conferma con Trasparenza Legale</text>
+        </g>
+        
+
+        <g transform="translate(2400, 170)">
+          <rect x="0" y="0" width="380" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+          <rect x="8" y="8" width="68" height="26" rx="5" fill="#f1f5f9" />
+          <text x="42" y="25" class="phase-pill" fill="#475569" text-anchor="middle">FASE 06</text>
+          <text x="86" y="26" class="phase-title">Notifica Bilaterale &amp; Audit</text>
+        </g>
+        
+
+        <rect x="40" y="220" width="2720" height="240" rx="12" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1.2"/>
+        <g transform="translate(55, 235)">
+          <rect x="0" y="0" width="310" height="210" rx="10" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.5"/>
+          <rect x="15" y="16" width="36" height="36" rx="8" fill="#f3e8ff"/>
+          <circle cx="33" cy="34" r="8" fill="#7e22ce"/>
+          <text x="62" y="32" class="lane-title" fill="#7e22ce">Physical Evidence</text>
+          <text x="62" y="49" class="lane-sub">Touchpoint tangibili e digitali</text>
+          <line x1="15" y1="68" x2="295" y2="68" stroke="#f1f5f9" stroke-width="1"/>
+          <text x="15" y="95" font-size="11" fill="#64748b" font-weight="500">Separatori operativi:</text>
+          <text x="15" y="115" font-size="10.5" fill="#475569">
+            • Confini di sistema
+          </text>
+        </g>
+        
+
+        <rect x="40" y="476" width="2720" height="240" rx="12" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.2"/>
+        <g transform="translate(55, 491)">
+          <rect x="0" y="0" width="310" height="210" rx="10" fill="#ffffff" stroke="#bae6fd" stroke-width="1.5"/>
+          <rect x="15" y="16" width="36" height="36" rx="8" fill="#e0f2fe"/>
+          <circle cx="33" cy="34" r="8" fill="#0369a1"/>
+          <text x="62" y="32" class="lane-title" fill="#0369a1">Customer Actions</text>
+          <text x="62" y="49" class="lane-sub">Azioni Utente Diretto / Caregiver</text>
+          <line x1="15" y1="68" x2="295" y2="68" stroke="#f1f5f9" stroke-width="1"/>
+          <text x="15" y="95" font-size="11" fill="#64748b" font-weight="500">Separatori operativi:</text>
+          <text x="15" y="115" font-size="10.5" fill="#475569">
+            • Linea di Interazione (sotto)
+          </text>
+        </g>
+        
+
+        <rect x="40" y="732" width="2720" height="240" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.2"/>
+        <g transform="translate(55, 747)">
+          <rect x="0" y="0" width="310" height="210" rx="10" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
+          <rect x="15" y="16" width="36" height="36" rx="8" fill="#dcfce7"/>
+          <circle cx="33" cy="34" r="8" fill="#15803d"/>
+          <text x="62" y="32" class="lane-title" fill="#15803d">Frontstage Actions</text>
+          <text x="62" y="49" class="lane-sub">Interfaccia HPHP e feedback visivi</text>
+          <line x1="15" y1="68" x2="295" y2="68" stroke="#f1f5f9" stroke-width="1"/>
+          <text x="15" y="95" font-size="11" fill="#64748b" font-weight="500">Separatori operativi:</text>
+          <text x="15" y="115" font-size="10.5" fill="#475569">
+            • Linea di Visibilità (sotto)
+          </text>
+        </g>
+        
+
+        <rect x="40" y="988" width="2720" height="240" rx="12" fill="#fffbeb" stroke="#fde68a" stroke-width="1.2"/>
+        <g transform="translate(55, 1003)">
+          <rect x="0" y="0" width="310" height="210" rx="10" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+          <rect x="15" y="16" width="36" height="36" rx="8" fill="#fef3c7"/>
+          <circle cx="33" cy="34" r="8" fill="#b45309"/>
+          <text x="62" y="32" class="lane-title" fill="#b45309">Backstage Actions</text>
+          <text x="62" y="49" class="lane-sub">Server HPHP e logiche applicative</text>
+          <line x1="15" y1="68" x2="295" y2="68" stroke="#f1f5f9" stroke-width="1"/>
+          <text x="15" y="95" font-size="11" fill="#64748b" font-weight="500">Separatori operativi:</text>
+          <text x="15" y="115" font-size="10.5" fill="#475569">
+            • Interazione Interna (sotto)
+          </text>
+        </g>
+        
+
+        <rect x="40" y="1244" width="2720" height="240" rx="12" fill="#fef2f2" stroke="#fecaca" stroke-width="1.2"/>
+        <g transform="translate(55, 1259)">
+          <rect x="0" y="0" width="310" height="210" rx="10" fill="#ffffff" stroke="#fecaca" stroke-width="1.5"/>
+          <rect x="15" y="16" width="36" height="36" rx="8" fill="#fee2e2"/>
+          <circle cx="33" cy="34" r="8" fill="#b91c1c"/>
+          <text x="62" y="32" class="lane-title" fill="#b91c1c">Support Processes</text>
+          <text x="62" y="49" class="lane-sub">Sistemi regionali: STS, CUP, PagoPA</text>
+          <line x1="15" y1="68" x2="295" y2="68" stroke="#f1f5f9" stroke-width="1"/>
+          <text x="15" y="95" font-size="11" fill="#64748b" font-weight="500">Separatori operativi:</text>
+          <text x="15" y="115" font-size="10.5" fill="#475569">
+            • Confini di sistema
+          </text>
+        </g>
+        
+
+    <line x1="390" y1="724" x2="2745" y2="724" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="8 6"/>
+    <rect x="395" y="712" width="165" height="24" rx="5" fill="#0284c7"/>
+    <text x="477" y="728" class="line-label" fill="#ffffff" text-anchor="middle">LINE OF INTERACTION</text>
+    
+
+    <line x1="390" y1="980" x2="2745" y2="980" stroke="#dc2626" stroke-width="3" stroke-dasharray="10 5"/>
+    <rect x="395" y="967" width="160" height="26" rx="5" fill="#dc2626"/>
+    <text x="475" y="984" class="line-label" fill="#ffffff" text-anchor="middle">LINE OF VISIBILITY</text>
+    
+
+    <line x1="390" y1="1236" x2="2745" y2="1236" stroke="#475569" stroke-width="2.5" stroke-dasharray="8 6"/>
+    <rect x="395" y="1224" width="215" height="24" rx="5" fill="#475569"/>
+    <text x="502" y="1240" class="line-label" fill="#ffffff" text-anchor="middle">LINE OF INTERNAL INTERACTION</text>
+    
+
+            <g filter="url(#card-shadow)" transform="translate(410, 235)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="126.5" height="20" rx="5" fill="#f3e8ff"/>
+              <text x="22" y="28" class="badge-txt" fill="#7e22ce">EVIDENZA DIGITALE</text>
+              <text x="14" y="52" class="card-title">Laptop Caregiver in Ufficio</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#7e22ce"/>
+<text x="27" y="78" class="card-body">Elena lavora da Milano durante la pausa pranzo.</text>
+<circle cx="18" cy="94" r="2.5" fill="#7e22ce"/>
+<text x="27" y="98" class="card-body">Accesso sicuro tramite SPID / CIE personale.</text>
+<circle cx="18" cy="114" r="2.5" fill="#7e22ce"/>
+<text x="27" y="118" class="card-body">Nessun bisogno di conoscere password o SPID</text>
+<text x="27" y="134" class="card-body">di Pina.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(808, 235)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="133.0" height="20" rx="5" fill="#fef3c7"/>
+              <text x="22" y="28" class="badge-txt" fill="#b45309">EVIDENZA A SCHERMO</text>
+              <text x="14" y="52" class="card-title">Cruscotto 'Chi Assisto'</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#7e22ce"/>
+<text x="27" y="78" class="card-body">Sezione dedicata con elenco dei familiari assistiti.</text>
+<circle cx="18" cy="94" r="2.5" fill="#7e22ce"/>
+<text x="27" y="98" class="card-body">Scheda Giuseppina Ferretti con badge 'Delega</text>
+<text x="27" y="114" class="card-body">Attiva'.</text>
+<circle cx="18" cy="130" r="2.5" fill="#7e22ce"/>
+<text x="27" y="134" class="card-body">Pulsante evidente: 'Opera per conto di Pina'.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1206, 235)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="133.0" height="20" rx="5" fill="#fef3c7"/>
+              <text x="22" y="28" class="badge-txt" fill="#b45309">EVIDENZA A SCHERMO</text>
+              <text x="14" y="52" class="card-title">Banner Persistente Giallo</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#7e22ce"/>
+<text x="27" y="78" class="card-body">Banner color ambra fisso in cima a tutte le</text>
+<text x="27" y="94" class="card-body">pagine.</text>
+<circle cx="18" cy="110" r="2.5" fill="#7e22ce"/>
+<text x="27" y="114" class="card-body">Dicitura chiara: 'Stai operando per conto di</text>
+<text x="27" y="130" class="card-body">Giuseppina'.</text>
+<circle cx="18" cy="146" r="2.5" fill="#7e22ce"/>
+<text x="27" y="150" class="card-body">Tasto rapido sempre visibile: 'Torna al tuo</text>
+<text x="27" y="166" class="card-body">profilo'.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1604, 235)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="133.0" height="20" rx="5" fill="#f3e8ff"/>
+              <text x="22" y="28" class="badge-txt" fill="#7e22ce">EVIDENZA A SCHERMO</text>
+              <text x="14" y="52" class="card-title">Ambiente Operativo Madre</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#7e22ce"/>
+<text x="27" y="78" class="card-body">Caricamento automatico prescrizioni NRE di Pina.</text>
+<circle cx="18" cy="94" r="2.5" fill="#7e22ce"/>
+<text x="27" y="98" class="card-body">Selezione struttura e orario compatibile.</text>
+<circle cx="18" cy="114" r="2.5" fill="#7e22ce"/>
+<text x="27" y="118" class="card-body">Dati personali e anagrafici di Elena non visibili.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2002, 235)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="133.0" height="20" rx="5" fill="#f3e8ff"/>
+              <text x="22" y="28" class="badge-txt" fill="#7e22ce">EVIDENZA A SCHERMO</text>
+              <text x="14" y="52" class="card-title">Riepilogo Giuridico a 2 Nomi</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#7e22ce"/>
+<text x="27" y="78" class="card-body">Scheda con esplicitazione: Titolare vs Esecutore.</text>
+<circle cx="18" cy="94" r="2.5" fill="#7e22ce"/>
+<text x="27" y="98" class="card-body">Dicitura: 'Prenotato da Elena Ferretti per Giuseppina'.</text>
+<circle cx="18" cy="114" r="2.5" fill="#7e22ce"/>
+<text x="27" y="118" class="card-body">Firma digitale istituzionale della transazione.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2400, 235)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="152.5" height="20" rx="5" fill="#f3e8ff"/>
+              <text x="22" y="28" class="badge-txt" fill="#7e22ce">EVIDENZA MULTI-DEVICE</text>
+              <text x="14" y="52" class="card-title">SMS a Pina &amp; Push ad Elena</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#7e22ce"/>
+<text x="27" y="78" class="card-body">SMS immediato sul cellulare di Pina a Correggio.</text>
+<circle cx="18" cy="94" r="2.5" fill="#7e22ce"/>
+<text x="27" y="98" class="card-body">Notifica push e ricevuta PDF per Elena a Milano.</text>
+<circle cx="18" cy="114" r="2.5" fill="#7e22ce"/>
+<text x="27" y="118" class="card-body">Sincronizzazione automatica su entrambi i calendari.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(410, 491)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="152.5" height="20" rx="5" fill="#ffedd5"/>
+              <text x="22" y="28" class="badge-txt" fill="#c2410c">ELENA (CAREGIVER 46a)</text>
+              <text x="14" y="52" class="card-title">Autenticazione Personale</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#0369a1"/>
+<text x="27" y="78" class="card-body">Elena accede a HPHP con le proprie credenziali.</text>
+<circle cx="18" cy="94" r="2.5" fill="#0369a1"/>
+<text x="27" y="98" class="card-body">Autenticazione forte SPID di secondo livello.</text>
+<circle cx="18" cy="114" r="2.5" fill="#0369a1"/>
+<text x="27" y="118" class="card-body">Entra nel proprio spazio personale da cittadina.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(808, 491)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="152.5" height="20" rx="5" fill="#ffedd5"/>
+              <text x="22" y="28" class="badge-txt" fill="#c2410c">ELENA (CAREGIVER 46a)</text>
+              <text x="14" y="52" class="card-title">Switch Profilo per Pina</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#0369a1"/>
+<text x="27" y="78" class="card-body">Accede all'area 'Chi Assisto'.</text>
+<circle cx="18" cy="94" r="2.5" fill="#0369a1"/>
+<text x="27" y="98" class="card-body">Seleziona la scheda della madre Pina.</text>
+<circle cx="18" cy="114" r="2.5" fill="#0369a1"/>
+<text x="27" y="118" class="card-body">Attiva la modalità 'Delega Piena Asincrona'.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1206, 491)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="152.5" height="20" rx="5" fill="#ffedd5"/>
+              <text x="22" y="28" class="badge-txt" fill="#c2410c">ELENA (CAREGIVER 46a)</text>
+              <text x="14" y="52" class="card-title">Verifica Contesto di Delega</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#0369a1"/>
+<text x="27" y="78" class="card-body">Nota il banner persistente di sicurezza attivo.</text>
+<circle cx="18" cy="94" r="2.5" fill="#0369a1"/>
+<text x="27" y="98" class="card-body">Ha la certezza di operare sulla cartella della</text>
+<text x="27" y="114" class="card-body">madre.</text>
+<circle cx="18" cy="130" r="2.5" fill="#0369a1"/>
+<text x="27" y="134" class="card-body">Non rischia di prenotare per errore a proprio</text>
+<text x="27" y="150" class="card-body">nome.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1604, 491)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="152.5" height="20" rx="5" fill="#ffedd5"/>
+              <text x="22" y="28" class="badge-txt" fill="#c2410c">ELENA (CAREGIVER 46a)</text>
+              <text x="14" y="52" class="card-title">Completamento del Task</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#0369a1"/>
+<text x="27" y="78" class="card-body">Seleziona la visita diabetologica prescritta</text>
+<text x="27" y="94" class="card-body">a Pina.</text>
+<circle cx="18" cy="110" r="2.5" fill="#0369a1"/>
+<text x="27" y="114" class="card-body">Sceglie la sede di Correggio (la più vicina</text>
+<text x="27" y="130" class="card-body">per la madre).</text>
+<circle cx="18" cy="146" r="2.5" fill="#0369a1"/>
+<text x="27" y="150" class="card-body">Imposta l'orario delle 10:30 evitando l'ora</text>
+<text x="27" y="166" class="card-body">di punta.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2002, 491)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="152.5" height="20" rx="5" fill="#ffedd5"/>
+              <text x="22" y="28" class="badge-txt" fill="#c2410c">ELENA (CAREGIVER 46a)</text>
+              <text x="14" y="52" class="card-title">Validazione Legale &amp; Invio</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#0369a1"/>
+<text x="27" y="78" class="card-body">Rivede il riepilogo con i dati congiunti.</text>
+<circle cx="18" cy="94" r="2.5" fill="#0369a1"/>
+<text x="27" y="98" class="card-body">Dichiara formalmente di agire su delega sanitaria.</text>
+<circle cx="18" cy="114" r="2.5" fill="#0369a1"/>
+<text x="27" y="118" class="card-body">Preme 'Conferma prenotazione in delega'.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2400, 491)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="94.0" height="20" rx="5" fill="#dcfce7"/>
+              <text x="22" y="28" class="badge-txt" fill="#15803d">ELENA &amp; PINA</text>
+              <text x="14" y="52" class="card-title">Trasparenza Bilaterale</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#0369a1"/>
+<text x="27" y="78" class="card-body">Elena scarica il promemoria e torna al suo profilo.</text>
+<circle cx="18" cy="94" r="2.5" fill="#0369a1"/>
+<text x="27" y="98" class="card-body">Pina a casa riceve l'SMS: 'Elena ha prenotato</text>
+<text x="27" y="114" class="card-body">la visita'.</text>
+<circle cx="18" cy="130" r="2.5" fill="#0369a1"/>
+<text x="27" y="134" class="card-body">Pina è informata e serena senza dover intervenire.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(410, 747)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="120.0" height="20" rx="5" fill="#dcfce7"/>
+              <text x="22" y="28" class="badge-txt" fill="#15803d">UI HPHP FRONTEND</text>
+              <text x="14" y="52" class="card-title">Accesso Unico Caregiver</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#15803d"/>
+<text x="27" y="78" class="card-body">Riconoscimento automatico del ruolo di caregiver</text>
+<text x="27" y="94" class="card-body">familiare.</text>
+<circle cx="18" cy="110" r="2.5" fill="#15803d"/>
+<text x="27" y="114" class="card-body">Cruscotto iniziale con vista unificata dei propri</text>
+<text x="27" y="130" class="card-body">compiti.</text>
+<circle cx="18" cy="146" r="2.5" fill="#15803d"/>
+<text x="27" y="150" class="card-body">Accesso diretto alla sezione 'Chi Assisto' dal</text>
+<text x="27" y="166" class="card-body">menu.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(808, 747)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="120.0" height="20" rx="5" fill="#dcfce7"/>
+              <text x="22" y="28" class="badge-txt" fill="#15803d">UI HPHP FRONTEND</text>
+              <text x="14" y="52" class="card-title">Visualizzazione Stato Deleghe</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#15803d"/>
+<text x="27" y="78" class="card-body">Schede sintetiche per ciascun familiare assistito</text>
+<text x="27" y="94" class="card-body">(REQ-06).</text>
+<circle cx="18" cy="110" r="2.5" fill="#15803d"/>
+<text x="27" y="114" class="card-body">Indicazione dei permessi attivi (prenotazione,</text>
+<text x="27" y="130" class="card-body">FSE, pagamenti).</text>
+<circle cx="18" cy="146" r="2.5" fill="#15803d"/>
+<text x="27" y="150" class="card-body">Pulsante con stato 'Attiva sessione delegata'.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1206, 747)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="120.0" height="20" rx="5" fill="#dcfce7"/>
+              <text x="22" y="28" class="badge-txt" fill="#15803d">UI HPHP FRONTEND</text>
+              <text x="14" y="52" class="card-title">Attivazione Banner Persistente</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#15803d"/>
+<text x="27" y="78" class="card-body">Applicazione banner persistente cromatico ad</text>
+<text x="27" y="94" class="card-body">alto contrasto (P-04).</text>
+<circle cx="18" cy="110" r="2.5" fill="#15803d"/>
+<text x="27" y="114" class="card-body">Modifica dinamica del contesto applicativo globale.</text>
+<circle cx="18" cy="130" r="2.5" fill="#15803d"/>
+<text x="27" y="134" class="card-body">Disabilitazione impostazioni di profilo dell'agente.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1604, 747)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="120.0" height="20" rx="5" fill="#dcfce7"/>
+              <text x="22" y="28" class="badge-txt" fill="#15803d">UI HPHP FRONTEND</text>
+              <text x="14" y="52" class="card-title">Flusso di Prenotazione Adattato</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#15803d"/>
+<text x="27" y="78" class="card-body">Presentazione del catalogo ricette dematerializzate</text>
+<text x="27" y="94" class="card-body">della madre.</text>
+<circle cx="18" cy="110" r="2.5" fill="#15803d"/>
+<text x="27" y="114" class="card-body">Filtri logistici pre-calcolati sull'indirizzo</text>
+<text x="27" y="130" class="card-body">di Pina.</text>
+<circle cx="18" cy="146" r="2.5" fill="#15803d"/>
+<text x="27" y="150" class="card-body">Mantenimento coerenza e trasparenza tariffaria.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2002, 747)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="120.0" height="20" rx="5" fill="#dcfce7"/>
+              <text x="22" y="28" class="badge-txt" fill="#15803d">UI HPHP FRONTEND</text>
+              <text x="14" y="52" class="card-title">Pre-Conferma Trasparente</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#15803d"/>
+<text x="27" y="78" class="card-body">Messa in risalto dei soggetti: 'Titolare: Pina</text>
+<text x="27" y="94" class="card-body">| Esecutore: Elena'.</text>
+<circle cx="18" cy="110" r="2.5" fill="#15803d"/>
+<text x="27" y="114" class="card-body">Avviso chiaro: 'Una notifica SMS sarà inviata</text>
+<text x="27" y="130" class="card-body">all'assistita'.</text>
+<circle cx="18" cy="146" r="2.5" fill="#15803d"/>
+<text x="27" y="150" class="card-body">Pulsante di conferma distintivo con firma informatica.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2400, 747)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="120.0" height="20" rx="5" fill="#dcfce7"/>
+              <text x="22" y="28" class="badge-txt" fill="#15803d">UI HPHP FRONTEND</text>
+              <text x="14" y="52" class="card-title">Esito &amp; Sincronizzazione</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#15803d"/>
+<text x="27" y="78" class="card-body">Feedback positivo con generazione ricevuta congiunta.</text>
+<circle cx="18" cy="94" r="2.5" fill="#15803d"/>
+<text x="27" y="98" class="card-body">Opzione per inviare promemoria WhatsApp al proprio</text>
+<text x="27" y="114" class="card-body">numero.</text>
+<circle cx="18" cy="130" r="2.5" fill="#15803d"/>
+<text x="27" y="134" class="card-body">Pulsante 'Esci dalla delega e ripristina il</text>
+<text x="27" y="150" class="card-body">tuo profilo'.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(410, 1003)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="146.0" height="20" rx="5" fill="#fef3c7"/>
+              <text x="22" y="28" class="badge-txt" fill="#b45309">SERVER HPHP &amp; ENGINE</text>
+              <text x="14" y="52" class="card-title">Verifica Sessione Utente</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b45309"/>
+<text x="27" y="78" class="card-body">Validazione asserzione SAML/OIDC rilasciata</text>
+<text x="27" y="94" class="card-body">da SPID.</text>
+<circle cx="18" cy="110" r="2.5" fill="#b45309"/>
+<text x="27" y="114" class="card-body">Creazione contesto utente per Elena Ferretti.</text>
+<circle cx="18" cy="130" r="2.5" fill="#b45309"/>
+<text x="27" y="134" class="card-body">Estrazione elenco deleghe associate da database</text>
+<text x="27" y="150" class="card-body">locale.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(808, 1003)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="146.0" height="20" rx="5" fill="#fef3c7"/>
+              <text x="22" y="28" class="badge-txt" fill="#b45309">SERVER HPHP &amp; ENGINE</text>
+              <text x="14" y="52" class="card-title">Switch di Sicurezza Contesto</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b45309"/>
+<text x="27" y="78" class="card-body">Isolamento del contesto di memoria (Sandbox</text>
+<text x="27" y="94" class="card-body">di delega).</text>
+<circle cx="18" cy="110" r="2.5" fill="#b45309"/>
+<text x="27" y="114" class="card-body">Associazione token operativo all'identità di</text>
+<text x="27" y="130" class="card-body">Pina Ferretti.</text>
+<circle cx="18" cy="146" r="2.5" fill="#b45309"/>
+<text x="27" y="150" class="card-body">Impedimento di contaminazione con i dati di</text>
+<text x="27" y="166" class="card-body">Elena.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1206, 1003)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="146.0" height="20" rx="5" fill="#fef3c7"/>
+              <text x="22" y="28" class="badge-txt" fill="#b45309">SERVER HPHP &amp; ENGINE</text>
+              <text x="14" y="52" class="card-title">Interrogazione Anagrafe Deleghe</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b45309"/>
+<text x="27" y="78" class="card-body">Verifica sincrona del consenso legale di delega</text>
+<text x="27" y="94" class="card-body">attiva.</text>
+<circle cx="18" cy="110" r="2.5" fill="#b45309"/>
+<text x="27" y="114" class="card-body">Controllo data di scadenza della delega sanitaria.</text>
+<circle cx="18" cy="130" r="2.5" fill="#b45309"/>
+<text x="27" y="134" class="card-body">Sblocco autorizzativo delle API per agende sanitarie.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1604, 1003)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="146.0" height="20" rx="5" fill="#fef3c7"/>
+              <text x="22" y="28" class="badge-txt" fill="#b45309">SERVER HPHP &amp; ENGINE</text>
+              <text x="14" y="52" class="card-title">Query Agende su Profilo Pina</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b45309"/>
+<text x="27" y="78" class="card-body">Interrogazione agende CUP con codice fiscale</text>
+<text x="27" y="94" class="card-body">di Pina.</text>
+<circle cx="18" cy="110" r="2.5" fill="#b45309"/>
+<text x="27" y="114" class="card-body">Applicazione esenzioni e diritti del soggetto</text>
+<text x="27" y="130" class="card-body">assistito.</text>
+<circle cx="18" cy="146" r="2.5" fill="#b45309"/>
+<text x="27" y="150" class="card-body">Blocco temporaneo dello slot selezionato (Freeze</text>
+<text x="27" y="166" class="card-body">Lock).</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2002, 1003)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="146.0" height="20" rx="5" fill="#fef3c7"/>
+              <text x="22" y="28" class="badge-txt" fill="#b45309">SERVER HPHP &amp; ENGINE</text>
+              <text x="14" y="52" class="card-title">Audit Trail &amp; Commit Legale</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b45309"/>
+<text x="27" y="78" class="card-body">Scrittura record di audit: 'Elena ha operato</text>
+<text x="27" y="94" class="card-body">per Pina' (P-10).</text>
+<circle cx="18" cy="110" r="2.5" fill="#b45309"/>
+<text x="27" y="114" class="card-body">Generazione hash crittografico per tracciabilità</text>
+<text x="27" y="130" class="card-body">legale.</text>
+<circle cx="18" cy="146" r="2.5" fill="#b45309"/>
+<text x="27" y="150" class="card-body">Commit definitivo della prenotazione su server</text>
+<text x="27" y="166" class="card-body">CUP.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2400, 1003)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="165.5" height="20" rx="5" fill="#fef3c7"/>
+              <text x="22" y="28" class="badge-txt" fill="#b45309">NOTIFICATION DISPATCHER</text>
+              <text x="14" y="52" class="card-title">Dispatcher Bilaterale Incrociato</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b45309"/>
+<text x="27" y="78" class="card-body">Inoltro notifica SMS prioritaria sul cellulare</text>
+<text x="27" y="94" class="card-body">di Pina.</text>
+<circle cx="18" cy="110" r="2.5" fill="#b45309"/>
+<text x="27" y="114" class="card-body">Generazione notifica push e ricevuta PDF per</text>
+<text x="27" y="130" class="card-body">Elena.</text>
+<circle cx="18" cy="146" r="2.5" fill="#b45309"/>
+<text x="27" y="150" class="card-body">Aggiornamento in tempo reale del FSE di Pina.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(410, 1259)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="185.0" height="20" rx="5" fill="#fee2e2"/>
+              <text x="22" y="28" class="badge-txt" fill="#b91c1c">IDENTITY PROVIDER SPID/CIE</text>
+              <text x="14" y="52" class="card-title">Autenticazione Forte SPID L2</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b91c1c"/>
+<text x="27" y="78" class="card-body">Verifica credenziali e secondo fattore di Elena.</text>
+<circle cx="18" cy="94" r="2.5" fill="#b91c1c"/>
+<text x="27" y="98" class="card-body">Rilascio attributi anagrafici certificati dell'agente.</text>
+<circle cx="18" cy="114" r="2.5" fill="#b91c1c"/>
+<text x="27" y="118" class="card-body">Protocollo OpenID Connect conforme ad AgID.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(808, 1259)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="198.0" height="20" rx="5" fill="#fee2e2"/>
+              <text x="22" y="28" class="badge-txt" fill="#b91c1c">ANAGRAFE SANITARIA REGIONALE</text>
+              <text x="14" y="52" class="card-title">Registro Regionale Deleghe</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b91c1c"/>
+<text x="27" y="78" class="card-body">Banca dati delle deleghe sanitarie dell'Emilia-Romagna.</text>
+<circle cx="18" cy="94" r="2.5" fill="#b91c1c"/>
+<text x="27" y="98" class="card-body">Verifica atto formale sottoscritto da Pina per</text>
+<text x="27" y="114" class="card-body">Elena.</text>
+<circle cx="18" cy="130" r="2.5" fill="#b91c1c"/>
+<text x="27" y="134" class="card-body">Certificazione dei poteri di rappresentanza</text>
+<text x="27" y="150" class="card-body">digitale.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1206, 1259)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="191.5" height="20" rx="5" fill="#fee2e2"/>
+              <text x="22" y="28" class="badge-txt" fill="#b91c1c">FASCICOLO SANITARIO FSE 2.0</text>
+              <text x="14" y="52" class="card-title">Fascicolo Elettronico di Pina</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b91c1c"/>
+<text x="27" y="78" class="card-body">Recupero prescrizioni NRE attive del medico</text>
+<text x="27" y="94" class="card-body">curante.</text>
+<circle cx="18" cy="110" r="2.5" fill="#b91c1c"/>
+<text x="27" y="114" class="card-body">Controllo storico visite e piani terapeutici</text>
+<text x="27" y="130" class="card-body">attivi.</text>
+<circle cx="18" cy="146" r="2.5" fill="#b91c1c"/>
+<text x="27" y="150" class="card-body">Autorizzazione all'accesso in modalità delegata.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1604, 1259)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="191.5" height="20" rx="5" fill="#fee2e2"/>
+              <text x="22" y="28" class="badge-txt" fill="#b91c1c">SOSETE / CUP 2000 REGIONALE</text>
+              <text x="14" y="52" class="card-title">Server Agende Territoriali</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b91c1c"/>
+<text x="27" y="78" class="card-body">Recupero slot disponibili per l'assistita.</text>
+<circle cx="18" cy="94" r="2.5" fill="#b91c1c"/>
+<text x="27" y="98" class="card-body">Applicazione esenzione ticket patologica 013.</text>
+<circle cx="18" cy="114" r="2.5" fill="#b91c1c"/>
+<text x="27" y="118" class="card-body">Lock transazionale per la durata dell'operazione.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2002, 1259)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="139.5" height="20" rx="5" fill="#fee2e2"/>
+              <text x="22" y="28" class="badge-txt" fill="#b91c1c">AUDIT LOG REGIONALE</text>
+              <text x="14" y="52" class="card-title">Registro Medico-Legale</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b91c1c"/>
+<text x="27" y="78" class="card-body">Archiviazione a norma di legge delle operazioni</text>
+<text x="27" y="94" class="card-body">per conto terzi.</text>
+<circle cx="18" cy="110" r="2.5" fill="#b91c1c"/>
+<text x="27" y="114" class="card-body">Tracciamento non ripudiabile (identità esecutore</text>
+<text x="27" y="130" class="card-body">e assistito).</text>
+<circle cx="18" cy="146" r="2.5" fill="#b91c1c"/>
+<text x="27" y="150" class="card-body">Conformità GDPR e Codice Amministrazione Digitale.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2400, 1259)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="172.0" height="20" rx="5" fill="#fee2e2"/>
+              <text x="22" y="28" class="badge-txt" fill="#b91c1c">SMS GATEWAY &amp; FSE NOTIFY</text>
+              <text x="14" y="52" class="card-title">Gateway Notifiche Istituzionali</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b91c1c"/>
+<text x="27" y="78" class="card-body">Consegna messaggio SMS telefonico a Pina Ferretti.</text>
+<circle cx="18" cy="94" r="2.5" fill="#b91c1c"/>
+<text x="27" y="98" class="card-body">Notifica telematica sul Fascicolo Sanitario</text>
+<text x="27" y="114" class="card-body">di Elena.</text>
+<circle cx="18" cy="130" r="2.5" fill="#b91c1c"/>
+<text x="27" y="134" class="card-body">Notifica di pagamento ad importo zero su nodo</text>
+<text x="27" y="150" class="card-body">pagoPA.</text>
+</g>
+<path d="M 1148 676 C 1218 978, 1186 1008, 1246 1093.0" 
+          fill="none" stroke="#ea580c" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arrow-orange)" />
+    <path d="M 2342 1208 C 2412 1234, 2380 1264, 2440 1349.0" 
+          fill="none" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arrow-blue)" />
+
+    <g transform="translate(40, 1635)">
+      <text x="10" y="20" font-size="12" font-weight="600" fill="#64748b">UUXD Master Degree — Project Team Affordance (HPHP) — A.A. 2025/2026</text>
+      <text x="2710" y="20" font-size="12" font-weight="600" fill="#64748b" text-anchor="end">Fase C: Proposta di Design — Service Blueprint 03 (Strada B: Ecosistema di Servizio)</text>
+    </g>
+    </svg>

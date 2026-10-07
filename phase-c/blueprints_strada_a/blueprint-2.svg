@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1500" width="2400" height="1500">
+<defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap');
+      text { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+    </marker>
+    </defs>
+<rect width="2400" height="1500" fill="#f8fafc"/>
+
+    <!-- Top Header Card -->
+    <g filter="url(#shadow)">
+      <rect x="40" y="30" width="2320" height="150" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    </g>
+    <g transform="translate(70, 65)">
+      <rect x="0" y="0" width="165" height="24" rx="6" fill="#e0f2fe" />
+      <text x="82" y="16" font-size="10" font-weight="800" fill="#0369a1" text-anchor="middle">HPHP DESIGN PROPOSAL</text>
+      
+      <rect x="175" y="0" width="165" height="24" rx="6" fill="#f3e8ff" />
+      <text x="257" y="16" font-size="10" font-weight="800" fill="#6b21a8" text-anchor="middle">STRUCTURE BLUEPRINT 02</text>
+
+      <rect x="350" y="0" width="145" height="24" rx="6" fill="#dcfce7" />
+      <text x="422" y="16" font-size="10" font-weight="800" fill="#15803d" text-anchor="middle">STRADA A: ARCHITETTURA</text>
+
+      <text x="0" y="56" font-size="24" font-weight="800" fill="#0f172a">Architettura Area Appuntamenti &amp; Flusso Modifica / Disdetta Protetta</text>
+      <text x="0" y="82" font-size="13.5" font-weight="500" fill="#475569">Gestione unificata AUSL, ricerca nuova data senza perdita posto e disdetta con timer ripensamento 10 min — Requisiti: REQ-02, REQ-05</text>
+    </g>
+    
+
+    <g transform="translate(1530, 45)">
+      <rect x="0" y="0" width="800" height="120" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="20" y="22" font-size="11.5" font-weight="700" fill="#1e293b">LEGENDA COMPONENTI E NAVIGAZIONE (STILE ARCHITETTURALE)</text>
+      
+      <!-- Col 1 -->
+      <rect x="20" y="36" width="18" height="18" rx="4" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.5"/>
+      <text x="45" y="50" font-size="11" font-weight="500" fill="#334155">= Home page / Punto di ingresso principale</text>
+
+      <rect x="20" y="62" width="18" height="18" rx="4" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+      <text x="45" y="76" font-size="11" font-weight="500" fill="#334155">= Sezione principale del menu</text>
+
+      <rect x="20" y="88" width="18" height="18" rx="4" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
+      <text x="45" y="102" font-size="11" font-weight="500" fill="#334155">= Pagina o sottosezione operativa</text>
+
+      <!-- Col 2 -->
+      <rect x="360" y="36" width="18" height="18" rx="4" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+      <text x="385" y="50" font-size="11" font-weight="500" fill="#334155">= Sezioni interne / Modale a video</text>
+
+      <rect x="360" y="62" width="18" height="18" rx="4" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+      <text x="385" y="76" font-size="11" font-weight="500" fill="#334155">= Gruppo navigazione / Contesto</text>
+
+      <rect x="360" y="88" width="18" height="18" rx="4" fill="#f8fafc" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 2"/>
+      <text x="385" y="102" font-size="11" font-weight="500" fill="#334155">= Area secondaria / Servizio esterno</text>
+
+      <!-- Lines -->
+      <line x1="680" y1="46" x2="720" y2="46" stroke="#475569" stroke-width="2"/>
+      <text x="730" y="50" font-size="10.5" font-weight="600" fill="#475569">Navigazione</text>
+
+      <line x1="680" y1="84" x2="720" y2="84" stroke="#ea580c" stroke-width="2" stroke-dasharray="4 3"/>
+      <text x="730" y="88" font-size="10.5" font-weight="600" fill="#ea580c">Co-Pilota / Sync</text>
+    </g>
+    
+
+    <g transform="translate(1000, 220)" filter="url(#shadow)">
+      <rect x="0" y="0" width="400" height="90" rx="9" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.8"/>
+      <text x="200.0" y="40.0" font-size="13" font-weight="700" fill="#6b21a8" text-anchor="middle">[0.0] Home Page (Cruscotto)</text>
+    
+<text x="200.0" y="60.0" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Punto di ingresso unificato e promemoria attivi</text>
+</g>
+
+    <g transform="translate(1000, 360)" filter="url(#shadow)">
+      <rect x="0" y="0" width="400" height="70" rx="9" fill="#fee2e2" stroke="#ef4444" stroke-width="1.8"/>
+      <text x="200.0" y="30.0" font-size="13" font-weight="700" fill="#b91c1c" text-anchor="middle">[2.0] I Miei Appuntamenti</text>
+    
+<text x="200.0" y="50.0" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Cruscotto regionale unificato di tutte le AUSL</text>
+</g>
+<line x1="1200" y1="310" x2="1200" y2="360" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(450, 480)" filter="url(#shadow)">
+      <rect x="0" y="0" width="420" height="75" rx="9" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8"/>
+      <text x="210.0" y="32.5" font-size="13" font-weight="700" fill="#0369a1" text-anchor="middle">[2.1] Lista Appuntamenti Attivi</text>
+    
+<text x="210.0" y="52.5" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Unificazione AUSL Bologna, Imola, Romagna, Reggio Emilia</text>
+</g>
+
+    <g transform="translate(1530, 480)" filter="url(#shadow)">
+      <rect x="0" y="0" width="420" height="75" rx="9" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8"/>
+      <text x="210.0" y="32.5" font-size="13" font-weight="700" fill="#0369a1" text-anchor="middle">[2.5] Storico Prestazioni &amp; Referti</text>
+    
+<text x="210.0" y="52.5" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Consultazione visite passate e download FSE</text>
+</g>
+<path d="M 1200 430 L 1200 455.0 L 660 455.0 L 660 480" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 1200 430 L 1200 455.0 L 1740 455.0 L 1740 480" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(450, 600)" filter="url(#shadow)">
+      <rect x="0" y="0" width="420" height="75" rx="9" fill="#fee2e2" stroke="#ef4444" stroke-width="1.8"/>
+      <text x="210.0" y="32.5" font-size="13" font-weight="700" fill="#b91c1c" text-anchor="middle">[2.2] Scheda Dettaglio Appuntamento</text>
+    
+<text x="210.0" y="52.5" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Preparazione esame, mappa interattiva, costo e medico</text>
+</g>
+<line x1="660" y1="555" x2="660" y2="600" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(150, 740)" filter="url(#shadow)">
+      <rect x="0" y="0" width="440" height="75" rx="9" fill="#fef3c7" stroke="#d97706" stroke-width="1.8"/>
+      <text x="220.0" y="32.5" font-size="13" font-weight="700" fill="#92400e" text-anchor="middle">[2.3] Flusso Modifica Appuntamento</text>
+    
+<text x="220.0" y="52.5" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Ricerca nuova data senza perdere il posto corrente</text>
+</g>
+
+    <g transform="translate(750, 740)" filter="url(#shadow)">
+      <rect x="0" y="0" width="440" height="75" rx="9" fill="#fef3c7" stroke="#d97706" stroke-width="1.8"/>
+      <text x="220.0" y="32.5" font-size="13" font-weight="700" fill="#92400e" text-anchor="middle">[2.4] Flusso Disdetta Guidata Protetta</text>
+    
+<text x="220.0" y="52.5" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Doppio consenso rassicurante e timer di ripensamento</text>
+</g>
+<path d="M 660 675 L 660 707.5 L 370 707.5 L 370 740" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 660 675 L 660 707.5 L 970 707.5 L 970 740" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(150, 860)" filter="url(#shadow)">
+      <rect x="0" y="0" width="380" height="65" rx="9" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8"/>
+      <text x="190.0" y="27.5" font-size="13" font-weight="700" fill="#0369a1" text-anchor="middle">Ricerca Slot Alternativi</text>
+    
+<text x="190.0" y="47.5" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Blocco contemporaneo per 15 min</text>
+</g>
+
+    <g transform="translate(150, 960)" filter="url(#shadow)">
+      <rect x="0" y="0" width="380" height="65" rx="9" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8"/>
+      <text x="190.0" y="27.5" font-size="13" font-weight="700" fill="#0369a1" text-anchor="middle">Conferma Nuova Data</text>
+    
+<text x="190.0" y="47.5" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Rilascio vecchio posto e nuovo promemoria</text>
+</g>
+<line x1="340" y1="815" x2="340" y2="860" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="340" y1="925" x2="340" y2="960" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(750, 860)" filter="url(#shadow)">
+      <rect x="0" y="0" width="440" height="65" rx="9" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8"/>
+      <text x="220.0" y="27.5" font-size="13" font-weight="700" fill="#0369a1" text-anchor="middle">[2.4.1] Modale 1: Policy Regionale 2 Giorni</text>
+    
+<text x="220.0" y="47.5" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Chiarimento trasparente termine utile per evitare malus</text>
+</g>
+
+    <g transform="translate(750, 960)" filter="url(#shadow)">
+      <rect x="0" y="0" width="440" height="65" rx="9" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8"/>
+      <text x="220.0" y="27.5" font-size="13" font-weight="700" fill="#0369a1" text-anchor="middle">[2.4.2] Modale 2: Doppio Consenso Rassicurante</text>
+    
+<text x="220.0" y="47.5" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Pulsanti 'Conferma Disdetta' vs 'Mantieni Visita' distanziati</text>
+</g>
+<line x1="970" y1="815" x2="970" y2="860" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="970" y1="925" x2="970" y2="960" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(1300, 860)" filter="url(#shadow)">
+      <rect x="0" y="0" width="440" height="85" rx="9" fill="#ffedd5" stroke="#ea580c" stroke-width="1.8"/>
+      <text x="220.0" y="37.5" font-size="13" font-weight="700" fill="#9a3412" text-anchor="middle">[2.4.3] Finestra di Sicurezza: Timer 10 Minuti</text>
+    
+<text x="220.0" y="57.5" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Banner persistente: 'Hai disdetto la visita. Hai 10 min per annullare'</text>
+</g>
+<line x1="1190" y1="992" x2="1300" y2="902" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(1300, 990)" filter="url(#shadow)">
+      <rect x="0" y="0" width="440" height="65" rx="9" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8"/>
+      <text x="220.0" y="27.5" font-size="13" font-weight="700" fill="#0369a1" text-anchor="middle">Pulsante One-Touch: 'Annulla Disdetta'</text>
+    
+<text x="220.0" y="47.5" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Ripristino istantaneo dello slot originario</text>
+</g>
+<line x1="1520" y1="945" x2="1520" y2="990" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(1850, 860)" filter="url(#shadow)">
+      <rect x="0" y="0" width="440" height="85" rx="9" fill="#fee2e2" stroke="#ef4444" stroke-width="1.8"/>
+      <text x="220.0" y="37.5" font-size="13" font-weight="700" fill="#b91c1c" text-anchor="middle">[2.4.4] Revoca Transazionale &amp; Riassegnazione</text>
+    
+<text x="220.0" y="57.5" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Scaduto il timer: slot liberato e inviato alle liste d'attesa</text>
+</g>
+<line x1="1740" y1="902" x2="1850" y2="902" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(1850, 990)" filter="url(#shadow)">
+      <rect x="0" y="0" width="440" height="65" rx="9" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8"/>
+      <text x="220.0" y="27.5" font-size="13" font-weight="700" fill="#0369a1" text-anchor="middle">Notifica Bilaterale e Ricevuta Revoca</text>
+    
+<text x="220.0" y="47.5" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">SMS di conferma e annullamento avviso PagoPA</text>
+</g>
+<line x1="2070" y1="945" x2="2070" y2="990" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <g transform="translate(150, 1240)" filter="url(#shadow)">
+      <rect x="0" y="0" width="480" height="80" rx="9" fill="#f8fafc" stroke="#64748b" stroke-width="1.8" stroke-dasharray="6 4"/>
+      <text x="240.0" y="35.0" font-size="13" font-weight="700" fill="#334155" text-anchor="middle">Registro Centrale CUP Regionale</text>
+    
+<text x="240.0" y="55.0" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Gestione transazionale prenotazioni e modifiche</text>
+</g>
+
+    <g transform="translate(700, 1240)" filter="url(#shadow)">
+      <rect x="0" y="0" width="480" height="80" rx="9" fill="#f8fafc" stroke="#64748b" stroke-width="1.8" stroke-dasharray="6 4"/>
+      <text x="240.0" y="35.0" font-size="13" font-weight="700" fill="#334155" text-anchor="middle">Algoritmo Liste d'Attesa Regionali</text>
+    
+<text x="240.0" y="55.0" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Riassegnazione automatica dello slot liberato al primo cittadino in lista</text>
+</g>
+
+    <g transform="translate(1250, 1240)" filter="url(#shadow)">
+      <rect x="0" y="0" width="480" height="80" rx="9" fill="#f8fafc" stroke="#64748b" stroke-width="1.8" stroke-dasharray="6 4"/>
+      <text x="240.0" y="35.0" font-size="13" font-weight="700" fill="#334155" text-anchor="middle">Nodo Telematico pagoPA</text>
+    
+<text x="240.0" y="55.0" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Revoca dell'avviso di pagamento o discarico quota ticket</text>
+</g>
+
+    <g transform="translate(1800, 1240)" filter="url(#shadow)">
+      <rect x="0" y="0" width="480" height="80" rx="9" fill="#f8fafc" stroke="#64748b" stroke-width="1.8" stroke-dasharray="6 4"/>
+      <text x="240.0" y="35.0" font-size="13" font-weight="700" fill="#334155" text-anchor="middle">Bilateral Dispatcher (SMS/Push)</text>
+    
+<text x="240.0" y="55.0" font-size="10.5" font-weight="500" fill="#64748b" text-anchor="middle">Comunicazione sincronizzata sia all'anziano che ai caregiver associati</text>
+</g>
+<line x1="340" y1="1025" x2="390" y2="1240" stroke="#64748b" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<line x1="970" y1="1025" x2="940" y2="1240" stroke="#64748b" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<line x1="1520" y1="1055" x2="1490" y2="1240" stroke="#64748b" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+<line x1="2070" y1="1055" x2="2040" y2="1240" stroke="#64748b" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+
+    <g transform="translate(40, 1460)">
+      <text x="10" y="20" font-size="12" font-weight="600" fill="#64748b">UUXD Master Degree — Project Team Affordance (HPHP) — A.A. 2025/2026</text>
+      <text x="2320" y="20" font-size="12" font-weight="600" fill="#64748b" text-anchor="end">Fase C: Proposta di Design — Structure Blueprint 02 (Stile Architetturale Information Architecture)</text>
+    </g>
+    </svg>

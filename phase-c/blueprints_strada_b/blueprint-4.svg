@@ -1,0 +1,733 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2800 1680" width="2800" height="1680">
+<defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap');
+      text { font-family: 'Inter', system-ui, sans-serif; }
+      .title-main { font-size: 25px; font-weight: 800; fill: #0f172a; }
+      .title-sub { font-size: 13.5px; font-weight: 500; fill: #475569; }
+      .lane-title { font-size: 17px; font-weight: 700; }
+      .lane-sub { font-size: 12px; font-weight: 500; fill: #64748b; }
+      .phase-pill { font-size: 11px; font-weight: 800; letter-spacing: 0.08em; }
+      .phase-title { font-size: 14.5px; font-weight: 700; fill: #1e293b; }
+      .card-title { font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .card-body { font-size: 11.5px; font-weight: 400; fill: #334155; line-height: 1.45; }
+      .badge-txt { font-size: 10px; font-weight: 700; }
+      .line-label { font-size: 11px; font-weight: 700; letter-spacing: 0.05em; }
+    </style>
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+    <filter id="header-shadow" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.04"/>
+    </filter>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0284c7" />
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ea580c" />
+    </marker>
+    </defs>
+<rect width="2800" height="1680" fill="#f8fafc" />
+
+    <g filter="url(#header-shadow)">
+      <rect x="40" y="30" width="2720" height="160" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    </g>
+    <g transform="translate(70, 68)">
+      <rect x="0" y="0" width="165" height="24" rx="6" fill="#e0f2fe" />
+      <text x="82" y="16" class="badge-txt" fill="#0369a1" text-anchor="middle">HPHP DESIGN PROPOSAL</text>
+      
+      <rect x="175" y="0" width="150" height="24" rx="6" fill="#fef3c7" />
+      <text x="250" y="16" class="badge-txt" fill="#b45309" text-anchor="middle">SERVICE BLUEPRINT 04</text>
+
+      <rect x="335" y="0" width="165" height="24" rx="6" fill="#dcfce7" />
+      <text x="417" y="16" class="badge-txt" fill="#15803d" text-anchor="middle">STRADA B: SWIMLANES</text>
+
+      <text x="0" y="58" class="title-main">Flusso Ibrido Territoriale e Ripresa Sessione Sospesa (Rete Farmacia / CUP)</text>
+      <text x="0" y="85" class="title-sub">Scenario: Pina salva il task interrotto per 24h e completa l'operazione al banco della farmacia | Requisiti: REQ-08, REQ-09, ID-12, P-11</text>
+    </g>
+    
+
+    <g transform="translate(2030, 58)">
+      <rect x="0" y="0" width="700" height="105" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="20" y="24" font-size="12" font-weight="700" fill="#334155">LEGENDA CORSIA E LIVELLI OPERATIVI</text>
+      
+      <rect x="20" y="38" width="14" height="14" rx="3" fill="#8b5cf6" />
+      <text x="40" y="50" font-size="11" font-weight="600" fill="#334155">Physical Evidence</text>
+      
+      <rect x="180" y="38" width="14" height="14" rx="3" fill="#0284c7" />
+      <text x="200" y="50" font-size="11" font-weight="600" fill="#334155">Customer Actions (Utente/Caregiver)</text>
+      
+      <rect x="440" y="38" width="14" height="14" rx="3" fill="#16a34a" />
+      <text x="460" y="50" font-size="11" font-weight="600" fill="#334155">Frontstage Actions (UI HPHP)</text>
+      
+      <rect x="20" y="66" width="14" height="14" rx="3" fill="#d97706" />
+      <text x="40" y="78" font-size="11" font-weight="600" fill="#334155">Backstage Actions (Server HPHP)</text>
+      
+      <rect x="260" y="66" width="14" height="14" rx="3" fill="#dc2626" />
+      <text x="280" y="78" font-size="11" font-weight="600" fill="#334155">Support Processes (STS / CUP / PagoPA)</text>
+
+      <line x1="530" y1="73" x2="570" y2="73" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="5 3"/>
+      <text x="578" y="77" font-size="10.5" font-weight="700" fill="#dc2626">Line of Visibility</text>
+    </g>
+    
+
+        <g transform="translate(410, 170)">
+          <rect x="0" y="0" width="380" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+          <rect x="8" y="8" width="68" height="26" rx="5" fill="#f1f5f9" />
+          <text x="42" y="25" class="phase-pill" fill="#475569" text-anchor="middle">FASE 01</text>
+          <text x="86" y="26" class="phase-title">Blocco Utente &amp; Scelta Aiuto</text>
+        </g>
+        
+
+        <g transform="translate(808, 170)">
+          <rect x="0" y="0" width="380" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+          <rect x="8" y="8" width="68" height="26" rx="5" fill="#f1f5f9" />
+          <text x="42" y="25" class="phase-pill" fill="#475569" text-anchor="middle">FASE 02</text>
+          <text x="86" y="26" class="phase-title">Salvataggio Task &amp; Token 24h</text>
+        </g>
+        
+
+        <g transform="translate(1206, 170)">
+          <rect x="0" y="0" width="380" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+          <rect x="8" y="8" width="68" height="26" rx="5" fill="#f1f5f9" />
+          <text x="42" y="25" class="phase-pill" fill="#475569" text-anchor="middle">FASE 03</text>
+          <text x="86" y="26" class="phase-title">Ricezione SMS &amp; Stampa QR</text>
+        </g>
+        
+
+        <g transform="translate(1604, 170)">
+          <rect x="0" y="0" width="380" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+          <rect x="8" y="8" width="68" height="26" rx="5" fill="#f1f5f9" />
+          <text x="42" y="25" class="phase-pill" fill="#475569" text-anchor="middle">FASE 04</text>
+          <text x="86" y="26" class="phase-title">Accesso Fisico in Farmacia</text>
+        </g>
+        
+
+        <g transform="translate(2002, 170)">
+          <rect x="0" y="0" width="380" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+          <rect x="8" y="8" width="68" height="26" rx="5" fill="#f1f5f9" />
+          <text x="42" y="25" class="phase-pill" fill="#475569" text-anchor="middle">FASE 05</text>
+          <text x="86" y="26" class="phase-title">Lettura Codice al Banco CUP</text>
+        </g>
+        
+
+        <g transform="translate(2400, 170)">
+          <rect x="0" y="0" width="380" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+          <rect x="8" y="8" width="68" height="26" rx="5" fill="#f1f5f9" />
+          <text x="42" y="25" class="phase-pill" fill="#475569" text-anchor="middle">FASE 06</text>
+          <text x="86" y="26" class="phase-title">Completamento &amp; Stampa Ricevuta</text>
+        </g>
+        
+
+        <rect x="40" y="220" width="2720" height="240" rx="12" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1.2"/>
+        <g transform="translate(55, 235)">
+          <rect x="0" y="0" width="310" height="210" rx="10" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.5"/>
+          <rect x="15" y="16" width="36" height="36" rx="8" fill="#f3e8ff"/>
+          <circle cx="33" cy="34" r="8" fill="#7e22ce"/>
+          <text x="62" y="32" class="lane-title" fill="#7e22ce">Physical Evidence</text>
+          <text x="62" y="49" class="lane-sub">Touchpoint tangibili e digitali</text>
+          <line x1="15" y1="68" x2="295" y2="68" stroke="#f1f5f9" stroke-width="1"/>
+          <text x="15" y="95" font-size="11" fill="#64748b" font-weight="500">Separatori operativi:</text>
+          <text x="15" y="115" font-size="10.5" fill="#475569">
+            • Confini di sistema
+          </text>
+        </g>
+        
+
+        <rect x="40" y="476" width="2720" height="240" rx="12" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.2"/>
+        <g transform="translate(55, 491)">
+          <rect x="0" y="0" width="310" height="210" rx="10" fill="#ffffff" stroke="#bae6fd" stroke-width="1.5"/>
+          <rect x="15" y="16" width="36" height="36" rx="8" fill="#e0f2fe"/>
+          <circle cx="33" cy="34" r="8" fill="#0369a1"/>
+          <text x="62" y="32" class="lane-title" fill="#0369a1">Customer Actions</text>
+          <text x="62" y="49" class="lane-sub">Azioni Utente Diretto / Caregiver</text>
+          <line x1="15" y1="68" x2="295" y2="68" stroke="#f1f5f9" stroke-width="1"/>
+          <text x="15" y="95" font-size="11" fill="#64748b" font-weight="500">Separatori operativi:</text>
+          <text x="15" y="115" font-size="10.5" fill="#475569">
+            • Linea di Interazione (sotto)
+          </text>
+        </g>
+        
+
+        <rect x="40" y="732" width="2720" height="240" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.2"/>
+        <g transform="translate(55, 747)">
+          <rect x="0" y="0" width="310" height="210" rx="10" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
+          <rect x="15" y="16" width="36" height="36" rx="8" fill="#dcfce7"/>
+          <circle cx="33" cy="34" r="8" fill="#15803d"/>
+          <text x="62" y="32" class="lane-title" fill="#15803d">Frontstage Actions</text>
+          <text x="62" y="49" class="lane-sub">Interfaccia HPHP e feedback visivi</text>
+          <line x1="15" y1="68" x2="295" y2="68" stroke="#f1f5f9" stroke-width="1"/>
+          <text x="15" y="95" font-size="11" fill="#64748b" font-weight="500">Separatori operativi:</text>
+          <text x="15" y="115" font-size="10.5" fill="#475569">
+            • Linea di Visibilità (sotto)
+          </text>
+        </g>
+        
+
+        <rect x="40" y="988" width="2720" height="240" rx="12" fill="#fffbeb" stroke="#fde68a" stroke-width="1.2"/>
+        <g transform="translate(55, 1003)">
+          <rect x="0" y="0" width="310" height="210" rx="10" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+          <rect x="15" y="16" width="36" height="36" rx="8" fill="#fef3c7"/>
+          <circle cx="33" cy="34" r="8" fill="#b45309"/>
+          <text x="62" y="32" class="lane-title" fill="#b45309">Backstage Actions</text>
+          <text x="62" y="49" class="lane-sub">Server HPHP e logiche applicative</text>
+          <line x1="15" y1="68" x2="295" y2="68" stroke="#f1f5f9" stroke-width="1"/>
+          <text x="15" y="95" font-size="11" fill="#64748b" font-weight="500">Separatori operativi:</text>
+          <text x="15" y="115" font-size="10.5" fill="#475569">
+            • Interazione Interna (sotto)
+          </text>
+        </g>
+        
+
+        <rect x="40" y="1244" width="2720" height="240" rx="12" fill="#fef2f2" stroke="#fecaca" stroke-width="1.2"/>
+        <g transform="translate(55, 1259)">
+          <rect x="0" y="0" width="310" height="210" rx="10" fill="#ffffff" stroke="#fecaca" stroke-width="1.5"/>
+          <rect x="15" y="16" width="36" height="36" rx="8" fill="#fee2e2"/>
+          <circle cx="33" cy="34" r="8" fill="#b91c1c"/>
+          <text x="62" y="32" class="lane-title" fill="#b91c1c">Support Processes</text>
+          <text x="62" y="49" class="lane-sub">Sistemi regionali: STS, CUP, PagoPA</text>
+          <line x1="15" y1="68" x2="295" y2="68" stroke="#f1f5f9" stroke-width="1"/>
+          <text x="15" y="95" font-size="11" fill="#64748b" font-weight="500">Separatori operativi:</text>
+          <text x="15" y="115" font-size="10.5" fill="#475569">
+            • Confini di sistema
+          </text>
+        </g>
+        
+
+    <line x1="390" y1="724" x2="2745" y2="724" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="8 6"/>
+    <rect x="395" y="712" width="165" height="24" rx="5" fill="#0284c7"/>
+    <text x="477" y="728" class="line-label" fill="#ffffff" text-anchor="middle">LINE OF INTERACTION</text>
+    
+
+    <line x1="390" y1="980" x2="2745" y2="980" stroke="#dc2626" stroke-width="3" stroke-dasharray="10 5"/>
+    <rect x="395" y="967" width="160" height="26" rx="5" fill="#dc2626"/>
+    <text x="475" y="984" class="line-label" fill="#ffffff" text-anchor="middle">LINE OF VISIBILITY</text>
+    
+
+    <line x1="390" y1="1236" x2="2745" y2="1236" stroke="#475569" stroke-width="2.5" stroke-dasharray="8 6"/>
+    <rect x="395" y="1224" width="215" height="24" rx="5" fill="#475569"/>
+    <text x="502" y="1240" class="line-label" fill="#ffffff" text-anchor="middle">LINE OF INTERNAL INTERACTION</text>
+    
+
+            <g filter="url(#card-shadow)" transform="translate(410, 235)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="126.5" height="20" rx="5" fill="#f3e8ff"/>
+              <text x="22" y="28" class="badge-txt" fill="#7e22ce">EVIDENZA DIGITALE</text>
+              <text x="14" y="52" class="card-title">Smartphone Utente Anziano</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#7e22ce"/>
+<text x="27" y="78" class="card-body">Pina è a metà del form e si sente confusa o</text>
+<text x="27" y="94" class="card-body">insicura.</text>
+<circle cx="18" cy="110" r="2.5" fill="#7e22ce"/>
+<text x="27" y="114" class="card-body">Pulsante sempre visibile: 'Serve aiuto?'.</text>
+<circle cx="18" cy="130" r="2.5" fill="#7e22ce"/>
+<text x="27" y="134" class="card-body">Opzione evidente: 'Salva e completa in farmacia'.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(808, 235)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="133.0" height="20" rx="5" fill="#fef3c7"/>
+              <text x="22" y="28" class="badge-txt" fill="#b45309">EVIDENZA A SCHERMO</text>
+              <text x="14" y="52" class="card-title">Schermata Codice di Sospensione</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#7e22ce"/>
+<text x="27" y="78" class="card-body">Codice alfanumerico di 6 caratteri: 'HP-8492'.</text>
+<circle cx="18" cy="94" r="2.5" fill="#7e22ce"/>
+<text x="27" y="98" class="card-body">QR Code grande per lettura ottica immediata.</text>
+<circle cx="18" cy="114" r="2.5" fill="#7e22ce"/>
+<text x="27" y="118" class="card-body">Avviso rassicurante: 'I tuoi dati sono salvati</text>
+<text x="27" y="134" class="card-body">per 24 ore'.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1206, 235)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="146.0" height="20" rx="5" fill="#f3e8ff"/>
+              <text x="22" y="28" class="badge-txt" fill="#7e22ce">EVIDENZA MULTICANALE</text>
+              <text x="14" y="52" class="card-title">SMS Telefonico o Foglio A4</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#7e22ce"/>
+<text x="27" y="78" class="card-body">SMS immediato sul cellulare: 'Codice farmacia:</text>
+<text x="27" y="94" class="card-body">HP-8492'.</text>
+<circle cx="18" cy="110" r="2.5" fill="#7e22ce"/>
+<text x="27" y="114" class="card-body">Possibilità di stampare il foglio promemoria.</text>
+<circle cx="18" cy="130" r="2.5" fill="#7e22ce"/>
+<text x="27" y="134" class="card-body">Nessuna perdita dei dati già inseriti (ricetta/scelte).</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1604, 235)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="198.0" height="20" rx="5" fill="#ffedd5"/>
+              <text x="22" y="28" class="badge-txt" fill="#c2410c">EVIDENZA FISICA TERRITORIALE</text>
+              <text x="14" y="52" class="card-title">Farmacia di Quartiere</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#7e22ce"/>
+<text x="27" y="78" class="card-body">Insegna verde della Farmacia Comunale vicina</text>
+<text x="27" y="94" class="card-body">a casa.</text>
+<circle cx="18" cy="110" r="2.5" fill="#7e22ce"/>
+<text x="27" y="114" class="card-body">Pina si reca fisicamente al banco con il telefono</text>
+<text x="27" y="130" class="card-body">o foglio.</text>
+<circle cx="18" cy="146" r="2.5" fill="#7e22ce"/>
+<text x="27" y="150" class="card-body">Interazione umana rassicurante con il farmacista.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2002, 235)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="133.0" height="20" rx="5" fill="#dcfce7"/>
+              <text x="22" y="28" class="badge-txt" fill="#15803d">EVIDENZA OPERATORE</text>
+              <text x="14" y="52" class="card-title">Terminale Web HPHP Farmacia</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#7e22ce"/>
+<text x="27" y="78" class="card-body">Schermo del farmacista con interfaccia operatore.</text>
+<circle cx="18" cy="94" r="2.5" fill="#7e22ce"/>
+<text x="27" y="98" class="card-body">Lettore ottico barcode puntato sul telefono</text>
+<text x="27" y="114" class="card-body">di Pina.</text>
+<circle cx="18" cy="130" r="2.5" fill="#7e22ce"/>
+<text x="27" y="134" class="card-body">Caricamento istantaneo della pratica congelata.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2400, 235)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="126.5" height="20" rx="5" fill="#f3e8ff"/>
+              <text x="22" y="28" class="badge-txt" fill="#7e22ce">EVIDENZA CARTACEA</text>
+              <text x="14" y="52" class="card-title">Ricevuta Ufficiale al Banco</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#7e22ce"/>
+<text x="27" y="78" class="card-body">Stampa promemoria ufficiale rilasciato dal farmacista.</text>
+<circle cx="18" cy="94" r="2.5" fill="#7e22ce"/>
+<text x="27" y="98" class="card-body">Ritiro scontrino e istruzioni di preparazione</text>
+<text x="27" y="114" class="card-body">a voce.</text>
+<circle cx="18" cy="130" r="2.5" fill="#7e22ce"/>
+<text x="27" y="134" class="card-body">Pina torna a casa serena con la visita prenotata.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(410, 491)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="139.5" height="20" rx="5" fill="#fce7f3"/>
+              <text x="22" y="28" class="badge-txt" fill="#9d174d">PINA (PAZIENTE 73a)</text>
+              <text x="14" y="52" class="card-title">Esitazione &amp; Richiesta Aiuto</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#0369a1"/>
+<text x="27" y="78" class="card-body">Pina non sa quale sede scegliere e la figlia</text>
+<text x="27" y="94" class="card-body">è occupata.</text>
+<circle cx="18" cy="110" r="2.5" fill="#0369a1"/>
+<text x="27" y="114" class="card-body">Nota l'opzione 'Salva per la farmacia' nell'area</text>
+<text x="27" y="130" class="card-body">aiuto.</text>
+<circle cx="18" cy="146" r="2.5" fill="#0369a1"/>
+<text x="27" y="150" class="card-body">Tocca il pulsante per non perdere il lavoro</text>
+<text x="27" y="166" class="card-body">fatto.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(808, 491)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="139.5" height="20" rx="5" fill="#fce7f3"/>
+              <text x="22" y="28" class="badge-txt" fill="#9d174d">PINA (PAZIENTE 73a)</text>
+              <text x="14" y="52" class="card-title">Conferma Congelamento Task</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#0369a1"/>
+<text x="27" y="78" class="card-body">Legge che potrà finire con calma dal farmacista.</text>
+<circle cx="18" cy="94" r="2.5" fill="#0369a1"/>
+<text x="27" y="98" class="card-body">Tocca 'Genera codice salva-sessione'.</text>
+<circle cx="18" cy="114" r="2.5" fill="#0369a1"/>
+<text x="27" y="118" class="card-body">Visualizza il codice cubitale e il QR code a</text>
+<text x="27" y="134" class="card-body">video.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1206, 491)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="139.5" height="20" rx="5" fill="#fce7f3"/>
+              <text x="22" y="28" class="badge-txt" fill="#9d174d">PINA (PAZIENTE 73a)</text>
+              <text x="14" y="52" class="card-title">Chiusura App &amp; Spostamento</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#0369a1"/>
+<text x="27" y="78" class="card-body">Riceve l'SMS di sicurezza e chiude il telefono.</text>
+<circle cx="18" cy="94" r="2.5" fill="#0369a1"/>
+<text x="27" y="98" class="card-body">Si prepara ed esce per recarsi alla farmacia</text>
+<text x="27" y="114" class="card-body">vicina.</text>
+<circle cx="18" cy="130" r="2.5" fill="#0369a1"/>
+<text x="27" y="134" class="card-body">Porta con sé la tessera sanitaria e il cellulare.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1604, 491)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="126.5" height="20" rx="5" fill="#ffedd5"/>
+              <text x="22" y="28" class="badge-txt" fill="#c2410c">PINA &amp; FARMACISTA</text>
+              <text x="14" y="52" class="card-title">Incontro Fisico al Banco</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#0369a1"/>
+<text x="27" y="78" class="card-body">Pina saluta il farmacista di fiducia.</text>
+<circle cx="18" cy="94" r="2.5" fill="#0369a1"/>
+<text x="27" y="98" class="card-body">Dice: 'Ho iniziato a prenotare da casa, ecco</text>
+<text x="27" y="114" class="card-body">il codice'.</text>
+<circle cx="18" cy="130" r="2.5" fill="#0369a1"/>
+<text x="27" y="134" class="card-body">Mostra lo schermo del telefono o il foglietto.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2002, 491)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="126.5" height="20" rx="5" fill="#ffedd5"/>
+              <text x="22" y="28" class="badge-txt" fill="#c2410c">PINA &amp; FARMACISTA</text>
+              <text x="14" y="52" class="card-title">Confronto e Scelta Finale</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#0369a1"/>
+<text x="27" y="78" class="card-body">Il farmacista le illustra a voce le disponibilità</text>
+<text x="27" y="94" class="card-body">orarie.</text>
+<circle cx="18" cy="110" r="2.5" fill="#0369a1"/>
+<text x="27" y="114" class="card-body">Pina sceglie l'orario delle 10:15 su consiglio</text>
+<text x="27" y="130" class="card-body">umano.</text>
+<circle cx="18" cy="146" r="2.5" fill="#0369a1"/>
+<text x="27" y="150" class="card-body">Il farmacista conferma la prenotazione a terminale.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2400, 491)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="139.5" height="20" rx="5" fill="#dcfce7"/>
+              <text x="22" y="28" class="badge-txt" fill="#15803d">PINA (PAZIENTE 73a)</text>
+              <text x="14" y="52" class="card-title">Ritiro Promemoria Cartaceo</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#0369a1"/>
+<text x="27" y="78" class="card-body">Ritira la ricevuta stampata al banco.</text>
+<circle cx="18" cy="94" r="2.5" fill="#0369a1"/>
+<text x="27" y="98" class="card-body">Ringrazia il farmacista sentendosi supportata</text>
+<text x="27" y="114" class="card-body">e curata.</text>
+<circle cx="18" cy="130" r="2.5" fill="#0369a1"/>
+<text x="27" y="134" class="card-body">La rete territoriale ha compensato il limite</text>
+<text x="27" y="150" class="card-body">digitale.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(410, 747)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="120.0" height="20" rx="5" fill="#dcfce7"/>
+              <text x="22" y="28" class="badge-txt" fill="#15803d">UI HPHP FRONTEND</text>
+              <text x="14" y="52" class="card-title">Rilevamento Blocco &amp; Salva</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#15803d"/>
+<text x="27" y="78" class="card-body">Rilevamento inattività o selezione da menu 'Serve</text>
+<text x="27" y="94" class="card-body">Aiuto'.</text>
+<circle cx="18" cy="110" r="2.5" fill="#15803d"/>
+<text x="27" y="114" class="card-body">Presentazione chiara della funzione di ripresa</text>
+<text x="27" y="130" class="card-body">territoriale.</text>
+<circle cx="18" cy="146" r="2.5" fill="#15803d"/>
+<text x="27" y="150" class="card-body">Messaggio incoraggiante: 'Non ti preoccupare,</text>
+<text x="27" y="166" class="card-body">ti aiutiamo noi'.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(808, 747)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="120.0" height="20" rx="5" fill="#dcfce7"/>
+              <text x="22" y="28" class="badge-txt" fill="#15803d">UI HPHP FRONTEND</text>
+              <text x="14" y="52" class="card-title">Generazione Token &amp; QR</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#15803d"/>
+<text x="27" y="78" class="card-body">Visualizzazione a caratteri giganti del codice</text>
+<text x="27" y="94" class="card-body">a 6 cifre.</text>
+<circle cx="18" cy="110" r="2.5" fill="#15803d"/>
+<text x="27" y="114" class="card-body">Generazione QR code ad alto contrasto per scanner.</text>
+<circle cx="18" cy="130" r="2.5" fill="#15803d"/>
+<text x="27" y="134" class="card-body">Istruzioni: 'Mostra questo codice in qualsiasi</text>
+<text x="27" y="150" class="card-body">farmacia'.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1206, 747)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="120.0" height="20" rx="5" fill="#dcfce7"/>
+              <text x="22" y="28" class="badge-txt" fill="#15803d">UI HPHP FRONTEND</text>
+              <text x="14" y="52" class="card-title">Conferma Invio SMS</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#15803d"/>
+<text x="27" y="78" class="card-body">Feedback verde: 'Codice inviato al tuo cellulare</text>
+<text x="27" y="94" class="card-body">via SMS'.</text>
+<circle cx="18" cy="110" r="2.5" fill="#15803d"/>
+<text x="27" y="114" class="card-body">Possibilità di stampare direttamente con un</text>
+<text x="27" y="130" class="card-body">clic.</text>
+<circle cx="18" cy="146" r="2.5" fill="#15803d"/>
+<text x="27" y="150" class="card-body">Chiusura morbida della schermata senza perdite</text>
+<text x="27" y="166" class="card-body">di dati.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1604, 747)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="146.0" height="20" rx="5" fill="#ffedd5"/>
+              <text x="22" y="28" class="badge-txt" fill="#c2410c">CONTATTO UMANO BANCO</text>
+              <text x="14" y="52" class="card-title">Accoglienza Territoriale</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#15803d"/>
+<text x="27" y="78" class="card-body">Il farmacista ascolta l'anziano con calma ed</text>
+<text x="27" y="94" class="card-body">empatia.</text>
+<circle cx="18" cy="110" r="2.5" fill="#15803d"/>
+<text x="27" y="114" class="card-body">Presa in carico del codice e digitazione su</text>
+<text x="27" y="130" class="card-body">terminale.</text>
+<circle cx="18" cy="146" r="2.5" fill="#15803d"/>
+<text x="27" y="150" class="card-body">Mediazione umana che abbatte l'ansia tecnologica</text>
+<text x="27" y="166" class="card-body">(ID-12).</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2002, 747)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="165.5" height="20" rx="5" fill="#dcfce7"/>
+              <text x="22" y="28" class="badge-txt" fill="#15803d">TERMINALE HPHP FARMACIA</text>
+              <text x="14" y="52" class="card-title">Ripristino Stato Sospeso</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#15803d"/>
+<text x="27" y="78" class="card-body">Interfaccia web dedicata al farmacista operatore.</text>
+<circle cx="18" cy="94" r="2.5" fill="#15803d"/>
+<text x="27" y="98" class="card-body">Caricamento automatico della sessione congelata</text>
+<text x="27" y="114" class="card-body">da Pina.</text>
+<circle cx="18" cy="130" r="2.5" fill="#15803d"/>
+<text x="27" y="134" class="card-body">Nessuna necessità di ridigitare codice fiscale</text>
+<text x="27" y="150" class="card-body">o NRE.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2400, 747)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="165.5" height="20" rx="5" fill="#dcfce7"/>
+              <text x="22" y="28" class="badge-txt" fill="#15803d">TERMINALE HPHP FARMACIA</text>
+              <text x="14" y="52" class="card-title">Stampa Ricevuta Ufficiale</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#15803d"/>
+<text x="27" y="78" class="card-body">Invio in stampa su carta intestata AUSL/Farmacia.</text>
+<circle cx="18" cy="94" r="2.5" fill="#15803d"/>
+<text x="27" y="98" class="card-body">Istruzioni per il digiuno e la preparazione</text>
+<text x="27" y="114" class="card-body">medica.</text>
+<circle cx="18" cy="130" r="2.5" fill="#15803d"/>
+<text x="27" y="134" class="card-body">Notifica di completamento inviata all'app di</text>
+<text x="27" y="150" class="card-body">Pina.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(410, 1003)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="146.0" height="20" rx="5" fill="#fef3c7"/>
+              <text x="22" y="28" class="badge-txt" fill="#b45309">SERVER HPHP &amp; ENGINE</text>
+              <text x="14" y="52" class="card-title">Rilevamento Richiesta Congelamento</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b45309"/>
+<text x="27" y="78" class="card-body">Serializzazione dello stato attuale del form</text>
+<text x="27" y="94" class="card-body">(State Persistence).</text>
+<circle cx="18" cy="110" r="2.5" fill="#b45309"/>
+<text x="27" y="114" class="card-body">Memorizzazione della ricetta NRE e dei filtri</text>
+<text x="27" y="130" class="card-body">impostati.</text>
+<circle cx="18" cy="146" r="2.5" fill="#b45309"/>
+<text x="27" y="150" class="card-body">Creazione record temporaneo crittografato su</text>
+<text x="27" y="166" class="card-body">database.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(808, 1003)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="146.0" height="20" rx="5" fill="#fef3c7"/>
+              <text x="22" y="28" class="badge-txt" fill="#b45309">SERVER HPHP &amp; ENGINE</text>
+              <text x="14" y="52" class="card-title">Generazione Token Univoco</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b45309"/>
+<text x="27" y="78" class="card-body">Creazione codice crittografico casuale di 6</text>
+<text x="27" y="94" class="card-body">caratteri (REQ-08).</text>
+<circle cx="18" cy="110" r="2.5" fill="#b45309"/>
+<text x="27" y="114" class="card-body">Impostazione TTL (Time-To-Live) di 24 ore di</text>
+<text x="27" y="130" class="card-body">validità.</text>
+<circle cx="18" cy="146" r="2.5" fill="#b45309"/>
+<text x="27" y="150" class="card-body">Associazione al codice fiscale del cittadino</text>
+<text x="27" y="166" class="card-body">richiedente.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1206, 1003)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="165.5" height="20" rx="5" fill="#fef3c7"/>
+              <text x="22" y="28" class="badge-txt" fill="#b45309">NOTIFICATION DISPATCHER</text>
+              <text x="14" y="52" class="card-title">Inoltro SMS Multi-Carrier</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b45309"/>
+<text x="27" y="78" class="card-body">Invio immediato dell'SMS tramite gateway telefonico.</text>
+<circle cx="18" cy="94" r="2.5" fill="#b45309"/>
+<text x="27" y="98" class="card-body">Generazione stringa QR per i lettori laser ottici.</text>
+<circle cx="18" cy="114" r="2.5" fill="#b45309"/>
+<text x="27" y="118" class="card-body">Archiviazione sicura nel buffer delle sessioni</text>
+<text x="27" y="134" class="card-body">sospese.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1604, 1003)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="172.0" height="20" rx="5" fill="#fef3c7"/>
+              <text x="22" y="28" class="badge-txt" fill="#b45309">RETE TERRITORIALE SOSETE</text>
+              <text x="14" y="52" class="card-title">Autenticazione Operatore</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b45309"/>
+<text x="27" y="78" class="card-body">Riconoscimento credenziali professionali del</text>
+<text x="27" y="94" class="card-body">farmacista.</text>
+<circle cx="18" cy="110" r="2.5" fill="#b45309"/>
+<text x="27" y="114" class="card-body">Accesso al canale autorizzato di prenotazione</text>
+<text x="27" y="130" class="card-body">regionale.</text>
+<circle cx="18" cy="146" r="2.5" fill="#b45309"/>
+<text x="27" y="150" class="card-body">Connessione sicura al cluster delle sessioni</text>
+<text x="27" y="166" class="card-body">HPHP.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2002, 1003)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="146.0" height="20" rx="5" fill="#fef3c7"/>
+              <text x="22" y="28" class="badge-txt" fill="#b45309">SERVER HPHP &amp; ENGINE</text>
+              <text x="14" y="52" class="card-title">Iniezione Sessione nel Terminale</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b45309"/>
+<text x="27" y="78" class="card-body">Decodifica del token di 6 caratteri inserito</text>
+<text x="27" y="94" class="card-body">da banco.</text>
+<circle cx="18" cy="110" r="2.5" fill="#b45309"/>
+<text x="27" y="114" class="card-body">Iniezione trasparente dei dati nel terminale</text>
+<text x="27" y="130" class="card-body">farmacia.</text>
+<circle cx="18" cy="146" r="2.5" fill="#b45309"/>
+<text x="27" y="150" class="card-body">Sblocco dello slot orario per finalizzazione</text>
+<text x="27" y="166" class="card-body">guidata.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2400, 1003)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="146.0" height="20" rx="5" fill="#fef3c7"/>
+              <text x="22" y="28" class="badge-txt" fill="#b45309">SERVER HPHP &amp; ENGINE</text>
+              <text x="14" y="52" class="card-title">Commit Transazione Operatore</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b45309"/>
+<text x="27" y="78" class="card-body">Scrittura definitiva con tracciamento matricola</text>
+<text x="27" y="94" class="card-body">farmacia.</text>
+<circle cx="18" cy="110" r="2.5" fill="#b45309"/>
+<text x="27" y="114" class="card-body">Revoca automatica del token di congelamento</text>
+<text x="27" y="130" class="card-body">utilizzato.</text>
+<circle cx="18" cy="146" r="2.5" fill="#b45309"/>
+<text x="27" y="150" class="card-body">Aggiornamento simultaneo del Fascicolo Sanitario</text>
+<text x="27" y="166" class="card-body">(FSE).</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(410, 1259)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="172.0" height="20" rx="5" fill="#fee2e2"/>
+              <text x="22" y="28" class="badge-txt" fill="#b91c1c">STATE PERSISTENCE ENGINE</text>
+              <text x="14" y="52" class="card-title">Storage Sessione Sicura HPHP</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b91c1c"/>
+<text x="27" y="78" class="card-body">Database Redis/Postgres per la conservazione</text>
+<text x="27" y="94" class="card-body">dello stato.</text>
+<circle cx="18" cy="110" r="2.5" fill="#b91c1c"/>
+<text x="27" y="114" class="card-body">Crittografia a riposo conforme a normativa privacy</text>
+<text x="27" y="130" class="card-body">Sanità.</text>
+<circle cx="18" cy="146" r="2.5" fill="#b91c1c"/>
+<text x="27" y="150" class="card-body">Politica automatica di cancellazione allo scadere</text>
+<text x="27" y="166" class="card-body">delle 24h.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(808, 1259)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="178.5" height="20" rx="5" fill="#fee2e2"/>
+              <text x="22" y="28" class="badge-txt" fill="#b91c1c">SISTEMA TESSERA SANITARIA</text>
+              <text x="14" y="52" class="card-title">Lock Prescrizione NRE</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b91c1c"/>
+<text x="27" y="78" class="card-body">Mantenimento della ricetta in stato di impegno</text>
+<text x="27" y="94" class="card-body">temporaneo.</text>
+<circle cx="18" cy="110" r="2.5" fill="#b91c1c"/>
+<text x="27" y="114" class="card-body">Protezione da utilizzi duplicati presso altri</text>
+<text x="27" y="130" class="card-body">canali.</text>
+<circle cx="18" cy="146" r="2.5" fill="#b91c1c"/>
+<text x="27" y="150" class="card-body">Validità garantita per la durata delle 24 ore.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1206, 1259)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="152.5" height="20" rx="5" fill="#fee2e2"/>
+              <text x="22" y="28" class="badge-txt" fill="#b91c1c">SMS GATEWAY REGIONALE</text>
+              <text x="14" y="52" class="card-title">Provider Telecomunicazioni</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b91c1c"/>
+<text x="27" y="78" class="card-body">Instradamento priorità massima messaggio SMS</text>
+<text x="27" y="94" class="card-body">sul terminale.</text>
+<circle cx="18" cy="110" r="2.5" fill="#b91c1c"/>
+<text x="27" y="114" class="card-body">Consegna con ricevuta di ritorno certificata.</text>
+<circle cx="18" cy="130" r="2.5" fill="#b91c1c"/>
+<text x="27" y="134" class="card-body">Nessun costo telefonico a carico dell'utente</text>
+<text x="27" y="150" class="card-body">anziano.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(1604, 1259)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="185.0" height="20" rx="5" fill="#fee2e2"/>
+              <text x="22" y="28" class="badge-txt" fill="#b91c1c">RETE FEDERATA FARMACIE CUP</text>
+              <text x="14" y="52" class="card-title">Accordo Regionale E-Care</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b91c1c"/>
+<text x="27" y="78" class="card-body">Protocollo di intesa Regione Emilia-Romagna</text>
+<text x="27" y="94" class="card-body">e Federfarma.</text>
+<circle cx="18" cy="110" r="2.5" fill="#b91c1c"/>
+<text x="27" y="114" class="card-body">Integrazione dei sistemi di sportello con il</text>
+<text x="27" y="130" class="card-body">portale unico.</text>
+<circle cx="18" cy="146" r="2.5" fill="#b91c1c"/>
+<text x="27" y="150" class="card-body">Remunerazione del servizio di mediazione territoriale.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2002, 1259)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="159.0" height="20" rx="5" fill="#fee2e2"/>
+              <text x="22" y="28" class="badge-txt" fill="#b91c1c">TERMINALE CUP FARMACIA</text>
+              <text x="14" y="52" class="card-title">SOSETE / Farmacie CUP 2000</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b91c1c"/>
+<text x="27" y="78" class="card-body">Server centrale di accettazione per sportelli</text>
+<text x="27" y="94" class="card-body">di prossimità.</text>
+<circle cx="18" cy="110" r="2.5" fill="#b91c1c"/>
+<text x="27" y="114" class="card-body">Validazione dell'identità dell'operatore che</text>
+<text x="27" y="130" class="card-body">opera per il cittadino.</text>
+<circle cx="18" cy="146" r="2.5" fill="#b91c1c"/>
+<text x="27" y="150" class="card-body">Chiusura operazione su agenda specialistica</text>
+<text x="27" y="166" class="card-body">ospedaliera.</text>
+</g>
+
+            <g filter="url(#card-shadow)" transform="translate(2400, 1259)">
+              <rect x="0" y="0" width="380" height="210" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.3"/>
+              <rect x="14" y="14" width="178.5" height="20" rx="5" fill="#fee2e2"/>
+              <text x="22" y="28" class="badge-txt" fill="#b91c1c">FSE &amp; PAGOPA &amp; PROTOCOLLO</text>
+              <text x="14" y="52" class="card-title">Fascicolo Elettronico &amp; PagoPA</text>
+              <line x1="14" y1="60" x2="366" y2="60" stroke="#f1f5f9" stroke-width="1.2"/>
+            
+<circle cx="18" cy="74" r="2.5" fill="#b91c1c"/>
+<text x="27" y="78" class="card-body">Archiviazione promemoria su Fascicolo Sanitario</text>
+<text x="27" y="94" class="card-body">(FSE).</text>
+<circle cx="18" cy="110" r="2.5" fill="#b91c1c"/>
+<text x="27" y="114" class="card-body">Rilascio quietanza di pagamento se ticket riscosso</text>
+<text x="27" y="130" class="card-body">a banco.</text>
+<circle cx="18" cy="146" r="2.5" fill="#b91c1c"/>
+<text x="27" y="150" class="card-body">Chiusura formale della pratica con notifica</text>
+<text x="27" y="166" class="card-body">multicanale.</text>
+</g>
+<path d="M 1148 676 C 1218 978, 1186 1008, 1246 1093.0" 
+          fill="none" stroke="#ea580c" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arrow-orange)" />
+    <path d="M 1944 696 C 2014 722, 1982 752, 2042 837.0" 
+          fill="none" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arrow-blue)" />
+
+    <g transform="translate(40, 1635)">
+      <text x="10" y="20" font-size="12" font-weight="600" fill="#64748b">UUXD Master Degree — Project Team Affordance (HPHP) — A.A. 2025/2026</text>
+      <text x="2710" y="20" font-size="12" font-weight="600" fill="#64748b" text-anchor="end">Fase C: Proposta di Design — Service Blueprint 04 (Strada B: Ecosistema di Servizio)</text>
+    </g>
+    </svg>
