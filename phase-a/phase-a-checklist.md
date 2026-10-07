@@ -43,7 +43,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Reclutare persone reali appartenenti ai segmenti scelti.
 - [x] Raccogliere dati, osservazioni e citazioni.
 - [x] Verificare fonte, anno, popolazione e pagina dei dati quantitativi.
-- [x] Allegare screenshot leggibili delle pagine esatte delle fonti citate (incorporati direttamente nel PDF).
+- [x] Allegare screenshot leggibili delle pagine esatte delle fonti citate (conservati nei materiali di ricerca allegati; tabelle di sintesi con citazioni puntuali incorporate nel PDF).
 - [x] Analizzare bisogni, barriere e differenze tra segmenti.
 - [x] Dichiarare limiti e bias.
 - [x] Elencare le idee di design non banali emerse.
@@ -119,4 +119,4 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Test preliminari documentati con dati reali.
 - [x] SUS e curva d'urgenza verificabili.
 - [x] Raccomandazioni collegate alle evidenze.
-- [x] Dati grezzi e screenshot incorporati nel PDF; checklist guideline consegnata come file xlsx separato.
+- [x] Dati grezzi e screenshot di assessment/test incorporati nel PDF; screenshot fonti statistiche e checklist guideline consegnati come materiali allegati separati.
