@@ -9,11 +9,11 @@ Per guidare la transizione dalle evidenze empiriche ed etnografiche delle Fasi A
 
 Il modello di Garrett struttura il processo progettuale su cinque livelli progressivi di decisione, dal piano astratto a quello tangibile:
 \begin{enumerate}
-\item \textbf{Strategy Plane (Piano Strategico):} definisce gli obiettivi organizzativi della sanità regionale (riduzione delle liste d\textquotesingle attesa, abbattimento del tasso di abbandono digitale, inclusione delle fasce fragili) e i bisogni profondi emersi dai modelli mentali delle quattro personas (autonomia protetta per Pina, efficienza a basso attrito per Elena, trasparenza e controllo per Renato, mediazione e flessibilità per Amina).
-\item \textbf{Scope Plane (Piano dell\textquotesingle Ambito):} delimita le funzionalità offerte e i requisiti informativi, formalizzando la coesistenza di due binari operativi complementari: la \textbf{Modalità Co-Pilota} (assistenza collaborativa in tempo reale) e la \textbf{Modalità Delega Piena} (gestione asincrona per conto terzi).
-\item \textbf{Structure Plane (Piano della Struttura):} definisce l\textquotesingle Information Architecture (organizzazione dei contenuti e sistema di etichettatura per compiti) e l\textquotesingle Interaction Design (flussi operativi, gestione del feedback, tolleranza agli errori).
-\item \textbf{Skeleton Plane (Piano dello Scheletro):} definisce l\textquotesingle arrangiamento visivo, la gerarchia delle informazioni e i touch target attraverso la suite di wireframe responsive (Versione 0).
-\item \textbf{Surface Plane (Piano della Superficie):} definisce il linguaggio visivo, i contrasti cromatici e il microcopy in linguaggio naturale (\emph{Plain Language}).
+\item \textbf{Strategy Plane:} definisce gli obiettivi organizzativi della sanità regionale (riduzione delle liste d\textquotesingle attesa, abbattimento del tasso di abbandono digitale, inclusione delle fasce fragili) e i bisogni profondi emersi dai modelli mentali delle quattro personas (autonomia protetta per Pina, efficienza a basso attrito per Elena, trasparenza e controllo per Renato, mediazione e flessibilità per Amina).
+\item \textbf{Scope Plane:} delimita le funzionalità offerte e i requisiti informativi, formalizzando la coesistenza di due binari operativi complementari: la \textbf{Modalità Co-Pilota} (assistenza collaborativa in tempo reale) e la \textbf{Modalità Delega Piena} (gestione asincrona per conto terzi).
+\item \textbf{Structure Plane:} definisce l\textquotesingle Information Architecture (organizzazione dei contenuti e sistema di etichettatura per compiti) e l\textquotesingle Interaction Design (flussi operativi, gestione del feedback, tolleranza agli errori).
+\item \textbf{Skeleton Plane:} definisce l\textquotesingle arrangiamento visivo, la gerarchia delle informazioni e i touch target attraverso la suite di wireframe responsive (Versione 0).
+\item \textbf{Surface Plane:} definisce il linguaggio visivo, i contrasti cromatici e il microcopy in linguaggio naturale (\emph{Plain Language}).
 \end{enumerate}
 
 \fieldheading{Integrazione degli approcci Top-down e Bottom-up}
@@ -82,14 +82,14 @@ L\textquotesingle architettura attuale riflette fedelmente i confini proprietari
 
 \fieldheading{Se la scelta è diversa da quella del tool esistente, motivare la scelta}
 
-La scelta è radicalmente opposta rispetto a quella di CUPweb. Il sistema esistente adotta un approccio rigidamente orientato ai silos di sistema: ogni funzionalità è vincolata al database di competenza. Come documentato dagli screenshot reali acquisiti sul sistema vivo, la home page di CUPweb costringe l\textquotesingle utente a scegliere tra quattro percorsi burocratici mutuamente esclusivi prima ancora di inserire qualsiasi dato:
+La scelta è radicalmente opposta rispetto a quella di CUPweb. Il sistema esistente adotta un approccio rigidamente orientato ai silos di sistema: ogni funzionalità è vincolata al database di competenza. Inoltre, la home page di CUPweb costringe l\textquotesingle utente a scegliere tra quattro percorsi burocratici mutuamente esclusivi prima ancora di inserire qualsiasi dato:
 \begin{enumerate}
 \item \emph{Prenota ricette di specialistica};
 \item \emph{Prenota ricette esami di laboratorio};
 \item \emph{Prenota un Accesso all\textquotesingle Anagrafe Sanitaria o Sanità Pubblica};
 \item \emph{Prenota prestazioni di medicina dello sport}.
 \end{enumerate}
-Questo modello scarica sull\textquotesingle utente fragile l\textquotesingle onere di sapere se una visita diabetologica appartenga alla specialistica ambulatoriale o alla sanità pubblica, generando blocchi decisionali immediati (Pina) e vicoli ciechi operativi (lo screenshot reale di CUPweb mostra una pagina bianca con la scritta \emph{``Non è stata trovata nessuna ricetta prenotabile online''}, priva di qualsiasi campo per digitare un codice cartaceo o chiedere supporto).
+Questo modello scarica sull\textquotesingle utente fragile l\textquotesingle onere di sapere se una visita diabetologica appartenga alla specialistica ambulatoriale o alla sanità pubblica, generando blocchi decisionali immediati (Pina) e vicoli ciechi operativi (CUPweb attualmente mostra una pagina bianca con la scritta \emph{``Non è stata trovata nessuna ricetta prenotabile online''}, priva di qualsiasi campo per digitare un codice cartaceo o chiedere supporto).
 
 Nel redesign HPHP abbiamo ribaltato questa impostazione: l\textquotesingle architettura è interamente **orientata ai compiti dell\textquotesingle utente (Task-Driven)**. Il cittadino ha un unico punto di accesso intuitivo (\emph{``Prenota una visita o un esame''}), e il motore di backend riconosce automaticamente dal codice ricetta (NRE) o dalle parole chiave se la prestazione sia una visita specialistica, un esame ematochimico o una vaccinazione, indirizzando la richiesta alle agende appropriate.
 
@@ -98,7 +98,7 @@ Nel redesign HPHP abbiamo ribaltato questa impostazione: l\textquotesingle archi
 La riorganizzazione informativa si fonda su un sistema di navigazione principale articolato in **cinque macro-aree di primo livello**, formulate in linguaggio naturale e orientate all\textquotesingle azione:
 \begin{enumerate}
 \item \textbf{``Prenota una visita o esame'':} punto di ingresso unico e unificato. Elimina la frammentazione tra specialistica, laboratorio e sanità pubblica. Accoglie l\textquotesingle utente con un bivio chiaro: inserimento ricetta medica (digitazione NRE o scansione codice a barre) oppure scelta guidata di prestazioni ad accesso libero (vaccini, certificati, visite in Libera Professione).
-\item \textbf{``I miei appuntamenti'':} cruscotto unico per visualizzare, spostare o disdire tutte le prestazioni future e consultare lo storico di quelle passate, unificando le agende di tutte le AUSL regionali (superando la frammentazione per singola azienda sanitaria documentata in \texttt{listaprenotazioni.htm}).
+\item \textbf{``I miei appuntamenti'':} cruscotto unico per visualizzare, spostare o disdire tutte le prestazioni future e consultare lo storico di quelle passate, unificando le agende di tutte le AUSL regionali (superando la frammentazione attuale per singola azienda sanitaria).
 \item \textbf{``Le mie prescrizioni'':} archivio chiaro e leggibile delle ricette dematerializzate caricate dal medico di medicina generale, con indicazione visiva dello stato (da prenotare, già prenotata, scaduta).
 \item \textbf{``Chi assisto'':} sezione interamente dedicata alla gestione della relazione tra caregiver e assistito (\texttt{P-04}, \texttt{P-05}, \texttt{C-02}, \texttt{REQ-06}). Permette di associare familiari, gestire i consensi legali di delega senza scambio di credenziali e attivare la configurazione della Modalità Co-Pilota.
 \item \textbf{``Serve aiuto?'':} touchpoint di supporto contestuale sempre visibile a pari livello gerarchico. Include FAQ interattive in Plain Language con esempi visivi, canale di messaggistica asincrona per quesiti complessi o mediazione linguistica (\texttt{REQ-09}), e la funzione di salvataggio sessione per assistenza presso la rete territoriale delle farmacie (\texttt{REQ-08}).
@@ -106,15 +106,7 @@ La riorganizzazione informativa si fonda su un sistema di navigazione principale
 
 \fieldheading{Quali sono i campi di metadati più rilevanti?}
 
-Rispetto al sistema attuale, che gestisce la prenotazione come un record tabellare isolato privo di contesto semantico, HPHP introduce una serie di metadati essenziali per abilitare l\textquotesingle accessibilità e la co-gestione familiare:
-\begin{itemize}
-\item \textbf{Distanza chilometrica e accessibilità logistica:} metadato calcolato in tempo reale rispetto al comune di residenza del paziente (\emph{es. ``Ospedale di Correggio --- 2,4\,km da casa''}) e indicazione delle linee di trasporto pubblico locale con fermata a meno di 200 metri (\texttt{U1-01}).
-\item \textbf{Regime erogativo e trasparenza economica:} differenziazione esplicita tra prestazione SSN (ticket ordinario o quota esenzione) e Libera Professione intramoenia (ALPI), con indicazione chiara del costo esatto in euro prima della conferma (\texttt{P-08}, \texttt{REQ-03}).
-\item \textbf{Livello di autenticazione progressivo:} stato della sessione (non autenticata, identificazione leggera tramite NRE + Codice Fiscale, autenticazione forte SPID/CIE) per abilitare l\textquotesingle esplorazione a bassa soglia (\texttt{REQ-01}, \texttt{P-01}).
-\item \textbf{Profilo assistito e delega:} associazione tra identità esecutrice (caregiver) e identità titolare della prestazione (paziente), con flag di autorizzazione e tracciamento delle modifiche (\texttt{REQ-06}, \texttt{P-10}).
-\item \textbf{Canale e stato di assistenza Co-Pilota:} indicatore di sessione collaborativa attiva (connessione WebRTC/WebSocket in corso, ID caregiver collegato, stato audio vivavoce, coordinate puntatore visivo condiviso).
-\item \textbf{Token temporaneo di congelamento sessione:} codice a 6 caratteri associato a un timer di 24 ore per consentire la ripresa del task da farmacia o da altro dispositivo in caso di interruzione (\texttt{REQ-08}, \texttt{ID-11}).
-\end{itemize}
+Rispetto al sistema attuale di CUPweb, che gestisce la prenotazione come un record tabellare grezzo e isolato privo di contesto semantico, l\textquotesingle architettura informativa di HPHP arricchisce i dati sanitari con una serie di metadati specifici dedicati all\textquotesingle accessibilità logistica, alla trasparenza economica e alla co-gestione familiare. Questa semantica consente all\textquotesingle interfaccia di calcolare proattivamente la prossimità geografica, gestire l\textquotesingle accesso progressivo a bassa soglia e orchestrare l\textquotesingle affiancamento collaborativo tra paziente e caregiver.
 
 La tabella sottostante formalizza lo schema sintetico dei metadati cardine del sistema HPHP, definendone il ruolo architetturale, l\textquotesingle impatto sull\textquotesingle esperienza d\textquotesingle uso dell\textquotesingle utente anziano e dell\textquotesingle intermediario, e la tracciabilità verso i requisiti di progetto.
 
@@ -211,56 +203,6 @@ La tabella seguente formalizza l\textquotesingle inventario analitico dei conten
 \end{tabular}
 \end{center}
 
-\fieldheading{Sitemap e Task Map gerarchica del sistema}
-
-La sitemap gerarchica sottostante illustra l\textquotesingle architettura complessiva dell\textquotesingle applicazione HPHP, evidenziando le relazioni tra la navigazione primaria, i flussi operativi di secondo livello e i servizi trasversali (Modalità Co-Pilota e Rete Territoriale).
-
-\begin{center}
-\small
-\begin{minipage}{0.95\linewidth}
-\ttfamily
-\textbf{HPHP Web Application (Architettura dell\textquotesingle Informazione Unificata)}\\
-|\\
-+-- \textbf{[0.0] Home / Dashboard Orientata ai Compiti}\\
-|   +-- [0.1] Widget Prossimo Appuntamento (promemoria, dettagli, mappa)\\
-|   +-- [0.2] Scorciatoia ``Prenota di nuovo'' (prestazioni croniche ricorrenti)\\
-|   \textbackslash-- [0.3] Indicatore Stato Caregiver (collegamento e disponibilità)\\
-|\\
-+-- \textbf{[1.0] Prenota una Visita o Esame (Flusso Principale Task-Driven)}\\
-|   +-- [1.1] Bivio Iniziale a Bassa Soglia\\
-|   |   +-- [1.1.1] Inserimento Ricetta Dematerializzata (NRE manuale o scansione)\\
-|   |   \textbackslash-- [1.1.2] Prestazioni ad Accesso Libero (vaccini, patenti, sport)\\
-|   +-- [1.2] Scelta Regime Erogativo (Confronto Trasparente SSN vs Libera Professione)\\
-|   +-- [1.3] Selezione Struttura e Data (Ordinamento per km, filtri bus urbani, chip orari)\\
-|   +-- [1.4] Riepilogo e Pre-Conferma Rassicurante (Verifica Co-Pilota, reversibilità)\\
-|   \textbackslash-- [1.5] Esito Positivo e Condivisione (WhatsApp, SMS, calendario, stampa)\\
-|\\
-+-- \textbf{[2.0] I Miei Appuntamenti (Gestione Unificata Regionale)}\\
-|   +-- [2.1] Lista Appuntamenti Attivi (unificazione tutte le AUSL regionali)\\
-|   +-- [2.2] Scheda Dettaglio Appuntamento (preparazione, avvertenze, contatti sede)\\
-|   +-- [2.3] Modifica Appuntamento (ricerca nuova data senza perdere il posto)\\
-|   \textbackslash-- [2.4] Disdetta Guidata Protetta (doppio consenso, timer ripensamento 10 min)\\
-|\\
-+-- \textbf{[3.0] Le Mie Prescrizioni}\\
-|   +-- [3.1] Prescrizioni Attive da Prenotare (collegamento one-tap a [1.0])\\
-|   \textbackslash-- [3.2] Storico Prescrizioni e Consultazione Referti da Fascicolo\\
-|\\
-+-- \textbf{[4.0] Chi Assisto (Area Caregiver e Co-Gestione)}\\
-|   +-- [4.1] Cruscotto Familiare (visualizzazione sintetica appuntamenti assistito)\\
-|   +-- [4.2] Modalità Delega Piena Asincrona (switch profilo con banner persistente)\\
-|   \textbackslash-- [4.3] Configurazione Co-Pilota e Preferenze Notifiche Bilaterali\\
-|\\
-+-- \textbf{[5.0] Serve Aiuto? (Supporto Multicanale e Rete Territoriale)}\\
-|   +-- [5.1] Guida Visiva e FAQ in Plain Language (esempi ricetta, termini medici)\\
-|   +-- [5.2] Canale di Assistenza Scritta Asincrona (messaggistica con operatore)\\
-|   \textbackslash-- [5.3] Salva Sessione per Farmacia (generazione codice 24h / QR code)\\
-|\\
-\textbackslash-- \textbf{[SERVIZI TRASVERSALI INTERATTIVI]}\\
-    +-- \textbf{Modalità Co-Pilota in Tempo Reale:} invocabile da qualsiasi schermata\\
-    |   \textbackslash-- Voce vivavoce + puntatore visivo condiviso + verifica pre-conferma\\
-    \textbackslash-- \textbf{Motore di Persistenza Locale:} recupero sessione interrotta da standby
-\end{minipage}
-\end{center}
 
 \cardsection{Documento 03: Service Blueprint}
 
@@ -282,7 +224,7 @@ La struttura di ciascun blueprint è articolata secondo le cinque corsie orizzon
 
 \fieldheading{Architettura dei quattro Service Blueprint del progetto}
 
-In aderenza alle decisioni implementative formalizzate nel documento progettuale di riferimento (\texttt{phase-c/scelte\_implementative\_phaseC.md}) e in coerenza con le linee guida d\textquotesingle esame (che prescrivono di fornire più prospettive per cogliere la complessità del sistema), l\textquotesingle ecosistema HPHP non è compresso in un unico diagramma omnicomprensivo, ma è articolato in **quattro Service Blueprint distinti e complementari**. 
+L\textquotesingle ecosistema HPHP non è compresso in un unico diagramma omnicomprensivo, ma è articolato in **quattro Service Blueprint distinti e complementari**. 
 
 Ciascun blueprint mappa un macro-percorso di servizio autonomo, caratterizzato da attori, catene di backstage e processi di supporto radicalmente differenti:
 
