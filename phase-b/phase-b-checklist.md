@@ -2,7 +2,7 @@
 
 Riferimento: [specifiche complete](../docs/specs.md).
 
-> Stato: struttura, contenuti, workbook, visual C\&A e PDF aggiornati e verificati; la validazione empirica delle personas resta in attesa delle interviste di Fase A.
+> Stato: struttura, contenuti, workbook e visual C\&A presenti. La Fase A documenta interviste e test preliminari; le personas ne costituiscono una sintesi progettuale, non partecipanti reali né una validazione indipendente del cast. Restano da chiudere le verifiche delle fonti primarie segnalate in Fase A.
 
 ## 1. Team card
 

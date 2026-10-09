@@ -83,7 +83,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Reclutare 2-6 partecipanti reali pertinenti.
 - [x] Informare almeno due partecipanti che saranno ricontattati nella Fase D.
 - [x] Eseguire un test pilota.
-- [x] Condurre tutti i task senza guidare il partecipante. (unica eccezione: Test #2, Pina, rientrante nella regola "salvo bloccaggio totale" già prevista dallo script di apertura, si veda Documento 06a)
+- [x] Condurre tutti i task senza guidare il partecipante. (unica eccezione: Test #2, Carla, rientrante nella regola "salvo bloccaggio totale" già prevista dallo script di apertura, si veda Documento 06a)
 - [x] Registrare contesto, tempo, risultato, errori, esitazioni, aiuti e citazioni.
 - [x] Compilare una Test Data card per partecipante.
 - [x] Somministrare sempre il SUS standard e il questionario di gradimento.
@@ -120,3 +120,12 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] SUS e curva d'urgenza verificabili.
 - [x] Raccomandazioni collegate alle evidenze.
 - [x] Dati grezzi e screenshot di assessment/test incorporati nel PDF; screenshot fonti statistiche e checklist guideline consegnati come materiali allegati separati.
+
+## Verifiche residue di chiusura — 9 ottobre 2026
+
+Le spunte precedenti descrivono i contenuti predisposti; non sostituiscono la verifica delle fonti primarie.
+
+- [x] Allineare il tracker all'età riportata nell'intervista di Fatima (35 anni), esplicitando che il caso è fuori dalla fascia target 45–60.
+- [ ] Riesaminare le 64/69 voci non verificate e sostituire le motivazioni generiche con schermata, prerequisito e verifica prevista. Vedere il censimento derivato nei materiali di ricerca.
+- [ ] Recuperare o localizzare le attestazioni individuali del consenso e i verbali originali; non risultano rintracciabili nel repository esaminato.
+- [ ] Recuperare o localizzare l'esportazione originale dei questionari SUS e riconciliarla con le risposte conservate.

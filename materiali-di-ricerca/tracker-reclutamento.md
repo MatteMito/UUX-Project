@@ -20,7 +20,7 @@ Requisiti minimi (da `phase-a-checklist.md` / `docs/specs-summary.md`):
 | Nome fittizio | Età | Genere | Competenza tecnica/dominio | Relazione con il team | Canale/modalità di reclutamento | Data contatto | Intervista fatta | Test 06a fatto | Test 06b fatto | Disponibile per Fase D |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Silvia F. | 45-60 | F | Caregiver a distanza | Amica di Matteo Boscherini | Rete amicale | 21/09/2026 | Sì (telefonica, 10 min) | Sì (23/09/2026, SUS 55/100) | Sì (23/09/2026, SUS 80/100) | |
-| Fatima R. | 45-60 | F | Caregiver convivente | Segretaria dell'azienda di tirocinio di Matteo Boscherini | Rete professionale | 21/09/2026 | Sì (in presenza, 17 min) | Sì (24/09/2026, SUS 37,5/100) | Sì (24/09/2026, SUS 67,5/100) | |
+| Fatima R. | 35 (come riportato nell’intervista) | F | Caregiver convivente | Segretaria dell'azienda di tirocinio di Matteo Boscherini | Rete professionale | 21/09/2026 | Sì (in presenza, 17 min) | Sì (24/09/2026, SUS 37,5/100) | Sì (24/09/2026, SUS 67,5/100) | |
 | | | | | | | | | | | |
 
 ## Note su modalità di reclutamento
@@ -35,3 +35,7 @@ Elencare qui i nomi fittizi dei partecipanti che hanno accettato di essere ricon
 
 - [x] Carla B. (segmento A, avvisata, contattare entro Fase D)
 - [x] Giorgio M. (segmento A, avvisato, contattare entro Fase D)
+
+## Riconciliazione documentale — 9 ottobre 2026
+
+La fascia 45–60 precedentemente indicata per Fatima non coincideva con i 35 anni presenti nella descrizione dell'intervista. Il tracker conserva ora quel dato puntuale come riportato nell’intervista, senza attribuire una nuova età. I 35 anni riportati rendono Fatima un caso esplorativo fuori dalla fascia anagrafica target; il ruolo di caregiver convivente non equivale alla piena appartenenza al segmento. Il dato non è stato adattato alla fascia target.
