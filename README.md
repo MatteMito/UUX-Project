@@ -1,1 +1,1 @@
-Progetto HPHP (Help People Help People) del corso di Usability e User Experience Design: ricerca UX e riprogettazione di CUPweb per favorire la prenotazione sanitaria autonoma e il supporto dei caregiver.
+HPHP (Help People Help People) project for the Usability and User Experience Design course: UX research and redesign of CUPweb to support independent healthcare appointment booking and caregiver assistance.
