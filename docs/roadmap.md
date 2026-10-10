@@ -18,7 +18,7 @@
 - [x] Creare una cartella condivisa con struttura e nomi coerenti.
 - [ ] Definire la convenzione di versionamento degli artefatti.
 - [ ] Predisporre un registro delle decisioni progettuali.
-- [x] Predisporre la tracciabilità A/B: `ID -> R -> REQ -> P/U -> C`, anche nello [strumento interattivo](../strumento-tracciabilita.html).
+- [x] Predisporre la tracciabilità A/B: `ID -> R -> REQ -> P/U -> C`, anche nello [strumento interattivo](../requirements-traceability.html).
 - [ ] Completare la matrice fino a schermate, soluzioni e verifiche delle Fasi C/D.
 - [ ] Definire regole per consenso, anonimizzazione e gestione dei dati dei partecipanti.
 
@@ -79,9 +79,9 @@
 - [x] Documentare limiti e bias.
 - [x] Ricavare implicazioni di design non banali.
 
-**Artefatti:** [Market Research](../phase-a/phase-a.tex), Documenti 04a/04b; [tracce](../materiali-di-ricerca/tracce-intervista.md), [tracker](../materiali-di-ricerca/tracker-reclutamento.md), screenshot delle fonti.
+**Artefatti:** [Market Research](../phase-a/phase-a.tex), Documenti 04a/04b; [tracce](../research-materials/tracce-intervista.md), [tracker](../research-materials/tracker-reclutamento.md), screenshot delle fonti.
 
-**Stato:** quattro interviste riportate; campione di comodo. Le verifiche degli originali sono elencate nel [registro delle evidenze](../materiali-di-ricerca/verifica-evidenze-fase-a.md).
+**Stato:** quattro interviste riportate; campione di comodo. Le verifiche degli originali sono elencate nel [registro delle evidenze](../research-materials/verifica-evidenze-fase-a.md).
 
 ### A4. Assessment delle risorse esistenti
 
@@ -100,7 +100,7 @@
 
 **Artefatti:** Assessment 05a/05b nel [report](../phase-a/phase-a.tex), [workbook](../phase-a/phase-a-guideline-checklist.xlsx) e screenshot.
 
-**Limite aperto:** 88 guideline per tool; 64 giudizi CUPweb e 69 MioDottore non verificati, più 1 N/A CUPweb distinto. Il [censimento derivato](../materiali-di-ricerca/verifica-guideline-non-verificate.md) è presente; servono riesame delle voci pubbliche e motivazioni specifiche dei rinvii. L'ispezione documentata non attesta copertura integrale.
+**Limite aperto:** 88 guideline per tool; 64 giudizi CUPweb e 69 MioDottore non verificati, più 1 N/A CUPweb distinto. Il [censimento derivato](../research-materials/verifica-guideline-non-verificate.md) è presente; servono riesame delle voci pubbliche e motivazioni specifiche dei rinvii. L'ispezione documentata non attesta copertura integrale.
 
 ### A5. User test preliminare
 
@@ -119,7 +119,7 @@
 - [x] Integrare i problemi emersi con l'expert review.
 - [x] Costruire una curva d'urgenza con soglia motivata.
 
-**Artefatti:** pilot e card 06a/06b nel [report](../phase-a/phase-a.tex), [protocollo](../materiali-di-ricerca/protocollo-test-utente.md), [risposte SUS](../materiali-di-ricerca/risposte-sus.md).
+**Artefatti:** pilot e card 06a/06b nel [report](../phase-a/phase-a.tex), [protocollo](../research-materials/protocollo-test-utente.md), [risposte SUS](../research-materials/risposte-sus.md).
 
 **Stato:** quattro persone, otto sessioni su due tool; dry run interno escluso dal campione. Media SUS CUPweb 38,75, MioDottore 66,25. Aiuto dopo blocco di Carla dichiarato. Verificare gli originali e gli endpoint dei task prima di confrontarli con il redesign; la learnability richiede ripetizioni pianificate.
 

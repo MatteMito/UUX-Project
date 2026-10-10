@@ -10,7 +10,7 @@ Questa checklist operativa raccoglie e traccia in modo granulare tutti i **mater
 - [ ] **Screenshot ISTAT & CNEL-Censis**
   - [ ] Individuare le pagine esatte dei report ISTAT e CNEL-Censis citati nel Documento 02 (Market Research).
   - [ ] Catturare screenshot ad alta risoluzione e leggibili con intestazione e fonte ben visibili.
-  - [ ] Salvare i file nella cartella dedicata: `/materiali-di-ricerca/screenshot-fonti-statistiche/`.
+  - [ ] Salvare i file nella cartella dedicata: `/research-materials/screenshot-fonti-statistiche/`.
   - [ ] Verificare la perfetta corrispondenza di fonte, anno, pagina e didascalia con i riferimenti nel report LaTeX.
 
 ### 2. Assessment delle Risorse Esistenti (Card 05a / 05b)
@@ -112,7 +112,7 @@ Questa checklist operativa raccoglie e traccia in modo granulare tutti i **mater
 - [ ] **Verifica della Nomenclatura e Riferimenti Incrociati**
   - [ ] Uniformare ID raccomandazioni, codici wireframe, denominazione file e tabelle tra report LaTeX, roadmap e checklist.
 - [ ] **Controllo Materiali Supplementari**
-  - [ ] `/materiali-di-ricerca/screenshot-fonti-statistiche/` (screenshot ISTAT/CNEL nominati chiaramente).
+  - [ ] `/research-materials/screenshot-fonti-statistiche/` (screenshot ISTAT/CNEL nominati chiaramente).
   - [ ] `HPHP_FaseA_GuidelineChecklist.xlsx` (foglio ripulito senza note interne).
   - [ ] `phase-c/v1_dopo_inspection/` (esportazioni grafiche PNG/SVG/PDF dei wireframe aggiornati).
   - [ ] Tracker reclutamento anonimizzato e compilato.
