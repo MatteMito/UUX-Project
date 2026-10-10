@@ -17,3 +17,7 @@
 *.synctex.gz
 *.toc
 *.xdv
+
+# Wiki folder and agents file
+/wiki/
+AGENTS.md
