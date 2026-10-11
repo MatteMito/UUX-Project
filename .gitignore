@@ -1,23 +1,32 @@
+# macOS metadata
 .DS_Store
 
-# LaTeX build output
+# Local assistant instructions and knowledge base
+/AGENTS.md
+/HANDOFF.md
+/wiki/
+
+# LaTeX intermediate output (Makefile builds at the repository root)
 /.build/
 /build/
-*.aux
-*.bbl
-*.bcf
-*.blg
-*.fdb_latexmk
-*.fls
-*.dvi
-*.lof
-*.log
-*.lot
-*.out
-*.run.xml
-*.synctex.gz
-*.toc
-*.xdv
+/*.aux
+/*.bbl
+/*.bcf
+/*.blg
+/*.fdb_latexmk
+/*.fls
+/*.dvi
+/*.lof
+/*.log
+/*.lot
+/*.out
+/*.run.xml
+/*.synctex
+/*.synctex.gz
+/*.synctex(busy)
+/*.synctex.gz(busy)
+/*.toc
+/*.xdv
 
 # Local editor configuration
 /.vscode/

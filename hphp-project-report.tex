@@ -24,7 +24,8 @@
 \usepackage{titlesec}
 \usepackage{emptypage}
 \usepackage{csquotes}
-\usepackage[backend=biber,style=numeric-comp,sorting=nyt,maxbibnames=99,defernumbers=true]{biblatex}
+\usepackage[backend=biber,style=numeric-comp,sorting=nyt,maxbibnames=99,defernumbers=true,urldate=long]{biblatex}
+\DefineBibliographyStrings{italian}{urlseen={consultato il}}
 \addbibresource{references/references.bib}
 
 \setcounter{secnumdepth}{2}
@@ -187,6 +188,12 @@ delle versioni 0 e 1, il confronto prima/dopo, la checklist delle linee
 guida e le schede di personas e cast. I materiali sono organizzati nelle
 cartelle delle singole fasi e sono disponibili nel repository del progetto.
 
+\subsection*{Tracciabilità progettuale}
+Gli identificativi accompagnano problemi, raccomandazioni, requisiti e
+implicazioni progettuali. Le relazioni di derivazione e i rimandi di dettaglio
+sono consultabili nel materiale supplementare
+\path{requirements-traceability.html}, disponibile nel repository.
+
 \subsection*{Nota terminologica}
 Per assicurare coerenza con le checklist e i deliverable del corso, le
 denominazioni tecniche di card, metodi, metriche e artefatti sono mantenute
@@ -203,7 +210,11 @@ in inglese; il testo argomentativo e descrittivo resta in italiano.
 \input{phase-d/phase-d.tex}
 
 \chapter{Riferimenti}
-\printbibliography[type=report,title={Bibliografia},heading=subbibintoc]
+La bibliografia raccoglie libri, capitoli, articoli e rapporti, anche quando
+disponibili online; la sitografia raccoglie le pagine e le risorse web.
+Le date di consultazione si riferiscono all'accesso agli URL indicati.
+
+\printbibliography[nottype=online,title={Bibliografia},heading=subbibintoc]
 \printbibliography[type=online,title={Sitografia},heading=subbibintoc]
 
 \end{document}

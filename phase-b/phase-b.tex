@@ -47,7 +47,7 @@ progettuali e requisiti cumulativi per le fasi successive.
 \section{Contesto d'uso e costruzione del cast}
 
 Il cast traduce in modelli operativi per il design i due segmenti prioritari indagati nella Fase A.
-Dal punto di vista metodologico, i personaggi del cast (\textbf{Pina}, \textbf{Elena}, \textbf{Renato}, \textbf{Amina}) non coincidono anagraficamente con i singoli individui empirici intervistati o testati nella Fase A (Carla B., Giorgio M., Silvia F., Fatima R.), ma ne costituiscono una sintesi archetipica (\emph{persona design}, secondo la formulazione di Cooper et al.). Ciascuna persona aggrega evidenze quantitative macro (dati ISTAT sul divario digitale e stime CNEL sui caregiver), modelli mentali e frizioni riscontrate sperimentalmente nei test preliminari su CUPweb e MioDottore, nonché dinamiche relazionali emerse nelle interviste qualitative. Questa modellazione consente di ancorare le decisioni di progetto a bisogni e vincoli empirici verificati, proiettandoli in figure verosimili dotate di contesti di vita dettagliati senza vincolare il design alle contingenze o alle preferenze idiosincratiche di un singolo partecipante reale. La matrice di validazione nella Cast card riporta per ogni elemento il documento empirico di riferimento.
+Dal punto di vista metodologico, i personaggi del cast (\textbf{Pina}, \textbf{Elena}, \textbf{Renato}, \textbf{Amina}) non coincidono anagraficamente con i singoli individui empirici intervistati o testati nella Fase A (Carla B., Giorgio M., Silvia F., Fatima R.), ma ne costituiscono una sintesi archetipica (\emph{persona design}, secondo la formulazione di Cooper et al. \cite{cooperAboutFace2014}). Ciascuna persona aggrega evidenze quantitative macro (dati ISTAT sul divario digitale e stime CNEL sui caregiver), modelli mentali e frizioni riscontrate sperimentalmente nei test preliminari su CUPweb e MioDottore, nonché dinamiche relazionali emerse nelle interviste qualitative. Questa modellazione consente di ancorare le decisioni di progetto a bisogni e vincoli empirici verificati, proiettandoli in figure verosimili dotate di contesti di vita dettagliati senza vincolare il design alle contingenze o alle preferenze idiosincratiche di un singolo partecipante reale. Le relazioni di derivazione e i riferimenti alle evidenze sono consultabili nel materiale supplementare \path{requirements-traceability.html}.
 
 \begingroup
 \small
@@ -160,15 +160,15 @@ Pina conserva ricette dematerializzate (NRE stampati dal medico), ricevute e pro
 
 \textbf{Impatto della persona sul design:} Le limitazioni motorie, l'ansia tecnologica e il timore di commettere errori irreversibili impongono un'interfaccia protettiva e rassicurante:
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
-\item {[}P-01{]} (da ID-01, ID-05; REQ-01, REQ-04) L'autenticazione deve ridurre il carico di memoria e offrire recupero guidato; per attività solo consultive va evitata un'autenticazione ripetuta non necessaria.
-\item {[}P-02{]} (da ID-03; REQ-03) Azioni e bersagli devono essere grandi, distinti per forma, testo e icona, non soltanto per colore, prevenendo tocchi accidentali dovuti a ridotta precisione motoria.
-\item {[}P-03{]} (da ID-04, ID-08; REQ-03, REQ-04) Il linguaggio deve essere semplice e rassicurante, con conseguenze esplicite, conferme reversibili e assenza di tecnicismi informatici.
+\item \textbf{P-01}: L'autenticazione deve ridurre il carico di memoria e offrire recupero guidato; per attività solo consultive va evitata un'autenticazione ripetuta non necessaria.
+\item \textbf{P-02}: Azioni e bersagli devono essere grandi, distinti per forma, testo e icona, non soltanto per colore, prevenendo tocchi accidentali dovuti a ridotta precisione motoria.
+\item \textbf{P-03}: Il linguaggio deve essere semplice e rassicurante, con conseguenze esplicite, conferme reversibili e assenza di tecnicismi informatici.
 \end{itemize}
 
 \textbf{Impatto del caso d'uso sul design:} La gestione di controlli clinici ricorrenti richiede continuità di contesto e supporto al recupero:
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
-\item {[}U1-01{]} (da ID-05, ID-08; REQ-04) Il percorso per una visita ricorrente deve conservare il contesto, proporre sedi compatibili con la mobilità e ridurre i passaggi senza decidere al posto dell'utente.
-\item {[}U1-02{]} (da ID-08; REQ-04) Prima dell'abbandono, un errore deve indicare con chiarezza causa, modalità di recupero e canali di assistenza, senza azzerare i dati inseriti.
+\item \textbf{U1-01}: Il percorso per una visita ricorrente deve conservare il contesto, proporre sedi compatibili con la mobilità e ridurre i passaggi senza decidere al posto dell'utente.
+\item \textbf{U1-02}: Prima dell'abbandono, un errore deve indicare con chiarezza causa, modalità di recupero e canali di assistenza, senza azzerare i dati inseriti.
 \end{itemize}
 
 \cardsection{Documento 02b: Persona and Use Case card: personaggio secondario}
@@ -256,14 +256,14 @@ Elena contrassegna gli appuntamenti della madre con un'etichetta rossa nel propr
 
 \textbf{Impatto della persona sul design:} Il ruolo del caregiver a distanza al lavoro su postazione desktop richiede un'architettura che prevenga scambi di identità e favorisca la cooperazione non invasiva:
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
-\item {[}P-04{]} (da ID-09, ID-10; REQ-06, REQ-07) Il caregiver deve disporre di una visibilità chiara, proporzionata e sempre contestualizzata sulle prenotazioni del familiare, con un indicatore visivo persistente dell'identità attiva.
-\item {[}P-05{]} (da REQ-06) La delega deve essere progressiva e scalabile: Pina mantiene l'accesso alle operazioni ordinarie, mentre Elena interviene sulle criticità senza instaurare una sorveglianza continuativa.
+\item \textbf{P-04}: Il caregiver deve disporre di una visibilità chiara, proporzionata e sempre contestualizzata sulle prenotazioni del familiare, con un indicatore visivo persistente dell'identità attiva.
+\item \textbf{P-05}: La delega deve essere progressiva e scalabile: Pina mantiene l'accesso alle operazioni ordinarie, mentre Elena interviene sulle criticità senza instaurare una sorveglianza continuativa.
 \end{itemize}
 
 \textbf{Impatto del caso d'uso sul design:} L'operazione di disdetta urgente deve garantire immediatezza esecutiva, trasparenza bilaterale e assenza di ambiguità:
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
-\item {[}U2-01{]} (da ID-08; REQ-04) La procedura di disdetta deve richiedere pochissimi passaggi, distinguere chiaramente appuntamenti ravvicinati ed esplicitare l'assenza di penali prima della conferma finale.
-\item {[}U2-02{]} (da ID-09; REQ-07) L'aggiornamento di stato deve essere immediato e generare notifiche concordate verso entrambi i soggetti, azzerando la necessità di telefonate di verifica post-operazione.
+\item \textbf{U2-01}: La procedura di disdetta deve richiedere pochissimi passaggi, distinguere chiaramente appuntamenti ravvicinati ed esplicitare l'assenza di penali prima della conferma finale.
+\item \textbf{U2-02}: L'aggiornamento di stato deve essere immediato e generare notifiche concordate verso entrambi i soggetti, azzerando la necessità di telefonate di verifica post-operazione.
 \end{itemize}
 
 \cardsection{Documento 02c: Persona and Use Case card: personaggio aggiuntivo}
@@ -351,15 +351,15 @@ Renato usa il PC desktop nello studio domestico o il tablet in soggiorno, tenend
 
 \textbf{Impatto della persona sul design:} L'anziano competente e autonomo richiede un'interfaccia sobria, priva di paternalismo, che rispetti la dignità e assecondi un'esplorazione meticolosa:
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
-\item {[}P-06{]} (da ID-04; REQ-03) Le note esplicative devono essere progressive e consultabili su richiesta nei punti di dubbio, evitando schermate dense che rallentino chi padroneggia già il flusso.
-\item {[}P-07{]} (da ID-03; REQ-03) Tipografia, spaziatura dei paragrafi e tabelle su schermi ampi devono garantire leggibilità e confronto immediato senza affaticamento visivo o ambiguità di selezione con il mouse.
-\item {[}P-08{]} (da ID-04; REQ-03) Regime erogativo, costi a carico del cittadino e vincoli di accesso devono essere dichiarati con linguaggio chiaro e neutrale, senza toni condiscendenti o paternalistici.
+\item \textbf{P-06}: Le note esplicative devono essere progressive e consultabili su richiesta nei punti di dubbio, evitando schermate dense che rallentino chi padroneggia già il flusso.
+\item \textbf{P-07}: Tipografia, spaziatura dei paragrafi e tabelle su schermi ampi devono garantire leggibilità e confronto immediato senza affaticamento visivo o ambiguità di selezione con il mouse.
+\item \textbf{P-08}: Regime erogativo, costi a carico del cittadino e vincoli di accesso devono essere dichiarati con linguaggio chiaro e neutrale, senza toni condiscendenti o paternalistici.
 \end{itemize}
 
 \textbf{Impatto del caso d'uso sul design:} Il confronto multicriterio tra strutture e regimi richiede navigazione persistente e trasparenza economica preventiva:
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
-\item {[}U3-01{]} (da ID-08, ID-11; REQ-04, REQ-08) La consultazione di schede informative o il ritorno a passaggi precedenti non devono in alcun caso azzerare i criteri di ricerca e i filtri già impostati.
-\item {[}U3-02{]} (da ID-08; REQ-04, REQ-07) Prima della convalida definitiva, una schermata di riepilogo organica deve evidenziare con chiarezza prestazione, medico, presidio, data, regime contrattuale e costo effettivo.
+\item \textbf{U3-01}: La consultazione di schede informative o il ritorno a passaggi precedenti non devono in alcun caso azzerare i criteri di ricerca e i filtri già impostati.
+\item \textbf{U3-02}: Prima della convalida definitiva, una schermata di riepilogo organica deve evidenziare con chiarezza prestazione, medico, presidio, data, regime contrattuale e costo effettivo.
 \end{itemize}
 
 \cardsection{Documento 02d: Persona and Use Case card: personaggio secondario}
@@ -447,15 +447,15 @@ Amina coordina visite, terapie e trasporto per la suocera Nasima usando un calen
 
 \textbf{Impatto della persona sul design:} Il ruolo di caregiver convivente con background migratorio richiede resilienza tecnologica alle interruzioni e accessibilità linguistica:
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
-\item {[}P-09{]} (da ID-04, ID-12; REQ-03, REQ-09) La terminologia clinica e burocratica essenziale deve essere affiancata da definizioni in linguaggio semplice (Plain Language), con glosse ed esempi applicativi concreti.
-\item {[}P-10{]} (da ID-09, ID-10; REQ-07) L'identità dell'assistito, il ruolo di chi effettua l'operazione e i canali di contatto devono restare chiaramente visibili durante tutto il percorso, gestendo anagrafiche non coincidenti.
-\item {[}P-11{]} (da ID-11; REQ-08) La web application deve essere progettata per l'uso discontinuo da browser smartphone (in ottica responsive/PWA), tollerando standby dello schermo e cambi di scheda senza disconnessioni premature.
+\item \textbf{P-09}: La terminologia clinica e burocratica essenziale deve essere affiancata da definizioni in linguaggio semplice (Plain Language), con glosse ed esempi applicativi concreti.
+\item \textbf{P-10}: L'identità dell'assistito, il ruolo di chi effettua l'operazione e i canali di contatto devono restare chiaramente visibili durante tutto il percorso, gestendo anagrafiche non coincidenti.
+\item \textbf{P-11}: La web application deve essere progettata per l'uso discontinuo da browser smartphone (in ottica responsive/PWA), tollerando standby dello schermo e cambi di scheda senza disconnessioni premature.
 \end{itemize}
 
 \textbf{Impatto del caso d'uso sul design:} Il flusso della prescrizione specialistica deve favorire il coordinamento all'interno della rete familiare e la salvaguardia del lavoro svolto:
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
-\item {[}U4-01{]} (da ID-11; REQ-08) Le interruzioni temporanee o la consultazione di aiuti testuali non devono provocare la perdita dei dati inseriti; al rientro deve essere segnalato con esattezza il passo raggiunto.
-\item {[}U4-02{]} (da ID-09, ID-12; REQ-07, REQ-09) L'esito finale deve produrre un riepilogo sintetico e condivisibile sui canali di messaggistica ordinari, attestando lo stato concluso dell'operazione per prevenire prenotazioni doppie.
+\item \textbf{U4-01}: Le interruzioni temporanee o la consultazione di aiuti testuali non devono provocare la perdita dei dati inseriti; al rientro deve essere segnalato con esattezza il passo raggiunto.
+\item \textbf{U4-02}: L'esito finale deve produrre un riepilogo sintetico e condivisibile sui canali di messaggistica ordinari, attestando lo stato concluso dell'operazione per prevenire prenotazioni doppie.
 \end{itemize}
 
 \cardsection{Documento 03: Cast card}
@@ -510,28 +510,28 @@ l'accesso a CUPweb: due scenari (Pina e Amina) su browser smartphone e due
 
 \begingroup
 \renewcommand{\arraystretch}{1.35}
-\begin{longtable}{@{}p{0.16\linewidth}p{0.25\linewidth}p{0.53\linewidth}@{}}
+\begin{longtable}{@{}p{0.16\linewidth}p{0.78\linewidth}@{}}
 \toprule
-\textbf{Requisito del cast} & \textbf{Requisiti di origine} & \textbf{Descrizione} \\
+\textbf{ID} & \textbf{Descrizione} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Requisito del cast} & \textbf{Requisiti di origine} & \textbf{Descrizione} \\
+\textbf{ID} & \textbf{Descrizione} \\
 \midrule
 \endhead
 \bottomrule
 \endfoot
-{[}C-01{]} & P-01 + P-02 + P-03 & Il servizio deve essere utilizzabile con competenza tecnica minima, azioni visibili e tono rassicurante. \\[3pt]
-{[}C-02{]} & P-04 + P-05 & Visibilità e delega devono sostenere una supervisione leggera, autorizzata e non sostitutiva. \\[3pt]
-{[}C-03{]} & U1-01 + U2-01 & Prenotazione ricorrente e disdetta devono ridurre passaggi e ambiguità mantenendo il controllo dell'utente. \\[3pt]
-{[}C-04{]} & U1-02 + U2-02 & Errori e cambi di stato devono offrire recupero comprensibile e notifiche concordate. \\[3pt]
-{[}C-05{]} & P-03 + P-04 & Identità, oggetto e conseguenze dell'azione devono essere espliciti per utente diretto e caregiver. \\[3pt]
-{[}C-06{]} & P-06 + P-08 & Spiegazioni progressive devono chiarire termini, regime, costo e conseguenze senza infantilizzare. \\[3pt]
-{[}C-07{]} & P-02 + P-07 & Gerarchia, leggibilità, spaziatura e dimensione dei bersagli devono supportare vincoli visivi e motori. \\[3pt]
-{[}C-08{]} & U3-01 + U3-02 & Il sistema deve conservare le scelte durante consultazione e aiuto, quindi mostrare un riepilogo completo prima della conferma. \\[3pt]
-{[}C-09{]} & P-09 + P-03 & Terminologia e conseguenze devono essere precise ma comprensibili, con spiegazioni progressive adatte anche alla mediazione linguistica. \\[3pt]
-{[}C-10{]} & P-10 + P-04 + P-05 & Identità, ruolo, autorizzazione e confini della delega devono restare espliciti per tutte le forme di assistenza. \\[3pt]
-{[}C-11{]} & P-11 + U4-01 & I percorsi da smartphone devono tollerare interruzioni e consentire una ripresa riconoscibile senza perdita di lavoro. \\[3pt]
-{[}C-12{]} & U4-02 + U2-02 & Stati e conferme condivisibili devono coordinare i familiari senza creare duplicazioni o accessi impliciti ai dati. \\
+\textbf{C-01}: & Il servizio deve essere utilizzabile con competenza tecnica minima, azioni visibili e tono rassicurante. \\[3pt]
+\textbf{C-02}: & Visibilità e delega devono sostenere una supervisione leggera, autorizzata e non sostitutiva. \\[3pt]
+\textbf{C-03}: & Prenotazione ricorrente e disdetta devono ridurre passaggi e ambiguità mantenendo il controllo dell'utente. \\[3pt]
+\textbf{C-04}: & Errori e cambi di stato devono offrire recupero comprensibile e notifiche concordate. \\[3pt]
+\textbf{C-05}: & Identità, oggetto e conseguenze dell'azione devono essere espliciti per utente diretto e caregiver. \\[3pt]
+\textbf{C-06}: & Spiegazioni progressive devono chiarire termini, regime, costo e conseguenze senza infantilizzare. \\[3pt]
+\textbf{C-07}: & Gerarchia, leggibilità, spaziatura e dimensione dei bersagli devono supportare vincoli visivi e motori. \\[3pt]
+\textbf{C-08}: & Il sistema deve conservare le scelte durante consultazione e aiuto, quindi mostrare un riepilogo completo prima della conferma. \\[3pt]
+\textbf{C-09}: & Terminologia e conseguenze devono essere precise ma comprensibili, con spiegazioni progressive adatte anche alla mediazione linguistica. \\[3pt]
+\textbf{C-10}: & Identità, ruolo, autorizzazione e confini della delega devono restare espliciti per tutte le forme di assistenza. \\[3pt]
+\textbf{C-11}: & I percorsi da smartphone devono tollerare interruzioni e consentire una ripresa riconoscibile senza perdita di lavoro. \\[3pt]
+\textbf{C-12}: & Stati e conferme condivisibili devono coordinare i familiari senza creare duplicazioni o accessi impliciti ai dati. \\
 \end{longtable}
 \endgroup

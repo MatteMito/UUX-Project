@@ -632,6 +632,10 @@
       <div class="drawer-body" id="drawer-body">Descrizione completa...</div>
       
       <div class="drawer-relations" id="drawer-relations">
+        <div class="rel-group">
+          <span class="rel-title">Riferimenti documentati delle Fasi A e B</span>
+          <div id="drawer-trace-details"></div>
+        </div>
         <div class="rel-group" id="drawer-incoming-group">
           <span class="rel-title">⬅ Deriva da (Layer precedente)</span>
           <div class="rel-badges" id="drawer-incoming"></div>
@@ -650,18 +654,18 @@
     // ==========================================
     const NODES = {
       // LAYER 0: ID
-      "ID-01": { id: "ID-01", layer: 0, title: "Autenticazione complessa al 1° passo", urg: "Urgente (3+3=6)", desc: "Autenticazione obbligatoria complessa (SPID/CIE) richiesta fin dal primo passo, anche per compiti semplici di consultazione.", source: "05a, interviste Pina e Renato" },
+      "ID-01": { id: "ID-01", layer: 0, title: "Autenticazione complessa al 1° passo", urg: "Urgente (3+3=6)", desc: "Autenticazione obbligatoria complessa (SPID/CIE) richiesta fin dal primo passo, anche per compiti semplici di consultazione.", source: "05a, interviste Carla e Giorgio" },
       "ID-02": { id: "ID-02", layer: 0, title: "Frammentazione tra domini", urg: "Urgente (3+3=6)", desc: "Passaggio tra domini/sottodomini del servizio (cupweb.it, pagonlinesanita.it, fascicolo-sanitario.it). Mina la fiducia.", source: "05a" },
       "ID-03": { id: "ID-03", layer: 0, title: "Interfaccia poco gerarchizzata", urg: "Prossima release (2+3=5)", desc: "Interfaccia prevalentemente testuale, priva di elementi visivi di orientamento ed enfasi gerarchica.", source: "05a" },
-      "ID-04": { id: "ID-04", layer: 0, title: "Terminologia tecnico-burocratica", urg: "Prossima release (2+2=4)", desc: "Pagina di scelta SSN / Libera Professione: terminologia non spiegata (SPID, CNS, impegnativa dematerializzata).", source: "05a, intervista Renato" },
+      "ID-04": { id: "ID-04", layer: 0, title: "Terminologia tecnico-burocratica", urg: "Prossima release (2+2=4)", desc: "Pagina di scelta SSN / Libera Professione: terminologia non spiegata (SPID, CNS, impegnativa dematerializzata).", source: "05a, intervista Giorgio" },
       "ID-05": { id: "ID-05", layer: 0, title: "Assenza percorso guidato", urg: "Urgente (3+3=6)", desc: "Assenza di un percorso guidato o dimostrativo per il nuovo utente al primo accesso.", source: "05a, interviste segmento A" },
       "ID-06": { id: "ID-06", layer: 0, title: "Problemi di accessibilità", urg: "Prossima release (3+2=5)", desc: "Problemi di accessibilità su web app desktop e mobile per utenti con tecnologie assistive.", source: "05a" },
       "ID-07": { id: "ID-07", layer: 0, title: "Tabelle non responsive su smartphone", urg: "Prossima release (1.5+2=3.5)", desc: "Sezione cronologia e gestione appuntamenti: tabelle dense e non fruibili da schermo piccolo.", source: "05a (inversa)" },
-      "ID-08": { id: "ID-08", layer: 0, title: "Assenza conferma su azione irreversibile", urg: "Urgente (3+3=6)", desc: "Schermata disdetta: il cittadino teme di perdere la visita ed esita a premere il pulsante per timore di irreversibilità.", source: "06a (Renato e Pina)" },
-      "ID-09": { id: "ID-09", layer: 0, title: "Conferma generica e non condivisibile", urg: "Urgente (2.5+3=5.5)", desc: "Messaggio generico ('operazione eseguita') senza modo integrato per condividerlo o inoltrarlo a familiari.", source: "06a/06b (Elena e Amina)" },
-      "ID-10": { id: "ID-10", layer: 0, title: "Familiare associato non visibile", urg: "Urgente (3+3=6)", desc: "Nel flusso di prenotazione per conto di terzi la selezione dell'assistito non è chiara nel punto in cui serve.", source: "06a (Elena)" },
-      "ID-11": { id: "ID-11", layer: 0, title: "Timeout sessione su interruzione", urg: "Prossima release (3+2=5)", desc: "Interruzione esterna (telefonata, standby schermo) fa scadere la sessione autenticata con perdita dei dati.", source: "06a (Amina)" },
-      "ID-12": { id: "ID-12", layer: 0, title: "Assenza canale assistenza scritto", urg: "Urgente (2.5+3=5.5)", desc: "Solo numero verde telefonico, ostacolo per chi ha vincoli di lavoro o necessita di mediazione linguistica.", source: "06a (Elena e Amina)" },
+      "ID-08": { id: "ID-08", layer: 0, title: "Assenza conferma su azione irreversibile", urg: "Urgente (3+3=6)", desc: "Schermata disdetta: il cittadino teme di perdere la visita ed esita a premere il pulsante per timore di irreversibilità.", source: "06a (Giorgio e Carla)" },
+      "ID-09": { id: "ID-09", layer: 0, title: "Conferma generica e non condivisibile", urg: "Urgente (2.5+3=5.5)", desc: "Messaggio generico ('operazione eseguita') senza modo integrato per condividerlo o inoltrarlo a familiari.", source: "06a (Silvia), 06b (Fatima)" },
+      "ID-10": { id: "ID-10", layer: 0, title: "Familiare associato non visibile", urg: "Urgente (3+3=6)", desc: "Nel flusso di prenotazione per conto di terzi la selezione dell'assistito non è chiara nel punto in cui serve.", source: "06a (Silvia)" },
+      "ID-11": { id: "ID-11", layer: 0, title: "Timeout sessione su interruzione", urg: "Prossima release (3+2=5)", desc: "Interruzione esterna (telefonata, standby schermo) fa scadere la sessione autenticata con perdita dei dati.", source: "06a (Fatima)" },
+      "ID-12": { id: "ID-12", layer: 0, title: "Assenza canale assistenza scritto", urg: "Urgente (2.5+3=5.5)", desc: "Solo numero verde telefonico, ostacolo per chi ha vincoli di lavoro o necessita di mediazione linguistica.", source: "06a (Silvia e Fatima)" },
 
       // LAYER 1: R
       "R-01": { id: "R-01", layer: 1, title: "Percorso a bassa soglia senza SPID", desc: "Percorso iniziale per esplorare disponibilità e capire il servizio prima di richiedere l'autenticazione forte." },
@@ -727,6 +731,403 @@
       "C-11": { id: "C-11", layer: 4, title: "Tolleranza interruzioni mobile", origin: "P-11 + U4-01", desc: "I percorsi da smartphone devono tollerare interruzioni e consentire una ripresa riconoscibile senza perdita di lavoro." },
       "C-12": { id: "C-12", layer: 4, title: "Conferme condivisibili sicure", origin: "U4-02 + U2-02", desc: "Stati e conferme condivisibili devono coordinare i familiari senza creare duplicazioni o accessi impliciti ai dati." }
     };
+
+    // Direct Phase A/B derivations transferred from the report.
+    // Source line numbers identify the pre-edit snapshot; links open the current source file.
+    const TRACE_DETAILS = {
+  "R-01": [
+    {
+      "text": "collegata a ID-01, ID-05; confermata dai test: Carla e Fatima bloccate sull' autenticazione/sui dati richiesti",
+      "source": "phase-a/phase-a.tex",
+      "line": 2255,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "R-02": [
+    {
+      "text": "collegata a ID-02; confermata da Silvia, che segnala il cambio di dominio come possibile causa di abbandono per la madre",
+      "source": "phase-a/phase-a.tex",
+      "line": 2262,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "R-03": [
+    {
+      "text": "collegata a ID-03, ID-04; confermata da Giorgio e Fatima, entrambi bloccati sulla scelta SSN/Libera Professione e sul costo non chiaro",
+      "source": "phase-a/phase-a.tex",
+      "line": 2270,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "R-04": [
+    {
+      "text": "collegata a ID-05, ID-08; confermata da Giorgio e Carla su CUPweb, che individuano il pulsante corretto ma evitano di premerlo per timore di un' azione irreversibile",
+      "source": "phase-a/phase-a.tex",
+      "line": 2276,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "R-05": [
+    {
+      "text": "collegata a ID-06",
+      "source": "phase-a/phase-a.tex",
+      "line": 2284,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "R-06": [
+    {
+      "text": "collegata al segmento B / caregiver; confermata da Silvia e Fatima, che chiedono entrambe di poter vedere/coinvolgere il familiare assistito",
+      "source": "phase-a/phase-a.tex",
+      "line": 2293,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "R-07": [
+    {
+      "text": "nuova; collegata a ID-09, ID-10",
+      "source": "phase-a/phase-a.tex",
+      "line": 2301,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "R-08": [
+    {
+      "text": "nuova; collegata a ID-11",
+      "source": "phase-a/phase-a.tex",
+      "line": 2308,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "R-09": [
+    {
+      "text": "nuova; collegata a ID-12",
+      "source": "phase-a/phase-a.tex",
+      "line": 2314,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "REQ-01": [
+    {
+      "text": "da R-01; evidenze ID-01, ID-05",
+      "source": "phase-a/phase-a.tex",
+      "line": 2329,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "REQ-02": [
+    {
+      "text": "da R-02; evidenza ID-02",
+      "source": "phase-a/phase-a.tex",
+      "line": 2336,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "REQ-03": [
+    {
+      "text": "da R-03; evidenze ID-03, ID-04",
+      "source": "phase-a/phase-a.tex",
+      "line": 2342,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "REQ-04": [
+    {
+      "text": "da R-04; evidenza ID-05",
+      "source": "phase-a/phase-a.tex",
+      "line": 2348,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "REQ-05": [
+    {
+      "text": "da R-05; evidenza ID-06",
+      "source": "phase-a/phase-a.tex",
+      "line": 2354,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "REQ-06": [
+    {
+      "text": "da R-06; segmento B",
+      "source": "phase-a/phase-a.tex",
+      "line": 2360,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "REQ-07": [
+    {
+      "text": "da R-07; evidenze ID-09, ID-10",
+      "source": "phase-a/phase-a.tex",
+      "line": 2367,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "REQ-08": [
+    {
+      "text": "da R-08; evidenza ID-11",
+      "source": "phase-a/phase-a.tex",
+      "line": 2375,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "REQ-09": [
+    {
+      "text": "da R-09; evidenza ID-12",
+      "source": "phase-a/phase-a.tex",
+      "line": 2381,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "P-01": [
+    {
+      "text": "da ID-01, ID-05; REQ-01, REQ-04",
+      "source": "phase-b/phase-b.tex",
+      "line": 163,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "P-02": [
+    {
+      "text": "da ID-03; REQ-03",
+      "source": "phase-b/phase-b.tex",
+      "line": 164,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "P-03": [
+    {
+      "text": "da ID-04, ID-08; REQ-03, REQ-04",
+      "source": "phase-b/phase-b.tex",
+      "line": 165,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "U1-01": [
+    {
+      "text": "da ID-05, ID-08; REQ-04",
+      "source": "phase-b/phase-b.tex",
+      "line": 170,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "U1-02": [
+    {
+      "text": "da ID-08; REQ-04",
+      "source": "phase-b/phase-b.tex",
+      "line": 171,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "P-04": [
+    {
+      "text": "da ID-09, ID-10; REQ-06, REQ-07",
+      "source": "phase-b/phase-b.tex",
+      "line": 259,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "P-05": [
+    {
+      "text": "da REQ-06",
+      "source": "phase-b/phase-b.tex",
+      "line": 260,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "U2-01": [
+    {
+      "text": "da ID-08; REQ-04",
+      "source": "phase-b/phase-b.tex",
+      "line": 265,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "U2-02": [
+    {
+      "text": "da ID-09; REQ-07",
+      "source": "phase-b/phase-b.tex",
+      "line": 266,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "P-06": [
+    {
+      "text": "da ID-04; REQ-03",
+      "source": "phase-b/phase-b.tex",
+      "line": 354,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "P-07": [
+    {
+      "text": "da ID-03; REQ-03",
+      "source": "phase-b/phase-b.tex",
+      "line": 355,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "P-08": [
+    {
+      "text": "da ID-04; REQ-03",
+      "source": "phase-b/phase-b.tex",
+      "line": 356,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "U3-01": [
+    {
+      "text": "da ID-08, ID-11; REQ-04, REQ-08",
+      "source": "phase-b/phase-b.tex",
+      "line": 361,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "U3-02": [
+    {
+      "text": "da ID-08; REQ-04, REQ-07",
+      "source": "phase-b/phase-b.tex",
+      "line": 362,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "P-09": [
+    {
+      "text": "da ID-04, ID-12; REQ-03, REQ-09",
+      "source": "phase-b/phase-b.tex",
+      "line": 450,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "P-10": [
+    {
+      "text": "da ID-09, ID-10; REQ-07",
+      "source": "phase-b/phase-b.tex",
+      "line": 451,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "P-11": [
+    {
+      "text": "da ID-11; REQ-08",
+      "source": "phase-b/phase-b.tex",
+      "line": 452,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "U4-01": [
+    {
+      "text": "da ID-11; REQ-08",
+      "source": "phase-b/phase-b.tex",
+      "line": 457,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "U4-02": [
+    {
+      "text": "da ID-09, ID-12; REQ-07, REQ-09",
+      "source": "phase-b/phase-b.tex",
+      "line": 458,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "C-01": [
+    {
+      "text": "Origine: P-01 + P-02 + P-03",
+      "source": "phase-b/phase-b.tex",
+      "line": 524,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "C-02": [
+    {
+      "text": "Origine: P-04 + P-05",
+      "source": "phase-b/phase-b.tex",
+      "line": 525,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "C-03": [
+    {
+      "text": "Origine: U1-01 + U2-01",
+      "source": "phase-b/phase-b.tex",
+      "line": 526,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "C-04": [
+    {
+      "text": "Origine: U1-02 + U2-02",
+      "source": "phase-b/phase-b.tex",
+      "line": 527,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "C-05": [
+    {
+      "text": "Origine: P-03 + P-04",
+      "source": "phase-b/phase-b.tex",
+      "line": 528,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "C-06": [
+    {
+      "text": "Origine: P-06 + P-08",
+      "source": "phase-b/phase-b.tex",
+      "line": 529,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "C-07": [
+    {
+      "text": "Origine: P-02 + P-07",
+      "source": "phase-b/phase-b.tex",
+      "line": 530,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "C-08": [
+    {
+      "text": "Origine: U3-01 + U3-02",
+      "source": "phase-b/phase-b.tex",
+      "line": 531,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "C-09": [
+    {
+      "text": "Origine: P-09 + P-03",
+      "source": "phase-b/phase-b.tex",
+      "line": 532,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "C-10": [
+    {
+      "text": "Origine: P-10 + P-04 + P-05",
+      "source": "phase-b/phase-b.tex",
+      "line": 533,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "C-11": [
+    {
+      "text": "Origine: P-11 + U4-01",
+      "source": "phase-b/phase-b.tex",
+      "line": 534,
+      "snapshot": "a6677a6"
+    }
+  ],
+  "C-12": [
+    {
+      "text": "Origine: U4-02 + U2-02",
+      "source": "phase-b/phase-b.tex",
+      "line": 535,
+      "snapshot": "a6677a6"
+    }
+  ]
+};
 
     // ADJACENT LAYER EDGES ONLY (ID->R, R->REQ, REQ->P/U*, P/U*->C)
     const EDGES = [
@@ -1121,6 +1522,32 @@
 
       drawerTitle.innerText = node.title;
       drawerBody.innerText = node.desc;
+
+      const traceDetails = document.getElementById('drawer-trace-details');
+      traceDetails.replaceChildren();
+      const records = TRACE_DETAILS[id] || [];
+      records.forEach(record => {
+        const paragraph = document.createElement('p');
+        paragraph.textContent = record.text;
+        traceDetails.appendChild(paragraph);
+        const source = document.createElement('a');
+        source.href = record.source;
+        source.textContent = `Fonte: ${record.source}, riga ${record.line} (versione ${record.snapshot})`;
+        traceDetails.appendChild(source);
+        const identifiers = [...new Set(record.text.match(/(?:ID|REQ|R|P|C)-\d{2}|U[1-4]-\d{2}/g) || [])];
+        const badges = document.createElement('div');
+        badges.className = 'rel-badges';
+        identifiers.filter(ref => ref !== id && NODES[ref]).forEach(ref => {
+          const badge = document.createElement('button');
+          badge.type = 'button';
+          badge.className = 'rel-badge-item';
+          badge.textContent = ref;
+          badge.onclick = () => inspectNode(ref);
+          badges.appendChild(badge);
+        });
+        traceDetails.appendChild(badges);
+      });
+      if (!records.length) traceDetails.textContent = 'Consultare la fonte della criticità e le relazioni del grafo.';
 
       // Incoming badges
       drawerIncoming.innerHTML = '';
