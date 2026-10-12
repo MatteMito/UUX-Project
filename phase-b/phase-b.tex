@@ -41,13 +41,23 @@
     \textbf{Stato dell'evidenza.} #1
   \end{tcolorbox}}
 
-La Fase B (\emph{Feasibility Study}) traduce le evidenze qualitative ed empiriche raccolte nella Fase A in modelli d'uso operativi per la progettazione. 
-L'obiettivo è definire i profili e le competenze del cast di personas, formalizzarne i comportamenti in scenari d'uso realistici e ricavare implicazioni 
-progettuali e requisiti cumulativi per le fasi successive.
+La Fase B (\emph{Feasibility Study}) costruisce personas e scenari a partire
+dalla ricerca della Fase A e ne ricava implicazioni progettuali e requisiti
+cumulativi.
+
 \section{Contesto d'uso e costruzione del cast}
 
-Il cast traduce in modelli operativi per il design i due segmenti prioritari indagati nella Fase A.
-Dal punto di vista metodologico, i personaggi del cast (\textbf{Pina}, \textbf{Elena}, \textbf{Renato}, \textbf{Amina}) non coincidono anagraficamente con i singoli individui empirici intervistati o testati nella Fase A (Carla B., Giorgio M., Silvia F., Fatima R.), ma ne costituiscono una sintesi archetipica (\emph{persona design}, secondo la formulazione di Cooper et al. \cite{cooperAboutFace2014}). Ciascuna persona aggrega evidenze quantitative macro (dati ISTAT sul divario digitale e stime CNEL sui caregiver), modelli mentali e frizioni riscontrate sperimentalmente nei test preliminari su CUPweb e MioDottore, nonché dinamiche relazionali emerse nelle interviste qualitative. Questa modellazione consente di ancorare le decisioni di progetto a bisogni e vincoli empirici verificati, proiettandoli in figure verosimili dotate di contesti di vita dettagliati senza vincolare il design alle contingenze o alle preferenze idiosincratiche di un singolo partecipante reale. Le relazioni di derivazione e i riferimenti alle evidenze sono consultabili nel materiale supplementare \path{requirements-traceability.html}.
+Pina, Elena, Renato e Amina sono figure sintetiche, distinte dai partecipanti
+Carla B., Giorgio M., Silvia F. e Fatima R. Il cast combina risultati delle
+interviste e dei test con il contesto statistico nazionale, secondo
+l'approccio alle personas di Cooper et al. \cite{cooperAboutFace2014}.
+Biografie, frasi rappresentative e scenari sono costruzioni progettuali;
+le stime temporali degli scenari non sono misure dei test. I limiti delle
+fonti primarie restano quelli dichiarati in Fase A. Le relazioni di
+derivazione sono consultabili in \path{requirements-traceability.html}.
+Per il redesign, gli scenari distinguono il supporto in modalità co-pilota
+dall'esecuzione per conto dell'interessato in modalità delega completa,
+secondo le definizioni del Documento 07 della Fase A.
 
 \begingroup
 \small
@@ -61,19 +71,13 @@ Dispositivi & Smartphone Android per Pina e Amina; PC desktop e smartphone per E
 Tempo e pressione & Pina procede con cautela; Elena interviene in finestre di 5 minuti durante il lavoro; Renato vuole concludere in 8--10 minuti in autonomia; Amina opera tra turni e impegni familiari. \\
 Vincoli & Affaticamento visivo, precisione motoria ridotta, memoria delle credenziali, linguaggio sanitario ambiguo, barriere linguistiche e sovraccarico del caregiver. \\
 Attività esterne & Recuperare ricetta, consultare calendario e trasporti, verificare costi e sede, coordinarsi con familiari, tradurre o chiarire termini, telefonare o recarsi allo sportello. \\
-Assistenza & Aiuto in presenza o a distanza, delega e supervisione leggera: sostenere l'autonomia senza sostituzione sistematica e senza presumere omogeneità di competenze. \\
+Assistenza & Supporto in modalità co-pilota o esecuzione in modalità delega completa, in presenza o a distanza secondo il contesto. La distinzione preserva ruoli e autonomia senza presumere competenze omogenee. \\
 \bottomrule
 \end{tabular}
 \endgroup
 
-La gerarchia è intenzionale: \textbf{Pina} è la protagonista e il riferimento
-per i requisiti inclusivi; \textbf{Elena} e \textbf{Amina} sono due personaggi
-secondari complementari, rispettivamente caregiver a distanza e caregiver
-convivente; \textbf{Renato} è il personaggio aggiuntivo di livello inferiore
-che controlla che la semplificazione non diventi lenta, paternalistica o
-limitante per un anziano più competente. Amina amplia il cast senza essere una
-variante cosmetica: introduce una storia migratoria, una competenza linguistica
-asimmetrica e un'organizzazione familiare diversa, tutte pertinenti al compito.
+La Cast card (Documento 03) motiva la gerarchia dei personaggi, le alternative
+scartate e il bilanciamento tra i loro bisogni.
 
 \cardsection{Documento 02a: Persona and Use Case card: protagonista}
 
@@ -113,7 +117,13 @@ asimmetrica e un'organizzazione familiare diversa, tutte pertinenti al compito.
 
 \cardfieldheading{Comportamenti, esperienza e rete di aiuto}
 
-Pina conserva ricette dematerializzate (NRE stampati dal medico), ricevute e promemoria sanitari nella storica ``busta blu'' nel cassetto del corridoio. Il calendario murale di Frate Indovino in cucina è il suo database di riferimento: vi incrocia le scadenze dei farmaci, gli orari della linea bus 1 e il mercato del martedì mattina. La farmacia rionale e il medico di base sono i riferimenti fiduciari umani. Ha provato ad accedere a CUPweb dal browser dello smartphone con lo SPID delle Poste, ma il layout non ottimizzato per schermi piccoli, il timeout di sessione e il codice OTP via SMS l'hanno mandata nel panico, portandola a rinunciare. Chiede aiuto alla figlia Elena solo quando non riconosce il passo successivo o teme conseguenze irreversibili, provando forte disagio all'idea di essere un peso. Si fida quando vede pulsanti ampi, linguaggio quotidiano, conferme visibili e una via di recupero priva di giudizio, preferendo appuntamenti dopo le 10:00 per comodità con i mezzi pubblici.
+Pina conserva ricette dematerializzate, ricevute e promemoria nella
+``busta blu'' del corridoio. Sul calendario murale di Frate Indovino incrocia
+scadenze dei farmaci, orari dei mezzi pubblici e mercato del martedì;
+preferisce visite dopo le 10:00. Farmacia e medico di base sono riferimenti
+fiduciari. I tentativi di accesso con SPID delle Poste hanno ridotto la sua
+fiducia: chiede aiuto a Elena quando perde l'orientamento, ma teme di essere
+un peso e desidera mantenere il controllo della prenotazione.
 
 \cardfieldheading{Competenze e abilità (C\&A)}
 
@@ -145,9 +155,17 @@ Pina conserva ricette dematerializzate (NRE stampati dal medico), ricevute e pro
 
 \fieldheading{Scenario: la visita diabetologica di controllo e il timore dell'errore irreversibile}
 
-\textbf{Contesto e innesco:} È il primo pomeriggio a Ravenna; seduta al tavolo della cucina, Pina deve prenotare il controllo diabetologico semestrale prescritto dal diabetologo che la segue. Recupera il promemoria cartaceo con il codice NRE dalla busta di plastica blu dove custodisce la documentazione medica e consulta il calendario murale di Frate Indovino per escludere il martedì mattina, riservato al mercato rionale. Non guidando su percorsi extraurbani, deve tassativamente verificare che la sede proposta sia raggiungibile con i mezzi pubblici disponibili.
+\textbf{Contesto e innesco:} Nel primo pomeriggio, a Ravenna, Pina deve prenotare il controllo
+diabetologico semestrale. Recupera il codice NRE e consulta il calendario
+per escludere il martedì mattina; non guidando fuori città, deve verificare
+che la sede sia raggiungibile con i mezzi pubblici.
 
-\textbf{Svolgimento dell'esperienza e attrito cognitivo:} Pina impugna il suo smartphone Android per accedere a CUPweb dal browser mobile. L'accesso tramite SPID genera subito forte apprensione: l'attesa dell'OTP via SMS e la digitazione con dita rese rigide dall'artrosi provocano ansia da scadenza del timer. Superata l'autenticazione, la mancata ottimizzazione per smartphone la disorienta del tutto: la pagina appare miniaturizzata come su computer, costringendola a continui zoom con due dita e scorrimenti orizzontali in cui \enquote{Prenota con ricetta} e \enquote{Consulta appuntamenti} risultano minuscole e ambigue. Temendo che un tocco accidentale cancelli visite precedenti o confermi una prestazione errata, si blocca davanti a un errore generico. Dopo due tentativi a vuoto, decide di chiudere la scheda del browser e telefonare alla figlia Elena per chiederle aiuto.
+\textbf{Svolgimento dell\textquotesingle esperienza e attrito cognitivo:} Accede a CUPweb dal browser dello smartphone. L'attesa dell'OTP e
+la digitazione con dita rigide per l'artrosi generano ansia per la scadenza
+del timer. Dopo l'accesso, zoom e scorrimenti orizzontali rendono difficile
+distinguere \enquote{Prenota con ricetta} e \enquote{Consulta appuntamenti}.
+Un errore generico la blocca: teme di cancellare una visita o confermare la
+prestazione sbagliata. Dopo due tentativi chiude la scheda e telefona a Elena.
 
 \textbf{Stima temporale e criteri di successo:}
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
@@ -158,16 +176,19 @@ Pina conserva ricette dematerializzate (NRE stampati dal medico), ricevute e pro
 
 \fieldheading{Considerazioni conclusive e implicazioni di design}
 
-\textbf{Impatto della persona sul design:} Le limitazioni motorie, l'ansia tecnologica e il timore di commettere errori irreversibili impongono un'interfaccia protettiva e rassicurante:
+\textbf{Impatto della persona sul design:}
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
 \item \textbf{P-01}: L'autenticazione deve ridurre il carico di memoria e offrire recupero guidato; per attività solo consultive va evitata un'autenticazione ripetuta non necessaria.
 \item \textbf{P-02}: Azioni e bersagli devono essere grandi, distinti per forma, testo e icona, non soltanto per colore, prevenendo tocchi accidentali dovuti a ridotta precisione motoria.
 \item \textbf{P-03}: Il linguaggio deve essere semplice e rassicurante, con conseguenze esplicite, conferme reversibili e assenza di tecnicismi informatici.
 \end{itemize}
 
-\textbf{Impatto del caso d'uso sul design:} La gestione di controlli clinici ricorrenti richiede continuità di contesto e supporto al recupero:
+\textbf{Impatto del caso d'uso sul design:}
+La richiesta di aiuto a Elena motiva il supporto in modalità co-pilota
+nel redesign, senza implicare che tale modalità sia presente nel servizio
+esaminato.
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
-\item \textbf{U1-01}: Il percorso per una visita ricorrente deve conservare il contesto, proporre sedi compatibili con la mobilità e ridurre i passaggi senza decidere al posto dell'utente.
+\item \textbf{U1-01}: Il percorso per una visita ricorrente deve conservare il contesto, proporre sedi compatibili con la mobilità e ridurre i passaggi; in modalità co-pilota, scelta e azione restano a Pina con il supporto del caregiver.
 \item \textbf{U1-02}: Prima dell'abbandono, un errore deve indicare con chiarezza causa, modalità di recupero e canali di assistenza, senza azzerare i dati inseriti.
 \end{itemize}
 
@@ -209,7 +230,13 @@ Pina conserva ricette dematerializzate (NRE stampati dal medico), ricevute e pro
 
 \cardfieldheading{Comportamenti, esperienza e rete di aiuto}
 
-Elena contrassegna gli appuntamenti della madre con un'etichetta rossa nel proprio Google Calendar e custodisce tessere sanitarie, codici fiscali e note per le visite in un'app protetta da impronta digitale, rifiutando scambi di credenziali in chat. Coordina prenotazioni e disdette da remoto durante le pause lavorative. Conosce bene CUPweb e Fascicolo Sanitario, ma si scontra con la rigidità dei cambi profilo e delle deleghe: per fare in fretta è spesso tentata di utilizzare le credenziali di Pina, pur sapendo che ciò espropria l'autonomia della madre e viola la sicurezza. Accetta la delega solo se il sistema rende inequivocabile per chi sta operando e se Pina riceve conferme chiare; teme notifiche carenti, errori di omonimia e che l'efficienza digitale trasformi l'assistenza affettuosa in controllo permanente.
+Elena usa un'etichetta rossa in Google Calendar per gli appuntamenti di Pina
+e conserva tessere sanitarie, codici fiscali e note in un'app protetta da
+impronta digitale. Conosce CUPweb e Fascicolo Sanitario e coordina le pratiche
+nelle pause lavorative. Pur tentata di usare le credenziali materne quando
+il cambio di profilo è lento, rifiuta di scambiarle in chat. Vuole verificare
+per chi opera e informare Pina dell'esito; teme errori di omonimia, notifiche
+carenti e una supervisione che diventi controllo permanente.
 
 \cardfieldheading{Competenze e abilità (C\&A)}
 
@@ -241,28 +268,39 @@ Elena contrassegna gli appuntamenti della madre con un'etichetta rossa nel propr
 
 \fieldheading{Scenario: la disdetta urgente durante la chiusura paghe}
 
-\textbf{Contesto e innesco:} È il 26 del mese, ore 11:20: Elena è nel suo ufficio presso la cooperativa sociale di Bologna, concentrata sulla complessa chiusura mensile dei cedolini paga. Tra meno di dieci minuti deve entrare in una riunione direzionale con il revisore dei conti. Lo smartphone sulla scrivania squilla: è la madre Pina, in preda all'agitazione perché un improvviso contrattempo le impedisce di recarsi alla visita diabetologica fissata per l'indomani, esponendola al rischio della sanzione economica da mancata disdetta (malus ticket).
+\textbf{Contesto e innesco:} Il 26 del mese, alle 11:20, Elena sta chiudendo le paghe nella
+cooperativa di Bologna; tra meno di dieci minuti incontra il revisore.
+Pina telefona: un contrattempo le impedisce di raggiungere la visita
+diabetologica dell'indomani e teme la sanzione per mancata disdetta.
 
-\textbf{Svolgimento dell'esperienza e attrito cognitivo:} Elena non ha tempo per telefonare al call center CUP né può assentarsi dalla scrivania. Apre una scheda del browser sul PC dell'ufficio per accedere al portale CUPweb, mentre una collega alla porta le chiede a voce la convalida di un prospetto ferie. La tentazione operativa più rapida sarebbe farsi dettare le credenziali SPID materne in chat, ma Elena ne riconosce la scorrettezza e il rischio per la sicurezza. Attiva quindi la propria funzione di delega formale: necessita di passare istantaneamente al profilo della madre, individuare l'appuntamento specifico tra le visite pregresse senza confonderlo con i propri appuntamenti personali nel pannello multi-colonna del desktop, e cancellarlo in pochi clic. La sua ansia principale è causata dal dubbio che l'azione non vada a buon fine prima del meeting o che il sistema non certifichi l'avvenuta disdetta a entrambe le parti.
+\textbf{Svolgimento dell\textquotesingle esperienza e attrito cognitivo:} Non potendo assentarsi o chiamare il CUP, Elena apre il portale
+dal PC mentre una collega le chiede di convalidare un prospetto ferie.
+Agisce tramite delega formale, senza chiedere lo SPID di Pina: deve
+individuare la visita della madre tra gli appuntamenti e disdirla prima
+della riunione. La distrazione aumenta il rischio di confondere paziente o
+visita; una conferma generica le lascerebbe il dubbio sull'esito e su cosa
+comunicare a Pina.
 
 \textbf{Stima temporale e criteri di successo:}
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
 \item \textit{Stima temporale:} 3--5 minuti, all'interno di una finestra lavorativa frammentata e sottoposta a severa pressione temporale.
-\item \textit{Criteri di successo:} Disdetta conclusa e verificabile con codice identificativo prima della riunione; invio contestuale di una notifica di avvenuto annullamento a Pina; certezza assoluta di aver operato sul profilo corretto.
+\item \textit{Criteri di successo:} Disdetta conclusa e verificabile con codice identificativo prima della riunione; invio contestuale di una notifica di avvenuto annullamento a Pina; verifica del profilo su cui è stata eseguita l'operazione.
 \item \textit{Rischi principali:} Annullamento della visita errata per fretta o distrazione, confusione tra profilo personale e delegato, e innesco di una dinamica di sostituzione permanente che espropria Pina di ogni autonomia residua.
 \end{itemize}
 
 \fieldheading{Considerazioni conclusive e implicazioni di design}
 
-\textbf{Impatto della persona sul design:} Il ruolo del caregiver a distanza al lavoro su postazione desktop richiede un'architettura che prevenga scambi di identità e favorisca la cooperazione non invasiva:
+\textbf{Impatto della persona sul design:}
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
-\item \textbf{P-04}: Il caregiver deve disporre di una visibilità chiara, proporzionata e sempre contestualizzata sulle prenotazioni del familiare, con un indicatore visivo persistente dell'identità attiva.
-\item \textbf{P-05}: La delega deve essere progressiva e scalabile: Pina mantiene l'accesso alle operazioni ordinarie, mentre Elena interviene sulle criticità senza instaurare una sorveglianza continuativa.
+\item \textbf{P-04}: In entrambe le modalità, la visibilità del caregiver sulle prenotazioni deve essere proporzionata al ruolo; devono restare riconoscibili l'identità di chi opera e quella del familiare interessato.
+\item \textbf{P-05}: La modalità co-pilota deve sostenere l'esecuzione da parte di Pina; la modalità delega completa deve permettere a Elena di agire per suo conto entro l'autorizzazione ricevuta. L'esecuzione delegata non deve comportare sorveglianza continuativa o escludere Pina dalle operazioni che può svolgere.
 \end{itemize}
 
-\textbf{Impatto del caso d'uso sul design:} L'operazione di disdetta urgente deve garantire immediatezza esecutiva, trasparenza bilaterale e assenza di ambiguità:
+\textbf{Impatto del caso d'uso sul design:}
+Nel redesign, l'esecuzione della disdetta da parte di Elena per Pina
+corrisponde alla modalità delega completa.
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
-\item \textbf{U2-01}: La procedura di disdetta deve richiedere pochissimi passaggi, distinguere chiaramente appuntamenti ravvicinati ed esplicitare l'assenza di penali prima della conferma finale.
+\item \textbf{U2-01}: In modalità delega completa, la disdetta deve richiedere pochissimi passaggi, distinguere chiaramente gli appuntamenti ravvicinati ed esplicitare l'assenza di penali prima della conferma finale.
 \item \textbf{U2-02}: L'aggiornamento di stato deve essere immediato e generare notifiche concordate verso entrambi i soggetti, azzerando la necessità di telefonate di verifica post-operazione.
 \end{itemize}
 
@@ -304,7 +342,12 @@ Elena contrassegna gli appuntamenti della madre con un'etichetta rossa nel propr
 
 \cardfieldheading{Comportamenti, esperienza e rete di aiuto}
 
-Renato usa il PC desktop nello studio domestico o il tablet in soggiorno, tenendo accanto un taccuino dove appunta date, codici ricetta e costi preventivati; prima di confermare consulta l'agenda condivisa con Paola per non sovrapporsi ai turni all'archivio storico. Salva o stampa sempre il riepilogo in PDF per la bacheca magnetica in corridoio. Prenota in autonomia se riconosce prestazione e regime; quando incontra sigle oscure (es. SSN vs libera professione, classi U/B/D/P) telefona o chiede al figlio una verifica puntuale, rifiutando categoricamente di cedergli l'azione. Si sente sicuro se può procedere con calma, rileggere il riepilogo e tornare indietro senza perdere le selezioni già fatte; rigetta con forza interfacce paternalistiche con grafiche infantili o spiegazioni ovvie non disattivabili.
+Renato annota date, codici ricetta e costi su un taccuino e confronta le
+disponibilità con l'agenda condivisa con Paola. Salva o stampa i riepiloghi
+PDF per la bacheca magnetica del corridoio. Se incontra sigle come SSN o
+U/B/D/P, telefona o chiede al figlio una verifica puntuale, mantenendo
+l'esecuzione del compito. Preferisce procedere con calma e approfondire le
+informazioni; rifiuta grafiche infantili e spiegazioni ovvie non disattivabili.
 
 \cardfieldheading{Competenze e abilità (C\&A)}
 
@@ -336,9 +379,17 @@ Renato usa il PC desktop nello studio domestico o il tablet in soggiorno, tenend
 
 \fieldheading{Scenario: il controllo oculistico e il dilemma delle tariffe opache}
 
-\textbf{Contesto e innesco:} È giovedì mattina, ore 09:30, a Forlì: terminata la colazione, Renato si accomoda nello studio davanti al suo PC desktop (schermo da 24'' e mouse ergonomico), con un taccuino e gli occhiali da vista per prenotare il controllo oculistico prescritto dal medico. Sul tavolo consulta l'agenda cartacea condivisa con la moglie Paola, per escludere con certezza i giorni dedicati al volontariato culturale presso l'archivio diocesano.
+\textbf{Contesto e innesco:} Giovedì, alle 09:30, a Forlì, Renato deve prenotare un controllo
+oculistico. Si siede al PC con taccuino, occhiali e mouse ergonomico e
+consulta l'agenda di Paola per evitare i giorni di volontariato culturale
+presso l'archivio diocesano.
 
-\textbf{Svolgimento dell'esperienza e attrito cognitivo:} Renato esegue l'accesso SPID con familiarità tramite notifica sul cellulare. Aperta la scheda del browser desktop su CUPweb, giunge alla scelta delle date dove trova una presentazione opaca: il portale propone disponibilità eterogenee in tabelle dense tra SSN (con quota ticket) e libera professione intramoenia (ALPI, con tariffe e medici distinti). Renato non comprende se la prima data utile comporti una spesa privata elevata o una compartecipazione parziale, e teme costi occulti. Vorrebbe approfondire i dettagli della prestazione senza perdere la selezione temporale già effettuata nel form. Rifiuta categoricamente di delegare la procedura al figlio, difendendo la propria autonomia, ma vive con frustrazione l'opacità burocratica e la rigidità del portale.
+\textbf{Svolgimento dell\textquotesingle esperienza e attrito cognitivo:} Supera SPID con la notifica sul cellulare. Nella scelta della
+visita, le disponibilità SSN e in libera professione intramoenia (ALPI)
+sono difficili da confrontare: non capisce se la prima data utile comporti
+un ticket o una tariffa privata. Prima di confermare vuole approfondire
+prestazione e costo senza perdere le selezioni. L'opacità delle condizioni
+ostacola così un compito che intende svolgere autonomamente.
 
 \textbf{Stima temporale e criteri di successo:}
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
@@ -349,14 +400,14 @@ Renato usa il PC desktop nello studio domestico o il tablet in soggiorno, tenend
 
 \fieldheading{Considerazioni conclusive e implicazioni di design}
 
-\textbf{Impatto della persona sul design:} L'anziano competente e autonomo richiede un'interfaccia sobria, priva di paternalismo, che rispetti la dignità e assecondi un'esplorazione meticolosa:
+\textbf{Impatto della persona sul design:}
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
 \item \textbf{P-06}: Le note esplicative devono essere progressive e consultabili su richiesta nei punti di dubbio, evitando schermate dense che rallentino chi padroneggia già il flusso.
 \item \textbf{P-07}: Tipografia, spaziatura dei paragrafi e tabelle su schermi ampi devono garantire leggibilità e confronto immediato senza affaticamento visivo o ambiguità di selezione con il mouse.
 \item \textbf{P-08}: Regime erogativo, costi a carico del cittadino e vincoli di accesso devono essere dichiarati con linguaggio chiaro e neutrale, senza toni condiscendenti o paternalistici.
 \end{itemize}
 
-\textbf{Impatto del caso d'uso sul design:} Il confronto multicriterio tra strutture e regimi richiede navigazione persistente e trasparenza economica preventiva:
+\textbf{Impatto del caso d'uso sul design:}
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
 \item \textbf{U3-01}: La consultazione di schede informative o il ritorno a passaggi precedenti non devono in alcun caso azzerare i criteri di ricerca e i filtri già impostati.
 \item \textbf{U3-02}: Prima della convalida definitiva, una schermata di riepilogo organica deve evidenziare con chiarezza prestazione, medico, presidio, data, regime contrattuale e costo effettivo.
@@ -400,7 +451,12 @@ Renato usa il PC desktop nello studio domestico o il tablet in soggiorno, tenend
 
 \cardfieldheading{Comportamenti, esperienza e rete di aiuto}
 
-Amina coordina visite, terapie e trasporto per la suocera Nasima usando un calendario murale in cucina con annotazioni miste bilingui. Non ha un computer e opera sullo smartphone nei ritagli di tempo: prima di uscire per il turno alle 5:45, in autobus o tra le faccende serali. Possiede ottima agilità pratica sulle app comuni, ma si blocca davanti al gergo amministrativo (classi di priorità, ``primo accesso'' vs ``controllo'', quesiti clinici). Per chiarimenti si rivolge prima alla figlia diciottenne, poi al medico di base o alla farmacia rionale; non delega all'esterno per non perdere il controllo sulle preferenze di Nasima. Teme sopra ogni cosa gli errori irreversibili, la perdita dei dati durante un'interruzione e le doppie prenotazioni familiari con il marito o i cognati.
+Amina coordina visite, terapie e trasporti con un calendario murale bilingue.
+Usa lo smartphone prima del turno, in autobus o tra le faccende serali. Per
+chiarire il gergo amministrativo si rivolge alla figlia diciottenne, poi al
+medico o alla farmacia; vuole preservare le preferenze di Nasima senza
+delegare l'intera pratica. La distribuzione dei compiti tra marito e cognati
+le richiede di verificare chi ha già prenotato per evitare duplicazioni.
 
 \cardfieldheading{Competenze e abilità (C\&A)}
 
@@ -432,9 +488,18 @@ Amina coordina visite, terapie e trasporto per la suocera Nasima usando un calen
 
 \fieldheading{Scenario: la fisioterapia all'alba e l'ostacolo del gergo amministrativo}
 
-\textbf{Contesto e innesco:} Ore 5:50 a Ravenna: prima del turno delle 6:30 in mensa scolastica, Amina deve prenotare il primo ciclo di fisioterapia per la suocera convivente Nasima (76 anni, artrosi severa). Sul tavolo della cucina affianca il promemoria cartaceo NRE, gli orari del bus e il calendario familiare. Non disponendo di un PC, opera esclusivamente dallo smartphone Android personale accedendo a CUPweb da browser mobile nei ritagli di tempo mattutini.
+\textbf{Contesto e innesco:} Alle 5:50, a Ravenna, prima del turno delle 6:30, Amina deve
+prenotare il primo ciclo di fisioterapia per Nasima, con artrosi severa.
+Sul tavolo affianca NRE, orari del bus e calendario familiare e apre
+CUPweb dal browser dello smartphone.
 
-\textbf{Svolgimento dell'esperienza e attrito cognitivo:} Amina è abile sulle app quotidiane, ma il portale web da browser mobile la blocca con un lessico burocratico ostico e una grafica non ottimizzata per smartphone: codice prestazione specialistico, classi di priorità (D, P) e opzione tra \enquote{primo accesso} e \enquote{controllo}. Teme che un tocco accidentale o un errore lessicale annulli la ricetta. Nel frattempo la figlia le chiede indicazioni per la scuola e Nasima solleva dubbi su contatti presi dal cognato. Lo smartphone va in standby: riattivando il browser, Amina teme la perdita dei dati del form o il time-out di sessione mentre l'orario del turno incombe.
+\textbf{Svolgimento dell\textquotesingle esperienza e attrito cognitivo:} La scelta tra \enquote{primo accesso} e \enquote{controllo}, il
+codice della prestazione e le classi di priorità D/P la fanno esitare: teme
+che un errore invalidi la ricetta. Il layout mobile rende più difficile la
+consultazione. La figlia le chiede indicazioni per la scuola e Nasima parla
+di contatti presi dal cognato; lo smartphone va in standby. Alla ripresa,
+Amina deve verificare che dati e sessione siano conservati mentre si
+avvicina l'orario del turno.
 
 \textbf{Stima temporale e criteri di successo:}
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
@@ -445,14 +510,14 @@ Amina coordina visite, terapie e trasporto per la suocera Nasima usando un calen
 
 \fieldheading{Considerazioni conclusive e implicazioni di design}
 
-\textbf{Impatto della persona sul design:} Il ruolo di caregiver convivente con background migratorio richiede resilienza tecnologica alle interruzioni e accessibilità linguistica:
+\textbf{Impatto della persona sul design:}
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
 \item \textbf{P-09}: La terminologia clinica e burocratica essenziale deve essere affiancata da definizioni in linguaggio semplice (Plain Language), con glosse ed esempi applicativi concreti.
 \item \textbf{P-10}: L'identità dell'assistito, il ruolo di chi effettua l'operazione e i canali di contatto devono restare chiaramente visibili durante tutto il percorso, gestendo anagrafiche non coincidenti.
 \item \textbf{P-11}: La web application deve essere progettata per l'uso discontinuo da browser smartphone (in ottica responsive/PWA), tollerando standby dello schermo e cambi di scheda senza disconnessioni premature.
 \end{itemize}
 
-\textbf{Impatto del caso d'uso sul design:} Il flusso della prescrizione specialistica deve favorire il coordinamento all'interno della rete familiare e la salvaguardia del lavoro svolto:
+\textbf{Impatto del caso d'uso sul design:}
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
 \item \textbf{U4-01}: Le interruzioni temporanee o la consultazione di aiuti testuali non devono provocare la perdita dei dati inseriti; al rientro deve essere segnalato con esattezza il passo raggiunto.
 \item \textbf{U4-02}: L'esito finale deve produrre un riepilogo sintetico e condivisibile sui canali di messaggistica ordinari, attestando lo stato concluso dell'operazione per prevenire prenotazioni doppie.
@@ -473,36 +538,33 @@ Amina coordina visite, terapie e trasporto per la suocera Nasima usando un calen
 
 \includegraphics[width=0.90\linewidth]{assets/phase-b-personas-overlay.png}
 
-La visualizzazione comparativa sintetizza le sei dimensioni C\&A del cast su scala diretta 1--5 (1 al centro, 5 al perimetro esterno). La sovrapposizione evidenzia la complementarietà dei profili: l'area interna copre l'alta fragilità di Pina, mentre le estensioni di Elena (tecnica), Renato (linguistica e dominio) e Amina (motivazione) presidiano gli estremi dell'esperienza d'uso senza ridondanze.
+Le visualizzazioni confrontano le sei dimensioni C\&A sulla scala diretta
+1--5 (1 al centro, 5 al perimetro). Evidenziano le differenze tra i profili;
+le motivazioni dei singoli punteggi restano nelle Persona card.
 
 \fieldheading{Motivazione della selezione e alternative scartate}
 
-Pina copre l'utente diretto con bassa autonomia. Elena e Amina appartengono al
-Segmento B, ma non sono intercambiabili: la prima assiste a distanza con alta
-competenza digitale e scarsità di tempo; la seconda assiste in presenza, conosce
-il contesto familiare ma affronta mediazione linguistica e attenzione
-frammentata. Renato introduce una variazione interna al Segmento A e verifica il
-bilanciamento tra semplicità ed efficienza. La selezione cerca varietà di età,
-genere, origine, lingua, composizione familiare e rapporto con il digitale solo
-quando queste differenze cambiano concretamente scenario o requisiti; evita di
-usare la diversità come tratto decorativo. Sono state rinviate: una figura
-sanitaria o di farmacia, perché esterna ai segmenti intervistati; una persona
-completamente dipendente, perché sarebbe un caso limite artificiale senza
-evidenze sufficienti; un caregiver con profilo quasi identico a Elena, perché
-non genererebbe nuove implicazioni. Anche gli scenari di sola consultazione e di
-modifica anagrafica sono rinviati perché meno rappresentativi del problema di
-prenotazione ed emersi in Fase A. Infine, il cast copre in modo simmetrico
-l'accesso a CUPweb: due scenari (Pina e Amina) su browser smartphone e due
-(Elena e Renato) su browser desktop da PC.
+La selezione amplia le due audience con differenze che modificano scenario
+o requisiti: autonomia digitale per gli utenti diretti, distanza,
+mediazione linguistica e attenzione per i caregiver. Età, genere, origine
+e composizione familiare definiscono personaggi peculiari, senza usare la
+diversità come tratto decorativo. Due scenari si svolgono da browser
+smartphone (Pina, Amina) e due da PC (Elena, Renato).
+
+Sono state rinviate una figura sanitaria o di farmacia, esterna ai segmenti
+intervistati; una persona completamente dipendente, caso limite senza
+evidenze sufficienti; un caregiver simile a Elena, privo di nuove
+implicazioni. Gli scenari di sola consultazione e modifica anagrafica sono
+stati rinviati rispetto ai compiti di prenotazione e disdetta prioritari.
 
 \fieldheading{Conflitti progettuali}
 
 \begin{itemize}
 \item Una guida sempre visibile sostiene Pina ma può rallentare Renato: servono spiegazioni progressive e richiudibili.
 \item Le scorciatoie utili a Elena non devono nascondere identità, stato o conseguenze dell'azione.
-\item La supervisione rassicura il caregiver, ma può diventare sorveglianza o sostituzione dell'utente diretto.
+\item Il supporto in modalità co-pilota non deve trasferire l'esecuzione al caregiver; la modalità delega completa consente invece un intervento autorizzato, senza trasformarlo in sostituzione sistematica o sorveglianza.
 \item Controlli grandi e spaziati devono convivere con una densità informativa sufficiente per chi opera rapidamente.
-\item Il linguaggio semplice aiuta Pina e Amina, ma deve conservare precisione per Elena e Renato; servono spiegazioni progressive, non etichette vaghe.
+\item Il linguaggio semplice aiuta Pina e Amina, ma deve conservare la precisione richiesta da Elena e Renato, evitando etichette vaghe.
 \item La condivisione familiare riduce il lavoro di Amina, ma non deve esporre dati sanitari o autorizzare automaticamente chi riceve una conferma.
 \end{itemize}
 
@@ -522,15 +584,15 @@ l'accesso a CUPweb: due scenari (Pina e Amina) su browser smartphone e due
 \bottomrule
 \endfoot
 \textbf{C-01}: & Il servizio deve essere utilizzabile con competenza tecnica minima, azioni visibili e tono rassicurante. \\[3pt]
-\textbf{C-02}: & Visibilità e delega devono sostenere una supervisione leggera, autorizzata e non sostitutiva. \\[3pt]
+\textbf{C-02}: & La modalità co-pilota deve sostenere l'azione dell'interessato senza sostituirlo; la modalità delega completa deve consentire al caregiver l'esecuzione autorizzata per suo conto. \\[3pt]
 \textbf{C-03}: & Prenotazione ricorrente e disdetta devono ridurre passaggi e ambiguità mantenendo il controllo dell'utente. \\[3pt]
 \textbf{C-04}: & Errori e cambi di stato devono offrire recupero comprensibile e notifiche concordate. \\[3pt]
-\textbf{C-05}: & Identità, oggetto e conseguenze dell'azione devono essere espliciti per utente diretto e caregiver. \\[3pt]
+\textbf{C-05}: & Chi opera, l'interessato, la modalità adottata, l'oggetto e le conseguenze dell'azione devono essere riconoscibili durante l'uso assistito o delegato. \\[3pt]
 \textbf{C-06}: & Spiegazioni progressive devono chiarire termini, regime, costo e conseguenze senza infantilizzare. \\[3pt]
 \textbf{C-07}: & Gerarchia, leggibilità, spaziatura e dimensione dei bersagli devono supportare vincoli visivi e motori. \\[3pt]
 \textbf{C-08}: & Il sistema deve conservare le scelte durante consultazione e aiuto, quindi mostrare un riepilogo completo prima della conferma. \\[3pt]
-\textbf{C-09}: & Terminologia e conseguenze devono essere precise ma comprensibili, con spiegazioni progressive adatte anche alla mediazione linguistica. \\[3pt]
-\textbf{C-10}: & Identità, ruolo, autorizzazione e confini della delega devono restare espliciti per tutte le forme di assistenza. \\[3pt]
+\textbf{C-09}: & La terminologia deve consentire la mediazione linguistica senza perdere la precisione delle condizioni e delle conseguenze dell'azione. \\[3pt]
+\textbf{C-10}: & Ruoli, autorizzazioni e limiti devono restare espliciti in entrambe le modalità; la delega completa riguarda l'esecuzione del compito e non implica accesso illimitato ai dati sanitari. \\[3pt]
 \textbf{C-11}: & I percorsi da smartphone devono tollerare interruzioni e consentire una ripresa riconoscibile senza perdita di lavoro. \\[3pt]
 \textbf{C-12}: & Stati e conferme condivisibili devono coordinare i familiari senza creare duplicazioni o accessi impliciti ai dati. \\
 \end{longtable}

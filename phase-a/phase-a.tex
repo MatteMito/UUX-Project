@@ -87,7 +87,8 @@ study per un possibile incarico più ampio.
 
 \fieldheading{Nome del tool}
 
-CUPweb (web application fruibile da browser PC e smartphone, www.cupweb.it), sistema
+CUPweb (web application fruibile da browser PC e smartphone, www.cupweb.it),
+canale gratuito disponibile 24/7 per il sistema
 regionale di prenotazione online delle prestazioni sanitarie
 specialistiche (visite ed esami) della Regione Emilia-Romagna
 \cite{rerPrenotare}.
@@ -101,19 +102,13 @@ stessi e per i familiari o assistiti delegati.
 
 \fieldheading{Perché il cliente dovrebbe voler finanziare un nuovo tool?}
 
-Il canale digitale, pur gratuito e disponibile 24/7, resta
-sotto-utilizzato dalla fascia più anziana della popolazione, che
-continua a intasare i centri telefonici e gli sportelli fisici o a delegare
-integralmente la prenotazione a un familiare. Questo genera costi
-operativi elevati per il servizio sanitario regionale (personale agli
-sportelli, centri telefonici), un alto tasso di mancate presentazioni
-("no-show", oggetto di una sanzione economica in caso di mancata
-disdetta nei termini), e non risponde agli obiettivi di digitalizzazione della
-sanità pubblica previsti dal PNRR (Missione 6) \cite{rerTempiAttesa,pnrrM6}. Un redesign mirato sulla
-fiducia e sull\textquotesingle autonomia degli utenti anziani, che
-valorizzi, invece di scavalcare, il ruolo del caregiver familiare,
-è coerente con questi obiettivi e giustificabile in termini di riduzione
-costi.
+Il redesign risponde al rischio di esclusione dal canale digitale e alla
+conseguente dipendenza da sportelli, centri telefonici o familiari, approfonditi
+nei Documenti 03 e 04a/04b. Una migliore esperienza di prenotazione e disdetta
+può contribuire agli obiettivi regionali di accesso ai servizi e di
+digitalizzazione della sanità pubblica \cite{rerTempiAttesa,pnrrM6}.
+La riduzione dei costi operativi e delle mancate presentazioni è un obiettivo
+progettuale, non un risultato misurato dalla ricerca preliminare.
 
 \fieldheading{Product Objectives}
 
@@ -121,7 +116,7 @@ Consentire ai pazienti anziani cronici di partecipare più attivamente
 alla gestione dei propri appuntamenti sanitari, anche quando
 assistiti da un familiare, riducendo l\textquotesingle ansia da
 interfaccia, aumentando la fiducia nel canale digitale e trasformando il
-caregiver da "esecutore" a "facilitatore/allenatore"
+caregiver da "esecutore" a "facilitatore"
 dell\textquotesingle autonomia del proprio caro.
 
 \fieldheading{Business Goals}
@@ -179,18 +174,11 @@ dalla popolazione anziana.
 
 \fieldheading{Motivazione della scelta e relazione con il tool del cliente}
 
-Il progetto HPHP richiede di considerare due audience distinte ma
-interdipendenti: l\textquotesingle utente diretto (che deve usare il
-servizio ma non è ancora un utente attivo, ed è scettico/impaurito) e
-l\textquotesingle intermediario (che oggi lo sostituisce integralmente).
-Per CUPweb, l\textquotesingle utente diretto naturale è il
-paziente anziano cronico, che deve prenotare ricorrentemente visite ed
-esami; l\textquotesingle intermediario naturale è il caregiver
-familiare, che già oggi gestisce gran parte delle pratiche sanitarie del
-proprio caro. Le dimensioni scelte permettono di distinguere non solo
-per età anagrafica, ma per il reale grado di autonomia/dipendenza
-digitale delle due popolazioni, che è il fattore che il redesign deve
-realmente affrontare.
+Le dimensioni distinguono due ruoli interdipendenti: il paziente anziano
+cronico, che deve gestire visite ricorrenti, e il caregiver familiare, che
+lo assiste o svolge le pratiche per suo conto. Età, autonomia digitale e
+contesto di assistenza permettono di descrivere quando il supporto è
+necessario e quando può favorire la partecipazione diretta del paziente.
 
 \fieldheading{Segmenti nella dimensione \#1: Utenti diretti (per età e
 autonomia digitale)}
@@ -240,35 +228,21 @@ con l\textquotesingle assistito)}
 \fieldheading{Perché le combinazioni scelte sono più rappresentative, sfidanti
 ed espressive delle altre}
 
-I due segmenti scelti rappresentano i due estremi della relazione di
-dipendenza digitale che il progetto HPHP vuole affrontare: da un lato
-l\textquotesingle utente completamente dipendente e più a rischio di
-esclusione digitale (nel 2025 solo il 63,9\% delle famiglie di soli
-anziani dispone di una connessione Internet domestica, contro il 95,1\%
-delle altre famiglie senza minori) \cite{istatICT2025}, dall\textquotesingle altro
-l\textquotesingle intermediario che il cliente vuole trasformare da
-"esecutore" a "trainer" dell\textquotesingle autonomia del genitore. È
-inoltre il caso più sfidante dal punto di vista del design (bassa
-competenza tecnica + alta necessità percepita di
-controllo/rassicurazione da parte del caregiver a distanza) e più
-rilevante numericamente: in Italia sono oltre 7 milioni le persone che
-svolgono attività di caregiving familiare almeno una volta a settimana,
-per il 58\% donne e per il 56\% di età compresa tra 45 e 64 anni
-\cite{cnelCaregiver2024}.
+Le combinazioni selezionate mettono a confronto bassa autonomia digitale e
+assistenza competente a distanza: la difficoltà progettuale consiste nel
+ridurre le barriere per il paziente senza perdere la visibilità necessaria
+al caregiver. I dati nazionali sul divario digitale e sul caregiving
+motivano la rilevanza del tema, ma non dimostrano la rappresentatività di
+queste combinazioni; valori e limiti sono riportati nei Documenti 04a/04b.
 
 \fieldheading{Impatto atteso sul design}
 
-Sarà necessaria un\textquotesingle esperienza a due livelli, con
-percorsi guidati passo-passo e a basso carico cognitivo per
-l\textquotesingle utente anziano (linguaggio semplice, conferme
-esplicite, possibilità di richiamare assistenza umana in ogni momento),
-e strumenti di co-prenotazione/delega controllata per il caregiver a
-distanza (visibilità sullo stato delle prenotazioni del genitore,
-notifiche, possibilità di prenotare per conto di un familiare associato
-mantenendo però il genitore informato e coinvolto). Il design dovrà
-rendere visibile e graduale il passaggio di competenza dal caregiver al
-  paziente, coerentemente con l\textquotesingle obiettivo organizzativo del
-cliente.
+Occorre distinguere il percorso dell'utente diretto da quello di chi lo
+assiste, mantenendo visibili identità, responsabilità e stato della pratica.
+L'ipotesi iniziale è che guida contestuale, notifiche e delega controllata
+possano sostenere un trasferimento graduale di autonomia. I Documenti 04a/04b
+ne precisano le implicazioni per segmento; il Documento 07 formalizza
+raccomandazioni e requisiti.
 
 \cardsection{Documento 04a: Market Research card: segmento A}
 
@@ -293,47 +267,28 @@ Fonte primaria: ISTAT, \emph{Cittadini e ICT, Anno 2024}
 giornalistiche, poiché i dati sono disponibili nei comunicati e nelle
 tavole dell\textquotesingle Istituto.
 
-\begin{itemize}
-\item
-  Nel 2025 il 63,9\% delle famiglie composte esclusivamente da anziani
-  (65+) dispone di connessione a Internet da casa (era il 60,6\% nel
-  2024), contro il 95,1\% delle famiglie non esclusivamente anziane e il
-  98,7\% delle famiglie con almeno un minore \cite{istatICT2025}.
-\item
-  Tra gli ultra 75enni il divario di genere nell\textquotesingle uso di
-  Internet è marcato: 38,3\% degli uomini contro il 26,5\% delle donne
-  (dato 2024) \cite{istatICT2024}.
-\item
-  Il 57,8\% delle famiglie senza connessione a Internet indica come
-  motivo principale la mancanza di capacità di utilizzo, non il costo
-  dei dispositivi o la mancanza di interesse \cite{istatICT2024}.
-\item
-  Nel 2024 l\textquotesingle uso di siti/app della Pubblica
-  Amministrazione per scaricare moduli è calato di 9,6 punti percentuali
-  e per prenotare appuntamenti di 8 punti percentuali rispetto
-  all\textquotesingle anno precedente, un segnale di complessità o
-  insoddisfazione d\textquotesingle uso più che di disinteresse
-  \cite{istatICT2024}.
-\item
-  Il titolo di studio incide fortemente sull\textquotesingle uso di
-  Internet: 95,8\% tra i laureati, 91,6\% tra i diplomati, ma solo
-  69,7\% tra chi ha al massimo la licenza media, titolo di studio
-  frequente nella coorte 75-85 anni \cite{istatICT2024}.
-\end{itemize}
+La tabella raccoglie gli indicatori di accesso, uso e competenze digitali.
+Le differenze tra gruppi motivano l'attenzione al segmento; il calo delle
+attività online della PA non ne identifica, da solo, le cause.
 
 \begin{center}
 \small
-\begin{tabular}{@{}p{0.50\linewidth}p{0.32\linewidth}p{0.14\linewidth}@{}}
+\begin{tabular}{@{}p{0.48\linewidth}p{0.32\linewidth}p{0.14\linewidth}@{}}
 \toprule
 \textbf{Indicatore macro (ISTAT)} & \textbf{Coorte / Ambito} & \textbf{Valore} \\
 \midrule
 Accesso domestico a Internet (2025) & Famiglie di soli anziani (65+) & 63,9\% \\
-Accesso domestico a Internet (benchmark) & Famiglie con almeno un minore & 98,7\% \\
+Accesso domestico a Internet (2024) & Famiglie di soli anziani (65+) & 60,6\% \\
+Accesso domestico a Internet (2025) & Famiglie non esclusivamente anziane & 95,1\% \\
+Accesso domestico a Internet (2025) & Famiglie con almeno un minore & 98,7\% \\
 Uso Internet per genere (2024) & Uomini over 75 & 38,3\% \\
 Uso Internet per genere (2024) & Donne over 75 & 26,5\% \\
 Motivo principale non-connessione (2024) & Mancanza di competenze d'uso & 57,8\% \\
-Prenotazione appuntamenti PA online (2024) & Variazione annuale diretta & $-$8,0 p.p. \\
-Uso Internet per titolo di studio (2024) & Laurea vs Licenza media & 95,8\% vs 69,7\% \\
+Prenotazione appuntamenti PA online (2024) & Variazione rispetto al 2023 & $-$8,0 p.p. \\
+Download moduli PA online (2024) & Variazione rispetto al 2023 & $-$9,6 p.p. \\
+Uso Internet per titolo di studio (2024) & Laurea & 95,8\% \\
+Uso Internet per titolo di studio (2024) & Diploma & 91,6\% \\
+Uso Internet per titolo di studio (2024) & Al massimo licenza media & 69,7\% \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -342,7 +297,7 @@ Uso Internet per titolo di studio (2024) & Laurea vs Licenza media & 95,8\% vs 6
 
 \fieldheading{Metodo di ricerca utilizzato: interviste qualitative}
 
-Per validare qualitativamente i dati quantitativi sono state condotte
+Per approfondire il contesto delineato dai dati nazionali sono state condotte
 due interviste individuali con soggetti reali appartenenti al Segmento
 A, seguendo una traccia semi-strutturata (obiettivo di ricerca,
 script di apertura, domande aperte sul percorso di prenotazione
@@ -412,17 +367,10 @@ paternalistico, rivendicando spiegazioni tecniche chiare, tariffe esplicite e la
 approfondire una voce senza perdere i passaggi già compilati: "Non ho paura della tecnologia,
 ma odio perdere tempo su pagine che nascondono le informazioni essenziali."
 
-\textbf{Sintesi trasversale.} Pur collocandosi su livelli opposti di
-autonomia tecnologica, i due soggetti empirici individuano il medesimo fattore critico:
-la presenza nel flusso di bivi decisionali percepiti come opachi, rischiosi o irreversibili
-(la barriera dell'accesso e il terrore dell'errore per Carla; l'incertezza su tariffe, sedi e
-regimi erogativi per Giorgio). Entrambi, inoltre, tracciano un confine netto tra "farsi supportare"
-e "farsi espropriare dell'azione", respingendo la sostituzione passiva anche quando si trovano
-costretti a chiedere assistenza a terzi. Emergono due chiare indicazioni per la progettazione:
-(a) la necessità di spiegazioni contestuali immediate e trasparenti sui costi e sulle sedi,
-preservando lo stato della navigazione (richiesta da Giorgio); (b) l'introduzione di conferme
-protette e reversibili, con un percorso a bassa soglia che non imponga barriere d'ingresso
-immediatamente escludenti (richiesta da Carla).
+\textbf{Sintesi trasversale.} Carla riferisce difficoltà di accesso e timore
+dell'errore; Giorgio incertezza sulle condizioni della prestazione. Nei due
+racconti, la richiesta di assistenza è distinta dalla rinuncia al controllo
+dell'azione. Le implicazioni sono sviluppate nel campo ``Impatto sul design''.
 
 \fieldheading{Task analysis}
 
@@ -514,33 +462,20 @@ criticità già emerse nell\textquotesingle assessment (Documento 05a).}
 
 \fieldheading{Risultati complessivi dell\textquotesingle analisi}
 
-I dati confermano quantitativamente ciò che il progetto HPHP presume
-qualitativamente: gli anziani over 75, soprattutto donne e con basso
-titolo di studio, sono la fascia più esposta a esclusione digitale nei
-servizi essenziali come la sanità. La barriera principale non è
-l\textquotesingle assenza di device o di connessione, ma la percezione
-di mancanza di competenze, un problema di fiducia e auto-efficacia
-più che di accesso tecnico.
-
-Le due interviste qualitative corroborano questa lettura e la
-precisano: in entrambi i casi il blocco non nasce da un rifiuto della
-tecnologia, ma dall\textquotesingle incertezza su un singolo passaggio
-percepito come irreversibile (autenticazione ed errore per il profilo
-a bassa autonomia, scelta del regime/costo per il profilo più
-autonomo). Questo sposta l\textquotesingle enfasi progettuale da
-"semplificare tutto" a "rendere sicuri e reversibili i punti di
-decisione critici", coerentemente con quanto già anticipato
-nell\textquotesingle impatto sul design sottostante.
+Le statistiche descrivono un divario digitale nazionale; le interviste
+mostrano, nei due casi esaminati, come l'incertezza possa ostacolare
+l'accesso o la scelta della prestazione anche a livelli diversi di autonomia.
+La convergenza suggerisce di intervenire sui punti decisionali critici,
+senza attribuire ai dati generali le cause delle difficoltà specifiche di
+CUPweb né generalizzare i racconti al segmento.
 
 \fieldheading{Impatto sul design}
 
-Il design deve minimizzare il carico cognitivo e tecnico richiesto
-(evitare di esporre da subito procedure complesse come
-l\textquotesingle autenticazione SPID), offrire percorsi guidati
-passo-passo con conferme esplicite, validare esplicitamente il ruolo del
-caregiver come alleato e non sostituto, e prevedere sempre una via di
-fuga verso l\textquotesingle assistenza umana (centro telefonico, farmacia,
-sportello) senza che questa venga percepita come un fallimento.
+Per Carla sono pertinenti un accesso a bassa soglia, conferme leggibili e
+recupero guidato dall'errore; per Giorgio, spiegazioni su regime, costo e sede
+consultabili senza perdere le scelte. L'assistenza di familiari, farmacia o
+operatori dovrebbe restare accessibile e sostenere il controllo dell'utente.
+Queste indicazioni confluiscono nelle raccomandazioni del Documento 07.
 
 \cardsection{Documento 04b: Market Research card: segmento B}
 
@@ -555,7 +490,7 @@ anziano, intermediario del servizio.
 È il segmento che oggi sostiene il costo (tempo, stress, carico mentale)
 della mediazione digitale per conto dell\textquotesingle utente diretto,
 ed è quello che il cliente vuole trasformare da "esecutore" a
-"facilitatore/allenatore" dell\textquotesingle autonomia del proprio
+"facilitatore" dell\textquotesingle autonomia del proprio
 caro, un obiettivo centrale del progetto HPHP.
 
 \fieldheading{Metodo di ricerca utilizzato: Available Statistics}
@@ -564,39 +499,23 @@ Fonti primarie: CNEL--Censis, \emph{Il valore sociale del caregiver}
 (2024) \cite{cnelCaregiver2024}; ISTAT, \emph{Indicatori demografici,
 Anno 2025} (dati al 1° gennaio 2026) \cite{istatDemografia2025}.
 
-\begin{itemize}
-\item
-  In Italia sono oltre 7 milioni le persone che svolgono attività di
-  caregiving familiare non retribuito, assistendo un anziano, un
-  disabile o un familiare non autosufficiente almeno una volta a
-  settimana \cite{cnelCaregiver2024}.
-\item
-  Il 58\% dei caregiver familiari è composto da donne e il 56\% ha
-  un\textquotesingle età compresa tra 45 e 64 anni \cite{cnelCaregiver2024}.
-\item
-  Le difficoltà di conciliazione tra lavoro e assistenza riguardano il
-  38\% delle donne caregiver e il 34\% degli uomini caregiver
-  \cite{cnelCaregiver2024}.
-\item
-  Al 1° gennaio 2026 gli over 65 in Italia sono quasi 14,8 milioni
-  (25,1\% della popolazione) e gli over 85 hanno superato i 2,5 milioni,
-  con una crescita costante attesa nei prossimi decenni: il fenomeno del
-  caregiving è quindi strutturale e non residuale
-  \cite{istatDemografia2025}.
-\end{itemize}
+Gli indicatori descrivono la diffusione del caregiving e il carico di
+conciliazione tra lavoro e assistenza, nel contesto dell'invecchiamento della
+popolazione. Le grandezze nazionali non misurano il lavoro di mediazione
+digitale sul servizio CUPweb.
 
 \begin{center}
 \small
-\begin{tabular}{@{}p{0.46\linewidth}p{0.32\linewidth}p{0.18\linewidth}@{}}
+\begin{tabular}{@{}p{0.44\linewidth}p{0.32\linewidth}p{0.18\linewidth}@{}}
 \toprule
 \textbf{Indicatore demografico e sociale} & \textbf{Fonte di riferimento} & \textbf{Dato rilevato} \\
 \midrule
-Caregiver familiari non retribuiti & CNEL--Censis (2024) \cite{cnelCaregiver2024} & $> 7$ milioni \\
+Caregiver non retribuiti (assistenza almeno settimanale ad anziani, disabili o familiari non autosufficienti) & CNEL--Censis (2024) \cite{cnelCaregiver2024} & $> 7$ milioni \\
 Composizione di genere dei caregiver & CNEL--Censis (2024) \cite{cnelCaregiver2024} & 58\% donne \\
 Fascia anagrafica prevalente (45--64 anni) & CNEL--Censis (2024) \cite{cnelCaregiver2024} & 56\% del totale \\
 Difficoltà conciliazione lavoro/cura & CNEL--Censis (2024) \cite{cnelCaregiver2024} & 38\% F / 34\% M \\
-Popolazione anziana over 65 (Italia) & ISTAT (2025) \cite{istatDemografia2025} & 14,8 mln (25,1\%) \\
-Grandi anziani over 85 (Italia) & ISTAT (2025) \cite{istatDemografia2025} & $> 2,5$ milioni \\
+Popolazione over 65 (1 gennaio 2026) & ISTAT (2025) \cite{istatDemografia2025} & 14,8 mln (25,1\%) \\
+Popolazione over 85 (1 gennaio 2026) & ISTAT (2025) \cite{istatDemografia2025} & $> 2,5$ milioni \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -605,12 +524,10 @@ Grandi anziani over 85 (Italia) & ISTAT (2025) \cite{istatDemografia2025} & $> 2
 
 \fieldheading{Metodo di ricerca utilizzato: interviste qualitative}
 
-Sono state condotte due interviste individuali con soggetti reali
-appartenenti al Segmento B, seguendo una traccia semi-strutturata
+Sono state condotte due interviste individuali con caregiver dei due profili di assistenza considerati, seguendo una traccia semi-strutturata
 analoga a quella del Segmento A, adattata al ruolo di caregiver
 (carico di mediazione digitale, disponibilità a delegare compiti al
-familiare assistito). I due soggetti coprono le due configurazioni
-tipiche di caregiving individuate nella letteratura di settore: assistenza
+familiare assistito). I due casi riguardano assistenza
 a distanza e assistenza in presenza/convivenza.
 
 \begin{itemize}
@@ -632,7 +549,11 @@ Silvia riceve le richieste della madre prevalentemente tramite telefonate serali
 
 Fatima gestisce la salute familiare incastrando le incombenze sanitarie tra il lavoro d\textquotesingle ufficio e la cura domestica, operando quasi esclusivamente dal proprio smartphone nei ritagli di tempo o durante gli spostamenti quotidiani. A differenza di Silvia, il suo ostacolo principale non è la lontananza fisica ma la complessità burocratico-amministrativa dei portali sanitari, unita alla necessità di coordinamento con altri parenti (in particolare il cognato, che spesso si occupa dei trasporti e dell\textquotesingle accompagnamento fisico della suocera). Racconta che durante un tentativo di prenotazione su CUPweb si è trovata disorientata davanti alla distinzione tra opzioni quali "primo accesso" e "visita di controllo", prive di chiarimenti contestuali: temendo di selezionare una prestazione errata e di invalidare la priorità medica prescritta, ha preferito interrompere la procedura per chiedere informazioni via telefono. Sottolinea con forza il bisogno di consultare spiegazioni semplici e sintetiche direttamente nella pagina di scelta, senza dover uscire dal flusso o perdere i dati già inseriti. Evidenzia inoltre l\textquotesingle assenza di un canale rapido e sicuro per condividere lo stato della prenotazione con il cognato: vorrebbe poter inviare una ricevuta sintetica con data, ora e indirizzo dell\textquotesingle ambulatorio tramite le consuete app di messaggistica, evitando però di dover condividere foto integrali delle ricette o documenti che espongono l\textquotesingle intera anamnesi clinica della suocera. Le sue sessioni d\textquotesingle uso su smartphone sono brevi e frequentemente interrotte da telefonate o impegni familiari, per cui richiede che il sistema salvi lo stato di avanzamento e consenta di riprendere la compilazione senza dover ricominciare l\textquotesingle intero percorso dall\textquotesingle inizio.
 
-\textbf{Sintesi trasversale.} Entrambe le caregiver, pur operando in contesti differenti (assistenza a distanza e carico mentale per Silvia; convivenza, mediazione burocratica e frammentazione mobile per Fatima), convergono su necessità progettuali comuni: (a) richiedono un flusso lineare con istruzioni chiare e progressive per l\textquotesingle utente finale, che riduca le opzioni simultanee e guidi passo dopo passo; (b) esigono conferme formali e notifiche trasparenti a chiusura della procedura, prerequisito indispensabile per consentire loro di allentare la supervisione diretta; (c) rifiutano la logica della sostituzione passiva permanente, auspicando invece una delega asimmetrica e modulare. Sul piano del design emergono due istanze concrete: la necessità di un meccanismo di supporto o supervisione leggera a distanza (richiesto da Silvia) e la possibilità di condividere ricevute sintetiche e coordinate tra più familiari salvaguardando la riservatezza dei dati clinici completi, unitamente alla tolleranza per le interruzioni su smartphone (richieste da Fatima).
+\textbf{Sintesi trasversale.} Silvia pone il problema della supervisione a
+distanza; Fatima quello del coordinamento familiare e delle interruzioni da
+smartphone. Entrambe richiedono informazioni sufficienti a verificare
+l'esito della pratica. Le implicazioni specifiche sono raccolte nel campo
+``Impatto sul design''.
 
 \fieldheading{Task analysis}
 
@@ -699,39 +620,21 @@ strumento.}
 
 \fieldheading{Risultati complessivi dell\textquotesingle analisi}
 
-Il caregiving familiare in Italia è un fenomeno di massa,
-prevalentemente femminile e concentrato nella fascia 45-64 anni, con un
-costo personale significativo in termini di tempo e possibilità
-lavorative. Questo rende particolarmente rilevante, anche dal punto di
-vista del cliente (riduzione indiretta dei costi sociali), un design che
-alleggerisca il carico del caregiver senza tuttavia toglierne il
-controllo percepito.
-
-Le interviste a Silvia e Fatima confermano questa lettura e mostrano che
-il carico percepito non coincide con il tempo speso sulla singola
-prenotazione, ma con la reperibilità continua e con la responsabilità
-di dover verificare al posto del familiare assistito. In entrambi i
-casi un tentativo di delega si è interrotto sullo stesso tipo di
-ostacolo già rilevato nel Segmento A (autenticazione e terminologia non
-familiare), confermando che un redesign centrato solo sull\textquotesingle utente
-diretto, senza strumenti di visibilità e fiducia per il caregiver, non
-sarebbe sufficiente a spostare stabilmente compiti verso l\textquotesingle utente
-anziano.
+Le fonti nazionali descrivono un carico di assistenza significativo; le
+interviste suggeriscono che, nei casi esaminati, esso comprende anche
+reperibilità e responsabilità di verifica. Questo distingue il tempo della
+singola operazione dal lavoro di coordinamento. Il confronto con il
+Segmento A indica una relazione tra le difficoltà del paziente e il carico
+del caregiver, da approfondire oltre il campione di comodo.
 
 \fieldheading{Impatto sul design}
 
-Il design dovrà offrire strumenti di co-gestione (visibilità sulle
-prenotazioni del familiare, notifiche, possibilità di intervenire solo
-quando necessario) piuttosto che di sostituzione totale, con una
-progressione esplicita e graduale di autonomia delegata al paziente, in
-modo che il caregiver possa fidarsi di "lasciare andare" un compito
-alla volta. Le interviste aggiungono due indicazioni più specifiche:
-una "modalità assistenza" a distanza che permetta al caregiver di
-osservare o intervenire su una procedura in corso senza doverla
-avviare o completare al posto del familiare (Silvia); e un meccanismo di
-condivisione dello stato delle prenotazioni tra più caregiver familiari
-che comunichi cosa è stato fatto e da chi, senza esporre per questo i
-dati sanitari sottostanti a chi riceve solo una conferma (Fatima).
+Per Silvia emerge l'esigenza di supervisione a distanza senza scambio di
+credenziali; per Fatima, di ripresa del task e condivisione di un riepilogo
+con i familiari senza esporre l'intera documentazione clinica. Guida
+progressiva e conferme comprensibili dovrebbero permettere al paziente di
+partecipare, limitando la sostituzione alle operazioni che richiedono aiuto.
+Il Documento 07 integra queste indicazioni con assessment e test.
 
 \fieldheading{Tracciabilità delle fonti primarie e del consenso}
 
@@ -788,35 +691,12 @@ fascicolo-sanitario.it, support.fascicolo-sanitario.it).
 
 \fieldheading{Principali punti di debolezza}
 
-\begin{itemize}
-\item
-  Autenticazione obbligatoria complessa (SPID livello 2/CIE) anche solo
-  per prenotare, con re-autenticazioni periodiche forzate che gli utenti
-  reali segnalano come fonte di frustrazione ricorrente nei tentativi di
-  accesso da dispositivi mobili
-\item
-  Servizi distribuiti su più domini/sottodomini esterni tra loro
-  visivamente scollegati, un pattern che in un utente anziano diffidente
-  può generare sospetto di phishing invece di fiducia
-\item
-  Problemi di accessibilità segnalati da utenti con lettori di schermo,
-  nonostante la dichiarazione di accessibilità pubblicata
-\item
-  Interfaccia informativa fortemente testuale, con bassa gerarchia
-  visiva e nessun elemento di orientamento per un utente al primo
-  utilizzo
-\item
-  La funzione disponibile senza autenticazione è una sola (il
-  pagamento di un appuntamento già prenotato): prenotare, disdire,
-  modificare o anche solo visualizzare le proprie prenotazioni
-  richiede sempre SPID/CIE/CNS, il che costringe da subito
-  l\textquotesingle utente meno esperto ad affrontare la parte più
-  complessa del flusso (identità digitale) prima ancora di capire il
-  valore del servizio (verificato su screenshot della home page
-  CUPweb da desktop e della schermata di accesso da browser smartphone,
-  riportati di seguito, che mostrano come unica azione disponibile senza SPID
-  "Paga una prestazione" e confermano la mancata ottimizzazione responsive)
-\end{itemize}
+Le criticità riguardano accesso autenticato, continuità tra domini,
+leggibilità e accessibilità. Le analisi diretta e inversa sottostanti ne
+precisano posizione, conseguenze e tipo di riscontro. Gli screenshot della
+home page e dell'accesso da smartphone documentano la distinzione tra le
+azioni pubbliche e quelle protette; le segnalazioni sull'uso autenticato
+restano distinte dall'ispezione diretta.
 
 \begin{center}
 \includegraphics[width=0.85\linewidth]{research-materials/screenshot-cupweb-miodottore/cupweb-home.png}
@@ -843,6 +723,7 @@ un sottoinsieme rappresentativo di 88 voci su 9 categorie, a entrambi
 i tool. Il riepilogo per categoria:
 
 \begin{center}
+\small
 \begin{tabular}{@{}lcccccc@{}}
 \toprule
   & \multicolumn{3}{c}{\textbf{CUPweb}} & \multicolumn{3}{c}{\textbf{MioDottore}} \\
@@ -871,15 +752,11 @@ Il dettaglio originale è conservato in \texttt{phase-a-guideline-checklist.xlsx
 
 \begin{itemize}
 \item
-  {[}Navigazione{]} I link di primo livello ("Disdici", "Prenota",
-  "Paga", "Informazioni") portano a domini esterni differenti senza
-  preavviso visivo, viola la linearità di navigazione attesa
-\item
-  {[}Fiducia e credibilità{]} Il passaggio tra domini diversi (cupweb.it
-  → pagonlinesanita.it, fascicolo-sanitario.it) senza un design coerente
-  indebolisce la percezione di affidabilità, un fattore critico proprio
-  per l\textquotesingle utente anziano diffidente che è il target del
-  progetto
+  {[}Navigazione; Fiducia e credibilità{]} I link di primo livello
+  ("Disdici", "Prenota", "Paga", "Informazioni") portano a domini
+  differenti (cupweb.it, pagonlinesanita.it, fascicolo-sanitario.it) senza
+  preavviso visivo o identità grafica coerente. Il passaggio interrompe
+  la continuità del percorso e può indebolire la fiducia dell'utente.
 \item
   {[}Impaginazione{]} Assenza di elementi visivi (icone, immagini, colori
   distintivi) che aiutino il riconoscimento rapido delle azioni
@@ -889,9 +766,10 @@ Il dettaglio originale è conservato in \texttt{phase-a-guideline-checklist.xlsx
   in linguaggio semplice (es. "CNS", "SPID", "impegnativa
   dematerializzata") esposta senza tooltip o spiegazioni contestuali
 \item
-  {[}Completamento del compito{]} Il completamento della maggior parte delle
-  azioni richiede autenticazione forte fin dal primo passo, senza un
-  percorso dimostrativo o guidato per il nuovo utente
+  {[}Completamento del compito{]} Prenotazione, disdetta, modifica e consultazione delle proprie
+  prenotazioni richiedono autenticazione SPID (livello 2)/CIE/CNS; la home page offre
+  senza autenticazione soltanto "Paga una prestazione". Manca un percorso
+  dimostrativo o guidato per il nuovo utente
 \item
   {[}Accessibility{]} Segnalazioni pubbliche di incompatibilità con
   screen reader per utenti non vedenti, nonostante
@@ -910,31 +788,25 @@ anziano).}
 
 \begin{itemize}
 \item
-  Verificato su screenshot datato della home page CUPweb (già
-  riportato nel Documento 05a): contrariamente
-  a quanto inizialmente ipotizzato, la disdetta \textbf{non} è
-  eseguibile senza autenticazione forte, solo il pagamento di un
-  appuntamento già prenotato lo è. Per un utente che parte da un link
-  SMS senza SPID pronto, come nello scenario simulato, questo significa
-  un blocco totale del compito e non solo un ostacolo di navigazione,
-  un\textquotesingle aggravante rispetto alla stima preliminare
+  Il requisito di autenticazione già descritto nell'analisi diretta
+  impedisce di procedere alla disdetta partendo dal solo link SMS senza
+  SPID pronto. Lo screenshot della home page corregge l'ipotesi preliminare
+  di una disdetta pubblica: solo il pagamento è disponibile senza accesso.
+  Si tratta di una conseguenza del medesimo problema, non di una nuova voce.
 \item
-  Non è chiaro, senza leggere il testo esplicativo per intero, quale sia
-  la differenza fra i canali "Servizio Sanitario Nazionale" e "Libera
-  Professione" al momento della scelta, pur essendo un bivio obbligato
-  del flusso
+  La distinzione SSN/Libera Professione richiama il problema di terminologia
+  dell'analisi diretta: nel task, richiede di interpretare un bivio del
+  flusso leggendo il testo esplicativo.
 \item
-  Segnalazioni e riscontri di utenti reali sull\textquotesingle uso di CUPweb da
-  dispositivi mobili evidenziano come la consultazione delle prenotazioni attive
-  e la ricerca nello storico risultino difficoltose su schermi ridotti: le tabelle
-  non sono responsive e l\textquotesingle elenco non è agevolmente ordinabile o filtrabile,
-  costringendo a continui zoom e scorrimenti orizzontali, un problema critico
-  soprattutto per utenti con minore destrezza digitale
+  Segnalazioni e riscontri sull'uso mobile indicano una criticità aggiuntiva
+  nella consultazione delle prenotazioni e dello storico: tabelle non
+  responsive, ordinamento e filtri poco agevoli richiedono zoom e
+  scorrimenti orizzontali su schermi piccoli.
 \item
-  L\textquotesingle introduzione dell\textquotesingle obbligo esclusivo di autenticazione
-  SPID/CIE al posto di credenziali più semplici o sessioni prolungate è stato
-  vissuto da utenti reali come una barriera improvvisa, minando la fiducia e
-  l\textquotesingle autonomia d\textquotesingle uso soprattutto da smartphone
+  Le segnalazioni su re-autenticazioni periodiche e passaggio esclusivo a
+  SPID/CIE precisano la persistenza della barriera di accesso, già censita
+  nell'analisi diretta, rispetto a credenziali più semplici o sessioni
+  prolungate. Non costituiscono una verifica indipendente del flusso.
 \end{itemize}
 
 \cardsection{Documento 05b: Assessment of Existing Resource card: competitor tool}
@@ -993,27 +865,12 @@ recensioni a stelle, iconografia chiara).
 
 \fieldheading{Principali punti di debolezza}
 
-\begin{itemize}
-\item
-  Le recensioni sono moderate secondo linee guida della piattaforma
-  stessa, il che ha generato dubbi pubblici sulla loro
-  genuinità/affidabilità, un problema di trasparenza che il progetto
-  HPHP (dove la fiducia è centrale) deve evitare di replicare
-\item
-  Alcuni utenti segnalano un flusso di login inutilmente frammentato tra
-  browser, modali e rimando all\textquotesingle app store, con
-  conseguente frustrazione
-\item
-  Il servizio è privato: non integra il Servizio Sanitario Nazionale, le
-  esenzioni ticket, o il Fascicolo Sanitario Elettronico, quindi non
-  risolve da solo il caso d\textquotesingle uso del cliente, ma resta
-  valido come fonte di ispirazione sul piano
-  dell\textquotesingle esperienza
-\item
-  Il modello di business (i medici pagano per essere visibili) può
-  introdurre bias nei risultati di ricerca, un problema di trasparenza
-  inapplicabile ma da tenere presente come contro-esempio
-\end{itemize}
+La natura privata del servizio ne limita la comparabilità: non integra
+SSN, esenzioni ticket o Fascicolo Sanitario Elettronico. Il modello di
+visibilità a pagamento dei professionisti pone inoltre una questione di
+trasparenza dei risultati. I dubbi sulle recensioni e le segnalazioni di
+login frammentato sono descritti nell'analisi diretta; il rischio di
+sovraccarico da filtri nell'analisi inversa.
 
 \fieldheading{First Impressions: Direct Analysis}
 
@@ -1075,18 +932,10 @@ specialistica vicino a casa, come utente al primo accesso".}
 
 \fieldheading{Obiettivo del pilot}
 
-Prima dell\textquotesingle avvio delle sessioni di User Testing con gli
-utenti reclutati, il team ha effettuato una simulazione interna del
-protocollo di test con l\textquotesingle obiettivo di verificare la
-chiarezza delle istruzioni, la durata delle sessioni, la
-comprensibilità dei task e la capacità dello script di mantenere il
-conduttore in una posizione non direttiva.
-
-Il pilot è stato svolto come \emph{dry run} interno: un membro del
-team ha assunto il ruolo di partecipante, mentre un secondo membro ha
-ricoperto il ruolo di conduttore/osservatore. La simulazione non è
-stata considerata come evidenza di usabilità e non è stata inclusa nei
-risultati quantitativi o qualitativi dello User Testing.
+La simulazione interna ha verificato chiarezza delle istruzioni,
+comprensibilità dei task, durata e neutralità della conduzione prima delle
+sessioni con i partecipanti reclutati. Lo stato metodologico del
+\emph{dry run} è precisato nella nota conclusiva.
 
 \fieldheading{Partecipanti alla simulazione}
 
@@ -1149,92 +998,44 @@ del committente:
 
 \fieldheading{Esito della simulazione}
 
-Il pilot ha permesso di individuare alcuni aspetti del protocollo da
-rendere più espliciti prima dell\textquotesingle avvio delle sessioni
-reali.
-
-\begin{itemize}
-\item \textbf{Neutralità del conduttore.} È stato verificato che il
-  conduttore tende naturalmente a fornire indicazioni quando il
-  partecipante manifesta esitazione. È stata quindi ribadita la regola
-  secondo cui il conduttore deve privilegiare domande neutrali come
-  "Cosa ti aspetteresti di trovare qui?" o "Cosa proveresti a fare?",
-  evitando di indicare direttamente pulsanti o percorsi.
-\item \textbf{Gestione dei blocchi.} È stato chiarito che una
-  difficoltà dell\textquotesingle utente deve essere osservata e
-  registrata prima di intervenire. L\textquotesingle intervento del
-  conduttore è consentito solamente in caso di blocco totale,
-  soprattutto quando la continuazione del test richiederebbe
-  credenziali o dati non disponibili.
-\item \textbf{Task e formulazione delle consegne.} Le consegne devono
-  descrivere esclusivamente l\textquotesingle obiettivo
-  dell\textquotesingle utente e non il percorso da seguire. Questo
-  evita di trasformare il test in una verifica della capacità di
-  seguire istruzioni.
-\item \textbf{Registrazione dei tempi.} È stato stabilito di misurare
-  il tempo dall\textquotesingle inizio effettivo del task fino al
-  raggiungimento dell\textquotesingle obiettivo o
-  all\textquotesingle abbandono, escludendo eventuali interruzioni
-  esterne.
-\item \textbf{Distinzione tra errore e richiesta di conferma.} Il
-  pilot ha evidenziato l\textquotesingle utilità di registrare
-  separatamente gli errori di navigazione, le esitazioni e le
-  richieste di rassicurazione, poiché nel segmento anziano questi
-  comportamenti possono rappresentare segnali di scarsa fiducia
-  nell\textquotesingle interfaccia anche quando il percorso individuato
-  è corretto.
-\item \textbf{Gestione delle azioni irreversibili.} È stata confermata
-  la necessità di utilizzare un ambiente demo o di interrompere
-  l\textquotesingle azione prima di una prenotazione/disdetta
-  effettiva, in modo da non modificare appuntamenti reali.
-\end{itemize}
+Sono emersi il rischio di suggerire il percorso in risposta alle esitazioni
+e la necessità di distinguere errori, richieste di conferma e blocchi dovuti
+a credenziali o dati non disponibili. Questi aspetti possono interferire
+con l'osservazione del comportamento spontaneo. La simulazione ha inoltre
+portato a precisare consegne, registrazione dei tempi e limiti delle azioni
+eseguibili, secondo le regole riportate nel campo successivo.
 
 \fieldheading{Modifiche apportate al protocollo}
 
-A seguito del dry run sono state consolidate le seguenti regole
-operative:
-
+A seguito del \emph{dry run} sono state consolidate le seguenti regole:
 \begin{enumerate}
-\item il conduttore non suggerisce il percorso corretto;
-\item le richieste di aiuto spontanee vengono registrate prima di
-  fornire assistenza;
-\item in caso di blocco totale è consentito un intervento minimo,
-  annotandolo esplicitamente nella scheda del test;
-\item i tempi vengono registrati separatamente dalle eventuali
-  interruzioni;
-\item errori, esitazioni e richieste di rassicurazione vengono
-  registrati come eventi distinti;
-\item nessuna azione reale di prenotazione o disdetta viene effettuata
-  durante il test;
-\item le risposte del partecipante vengono raccolte preferibilmente
-  tramite citazioni testuali brevi, mantenendo separati osservazione e
+\item formulare le consegne in termini di obiettivo, senza indicare il
+  percorso; in caso di esitazione usare domande neutrali come
+  "Cosa ti aspetteresti di trovare qui?" o "Cosa proveresti a fare?";
+\item registrare le richieste di aiuto prima di intervenire; consentire
+  assistenza minima solo in caso di blocco totale, annotandola nella scheda;
+\item misurare il tempo dall'inizio del task al raggiungimento dell'obiettivo
+  o all'abbandono, registrando separatamente le interruzioni esterne;
+\item distinguere errori di navigazione, esitazioni e richieste di
+  rassicurazione, anche quando il percorso individuato è corretto;
+\item usare account demo o fermarsi prima della conferma, senza modificare
+  prenotazioni o disdette reali;
+\item raccogliere citazioni brevi, mantenendo separati osservazione e
   interpretazione.
 \end{enumerate}
 
 \fieldheading{Valore del pilot}
 
-Il pilot interno non viene utilizzato come evidenza empirica sul
-comportamento degli utenti target. Il suo scopo è esclusivamente
-metodologico: verificare che il protocollo sia sufficientemente
-chiaro, replicabile e non direttivo prima delle sessioni con i
-partecipanti effettivi.
-
-La simulazione ha inoltre permesso di anticipare una possibile
-criticità del test: il rischio che il conduttore, di fronte a un
-utente in difficoltà, intervenga troppo rapidamente fornendo la
-soluzione. La regola del "blocco totale", successivamente mantenuta
-nel protocollo definitivo, consente di bilanciare la necessità di
-osservare il comportamento spontaneo con quella di evitare che un
-singolo problema tecnico impedisca l\textquotesingle intera sessione.
+La regola del blocco totale bilancia l'osservazione spontanea con la
+possibilità di proseguire la sessione. Il suo impiego effettivo è
+esplicitato nel Documento 06a, Test \#2 (Carla).
 
 \fieldheading{Nota metodologica}
 
-Il pilot è stato svolto internamente dal team e deve pertanto essere
-considerato un \emph{dry run} del protocollo, non una sessione di
-ricerca con un partecipante indipendente. I risultati della
-simulazione non sono stati utilizzati per modificare le evidenze
-raccolte durante le successive sessioni né sono stati conteggiati nel
-numero dei partecipanti effettivi.
+Il pilot è un \emph{dry run} interno con ruoli simulati, non una sessione
+con un partecipante indipendente. È escluso dal conteggio dei partecipanti
+e dalle evidenze qualitative e quantitative di usabilità; non modifica i
+dati delle sessioni successive.
 
 \cardsection{Documento 06a: Preliminary User Testing card: tool del cliente}
 
@@ -1271,25 +1072,17 @@ casa? Perché sì/no? (solo per soggetti del Segmento B) Cosa ti
 darebbe fiducia per lasciare che il tuo familiare lo usi senza il tuo
 aiuto?
 
-\emph{Limite dichiarato:} il test pilota (Documento 06) è stato un
-\emph{dry run} interno al team, non una sessione con un partecipante
-indipendente; nel Test \#2 (Carla) delle sessioni reali, il conduttore
-è comunque intervenuto inserendo le credenziali demo dopo un blocco
-totale sull\textquotesingle autenticazione (T1), un caso rientrante
-nell\textquotesingle eccezione "salvo bloccaggio totale" prevista dallo
-script di apertura (e anticipata proprio dal pilot, si veda Documento
-06), ma comunque un\textquotesingle assistenza attiva oltre la sola
-osservazione; nessun altro task, negli altri 7 test, ha richiesto un
-intervento analogo.
+\emph{Assistenza dichiarata:} nel Test \#2 (Carla), T1, il conduttore ha
+inserito le credenziali demo dopo un blocco totale. L'intervento, consentito
+dal protocollo, va distinto dall'esecuzione autonoma; negli altri sette
+test non è documentato un intervento analogo.
 
 \fieldheading{Test Session Setup}
 
-Test in presenza, presso il domicilio del soggetto o in un luogo neutro
-familiare al soggetto (per ridurre l\textquotesingle ansia da contesto),
-su dispositivo del soggetto stesso quando possibile (smartphone o PC
-abitualmente usato), altrimenti su un dispositivo del team
-preconfigurato in modo identico. Un membro del team fa da
-assistente/osservatore, un secondo prende appunti.
+Sessioni in presenza o da remoto, su dispositivo abituale quando possibile
+oppure su un dispositivo del team. Conduttore, osservatore, luogo,
+dispositivo e account sono specificati nelle schede individuali; le
+sessioni non comportano prenotazioni o disdette reali.
 
 \fieldheading{Test Method}
 
@@ -1344,14 +1137,9 @@ assistente/osservatore, un secondo prende appunti.
 
 \fieldheading{Reclutamento dei soggetti}
 
-Primo soggetto testato: Giorgio (nome fittizio), 65-74 anni, profilo
-"nuovo utente digitale" (Segmento A), già intervistato per il
-Documento 04a. Competenza tecnica: uso regolare del tablet,
-esperienza pregressa con SPID. Relazione con il team: amico di
-famiglia di Francesco Maria Fuligni.
-
-Reclutamento completato: 4 soggetti testati (Giorgio, Carla, Silvia,
-Fatima), tutti già intervistati per il Documento 04a/04b.
+Quattro partecipanti: Giorgio, Carla, Silvia e Fatima, già intervistati nei
+Documenti 04a/04b. I profili, le relazioni con il team e i limiti di aderenza
+al target sono descritti nelle rispettive Market Research card.
 
 \fieldheading{Modalità di reclutamento dei soggetti}
 
@@ -1360,12 +1148,9 @@ interviste del Documento 04a/04b.
 
 \fieldheading{Motivazione della scelta dei soggetti}
 
-Giorgio è stato scelto per disponibilità/vicinanza (amico di famiglia
-di un membro del team), non per rappresentatività statistica,
-dichiarato esplicitamente come richiesto dalla card originale. È
-inoltre il soggetto più autonomo del Segmento A già intervistato,
-scelto come primo test per validare il protocollo con un profilo meno
-fragile prima di procedere con Carla.
+La selezione è di convenienza, senza rappresentatività statistica.
+Giorgio, più autonomo di Carla e già abituato a tablet e SPID, è stato
+coinvolto per primo per verificare la conduzione con un profilo meno fragile.
 
 \fieldheading{Test \#1: Soggetto Giorgio}
 
@@ -1385,23 +1170,21 @@ reali.
 \begin{itemize}
 \item
   \textbf{T1 --- Individuare come prenotare una visita specialistica.}
-  Successo: parziale. Tempo: 03:05. Errori: 1. Il partecipante
+  Il partecipante
   individua il percorso di prenotazione, ma manifesta incertezza
   davanti alla scelta tra Servizio Sanitario Nazionale e Libera
   Professione, esprime il timore di incorrere in costi non
   chiaramente esplicitati e decide di non proseguire. Citazione: "Non
   so se scegliendo una cosa poi pago. Preferisco non andare avanti."
 \item
-  \textbf{T2 --- Individuare come disdire un appuntamento.} Successo:
-  no. Tempo: 05:00. Errori: 2. Il partecipante individua la sezione
+  \textbf{T2 --- Individuare come disdire un appuntamento.} Il partecipante individua la sezione
   relativa agli appuntamenti, ma confonde le opzioni di modifica e
   disdetta, apre un percorso non pertinente e interrompe la ricerca
   per timore di modificare accidentalmente l\textquotesingle appuntamento.
   Citazione: "Non voglio rischiare di modificare qualcosa per
   sbaglio."
 \item
-  \textbf{T3 --- Individuare dove chiedere assistenza.} Successo: sì,
-  con esitazione. Tempo: 01:45. Errori: 1. Il partecipante individua
+  \textbf{T3 --- Individuare dove chiedere assistenza.} Con esitazione, il partecipante individua
   la sezione di assistenza e riconosce la presenza di contatti
   telefonici, ma manifesta incertezza sulla distinzione tra assistenza
   generale e assistenza relativa ai singoli servizi. Citazione: "Se
@@ -1460,7 +1243,7 @@ prenotazione o disdetta reale.
 \begin{itemize}
 \item
   \textbf{T1 --- Individuare come prenotare una visita specialistica.}
-  Successo: no. Tempo: 03:00. Errori: 2. La partecipante scambia "Paga
+  La partecipante scambia "Paga
   una prestazione", unica azione visibile senza accesso, per
   l\textquotesingle ingresso alla prenotazione. Raggiunge poi
   l\textquotesingle autenticazione SPID, ma sbaglia la digitazione
@@ -1469,8 +1252,7 @@ prenotazione o disdetta reale.
   credenziali per permettere di proseguire. Citazione: "Mi dice che è
   sbagliato. Non so cosa ho sbagliato."
 \item
-  \textbf{T2 --- Disdire un appuntamento.} Successo: parziale. Tempo:
-  06:10. Errori: 3. La partecipante trova la sezione delle
+  \textbf{T2 --- Disdire un appuntamento.} La partecipante trova la sezione delle
   prenotazioni e riconosce con soddisfazione la propria visita, tocca
   però "Modifica" invece di "Disdici" e, quando individua il pulsante
   corretto, rinuncia a premerlo per timore di perdere definitivamente
@@ -1478,8 +1260,7 @@ prenotazione o disdetta reale.
   non me la ridanno più? La visita l\textquotesingle ho aspettata tre
   mesi."
 \item
-  \textbf{T3 --- Individuare dove chiedere assistenza.} Successo: no.
-  Tempo: 03:00. Errori: 1. La prima risposta della partecipante è
+  \textbf{T3 --- Individuare dove chiedere assistenza.} La prima risposta della partecipante è
   esterna allo strumento ("Io chiamo mia figlia"). Cerca poi
   l\textquotesingle aiuto in "Impostazioni" senza trovarlo e conclude
   che si rivolgerebbe alla farmacia; task non completato entro la
@@ -1534,23 +1315,21 @@ prenotazione o disdetta reale.
 \begin{itemize}
 \item
   \textbf{T1 --- Individuare come prenotare una visita specialistica.}
-  Successo: sì. Tempo: 01:35. Errori: 0. La partecipante si autentica
+  La partecipante si autentica
   senza esitazioni e individua il percorso di prenotazione. Nota
   spontaneamente il cambio di dominio, che secondo lei spingerebbe la
   madre ad abbandonare per timore di una truffa, e non trova subito
   dove selezionare il familiare per cui prenota. Citazione: "Io lo so,
   ma mia madre qui chiude tutto pensando a una truffa."
 \item
-  \textbf{T2 --- Disdire un appuntamento.} Successo: sì. Tempo: 02:05.
-  Errori: 1. La partecipante cerca inizialmente la disdetta dentro
+  \textbf{T2 --- Disdire un appuntamento.} La partecipante cerca inizialmente la disdetta dentro
   "Modifica", poi individua "Disdici" e completa l\textquotesingle operazione,
   ma critica la conferma finale, generica e priva di un riepilogo
   della visita disdetta e del paziente. Citazione: "Mi dice solo
   \textquotesingle operazione eseguita\textquotesingle. Quale visita?
   Di chi?"
 \item
-  \textbf{T3 --- Individuare dove chiedere assistenza.} Successo:
-  parziale. Tempo: 02:50. Errori: 1. La partecipante trova le domande
+  \textbf{T3 --- Individuare dove chiedere assistenza.} La partecipante trova le domande
   frequenti e il numero verde, ma cerca un canale scritto compatibile
   con i suoi orari di lavoro e non lo trova; un collegamento di
   supporto la porta su un altro dominio. Citazione: "Ho trovato dove
@@ -1581,9 +1360,9 @@ vedere cosa fa il genitore con un avviso quando si blocca.
 strumento è usabile, ma non è progettato per due persone: la
 selezione del familiare non è visibile nel punto in cui serve
 ({[}ID-10{]}) e la conferma di esito non è verificabile né
-condivisibile ({[}ID-09{]}). La sua condizione per delegare alla
-madre (vedere e poter intervenire) ricalca la "modalità assistenza"
-già emersa in intervista.
+condivisibile ({[}ID-09{]}). La richiesta di visibilità e supporto,
+già emersa in intervista, motiva la modalità co-pilota proposta nel
+Documento 07.
 
 \fieldheading{Test \#4: Soggetto Fatima}
 
@@ -1607,22 +1386,20 @@ fermato). Nessuna prenotazione o disdetta reale.
 \begin{itemize}
 \item
   \textbf{T1 --- Individuare come prenotare una visita specialistica.}
-  Successo: parziale. Tempo: 02:40. Errori: 1. La partecipante trova
+  La partecipante trova
   subito "Prenota", ma si ferma sul codice NRE dell\textquotesingle impegnativa
   e sulla scelta tra "prima visita" e "controllo", lo stesso dubbio
   riportato in intervista; preferisce non proseguire senza una
   conferma del medico di famiglia. Citazione: "Non vado avanti se non
   sono sicura."
 \item
-  \textbf{T2 --- Disdire un appuntamento.} Successo: sì. Tempo: 03:15
-  (escluse interruzioni). Errori: 1. Dopo un\textquotesingle interruzione
+  \textbf{T2 --- Disdire un appuntamento.} Dopo un\textquotesingle interruzione
   di 40 secondi la sessione del browser su CUPweb è scaduta e la
   partecipante deve ripetere l\textquotesingle autenticazione; tocca poi
   "Modifica" prima di individuare "Disdici" e completa la disdetta.
   Citazione: "Ecco, ho perso tutto. Sempre così."
 \item
-  \textbf{T3 --- Individuare dove chiedere assistenza.} Successo:
-  parziale. Tempo: 02:20. Errori: 0. La partecipante trova il numero
+  \textbf{T3 --- Individuare dove chiedere assistenza.} La partecipante trova il numero
   verde ma dichiara di preferire un canale scritto, che le
   permetterebbe di tradurre le parole che non capisce; non trovandolo,
   sceglierebbe lo sportello. Citazione: "Preferisco scrivere, così
@@ -1642,6 +1419,9 @@ T3 & Parziale & 02:20 & 0 \\
 \bottomrule
 \end{tabular}
 \end{center}
+
+\noindent\textit{Nota sui tempi:} T2 e totale escludono l'interruzione di
+40 secondi descritta nel contesto.
 
 \textbf{Punteggio SUS:} 37,5/100.
 
@@ -1682,10 +1462,9 @@ pertinente a questo tool).
 
 \fieldheading{Test Session Setup}
 
-Stessa configurazione del test sullo strumento del committente (in presenza, dispositivo
-abituale del soggetto quando possibile), idealmente con gli stessi
-soggetti reclutati per il test su CUPweb, per poter confrontare le
-esperienze a parità di persona.
+Si applicano i criteri del Documento 06a: sessioni in presenza o da remoto,
+su dispositivo abituale o del team. Le schede precisano account, modalità
+e ordine dei test per ciascuno dei quattro partecipanti comuni ai due tool.
 
 \fieldheading{Test Method}
 
@@ -1709,29 +1488,20 @@ esperienze a parità di persona.
 
 \fieldheading{Testing Methodology}
 
-\begin{itemize}
-\item
-  Thinking Aloud per T1 e T3
-\item
-  Bottom Line Data per T2
-\end{itemize}
+Come nel Documento 06a: Thinking Aloud per T1 e T3, Bottom Line Data per T2.
+La ricerca del percorso di annullamento su MioDottore non equivale
+all'esecuzione della disdetta nell'account demo CUPweb; gli esiti vanno
+interpretati rispetto ai task specifici.
 
 \fieldheading{Test Metrics}
 
-\begin{itemize}
-\item
-  Success, Efficiency, Efficacy, Errors, Learnability, Satisfaction
-  (SUS)
-\end{itemize}
+Si applicano le metriche definite nel Documento 06a: Success, Efficiency,
+Efficacy, Errors, Learnability (se applicabile) e Satisfaction tramite SUS.
 
 \fieldheading{Reclutamento dei soggetti}
 
-Primo soggetto testato: Giorgio (nome fittizio), lo stesso già testato
-per il Documento 06a, per consentire un confronto diretto delle due
-esperienze a parità di persona.
-
-Reclutamento completato: tutti e 4 i soggetti (Giorgio, Carla, Silvia,
-Fatima) sono stati coinvolti sia nel Documento 06a sia nel 06b.
+Gli stessi quattro partecipanti del Documento 06a hanno provato entrambi
+i tool; Giorgio è stato il primo soggetto coinvolto anche su MioDottore.
 
 \fieldheading{Modalità di reclutamento dei soggetti}
 
@@ -1740,11 +1510,10 @@ anche Documento 04a).
 
 \fieldheading{Motivazione della scelta dei soggetti}
 
-Stessa motivazione del Documento 06a: scelta per disponibilità/vicinanza,
-non per rappresentatività statistica. Coinvolgere lo stesso soggetto
-su entrambi i tool permette inoltre di isolare le differenze dovute al
-design dei due sistemi, a parità di competenze e atteggiamento
-dell\textquotesingle utente.
+Il confronto entro la stessa persona tiene conto del profilo individuale,
+ma non isola l'effetto del design: task, familiarità con il servizio e
+ordine delle sessioni possono influire sugli esiti. La selezione resta di
+convenienza, come nel Documento 06a.
 
 \fieldheading{Test \#1: Soggetto Giorgio}
 
@@ -1765,7 +1534,7 @@ CUPweb (Documento 06a), senza eseguire prenotazioni reali.
 \begin{itemize}
 \item
   \textbf{T1 --- Cercare uno specialista nella propria città.}
-  Successo: sì. Tempo: 01:50. Errori: 0. Il partecipante utilizza la
+  Il partecipante utilizza la
   ricerca per specializzazione e città senza difficoltà. Esita
   brevemente sul filtro "Visita online" e nota spontaneamente il
   prezzo visibile nei risultati, in contrasto con il timore di costi
@@ -1774,7 +1543,7 @@ CUPweb (Documento 06a), senza eseguire prenotazioni reali.
   prezzo della visita. Questo mi piace, almeno so cosa spendo prima."
 \item
   \textbf{T2 --- Individuare come si annullerebbe un appuntamento.}
-  Successo: sì. Tempo: 02:40. Errori: 1. Il partecipante cerca
+  Il partecipante cerca
   inizialmente l\textquotesingle opzione di annullamento nel profilo
   del medico, poi individua il centro assistenza in fondo alla pagina
   e ricava che l\textquotesingle annullamento richiede l\textquotesingle account
@@ -1782,7 +1551,7 @@ CUPweb (Documento 06a), senza eseguire prenotazioni reali.
   Citazione: "Quindi serve l\textquotesingle account."
 \item
   \textbf{T3 --- Individuare come contattare il professionista.}
-  Successo: sì. Tempo: 01:10. Errori: 0. Il partecipante individua
+  Il partecipante individua
   subito il numero di telefono dello studio e il pulsante per inviare
   un messaggio, che richiede l\textquotesingle account. Preferisce
   telefonare, sottolineando il valore di un contatto specifico
@@ -1837,7 +1606,7 @@ dal conduttore. Nessuna prenotazione reale.
 \begin{itemize}
 \item
   \textbf{T1 --- Cercare uno specialista nella propria città.}
-  Successo: sì, con esitazione. Tempo: 03:20. Errori: 1. La
+  Con esitazione, la
   partecipante usa la casella di ricerca; il suggerimento automatico
   corregge un errore di digitazione. Attiva per errore un filtro e si
   preoccupa del cambiamento della lista, ma lo rimuove da sola; le
@@ -1845,7 +1614,7 @@ dal conduttore. Nessuna prenotazione reale.
   ha capito lui. Bravo."
 \item
   \textbf{T2 --- Individuare come si annullerebbe un appuntamento.}
-  Successo: no. Tempo: 05:30. Errori: 2. La partecipante cerca
+  La partecipante cerca
   l\textquotesingle annullamento all\textquotesingle interno del
   profilo della dottoressa e apre per errore la pagina di
   prenotazione; il concetto di area personale non emerge e la
@@ -1853,7 +1622,7 @@ dal conduttore. Nessuna prenotazione reale.
   se non ho ancora prenotato, come faccio ad annullare?"
 \item
   \textbf{T3 --- Individuare come contattare il professionista.}
-  Successo: sì. Tempo: 01:40. Errori: 0. La partecipante individua
+  La partecipante individua
   subito il numero di telefono e l\textquotesingle indirizzo dello
   studio, e dichiara con sicurezza che telefonerebbe: è il momento di
   maggiore sicurezza dell\textquotesingle intera sessione. Citazione:
@@ -1908,14 +1677,14 @@ precede quello su CUPweb (Documento 06a). Nessuna prenotazione reale.
 \begin{itemize}
 \item
   \textbf{T1 --- Cercare uno specialista nella propria città.}
-  Successo: sì. Tempo: 00:55. Errori: 0. La partecipante cerca
+  La partecipante cerca
   l\textquotesingle ortopedico nella città della madre, cambiando la
   località predefinita, e usa il filtro per disponibilità per trovare
   il primo posto libero, senza esitazioni. Citazione: "Qui ci metto un
   minuto, con il CUP ci metto mezz\textquotesingle ora."
 \item
   \textbf{T2 --- Individuare come si annullerebbe un appuntamento.}
-  Successo: sì. Tempo: 01:20. Errori: 0. La partecipante accede
+  La partecipante accede
   direttamente all\textquotesingle area personale e individua
   l\textquotesingle annullamento nell\textquotesingle elenco delle
   visite future; il successo è favorito dall\textquotesingle esperienza
@@ -1923,7 +1692,7 @@ precede quello su CUPweb (Documento 06a). Nessuna prenotazione reale.
   già fatto una volta per mia mamma."
 \item
   \textbf{T3 --- Individuare come contattare il professionista.}
-  Successo: sì. Tempo: 00:50. Errori: 0. La partecipante individua
+  La partecipante individua
   subito la messaggistica con il professionista e ne apprezza la
   natura asincrona, ma osserva che le risposte arrivano solo a lei e
   che la madre resta esclusa dalla comunicazione. Citazione: "Le
@@ -1975,13 +1744,13 @@ prenotazione reale.
 \begin{itemize}
 \item
   \textbf{T1 --- Cercare uno specialista nella propria città.}
-  Successo: sì. Tempo: 01:30. Errori: 0. La partecipante cerca
+  La partecipante cerca
   l\textquotesingle oculista per la suocera e usa il filtro per
   distanza in modo mirato ("lei non guida"), senza esitazioni.
   Citazione: "Deve essere vicino, lei non guida."
 \item
   \textbf{T2 --- Individuare come si annullerebbe un appuntamento.}
-  Successo: parziale. Tempo: 02:30. Errori: 1. La partecipante apre la
+  La partecipante apre la
   pagina di accesso pensando di doversi registrare e la chiude; trova
   l\textquotesingle informazione nelle domande frequenti
   (annullamento tramite l\textquotesingle email di conferma), ma non
@@ -1989,7 +1758,7 @@ prenotazione reale.
   "Si fa con l\textquotesingle email di conferma, credo."
 \item
   \textbf{T3 --- Individuare come contattare il professionista.}
-  Successo: sì. Tempo: 01:05. Errori: 0. La partecipante individua
+  La partecipante individua
   subito la messaggistica e la preferisce al telefono, ma osserva che
   la conferma arriva solo a chi prenota e che per informare il marito
   dovrebbe inviargli uno screenshot. Citazione: "Mio marito come lo
@@ -2244,76 +2013,51 @@ l\textquotesingle urgenza.
 
 \fieldheading{Raccomandazioni di design preliminari}
 
-Le raccomandazioni R-01...R-06 erano preliminari (basate solo
-sull\textquotesingle assessment 05a/05b); sono ora confermate dai test
-utente (Documenti 06a/06b) e integrate con tre nuove raccomandazioni
-(R-07...R-09) emerse direttamente dai test, non anticipate
-dall\textquotesingle expert review.
+Le raccomandazioni integrano assessment e test preliminari; i collegamenti
+puntuali sono consultabili in \path{requirements-traceability.html}.
+R-01--R-06 riprendono le direzioni iniziali, mentre R-07--R-09 derivano dalle
+ulteriori criticità dei test. Il sostegno empirico varia per voce, come
+esplicitato per R-05; le raccomandazioni non attestano l'efficacia del redesign.
+
+Nel redesign si distinguono due forme di collaborazione:
+\begin{itemize}
+\item \textbf{Modalità co-pilota}: l'interessato esegue il compito con
+  l'aiuto del caregiver, mantenendo il controllo delle azioni.
+\item \textbf{Modalità delega completa}: il caregiver esegue il compito
+  per conto dell'interessato, entro i limiti dell'autorizzazione ricevuta.
+\end{itemize}
+La distinzione riguarda chi opera, non un accesso illimitato ai dati sanitari.
+I nomi sono una scelta progettuale; non indicano modalità già testate o
+funzionalità verificate negli strumenti esaminati.
 
 \begin{itemize}
-\item
-  \textbf{R-01}: Introdurre un percorso "a bassa soglia" iniziale che
-  permetta di esplorare il servizio (es. vedere disponibilità, capire
-  come funziona) prima di richiedere l\textquotesingle autenticazione
-  forte, spostando SPID/CIE solo al momento realmente necessario
-\item
-  \textbf{R-02}:
-  Unificare visivamente tutti i touchpoint del servizio (prenotazione,
-  pagamento, fascicolo) sotto un\textquotesingle unica identità
-  grafica coerente, anche se tecnicamente restano sistemi diversi, per
-  non rompere la fiducia dell\textquotesingle utente durante il
-  percorso
-\item
-  \textbf{R-03}: Introdurre gerarchia visiva (icone, colori, dimensioni)
-  e microcopy in linguaggio semplice con spiegazioni contestuali per i
-  termini tecnici (tooltip, esempi)
-\item
-  \textbf{R-04}:
-  Progettare un
-  flusso guidato passo-passo per il primo utilizzo, con conferme
-  esplicite ad ogni passaggio e possibilità di richiamare assistenza
-  (caregiver o operatore) senza percepirlo come un fallimento
-\item
-  \textbf{R-05}: Verificare e correggere la
-  compatibilità con tecnologie assistive (screen reader) in coerenza con
-  la dichiarazione di accessibilità già pubblicata dal cliente.
-  \emph{Limite dichiarato:} non verificato direttamente nei test
-  preliminari, poiché nessun soggetto con disabilità visiva è stato
-  reclutato nel campione; la raccomandazione resta basata
-  sull\textquotesingle assessment 05a e andrebbe confermata con un
-  soggetto idoneo nelle fasi successive.
-\item
-  \textbf{R-06}: Introdurre una modalità di "co-gestione" che dia
-  visibilità al caregiver sulle prenotazioni del familiare pur
-  lasciando che sia quest\textquotesingle ultimo, quando possibile, a
-  compiere l\textquotesingle azione finale, per costruire gradualmente
-  autonomia invece di sostituirla
-\item
-  \textbf{R-07}: Rendere sempre visibile
-  e selezionabile, in ogni punto del flusso di prenotazione, per quale
-  familiare associato si sta agendo; sostituire le conferme generiche
-  ("operazione eseguita") con un riepilogo dettagliato (paziente,
-  prestazione, data) che il caregiver possa verificare e inoltrare
-  senza ricorrere a screenshot
-\item
-  \textbf{R-08}: Preservare lo stato di
-  avanzamento di un task in caso di interruzione della sessione (es.
-  una chiamata in arrivo), evitando che un timeout costringa
-  l\textquotesingle utente a ripetere l\textquotesingle autenticazione
-  e a ricominciare da capo
-\item
-  \textbf{R-09}: Affiancare al canale
-  telefonico un canale di assistenza scritto/asincrono (es. chat o
-  messaggistica), utile sia per chi ha vincoli di orario lavorativo
-  sia per chi deve tradurre o mediare linguisticamente le richieste
+\item \textbf{R-01}: Ridurre la barriera iniziale di accesso, rimandando
+  l'autenticazione alle operazioni che la richiedono.
+\item \textbf{R-02}: Assicurare continuità visiva tra i touchpoint del servizio.
+\item \textbf{R-03}: Rendere riconoscibili le azioni e comprensibile il lessico
+  attraverso gerarchia visiva e spiegazioni contestuali.
+\item \textbf{R-04}: Guidare il primo utilizzo nei passaggi critici, offrendo
+  conferme esplicite e accesso all'assistenza senza stigmatizzare la richiesta.
+\item \textbf{R-05}: Verificare la compatibilità con tecnologie assistive,
+  coerentemente con la dichiarazione di accessibilità.
+  \emph{Limite:} non verificata direttamente nei test preliminari, privi di
+  partecipanti con disabilità visiva; resta una direzione dell'assessment 05a
+  da verificare con soggetti idonei.
+\item \textbf{R-06}: Distinguere il supporto all'autonomia in modalità
+  co-pilota dall'esecuzione autorizzata per conto dell'interessato in
+  modalità delega completa.
+\item \textbf{R-07}: Rendere espliciti chi opera, per chi e con quale esito,
+  con riepiloghi verificabili e condivisibili in entrambe le modalità.
+\item \textbf{R-08}: Consentire la ripresa del task dopo un'interruzione.
+\item \textbf{R-09}: Affiancare al telefono un'assistenza scritta e asincrona
+  adatta a vincoli lavorativi e mediazione linguistica.
 \end{itemize}
 
 \fieldheading{Requisiti di design numerati per le Fasi B e C}
 
-I requisiti REQ-01...REQ-06 erano provvisori; le priorità sotto
-riportate sono ora confermate dalle evidenze reali dello User Testing
-preliminare (06a/06b), e sono stati aggiunti REQ-07...REQ-09 per le
-raccomandazioni R-07...R-09 emerse dai test.
+I requisiti traducono le direzioni R-01--R-09 in comportamenti attesi del
+servizio, mantenendo identificativi e priorità progettuali. Il test
+preliminare ne informa la formulazione, senza costituirne una validazione.
 
 \begin{itemize}
 \item
@@ -2348,20 +2092,21 @@ raccomandazioni R-07...R-09 emerse dai test.
   dichiarazione di accessibilità già pubblicata dal cliente, prima del
   rilascio del prototipo finale. Priorità: media.
 \item
-  \textbf{REQ-06}: Il sistema deve offrire al
-  caregiver una vista di co-gestione con visibilità sulle prenotazioni
-  del familiare assistito, senza sostituirsi all\textquotesingle azione
-  finale di quest\textquotesingle ultimo quando è in grado di
-  compierla, e deve rendere visibile il progressivo trasferimento di
-  autonomia. Priorità: alta.
+  \textbf{REQ-06}: Il sistema deve distinguere la modalità co-pilota,
+  nella quale l'interessato esegue il compito con il supporto del caregiver,
+  dalla modalità delega completa, nella quale il caregiver opera per suo
+  conto entro l'autorizzazione ricevuta. La prima deve sostenere l'autonomia
+  progressiva senza trasferire l'esecuzione al caregiver; la seconda deve
+  consentire l'esecuzione delegata rendendone espliciti ruolo e limiti.
+  In entrambe, la visibilità sulle prenotazioni deve essere coerente con
+  il ruolo di chi opera. Priorità: alta.
 \item
-  \textbf{REQ-07}: In ogni schermata
-  del flusso di prenotazione deve essere sempre visibile per quale
-  familiare associato si sta operando, e ogni conferma di
-  un\textquotesingle azione (prenotazione, disdetta, modifica) deve
-  riportare un riepilogo dettagliato (paziente, prestazione, data/ora)
-  inoltrabile o condivisibile con il caregiver, non un semplice
-  messaggio generico. Priorità: alta.
+  \textbf{REQ-07}: In ogni schermata del flusso devono essere riconoscibili
+  chi opera e l'interessato cui si riferisce la pratica; durante l'uso
+  assistito o delegato deve essere esplicita la modalità adottata.
+  Ogni conferma di prenotazione, disdetta o modifica deve riportare un
+  riepilogo dettagliato (paziente, prestazione, data/ora), inoltrabile o
+  condivisibile con il caregiver, non un messaggio generico. Priorità: alta.
 \item
   \textbf{REQ-08}: Il sistema deve
   preservare lo stato di un task in corso per un tempo ragionevole in

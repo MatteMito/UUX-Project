@@ -673,8 +673,8 @@
       "R-03": { id: "R-03", layer: 1, title: "Gerarchia visiva e Plain Language", desc: "Introdurre gerarchia visiva (icone, colori, dimensioni) e spiegazioni contestuali per termini burocratici." },
       "R-04": { id: "R-04", layer: 1, title: "Flusso guidato con conferme", desc: "Flusso passo-passo per il primo utilizzo con conferme esplicite e supporto richiamabile senza ansia." },
       "R-05": { id: "R-05", layer: 1, title: "Compatibilità tecnologie assistive", desc: "Verificare e correggere la compatibilità con screen reader secondo la dichiarazione di accessibilità." },
-      "R-06": { id: "R-06", layer: 1, title: "Modalità co-gestione caregiver", desc: "Modalità di co-gestione con visibilità al caregiver lasciando l'azione finale all'assistito se autonomo." },
-      "R-07": { id: "R-07", layer: 1, title: "Familiare visibile e riepilogo condivisibile", desc: "Rendere sempre visibile per quale familiare si agisce e generare un riepilogo dettagliato condivisibile." },
+      "R-06": { id: "R-06", layer: 1, title: "Modalità co-pilota e delega completa", desc: "Distinguere il supporto all'autonomia in modalità co-pilota dall'esecuzione autorizzata per conto dell'interessato in modalità delega completa." },
+      "R-07": { id: "R-07", layer: 1, title: "Attore, interessato e riepilogo condivisibile", desc: "Rendere espliciti chi opera, per chi e con quale esito, con riepiloghi verificabili e condivisibili in entrambe le modalità." },
       "R-08": { id: "R-08", layer: 1, title: "Preservazione stato su timeout", desc: "Preservare lo stato di avanzamento in caso di interruzione temporanea senza ri-autenticazioni distruttive." },
       "R-09": { id: "R-09", layer: 1, title: "Canale di assistenza scritto asincrono", desc: "Affiancare al telefono un canale chat/messaggistica per chi lavora o deve tradurre i testi." },
 
@@ -684,8 +684,8 @@
       "REQ-03": { id: "REQ-03", layer: 2, title: "Gerarchia visiva e spiegazioni", prio: "Media", desc: "Ogni schermata con chiara gerarchia visiva e termini tecnici accompagnati da glosse in linguaggio semplice." },
       "REQ-04": { id: "REQ-04", layer: 2, title: "Flusso guidato con conferme", prio: "Alta", desc: "Primo utilizzo guidato passo-passo con conferme ad ogni step e opzione di supporto umano sempre visibile." },
       "REQ-05": { id: "REQ-05", layer: 2, title: "Compatibilità screen reader", prio: "Media", desc: "Interfaccia compatibile con le principali tecnologie assistive prima del rilascio prototipo." },
-      "REQ-06": { id: "REQ-06", layer: 2, title: "Vista co-gestione caregiver", prio: "Alta", desc: "Vista al caregiver sulle prenotazioni del familiare senza sostituirsi passivamente alle sue decisioni." },
-      "REQ-07": { id: "REQ-07", layer: 2, title: "Familiare persistente e conferme ricche", prio: "Alta", desc: "Sempre visibile il profilo attivo; conferme con riepilogo dettagliato (paziente, data, sede) inoltrabile." },
+      "REQ-06": { id: "REQ-06", layer: 2, title: "Ruoli nelle due modalità", prio: "Alta", desc: "Il sistema deve distinguere la modalità co-pilota, nella quale l'interessato esegue il compito con il supporto del caregiver, dalla modalità delega completa, nella quale il caregiver opera per suo conto entro l'autorizzazione ricevuta. La prima deve sostenere l'autonomia progressiva senza trasferire l'esecuzione al caregiver; la seconda deve consentire l'esecuzione delegata rendendone espliciti ruolo e limiti. In entrambe, la visibilità sulle prenotazioni deve essere coerente con il ruolo di chi opera." },
+      "REQ-07": { id: "REQ-07", layer: 2, title: "Identità, modalità e conferme", prio: "Alta", desc: "In ogni schermata del flusso devono essere riconoscibili chi opera e l'interessato cui si riferisce la pratica; durante l'uso assistito o delegato deve essere esplicita la modalità adottata. Ogni conferma di prenotazione, disdetta o modifica deve riportare un riepilogo dettagliato (paziente, prestazione, data/ora), inoltrabile o condivisibile con il caregiver, non un messaggio generico." },
       "REQ-08": { id: "REQ-08", layer: 2, title: "Preservazione stato sessione", prio: "Media", desc: "Preservare lo stato del task per un tempo ragionevole in caso di timeout o interruzioni." },
       "REQ-09": { id: "REQ-09", layer: 2, title: "Assistenza scritta integrata", prio: "Media", desc: "Canale scritto/asincrono accessibile contestualmente dalle stesse schermate di difficoltà." },
 
@@ -694,8 +694,8 @@
       "P-02": { id: "P-02", layer: 3, type: "P", persona: "Pina", device: "Smartphone", title: "Touch target ampi e distinti", desc: "Bersagli grandi e distinti per forma, testo e icona (prevenzione tocchi errati da artrosi)." },
       "P-03": { id: "P-03", layer: 3, type: "P", persona: "Pina", device: "Smartphone", title: "Linguaggio rassicurante e reversibilità", desc: "Linguaggio semplice e rassicurante, conseguenze esplicite, conferme reversibili, assenza tecnicismi." },
       
-      "P-04": { id: "P-04", layer: 3, type: "P", persona: "Elena", device: "PC Desktop", title: "Visibilità contestualizzata e profilo attivo", desc: "Visibilità chiara sulle prenotazioni del familiare con indicatore visivo persistente dell'identità attiva." },
-      "P-05": { id: "P-05", layer: 3, type: "P", persona: "Elena", device: "PC Desktop", title: "Delega progressiva e non invasiva", desc: "Delega scalabile: Pina mantiene autonomia ordinaria, Elena interviene solo su criticità." },
+      "P-04": { id: "P-04", layer: 3, type: "P", persona: "Elena", device: "PC Desktop", title: "Visibilità e identità dei due ruoli", desc: "In entrambe le modalità, la visibilità del caregiver sulle prenotazioni deve essere proporzionata al ruolo; devono restare riconoscibili l'identità di chi opera e quella del familiare interessato." },
+      "P-05": { id: "P-05", layer: 3, type: "P", persona: "Elena", device: "PC Desktop", title: "Supporto e delega autorizzata", desc: "La modalità co-pilota deve sostenere l'esecuzione da parte di Pina; la modalità delega completa deve permettere a Elena di agire per suo conto entro l'autorizzazione ricevuta. L'esecuzione delegata non deve comportare sorveglianza continuativa o escludere Pina dalle operazioni che può svolgere." },
 
       "P-06": { id: "P-06", layer: 3, type: "P", persona: "Renato", device: "PC Desktop", title: "Note progressive on-demand", desc: "Note esplicative consultabili su richiesta nei punti di dubbio, senza appesantire utenti esperti." },
       "P-07": { id: "P-07", layer: 3, type: "P", persona: "Renato", device: "PC Desktop", title: "Tabelle e layout ampi per mouse", desc: "Tipografia, spaziatura e tabelle dense ben spaziate su monitor da 24'' con selezione mouse." },
@@ -705,10 +705,10 @@
       "P-10": { id: "P-10", layer: 3, type: "P", persona: "Amina", device: "Smartphone", title: "Anagrafiche e ruoli sempre visibili", desc: "Identità assistito, ruolo operatore e contatti visibili lungo tutto il percorso multi-profilo." },
       "P-11": { id: "P-11", layer: 3, type: "P", persona: "Amina", device: "Smartphone", title: "Resilienza mobile a standby e interruzioni", desc: "Web app responsive/PWA tollerante a standby dello schermo e cambi scheda senza log-out improvvisi." },
 
-      "U1-01": { id: "U1-01", layer: 3, type: "U", persona: "Pina", scenario: "Visita diabetologica", title: "Contesto conservato e bus urbano", desc: "Percorso visita ricorrente conserva contesto e propone sedi compatibili con mezzi pubblici." },
+      "U1-01": { id: "U1-01", layer: 3, type: "U", persona: "Pina", scenario: "Visita diabetologica", title: "Contesto conservato e bus urbano", desc: "Il percorso per una visita ricorrente deve conservare il contesto, proporre sedi compatibili con la mobilità e ridurre i passaggi; in modalità co-pilota, scelta e azione restano a Pina con il supporto del caregiver." },
       "U1-02": { id: "U1-02", layer: 3, type: "U", persona: "Pina", scenario: "Visita diabetologica", title: "Errore chiaro senza azzerare form", desc: "Errore esplicita causa, recupero e assistenza senza azzerare i dati inseriti." },
       
-      "U2-01": { id: "U2-01", layer: 3, type: "U", persona: "Elena", scenario: "Disdetta urgente", title: "Disdetta rapida senza timore di penali", desc: "Procedura in pochissimi clic, distinzione visite ravvicinate, esplicitazione assenza malus ticket." },
+      "U2-01": { id: "U2-01", layer: 3, type: "U", persona: "Elena", scenario: "Disdetta urgente", title: "Disdetta rapida senza timore di penali", desc: "In modalità delega completa, la disdetta deve richiedere pochissimi passaggi, distinguere chiaramente gli appuntamenti ravvicinati ed esplicitare l'assenza di penali prima della conferma finale." },
       "U2-02": { id: "U2-02", layer: 3, type: "U", persona: "Elena", scenario: "Disdetta urgente", title: "Notifiche bilaterali concordate", desc: "Aggiornamento immediato e notifica simultanea a caregiver e assistito senza telefonate di conferma." },
 
       "U3-01": { id: "U3-01", layer: 3, type: "U", persona: "Renato", scenario: "Controllo oculistico", title: "Filtri e selezioni preservati", desc: "Consultazione schede o ritorno indietro non azzerano filtri e criteri già impostati." },
@@ -719,15 +719,15 @@
 
       // LAYER 4: C
       "C-01": { id: "C-01", layer: 4, title: "Competenza tecnica minima", origin: "P-01 + P-02 + P-03", desc: "Il servizio deve essere utilizzabile con competenza tecnica minima, azioni visibili e tono rassicurante." },
-      "C-02": { id: "C-02", layer: 4, title: "Supervisione leggera e autorizzata", origin: "P-04 + P-05", desc: "Visibilità e delega devono sostenere una supervisione leggera, autorizzata e non sostitutiva." },
+      "C-02": { id: "C-02", layer: 4, title: "Co-pilota e delega completa", origin: "P-04 + P-05", desc: "La modalità co-pilota deve sostenere l'azione dell'interessato senza sostituirlo; la modalità delega completa deve consentire al caregiver l'esecuzione autorizzata per suo conto." },
       "C-03": { id: "C-03", layer: 4, title: "Controllo su visite e disdette", origin: "U1-01 + U2-01", desc: "Prenotazione ricorrente e disdetta devono ridurre passaggi e ambiguità mantenendo il controllo dell'utente." },
       "C-04": { id: "C-04", layer: 4, title: "Recupero errori e notifiche concordate", origin: "U1-02 + U2-02", desc: "Errori e cambi di stato devono offrire recupero comprensibile e notifiche concordate." },
-      "C-05": { id: "C-05", layer: 4, title: "Identità e conseguenze esplicite", origin: "P-03 + P-04", desc: "Identità, oggetto e conseguenze dell'azione devono essere espliciti per utente diretto e caregiver." },
+      "C-05": { id: "C-05", layer: 4, title: "Identità, modalità e conseguenze", origin: "P-03 + P-04", desc: "Chi opera, l'interessato, la modalità adottata, l'oggetto e le conseguenze dell'azione devono essere riconoscibili durante l'uso assistito o delegato." },
       "C-06": { id: "C-06", layer: 4, title: "Spiegazioni progressive e rispetto", origin: "P-06 + P-08", desc: "Spiegazioni progressive devono chiarire termini, regime, costo e conseguenze senza infantilizzare." },
       "C-07": { id: "C-07", layer: 4, title: "Gerarchia e bersagli ergonomici", origin: "P-02 + P-07", desc: "Gerarchia, leggibilità, spaziatura e dimensione dei bersagli devono supportare vincoli visivi e motori." },
       "C-08": { id: "C-08", layer: 4, title: "Scelte conservate e riepilogo pre-conferma", origin: "U3-01 + U3-02", desc: "Il sistema deve conservare le scelte durante consultazione e aiuto, quindi mostrare un riepilogo completo prima della conferma." },
       "C-09": { id: "C-09", layer: 4, title: "Terminologia chiara con mediazione", origin: "P-09 + P-03", desc: "Terminologia e conseguenze precise ma comprensibili, con spiegazioni progressive adatte anche alla mediazione linguistica." },
-      "C-10": { id: "C-10", layer: 4, title: "Confini della delega espliciti", origin: "P-10 + P-04 + P-05", desc: "Identità, ruolo, autorizzazione e confini della delega devono restare espliciti per tutte le forme di assistenza." },
+      "C-10": { id: "C-10", layer: 4, title: "Ruoli e limiti nelle due modalità", origin: "P-10 + P-04 + P-05", desc: "Ruoli, autorizzazioni e limiti devono restare espliciti in entrambe le modalità; la delega completa riguarda l'esecuzione del compito e non implica accesso illimitato ai dati sanitari." },
       "C-11": { id: "C-11", layer: 4, title: "Tolleranza interruzioni mobile", origin: "P-11 + U4-01", desc: "I percorsi da smartphone devono tollerare interruzioni e consentire una ripresa riconoscibile senza perdita di lavoro." },
       "C-12": { id: "C-12", layer: 4, title: "Conferme condivisibili sicure", origin: "U4-02 + U2-02", desc: "Stati e conferme condivisibili devono coordinare i familiari senza creare duplicazioni o accessi impliciti ai dati." }
     };
