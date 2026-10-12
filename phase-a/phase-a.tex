@@ -1,5 +1,4 @@
 % !TEX root = ../hphp-project-report.tex
-% Generated from HPHP_Documentazione_Completa_EDITABILE.docx.
 % I termini tecnici seguono la terminologia delle checklist di progetto.
 \chapter{Fase A: Ethnographic Research and Assessment}
 
@@ -9,55 +8,43 @@
 
 Team Affordance
 
-\fieldheading{Membro del team}
+\fieldheading{Componenti del gruppo}
 
-{\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3324}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6676}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.28\linewidth}>{\raggedright\arraybackslash}p{\dimexpr0.72\linewidth-2\tabcolsep\relax}@{}}
+\toprule
 \textbf{Campo} & \textbf{Valore} \\
+\midrule
 Nome completo & Matteo Boscherini \\
 Matricola & 0001239423 \\
 E-mail & matteo.boscherini@studio.unibo.it \\
 Corso di studi & Informatica Magistrale, Curriculum B \\
-\end{longtable}
-}
+\bottomrule
+\end{tabular}
+\par\medskip
 
-{\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3324}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6676}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.28\linewidth}>{\raggedright\arraybackslash}p{\dimexpr0.72\linewidth-2\tabcolsep\relax}@{}}
+\toprule
 \textbf{Campo} & \textbf{Valore} \\
+\midrule
 Nome completo & Alessandro Campedelli \\
 Matricola & 0001242904 \\
 E-mail & alessandr.campedell3@studio.unibo.it \\
 Corso di studi & Informatica Magistrale, Curriculum B \\
-\end{longtable}
-}
+\bottomrule
+\end{tabular}
+\par\medskip
 
-{\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3324}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6676}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.28\linewidth}>{\raggedright\arraybackslash}p{\dimexpr0.72\linewidth-2\tabcolsep\relax}@{}}
+\toprule
 \textbf{Campo} & \textbf{Valore} \\
+\midrule
 Nome completo & Francesco Maria Fuligni \\
 Matricola & 0001246029 \\
 E-mail & francesco.fuligni@studio.unibo.it \\
 Corso di studi & Informatica Magistrale, Curriculum C \\
-\end{longtable}
-}
+\bottomrule
+\end{tabular}
+\par\medskip
 
 \cardsection{Documento 02: Client card}
 
@@ -85,7 +72,7 @@ integrator che opera per conto di CUP 2000 di proporre un redesign
 dell\textquotesingle esperienza di prenotazione, da presentare come case
 study per un possibile incarico più ampio.
 
-\fieldheading{Nome del tool}
+\fieldheading{Nome del servizio}
 
 CUPweb (www.cupweb.it), servizio web di prenotazione delle prestazioni
 sanitarie specialistiche della Regione Emilia-Romagna, disponibile
@@ -96,14 +83,14 @@ progettata prioritariamente per l'utilizzo da computer. È previsto
 l'adattamento responsive ad altri dispositivi. L'app ER Salute resta
 esterna al perimetro dell'intervento.
 
-\fieldheading{Come accedere al tool}
+\fieldheading{Modalità di accesso al servizio}
 
 Via browser web all\textquotesingle indirizzo www.cupweb.it (da personal computer,
 notebook o da smartphone), tramite credenziali SPID, CIE o credenziali regionali
 CUPweb/FSE; consente di prenotare, disdire o modificare visite ed esami per sé
 stessi e per i familiari o assistiti delegati.
 
-\fieldheading{Perché il cliente dovrebbe voler finanziare un nuovo tool?}
+\fieldheading{Motivazioni per il finanziamento della riprogettazione}
 
 Il redesign risponde al rischio di esclusione dal canale digitale e alla
 conseguente dipendenza da sportelli, centri telefonici o familiari, approfonditi
@@ -175,7 +162,7 @@ dalla popolazione anziana.
   caregiver--assistito
 \end{itemize}
 
-\fieldheading{Motivazione della scelta e relazione con il tool del cliente}
+\fieldheading{Motivazione della scelta e relazione con il servizio del cliente}
 
 Le dimensioni distinguono due ruoli interdipendenti: il paziente anziano
 cronico, che deve gestire visite ricorrenti, e il caregiver familiare, che
@@ -211,7 +198,7 @@ con l\textquotesingle assistito)}
   disposizione
 \end{itemize}
 
-\fieldheading{Numero totale di combinazioni di segmento}
+\fieldheading{Numero totale di combinazioni tra i segmenti}
 
 2 (utenti diretti) × 2 (intermediari) = 4 combinazioni possibili.
 
@@ -238,7 +225,7 @@ al caregiver. I dati nazionali sul divario digitale e sul caregiving
 motivano la rilevanza del tema, ma non dimostrano la rappresentatività di
 queste combinazioni; valori e limiti sono riportati nei Documenti 04a/04b.
 
-\fieldheading{Impatto atteso sul design}
+\fieldheading{Impatto atteso sulla progettazione}
 
 Occorre distinguere il percorso dell'utente diretto da quello di chi lo
 assiste, mantenendo visibili identità, responsabilità e stato della pratica
@@ -250,7 +237,7 @@ raccomandazioni e requisiti.
 
 \cardsection{Documento 04a: Market Research card: segmento A}
 
-\fieldheading{Segmento di scelta}
+\fieldheading{Segmento selezionato}
 
 Paziente anziano con bassa autonomia digitale, 75-85 anni, patologia cronica,
 utente diretto del servizio, con caregiver familiare disponibile ma non
@@ -296,8 +283,7 @@ Uso Internet per titolo di studio (2024) & Al massimo licenza media & 69,7\% \\
 \bottomrule
 \end{tabular}
 \end{center}
-\vspace{1mm}
-\noindent{\footnotesize\textit{Nota metodologica:} Indicatori estratti dalle rilevazioni ufficiali ISTAT \emph{Cittadini e ICT 2024} \cite{istatICT2024} e \emph{2025} \cite{istatICT2025}. Gli estratti integrali e le tabelle ministeriali originali sono conservati nei materiali di ricerca allegati (\texttt{research-materials/screenshot-fonti-statistiche/}).}
+\noindent{\footnotesize\textit{Nota:} Indicatori estratti dalle rilevazioni ufficiali ISTAT \emph{Cittadini e ICT 2024} \cite{istatICT2024} e \emph{2025} \cite{istatICT2025}. Gli estratti integrali e le tabelle ministeriali originali sono conservati nei materiali di ricerca allegati (\texttt{research-materials/screenshot-fonti-statistiche/}).}
 
 \fieldheading{Metodo di ricerca utilizzato: interviste qualitative}
 
@@ -374,7 +360,7 @@ ma odio perdere tempo su pagine che nascondono le informazioni essenziali."
 \textbf{Sintesi trasversale.} Carla riferisce difficoltà di accesso e timore
 dell'errore; Giorgio incertezza sulle condizioni della prestazione. Nei due
 racconti, la richiesta di assistenza è distinta dalla rinuncia al controllo
-dell'azione. Le implicazioni sono sviluppate nel campo ``Impatto sul design''.
+dell'azione. Le implicazioni sono sviluppate nel campo ``Impatto sulla progettazione''.
 
 \fieldheading{Task analysis}
 
@@ -437,7 +423,7 @@ criticità già emerse nell\textquotesingle assessment (Documento 05a).}
 \item
   Le due interviste condotte (Carla B., nonna di un membro del team;
   Giorgio M., amico di famiglia di un membro del team) sono un campione di
-  comodo (rete familiare/amicale del team), non statisticamente
+  comodo (rete di familiari e amici del team), non statisticamente
   rappresentativo: i risultati qualitativi vanno letti come ipotesi
   corroborate su un numero ridotto di casi, non come generalizzazioni
   al segmento.
@@ -473,7 +459,7 @@ La convergenza suggerisce di intervenire sui punti decisionali critici,
 senza attribuire ai dati generali le cause delle difficoltà specifiche di
 CUPweb né generalizzare i racconti al segmento.
 
-\fieldheading{Impatto sul design}
+\fieldheading{Impatto sulla progettazione}
 
 Per Carla sono pertinenti un accesso a bassa soglia, conferme leggibili e
 recupero guidato dall'errore; per Giorgio, spiegazioni su regime, costo e sede
@@ -483,7 +469,7 @@ Queste indicazioni confluiscono nelle raccomandazioni del Documento 07.
 
 \cardsection{Documento 04b: Market Research card: segmento B}
 
-\fieldheading{Segmento di scelta}
+\fieldheading{Segmento selezionato}
 
 Caregiver familiare sempre reperibile a distanza, 45-60 anni, alta competenza
 tecnica, gestisce da remoto le prenotazioni sanitarie di un genitore
@@ -523,8 +509,7 @@ Popolazione over 85 (1 gennaio 2026) & ISTAT (2025) \cite{istatDemografia2025} &
 \bottomrule
 \end{tabular}
 \end{center}
-\vspace{1mm}
-\noindent{\footnotesize\textit{Nota metodologica:} Dati estratti dal rapporto CNEL--Censis \cite{cnelCaregiver2024} e dal report ISTAT \emph{Indicatori demografici 2025} \cite{istatDemografia2025} (pp.~1, 9). I documenti integrali e le tabelle originali sono conservati nei materiali di ricerca allegati (\texttt{research-materials/screenshot-fonti-statistiche/}).}
+\noindent{\footnotesize\textit{Nota:} Dati estratti dal rapporto CNEL--Censis \cite{cnelCaregiver2024} e dal report ISTAT \emph{Indicatori demografici 2025} \cite{istatDemografia2025} (pp.~1, 9). I documenti integrali e le tabelle originali sono conservati nei materiali di ricerca allegati (\texttt{research-materials/screenshot-fonti-statistiche/}).}
 
 \fieldheading{Metodo di ricerca utilizzato: interviste qualitative}
 
@@ -557,7 +542,7 @@ Fatima gestisce la salute familiare incastrando le incombenze sanitarie tra il l
 distanza; Fatima quello del coordinamento familiare e delle interruzioni da
 smartphone. Entrambe richiedono informazioni sufficienti a verificare
 l'esito della pratica. Le implicazioni specifiche sono raccolte nel campo
-``Impatto sul design''.
+``Impatto sulla progettazione''.
 
 \fieldheading{Task analysis}
 
@@ -631,7 +616,7 @@ singola operazione dal lavoro di coordinamento. Il confronto con il
 Segmento A indica una relazione tra le difficoltà del paziente e il carico
 del caregiver, da approfondire oltre il campione di comodo.
 
-\fieldheading{Impatto sul design}
+\fieldheading{Impatto sulla progettazione}
 
 Per Silvia emerge l'esigenza di supervisione a distanza senza scambio di
 credenziali; per Fatima, di ripresa del task e condivisione di un riepilogo
@@ -646,7 +631,7 @@ Sono disponibili nel repository le sintesi delle interviste, le card dei test, i
 
 \cardsection{Documento 05a: Assessment of Existing Resource card: tool del cliente}
 
-\fieldheading{Nome del tool}
+\fieldheading{Nome del servizio}
 
 CUPweb (web application, www.cupweb.it), Regione
 Emilia-Romagna.
@@ -676,7 +661,7 @@ una gerarchia visiva chiara, servizi distribuiti su domini diversi e
 visivamente scollegati tra loro (cupweb.it, pagonlinesanita.it,
 fascicolo-sanitario.it, support.fascicolo-sanitario.it).
 
-\fieldheading{Principali punti di forza, motivo della scelta}
+\fieldheading{Principali punti di forza e motivazione della scelta}
 
 \begin{itemize}
 \item
@@ -722,7 +707,7 @@ valutazione completo con i punteggi guideline-per-guideline è riportato
 nel file \texttt{phase-a-guideline-checklist.xlsx}; qui riportiamo la sintesi delle criticità più
 rilevanti riscontrate.}
 
-\fieldheading{Sintesi quantitativa del workbook guideline (CUPweb vs.\ MioDottore)}
+\fieldheading{Sintesi quantitativa del foglio di valutazione delle linee guida (CUPweb vs.\ MioDottore)}
 
 Il workbook applica le 90 User Focus Guidelines (David Travis), qui
 un sottoinsieme rappresentativo di 88 voci su 9 categorie, a entrambi
@@ -750,7 +735,7 @@ Aiuto, feedback e tolleranza agli errori & 1 & 2 & 3 & 2 & 1 & 0 \\
 \end{tabular}
 \end{center}
 
-Restano \emph{Non verificato} 64 giudizi su 88 per CUPweb e 69 su 88 per MioDottore; una ulteriore voce CUPweb è \emph{N/A}, categoria distinta dal non verificato. Le note del workbook richiamano spesso l'accesso autenticato, ma alcune motivazioni sono generiche e riguardano anche guideline riferite alla pagina iniziale. Il vincolo di autenticazione non può pertanto essere assunto come spiegazione sufficiente per tutte le voci.
+Restano \emph{Non verificato} 64 giudizi su 88 per CUPweb e 69 su 88 per MioDottore; un'ulteriore voce CUPweb è \emph{N/A}, categoria distinta dal non verificato. Le note del workbook richiamano spesso l'accesso autenticato, ma alcune motivazioni sono generiche e riguardano anche guideline riferite alla pagina iniziale. Il vincolo di autenticazione non può pertanto essere assunto come spiegazione sufficiente per tutte le voci.
 
 Il dettaglio originale è conservato in \texttt{phase-a-guideline-checklist.xlsx}. Il censimento derivato \path{research-materials/verifica-guideline-non-verificate.md} elenca ciascun giudizio non verificato, la cella sorgente e la motivazione disponibile, distinguendo le note ripetute da quelle specifiche. I giudizi non sono stati modificati in assenza di una nuova ispezione. Prima della chiusura dell'assessment occorre riesaminare le voci pubblicamente osservabili e precisare, per quelle protette, schermata, prerequisito di accesso e verifica rinviata. I risultati dei task preliminari documentano soltanto gli elementi effettivamente osservati nelle card e non attestano la copertura delle restanti guideline.
 
@@ -817,7 +802,7 @@ anziano).}
 
 \cardsection{Documento 05b: Assessment of Existing Resource card: competitor tool}
 
-\fieldheading{Nome del tool}
+\fieldheading{Nome del servizio}
 
 MioDottore (Doctolib Italia), piattaforma privata di prenotazione di
 visite mediche.
@@ -845,7 +830,7 @@ recensioni a stelle, iconografia chiara).
 \includegraphics[width=0.85\linewidth]{research-materials/screenshot-cupweb-miodottore/miodottore-home.png}
 \end{center}
 
-\fieldheading{Principali punti di forza, motivo della scelta}
+\fieldheading{Principali punti di forza e motivazione della scelta}
 
 \begin{itemize}
 \item
@@ -887,7 +872,7 @@ usabilità applicate a CUPweb (Documento 05a): navigazione, ricerca,
 organizzazione e struttura dei contenuti, contenuti e titoli,
 impaginazione, completamento del compito, fiducia e credibilità.}
 
-\fieldheading{Sintesi quantitativa del workbook guideline}
+\fieldheading{Sintesi quantitativa del foglio di valutazione delle linee guida}
 
 Il riepilogo quantitativo comparato CUPweb / MioDottore, categoria per
 categoria, è riportato nel Documento 05a. Su 88 guideline valutate per
@@ -1053,7 +1038,7 @@ descrivono il servizio attuale; il redesign privilegia il computer e
 considera l'uso responsive come copertura secondaria. Il confronto rimane
 unico, con le osservazioni mobile nelle rispettive sessioni.}
 
-\fieldheading{Nome del tool}
+\fieldheading{Nome del servizio}
 
 CUPweb (www.cupweb.it)
 
@@ -1146,18 +1131,18 @@ sessioni non comportano prenotazioni o disdette reali.
   Satisfaction (tramite questionario SUS)
 \end{itemize}
 
-\fieldheading{Reclutamento dei soggetti}
+\fieldheading{Reclutamento dei partecipanti}
 
 Quattro partecipanti: Giorgio, Carla, Silvia e Fatima, già intervistati nei
 Documenti 04a/04b. I profili, le relazioni con il team e i limiti di aderenza
 al target sono descritti nelle rispettive Market Research card.
 
-\fieldheading{Modalità di reclutamento dei soggetti}
+\fieldheading{Modalità di reclutamento dei partecipanti}
 
 Rete familiare/amicale dei membri del team, la stessa già usata per le
 interviste del Documento 04a/04b.
 
-\fieldheading{Motivazione della scelta dei soggetti}
+\fieldheading{Motivazione della scelta dei partecipanti}
 
 La selezione è di convenienza, senza rappresentatività statistica.
 Giorgio, più autonomo di Carla e già abituato a tablet e SPID, è stato
@@ -1223,7 +1208,7 @@ accanto alle scelte critiche, mostrare chiaramente cosa succede prima
 della conferma, rendere facilmente accessibile l\textquotesingle assistenza
 telefonica.
 
-\textbf{Riflessioni utili per il design:} Il principale ostacolo
+\textbf{Implicazioni progettuali:} Il principale ostacolo
 osservato non riguarda l\textquotesingle accesso tecnico, ma
 l\textquotesingle incertezza relativa alle conseguenze delle
 decisioni, sia sulla scelta del canale di prenotazione
@@ -1299,7 +1284,7 @@ T3 & No & 03:00 & 1 \\
 cosa fare dopo; poter usare il sito da smartphone con qualcuno vicino,
 senza dover lasciare il dispositivo in mano a lui.
 
-\textbf{Riflessioni utili per il design:} Il blocco si presenta prima
+\textbf{Implicazioni progettuali:} Il blocco si presenta prima
 ancora del compito (schermata iniziale e autenticazione, {[}ID-01{]},
 {[}ID-03{]}) e, una volta superato con aiuto, si sposta
 sull\textquotesingle azione percepita come irreversibile
@@ -1367,7 +1352,7 @@ T3 & Parziale & 02:50 & 1 \\
 al familiare, un canale di assistenza scritto, e la possibilità di
 vedere cosa fa il genitore con un avviso quando si blocca.
 
-\textbf{Riflessioni utili per il design:} Per la caregiver esperta lo
+\textbf{Implicazioni progettuali:} Per la caregiver esperta lo
 strumento è usabile, ma non è progettato per due persone: la
 selezione del familiare non è visibile nel punto in cui serve
 ({[}ID-10{]}) e la conferma di esito non è verificabile né
@@ -1441,7 +1426,7 @@ termini difficili; non perdere il lavoro fatto dopo
 un\textquotesingle interruzione; poter informare il marito di cosa è
 stato prenotato senza mostrargli tutti i dati medici.
 
-\textbf{Riflessioni utili per il design:} Il contesto d\textquotesingle uso
+\textbf{Implicazioni progettuali:} Il contesto d\textquotesingle uso
 reale (sessioni brevi e interrotte su smartphone) trasforma un timeout
 tecnico in una perdita di lavoro percepita ({[}ID-11{]}).
 L\textquotesingle ostacolo principale resta linguistico-amministrativo
@@ -1452,7 +1437,7 @@ telefonico è poco adatto a chi media una seconda lingua ({[}ID-12{]}).
 
 \emph{Questo test riguarda MioDottore.}
 
-\fieldheading{Nome del tool}
+\fieldheading{Nome del servizio}
 
 MioDottore (Doctolib Italia)
 
@@ -1509,17 +1494,17 @@ interpretati rispetto ai task specifici.
 Si applicano le metriche definite nel Documento 06a: Success, Efficiency,
 Efficacy, Errors, Learnability (se applicabile) e Satisfaction tramite SUS.
 
-\fieldheading{Reclutamento dei soggetti}
+\fieldheading{Reclutamento dei partecipanti}
 
 Gli stessi quattro partecipanti del Documento 06a hanno provato entrambi
 i tool; Giorgio è stato il primo soggetto coinvolto anche su MioDottore.
 
-\fieldheading{Modalità di reclutamento dei soggetti}
+\fieldheading{Modalità di reclutamento dei partecipanti}
 
 Rete familiare/amicale del team, la stessa del Documento 06a (vedi
 anche Documento 04a).
 
-\fieldheading{Motivazione della scelta dei soggetti}
+\fieldheading{Motivazione della scelta dei partecipanti}
 
 Il confronto entro la stessa persona tiene conto del profilo individuale,
 ma non isola l'effetto del design: task, familiarità con il servizio e
@@ -1590,7 +1575,7 @@ T3 & Sì & 01:10 & 0 \\
 recensioni; permettere di annullare un appuntamento senza dover
 creare un account.
 
-\textbf{Riflessioni utili per il design:} La trasparenza del costo
+\textbf{Implicazioni progettuali:} La trasparenza del costo
 nel punto di scelta elimina il blocco decisionale osservato su
 CUPweb: indicazione diretta utile per la scelta tra SSN e Libera
 Professione ({[}ID-04{]}). Il contatto specifico con la struttura
@@ -1660,7 +1645,7 @@ T3 & Sì & 01:40 & 0 \\
 riducendo le opzioni in alto; tenere sempre in vista il numero di
 telefono.
 
-\textbf{Riflessioni utili per il design:} Anche sul competitor la
+\textbf{Implicazioni progettuali:} Anche sul competitor la
 partecipante resta sotto la soglia di 68: la modernità grafica da sola
 non basta al profilo a bassa autonomia digitale. I momenti di successo
 coincidono con i punti in cui lo strumento la riconduce a un canale
@@ -1730,7 +1715,7 @@ T3 & Sì & 00:50 & 0 \\
 il familiare assistito, in modo che anche lui riceva promemoria e
 comunicazioni.
 
-\textbf{Riflessioni utili per il design:} Il competitor soddisfa la
+\textbf{Implicazioni progettuali:} Il competitor soddisfa la
 caregiver come utente singola, ma non supporta la relazione
 caregiver-assistito: nessuna condivisione della visita o dei
 promemoria con il familiare. Il bisogno di co-gestione ({[}R-06{]},
@@ -1795,7 +1780,7 @@ T3 & Sì & 01:05 & 0 \\
 \textbf{Suggerimenti del soggetto:} Una conferma condivisibile con
 gli altri familiari senza ricorrere a screenshot.
 
-\textbf{Riflessioni utili per il design:} Il canale scritto è per la
+\textbf{Implicazioni progettuali:} Il canale scritto è per la
 partecipante un fattore di accessibilità linguistica, non solo di
 comodità. Anche qui la conferma resta individuale: per informare il
 marito deve fare uno screenshot, lo stesso bisogno di condivisione
@@ -1906,6 +1891,7 @@ i problemi emersi solo dall\textquotesingle assessment 05a/05b
 (ID-01...ID-07) la frequenza non è quantificabile e resta indicata
 solo qualitativamente tramite impatto e persistenza.
 
+\Needspace{0.68\textheight}
 \fieldheading{Valutazione quantitativa dell\textquotesingle usabilità: Matrice di risposta SUS}
 
 Al termine di ciascuna delle 8 sessioni di test preliminare (4 partecipanti su CUPweb e MioDottore) è stato somministrato il questionario standard \emph{System Usability Scale} (SUS; 10 affermazioni su scala Likert 1--5) \cite{brookeSUS1996}. La matrice sottostante riporta le risposte grezze raccolte domanda per domanda, i punteggi normalizzati su scala 0--100 (item dispari: $\text{voto} - 1$; item pari: $5 - \text{voto}$; moltiplicatore $\times 2{,}5$) e gli indicatori statistici di sintesi (media e varianza campionaria).
@@ -1913,7 +1899,7 @@ Al termine di ciascuna delle 8 sessioni di test preliminare (4 partecipanti su C
 \begin{center}
 \footnotesize
 \setlength{\tabcolsep}{2.8pt}
-\begin{tabular}{@{}p{0.43\linewidth} cccc cccc@{}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.42\linewidth} cccc cccc@{}}
 \toprule
 & \multicolumn{4}{c}{\textbf{CUPweb (06a)}} & \multicolumn{4}{c}{\textbf{MioDottore (06b)}} \\
 \cmidrule(lr){2-5} \cmidrule(lr){6-9}
@@ -1937,10 +1923,8 @@ Al termine di ciascuna delle 8 sessioni di test preliminare (4 partecipanti su C
 \bottomrule
 \end{tabular}
 \end{center}
-\vspace{1mm}
 \noindent{\footnotesize\textit{Legenda partecipanti:} Gio = Giorgio (Segmento A2), Car = Carla (Segmento A1), Sil = Silvia (Segmento B1), Fat = Fatima (Segmento B2). Media complessiva aggregata sulle 8 sessioni: \textbf{52,50/100}; varianza campionaria complessiva: \textbf{389,29}.}
 
-\newpage
 \noindent Nel campione osservato, Carla assegna i punteggi più bassi su entrambi i sistemi (22,5 su CUPweb e 45,0 su MioDottore), mentre Silvia registra i più alti (55,0 e 80,0). Questa differenza è compatibile con un possibile ruolo della familiarità digitale, ma quattro partecipanti reclutati per convenienza non consentono di attribuire la dispersione alla sola segmentazione, né di escludere effetti di dispositivo, contesto, assistenza o ordine dei test. Le otto sessioni riguardano gli stessi quattro individui su due strumenti e non costituiscono otto osservazioni indipendenti. Media e varianza aggregate hanno pertanto una funzione esclusivamente descrittiva.
 
 Sul piano comparativo, nel campione tutti e quattro i punteggi CUPweb sono inferiori al riferimento di 68/100 adottato nel progetto; la media è 38,75, contro 66,25 per MioDottore. Le differenze sono coerenti con le difficoltà riportate nelle card, ma il SUS misura l'usabilità percepita complessiva: i punteggi non identificano da soli cause, competenze o problemi specifici. Le spiegazioni progettuali devono essere sostenute anche da errori, esiti dei task e osservazioni qualitative; il confronto resta descrittivo, entro i limiti del campione e dei task eseguiti.
@@ -1978,13 +1962,13 @@ ID-12 & 2,5 & 3 & 5,5 & Immediata \\
 \begin{center}
 \begin{tikzpicture}
 \begin{axis}[
-  width=11cm, height=8cm,
+  width=0.85\linewidth, height=7cm,
   xlabel={Persistenza}, ylabel={Impatto},
   xmin=0.8, xmax=3.6, ymin=0.8, ymax=3.6,
   xtick={1,2,3}, xticklabels={Bassa,Media,Alta},
   ytick={1,2,3}, yticklabels={Basso,Medio,Alto},
   grid=both, grid style={gray!20},
-  legend pos=outer north east,
+  legend style={at={(0.5,-0.22)},anchor=north,legend columns=-1,font=\footnotesize,draw=none},
   scatter/classes={
     urgente={mark=*,red},
     prossima={mark=*,blue}
@@ -2023,7 +2007,7 @@ conferme condivisibili: tutti temi emersi sia dall\textquotesingle expert
 review sia, in modo indipendente, dai test utente, il che ne rafforza
 l\textquotesingle urgenza.
 
-\fieldheading{Raccomandazioni di design preliminari}
+\fieldheading{Raccomandazioni progettuali preliminari}
 
 Le raccomandazioni integrano assessment e test preliminari; i collegamenti
 puntuali sono consultabili in \path{requirements-traceability.html}.
@@ -2065,7 +2049,7 @@ funzionalità verificate negli strumenti esaminati.
   adatta a vincoli lavorativi e mediazione linguistica.
 \end{itemize}
 
-\fieldheading{Requisiti di design numerati per le Fasi B e C}
+\fieldheading{Requisiti progettuali numerati per le fasi B e C}
 
 I requisiti traducono le direzioni R-01--R-09 in comportamenti attesi del
 servizio, mantenendo identificativi e priorità progettuali. L'esperienza

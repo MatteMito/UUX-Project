@@ -11,3 +11,4 @@ pdf:
 
 clean:
 	$(LATEXMK) -norc -c -emulate-aux-dir -auxdir=$(BUILD_DIR) -outdir=. $(MAIN)
+	rm -f $(BUILD_DIR)/*-SAVE-ERROR

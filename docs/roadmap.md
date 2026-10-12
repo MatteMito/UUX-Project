@@ -49,7 +49,7 @@
 
 **Artefatto:** [Client card](../phase-a/phase-a.tex), Documento 02.
 
-**Evidenza:** redesign di CUPweb da browser PC/smartphone; obiettivi di autonomia, fiducia e supporto del caregiver. Le metriche sono obiettivi, non benefici già raggiunti.
+**Evidenza:** redesign di CUPweb con esperienza principale da computer e copertura responsive secondaria; l'app ER Salute resta esterna al perimetro. Obiettivi di autonomia, fiducia e supporto del caregiver. Le metriche sono obiettivi, non benefici già raggiunti.
 
 ### A2. Segmentazione degli utenti
 
@@ -173,7 +173,7 @@
 
 **Artefatti:** [Fase B](../phase-b/phase-b.tex), [workbook](../phase-b/phase-b-personas-and-cast.xlsx), foto, quattro radar individuali, confronto e sovrapposizione del cast.
 
-**Stato:** Pina protagonista, Elena e Amina secondarie, Renato aggiuntivo; due scenari da browser smartphone e due desktop. `P-01…P-11`, due implicazioni per ciascuno dei quattro use case e `C-01…C-12`. Le personas sono sintetiche e distinte dai quattro partecipanti reali. Le revisioni locali hanno riallineato le ambientazioni di Pina e Renato; resta la verifica delle fonti primarie A.
+**Stato:** Pina protagonista, Elena e Amina secondarie, Renato aggiuntivo; tre scenari principali da computer e un caso responsive secondario da browser smartphone (Amina). Pina opera sul laptop familiare con Elena in modalità co-pilota; Elena esegue la disdetta dal computer dell'ufficio in modalità delega completa. `P-01…P-11`, due implicazioni per ciascuno dei quattro use case e `C-01…C-12`. Le personas sono sintetiche e distinte dai quattro partecipanti reali. Il workbook corrente è `phase-b/phase-b-personas-and-cast-v2.xlsx`; la versione originale è conservata. Le ambientazioni di Pina e Renato sono allineate; resta la verifica delle fonti primarie A.
 
 ### Gate B
 
