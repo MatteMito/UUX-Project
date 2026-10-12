@@ -4,6 +4,7 @@
 # Local assistant instructions and knowledge base
 /AGENTS.md
 /HANDOFF.md
+/PLAN.md
 /wiki/
 
 # LaTeX intermediate output (Makefile builds at the repository root)

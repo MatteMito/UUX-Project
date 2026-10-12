@@ -98,3 +98,10 @@ Per ogni persona:
 - [x] Diagrammi C&A verificati.
 - [x] Requisiti collegati a evidenze di assessment o testing.
 - [x] Le personas producono indicazioni utilizzabili nella Fase C.
+
+
+## Perimetro progettuale — 12 ottobre 2026
+
+- [x] Specificare tre casi principali da computer e il caso responsive secondario di Amina.
+- [x] Esplicitare laptop familiare e supporto di Elena nello scenario co-pilota di Pina, mantenendo i punteggi C&A.
+- [x] Allineare testo e [workbook v2](phase-b-personas-and-cast-v2.xlsx), preservando l’originale e i diagrammi.

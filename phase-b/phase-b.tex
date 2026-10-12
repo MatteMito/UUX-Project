@@ -57,7 +57,9 @@ fonti primarie restano quelli dichiarati in Fase A. Le relazioni di
 derivazione sono consultabili in \path{requirements-traceability.html}.
 Per il redesign, gli scenari distinguono il supporto in modalità co-pilota
 dall'esecuzione per conto dell'interessato in modalità delega completa,
-secondo le definizioni del Documento 07 della Fase A.
+secondo le definizioni del Documento 07 della Fase A. Pina, Elena e Renato
+costituiscono i casi principali da computer; Amina rappresenta l'uso web
+responsive secondario. ER Salute resta fuori dal redesign.
 
 \begingroup
 \small
@@ -67,7 +69,7 @@ secondo le definizioni del Documento 07 della Fase A.
 \textbf{Dimensione} & \textbf{Contesto considerato} \\
 \midrule
 Ambienti & Casa, farmacia o ambulatorio per gli utenti diretti; casa e ufficio per il caregiver a distanza. Rumore, interruzioni e assenza di supporto sono variabili frequenti. \\
-Dispositivi & Smartphone Android per Pina e Amina; PC desktop e smartphone per Elena; PC desktop e tablet per Renato. Fruizione web distinta tra browser PC e browser smartphone. \\
+Dispositivi & Laptop familiare per Pina con Elena in presenza; computer dell'ufficio per Elena; computer domestico per Renato. Amina usa CUPweb da browser smartphone come caso responsive secondario. Il telefono può supportare autenticazione e comunicazioni anche nei casi da computer. \\
 Tempo e pressione & Pina procede con cautela; Elena interviene in finestre di 5 minuti durante il lavoro; Renato vuole concludere in 8--10 minuti in autonomia; Amina opera tra turni e impegni familiari. \\
 Vincoli & Affaticamento visivo, precisione motoria ridotta, memoria delle credenziali, linguaggio sanitario ambiguo, barriere linguistiche e sovraccarico del caregiver. \\
 Attività esterne & Recuperare ricetta, consultare calendario e trasporti, verificare costi e sede, coordinarsi con familiari, tradurre o chiarire termini, telefonare o recarsi allo sportello. \\
@@ -78,6 +80,8 @@ Assistenza & Supporto in modalità co-pilota o esecuzione in modalità delega co
 
 La Cast card (Documento 03) motiva la gerarchia dei personaggi, le alternative
 scartate e il bilanciamento tra i loro bisogni.
+Il workbook aggiornato è \path{phase-b/phase-b-personas-and-cast-v2.xlsx};
+la versione precedente è conservata come artefatto storico.
 
 \cardsection{Documento 02a: Persona and Use Case card: protagonista}
 
@@ -103,7 +107,7 @@ scartate e il bilanciamento tra i loro bisogni.
 
   \begin{tabular}{@{}p{0.22\linewidth}p{0.74\linewidth}@{}}
     \textbf{Profilo:} & 78 anni, vedova, ex operaia tessile a Ravenna (San Biagio); diabete di tipo 2 e ipertensione; forte attaccamento alla propria autonomia. \\
-    \textbf{Dispositivi:} & Smartphone Android semplice con caratteri grandi donato dal nipote; usa solo chiamate e messaggi vocali WhatsApp. \\
+    \textbf{Dispositivi:} & Smartphone Android per chiamate e vocali WhatsApp; laptop familiare disponibile durante le visite di Elena, senza uso abituale del PC. \\
     \textbf{Vincoli:} & Presbiopia marcata, lieve tremore e artrosi alle dita, memoria labile di SPID, ansia da errore (``paura di rompere qualcosa o cancellare la visita'').
   \end{tabular}
 
@@ -139,7 +143,7 @@ un peso e desidera mantenere il controllo della prenotazione.
   \toprule
   \textbf{Dimensione} & \textbf{P.} & \textbf{Sintesi della motivazione} \\
   \midrule
-  Tecnica & 1 & Non usa PC; dipende da aiuto per credenziali e flussi. \\
+  Tecnica & 1 & Scarsa familiarità con il PC; richiede guida per credenziali e flussi. \\
   Dominio & 2 & Visite note; ignora canali e regimi amministrativi. \\
   Linguistica & 4 & Italiano comune OK; lessico tecnico crea esitazione. \\
   Fisica e visiva & 2 & Presbiopia e tremore: testi e bersagli piccoli critici. \\
@@ -155,23 +159,27 @@ un peso e desidera mantenere il controllo della prenotazione.
 
 \fieldheading{Scenario: la visita diabetologica di controllo e il timore dell'errore irreversibile}
 
-\textbf{Contesto e innesco:} Nel primo pomeriggio, a Ravenna, Pina deve prenotare il controllo
-diabetologico semestrale. Recupera il codice NRE e consulta il calendario
-per escludere il martedì mattina; non guidando fuori città, deve verificare
-che la sede sia raggiungibile con i mezzi pubblici.
+\textbf{Contesto e innesco:} Nel primo pomeriggio, a Ravenna, Pina deve
+prenotare il controllo diabetologico semestrale. Elena è in visita e porta
+un laptop familiare. Pina recupera il codice NRE e consulta il calendario
+per escludere il martedì mattina; deve scegliere una sede raggiungibile
+con i mezzi pubblici.
 
-\textbf{Svolgimento dell\textquotesingle esperienza e attrito cognitivo:} Accede a CUPweb dal browser dello smartphone. L'attesa dell'OTP e
-la digitazione con dita rigide per l'artrosi generano ansia per la scadenza
-del timer. Dopo l'accesso, zoom e scorrimenti orizzontali rendono difficile
-distinguere \enquote{Prenota con ricetta} e \enquote{Consulta appuntamenti}.
-Un errore generico la blocca: teme di cancellare una visita o confermare la
-prestazione sbagliata. Dopo due tentativi chiude la scheda e telefona a Elena.
+\textbf{Svolgimento dell\textquotesingle esperienza e attrito cognitivo:}
+Pina si siede al computer con Elena accanto e apre CUPweb. Il telefono
+resta disponibile per l'OTP; il codice e la scadenza del timer le creano
+incertezza. La scarsa familiarità con mouse e tastiera, insieme a presbiopia
+e artrosi, rende lenta l'interazione. Pina teme di scegliere una prestazione
+errata o perdere la visita. Elena chiarisce i passaggi e la rassicura, senza
+prendere il controllo del dispositivo. Pina verifica data e sede e compie
+le azioni di conferma: il caso guida descrive l'obiettivo della modalità
+co-pilota nel redesign, non una nuova sessione di test.
 
 \textbf{Stima temporale e criteri di successo:}
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
-\item \textit{Stima temporale:} 10--15 minuti di navigazione prima dell'insorgenza del blocco e della richiesta d'aiuto.
+\item \textit{Stima temporale:} 10--15 minuti ipotizzati per la prenotazione con guida e rassicurazione di Elena.
 \item \textit{Criteri di successo:} Comprensione del passo corrente, selezione autonoma e consapevole di data e sede raggiungibile, rilascio di un promemoria finale stampabile e assenza di sostituzione passiva da parte del caregiver.
-\item \textit{Rischi principali:} Errore di selezione della struttura, frustrazione da time-out, esproprio operativo della figlia e rinuncia definitiva al canale digitale con ritorno allo sportello fisico.
+\item \textit{Rischi principali:} Errore di selezione della struttura, difficoltà con mouse e tastiera, time-out e passaggio involontario del controllo a Elena, con perdita di autonomia e fiducia.
 \end{itemize}
 
 \fieldheading{Considerazioni conclusive e implicazioni di design}
@@ -179,14 +187,14 @@ prestazione sbagliata. Dopo due tentativi chiude la scheda e telefona a Elena.
 \textbf{Impatto della persona sul design:}
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
 \item \textbf{P-01}: L'autenticazione deve ridurre il carico di memoria e offrire recupero guidato; per attività solo consultive va evitata un'autenticazione ripetuta non necessaria.
-\item \textbf{P-02}: Azioni e bersagli devono essere grandi, distinti per forma, testo e icona, non soltanto per colore, prevenendo tocchi accidentali dovuti a ridotta precisione motoria.
+\item \textbf{P-02}: Azioni e bersagli devono essere grandi, distinti per forma, testo e icona, non soltanto per colore, riducendo selezioni accidentali con il puntatore e, nell'adattamento responsive, con il tocco.
 \item \textbf{P-03}: Il linguaggio deve essere semplice e rassicurante, con conseguenze esplicite, conferme reversibili e assenza di tecnicismi informatici.
 \end{itemize}
 
 \textbf{Impatto del caso d'uso sul design:}
-La richiesta di aiuto a Elena motiva il supporto in modalità co-pilota
-nel redesign, senza implicare che tale modalità sia presente nel servizio
-esaminato.
+La disponibilità occasionale del laptop e la presenza di Elena sono
+assunzioni dello scenario progettuale. La guida deve consentire a Pina
+di eseguire il compito mantenendo il controllo delle azioni.
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
 \item \textbf{U1-01}: Il percorso per una visita ricorrente deve conservare il contesto, proporre sedi compatibili con la mobilità e ridurre i passaggi; in modalità co-pilota, scelta e azione restano a Pina con il supporto del caregiver.
 \item \textbf{U1-02}: Prima dell'abbandono, un errore deve indicare con chiarezza causa, modalità di recupero e canali di assistenza, senza azzerare i dati inseriti.
@@ -514,7 +522,7 @@ avvicina l'orario del turno.
 \begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
 \item \textbf{P-09}: La terminologia clinica e burocratica essenziale deve essere affiancata da definizioni in linguaggio semplice (Plain Language), con glosse ed esempi applicativi concreti.
 \item \textbf{P-10}: L'identità dell'assistito, il ruolo di chi effettua l'operazione e i canali di contatto devono restare chiaramente visibili durante tutto il percorso, gestendo anagrafiche non coincidenti.
-\item \textbf{P-11}: La web application deve essere progettata per l'uso discontinuo da browser smartphone (in ottica responsive/PWA), tollerando standby dello schermo e cambi di scheda senza disconnessioni premature.
+\item \textbf{P-11}: La copertura responsive secondaria deve sostenere l'uso discontinuo di CUPweb da browser smartphone, tollerando standby e cambi di scheda e consentendo la ripresa del lavoro.
 \end{itemize}
 
 \textbf{Impatto del caso d'uso sul design:}
@@ -530,7 +538,7 @@ avvicina l'orario del turno.
 \begin{enumerate}
 \item \textbf{Pina --- protagonista.} Caso guida per accessibilità, fiducia e autonomia minima.
 \item \textbf{Elena --- secondaria.} Caregiver a distanza collegata a Pina; rende visibile il conflitto tra assistenza e sostituzione.
-\item \textbf{Amina --- secondaria.} Caregiver convivente; rende visibili mediazione linguistica, coordinamento familiare e uso interrotto da smartphone.
+\item \textbf{Amina --- secondaria.} Caregiver convivente; rappresenta mediazione linguistica, coordinamento familiare e uso interrotto nel caso responsive secondario.
 \item \textbf{Renato --- aggiuntivo.} Controlla che le soluzioni per Pina non penalizzino efficienza, dignità e autonomia di un anziano più competente.
 \end{enumerate}
 
@@ -548,8 +556,10 @@ La selezione amplia le due audience con differenze che modificano scenario
 o requisiti: autonomia digitale per gli utenti diretti, distanza,
 mediazione linguistica e attenzione per i caregiver. Età, genere, origine
 e composizione familiare definiscono personaggi peculiari, senza usare la
-diversità come tratto decorativo. Due scenari si svolgono da browser
-smartphone (Pina, Amina) e due da PC (Elena, Renato).
+diversità come tratto decorativo. Tre scenari si svolgono da computer:
+Pina con supporto in presenza, Elena per delega completa e Renato in autonomia.
+Il caso di Amina rappresenta le esigenze della copertura responsive secondaria,
+senza ampliare l'intervento all'app ER Salute.
 
 Sono state rinviate una figura sanitaria o di farmacia, esterna ai segmenti
 intervistati; una persona completamente dipendente, caso limite senza
@@ -593,7 +603,7 @@ stati rinviati rispetto ai compiti di prenotazione e disdetta prioritari.
 \textbf{C-08}: & Il sistema deve conservare le scelte durante consultazione e aiuto, quindi mostrare un riepilogo completo prima della conferma. \\[3pt]
 \textbf{C-09}: & La terminologia deve consentire la mediazione linguistica senza perdere la precisione delle condizioni e delle conseguenze dell'azione. \\[3pt]
 \textbf{C-10}: & Ruoli, autorizzazioni e limiti devono restare espliciti in entrambe le modalità; la delega completa riguarda l'esecuzione del compito e non implica accesso illimitato ai dati sanitari. \\[3pt]
-\textbf{C-11}: & I percorsi da smartphone devono tollerare interruzioni e consentire una ripresa riconoscibile senza perdita di lavoro. \\[3pt]
+\textbf{C-11}: & La copertura responsive secondaria deve tollerare le interruzioni da smartphone e consentire una ripresa riconoscibile senza perdita di lavoro. \\[3pt]
 \textbf{C-12}: & Stati e conferme condivisibili devono coordinare i familiari senza creare duplicazioni o accessi impliciti ai dati. \\
 \end{longtable}
 \endgroup

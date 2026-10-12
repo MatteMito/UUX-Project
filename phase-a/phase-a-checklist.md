@@ -129,3 +129,9 @@ Le spunte precedenti descrivono i contenuti predisposti; non sostituiscono la ve
 - [ ] Riesaminare le 64/69 voci non verificate e sostituire le motivazioni generiche con schermata, prerequisito e verifica prevista. Vedere il censimento derivato nei materiali di ricerca.
 - [ ] Recuperare o localizzare le attestazioni individuali del consenso e i verbali originali; non risultano rintracciabili nel repository esaminato.
 - [ ] Recuperare o localizzare l'esportazione originale dei questionari SUS e riconciliarla con le risposte conservate.
+
+
+## Perimetro progettuale — 12 ottobre 2026
+
+- [x] Definire CUPweb come servizio web oggetto del redesign, con esperienza principale da computer, copertura responsive secondaria ed ER Salute esclusa.
+- [x] Mantenere un unico confronto CUPweb–MioDottore e conservare dispositivi e dati delle sessioni originali.

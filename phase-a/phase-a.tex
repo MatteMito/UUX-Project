@@ -87,11 +87,14 @@ study per un possibile incarico più ampio.
 
 \fieldheading{Nome del tool}
 
-CUPweb (web application fruibile da browser PC e smartphone, www.cupweb.it),
-canale gratuito disponibile 24/7 per il sistema
-regionale di prenotazione online delle prestazioni sanitarie
-specialistiche (visite ed esami) della Regione Emilia-Romagna
-\cite{rerPrenotare}.
+CUPweb (www.cupweb.it), servizio web di prenotazione delle prestazioni
+sanitarie specialistiche della Regione Emilia-Romagna, disponibile
+gratuitamente 24/7 \cite{rerPrenotare}.
+
+Il progetto riguarda il redesign dell'esperienza di prenotazione di CUPweb,
+progettata prioritariamente per l'utilizzo da computer. È previsto
+l'adattamento responsive ad altri dispositivi. L'app ER Salute resta
+esterna al perimetro dell'intervento.
 
 \fieldheading{Come accedere al tool}
 
@@ -150,7 +153,7 @@ dalla popolazione anziana.
   Riduzione del tasso di abbandono durante il flusso di prenotazione
 \item
   Riduzione delle chiamate al centro telefonico motivate da difficoltà di
-  utilizzo della web application (sia da desktop che da smartphone)
+  utilizzo di CUPweb nelle attività oggetto del redesign
 \end{itemize}
 
 \cardsection{Documento 03: User Segmentation card}
@@ -238,7 +241,8 @@ queste combinazioni; valori e limiti sono riportati nei Documenti 04a/04b.
 \fieldheading{Impatto atteso sul design}
 
 Occorre distinguere il percorso dell'utente diretto da quello di chi lo
-assiste, mantenendo visibili identità, responsabilità e stato della pratica.
+assiste, mantenendo visibili identità, responsabilità e stato della pratica
+nell'esperienza principale da computer e nel suo adattamento responsive.
 L'ipotesi iniziale è che guida contestuale, notifiche e delega controllata
 possano sostenere un trasferimento graduale di autonomia. I Documenti 04a/04b
 ne precisano le implicazioni per segmento; il Documento 07 formalizza
@@ -653,6 +657,8 @@ Web Application fruibile tramite browser web da personal computer
 (desktop) e da dispositivi mobili (smartphone/tablet). L\textquotesingle attuale
 implementazione presenta una responsività fortemente limitata su schermi
 piccoli (layout desktop miniaturizzato non ottimizzato per touch screen).
+Queste osservazioni descrivono il servizio attuale; nel redesign, i vincoli
+mobile riguardano la copertura responsive secondaria.
 
 \fieldheading{Scopo principale, operazioni consentite e adeguatezza percepita
 agli standard professionali}
@@ -818,7 +824,9 @@ visite mediche.
 
 \fieldheading{Piattaforme}
 
-Sito web (miodottore.it) responsive, app nativa Android e iOS.
+Sito web (miodottore.it) responsive, oggetto del confronto con CUPweb.
+La piattaforma dispone anche di app native Android e iOS, esterne a questo
+assessment.
 
 \fieldheading{Scopo principale, operazioni consentite e adeguatezza percepita
 agli standard professionali}
@@ -1039,12 +1047,15 @@ dati delle sessioni successive.
 
 \cardsection{Documento 06a: Preliminary User Testing card: tool del cliente}
 
-\emph{Questo test riguarda la web application CUPweb (testata sia da browser PC che da browser smartphone), lo strumento da
-ridisegnare.}
+\emph{La ricerca preliminare confronta i servizi web CUPweb e MioDottore
+su dispositivi diversi, specificati nelle schede individuali. I risultati
+descrivono il servizio attuale; il redesign privilegia il computer e
+considera l'uso responsive come copertura secondaria. Il confronto rimane
+unico, con le osservazioni mobile nelle rispettive sessioni.}
 
 \fieldheading{Nome del tool}
 
-CUPweb (web application www.cupweb.it, testata su browser PC e smartphone)
+CUPweb (www.cupweb.it)
 
 \fieldheading{Test Protocol}
 
@@ -1839,7 +1850,8 @@ Elenco integrato: ID-01...ID-07 emerse dall\textquotesingle assessment
   su browser mobile. Tabelle dense e non responsive, elenco non agevolmente
   ordinabile o filtrabile per data su schermo piccolo, impatto: basso-medio;
   persistenza: media; metodo di scoperta: analisi inversa (05a), da
-  segnalazioni di utenti reali su mobile
+  segnalazioni di utenti reali su mobile. Pertinenza per il redesign:
+  adattamento responsive secondario.
 \item
   \textbf{ID-08}: \textbf{Posizione:} schermata di modifica/disdetta di un
   appuntamento (task T2). Assenza di conferma o rassicurazione
@@ -2056,8 +2068,10 @@ funzionalità verificate negli strumenti esaminati.
 \fieldheading{Requisiti di design numerati per le Fasi B e C}
 
 I requisiti traducono le direzioni R-01--R-09 in comportamenti attesi del
-servizio, mantenendo identificativi e priorità progettuali. Il test
-preliminare ne informa la formulazione, senza costituirne una validazione.
+servizio, mantenendo identificativi e priorità progettuali. L'esperienza
+principale è progettata per computer; l'adattamento responsive estende
+gli stessi obiettivi agli altri dispositivi. Il test preliminare ne informa
+la formulazione, senza validare il nuovo perimetro progettuale.
 
 \begin{itemize}
 \item

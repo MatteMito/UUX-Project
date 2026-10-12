@@ -690,9 +690,9 @@
       "REQ-09": { id: "REQ-09", layer: 2, title: "Assistenza scritta integrata", prio: "Media", desc: "Canale scritto/asincrono accessibile contestualmente dalle stesse schermate di difficoltà." },
 
       // LAYER 3: P & U*
-      "P-01": { id: "P-01", layer: 3, type: "P", persona: "Pina", device: "Smartphone", title: "Autenticazione leggera e recupero guidato", desc: "Autenticazione a basso carico mnemonico e recupero guidato; no login ripetuti per sola consultazione." },
-      "P-02": { id: "P-02", layer: 3, type: "P", persona: "Pina", device: "Smartphone", title: "Touch target ampi e distinti", desc: "Bersagli grandi e distinti per forma, testo e icona (prevenzione tocchi errati da artrosi)." },
-      "P-03": { id: "P-03", layer: 3, type: "P", persona: "Pina", device: "Smartphone", title: "Linguaggio rassicurante e reversibilità", desc: "Linguaggio semplice e rassicurante, conseguenze esplicite, conferme reversibili, assenza tecnicismi." },
+      "P-01": { id: "P-01", layer: 3, type: "P", persona: "Pina", device: "Computer (laptop familiare)", title: "Autenticazione leggera e recupero guidato", desc: "Autenticazione a basso carico mnemonico e recupero guidato; no login ripetuti per sola consultazione." },
+      "P-02": { id: "P-02", layer: 3, type: "P", persona: "Pina", device: "Computer (laptop familiare)", title: "Azioni ampie per puntatore e tocco", desc: "Azioni e bersagli devono essere grandi, distinti per forma, testo e icona, non soltanto per colore, riducendo selezioni accidentali con il puntatore e, nell'adattamento responsive, con il tocco." },
+      "P-03": { id: "P-03", layer: 3, type: "P", persona: "Pina", device: "Computer (laptop familiare)", title: "Linguaggio rassicurante e reversibilità", desc: "Linguaggio semplice e rassicurante, conseguenze esplicite, conferme reversibili, assenza tecnicismi." },
       
       "P-04": { id: "P-04", layer: 3, type: "P", persona: "Elena", device: "PC Desktop", title: "Visibilità e identità dei due ruoli", desc: "In entrambe le modalità, la visibilità del caregiver sulle prenotazioni deve essere proporzionata al ruolo; devono restare riconoscibili l'identità di chi opera e quella del familiare interessato." },
       "P-05": { id: "P-05", layer: 3, type: "P", persona: "Elena", device: "PC Desktop", title: "Supporto e delega autorizzata", desc: "La modalità co-pilota deve sostenere l'esecuzione da parte di Pina; la modalità delega completa deve permettere a Elena di agire per suo conto entro l'autorizzazione ricevuta. L'esecuzione delegata non deve comportare sorveglianza continuativa o escludere Pina dalle operazioni che può svolgere." },
@@ -703,7 +703,7 @@
 
       "P-09": { id: "P-09", layer: 3, type: "P", persona: "Amina", device: "Smartphone", title: "Plain Language e glosse esplicative", desc: "Terminologia medica e burocratica affiancata da definizioni semplici, glosse ed esempi." },
       "P-10": { id: "P-10", layer: 3, type: "P", persona: "Amina", device: "Smartphone", title: "Anagrafiche e ruoli sempre visibili", desc: "Identità assistito, ruolo operatore e contatti visibili lungo tutto il percorso multi-profilo." },
-      "P-11": { id: "P-11", layer: 3, type: "P", persona: "Amina", device: "Smartphone", title: "Resilienza mobile a standby e interruzioni", desc: "Web app responsive/PWA tollerante a standby dello schermo e cambi scheda senza log-out improvvisi." },
+      "P-11": { id: "P-11", layer: 3, type: "P", persona: "Amina", device: "Smartphone", title: "Uso interrotto nella copertura responsive secondaria", desc: "La copertura responsive secondaria deve sostenere l'uso discontinuo di CUPweb da browser smartphone, tollerando standby e cambi di scheda e consentendo la ripresa del lavoro." },
 
       "U1-01": { id: "U1-01", layer: 3, type: "U", persona: "Pina", scenario: "Visita diabetologica", title: "Contesto conservato e bus urbano", desc: "Il percorso per una visita ricorrente deve conservare il contesto, proporre sedi compatibili con la mobilità e ridurre i passaggi; in modalità co-pilota, scelta e azione restano a Pina con il supporto del caregiver." },
       "U1-02": { id: "U1-02", layer: 3, type: "U", persona: "Pina", scenario: "Visita diabetologica", title: "Errore chiaro senza azzerare form", desc: "Errore esplicita causa, recupero e assistenza senza azzerare i dati inseriti." },
@@ -728,7 +728,7 @@
       "C-08": { id: "C-08", layer: 4, title: "Scelte conservate e riepilogo pre-conferma", origin: "U3-01 + U3-02", desc: "Il sistema deve conservare le scelte durante consultazione e aiuto, quindi mostrare un riepilogo completo prima della conferma." },
       "C-09": { id: "C-09", layer: 4, title: "Terminologia chiara con mediazione", origin: "P-09 + P-03", desc: "Terminologia e conseguenze precise ma comprensibili, con spiegazioni progressive adatte anche alla mediazione linguistica." },
       "C-10": { id: "C-10", layer: 4, title: "Ruoli e limiti nelle due modalità", origin: "P-10 + P-04 + P-05", desc: "Ruoli, autorizzazioni e limiti devono restare espliciti in entrambe le modalità; la delega completa riguarda l'esecuzione del compito e non implica accesso illimitato ai dati sanitari." },
-      "C-11": { id: "C-11", layer: 4, title: "Tolleranza interruzioni mobile", origin: "P-11 + U4-01", desc: "I percorsi da smartphone devono tollerare interruzioni e consentire una ripresa riconoscibile senza perdita di lavoro." },
+      "C-11": { id: "C-11", layer: 4, title: "Ripresa del lavoro nel caso responsive secondario", origin: "P-11 + U4-01", desc: "La copertura responsive secondaria deve tollerare le interruzioni da smartphone e consentire una ripresa riconoscibile senza perdita di lavoro." },
       "C-12": { id: "C-12", layer: 4, title: "Conferme condivisibili sicure", origin: "U4-02 + U2-02", desc: "Stati e conferme condivisibili devono coordinare i familiari senza creare duplicazioni o accessi impliciti ai dati." }
     };
 
