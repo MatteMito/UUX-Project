@@ -135,3 +135,9 @@ Le spunte precedenti descrivono i contenuti predisposti; non sostituiscono la ve
 
 - [x] Definire CUPweb come servizio web oggetto del redesign, con esperienza principale da computer, copertura responsive secondaria ed ER Salute esclusa.
 - [x] Mantenere un unico confronto CUPweb–MioDottore e conservare dispositivi e dati delle sessioni originali.
+
+## Contesti delle sessioni e sintesi — 13 ottobre 2026
+
+- [x] Allineati 06a/06b alla conferma del responsabile: Giorgio su tablet; Carla, Silvia e Fatima su PC.
+- [x] Sintesi di Fatima centrata su termini burocratici, coordinamento e interruzioni; citazioni e dati quantitativi preservati.
+- [x] Protocollo e registro delle evidenze allineati; originali di sessione ancora da acquisire.

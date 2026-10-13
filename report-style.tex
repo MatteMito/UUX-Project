@@ -9,7 +9,7 @@
 \usepackage{amsmath,amssymb}
 \usepackage{microtype}
 \usepackage{longtable,booktabs,array}
-% Compatibilita con le tabelle storiche delle fasi C/D, non riscritte qui.
+% Calcolo delle larghezze delle tabelle dei protocolli.
 \usepackage{calc}
 \newcounter{none}
 \usepackage{graphicx}
@@ -32,14 +32,17 @@
 \setcounter{secnumdepth}{2}
 \setcounter{tocdepth}{2}
 \setlength{\emergencystretch}{6em}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0.4\baselineskip plus 1pt minus 1pt}
+\setlength{\parindent}{1em}
+% I blocchi a tutta larghezza non devono ereditare il rientro del testo.
+\AddToHook{env/minipage/before}{\noindent}
+\setlength{\parskip}{0.12\baselineskip plus 1pt}
 \setlength{\LTpre}{0.6\baselineskip}
 \setlength{\LTpost}{0.6\baselineskip}
 \renewcommand{\arraystretch}{1.15}
 \setlength{\tabcolsep}{5pt}
 \setlist[itemize]{leftmargin=*,topsep=0.4\baselineskip,itemsep=0.15\baselineskip,parsep=0pt,partopsep=0pt}
-\captionsetup{font=small,labelfont=bf,skip=6pt}
+\captionsetup{font=small,labelfont=bf,skip=6pt,justification=raggedright,singlelinecheck=false,hypcap=false}
+\captionsetup[table]{position=top}
 \urlstyle{same}
 \AtBeginDocument{\renewcommand{\abstractname}{Abstract}}
 \raggedbottom
@@ -48,24 +51,24 @@
 \widowpenalty=10000
 \displaywidowpenalty=10000
 
-% Un solo colore di accento; i contenuti restano neri su bianco.
-\definecolor{headingcolor}{HTML}{24364B}
-\definecolor{rulecolor}{HTML}{A7B4C2}
+% Titoli e contenuti in nero; cornici neutre.
+\definecolor{headingcolor}{HTML}{000000}
+\definecolor{rulecolor}{HTML}{A0A0A0}
 \definecolor{todobackground}{HTML}{FFF4CC}
 \definecolor{todotext}{HTML}{6B3E00}
-\titleformat{\chapter}{\normalfont\huge\bfseries\raggedright\color{headingcolor}}{\thechapter}{0.6em}{}
+\titleformat{\chapter}{\normalfont\LARGE\bfseries\raggedright\color{headingcolor}}{\thechapter}{0.6em}{}
 \titlespacing*{\chapter}{0pt}{0pt}{1.5\baselineskip}
-\titleformat{\section}{\normalfont\Large\bfseries\raggedright\color{headingcolor}}{\thesection}{0.6em}{}
+\titleformat{\section}{\normalfont\large\bfseries\raggedright\color{headingcolor}}{\thesection}{0.6em}{}
 \titlespacing*{\section}{0pt}{1.6\baselineskip}{0.7\baselineskip}
-\titleformat{\subsection}{\normalfont\large\bfseries\color{headingcolor}}{\thesubsection}{0.6em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries\color{headingcolor}}{\thesubsection}{0.6em}{}
 \titlespacing*{\subsection}{0pt}{\baselineskip}{0.4\baselineskip}
 \titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{0.6em}{}
 \titlespacing*{\subsubsection}{0pt}{0.8\baselineskip}{0.3\baselineskip}
 
 % Le card scorrono come sezioni; i campi restano uniti al testo successivo.
-\newcommand{\cardsection}[1]{\par\Needspace{11\baselineskip}\section{#1}}
+\newcommand{\cardsection}[1]{\par\Needspace{5\baselineskip}\section{#1}}
 \newcommand{\fieldheading}[1]{%
-  \par\Needspace{5\baselineskip}%
+  \par\Needspace{3\baselineskip}%
   \par\addvspace{0.65\baselineskip}%
   {\noindent\color{headingcolor}\bfseries #1\par}%
   \nobreak\vspace{0.1\baselineskip}%
@@ -86,6 +89,8 @@
   left=7pt,right=7pt,top=5pt,bottom=5pt
 }
 \newcommand{\projecttodo}[1]{\begin{projecttodobox}#1\end{projecttodobox}}
+
+% Compatibilità con le annotazioni delle fasi C/D conservate.
 \newcommand{\todoinline}[1]{\textcolor{todotext}{\textbf{TODO:} #1}}
 
 \hypersetup{colorlinks=true,linkcolor=headingcolor,citecolor=headingcolor,
