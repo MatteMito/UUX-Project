@@ -1,49 +1,114 @@
 % !TEX root = ../hphp-project-report.tex
 \chapter{Fase C: Design Proposal}
 
+\section{Modello di design e strategia metodologica}
+
+\subsection{Adozione del modello di design}
+
+Per guidare la transizione dalle evidenze empiriche ed etnografiche delle Fasi A e B alla proposta operativa di riprogettazione, il team ha adottato formalmente il modello concettuale a strati di \textbf{Jesse James Garrett} (\emph{The Elements of User Experience}), integrato con i principi del \textbf{Goal-Directed Design} di \textbf{Alan Cooper} (\emph{About Face}) e il ciclo iterativo dello standard \textbf{ISO 9241-210} (\emph{Human-Centred Design for Interactive Systems}).
+
+Il modello di Garrett struttura il processo progettuale su cinque livelli progressivi di decisione, dal piano astratto a quello tangibile:
+\begin{enumerate}
+\item \textbf{Strategy Plane:} definisce gli obiettivi organizzativi della sanità regionale (riduzione delle liste d\textquotesingle attesa, abbattimento del tasso di abbandono digitale, inclusione delle fasce fragili) e i bisogni profondi emersi dai modelli mentali delle quattro personas (autonomia protetta per Pina, efficienza a basso attrito per Elena, trasparenza e controllo per Renato, mediazione e flessibilità per Amina).
+\item \textbf{Scope Plane:} delimita le funzionalità offerte e i requisiti informativi, formalizzando la coesistenza di due binari operativi complementari: la \textbf{Modalità Co-Pilota} (assistenza collaborativa in tempo reale) e la \textbf{Modalità Delega Piena} (gestione asincrona per conto terzi).
+\item \textbf{Structure Plane:} definisce l\textquotesingle Information Architecture (organizzazione dei contenuti e sistema di etichettatura per compiti) e l\textquotesingle Interaction Design (flussi operativi, gestione del feedback, tolleranza agli errori) attraverso diagrammi di struttura formali (\emph{Structure Blueprints}).
+\item \textbf{Skeleton Plane:} definisce l\textquotesingle arrangiamento visivo, la gerarchia delle informazioni desktop e i componenti di navigazione attraverso la suite di wireframe per computer (Versione 0).
+\item \textbf{Surface Plane:} definisce il linguaggio visivo, i contrasti cromatici e il microcopy in linguaggio naturale (\emph{Plain Language}).
+\end{enumerate}
+
+\subsection{Integrazione degli approcci Top-down e Bottom-up}
+
+L\textquotesingle architettura del sistema è stata concepita mediante una sintesi metodologica bidirezionale:
+\begin{itemize}
+\item \textbf{Approccio Top-down (dagli obiettivi alla strategia):} parte dai macro-obiettivi di servizio pubblico della Regione Emilia-Romagna e dai profili comportamentali del cast di personas. Questo approccio guida la suddivisione delle funzionalità nelle cinque macro-aree orientate ai compiti del cittadino e struttura il principio di \emph{empowerment non sostitutivo}: l\textquotesingle anziano mantiene la titolarità dell\textquotesingle azione sulla propria postazione PC, mentre il caregiver interviene come supporto visivo e rassicurativo a distanza.
+\item \textbf{Approccio Bottom-up (dalle parti al sistema):} parte dall\textquotesingle inventario atomico dei dati e dei documenti sanitari reali (la ricetta dematerializzata con codice NRE a 15 caratteri, le disponibilità orarie dei calendari CUP delle singole AUSL, gli avvisi di pagamento pagoPA, le deleghe formali registrate nel Fascicolo Sanitario Elettronico). Il sistema aggrega queste componenti frammentate e le ricompone in un flusso lineare su layout desktop, delegando all\textquotesingle infrastruttura informatica il routing tra i diversi database e sollevando l\textquotesingle utente dall\textquotesingle onere della classificazione manuale.
+\end{itemize}
+
+\subsection{Importazione e priorità dei requisiti di design}
+
+La proposta di design recepisce integralmente e rende operativi i requisiti numerati consolidati nelle conclusioni della Fase A (\texttt{REQ-01}...\texttt{REQ-09}) e nelle schede delle personas e del cast della Fase B (\texttt{P-01}...\texttt{P-11}, \texttt{U1}...\texttt{U4}, \texttt{C-01}...\texttt{C-12}).
+
+\begin{center}
+\small
+\begin{tabular}{@{}llcp{0.48\linewidth}@{}}
+\toprule
+\textbf{Requisito} & \textbf{Origine} & \textbf{Priorità} & \textbf{Decisione Progettuale Chiave in Fase C} \\
+\midrule
+\textbf{REQ-01} & ID-01, P-01 & Alta & Accesso iniziale con autenticazione all\textquotesingle ingresso del portale: primo accesso o rinnovo tramite SPID/CIE con impostazione contestuale di un PIN personale a 30 giorni (modello INPS), seguito da accesso rapido quotidiano tramite solo PIN dal PC domestico; navigazione interna interamente profilata e priva di interruzioni durante la prenotazione. \\
+\textbf{REQ-02} & ID-02, R-02 & Alta & Unificazione visiva e sistemica dei touchpoint sotto un\textquotesingle unica interfaccia HPHP coerente. \\
+\textbf{REQ-03} & ID-03, ID-04, P-08 & Media & Gerarchia visiva ad alto contrasto, Plain Language, trasparenza tariffe SSN vs Libera Professione. \\
+\textbf{REQ-04} & ID-05, ID-08, P-03 & Alta & Flusso guidato a step, isolamento dei comandi distruttivi, dicitura esplicita di reversibilità/modifica. \\
+\textbf{REQ-05} & ID-06, R-05 & Media & Struttura semantica desktop chiara, pulsanti ad alta salienza visiva, compatibilità screen reader. \\
+\textbf{REQ-06} & ID-10, P-04, P-05 & Alta & Modalità Co-Pilota (guida in tempo reale non espropriativa) e Delega Piena asincrona tracciata. \\
+\textbf{REQ-07} & ID-09, P-10, U4-02 & Alta & Riepilogo dettagliato anti-duplicati con stampa A4 ad alta leggibilità, condivisione WhatsApp, SMS e calendario. \\
+\textbf{REQ-08} & ID-11, P-11, U4-01 & Media & Resilienza a standby e interruzioni: congelamento stato task per 24 ore e ripresa assistita in farmacia/CUP. \\
+\textbf{REQ-09} & ID-12, R-09 & Media & Canale di assistenza scritto/asincrono contestuale affiancato alla rete territoriale delle farmacie. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Principi di tono, voce e messaggio}
+
+Poiché il tono e il registro linguistico influenzano direttamente la motivazione e la fiducia degli utenti più fragili, sono state definite tre linee guida comunicative vincolanti per tutte le schermate:
+\begin{itemize}
+\item \textbf{Plain Language contro la burocrazia tecnica:} eliminazione totale delle diciture ministeriali aride in ALL CAPS (riscontrate nell\textquotesingle assessment di CUPweb) e delle sigle opache. I termini tecnici necessari (es. NRE, intramoenia, impegnativa) sono sempre affiancati da glosse esplicative in linguaggio comune ed esempi visivi contestuali (\texttt{REQ-03}, \texttt{P-09}, \texttt{C-09}).
+\item \textbf{Rassicurazione attiva e reversibilità garantita:} superamento dell\textquotesingle ansia da errore irreversibile (\texttt{ID-08}, \texttt{P-03}). L\textquotesingle interfaccia esplicita chiaramente prima di ogni azione critica: \emph{``Non ti preoccupare: potrai modificare o disdire gratuitamente questo appuntamento in qualsiasi momento fino a 48 ore prima della visita''}. I pulsanti di cancellazione sono cromaticamente e spazialmente separati dai pulsanti di conferma (\texttt{C-07}).
+\item \textbf{Rispetto e non infantilizzazione:} il tono di voce è accogliente, chiaro e incoraggiante, ma mantiene la serietà di un servizio istituzionale di salute pubblica. Non adotta toni paternalistici o sminuenti, preservando la dignità e l\textquotesingle autonomia dell\textquotesingle adulto anziano (\texttt{P-08}, \texttt{C-06}).
+\end{itemize}
+
+\subsection{Delimitazione dello scope e strategia d\textquotesingle accesso Desktop-First}
+
+Il progetto HPHP si concentra formalmente sulla riprogettazione dell\textquotesingle esperienza utente di \textbf{CUPweb come portale web per personal computer (Desktop PC)}. 
+
+Nell\textquotesingle ecosistema della sanità digitale della Regione Emilia-Romagna, l\textquotesingle accesso in mobilità tramite smartphone è affidato all\textquotesingle applicazione nativa per dispositivi mobili \textbf{ER Salute}. Tale applicazione risponde a requisiti, pattern d\textquotesingle interazione e contesti d\textquotesingle uso marcatamente distinti, e si colloca formalmente al di fuori del dominio e dell\textquotesingle obiettivo didattico del presente progetto. Pertanto, l\textquotesingle ottimizzazione specifica per schermi smartphone non costituisce l\textquotesingle oggetto di questo redesign.
+
+Coerentemente con i moderni standard di ingegneria web, l\textquotesingle interfaccia adotta comunque un\textquotesingle architettura responsive fluida per garantire che il layout mantenga integrità strutturale qualora aperto su schermi di dimensioni ridotte. Tuttavia, **tutte le decisioni di Information Architecture, gli Structure Blueprints e la suite completa dei wireframe sono rigorosamente progettati e ottimizzati per l\textquotesingle ambiente Desktop PC** (risoluzione di riferimento 1280$\times$800 / 1440$\times$900\,px). 
+
+Questa focalizzazione risponde direttamente ai contesti operativi reali documentati nelle personas di Fase B:
+\begin{itemize}
+\item \textbf{Ergonomia d\textquotesingle uso per l\textquotesingle utente anziano (Pina, Renato):} l\textquotesingle interazione su grande schermo elimina la claustrofobia visiva del display mobile, consente l\textquotesingle impiego di caratteri tipografici ampi e contrastati, riduce l\textquotesingle errore da tocco accidentale grazie alla stabilità del mouse e permette di avere sott\textquotesingle occhio contemporaneamente la ricetta cartacea appoggiata sulla scrivania e i campi a video.
+\item \textbf{Densità e trasparenza comparativa:} l\textquotesingle ampiezza dello schermo desktop consente di affiancare in un\textquotesingle unica vista tabelle comparative ricche (canale pubblico SSN vs libera professione ALPI) e mappe territoriali integrate all\textquotesingle elenco delle strutture sanitarie, senza costringere l\textquotesingle utente a complessi cambi di schermata.
+\item \textbf{Postazione di lavoro del caregiver (Elena, Amina):} la figlia lavoratrice Elena opera frequentemente dal computer dell\textquotesingle ufficio o da casa, dove una dashboard desktop a tutta larghezza consente una gestione efficiente, sicura e multi-profilo della salute dei genitori.
+\end{itemize}
+
 \cardsection{Documento 02: Information Architecture card}
 
-\subsection{Inquadramento strategico, perimetro Desktop e modello concettuale}
+\subsection{Ruolo e necessità dell\textquotesingle Information Architecture}
 
-La proposta di riprogettazione di CUPweb adotta formalmente il modello dell\textquotesingle\textbf{Information Architecture} formulato da \textbf{Rosenfeld e Morville} (\emph{Information Architecture for the World Wide Web}) integrato con il piano della struttura (\emph{Structure Plane}) di \textbf{Jesse James Garrett} (\emph{The Elements of User Experience}). 
+Una fase di riprogettazione specifica dell\textquotesingle Information Architecture è risultata indispensabile e propedeutica a qualsiasi scelta di interfaccia grafica. L\textquotesingle analisi di Fase A ha infatti dimostrato che la barriera primaria di usabilità dell\textquotesingle attuale sistema non risiede soltanto nell\textquotesingle estetica visiva, ma nella frammentazione strutturale dell\textquotesingle informazione sanitaria regionale, suddivisa su tre piattaforme autonome e scollegate: CUPweb per la prenotazione, il Fascicolo Sanitario Elettronico (FSE) per ricette e referti, e pagoPA / Pagonlinesanità per il pagamento del ticket.
 
-L\textquotesingle architettura dell\textquotesingle informazione opera come ponte disciplinare tra le evidenze empiriche ed etnografiche delle Fasi A e B e le interfacce concrete, traducendo i requisiti chiave consolidati (\texttt{REQ-01}...\texttt{REQ-09}) in una struttura coerente e centrata sui compiti reali dei cittadini.
-
-In accordo con le scelte strategiche del team, il progetto fissa tre pilastri fondativi:
-\begin{itemize}
-\item \textbf{Perimetro esclusivo su Desktop PC:} CUPweb è concepito e progettato primariamente per l\textquotesingle interazione da computer desktop (risoluzione di riferimento 1280$\times$800 / 1440$\times$900\,px). Nell\textquotesingle ecosistema della sanità regionale, l\textquotesingle uso da smartphone in mobilità è presidiato dall\textquotesingle applicazione nativa \textbf{ER Salute}, formalmente esterna al perimetro progettuale. Il portale adotta un\textquotesingle architettura responsive fluida per standard tecnologico, ma ogni scelta di IA, densità visiva e componenti risponde all\textquotesingle ergonomia desktop: consente all\textquotesingle utente anziano (\emph{Pina, Renato}) di consultare l\textquotesingle interfaccia con caratteri grandi, mouse stabile e ricetta cartacea affiancata sulla scrivania, e offre al caregiver lavoratore (\emph{Elena}) una postazione efficiente per la gestione multi-profilo.
-\item \textbf{Gate d\textquotesingle Ingresso con PIN personale a 30 giorni:} per conciliare sicurezza e abbattimento dell\textquotesingle attrito cognitivo per la terza età (\texttt{REQ-01}), l\textquotesingle accesso al portale richiede l\textquotesingle autenticazione all\textquotesingle ingresso. L\textquotesingle anziano sul PC domestico accede quotidianamente tramite un tastierino per PIN numerico a 4--5 cifre da lui stesso scelto; l\textquotesingle autenticazione forte SPID/CIE è richiesta una sola volta al mese, consentendo una navigazione interna interamente profilata e priva di interruzioni di login tardive durante la prenotazione.
-\item \textbf{Dualità HPHP (Co-Pilota e Delega Piena):} coesistenza di due modalità di supporto familiare: la \textbf{Modalità Co-Pilota} (collaborazione sincrona a distanza con puntatore condiviso e canale audio, in cui l\textquotesingle anziano mantiene il controllo del mouse) e la \textbf{Modalità Delega Piena} (gestione asincrona del caregiver con banner arancione persistente e tracciamento bilaterale).
-\end{itemize}
+L\textquotesingle architettura attuale riflette i confini burocratici dei fornitori IT e dei database delle singole AUSL, costringendo il cittadino a conoscere a priori l\textquotesingle organigramma della Pubblica Amministrazione. Ridisegnare le schermate senza ristrutturare a monte l\textquotesingle Information Architecture avrebbe lasciato intatto il disorientamento cognitivo, la ridondanza e il timore di abbandono documentati nei test empirici (\texttt{ID-02}, \texttt{R-02}, \texttt{REQ-02}).
 
 \subsection{Approccio architetturale: Top-down vs. Bottom-up}
 
 L\textquotesingle architettura dell\textquotesingle informazione adotta una sintesi integrata tra due approcci complementari:
 \begin{itemize}
-\item \textbf{Top-down:} definisce la gerarchia delle macro-categorie a partire dai modelli mentali delle personas e dagli obiettivi di servizio pubblico della Regione Emilia-Romagna (riduzione dell\textquotesingle abbandono digitale, autonomia protetta per Pina, efficienza per Elena). Questo approccio struttura le cinque macro-aree primarie orientate ai compiti della vita reale: prenotare, consultare gli appuntamenti, visualizzare le prescrizioni, gestire i familiari assistiti e richiedere supporto.
-\item \textbf{Bottom-up:} parte dall\textquotesingle inventario atomico dei dati e dei documenti sanitari reali (la ricetta dematerializzata con codice NRE a 15 caratteri, le agende CUP delle diverse AUSL, i codici di esenzione, le disponibilità orarie, le fermate del trasporto pubblico locale). Il sistema aggrega tali elementi e li ricompone in viste unificate su layout desktop, delegando all\textquotesingle infrastruttura informatica l\textquotesingle interoperabilità tra banche dati e sollevando l\textquotesingle utente dall\textquotesingle onere della classificazione burocratica.
+\item \textbf{Top-down:} definisce la gerarchia delle macro-categorie di primo livello a partire dai modelli mentali degli utenti emersi dalle personas (i compiti della vita reale: prenotare, consultare gli appuntamenti, visualizzare le ricette, delegare la cura, chiedere supporto).
+\item \textbf{Bottom-up:} cataloga e organizza i singoli oggetti informativi minimi (NRE, quesito diagnostico, branca specialistica, codice fiscale, quietanza di pagamento, fermate bus) garantendo che ciascun dato sia collocato nel punto esatto in cui l\textquotesingle utente se lo aspetta e che le etichette utilizzino termini d\textquotesingle uso comune.
 \end{itemize}
 
-\subsection{Discontinuità rispetto ai silos di CUPweb e principi di tono}
+\subsection{Razionale della discontinuità rispetto al tool esistente}
 
-La nuova architettura segna una netta rottura rispetto al CUPweb esistente, caratterizzato da silos rigidi di backend che costringono l\textquotesingle utente a scegliere preventivamente tra canali amministrativi separati (\emph{specialistica}, \emph{esami di laboratorio}, \emph{sanità pubblica}, \emph{medicina dello sport}).
+La scelta architetturale segna una netta discontinuità rispetto all\textquotesingle impostazione di CUPweb. Il sistema esistente adotta un modello organizzativo rigidamente orientato ai silos di backend: la home page costringe l\textquotesingle utente a scegliere tra quattro percorsi amministrativi mutuamente esclusivi prima ancora di aver inserito qualsiasi dato:
+\begin{enumerate}
+\item \emph{Prenota ricette di specialistica};
+\item \emph{Prenota ricette esami di laboratorio};
+\item \emph{Prenota un Accesso all\textquotesingle Anagrafe Sanitaria o Sanità Pubblica};
+\item \emph{Prenota prestazioni di medicina dello sport}.
+\end{enumerate}
+Questo modello scarica sull\textquotesingle anziano fragile l\textquotesingle onere di comprendere la tassonomia sanitaria regionale (es. sapere se un controllo diabetologico ricada nella specialistica o nella sanità pubblica), generando blocchi decisionali immediati (Pina) e schermate di errore sterili.
 
-Nel redesign HPHP l\textquotesingle architettura è integralmente **orientata ai compiti dell\textquotesingle utente (Task-Driven)**:
-\begin{itemize}
-\item \textbf{Punto d\textquotesingle accesso unico:} la voce \emph{``Prenota una visita o un esame''} accoglie ogni richiesta. Il motore di sistema riconosce automaticamente dal codice ricetta (NRE) o da ricerca semantica la natura della prestazione, smistandola alle agende appropriate in modo invisibile all\textquotesingle utente.
-\item \textbf{Plain Language contro il gergo burocratico:} eliminazione delle diciture ministeriali aride in ALL CAPS e delle sigle opache. I termini tecnici necessari (NRE, intramoenia) sono sempre affiancati da glosse esplicative in linguaggio comune ed esempi visivi (\texttt{REQ-03}, \texttt{P-09}).
-\item \textbf{Rassicurazione attiva e reversibilità garantita:} azzeramento dell\textquotesingle ansia da errore irreversibile (\texttt{ID-08}, \texttt{P-03}). L\textquotesingle interfaccia esplicita chiaramente che la disdetta è gratuita fino a 48 ore lavorative prima della visita (zero penali), fornisce un banner di ripensamento di 10 minuti per annullare la cancellazione con un click e preserva lo stato della sessione per 24 ore (\texttt{REQ-08}).
-\end{itemize}
+Nel redesign HPHP l\textquotesingle architettura è integralmente **orientata ai compiti dell\textquotesingle utente (Task-Driven)**. Il portale desktop offre un unico punto d\textquotesingle accesso intuitivo (\emph{``Prenota una visita o un esame''}): il motore di sistema riconosce automaticamente dal codice ricetta (NRE) o dalle parole chiave se la prestazione sia una visita specialistica, un esame ematochimico o una vaccinazione, smistando la richiesta alle agende appropriate in modo invisibile all\textquotesingle utente.
 
 \subsection{Decisioni sull\textquotesingle organizzazione e sistema di etichettatura}
 
 La navigazione desktop di primo livello si articola in **cinque macro-aree di navigazione globale**, formulate in linguaggio naturale (\emph{Plain Language}) e orientate all\textquotesingle azione:
 \begin{enumerate}
-\item \textbf{``Prenota una visita o esame'':} punto di ingresso unificato con bivio chiaro tra prescrizioni mediche (sincronizzate da FSE o inserite via NRE) e prestazioni ad accesso libero/private.
-\item \textbf{``I miei appuntamenti'':} cruscotto unico a tabella per visualizzare, consultare dettagli clinici, spostare data o disdire tutte le prestazioni regionali, unificando le agende delle diverse AUSL.
-\item \textbf{``Le mie prescrizioni'':} archivio sincronizzato delle ricette dematerializzate prescritte dal medico di base, con indicazione visiva dello stato (da prenotare, già prenotata, scaduta).
-\item \textbf{``Chi assisto'':} area dedicata alla relazione di cura caregiver-assistito (\texttt{P-04}, \texttt{P-05}, \texttt{REQ-06}), con gestione delle deleghe legali FSE e switch del profilo operativo.
-\item \textbf{``Serve aiuto?'':} touchpoint di supporto sempre visibile, con FAQ visuali, guida interattiva alla ricetta cartacea e strumento di salvataggio sessione (codice a 6 cifre valido 24 ore per farmacia o sportello CUP).
+\item \textbf{``Prenota una visita o esame'':} punto di ingresso unico e unificato. Elimina la frammentazione burocratica accogliendo l\textquotesingle utente con un bivio trasparente tra ricetta medica (NRE) e prestazioni ad accesso libero/private.
+\item \textbf{``I miei appuntamenti'':} cruscotto unico desktop a tabella per visualizzare, consultare dettagli, spostare o disdire tutte le prestazioni future e lo storico pregresso, unificando le agende di tutte le AUSL regionali.
+\item \textbf{``Le mie prescrizioni'':} archivio sincronizzato delle ricette dematerializzate prescritte dal medico di medicina generale, con indicazione visiva dello stato (da prenotare, già prenotata, scaduta).
+\item \textbf{``Chi assisto'':} area dedicata alla gestione della relazione tra caregiver e assistito (\texttt{P-04}, \texttt{P-05}, \texttt{C-02}, \texttt{REQ-06}), con gestione delle deleghe legali FSE e switch profilo per operare con trasparenza.
+\item \textbf{``Serve aiuto?'':} touchpoint di supporto sempre visibile nella barra globale, con FAQ visuali in linguaggio semplice, guida contestuale alla ricetta cartacea e strumento di salvataggio sessione per il completamento in farmacia o allo sportello CUP (\texttt{REQ-08}, \texttt{REQ-09}).
 \end{enumerate}
 
 \subsection{Schema dei metadati e modello concettuale}
@@ -63,7 +128,7 @@ Rispetto alla gestione tabellare grezza e isolata di CUPweb, l\textquotesingle a
 \midrule
 \textbf{Regime erogativo (SSN vs ALPI)} & Separazione trasparente tra canale pubblico e Libera Professione; visualizzazione preventiva del costo effettivo in euro e prima data utile in colonne affiancate. & REQ-03, P-08, ID-03 \\
 \midrule
-\textbf{Livello di identificazione} & Autenticazione preliminare all\textquotesingle ingresso del portale (SPID/CIE al primo accesso $\rightarrow$ impostazione PIN personale a 30 giorni $\rightarrow$ accessi rapidi successivi con solo PIN); l\textquotesingle intera navigazione e prenotazione avvengono in contesto già identificato e profilato. & REQ-01, P-01, C-01 \\
+\textbf{Livello di identificazione} & Autenticazione preliminare all\textquotesingle ingresso del portale (SPID/CIE al primo accesso $\rightarrow$ impostazione PIN personale a 30 giorni stile INPS $\rightarrow$ accessi rapidi successivi con solo PIN); l\textquotesingle intera navigazione e prenotazione avvengono in contesto già identificato e profilato. & REQ-01, P-01, C-01 \\
 \midrule
 \textbf{PIN personale semplificato (30\,gg)} & Codice numerico a 4--5 cifre scelto direttamente dall\textquotesingle utente dopo il login SPID/CIE, richiesto nella schermata d\textquotesingle ingresso del portale per i successivi 30 giorni per consentire all\textquotesingle anziano di entrare rapidamente dal PC personale bypassando SPID e OTP. & REQ-01, P-01, REQ-08 \\
 \midrule
@@ -117,7 +182,7 @@ Coerentemente con la tassonomia dell\textquotesingle Information Architecture di
 
 \subsubsection{Invisible Components (Componenti invisibili di supporto)}
 \begin{itemize}
-\item \textbf{Session \& State Persistence Engine:} gestore locale della sessione che previene la scadenza improvvisa per inattività durante pause di riflessione o consultazione di documenti cartacei, preservando lo stato del form per 24 ore (\texttt{REQ-08}, \texttt{ID-11}) e gestendo in sicurezza il PIN personale a 30 giorni scelto direttamente dall\textquotesingle utente, riducendo la barriera dell\textquotesingle autenticazione a due fattori ripetuta nei successivi accessi dal computer personale.
+\item \textbf{Session \& State Persistence Engine:} gestore locale della sessione che previene la scadenza improvvisa per inattività durante pause di riflessione o consultazione di documenti cartacei, preservando lo stato del form per 24 ore (\texttt{REQ-08}, \texttt{ID-11}) e gestendo in sicurezza il PIN personale a 30 giorni scelto direttamente dall\textquotesingle utente (ispirato al modello INPS per gli utenti anziani), riducendo la barriera dell\textquotesingle autenticazione a due fattori ripetuta nei successivi accessi dal computer personale.
 \item \textbf{Real-Time Co-Browsing Signaling Gateway:} middleware basato su protocolli WebSocket/WebRTC che sincronizza la posizione del puntatore visivo tra il computer dell\textquotesingle assistito e quello del caregiver durante la Modalità Co-Pilota, senza trasmissione di flussi video pesanti.
 \item \textbf{Regional Interoperability Bus:} bus di integrazione che interroga in parallelo il Sistema Tessera Sanitaria (validità NRE), i server CUP regionali (disponibilità agende), il Fascicolo Sanitario Elettronico (storico clinico) e il gateway pagoPA.
 \item \textbf{Bilateral Notification Dispatcher:} motore multicanale che invia conferme e promemoria sincronizzati su SMS, email e formati condivisibili (file di calendario ICS, foglio di stampa A4).
@@ -266,7 +331,7 @@ e Fase B, e alle sezioni di wireframe/blueprint che la indirizzano.
   Riferimento: {[}ID-01{]} Fase A, {[}P-01{]} Fase B, raccomandazione
   {[}R-01{]}, requisito {[}REQ-01{]}
 \item
-  Gestita in: autenticazione iniziale richiesta all\textquotesingle ingresso del portale ma resa ad attrito quasi nullo grazie al \textbf{PIN personale a 30 giorni}. L\textquotesingle utente autentica la propria postazione domestica una sola volta al mese con SPID/CIE (eventualmente assistito dal caregiver) e imposta direttamente un codice di 4--5 cifre mnemonico e familiare; nei 30 giorni successivi l\textquotesingle accesso a CUPweb richiede soltanto la digitazione del PIN all\textquotesingle ingresso, consentendo a Pina e Renato di sbloccare immediatamente il proprio profilo e di prenotare in un percorso fluido e continuo senza mai subire l\textquotesingle interruzione traumatica dell\textquotesingle autenticazione a due fattori durante la scelta della visita; wireframe schermate WF-01 (Gate di Accesso), WF-02 (Home Cruscotto), WF-10 (Riepilogo e Conferma Diretta); Blueprint 0 e Blueprint 1; confronto prima/dopo, confronto \#2.
+  Gestita in: autenticazione iniziale richiesta all\textquotesingle ingresso del portale ma resa ad attrito quasi nullo grazie al \textbf{PIN personale a 30 giorni} (ispirato al modello INPS per gli anziani). L\textquotesingle utente autentica la propria postazione domestica una sola volta al mese con SPID/CIE (eventualmente assistito dal caregiver) e imposta direttamente un codice di 4--5 cifre mnemonico e familiare; nei 30 giorni successivi l\textquotesingle accesso a CUPweb richiede soltanto la digitazione del PIN all\textquotesingle ingresso, consentendo a Pina e Renato di sbloccare immediatamente il proprio profilo e di prenotare in un percorso fluido e continuo senza mai subire l\textquotesingle interruzione traumatica dell\textquotesingle autenticazione a due fattori durante la scelta della visita; wireframe schermate WF-01 (Gate di Accesso), WF-02 (Home Cruscotto), WF-10 (Riepilogo e Conferma Diretta); Blueprint 0 e Blueprint 1; confronto prima/dopo, confronto \#2.
 \end{itemize}
 
 \subsubsection{2. Frammentazione tra domini/sottosistemi scollegati}
