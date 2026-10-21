@@ -1,6 +1,6 @@
 # HPHP - Todo List
 
-Questa checklist raccoglie esclusivamente le attività ancora da verificare o completare rispetto al report LaTeX corrente. Per il percorso complessivo del progetto fare riferimento alla [roadmap](docs/roadmap.md) e alle checklist delle singole fasi.
+Questa checklist raccoglie esclusivamente le attività ancora da verificare o completare rispetto al report LaTeX corrente. Per il percorso complessivo del progetto fare riferimento alla [roadmap](roadmap.md) e alle checklist delle singole fasi.
 
 ## Fase A
 
@@ -18,7 +18,7 @@ Questa checklist raccoglie esclusivamente le attività ancora da verificare o co
 
 ### Assessment delle risorse esistenti (sezioni 05a e 05b)
 
-- [ ] Riesaminare il workbook [guideline checklist](phase-a/phase-a-guideline-checklist.xlsx).
+- [ ] Riesaminare il workbook [guideline checklist](../phase-a/phase-a-guideline-checklist.xlsx).
 - [ ] Individuare tutte le guideline marcate `Non verificato`.
 - [ ] Stabilire quali verifiche richiedono autenticazione tramite SPID, CIE o account.
 - [ ] Verificare tali aspetti con soggetti reali durante lo user testing oppure documentarne esplicitamente il rinvio e il limite.

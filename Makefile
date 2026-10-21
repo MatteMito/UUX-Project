@@ -1,14 +1,14 @@
 LATEXMK ?= latexmk
-BUILD_DIR := build/latex
+BUILD_DIR := .build
 MAIN := hphp-project-report.tex
-AUX_EXTENSIONS := aux bbl bcf blg fdb_latexmk fls dvi lof log lot out run.xml synctex.gz toc xdv
+BIBER ?= $(if $(wildcard $(HOME)/.local/share/biber/biber),$(HOME)/.local/share/biber/biber,biber)
 
 .PHONY: pdf clean
 
 pdf:
 	mkdir -p $(BUILD_DIR)
-	$(LATEXMK) -xelatex -synctex=1 -interaction=nonstopmode -halt-on-error -emulate-aux-dir -auxdir=$(BUILD_DIR) -outdir=$(BUILD_DIR) -out2dir=. -e '@out2_exts = ( "pdf" );' -jobname=hphp-project-report $(MAIN)
+	$(LATEXMK) -norc -xelatex -synctex=1 -emulate-aux-dir -auxdir=$(BUILD_DIR) -outdir=. -interaction=nonstopmode -halt-on-error -file-line-error -e '$$biber = "$(BIBER) %O %S";' $(MAIN)
 
 clean:
-	rm -rf $(BUILD_DIR)
-	rm -f $(addprefix $(basename $(MAIN)).,$(AUX_EXTENSIONS))
+	$(LATEXMK) -norc -c -emulate-aux-dir -auxdir=$(BUILD_DIR) -outdir=. $(MAIN)
+	rm -f $(BUILD_DIR)/*-SAVE-ERROR

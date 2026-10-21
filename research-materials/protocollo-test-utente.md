@@ -20,7 +20,9 @@ Chiarire inoltre:
 
 ## 3. Task ed esecuzione
 
-### 06a --- CUPweb (Browser PC / Smartphone)
+Dispositivi delle sessioni riportate: Giorgio su tablet; Carla, Silvia e Fatima su PC, su entrambi i servizi. Le osservazioni responsive dell’assessment restano distinte dai test individuali.
+
+### 06a --- CUPweb (browser)
 
 | # | Task | Metodologia |
 |---|---|---|

@@ -1,209 +1,80 @@
-\documentclass[11pt,a4paper,twoside,openright]{report}
-
-\usepackage{fontspec}
-\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
-\usepackage[italian]{babel}
-\usepackage[a4paper,inner=2.8cm,outer=2.3cm,top=2.5cm,bottom=2.6cm]{geometry}
-\usepackage{xcolor}
-\usepackage[most]{tcolorbox}
-\usepackage{amsmath,amssymb}
-\usepackage{microtype}
-\usepackage{parskip}
-\usepackage{longtable,booktabs,array}
-\usepackage{calc}
-\usepackage{etoolbox}
-\usepackage{graphicx}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.18}
-\usepackage{caption}
-\usepackage{enumitem}
-\usepackage{hyperref}
-\usepackage{bookmark}
-\usepackage{xurl}
-\usepackage{fancyhdr}
-\usepackage{titlesec}
-\usepackage{emptypage}
-\usepackage{csquotes}
-\usepackage[backend=biber,style=numeric-comp,sorting=nyt,maxbibnames=99,defernumbers=true]{biblatex}
-\addbibresource{references/references.bib}
-
-\setcounter{secnumdepth}{2}
-\setcounter{tocdepth}{2}
-\setlength{\emergencystretch}{3em}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0.65\baselineskip plus 0.18\baselineskip minus 0.1\baselineskip}
-\setlength{\LTpre}{0.8\baselineskip}
-\setlength{\LTpost}{0.8\baselineskip}
-\setlist[itemize]{leftmargin=*,topsep=0.5\baselineskip,itemsep=0.2\baselineskip,parsep=0pt,partopsep=0pt}
-\urlstyle{same}
-\AtBeginDocument{\renewcommand{\abstractname}{Abstract}}
-
-\definecolor{headingcolor}{HTML}{24364B}
-\definecolor{rulecolor}{HTML}{A7B4C2}
-\definecolor{todobackground}{HTML}{FFF4CC}
-\definecolor{todoframe}{HTML}{C77800}
-\definecolor{todotext}{HTML}{6B3E00}
-
-\titleformat{\chapter}[display]
-  {\normalfont\bfseries\color{headingcolor}}
-  {\Large\MakeUppercase{\chaptername}\ \thechapter}
-  {0.55em}
-  {\Huge}
-  [\vspace{0.7em}\color{rulecolor}\titlerule]
-\titlespacing*{\chapter}{0pt}{-1.1cm}{1.8\baselineskip}
-\titleformat{\section}
-  {\normalfont\Large\bfseries\color{headingcolor}}{\thesection}{0.7em}{}
-  [\vspace{0.3em}\color{rulecolor}\titlerule]
-\titlespacing*{\section}{0pt}{0pt}{1.25\baselineskip}
-\titleformat{\subsection}
-  {\normalfont\large\bfseries\color{headingcolor}}{\thesubsection}{0.65em}{}
-\titlespacing*{\subsection}{0pt}{1.8\baselineskip plus 0.4\baselineskip}{0.6\baselineskip}
-\titleformat{\subsubsection}
-  {\normalfont\normalsize\bfseries}{\thesubsubsection}{0.55em}{}
-\titlespacing*{\subsubsection}{0pt}{1.4\baselineskip}{0.35\baselineskip}
-
-\newcommand{\cardsection}[1]{\clearpage\section{#1}}
-\newcommand{\fieldheading}[1]{%
-  \par\addvspace{0.85\baselineskip}%
-  {\noindent\color{headingcolor}\bfseries #1\par}%
-  \nobreak\vspace{0.15\baselineskip}%
-}
-
-% Evidenzia in modo uniforme le attivita ancora da completare nel report.
-\newtcolorbox{projecttodobox}{
-  enhanced,
-  breakable,
-  colback=todobackground,
-  colframe=todoframe,
-  coltitle=todotext,
-  colbacktitle=todobackground,
-  boxrule=0.7pt,
-  arc=1.5pt,
-  left=8pt,
-  right=8pt,
-  top=7pt,
-  bottom=7pt,
-  before skip=0.8\baselineskip,
-  after skip=0.8\baselineskip,
-  title={TODO},
-  fonttitle=\bfseries
-}
-\newcommand{\projecttodo}[1]{\begin{projecttodobox}#1\end{projecttodobox}}
-\newcommand{\todoinline}[1]{%
-  \colorbox{todobackground}{\strut\textcolor{todotext}{\textbf{TODO}}}\enspace
-  \textcolor{todotext}{#1}%
-}
-
-\newcounter{none}
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-
-\makeatletter
-\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
-\newsavebox\pandoc@box
-\newcommand*\pandocbounded[1]{%
-  \sbox\pandoc@box{#1}%
-  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
-  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
-  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi
-  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
-  \else\usebox\pandoc@box\fi}
-\makeatother
-
-\hypersetup{
-  colorlinks=true,
-  linkcolor=black,
-  citecolor=black,
-  urlcolor=blue,
-  pdftitle={Documentazione del progetto HPHP},
-  pdfauthor={Team Affordance}
-}
-
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[LE]{\small\nouppercase{\leftmark}}
-\fancyhead[RO]{\small\nouppercase{\rightmark}}
-\fancyfoot[LE,RO]{\thepage}
-\setlength{\headheight}{14pt}
-\renewcommand{\chaptermark}[1]{\markboth{\thechapter\quad #1}{}}
-\renewcommand{\sectionmark}[1]{\markright{\thesection\quad #1}}
-\fancypagestyle{plain}{%
-  \fancyhf{}
-  \fancyfoot[LE,RO]{\thepage}
-  \renewcommand{\headrulewidth}{0pt}
-}
+\documentclass[11pt,a4paper,oneside,openany]{report}
+\input{report-style.tex}
 
 \begin{document}
+\hypersetup{pageanchor=false}
 
 \begin{titlepage}
   \centering
-  \vspace*{2cm}
-  {\Large Corso di Usability \& User Experience Design\par}
-  \vspace{1.5cm}
-  {\Huge\bfseries Documentazione del progetto HPHP\par}
-  \vspace{0.25cm}
-  {\Large\itshape Help People Help People\par}
-  \vspace{0.6cm}
-  {\LARGE Riprogettazione dell'esperienza di prenotazione sanitaria online\par}
-  \vspace{0.45cm}
-  {\large CUPweb (Browser PC e Smartphone)\par}
-  \vspace{0.9cm}
-  \rule{0.58\textwidth}{0.5pt}\par
+  \null\vfill
+  {\Huge\bfseries\color{headingcolor} Help People Help People\par}
+  \medskip
+  {\Large Usability \& User Experience Design\par}
+  \bigskip
+  {\LARGE Riprogettazione dell'esperienza\par di prenotazione e pagamento\par delle prestazioni sanitarie online\par}
+  \medskip
+  {\Large\color{headingcolor} CUPweb\par}
   \vfill
-  {\large Team Affordance\par}
-  \vspace{0.4cm}
+  {\large\bfseries Team Affordance\par}
+  \medskip
   Matteo Boscherini\par
   Alessandro Campedelli\par
   Francesco Maria Fuligni\par
   \vfill
-  {\large Anno accademico 2025--2026\par}
-  \vspace{0.7cm}
-  \small Repository del progetto:\\
-  \url{https://github.com/MatteMito/UUX-Project}
+  Anno accademico 2025--2026\par
 \end{titlepage}
 
-\cleardoublepage
+\clearpage
 \pagenumbering{roman}
-\begin{abstract}
-Il presente elaborato documenta il progetto HPHP (\emph{Help People
-Help People}), dedicato alla
-riprogettazione dell'esperienza di prenotazione sanitaria online per
-la web application CUPweb della Regione Emilia-Romagna, analizzata nella
-sua duplice fruizione da browser PC e browser smartphone. L'analisi considera le
-barriere di accesso digitale degli utenti anziani e il ruolo dei
-caregiver familiari, traducendo le evidenze raccolte in requisiti di
-progettazione, personas, architettura dell'informazione, wireframe e
-protocolli di valutazione. Il lavoro è organizzato in quattro fasi:
-ricerca e valutazione, studio di fattibilità, proposta progettuale e
-valutazione. Gli artefatti nativi e aggiornabili sono disponibili nel
-repository del progetto:\\
-\url{https://github.com/MatteMito/UUX-Project}
-\end{abstract}
+\hypersetup{pageanchor=true}
+\section*{Abstract}
+Il presente elaborato documenta il progetto \emph{Help People Help People},
+dedicato alla riprogettazione dell'esperienza di prenotazione sanitaria
+online su CUPweb della Regione Emilia-Romagna. Il lavoro considera anche
+il pagamento come percorso accessorio, con particolare attenzione alla
+continuità del servizio e alla comprensione dei dati richiesti. Il
+redesign privilegia l'uso da computer e prevede un adattamento responsive;
+l'app ER Salute resta esterna al perimetro. L'analisi affronta le barriere
+di accesso degli utenti anziani e il ruolo dei caregiver familiari,
+traducendo il contesto documentale e i casi progettuali in requisiti,
+personas, architettura dell'informazione, wireframe e protocolli di
+valutazione. L'elaborato si articola in ricerca e valutazione del servizio,
+studio di fattibilità, proposta progettuale e valutazione del redesign.
 
-\subsection*{Materiali supplementari}
-Il report è corredato dagli artefatti progettuali mantenuti nei rispettivi
-formati nativi e modificabili: il \emph{service blueprint}, i wireframe
-delle versioni 0 e 1, il confronto prima/dopo, la checklist delle linee
-guida e le schede di personas e cast. I materiali sono organizzati nelle
-cartelle delle singole fasi e sono disponibili nel repository del progetto.
-
-\subsection*{Nota terminologica}
-Per assicurare coerenza con le checklist e i deliverable del corso, le
-denominazioni tecniche di card, metodi, metriche e artefatti sono mantenute
-in inglese; il testo argomentativo e descrittivo resta in italiano.
-
-\cleardoublepage
+\clearpage
+\begingroup
+\small
 \tableofcontents
+\endgroup
 
-\cleardoublepage
+\clearpage
 \pagenumbering{arabic}
+\clearpage
+\renewcommand{\reportpart}{Fase A}
 \input{phase-a/phase-a.tex}
+\clearpage
+\renewcommand{\reportpart}{Fase B}
 \input{phase-b/phase-b.tex}
+\clearpage
+\renewcommand{\reportpart}{Fase C}
 \input{phase-c/phase-c.tex}
+\clearpage
+\renewcommand{\reportpart}{Fase D}
 \input{phase-d/phase-d.tex}
 
+\clearpage
+\renewcommand{\reportpart}{Riferimenti}
 \chapter{Riferimenti}
-\printbibliography[type=report,title={Bibliografia},heading=subbibintoc]
+La bibliografia raccoglie libri, capitoli, articoli e rapporti, anche quando
+disponibili online; la sitografia raccoglie le pagine e le risorse web.
+Le date di consultazione si riferiscono all'accesso agli URL indicati.
+
+\printbibliography[nottype=online,title={Bibliografia},heading=subbibintoc]
 \printbibliography[type=online,title={Sitografia},heading=subbibintoc]
+
+\clearpage
+\appendix
+\renewcommand{\reportpart}{Appendici}
+\input{appendices/phase-ab-evidence.tex}
 
 \end{document}
