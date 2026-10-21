@@ -12,6 +12,6 @@ HPHP (Help People Help People) project for the Usability and User Experience Des
 
 ## Build
 
-Run `make pdf` with XeLaTeX, latexmk, Biber and the required LaTeX packages installed. The PDF is generated in the repository root; intermediate files are kept in the ignored `.build/` directory. The ignored SyncTeX file remains beside the PDF for editor synchronization.
+Run `make report` (or `make pdf`) with XeLaTeX, latexmk, Biber and the required LaTeX packages installed. The PDF is generated in the repository root; intermediate files are kept in the ignored `.build/` directory. The ignored SyncTeX file remains beside the PDF for editor synchronization.
 
 Run `make clean` to remove disposable compilation files, including saved error files, while retaining the PDF. `LATEXMK` and `BIBER` can be overridden to select local executables.
