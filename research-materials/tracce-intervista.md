@@ -8,7 +8,7 @@ Per ciascuna intervista annotare: nome fittizio, data, durata, chi conduce, chi 
 
 ## Traccia --- Segmento A (paziente anziano, utente diretto)
 
-**Obiettivo di ricerca:** validare qualitativamente i dati ISTAT su esclusione digitale ed effettiva percezione di autoefficacia/fiducia nell'uso di CUPweb/ER Salute.
+**Obiettivo di ricerca:** validare qualitativamente i dati ISTAT su esclusione digitale ed effettiva percezione di autoefficacia/fiducia nell'uso di CUPweb.
 
 **Criteri di reclutamento:** 65-85 anni, non necessariamente utente attivo del digitale; va bene anche chi delega integralmente la prenotazione a un familiare.
 
@@ -18,7 +18,7 @@ Per ciascuna intervista annotare: nome fittizio, data, durata, chi conduce, chi 
 **Domande:**
 
 1. Come prenoti di solito una visita medica o un esame?
-2. Hai mai provato CUPweb o l'app ER Salute? Cosa è successo? *(se sì: chiedere di raccontare l'ultima volta, passo per passo)*
+2. Hai mai provato a prenotare online con CUPweb dal computer o dal telefono? Cosa è successo? *(se sì: chiedere di raccontare l'ultima volta, passo per passo)*
 3. Chi ti aiuta di solito con queste pratiche? Con che frequenza?
 4. Cosa ti spaventa di più nell'usare il computer o il telefono per la sanità?
 5. Cosa ti farebbe sentire più sicuro/a nel farlo da solo/a?

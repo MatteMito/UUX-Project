@@ -1,9 +1,14 @@
 % !TEX root = ../hphp-project-report.tex
 % Generated from HPHP_Documentazione_Completa_EDITABILE.docx.
 % I termini tecnici seguono la terminologia delle checklist di progetto.
-\chapter{Fase C: Design Proposal}
+% Gerarchia: chapter = fase; cardsection = card; subsection = blocco;
+% subsubsection = caso/dettaglio; fieldheading = campo della card.
+\chapter{Fase C: Proposta progettuale}
 
-\section{Documento 02: Information Architecture card}
+% --- Card 02 ----------------------------------------------------
+\cardsection{Documento 02: Scheda di architettura dell'informazione}\label{doc:c:02}
+
+\subsection{Ruolo e approccio progettuale}
 
 \fieldheading{Era necessaria una fase di progettazione specifica per
 l\textquotesingle Information Architecture del tool? Perché?}
@@ -13,7 +18,7 @@ principale la frammentazione del servizio su più domini/sottosistemi
 (cupweb.it, pagonlinesanita.it, fascicolo-sanitario.it) organizzati
 secondo la struttura interna dei sistemi informativi regionali piuttosto
 che secondo i compiti dell\textquotesingle utente (requisiti
-{[}ID-02{]}, {[}ID-05{]} di Fase A; {[}C-01{]}, {[}C-03{]} di Fase B).
+\reqref{ID-02}, \reqref{ID-05} di Fase A; \reqref{C-01}, \reqref{C-03} di Fase B).
 Un redesign dell\textquotesingle interazione senza prima
 ridisegnare l\textquotesingle Information Architecture avrebbe lasciato
 intatta la causa principale di disorientamento e sfiducia rilevata
@@ -36,20 +41,22 @@ l\textquotesingle Information Architecture dell\textquotesingle applicazione?}
 \fieldheading{Se la scelta è diversa da quella del tool esistente, motivare la
 scelta}
 
-Il tool esistente (CUPweb/ER Salute) riflette
+Il tool esistente (CUPweb) riflette
 un\textquotesingle organizzazione essenzialmente bottom-up e
 guidata dal sistema: ogni sistema informativo regionale (prenotazione,
 pagamento, fascicolo) espone la propria interfaccia separata, e
 l\textquotesingle utente deve ricostruire da solo il percorso tra i vari
 sistemi. Questo approccio è comprensibile dal punto di vista tecnico
 (sistemi sviluppati da fornitori/tempi diversi) ma è in diretto
-conflitto con i requisiti {[}P-01{]}/{[}P-02{]} di Fase B (Pina ha
+conflitto con i requisiti \reqref{P-01}/\reqref{P-02} di Fase B (Pina ha
 competenza tecnica minima e bisogno di percorsi chiari). Abbiamo scelto
 un approccio guidato dai compiti dell\textquotesingle utente (top-down)
 proprio per correggere questa criticità, mantenendo però una validazione
 bottom-up sui casi d\textquotesingle uso reali per evitare di creare
 un\textquotesingle architettura teoricamente elegante ma poco aderente
 ai bisogni concreti.
+
+\subsection{Organizzazione e navigazione}
 
 \fieldheading{Quali sono le principali decisioni
 sull\textquotesingle organizzazione e sul sistema di etichettatura? Sono
@@ -76,7 +83,7 @@ dell\textquotesingle utente:
 \item
   "Chi assisto" / "Chi mi assiste" (nuova sezione, esplicita la
   relazione caregiver-paziente prevista dai requisiti
-  {[}P-04{]}/{[}P-05{]}/{[}C-02{]} di Fase B, oggi assente come concetto
+  \reqref{P-04}/\reqref{P-05}/\reqref{C-02} di Fase B, oggi assente come concetto
   esplicito nel tool)
 \item
   "Serve aiuto?" (canale di assistenza sempre visibile e allo stesso
@@ -103,16 +110,16 @@ redesign:
   tool esistente
 \item
   Ricorrenza (flag "prestazione ricorrente/cronica"), nuovo, abilita
-  il flusso semplificato {[}U1-01{]} di Fase B per pazienti cronici come
+  il flusso semplificato \reqref{U1-01} di Fase B per pazienti cronici come
   Pina
 \item
   Account collegato/delegante (relazione paziente-caregiver), nuovo,
-  necessario per abilitare {[}P-04{]}/{[}U2-02{]} (visibilità del
+  necessario per abilitare \reqref{P-04}/\reqref{U2-02} (visibilità del
   caregiver sulle prenotazioni del familiare)
 \item
   Livello di autenticazione richiesto per l\textquotesingle azione
   (nessuna, leggera, forte/SPID), nuovo, necessario per abilitare
-  {[}P-01{]} (percorso a bassa soglia prima
+  \reqref{P-01} (percorso a bassa soglia prima
   dell\textquotesingle autenticazione forte)
 \item
   Canale di provenienza dell\textquotesingle azione (self, delegata dal
@@ -126,7 +133,7 @@ rispetto al tool esistente?}
 Sì. Il tool esistente non ha una vera navigazione unificata: ogni
 dominio ha il proprio menu locale. Proponiamo una navigazione a 5 voci
 di primo livello, identica per tutte le pagine e coerente su web e app
-(requisito {[}ID-02{]}/{[}ID-05{]} di Fase A): Prenota una visita, I
+(requisito \reqref{ID-02}/\reqref{ID-05} di Fase A): Prenota una visita, I
 miei appuntamenti, Le mie prescrizioni, Chi assisto/Chi mi assiste,
 Serve aiuto? Le pagine profonde (es. dettaglio di una singola
 prenotazione) mantengono sempre un percorso di ritorno esplicito
@@ -134,9 +141,9 @@ prenotazione) mantengono sempre un percorso di ritorno esplicito
 invece del semplice tasto "indietro" del browser, su cui il tool attuale
 fa affidamento implicito.
 
-\fieldheading{Design Choices Summary}
+\subsection{Sintesi delle scelte progettuali}
 
-\fieldheading{Browsing Aids}
+\fieldheading{Supporti alla navigazione}
 
 \begin{itemize}
 \item
@@ -150,7 +157,7 @@ fa affidamento implicito.
   delle prenotazioni di tutti i familiari collegati
 \end{itemize}
 
-\fieldheading{Search Aids}
+\fieldheading{Supporti alla ricerca}
 
 Coerentemente con l'Assessment di Fase A (il tool
 esistente non ha una vera ricerca testuale libera), non introduciamo una
@@ -161,7 +168,7 @@ di prenotazione (tipo di prestazione, ambito territoriale, fascia
 oraria), pensati per essere selezionati per tocchi successivi piuttosto
 che digitati.
 
-\fieldheading{Contents and Tasks}
+\fieldheading{Contenuti e compiti}
 
 Compito primario: prenotare/disdire una visita o un esame. Compito secondario
 ricorrente: consultare lo stato di una prescrizione. Compito secondario per
@@ -170,21 +177,21 @@ necessario, agire per suo conto in modo tracciabile. Contenuti puramente
 informativi (es. guide, normativa) restano accessibili ma vengono
 spostati fuori dal percorso primario, in una sezione "Serve aiuto?"
   dedicata, per non competere visivamente con le azioni di compito (coerente
-con {[}ID-03{]}/{[}R-03{]} di Fase A).
+con \reqref{ID-03}/\reqref{R-03} di Fase A).
 
-\fieldheading{Invisible Components}
+\fieldheading{Componenti non visibili}
 
 \begin{itemize}
 \item
   Gestione unificata della sessione di autenticazione tra i
   sotto-sistemi oggi separati (evita le re-autenticazioni ripetute
-  segnalate come criticità in Fase A, {[}ID-01{]})
+  segnalate come criticità in Fase A, \reqref{ID-01})
 \item
   Livelli di autenticazione differenziati per tipo di azione
   (consultazione vs modifica vs pagamento), invisibili
   all\textquotesingle utente ma alla base del percorso
   \textquotesingle a bassa soglia\textquotesingle{} richiesto da
-  {[}P-01{]}
+  \reqref{P-01}
 \item
   Collegamento dati paziente-caregiver (relazione di delega), con log
   delle azioni svolte per conto di un familiare, per garantire
@@ -195,28 +202,29 @@ con {[}ID-03{]}/{[}R-03{]} di Fase A).
   caregiver collegato
 \end{itemize}
 
-\cardsection{Documento 06: Design Summary card}
+% --- Card 06 ----------------------------------------------------
+\cardsection{Documento 06: Scheda di sintesi del progetto}\label{doc:c:06}
 
-Per ciascuna versione del progetto prodotta, create una cartella nella
-cartella allegati con un nome significativo e aggiungetevi i file di
-progetto corrispondenti. Queste cartelle verranno usate in Fase D.
+Per ciascuna versione, la scheda raccoglie gli elementi della proposta e
+le valutazioni che ne hanno motivato la revisione. La versione valutata
+deve essere identificabile anche nelle schede della Fase D.
 
-\fieldheading{Delivered Design Versions}
+\subsection{Versioni del progetto prodotte}
 
-\fieldheading{Version 0 (prima di qualsiasi valutazione formale)}
+\fieldheading{Versione 0 (prima di qualsiasi valutazione formale)}
 
 {\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}
+\par\medskip
+\noindent\begin{tabular}{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6500}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
+\toprule
 \textbf{Nome cartella} & v0\_wireframe\_iniziale \\
 \textbf{Data / ora di completamento} & \todoinline{Inserire la data reale
 di completamento.} \\
-\end{longtable}
+\bottomrule
+\end{tabular}
+\par\medskip
 }
 
 Corrisponde ai materiali già prodotti in questo pacchetto: scheda
@@ -225,23 +233,23 @@ confronto prima/dopo (Documento 05). Questa versione non ha ancora ricevuto
 alcuna valutazione formale (né ispezione né test utente) ed è quella che
 sarà sottoposta a valutazione in apertura di Fase D.
 
-\fieldheading{Version 1 (duplicare se necessario)}
+\fieldheading{Versione 1 (duplicare se necessario)}
 
 {\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}
+\par\medskip
+\noindent\begin{tabular}{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6500}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
+\toprule
 \textbf{Nome cartella} & \todoinline{Inserire il nome della cartella, ad
 esempio \path{v1_dopo_inspection}.} \\
 \textbf{Data / ora di completamento} & \todoinline{Inserire data e ora.} \\
 \textbf{Tipi di valutazione} & \todoinline{Indicare le valutazioni svolte,
 ad esempio Cognitive Walkthrough, Action Analysis e Heuristic Analysis;
 vedere la Fase D.} \\
-\end{longtable}
+\bottomrule
+\end{tabular}
+\par\medskip
 }
 
 \projecttodo{Compilare questa sezione dopo aver condotto
@@ -250,21 +258,21 @@ le modifiche conseguenti al progetto. Duplicare la tabella per ogni
 ulteriore iterazione (Versione 2, Versione 3...) se il team esegue più di
 un ciclo di revisione.}
 
-\fieldheading{Final Version (una sola, risultato principale della Fase C)}
+\fieldheading{Versione finale (una sola, risultato principale della Fase C)}
 
 {\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}
+\par\medskip
+\noindent\begin{tabular}{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6500}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
+\toprule
 \textbf{Nome cartella} & cartella principale \\
 \textbf{Data / ora di completamento} & \todoinline{Inserire data e ora.} \\
 \textbf{Tipi di valutazione} & \todoinline{Riassumere tutte le valutazioni
 svolte fino a questa versione.} \\
-\end{longtable}
+\bottomrule
+\end{tabular}
+\par\medskip
 }
 
 \projecttodo{La \textquotesingle versione
@@ -274,80 +282,80 @@ utente sul prototipo). Finché Fase D non è stata condotta, la Versione 0
 coincide di fatto con la versione più recente disponibile: aggiornare
 questa sezione quando il design verrà rivisto in base alle valutazioni.}
 
-\fieldheading{Elenco delle criticità gestite nella riprogettazione, in ordine di importanza}
+\subsection[Criticità affrontate]{Elenco delle criticità gestite nella riprogettazione, in ordine di importanza}
 
 Ogni criticità è collegata ai requisiti delle schede di conclusione di Fase A
 e Fase B, e alle sezioni di wireframe/blueprint che la indirizzano.
 
-\fieldheading{1. Autenticazione obbligatoria complessa fin dal primo passo}
+\subsubsection{1. Autenticazione obbligatoria complessa fin dal primo passo}
 
 \begin{itemize}
 \item
-  Riferimento: {[}ID-01{]} Fase A, {[}P-01{]} Fase B, raccomandazione
-  {[}R-01{]}
+  Riferimento: \reqref{ID-01} Fase A, \reqref{P-01} Fase B, raccomandazione
+  \reqref{R-01}
 \item
   Gestita in: wireframe schermata 3 (Conferma identità leggera);
   blueprint, passo 3; confronto prima/dopo, confronto \#2
 \end{itemize}
 
-\fieldheading{2. Frammentazione tra domini/sottosistemi scollegati}
+\subsubsection{2. Frammentazione tra domini/sottosistemi scollegati}
 
 \begin{itemize}
 \item
-  Riferimento: {[}ID-02{]} Fase A, raccomandazione {[}R-02{]}
+  Riferimento: \reqref{ID-02} Fase A, raccomandazione \reqref{R-02}
 \item
   Gestita in: scheda dell'architettura dell'informazione (unificazione etichette e
   navigazione); confronto prima/dopo, confronto \#1
 \end{itemize}
 
-\fieldheading{3. Assenza di un percorso guidato per il nuovo utente}
+\subsubsection{3. Assenza di un percorso guidato per il nuovo utente}
 
 \begin{itemize}
 \item
-  Riferimento: {[}ID-05{]} Fase A, {[}P-03{]} Fase B, raccomandazione
-  {[}R-04{]}
+  Riferimento: \reqref{ID-05} Fase A, \reqref{P-03} Fase B, raccomandazione
+  \reqref{R-04}
 \item
   Gestita in: wireframe schermate 1-2 (pagina iniziale e scelta prestazione);
   blueprint, passi 1-2
 \end{itemize}
 
-\fieldheading{4. Interfaccia poco gerarchizzata, priva di elementi visivi}
+\subsubsection{4. Interfaccia poco gerarchizzata, priva di elementi visivi}
 
 \begin{itemize}
 \item
-  Riferimento: {[}ID-03{]} Fase A, {[}P-02{]} Fase B, raccomandazione
-  {[}R-03{]}
+  Riferimento: \reqref{ID-03} Fase A, \reqref{P-02} Fase B, raccomandazione
+  \reqref{R-03}
 \item
   Gestita in: tutti i wireframe (uso sistematico di colore, forma e
   gerarchia visiva per le azioni primarie)
 \end{itemize}
 
-\fieldheading{5. Terminologia tecnico-burocratica non spiegata}
+\subsubsection{5. Terminologia tecnico-burocratica non spiegata}
 
 \begin{itemize}
 \item
-  Riferimento: {[}ID-04{]} Fase A, raccomandazione {[}R-03{]}
+  Riferimento: \reqref{ID-04} Fase A, raccomandazione \reqref{R-03}
 \item
   Gestita in: scheda dell'architettura dell'informazione (sistema di etichettatura in
   linguaggio naturale); wireframe schermata 5 (riepilogo senza gergo)
 \end{itemize}
 
-\fieldheading{6. Ruolo del caregiver assente come concetto esplicito}
+\subsubsection{6. Ruolo del caregiver assente come concetto esplicito}
 
 \begin{itemize}
 \item
-  Riferimento: {[}P-04{]}/{[}P-05{]} Fase B, {[}C-02{]} scheda dei ruoli
+  Riferimento: \reqref{P-04}/\reqref{P-05} Fase B, \reqref{C-02} scheda dei ruoli
 \item
   Gestita in: scheda dell'architettura dell'informazione (nuova sezione
   \textquotesingle Chi assisto\textquotesingle); wireframe schermata 7;
   confronto prima/dopo, confronto \#3
 \end{itemize}
 
-\fieldheading{7. Problemi di accessibilità per tecnologie assistive}
+\subsubsection{7. Problemi di accessibilità per tecnologie assistive}
 
 \begin{itemize}
 \item
-  Riferimento: {[}ID-06{]} Fase A, raccomandazione {[}R-05{]}
+  Riferimento: \reqref{ID-06} Fase A, raccomandazione \reqref{R-05}
 \end{itemize}
 
 \projecttodo{Aspetto non ancora affrontato nei wireframe attuali
@@ -356,12 +364,12 @@ esplicitamente in una eventuale versione ad alta fedeltà o nelle
 specifiche tecniche di implementazione, e da verificare concretamente in
 Fase D.}
 
-\fieldheading{8. Cronologia appuntamenti/documenti non ordinabile o
+\subsubsection{8. Cronologia appuntamenti/documenti non ordinabile o
 ricercabile}
 
 \begin{itemize}
 \item
-  Riferimento: {[}ID-07{]} Fase A
+  Riferimento: \reqref{ID-07} Fase A
 \item
   Gestita parzialmente in: wireframe schermata 6 (lista appuntamenti
   unificata, ordine cronologico con il prossimo appuntamento in

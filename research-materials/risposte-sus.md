@@ -17,9 +17,9 @@ I punteggi finali (0-100) calcolati da questi dati sono già riportati nella tab
 9. Mi sono sentito/a molto sicuro/a nell'usare il sistema.
 10. Ho avuto bisogno di imparare molte cose prima di riuscire a usare il sistema.
 
-## Documento 06a: CUPweb / ER Salute
+## Documento 06a: CUPweb
 
-| Item | Renato | Pina | Elena | Amina |
+| Item | Giorgio | Carla | Silvia | Fatima |
 |---|---|---|---|---|
 | 1 | 1 | 1 | 1 | 1 |
 | 2 | 1 | 2 | 1 | 1 |
@@ -35,7 +35,7 @@ I punteggi finali (0-100) calcolati da questi dati sono già riportati nella tab
 
 ## Documento 06b: MioDottore
 
-| Item | Renato | Pina | Elena | Amina |
+| Item | Giorgio | Carla | Silvia | Fatima |
 |---|---|---|---|---|
 | 1 | 1 | 1 | 1 | 1 |
 | 2 | 1 | 1 | 1 | 1 |
