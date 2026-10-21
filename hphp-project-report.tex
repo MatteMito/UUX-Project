@@ -6,13 +6,12 @@
 
 \begin{titlepage}
   \centering
-  {\large Corso di Usability \& User Experience Design\par}
-  \vfill
-  {\Huge\bfseries\color{headingcolor} Progetto HPHP\par}
+  \null\vfill
+  {\Huge\bfseries\color{headingcolor} Help People Help People\par}
   \medskip
-  {\Large Help People Help People\par}
+  {\Large Usability \& User Experience Design\par}
   \bigskip
-  {\LARGE Riprogettazione dell'esperienza\par di prenotazione sanitaria online\par}
+  {\LARGE Riprogettazione dell'esperienza\par di prenotazione e pagamento\par delle prestazioni sanitarie online\par}
   \medskip
   {\Large\color{headingcolor} CUPweb\par}
   \vfill
@@ -23,54 +22,48 @@
   Francesco Maria Fuligni\par
   \vfill
   Anno accademico 2025--2026\par
-  \bigskip
-  {\small\url{https://github.com/MatteMito/UUX-Project}\par}
 \end{titlepage}
 
 \clearpage
 \pagenumbering{roman}
 \hypersetup{pageanchor=true}
 \section*{Abstract}
-Il presente elaborato documenta il progetto HPHP (\emph{Help People
-Help People}), dedicato alla
-riprogettazione dell'esperienza di prenotazione sanitaria online per
-la web application CUPweb della Regione Emilia-Romagna. Il redesign
-privilegia l'utilizzo da computer e prevede un adattamento responsive
-ad altri dispositivi; l'app ER Salute resta esterna al perimetro.
-L'analisi considera le
-barriere di accesso digitale degli utenti anziani e il ruolo dei
-caregiver familiari, traducendo le evidenze raccolte in requisiti di
-progettazione, personas, architettura dell'informazione, wireframe e
-protocolli di valutazione. Il lavoro è organizzato in quattro fasi:
-ricerca e valutazione, studio di fattibilità, proposta progettuale e
-valutazione. Gli artefatti nativi e aggiornabili sono disponibili nel
-repository del progetto:\\
-\url{https://github.com/MatteMito/UUX-Project}
-
-
-\subsection*{Materiali supplementari}
-Il report è corredato dagli artefatti progettuali mantenuti nei rispettivi
-formati nativi e modificabili: il \emph{service blueprint}, i wireframe
-delle versioni 0 e 1, il confronto prima/dopo, la checklist delle linee
-guida e le schede di personas e cast. I materiali sono organizzati nelle
-cartelle delle singole fasi e sono disponibili nel repository del progetto.
-
-\subsection*{Tracciabilità progettuale}
-Gli identificativi accompagnano problemi, raccomandazioni, requisiti e
-implicazioni progettuali. Le relazioni di derivazione e i rimandi di dettaglio
-sono consultabili nel materiale supplementare
-\path{requirements-traceability.html}, disponibile nel repository.
+Il presente elaborato documenta il progetto \emph{Help People Help People},
+dedicato alla riprogettazione dell'esperienza di prenotazione sanitaria
+online su CUPweb della Regione Emilia-Romagna. Il lavoro considera anche
+il pagamento come percorso accessorio, con particolare attenzione alla
+continuità del servizio e alla comprensione dei dati richiesti. Il
+redesign privilegia l'uso da computer e prevede un adattamento responsive;
+l'app ER Salute resta esterna al perimetro. L'analisi affronta le barriere
+di accesso degli utenti anziani e il ruolo dei caregiver familiari,
+traducendo il contesto documentale e i casi progettuali in requisiti,
+personas, architettura dell'informazione, wireframe e protocolli di
+valutazione. L'elaborato si articola in ricerca e valutazione del servizio,
+studio di fattibilità, proposta progettuale e valutazione del redesign.
 
 \clearpage
+\begingroup
+\small
 \tableofcontents
+\endgroup
 
 \clearpage
 \pagenumbering{arabic}
+\clearpage
+\renewcommand{\reportpart}{Fase A}
 \input{phase-a/phase-a.tex}
+\clearpage
+\renewcommand{\reportpart}{Fase B}
 \input{phase-b/phase-b.tex}
+\clearpage
+\renewcommand{\reportpart}{Fase C}
 \input{phase-c/phase-c.tex}
+\clearpage
+\renewcommand{\reportpart}{Fase D}
 \input{phase-d/phase-d.tex}
 
+\clearpage
+\renewcommand{\reportpart}{Riferimenti}
 \chapter{Riferimenti}
 La bibliografia raccoglie libri, capitoli, articoli e rapporti, anche quando
 disponibili online; la sitografia raccoglie le pagine e le risorse web.
@@ -78,5 +71,10 @@ Le date di consultazione si riferiscono all'accesso agli URL indicati.
 
 \printbibliography[nottype=online,title={Bibliografia},heading=subbibintoc]
 \printbibliography[type=online,title={Sitografia},heading=subbibintoc]
+
+\clearpage
+\appendix
+\renewcommand{\reportpart}{Appendici}
+\input{appendices/phase-ab-evidence.tex}
 
 \end{document}
