@@ -32,3 +32,7 @@ HANDOFF.md
 
 # Local editor configuration
 /.vscode/
+
+# Generated PDF report
+/report.pdf
+/hphp-project-report.pdf
