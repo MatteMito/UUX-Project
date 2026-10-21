@@ -2,61 +2,66 @@
 
 Riferimento: [specifiche complete](../docs/specs.md).
 
+> Stato: struttura, contenuti, workbook e visual C\&A presenti. La Fase A documenta interviste e test preliminari; le personas ne costituiscono una sintesi progettuale, non partecipanti reali né una validazione indipendente del cast. Restano da chiudere le verifiche delle fonti primarie segnalate in Fase A.
+
 ## 1. Team card
 
-- [ ] Ripetere la Team card della Fase A senza variazioni non motivate.
+- [x] Ripetere la Team card della Fase A senza variazioni non motivate.
 
 ## 2. Context of use
 
-- [ ] Descrivere gli ambienti d'uso principali.
-- [ ] Identificare dispositivi e tecnologie disponibili.
-- [ ] Considerare tempo disponibile e pressione cognitiva.
-- [ ] Considerare vincoli fisici, visivi e ambientali.
-- [ ] Identificare attività esterne al prodotto che influenzano i task.
-- [ ] Collegare il contesto alle evidenze della Fase A.
+- [x] Descrivere gli ambienti d'uso principali.
+- [x] Identificare dispositivi e tecnologie disponibili.
+- [x] Considerare tempo disponibile e pressione cognitiva.
+- [x] Considerare vincoli fisici, visivi e ambientali.
+- [x] Identificare attività esterne al prodotto che influenzano i task.
+- [x] Collegare il contesto alle evidenze della Fase A.
 
 ## 3. Scenari
 
-- [ ] Generare scenari per i segmenti prioritari.
-- [ ] Collegare ogni scenario a un obiettivo e a uno o più task.
-- [ ] Descrivere azioni interne ed esterne al sistema.
-- [ ] Esplicitare motivazioni, contesto e criteri di successo.
-- [ ] Includere stime temporali quando rilevanti.
-- [ ] Evitare di anticipare le funzionalità dell'interfaccia.
-- [ ] Conservare gli scenari scartati con la motivazione.
+- [x] Generare scenari per i segmenti prioritari.
+- [x] Collegare ogni scenario a un obiettivo e a uno o più task.
+- [x] Descrivere azioni interne ed esterne al sistema.
+- [x] Esplicitare motivazioni, contesto e criteri di successo.
+- [x] Includere stime temporali quando rilevanti.
+- [x] Evitare di anticipare le funzionalità dell'interfaccia.
+- [x] Conservare gli scenari scartati con la motivazione.
 
 ## 4. Personas
 
-- [ ] Generare più personas candidate.
-- [ ] Selezionare protagonista e personas secondarie.
-- [ ] Collegare ogni persona a un segmento specifico.
-- [ ] Rendere ogni persona credibile, dettagliata e peculiare.
-- [ ] Definire obiettivi, comportamenti, frustrazioni e motivazioni.
-- [ ] Distinguere dati di ricerca, inferenze e dettagli narrativi.
-- [ ] Evitare personas estreme o artificiali.
-- [ ] Verificare che le personas suggeriscano scelte di design non ovvie.
+- [x] Generare più personas candidate.
+- [x] Selezionare protagonista e personas secondarie.
+- [x] Collegare ogni persona a un segmento specifico.
+- [x] Rendere ogni persona credibile, dettagliata e peculiare.
+- [x] Definire obiettivi, comportamenti, frustrazioni e motivazioni.
+- [x] Distinguere dati di ricerca, inferenze e dettagli narrativi.
+- [x] Evitare personas estreme o artificiali.
+- [x] Verificare che le personas suggeriscano scelte di design non ovvie.
+- [x] Diversificare il cast per genere, origine, lingua e struttura familiare quando tali differenze producono scenari e requisiti pertinenti.
+- [x] Evitare sia stereotipi sia variazioni puramente decorative: ogni personaggio deve avere storia, abitudini e conflitti specifici.
+- [x] Inserire foto personas 
 
 ## 5. Competenze e abilità
 
-- [ ] Valutare la competenza tecnica su scala 1-5.
-- [ ] Valutare la competenza di dominio su scala 1-5.
-- [ ] Valutare la competenza linguistica su scala 1-5.
-- [ ] Valutare abilità fisica e visiva su scala 1-5.
-- [ ] Valutare motivazione su scala 1-5.
-- [ ] Valutare concentrazione su scala 1-5.
-- [ ] Creare un diagramma C&A per ogni persona.
-- [ ] Motivare ogni punteggio con elementi dello scenario o della ricerca.
-- [ ] Identificare rischi di errore, slip, frustrazione e abbandono.
-- [ ] Ricavare supporti necessari per ogni area di difficoltà.
+- [x] Valutare la competenza tecnica su scala 1-5.
+- [x] Valutare la competenza di dominio su scala 1-5.
+- [x] Valutare la competenza linguistica su scala 1-5.
+- [x] Valutare abilità fisica e visiva su scala 1-5.
+- [x] Valutare motivazione su scala 1-5.
+- [x] Valutare concentrazione su scala 1-5.
+- [x] Creare un diagramma C&A per ogni persona.
+- [x] Motivare ogni punteggio con elementi dello scenario o della ricerca.
+- [x] Identificare rischi di errore, slip, frustrazione e abbandono.
+- [x] Ricavare supporti necessari per ogni area di difficoltà.
 
 ## 6. Cast e implicazioni di design
 
-- [ ] Spiegare come segmenti e scenari hanno generato il cast.
-- [ ] Documentare personas e scenari generati, selezionati e scartati.
-- [ ] Evidenziare relazioni e conflitti tra utenti diretti e intermediari.
-- [ ] Collegare ogni implicazione di design ad assessment o testing.
-- [ ] Formulare requisiti per efficienza, spiegazione, accessibilità, motivazione e attenzione.
-- [ ] Verificare che i requisiti non favoriscano una persona danneggiando ingiustificatamente le altre.
+- [x] Spiegare come segmenti e scenari hanno generato il cast.
+- [x] Documentare personas e scenari generati, selezionati e scartati.
+- [x] Evidenziare relazioni e conflitti tra utenti diretti e intermediari.
+- [x] Collegare ogni implicazione di design ad assessment o testing.
+- [x] Formulare requisiti per efficienza, spiegazione, accessibilità, motivazione e attenzione.
+- [x] Verificare che i requisiti non favoriscano una persona danneggiando ingiustificatamente le altre.
 
 **Deliverable:** Cast card.
 
@@ -64,23 +69,39 @@ Riferimento: [specifiche complete](../docs/specs.md).
 
 Per ogni persona:
 
-- [ ] Inserire identità narrativa e ruolo.
-- [ ] Inserire scenario e use case.
-- [ ] Inserire obiettivi e motivazioni.
-- [ ] Inserire competenze e abilità.
-- [ ] Inserire comportamenti, vincoli e frustrazioni.
-- [ ] Inserire impatto sul design.
-- [ ] Verificare coerenza con segmento e dati della Fase A.
+- [x] Inserire identità narrativa e ruolo.
+- [x] Inserire scenario e use case.
+- [x] Inserire obiettivi e motivazioni.
+- [x] Inserire competenze e abilità.
+- [x] Inserire comportamenti, vincoli e frustrazioni.
+- [x] Inserire impatto sul design.
+- [x] Verificare coerenza con segmento e dati della Fase A.
 
-**Deliverable:** una Persona card per ogni persona selezionata.
+**Deliverable:** quattro Persona card per le persone selezionate (una protagonista, due secondarie e una aggiuntiva).
+
+## 8. Revisione degli artefatti
+
+- [x] Aggiornare e uniformare le quattro Persona card nel report e nel workbook.
+- [x] Rendere coerenti ruoli, segmenti, scenari, C\&A, requisiti e stato dell'evidenza.
+- [x] Realizzare quattro radar individuali, heatmap comparativa e radar sovrapposto del cast.
+- [x] Usare la scala diretta nei radar: 1 vicino al centro e 5 verso il bordo esterno.
+- [x] Verificare formule e riferimenti del workbook.
+- [x] Compilare il PDF e controllare la leggibilità delle pagine della Fase B.
 
 ## Controllo finale della fase
 
-- [ ] Team card presente.
-- [ ] Context of use documentato.
-- [ ] Scenari completi e non dipendenti da un'interfaccia già decisa.
-- [ ] Cast card completa di alternative scartate.
-- [ ] Persona card complete e credibili.
-- [ ] Diagrammi C&A verificati.
-- [ ] Requisiti collegati a evidenze di assessment o testing.
-- [ ] Le personas producono indicazioni utilizzabili nella Fase C.
+- [x] Team card presente.
+- [x] Context of use documentato.
+- [x] Scenari completi e non dipendenti da un'interfaccia già decisa.
+- [x] Cast card completa di alternative scartate.
+- [x] Persona card complete e credibili.
+- [x] Diagrammi C&A verificati.
+- [x] Requisiti collegati a evidenze di assessment o testing.
+- [x] Le personas producono indicazioni utilizzabili nella Fase C.
+
+
+## Perimetro progettuale — 12 ottobre 2026
+
+- [x] Specificare tre casi principali da computer e il caso responsive secondario di Amina.
+- [x] Esplicitare laptop familiare e supporto di Elena nello scenario co-pilota di Pina, mantenendo i punteggi C&A.
+- [x] Allineare testo e [workbook v2](phase-b-personas-and-cast-v2.xlsx), preservando l’originale e i diagrammi.
