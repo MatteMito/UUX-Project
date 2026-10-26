@@ -12,7 +12,7 @@ Per guidare il passaggio dalle evidenze delle Fasi A e B alla proposta di riprog
 \item \textbf{Strategy Plane:} allinea gli obiettivi del servizio sanitario regionale (riduzione dell'abbandono digitale e inclusione delle fasce fragili) ai bisogni emersi dalle quattro personas: autonomia protetta sul PC di casa per Pina, rapidità di gestione per Elena, trasparenza dei costi per Renato e continuità operativa per Amina.
 \item \textbf{Scope Plane:} definisce il perimetro funzionale del portale, affiancando alla navigazione autonoma due modalità di supporto familiare: la \emph{modalità co-pilota} (collaborazione sincrona a distanza) e la \emph{modalità delega} (gestione asincrona per conto dell'assistito).
 \item \textbf{Structure Plane:} organizza l'architettura dell'informazione per compiti utente e modella i flussi di interazione attraverso sei blueprint di struttura.
-\item \textbf{Skeleton Plane:} definisce la gerarchia spaziale e i componenti di navigazione attraverso la suite di diciotto wireframe per computer desktop.
+\item \textbf{Skeleton Plane:} definisce la gerarchia spaziale e i componenti di navigazione attraverso la suite di diciannove wireframe per computer desktop.
 \item \textbf{Surface Plane:} applica una codifica cromatica coerente, controlli di leggibilità del testo e un linguaggio chiaro privo di burocratismi (\emph{Plain Language}).
 \end{enumerate}
 
@@ -45,7 +45,7 @@ La proposta recepisce i requisiti definiti nelle conclusioni di Fase A (\reqref{
 \midrule
 \reqref{REQ-09} & Media & Pannello di aiuto contestuale sempre accessibile con salvataggio sessione, assistente testuale asincrono e numero verde regionale. \\
 \midrule
-\reqref{REQ-10} & Media & Guida visiva annotata al pagamento dell'avviso cartaceo pagoPA e lista di controllo dei documenti da portare alla visita. \\
+\reqref{REQ-10} & Media & Guida visiva annotata al pagamento dell'avviso cartaceo pagoPA, recupero semplificato delle ricevute e lista di controllo dei documenti da portare alla visita. \\
 \bottomrule
 \end{longtable}
 }
@@ -87,14 +87,40 @@ Sul lato destro della barra sono sempre disponibili:
 \item \textbf{Chiedi a [Caregiver]} (es.\ \emph{Chiedi ad Elena}): pulsante arancione visibile al paziente assistito per avviare in qualsiasi momento la condivisione dello schermo in modalità co-pilota.
 \end{itemize}
 
-\subsection{Sistema di navigazione e componenti strutturali}
+\subsection{Sintesi delle componenti di Information Architecture}
 
-Seguendo la classificazione di Rosenfeld e Morville~\cite{rosenfeldMorville2002}, l'architettura combina quattro livelli di componenti:
+Seguendo la tassonomia dell'architettura dell'informazione definita da Rosenfeld e Morville~\cite{rosenfeldMorville2002}, il sistema progettato articola le proprie componenti in quattro famiglie strutturali complementari:
+
+\subsubsection{Browsing Aids (Supporti alla navigazione e all'orientamento)}
 \begin{itemize}
-\item \textbf{Supporti alla navigazione (\emph{Browsing Aids}):} testata istituzionale con selettore di dimensione del testo a due livelli (\emph{normale} e \emph{ingrandito}), profilo attivo e tasto di uscita; barra globale a 5 voci con contatori numerici; filo d'Arianna (\emph{breadcrumb}); stepper orizzontale a 4 passi nel flusso di prenotazione; sotto-schede (\emph{tab}) nelle viste di elenco e collegamenti informativi nel piè di pagina (\emph{Cerca Medico / Pediatra}, \emph{Tempi di attesa regionali}, \emph{Privacy}).
-\item \textbf{Supporti alla ricerca (\emph{Search Aids}):} menu a tendina pre-compilato con le ricette attive del Fascicolo Sanitario, barra di ricerca testuale delle strutture sanitarie con ordinamento automatico per distanza da casa e calendario mensile con evidenziazione cromatica dei giorni disponibili.
-\item \textbf{Contenuti e metadati operativi (\emph{Content and Tasks}):} arricchimento delle schede con metadati decisionali assenti o frammentati nel sistema attuale: calcolo automatico delle esenzioni, tempi medi di attesa, distanza chilometrica e collegamenti con parcheggi e autobus, lista dei documenti da portare in ospedale e guida visiva annotata per individuare il codice avviso di 18 cifre sul bollettino cartaceo pagoPA (\reqref{REQ-10}).
-\item \textbf{Componenti invisibili (\emph{Invisible Components}):} gestione locale del PIN valido 30 giorni, blocco temporaneo dello slot per 15 minuti nel riepilogo, finestra di 10 minuti per annullare la disdetta, salvataggio dello stato per 24 ore tramite codice sessione e sincronizzazione in tempo reale del puntatore e dell'audio nella modalità co-pilota.
+\item \textbf{Barra di navigazione globale e testata istituzionale:} menu orizzontale persistente a 5 sezioni corredato da contatori numerici per gli appuntamenti in programma e le ricette da prenotare, affiancato in testata dal selettore di dimensione del testo a due livelli (\emph{normale} e \emph{ingrandito}), dall'indicatore del profilo attivo e dal comando di uscita;
+\item \textbf{Widget ``Il tuo prossimo appuntamento'' e scorciatoia ``Prenotazione rapida'':} posizionati nel cruscotto della Home page, mettono in primo piano la visita imminente (con accesso diretto alle indicazioni di preparazione e al padiglione) e permettono ai pazienti cronici di avviare con un solo clic la prenotazione dell'ultima ricetta emessa dal medico;
+\item \textbf{Filo d'Arianna (\emph{breadcrumb}) e Stepper orizzontale a 4 passi:} il breadcrumb sopra il titolo di pagina mantiene sempre esplicita la posizione corrente nella gerarchia, mentre nel flusso di prenotazione uno stepper numerato scandisce visivamente i passaggi completati (spunta verde), lo step attivo e quelli successivi, offrendo sempre un collegamento esplicito per tornare al passo precedente senza perdere le selezioni effettuate;
+\item \textbf{Navigazione secondaria a schede (\emph{tab}) e piè di pagina:} le viste di elenco e di servizio utilizzano tab ad alto contrasto per separare gli stati operativi (\emph{Visite in programma} / \emph{Visite passate}; \emph{Da prenotare} / \emph{Ricette passate}; \emph{Chi assisto} / \emph{Le mie deleghe}; \emph{Paga un nuovo avviso} / \emph{Scarica ricevuta di pagamento}), mentre il footer mantiene accessibili in ogni pagina i collegamenti a \emph{Cerca Medico / Pediatra (SSR)}, \emph{Tempi di attesa regionali} e \emph{Privacy}.
+\end{itemize}
+
+\subsubsection{Search Aids (Supporti alla ricerca e al filtraggio)}
+\begin{itemize}
+\item \textbf{Selettore pre-compilato delle prescrizioni FSE:} nello Step 1 della prenotazione, un menu a tendina propone automaticamente le ricette elettroniche attive dell'utente con il nome della visita in linguaggio chiaro, eliminando la necessità di cercare o trascrivere manualmente i 15 caratteri del codice NRE;
+\item \textbf{Ricerca testuale e ordinamento geografico delle strutture:} nello Step 3a, la barra di ricerca per nome o comune è affiancata da una lista che ordina automaticamente gli ospedali e i poliambulatori per distanza chilometrica dal domicilio dell'utente, evidenziando con un badge la struttura più vicina e i collegamenti con parcheggi e mezzi pubblici;
+\item \textbf{Calendario mensile ad alto contrasto e fasce orarie guidate:} nello Step 3b, il selettore su calendario mensile mette in risalto in verde i soli giorni con posti disponibili e raggruppa gli orari in pulsanti ampi divisi tra \emph{Mattina} (con indicazione della compatibilità con gli orari degli autobus) e \emph{Pomeriggio};
+\item \textbf{Ricerca semplificata delle ricevute pagoPA:} nella scheda \emph{Scarica ricevuta di pagamento (RT)}, il recupero di una quietanza pregressa richiede unicamente il codice fiscale (già pre-compilato) e il codice avviso IUV di 18 cifre.
+\end{itemize}
+
+\subsubsection{Contents and Tasks (Contenuti e gerarchia dei compiti)}
+\begin{itemize}
+\item \textbf{Compito primario di prenotazione e confronto consapevole:} schede comparative a due colonne per valutare in parallelo Servizio Sanitario Pubblico (con calcolo automatico dell'esenzione e tempi medi d'attesa) e Libera Professione, affiancate da schede di recupero immediato che propongono due orari alternativi a un clic qualora il posto selezionato venga appena occupato;
+\item \textbf{Compito secondario di preparazione, modifica e disdetta protetta:} scheda di dettaglio della visita arricchita con le norme di preparazione clinica, la checklist spuntabile \emph{Cosa mettere nella borsa}, le indicazioni interne di padiglione e ambulatorio, il comando di spostamento data e il flusso di disdetta gratuita oltre le 48 ore con finestra di ripensamento di 10 minuti;
+\item \textbf{Compito di pagamento assistito e distribuzione del promemoria:} guida grafica annotata dell'avviso cartaceo pagoPA (\emph{Dove trovo i dati?}) che mostra visivamente dove leggere codice avviso e importo sul bollettino, e strumenti post-conferma per stampare il promemoria in A4, inviarlo via SMS, condividerlo su WhatsApp con il caregiver o salvarlo nel calendario;
+\item \textbf{Compito di assistenza familiare e cura:} gestione condivisa tramite la vista a schermo diviso della modalità co-pilota e le schede multi-profilo dei familiari assistiti nella sezione \emph{Deleghe}.
+\end{itemize}
+
+\subsubsection{Invisible Components (Componenti invisibili di supporto)}
+\begin{itemize}
+\item \textbf{Session \& PIN Persistence Engine:} gestore dello stato locale che mantiene valido per 30 giorni il PIN personale di 4 cifre sul computer domestico, riserva temporaneamente per 15 minuti lo slot orario durante la lettura del riepilogo, governa il countdown di 10 minuti per l'annullamento della disdetta e congela il punto esatto della pratica per 24 ore tramite il codice Salva-Sessione;
+\item \textbf{Real-Time Co-Browsing Signaling Gateway:} infrastruttura di sincronizzazione in tempo reale che proietta il cursore remoto arancione del caregiver sullo schermo dell'anziano e gestisce il canale vocale con trascrizione live nella colonna laterale durante la modalità co-pilota;
+\item \textbf{Regional Interoperability Bus (FSE, CUP e pagoPA):} livello di integrazione che interroga in modo trasparente il Fascicolo Sanitario Elettronico per caricare ricette e deleghe, verifica le esenzioni registrate sul profilo dell'assistito, aggiorna le disponibilità delle agende AUSL e valida in tempo reale i codici avviso IUV a 18 cifre sul nodo dei pagamenti;
+\item \textbf{Multichannel Notification Dispatcher:} motore di invio che genera e distribuisce i promemoria di conferma e le ricevute su stampa A4, SMS, WhatsApp, email e file di calendario.
 \end{itemize}
 
 % --- Card 03 ----------------------------------------------------
@@ -192,7 +218,7 @@ Il sesto diagramma (Figura~\ref{fig:bp-06}) illustra il modulo di assistenza con
 
 \subsection{Impostazione generale della suite di Wireframe}
 
-La proposta progettuale è rappresentata attraverso diciotto schermate desktop (WF-01--WF-18) che traducono visivamente l'architettura dell'informazione e i flussi definiti nei blueprint. Tutte le viste mantengono un'impostazione costante: intestazione superiore con selettore di dimensione del testo e profilo attivo, barra di navigazione globale con le cinque sezioni principali a sinistra e i due comandi di supporto a destra, e una codifica cromatica chiara che distingue le azioni ordinarie e le conferme (verde), i pagamenti pagoPA (blu), le funzioni legate al caregiver (arancione) e i comandi di cancellazione (rosso).
+La proposta progettuale è rappresentata attraverso diciannove schermate desktop (WF-01--WF-19) che traducono visivamente l'architettura dell'informazione e i flussi definiti nei blueprint. Tutte le viste mantengono un'impostazione costante: intestazione superiore con selettore di dimensione del testo e profilo attivo, barra di navigazione globale con le cinque sezioni principali a sinistra e i due comandi di supporto a destra, e una codifica cromatica chiara che distingue le azioni ordinarie e le conferme (verde), i pagamenti pagoPA (blu), le funzioni legate al caregiver (arancione) e i comandi di cancellazione (rosso).
 
 \subsection{Accesso e Cruscotto iniziale (WF-01 -- WF-02)}
 
@@ -296,14 +322,15 @@ Questo gruppo di schermate copre la consultazione delle visite prenotate, la pre
 \captionof{figure}{WF-14: Stato post-disdetta con banner temporizzato di 10 minuti per annullare la cancellazione e recuperare l'appuntamento.}\label{fig:wf-14}
 \end{center}
 
-\subsection{Deleghe, Ricette, Pagamento assistito e Supporto (WF-15 -- WF-18)}
+\subsection{Deleghe, Ricette, Pagamento assistito, Ricevute e Supporto (WF-15 -- WF-19)}
 
-Le ultime quattro schermate completano le sezioni di gestione familiare, archivio clinico, pagamento e assistenza:
+Le ultime cinque schermate completano le sezioni di gestione familiare, archivio prescrizioni, pagamento e recupero ricevute pagoPA, e assistenza contestuale:
 \begin{itemize}
 \item \textbf{Sezione Deleghe (WF-15, Figura~\ref{fig:wf-15}):} mostra la vista del caregiver (Elena) nella scheda \emph{Chi assisto}, dove sono riepilogati i profili dei genitori con lo stato della delega, il numero di visite confermate e di ricette da prenotare, e il pulsante arancione per entrare nella gestione per conto del familiare.
 \item \textbf{Sezione Ricette e prescrizioni (WF-16, Figura~\ref{fig:wf-16}):} elenca le impegnative del Fascicolo Sanitario divise tra \emph{Da prenotare} e \emph{Ricette passate}, permettendo di avviare la prenotazione con un clic direttamente dalla ricetta desiderata.
-\item \textbf{Pagamento pagoPA con guida visiva (WF-17, Figura~\ref{fig:wf-17}):} per agevolare il pagamento di un avviso cartaceo, la schermata affianca a sinistra un fac-simile annotato del bollettino (\emph{Dove trovo i dati?}), che indica con richiami numerati dove leggere il codice avviso di 18 cifre e l'importo, e a destra il modulo di inserimento con verifica immediata della correttezza del codice.
-\item \textbf{Pannello Serve aiuto? (WF-18, Figura~\ref{fig:wf-18}):} si apre in sovrimpressione sulla pagina attiva offrendo a sinistra lo strumento \emph{Salva il tuo punto} (per generare un codice Salva-Sessione valido 24 ore o inserire un codice esistente per riprendere la pratica) insieme al numero verde regionale, e a destra la chat scritta per inviare domande all'assistente.
+\item \textbf{Pagamento pagoPA con guida visiva (WF-17, Figura~\ref{fig:wf-17}):} per agevolare il pagamento di un avviso cartaceo, la scheda \emph{Paga un nuovo avviso} affianca a sinistra un fac-simile annotato del bollettino (\emph{Dove trovo i dati?}), che indica con richiami numerati dove leggere il codice avviso di 18 cifre e l'importo, e a destra il modulo di inserimento con verifica immediata della correttezza del codice.
+\item \textbf{Recupero e stampa ricevuta di pagamento (WF-18, Figura~\ref{fig:wf-18}):} selezionando la seconda scheda \emph{Scarica ricevuta di pagamento (RT)}, l'utente può recuperare qualsiasi ricevuta già pagata inserendo semplicemente il codice fiscale (pre-compilato) e il codice avviso IUV di 18 cifre, senza vincoli temporali restrittivi né passaggi su portali esterni.
+\item \textbf{Pannello Serve aiuto? (WF-19, Figura~\ref{fig:wf-19}):} si apre in sovrimpressione sulla pagina attiva offrendo a sinistra lo strumento \emph{Salva il tuo punto} (per generare un codice Salva-Sessione valido 24 ore o inserire un codice esistente per riprendere la pratica) insieme al numero verde regionale, e a destra la chat scritta per inviare domande all'assistente.
 \end{itemize}
 
 \begin{center}
@@ -323,122 +350,55 @@ Le ultime quattro schermate completano le sezioni di gestione familiare, archivi
 
 \begin{center}
 \includegraphics[width=0.90\linewidth]{phase-c/wireframes/wf-18.png}
-\captionof{figure}{WF-18: Pannello ``Serve aiuto?'' con generazione/ripresa del codice Salva-Sessione, Numero Verde e assistente testuale.}\label{fig:wf-18}
+\captionof{figure}{WF-18: Scheda ``Scarica ricevuta di pagamento (RT)'' per recuperare e stampare le ricevute pagoPA già saldate.}\label{fig:wf-18}
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.90\linewidth]{phase-c/wireframes/wf-19.png}
+\captionof{figure}{WF-19: Pannello ``Serve aiuto?'' con generazione/ripresa del codice Salva-Sessione, Numero Verde e assistente testuale.}\label{fig:wf-19}
 \end{center}
 
 % --- Card 05 ----------------------------------------------------
 \cardsection{Documento 05: Confronto prima/dopo}\label{doc:c:05}
 
-\subsection{Sintesi comparativa tra CUPweb attuale e Redesign HPHP}
+Di seguito vengono messi a confronto diretto i quattro snodi principali dell'esperienza d'uso tra l'attuale portale CUPweb (Prima, a sinistra) e la proposta di riprogettazione desktop HPHP (Dopo, a destra).
 
-La tabella e le figure seguenti mettono a confronto diretto le principali criticità dell'attuale CUPweb con le soluzioni introdotte nella proposta di riprogettazione.
+\subsection{Accesso e orientamento iniziale}
 
-{\small
-\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.20\linewidth}>{\raggedright\arraybackslash}p{0.37\linewidth}>{\raggedright\arraybackslash}p{0.37\linewidth}@{}}
-\toprule
-\textbf{Ambito} & \textbf{Prima (CUPweb attuale)} & \textbf{Dopo (Redesign HPHP)} \\
-\midrule\endhead
-\textbf{Accesso e orientamento iniziale} & Pagina testuale divisa per silos amministrativi; autenticazione SPID/CIE con OTP richiesta a ogni sessione (Figura~\ref{fig:comp-before-home}). & Gate con PIN di 4 cifre valido 30 giorni sul PC domestico (WF-01) e cruscotto orientato ai compiti con prossimo appuntamento e prenotazione rapida (WF-02, Figura~\ref{fig:comp-after-home}). \\
-\midrule
-\textbf{Ricette e scelta del canale} & Inserimento manuale del codice NRE a 15 cifre e separazione preventiva tra ricerca SSN e Libera Professione. & Selezione diretta della ricetta dal Fascicolo Sanitario (WF-03, WF-16) e confronto affiancato di costi, esenzioni e tempi d'attesa tra SSN e Libera Professione (WF-04, Figura~\ref{fig:comp-booking}). \\
-\midrule
-\textbf{Supporto del caregiver e sessione} & Assenza di strumenti di guida a distanza; rischio di scadenza della sessione con perdita del lavoro svolto. & Modalità co-pilota in tempo reale (WF-07), sezione deleghe strutturata (WF-15, Figura~\ref{fig:comp-caregiver}) e codice Salva-Sessione valido 24 ore nel pannello d'aiuto (WF-18). \\
-\midrule
-\textbf{Disdetta e pagamento pagoPA} & Cancellazione immediata priva di rassicurazioni sulle penali; compilazione del pagamento senza guida sul bollettino. & Disdetta con avviso di gratuità oltre le 48 ore (WF-13), finestra di ripensamento di 10 minuti (WF-14) e guida visiva annotata per l'avviso cartaceo pagoPA (WF-17, Figura~\ref{fig:comp-cancel-pay}). \\
-\bottomrule
-\end{longtable}
-}
+L'attuale CUPweb si presenta con una home page testuale frammentata in silos amministrativi (\emph{Disdici}, \emph{Prenota}, \emph{Paga}) e richiede l'autenticazione SPID/CIE con OTP a ogni accesso. Il redesign HPHP introduce l'accesso rapido con PIN di 4 cifre (valido 30 giorni) e accoglie l'utente con un cruscotto orientato ai compiti: prossimo appuntamento in evidenza, pulsante primario di prenotazione, scorciatoia per l'ultima ricetta del medico e accesso diretto a pagoPA (Figura~\ref{fig:comp-home}).
 
 \begin{center}
-\includegraphics[width=0.84\linewidth]{research-materials/screenshot-cupweb-miodottore/cupweb-home.png}
-\captionof{figure}{Prima: Home page attuale di CUPweb, caratterizzata da menu laterale frammentato e assenza di gerarchia visiva per compiti.}\label{fig:comp-before-home}
+\includegraphics[width=0.96\linewidth]{phase-c/before-after/before_after_home.png}
+\captionof{figure}{Confronto prima/dopo per l'accesso e orientamento iniziale: CUPweb attuale (sinistra) vs Cruscotto HPHP WF-02 (destra).}\label{fig:comp-home}
 \end{center}
+
+\subsection{Le mie prescrizioni}
+
+In CUPweb l'elenco delle ricette è subordinato al flusso di prenotazione specialistica, richiede l'inserimento manuale del codice NRE di 15 cifre o rimanda a portali esterni per consultare il Fascicolo Sanitario. In HPHP la sezione \emph{Ricette e prescrizioni} è integrata nella navigazione principale, sincronizza in automatico le impegnative del Fascicolo (suddivise tra \emph{Da prenotare} e \emph{Ricette passate}) con diciture comprensibili e consente di avviare la prenotazione con un clic (Figura~\ref{fig:comp-ricette}).
 
 \begin{center}
-\includegraphics[width=0.48\linewidth]{phase-c/wireframes/wf-01.png}\hfill
-\includegraphics[width=0.48\linewidth]{phase-c/wireframes/wf-02.png}
-\captionof{figure}{Dopo: Gate di accesso con PIN a 4 cifre (WF-01, a sinistra) e Cruscotto personale orientato ai compiti (WF-02, a destra).}\label{fig:comp-after-home}
+\includegraphics[width=0.96\linewidth]{phase-c/before-after/before_after_ricette.png}
+\captionof{figure}{Confronto prima/dopo per le prescrizioni: Elenco specialistica CUPweb (sinistra) vs Sezione Ricette HPHP WF-16 (destra).}\label{fig:comp-ricette}
 \end{center}
+
+\subsection{I miei appuntamenti}
+
+Il sistema originale separa visite attive e storico in voci distinte; la ricerca delle prestazioni passate è una tabella tecnica con filtri obbligatori per anno e AUSL ed etichette sanitarie complesse. Nel redesign HPHP l'archivio unificato \emph{I miei appuntamenti} raggruppa tutte le prenotazioni con le schede \emph{Visite in programma} e \emph{Visite passate}, rendendo immediati lo stato del pagamento, le istruzioni di preparazione e la disdetta protetta (Figura~\ref{fig:comp-appuntamenti}).
 
 \begin{center}
-\includegraphics[width=0.48\linewidth]{phase-c/wireframes/wf-03.png}\hfill
-\includegraphics[width=0.48\linewidth]{phase-c/wireframes/wf-04.png}
-\captionof{figure}{Dopo: Selezione automatica della ricetta dal FSE (WF-03, a sinistra) e confronto trasparente tra SSN e Libera Professione (WF-04, a destra).}\label{fig:comp-booking}
+\includegraphics[width=0.96\linewidth]{phase-c/before-after/before_after_appuntamenti.png}
+\captionof{figure}{Confronto prima/dopo per la gestione appuntamenti: Storico visite CUPweb (sinistra) vs Archivio appuntamenti HPHP WF-11 (destra).}\label{fig:comp-appuntamenti}
 \end{center}
+
+\subsection{Pagamento}
+
+Il pagamento online e il recupero delle ricevute in CUPweb rinviano a un portale esterno privo di aiuto visivo per reperire i dati sul bollettino cartaceo. In HPHP il pagamento pagoPA (WF-17) e lo scaricamento delle ricevute (WF-18) sono integrati nativamente e corredati dalla guida visiva annotata \emph{Dove trovo i dati?}, con richiami numerati per codice avviso di 18 cifre e importo, e verifica immediata della validità (Figura~\ref{fig:comp-pagamento}).
 
 \begin{center}
-\includegraphics[width=0.48\linewidth]{phase-c/wireframes/wf-07.png}\hfill
-\includegraphics[width=0.48\linewidth]{phase-c/wireframes/wf-15.png}
-\captionof{figure}{Dopo: Supporto sincrono in Modalità Co-pilota (WF-07, a sinistra) e gestione asincrona nella sezione Deleghe (WF-15, a destra).}\label{fig:comp-caregiver}
+\includegraphics[width=0.96\linewidth]{phase-c/before-after/before_after_pagamento.png}
+\captionof{figure}{Confronto prima/dopo per il pagamento: Portale esterno pagoOnline (sinistra) vs Pagamento pagoPA HPHP WF-17 con guida visiva (destra).}\label{fig:comp-pagamento}
 \end{center}
 
-\begin{center}
-\includegraphics[width=0.48\linewidth]{phase-c/wireframes/wf-14.png}\hfill
-\includegraphics[width=0.48\linewidth]{phase-c/wireframes/wf-17.png}
-\captionof{figure}{Dopo: Banner di ripensamento di 10 minuti post-disdetta (WF-14, a sinistra) e guida visiva al pagamento dell'avviso cartaceo pagoPA (WF-17, a destra).}\label{fig:comp-cancel-pay}
-\end{center}
+\subsection{Supporto collaborativo e continuità operativa (novità assenti in CUPweb)}
 
-% --- Card 06 ----------------------------------------------------
-\cardsection{Documento 06: Scheda di sintesi del progetto}\label{doc:c:06}
-
-\subsection{Versioni del progetto}
-
-\subsubsection{Versione 0 (prima di qualsiasi valutazione formale)}
-
-{\def\LTcaptype{none}
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3500}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6500}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\textbf{Nome cartella} & \path{phase-c/blueprints/} e \path{phase-c/wireframes/} \\
-\textbf{Artefatti inclusi} & Scheda IA (\docref{c}{02}), 6 Blueprint di struttura (\docref{c}{03}), 18 Wireframe desktop (\docref{c}{04}) e Confronto prima/dopo (\docref{c}{05}). \\
-\textbf{Tipi di valutazione} & Nessuna (versione di partenza sottoposta a ispezione in apertura di Fase D). \\
-\end{longtable}
-}
-
-\subsubsection{Versione 1 (revisione post-ispezione)}
-
-{\def\LTcaptype{none}
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3500}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6500}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\textbf{Nome cartella} & Revisione post-ispezione (rif.\ Fase D) \\
-\textbf{Tipi di valutazione} & \emph{Cognitive Walkthrough}, \emph{Action Analysis} e \emph{Heuristic Evaluation} (vedi Fase D). \\
-\end{longtable}
-}
-
-\subsubsection{Versione finale (risultato principale di Fase C)}
-
-{\def\LTcaptype{none}
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3500}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6500}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\textbf{Nome cartella} & \path{phase-c/} \\
-\textbf{Contenuto di riferimento} & Architettura dell'informazione consolidata, 6 Structure Blueprints (\texttt{1-LoginHomePage}--\texttt{6-ServeAiuto?}) e 18 Wireframe desktop (WF-01--WF-18). \\
-\end{longtable}
-}
-
-\subsection{Elenco delle criticità gestite nella riprogettazione, in ordine di importanza}
-
-\begin{enumerate}
-\item \textbf{Autenticazione obbligatoria complessa fin dal primo passo} (\reqref{ID-01}, \reqref{REQ-01}): gestita tramite l'accesso rapido con PIN personale di 4 cifre valido 30 giorni sul PC domestico, affiancato a SPID/CIE (Blueprint 1; WF-01, WF-02; Confronto prima/dopo).
-\item \textbf{Frammentazione tra domini e sottosistemi scollegati} (\reqref{ID-02}, \reqref{REQ-02}): gestita unificando prenotazione, prescrizioni FSE e pagamento pagoPA sotto un'unica navigazione globale a 5 sezioni (Scheda IA; Blueprint 1--4; WF-02, WF-16, WF-17).
-\item \textbf{Assenza di un percorso guidato e timore di azioni irreversibili} (\reqref{ID-05}, \reqref{ID-08}, \reqref{REQ-04}): gestita tramite il wizard lineare a 4 passi, il recupero automatico degli orari occupati, l'isolamento del tasto di disdetta con avviso di gratuità oltre le 48 ore e il banner di ripensamento di 10 minuti (Blueprint 2, 3; WF-03--WF-09, WF-12--WF-14).
-\item \textbf{Interfaccia poco gerarchizzata e opacità tra SSN e Libera Professione} (\reqref{ID-03}, \reqref{REQ-03}): gestita tramite layout a card ad alto contrasto, confronto affiancato di costi e tempi tra canale pubblico e privato, e scelta della sede su mappa con distanza e trasporti (Blueprint 2; WF-04--WF-06).
-\item \textbf{Terminologia tecnico-burocratica non spiegata} (\reqref{ID-04}, \reqref{REQ-03}): gestita adottando etichette in linguaggio naturale, selezione guidata della ricetta senza digitazione del codice NRE e istruzioni pratiche per la visita (Scheda IA; WF-03, WF-04, WF-12).
-\item \textbf{Ruolo del caregiver assente e rischio di doppie prenotazioni} (\reqref{ID-09}, \reqref{ID-10}, \reqref{REQ-06}, \reqref{REQ-07}): gestita tramite la modalità co-pilota sincrona 3/4 + 1/4, la sezione \emph{Deleghe} per l'operatività per conto dei familiari e l'invio del promemoria via WhatsApp al caregiver (Blueprint 1, 2, 5; WF-07, WF-10, WF-15).
-\item \textbf{Problemi di accessibilità visiva e motoria} (\reqref{ID-06}, \reqref{REQ-05}): gestita tramite il selettore di ingrandimento del testo nell'intestazione, bersagli di clic ampi e indicatori testuali associati al colore (WF-01--WF-18).
-\item \textbf{Cronologia appuntamenti e prescrizioni non ordinata} (\reqref{ID-07}, \reqref{REQ-02}): gestita tramite il prossimo appuntamento in evidenza in Home e le liste ordinate per stato nelle sezioni \emph{I miei appuntamenti} e \emph{Ricette e prescrizioni} (Blueprint 3, 4; WF-02, WF-11, WF-16).
-\item \textbf{Interruzioni di sessione, assenza di aiuto scritto e difficoltà nel pagamento pagoPA} (\reqref{ID-11}, \reqref{ID-12}, \reqref{ID-13}, \reqref{REQ-08}--\reqref{REQ-10}): gestita tramite il pannello \emph{Serve aiuto?} (codice Salva-Sessione valido 24 ore, assistente testuale e numero verde) e la guida visiva annotata all'avviso cartaceo pagoPA (Blueprint 6; WF-17, WF-18).
-\end{enumerate}
+La proposta HPHP introduce inoltre funzionalità di cooperazione e assistenza \textbf{completamente assenti nell'attuale CUPweb}: la \textbf{Modalità Co-pilota} (WF-07), che consente la condivisione dello schermo (layout 3/4 + 1/4) con audio e puntatore remoto del caregiver senza cedere il controllo del mouse; la sezione \textbf{Deleghe} (WF-15) per l'operatività trasparente a favore dei familiari assistiti; e il modulo \textbf{Salva il tuo punto} (WF-19), che genera un codice temporizzato (24h) per sospendere e riprendere la sessione senza perdere il lavoro svolto.
