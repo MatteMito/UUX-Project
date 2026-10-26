@@ -110,9 +110,9 @@ Seguendo la tassonomia dell'architettura dell'informazione definita da Rosenfeld
 \subsubsection{Contents and Tasks (Contenuti e gerarchia dei compiti)}
 \begin{itemize}
 \item \textbf{Compito primario di prenotazione e confronto consapevole:} schede comparative a due colonne per valutare in parallelo Servizio Sanitario Pubblico (con calcolo automatico dell'esenzione e tempi medi d'attesa) e Libera Professione, affiancate da schede di recupero immediato che propongono due orari alternativi a un clic qualora il posto selezionato venga appena occupato;
+\item \textbf{Compito co-primario di assistenza familiare e cura:} gestione condivisa tramite la vista a schermo diviso della modalità co-pilota e le schede multi-profilo dei familiari assistiti nella sezione \emph{Deleghe}.
 \item \textbf{Compito secondario di preparazione, modifica e disdetta protetta:} scheda di dettaglio della visita arricchita con le norme di preparazione clinica, la checklist spuntabile \emph{Cosa mettere nella borsa}, le indicazioni interne di padiglione e ambulatorio, il comando di spostamento data e il flusso di disdetta gratuita oltre le 48 ore con finestra di ripensamento di 10 minuti;
 \item \textbf{Compito di pagamento assistito e distribuzione del promemoria:} guida grafica annotata dell'avviso cartaceo pagoPA (\emph{Dove trovo i dati?}) che mostra visivamente dove leggere codice avviso e importo sul bollettino, e strumenti post-conferma per stampare il promemoria in A4, inviarlo via SMS, condividerlo su WhatsApp con il caregiver o salvarlo nel calendario;
-\item \textbf{Compito di assistenza familiare e cura:} gestione condivisa tramite la vista a schermo diviso della modalità co-pilota e le schede multi-profilo dei familiari assistiti nella sezione \emph{Deleghe}.
 \end{itemize}
 
 \subsubsection{Invisible Components (Componenti invisibili di supporto)}
@@ -186,7 +186,7 @@ Il quarto diagramma (Figura~\ref{fig:bp-04}) descrive la sezione dedicata alle p
 \captionof{figure}{Blueprint 4: Sezione ``Ricette e prescrizioni'' con innesto diretto dalla prescrizione allo step di scelta del canale e del costo.}\label{fig:bp-04}
 \end{center}
 
-\subsubsection{Blueprint 5: Gestione ``Deleghe'' e Modalità Proxy}
+\subsubsection{Blueprint 5: Gestione ``Deleghe''}
 
 Il quinto diagramma (Figura~\ref{fig:bp-05}) rappresenta il funzionamento delle deleghe familiari, articolato in due percorsi:
 \begin{itemize}
@@ -246,7 +246,7 @@ Il percorso di prenotazione è scandito da uno stepper orizzontale a quattro pas
 \item \textbf{Passo 2 -- Canale e costi (WF-04, Figura~\ref{fig:wf-04}):} affianca in modo trasparente le due opzioni disponibili per la visita selezionata, permettendo di confrontare a colpo d'occhio il Servizio Sanitario Pubblico (con eventuale esenzione già applicata, prima data disponibile e attesa media) e la Libera Professione in ospedale (con importo totale e prima data utile ravvicinata).
 \item \textbf{Passo 3a -- Scelta della struttura (WF-05, Figura~\ref{fig:wf-05}):} presenta a sinistra l'elenco degli ospedali e poliambulatori ordinati per vicinanza da casa (corredati da distanza in chilometri, prima data utile e icone per parcheggio e mezzi pubblici) e a destra la mappa interattiva del territorio.
 \item \textbf{Passo 3b -- Scelta di giorno e orario (WF-06, Figura~\ref{fig:wf-06}):} affianca il calendario mensile, dove i giorni disponibili sono evidenziati in verde, e l'elenco degli orari suddivisi tra mattina (con indicazione di compatibilità con le linee autobus) e pomeriggio.
-\item \textbf{Modalità Co-pilota attiva (WF-07, Figura~\ref{fig:wf-07}):} mostra l'interfaccia quando l'anziano attiva il supporto del caregiver cliccando su \emph{Chiedi ad Elena}. Un banner arancione in alto segnala la condivisione attiva; lo schermo mantiene a sinistra (3/4) la pagina di prenotazione su cui compare il cursore arancione remoto della figlia, e apre a destra (1/4) il pannello vocale con la trascrizione in tempo reale dei suggerimenti del caregiver.
+\item \textbf{Modalità Co-pilota attiva (WF-07, Figura~\ref{fig:wf-07}):} mostra l'interfaccia quando l'anziano attiva il supporto del caregiver cliccando su \emph{Chiedi ad Elena}. Un banner arancione in alto segnala la condivisione attiva; lo schermo mantiene a sinistra la pagina di prenotazione su cui compare il cursore arancione remoto della figlia, e apre a destra il pannello vocale con la trascrizione in tempo reale dei suggerimenti del caregiver.
 \item \textbf{Recupero per orario appena occupato (WF-08, Figura~\ref{fig:wf-08}):} se l'orario selezionato viene confermato da un altro utente, il sistema evita messaggi d'errore bloccanti e propone subito due alternative vicine nella stessa struttura (un altro orario nello stesso giorno o lo stesso orario nel giorno successivo), confermabili con un solo clic.
 \item \textbf{Passo 4 -- Riepilogo (WF-09, Figura~\ref{fig:wf-09}):} riassume tutti i dati della visita, mostra in alto un timer di 15 minuti che garantisce la riserva temporanea del posto, permette di scegliere se pagare subito online con pagoPA o successivamente tramite avviso cartaceo e ricorda la gratuità della disdetta fino a 48 ore lavorative prima.
 \item \textbf{Conferma della prenotazione (WF-10, Figura~\ref{fig:wf-10}):} certifica l'avvenuta prenotazione mostrando a sinistra le opzioni per conservare o condividere il promemoria (stampa A4, invio SMS, invio su WhatsApp al caregiver, aggiunta al calendario) e a destra il pulsante per procedere al pagamento pagoPA o scaricare il bollettino.
@@ -274,7 +274,7 @@ Il percorso di prenotazione è scandito da uno stepper orizzontale a quattro pas
 
 \begin{center}
 \includegraphics[width=0.90\linewidth]{phase-c/wireframes/wf-07.png}
-\captionof{figure}{WF-07: Modalità Co-pilota attiva con divisione dello schermo 3/4 + 1/4, cursore remoto del caregiver e pannello vocale con trascrizione.}\label{fig:wf-07}
+\captionof{figure}{WF-07: Modalità Co-pilota attiva con divisione dello schermo, cursore remoto del caregiver e pannello vocale con trascrizione.}\label{fig:wf-07}
 \end{center}
 
 \begin{center}
@@ -401,4 +401,4 @@ Il pagamento online e il recupero delle ricevute in CUPweb rinviano a un portale
 
 \subsection{Supporto collaborativo e continuità operativa (novità assenti in CUPweb)}
 
-La proposta HPHP introduce inoltre funzionalità di cooperazione e assistenza \textbf{completamente assenti nell'attuale CUPweb}: la \textbf{Modalità Co-pilota} (WF-07), che consente la condivisione dello schermo (layout 3/4 + 1/4) con audio e puntatore remoto del caregiver senza cedere il controllo del mouse; la sezione \textbf{Deleghe} (WF-15) per l'operatività trasparente a favore dei familiari assistiti; e il modulo \textbf{Salva il tuo punto} (WF-19), che genera un codice temporizzato (24h) per sospendere e riprendere la sessione senza perdere il lavoro svolto.
+La proposta HPHP introduce inoltre funzionalità di cooperazione e assistenza \textbf{completamente assenti nell'attuale CUPweb}: la \textbf{Modalità Co-pilota} (WF-07), che consente la condivisione dello schermo con audio e puntatore remoto del caregiver senza cedere il controllo del mouse; la sezione \textbf{Deleghe} (WF-15) per l'operatività trasparente a favore dei familiari assistiti; e il modulo \textbf{Salva il tuo punto} (WF-19), che genera un codice temporizzato (24h) per sospendere e riprendere la sessione senza perdere il lavoro svolto.
