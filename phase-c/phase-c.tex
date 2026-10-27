@@ -33,7 +33,7 @@ La proposta recepisce i requisiti definiti nelle conclusioni di Fase A (\reqref{
 \midrule
 \reqref{REQ-03} & Media & Linguaggio chiaro, gerarchia visiva ad alto contrasto e confronto trasparente affiancato tra Servizio Sanitario Pubblico (con esenzione calcolata) e Libera Professione. \\
 \midrule
-\reqref{REQ-04} & Alta & Prenotazione guidata in 4 passaggi, recupero immediato in caso di orario non più disponibile, separazione dei comandi distruttivi, disdetta gratuita oltre le 48 ore e finestra di ripensamento di 10 minuti. \\
+\reqref{REQ-04} & Alta & Prenotazione guidata in 4 passaggi, recupero immediato in caso di orario non più disponibile, separazione dei comandi distruttivi, disdetta senza sanzioni con un anticipo di almeno due giorni lavorativi e finestra di ripensamento di 10 minuti. \\
 \midrule
 \reqref{REQ-05} & Media & Layout desktop spazioso, selettore di ingrandimento del testo nell'intestazione, pulsanti ampi e indicatori basati su testo e icone oltre che sul colore. \\
 \midrule
@@ -55,7 +55,7 @@ La proposta recepisce i requisiti definiti nelle conclusioni di Fase A (\reqref{
 L'interfaccia segue tre linee guida comunicative costanti:
 \begin{itemize}
 \item \textbf{Linguaggio naturale:} sostituzione delle sigle tecniche e delle diciture burocratiche con espressioni quotidiane comprensibili ed esempi visivi contestuali.
-\item \textbf{Rassicurazione e reversibilità:} esplicitazione preventiva della gratuità della disdetta fino a 48 ore lavorative prima della visita, isolamento visivo dei comandi di cancellazione e possibilità di annullare la disdetta entro 10 minuti.
+\item \textbf{Rassicurazione e reversibilità:} esplicitazione preventiva della possibilità di disdire senza sanzioni con un anticipo di almeno due giorni lavorativi rispetto alla visita, isolamento visivo dei comandi di cancellazione e possibilità di annullare la disdetta entro 10 minuti.
 \item \textbf{Rispetto dell'autonomia:} tono istituzionale ma accogliente, che guida l'utente senza colpevolizzarlo in caso di imprevisti e mantiene in capo all'anziano il controllo finale delle scelte.
 \end{itemize}
 
@@ -104,14 +104,14 @@ Seguendo la tassonomia dell'architettura dell'informazione definita da Rosenfeld
 \item \textbf{Selettore pre-compilato delle prescrizioni FSE:} nello Step 1 della prenotazione, un menu a tendina propone automaticamente le ricette elettroniche attive dell'utente con il nome della visita in linguaggio chiaro, eliminando la necessità di cercare o trascrivere manualmente i 15 caratteri del codice NRE;
 \item \textbf{Ricerca testuale e ordinamento geografico delle strutture:} nello Step 3a, la barra di ricerca per nome o comune è affiancata da una lista che ordina automaticamente gli ospedali e i poliambulatori per distanza chilometrica dal domicilio dell'utente, evidenziando con un badge la struttura più vicina e i collegamenti con parcheggi e mezzi pubblici;
 \item \textbf{Calendario mensile ad alto contrasto e fasce orarie guidate:} nello Step 3b, il selettore su calendario mensile mette in risalto in verde i soli giorni con posti disponibili e raggruppa gli orari in pulsanti ampi divisi tra \emph{Mattina} (con indicazione della compatibilità con gli orari degli autobus) e \emph{Pomeriggio};
-\item \textbf{Ricerca semplificata delle ricevute pagoPA:} nella scheda \emph{Scarica ricevuta di pagamento (RT)}, il recupero di una quietanza pregressa richiede unicamente il codice fiscale (già pre-compilato) e il codice avviso IUV di 18 cifre.
+\item \textbf{Ricerca semplificata delle ricevute pagoPA:} nella scheda \emph{Scarica ricevuta di pagamento (RT)}, il recupero di una quietanza pregressa richiede unicamente il codice fiscale (già pre-compilato) e il Codice Avviso di 18 cifre.
 \end{itemize}
 
 \subsubsection{Contents and Tasks (Contenuti e gerarchia dei compiti)}
 \begin{itemize}
 \item \textbf{Compito primario di prenotazione e confronto consapevole:} schede comparative a due colonne per valutare in parallelo Servizio Sanitario Pubblico (con calcolo automatico dell'esenzione e tempi medi d'attesa) e Libera Professione, affiancate da schede di recupero immediato che propongono due orari alternativi a un clic qualora il posto selezionato venga appena occupato;
 \item \textbf{Compito co-primario di assistenza familiare e cura:} gestione condivisa tramite la vista a schermo diviso della modalità co-pilota e le schede multi-profilo dei familiari assistiti nella sezione \emph{Deleghe}.
-\item \textbf{Compito secondario di preparazione, modifica e disdetta protetta:} scheda di dettaglio della visita arricchita con le norme di preparazione clinica, la checklist spuntabile \emph{Cosa mettere nella borsa}, le indicazioni interne di padiglione e ambulatorio, il comando di spostamento data e il flusso di disdetta gratuita oltre le 48 ore con finestra di ripensamento di 10 minuti;
+\item \textbf{Compito secondario di preparazione, modifica e disdetta protetta:} scheda di dettaglio della visita arricchita con le norme di preparazione clinica, la checklist spuntabile \emph{Cosa mettere nella borsa}, le indicazioni interne di padiglione e ambulatorio, il comando di spostamento data e il flusso di disdetta senza sanzioni con un anticipo di almeno due giorni lavorativi con finestra di ripensamento di 10 minuti;
 \item \textbf{Compito di pagamento assistito e distribuzione del promemoria:} guida grafica annotata dell'avviso cartaceo pagoPA (\emph{Dove trovo i dati?}) che mostra visivamente dove leggere codice avviso e importo sul bollettino, e strumenti post-conferma per stampare il promemoria in A4, inviarlo via SMS, condividerlo su WhatsApp con il caregiver o salvarlo nel calendario;
 \end{itemize}
 
@@ -119,7 +119,7 @@ Seguendo la tassonomia dell'architettura dell'informazione definita da Rosenfeld
 \begin{itemize}
 \item \textbf{Session \& PIN Persistence Engine:} gestore dello stato locale che mantiene valido per 30 giorni il PIN personale di 4 cifre sul computer domestico, riserva temporaneamente per 15 minuti lo slot orario durante la lettura del riepilogo, governa il countdown di 10 minuti per l'annullamento della disdetta e congela il punto esatto della pratica per 24 ore tramite il codice Salva-Sessione;
 \item \textbf{Real-Time Co-Browsing Signaling Gateway:} infrastruttura di sincronizzazione in tempo reale che proietta il cursore remoto arancione del caregiver sullo schermo dell'anziano e gestisce il canale vocale con trascrizione live nella colonna laterale durante la modalità co-pilota;
-\item \textbf{Regional Interoperability Bus (FSE, CUP e pagoPA):} livello di integrazione che interroga in modo trasparente il Fascicolo Sanitario Elettronico per caricare ricette e deleghe, verifica le esenzioni registrate sul profilo dell'assistito, aggiorna le disponibilità delle agende AUSL e valida in tempo reale i codici avviso IUV a 18 cifre sul nodo dei pagamenti;
+\item \textbf{Regional Interoperability Bus (FSE, CUP e pagoPA):} livello di integrazione che interroga in modo trasparente il Fascicolo Sanitario Elettronico per caricare ricette e deleghe, verifica le esenzioni registrate sul profilo dell'assistito, aggiorna le disponibilità delle agende AUSL e valida in tempo reale i Codici Avviso di 18 cifre sul nodo dei pagamenti;
 \item \textbf{Multichannel Notification Dispatcher:} motore di invio che genera e distribuisce i promemoria di conferma e le ricevute su stampa A4, SMS, WhatsApp, email e file di calendario.
 \end{itemize}
 
@@ -141,7 +141,7 @@ In coerenza con il piano della struttura (\emph{Structure Plane}) di Garrett~\ci
 
 \subsubsection{Blueprint 1: Accesso al portale e Architettura della Homepage}
 
-Il primo diagramma (Figura~\ref{fig:bp-01}) rappresenta la struttura generale del portale. All'ingresso l'utente incontra il bivio tra l'accesso rapido con PIN (per i dispositivi già registrati nei 30 giorni precedenti) e l'accesso con SPID o CIE. Entrambi i percorsi conducono alla Homepage, dalla quale si diramano le cinque aree principali (\emph{Prenota} con la scorciatoia di \emph{Prenotazione rapida}, \emph{I miei appuntamenti} con l'accesso diretto ai \emph{Dettagli appuntamento}, \emph{Ricette e prescrizioni}, \emph{Deleghe}), le funzioni trasversali (\emph{Pagamento}, \emph{Serve aiuto?}, \emph{Chiedi al caregiver} e \emph{Logout}) e la navigazione secondaria del piè di pagina (\emph{Cerca medico}, \emph{Tempi di attesa}, \emph{Privacy}).
+Il primo diagramma (Figura~\ref{fig:bp-01}) rappresenta la struttura generale del portale. All'ingresso l'utente incontra il bivio tra l'accesso rapido con PIN (per i dispositivi già registrati nei 30 giorni precedenti) e l'accesso con SPID o CIE. Entrambi i percorsi conducono alla Homepage, dalla quale si diramano le altre quattro aree principali (\emph{Prenota} con la scorciatoia di \emph{Prenotazione rapida}, \emph{I miei appuntamenti} con l'accesso diretto ai \emph{Dettagli appuntamento}, \emph{Ricette e prescrizioni}, \emph{Deleghe}), le funzioni trasversali (\emph{Pagamento}, \emph{Serve aiuto?}, \emph{Chiedi al caregiver} e \emph{Logout}) e la navigazione secondaria del piè di pagina (\emph{Cerca medico}, \emph{Tempi di attesa}, \emph{Privacy}).
 
 \begin{center}
 \includegraphics[width=0.95\linewidth]{phase-c/blueprints/1-LoginHomePage.png}
@@ -248,7 +248,7 @@ Il percorso di prenotazione è scandito da uno stepper orizzontale a quattro pas
 \item \textbf{Passo 3b -- Scelta di giorno e orario (WF-06, Figura~\ref{fig:wf-06}):} affianca il calendario mensile, dove i giorni disponibili sono evidenziati in verde, e l'elenco degli orari suddivisi tra mattina (con indicazione di compatibilità con le linee autobus) e pomeriggio.
 \item \textbf{Modalità Co-pilota attiva (WF-07, Figura~\ref{fig:wf-07}):} mostra l'interfaccia quando l'anziano attiva il supporto del caregiver cliccando su \emph{Chiedi ad Elena}. Un banner arancione in alto segnala la condivisione attiva; lo schermo mantiene a sinistra la pagina di prenotazione su cui compare il cursore arancione remoto della figlia, e apre a destra il pannello vocale con la trascrizione in tempo reale dei suggerimenti del caregiver.
 \item \textbf{Recupero per orario appena occupato (WF-08, Figura~\ref{fig:wf-08}):} se l'orario selezionato viene confermato da un altro utente, il sistema evita messaggi d'errore bloccanti e propone subito due alternative vicine nella stessa struttura (un altro orario nello stesso giorno o lo stesso orario nel giorno successivo), confermabili con un solo clic.
-\item \textbf{Passo 4 -- Riepilogo (WF-09, Figura~\ref{fig:wf-09}):} riassume tutti i dati della visita, mostra in alto un timer di 15 minuti che garantisce la riserva temporanea del posto, permette di scegliere se pagare subito online con pagoPA o successivamente tramite avviso cartaceo e ricorda la gratuità della disdetta fino a 48 ore lavorative prima.
+\item \textbf{Passo 4 -- Riepilogo (WF-09, Figura~\ref{fig:wf-09}):} riassume tutti i dati della visita, mostra in alto un timer di 15 minuti che garantisce la riserva temporanea del posto, permette di scegliere se pagare subito online con pagoPA o successivamente tramite avviso cartaceo e ricorda la possibilità di disdire senza sanzioni con un anticipo di almeno due giorni lavorativi.
 \item \textbf{Conferma della prenotazione (WF-10, Figura~\ref{fig:wf-10}):} certifica l'avvenuta prenotazione mostrando a sinistra le opzioni per conservare o condividere il promemoria (stampa A4, invio SMS, invio su WhatsApp al caregiver, aggiunta al calendario) e a destra il pulsante per procedere al pagamento pagoPA o scaricare il bollettino.
 \end{itemize}
 
@@ -298,7 +298,7 @@ Questo gruppo di schermate copre la consultazione delle visite prenotate, la pre
 \begin{itemize}
 \item \textbf{Elenco appuntamenti (WF-11, Figura~\ref{fig:wf-11}):} raccoglie le prenotazioni dividendole tra \emph{Visite in programma} e \emph{Visite passate}, indicando chiaramente per ciascuna data, struttura, regime ed eventuale stato del pagamento del ticket.
 \item \textbf{Dettaglio dell'appuntamento (WF-12, Figura~\ref{fig:wf-12}):} affianca a sinistra le istruzioni di preparazione all'esame e la checklist pratica dei documenti da portare (\emph{Cosa mettere nella borsa}), e a destra le indicazioni per raggiungere l'ambulatorio e lo stato del pagamento con ristampa della ricevuta. In basso, i comandi per spostare e per disdire la visita sono collocati ai lati opposti della pagina per evitare clic involontari.
-\item \textbf{Modale di conferma disdetta (WF-13, Figura~\ref{fig:wf-13}):} prima di procedere alla cancellazione, una finestra di dialogo rassicura l'utente confermando in modo esplicito che l'annullamento è gratuito e privo di sanzioni poiché mancano più di 48 ore lavorative.
+\item \textbf{Modale di conferma disdetta (WF-13, Figura~\ref{fig:wf-13}):} prima di procedere alla cancellazione, una finestra di dialogo rassicura l'utente confermando in modo esplicito che la disdetta avviene senza sanzioni poiché rispetta l'anticipo di almeno due giorni lavorativi rispetto alla visita.
 \item \textbf{Finestra di ripensamento di 10 minuti (WF-14, Figura~\ref{fig:wf-14}):} subito dopo la conferma della disdetta, un banner in cima all'elenco appuntamenti avvisa l'utente che ha 10 minuti di tempo per cambiare idea e recuperare il posto con un solo clic, mantenendo nel frattempo la scheda della visita in stato ripristinabile.
 \end{itemize}
 
@@ -314,7 +314,7 @@ Questo gruppo di schermate copre la consultazione delle visite prenotate, la pre
 
 \begin{center}
 \includegraphics[width=0.90\linewidth]{phase-c/wireframes/wf-13.png}
-\captionof{figure}{WF-13: Finestra modale di conferma della cancellazione con indicazione di gratuità oltre le 48 ore lavorative.}\label{fig:wf-13}
+\captionof{figure}{WF-13: Finestra modale di conferma della cancellazione con indicazione di assenza di sanzioni per la disdetta con un anticipo di almeno due giorni lavorativi.}\label{fig:wf-13}
 \end{center}
 
 \begin{center}
@@ -329,7 +329,7 @@ Le ultime cinque schermate completano le sezioni di gestione familiare, archivio
 \item \textbf{Sezione Deleghe (WF-15, Figura~\ref{fig:wf-15}):} mostra la vista del caregiver (Elena) nella scheda \emph{Chi assisto}, dove sono riepilogati i profili dei genitori con lo stato della delega, il numero di visite confermate e di ricette da prenotare, e il pulsante arancione per entrare nella gestione per conto del familiare.
 \item \textbf{Sezione Ricette e prescrizioni (WF-16, Figura~\ref{fig:wf-16}):} elenca le impegnative del Fascicolo Sanitario divise tra \emph{Da prenotare} e \emph{Ricette passate}, permettendo di avviare la prenotazione con un clic direttamente dalla ricetta desiderata.
 \item \textbf{Pagamento pagoPA con guida visiva (WF-17, Figura~\ref{fig:wf-17}):} per agevolare il pagamento di un avviso cartaceo, la scheda \emph{Paga un nuovo avviso} affianca a sinistra un fac-simile annotato del bollettino (\emph{Dove trovo i dati?}), che indica con richiami numerati dove leggere il codice avviso di 18 cifre e l'importo, e a destra il modulo di inserimento con verifica immediata della correttezza del codice.
-\item \textbf{Recupero e stampa ricevuta di pagamento (WF-18, Figura~\ref{fig:wf-18}):} selezionando la seconda scheda \emph{Scarica ricevuta di pagamento (RT)}, l'utente può recuperare qualsiasi ricevuta già pagata inserendo semplicemente il codice fiscale (pre-compilato) e il codice avviso IUV di 18 cifre, senza vincoli temporali restrittivi né passaggi su portali esterni.
+\item \textbf{Recupero e stampa ricevuta di pagamento (WF-18, Figura~\ref{fig:wf-18}):} selezionando la seconda scheda \emph{Scarica ricevuta di pagamento (RT)}, l'utente può recuperare qualsiasi ricevuta già pagata inserendo semplicemente il codice fiscale (pre-compilato) e il Codice Avviso di 18 cifre, senza vincoli temporali restrittivi né passaggi su portali esterni.
 \item \textbf{Pannello Serve aiuto? (WF-19, Figura~\ref{fig:wf-19}):} si apre in sovrimpressione sulla pagina attiva offrendo a sinistra lo strumento \emph{Salva il tuo punto} (per generare un codice Salva-Sessione valido 24 ore o inserire un codice esistente per riprendere la pratica) insieme al numero verde regionale, e a destra la chat scritta per inviare domande all'assistente.
 \end{itemize}
 

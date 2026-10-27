@@ -7,7 +7,7 @@ La Fase B (\emph{Feasibility Study}) traduce le evidenze qualitative ed empirich
 
 \section{Contesto d'uso e costruzione del cast}
 
-Il cast traduce in modelli operativi per il design i due segmenti prioritari indagati nella Fase A. Dal punto di vista metodologico, i personaggi del cast (\textbf{Pina}, \textbf{Elena}, \textbf{Renato}, \textbf{Amina}) non coincidono anagraficamente con i singoli individui empirici intervistati o testati nella Fase A (Carla B., Giorgio M., Silvia F., Fatima R.), ma ne costituiscono una sintesi archetipica (\emph{persona design}, secondo la formulazione di Cooper et al. \cite{cooperAboutFace2014}). Ciascuna persona aggrega evidenze quantitative macro (dati ISTAT sul divario digitale e stime CNEL sui caregiver), modelli mentali e frizioni riscontrate sperimentalmente nei test preliminari su CUPweb e MioDottore, nonché dinamiche relazionali emerse nelle interviste qualitative. Questa modellazione consente di ancorare le decisioni di progetto a bisogni e vincoli empirici verificati, proiettandoli in figure verosimili dotate di contesti di vita dettagliati senza vincolare il design alle contingenze o alle preferenze idiosincratiche di un singolo partecipante reale. Biografie, frasi rappresentative e scenari sono costruzioni progettuali; le stime temporali degli scenari non sono misure dirette di test, e i limiti delle fonti primarie restano quelli dichiarati in Fase A.
+Il cast comprende quattro personas (\textbf{Pina}, \textbf{Elena}, \textbf{Renato}, \textbf{Amina}) costruite come sintesi archetipiche dei due segmenti prioritari, secondo il \emph{persona design} di Cooper et al. \cite{cooperAboutFace2014}. I profili integrano dati ISTAT e CNEL, criticità riportate nei test preliminari su CUPweb e MioDottore e bisogni illustrati nei racconti qualitativi della Fase A. Biografie, frasi rappresentative e scenari sono costruzioni progettuali; le durate indicate negli scenari sono stime.
 
 Gli scenari applicano le modalità co-pilota e delega completa alla prenotazione e alla disdetta; Renato esplora anche il pagamento accessorio. Il contesto assume la postazione da computer (PC desktop o portatile) come canale primario per il redesign della web application, relegando lo smartphone al ruolo di supporto accessorio (ricezione OTP via SMS, notifiche bidirezionali) e garantendo una copertura responsive secondaria per la continuità d'uso essenziale, escludendo l'app nativa ER Salute. Le relazioni di derivazione sono raccolte nell'appendice~\ref{app:traceability}.
 
@@ -219,7 +219,7 @@ Il sovraccarico cognitivo da frammentazione e la responsabilità dell'intermedia
 La disdetta eseguita da Elena per conto di Pina concretizza la modalità delega completa in condizioni di forte pressione temporale. Le medesime distinzioni di identità e autorizzazione devono restare comprensibili ed esplicite in un eventuale pagamento assistito o delegato, senza presumere che la delega si estenda automaticamente o indiscriminatamente a ogni operazione finanziaria o sanitaria.
 \begin{itemize}[leftmargin=*,topsep=1pt,itemsep=0pt,parsep=0pt]
 \item \hypertarget{req:U2-01}{}\textbf{U2-01}: In modalità delega completa, la procedura di disdetta deve richiedere pochissimi passaggi guidati, distinguere chiaramente visite multiple o appuntamenti ravvicinati ed esplicitare l'assenza di penali prima della conferma definitiva.
-\item \hypertarget{req:U2-02}{}\textbf{U2-02}: L'aggiornamento di stato deve essere in tempo reale e generare notifiche concordate verso entrambi i soggetti (SMS/notifica all'assistito e al delegato), azzerando l'ansia e la necessità di telefonate di verifica post-operazione.
+\item \hypertarget{req:U2-02}{}\textbf{U2-02}: L'aggiornamento di stato deve essere in tempo reale e generare notifiche concordate verso entrambi i soggetti (SMS/notifica all'assistito e al delegato), riducendo l'ansia e la necessità di telefonate di verifica post-operazione.
 \end{itemize}
 
 \clearpage
@@ -370,7 +370,7 @@ Amina coordina visite e terapie per la suocera Nasima con un calendario murale b
   \toprule
   \textbf{Dimensione} & \textbf{1--5} & \textbf{Motivazione} \\
   \midrule
-  Tecnica & \textcolor{personaaccent}{\textbf{3}} & Usa browser web e posta su PC portatile; SPID da verificare. \\
+  Tecnica & \textcolor{personaaccent}{\textbf{3}} & Usa browser web e posta su PC portatile; competenza SPID non documentata. \\
   Dominio & \textcolor{personaaccent}{\textbf{3}} & Conosce bisogni e routine; no deleghe e burocrazia. \\
   Linguistica & \textcolor{personaaccent}{\textbf{2}} & Comprende l'italiano parlato; fatica con il lessico sanitario scritto a monitor. \\
   Fisica e visiva & \textcolor{personaaccent}{\textbf{5}} & Nessuna limitazione fisica o visiva rilevante. \\
