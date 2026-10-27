@@ -2031,8 +2031,8 @@ Nel redesign si distinguono due forme di collaborazione:
 In entrambe le modalità, l'accesso ai dati sanitari segue le autorizzazioni ricevute.
 
 \begin{itemize}
-\item \hypertarget{req:R-01}{}\textbf{R-01}: Ridurre la barriera iniziale di accesso, rimandando
-  l'autenticazione alle operazioni che la richiedono.
+\item \hypertarget{req:R-01}{}\textbf{R-01}: Ridurre il carico dell'autenticazione, semplificando
+  gli accessi successivi dal computer abituale.
 \item \hypertarget{req:R-02}{}\textbf{R-02}: Assicurare continuità visiva e orientamento tra i
   touchpoint, spiegando destinazione e motivo degli eventuali passaggi esterni.
 \item \hypertarget{req:R-03}{}\textbf{R-03}: Rendere riconoscibili le azioni e comprensibile il lessico
@@ -2066,12 +2066,10 @@ mantiene distinti i propri obiettivi da quelli dei test storici.
 
 \begin{itemize}
 \item
-  \hypertarget{req:REQ-01}{}\textbf{REQ-01}: Il sistema deve
-  permettere di esplorare le informazioni essenziali del servizio (es.
-  disponibilità indicativa, come funziona la prenotazione) senza
-  richiedere autenticazione SPID/CIE, spostando l\textquotesingle autenticazione
-  forte solo al passo in cui è strettamente necessaria per confermare
-  un\textquotesingle azione. Priorità: alta.
+  \hypertarget{req:REQ-01}{}\textbf{REQ-01}: Dopo un primo accesso con
+  SPID/CIE, il sistema deve consentire un accesso semplificato dal computer
+  abituale, riducendo la necessità di ripetere l'autenticazione forte.
+  Priorità: alta.
 \item
   \hypertarget{req:REQ-02}{}\textbf{REQ-02}: Tutti i touchpoint del
   servizio (prenotazione, pagamento, fascicolo) devono condividere
@@ -2089,11 +2087,10 @@ mantiene distinti i propri obiettivi da quelli dei test storici.
   dematerializzata) deve essere accompagnato da una spiegazione
   contestuale in linguaggio semplice. Priorità: media.
 \item
-  \hypertarget{req:REQ-04}{}\textbf{REQ-04}: Il primo utilizzo deve
-  essere guidato da un flusso passo-passo con conferme esplicite ad
-  ogni passaggio critico, e deve offrire sempre un\textquotesingle opzione
-  visibile per richiamare assistenza umana (caregiver o operatore)
-  senza che questa venga presentata come un fallimento. Priorità: alta.
+  \hypertarget{req:REQ-04}{}\textbf{REQ-04}: Il percorso di prenotazione deve
+  essere articolato in passaggi riconoscibili, con indicazione
+  dell'avanzamento, riepilogo prima della conferma e accesso visibile alle
+  opzioni di assistenza disponibili. Priorità: alta.
 \item
   \hypertarget{req:REQ-05}{}\textbf{REQ-05}: L\textquotesingle interfaccia
   deve essere verificata e resa compatibile con le principali

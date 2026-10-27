@@ -33,7 +33,7 @@ La proposta recepisce i requisiti definiti nelle conclusioni di Fase A (\reqref{
 \midrule
 \reqref{REQ-03} & Media & Linguaggio chiaro, gerarchia visiva ad alto contrasto e confronto trasparente affiancato tra Servizio Sanitario Pubblico (con esenzione calcolata) e Libera Professione. \\
 \midrule
-\reqref{REQ-04} & Alta & Prenotazione guidata in 4 passaggi, recupero immediato in caso di orario non più disponibile, separazione dei comandi distruttivi, disdetta senza sanzioni con un anticipo di almeno due giorni lavorativi e finestra di ripensamento di 10 minuti. \\
+\reqref{REQ-04} & Alta & Prenotazione guidata in 4 passaggi con indicazione dell’avanzamento, riepilogo prima della conferma e accesso alle opzioni di assistenza tramite \emph{Serve aiuto?} e \emph{Chiedi al caregiver}. \\
 \midrule
 \reqref{REQ-05} & Media & Layout desktop spazioso, selettore di ingrandimento del testo nell'intestazione, pulsanti ampi e indicatori basati su testo e icone oltre che sul colore. \\
 \midrule
@@ -78,7 +78,7 @@ La barra di navigazione globale del portale è organizzata in \textbf{cinque sez
 \item \textbf{Prenota:} percorso guidato in 4 passaggi (\emph{1.\ Scelta prestazione}, \emph{2.\ Canale e costi}, \emph{3.\ Sede e data}, \emph{4.\ Riepilogo}) che accompagna l'utente fino alla conferma e all'invio del promemoria.
 \item \textbf{I miei appuntamenti:} archivio unificato delle visite, suddiviso nelle schede \emph{Visite in programma} e \emph{Visite passate}, da cui consultare le istruzioni di preparazione, pagare o stampare la ricevuta, spostare la data o disdire con finestra di ripensamento di 10 minuti.
 \item \textbf{Ricette e prescrizioni:} elenco delle impegnative sincronizzate dal Fascicolo Sanitario Elettronico, diviso in \emph{Da prenotare} e \emph{Ricette passate}, con avvio diretto della prenotazione dalla singola ricetta.
-\item \textbf{Deleghe:} area dedicata alla rete familiare, suddivisa tra \emph{Chi assisto} (elenco dei familiari assistiti con ingresso nella modalità delegata) e \emph{Le mie deleghe} (gestione delle persone autorizzate a operare sul proprio profilo).
+\item \textbf{Deleghe:} area dedicata alla rete familiare. La scheda \emph{Chi assisto} permette di operare per i familiari che hanno concesso una delega; \emph{Le mie deleghe} permette di gestire le persone autorizzate a operare per sé. Quest'ultima gestione riguarda esclusivamente il proprio profilo.
 \end{enumerate}
 
 Sul lato destro della barra sono sempre disponibili:
@@ -190,7 +190,7 @@ Il quarto diagramma (Figura~\ref{fig:bp-04}) descrive la sezione dedicata alle p
 
 Il quinto diagramma (Figura~\ref{fig:bp-05}) rappresenta il funzionamento delle deleghe familiari, articolato in due percorsi:
 \begin{itemize}
-\item \textbf{Chi assisto:} mostra l'elenco dei familiari assistiti; selezionando l'azione per prenotare o gestire per conto di un assistito, il sistema apre la Homepage dedicata all'assistito, dalla quale il caregiver può accedere a tutte le funzionalità del portale (prenotazione, appuntamenti, ricette, deleghe, pagamento, aiuto) o concludere la sessione delegata tramite il comando \emph{Termina delega};
+\item \textbf{Chi assisto:} mostra l'elenco dei familiari assistiti. Selezionando un assistito, il caregiver accede alla Homepage riferita al suo profilo e può svolgere le operazioni consentite dalla delega ricevuta. La concessione, modifica e revoca delle deleghe rimangono riservate all'interessato sul proprio profilo. Il caregiver può concludere la sessione delegata tramite il comando \emph{Termina delega};
 \item \textbf{Le mie deleghe:} mostra l'elenco dei caregiver autorizzati dall'utente e permette di aggiungere e confermare una nuova delega.
 \end{itemize}
 

@@ -1497,8 +1497,8 @@
   "R-01": {
     "id": "R-01",
     "layer": 1,
-    "title": "Percorso a bassa soglia senza SPID",
-    "desc": "Percorso iniziale per esplorare disponibilità e capire il servizio prima di richiedere l'autenticazione forte."
+    "title": "Autenticazione a carico ridotto",
+    "desc": "Ridurre il carico dell’autenticazione, semplificando gli accessi successivi dal computer abituale."
   },
   "R-02": {
     "id": "R-02",
@@ -1557,9 +1557,9 @@
   "REQ-01": {
     "id": "REQ-01",
     "layer": 2,
-    "title": "Esplorazione senza autenticazione",
+    "title": "Accesso semplificato dal computer abituale",
     "prio": "Alta",
-    "desc": "Esplorare info essenziali (disponibilità, funzionamento) senza SPID, richiesto solo al momento della conferma."
+    "desc": "Dopo un primo accesso con SPID/CIE, consentire un accesso semplificato dal computer abituale, riducendo la necessità di ripetere l’autenticazione forte."
   },
   "REQ-02": {
     "id": "REQ-02",
@@ -1578,9 +1578,9 @@
   "REQ-04": {
     "id": "REQ-04",
     "layer": 2,
-    "title": "Flusso guidato con conferme",
+    "title": "Prenotazione guidata e assistenza accessibile",
     "prio": "Alta",
-    "desc": "Primo utilizzo guidato passo-passo con conferme ad ogni step e opzione di supporto umano sempre visibile."
+    "desc": "Percorso di prenotazione articolato in passaggi riconoscibili, con indicazione dell’avanzamento, riepilogo prima della conferma e accesso visibile alle opzioni di assistenza disponibili."
   },
   "REQ-05": {
     "id": "REQ-05",
@@ -1631,7 +1631,7 @@
     "persona": "Pina",
     "device": "Computer (laptop familiare)",
     "title": "Autenticazione leggera e recupero guidato",
-    "desc": "Autenticazione a basso carico mnemonico e recupero guidato; no login ripetuti per sola consultazione."
+    "desc": "Autenticazione a basso carico mnemonico e recupero guidato; accessi successivi semplificati dal computer abituale."
   },
   "P-02": {
     "id": "P-02",
@@ -3042,6 +3042,12 @@
     const TRACE_DETAILS = {
   "R-01": [
     {
+      "text": "Ridurre il carico dell’autenticazione, semplificando gli accessi successivi dal computer abituale.",
+      "source": "phase-a/phase-a.tex",
+      "line": 2034,
+      "snapshot": "local-2026-10-27"
+    },
+    {
       "text": "collegata a ID-01, ID-05; confermata dai test: Carla e Fatima bloccate sull' autenticazione/sui dati richiesti",
       "source": "phase-a/phase-a.tex",
       "line": 2255,
@@ -3120,6 +3126,12 @@
   ],
   "REQ-01": [
     {
+      "text": "Dopo un primo accesso con SPID/CIE, consentire un accesso semplificato dal computer abituale, riducendo la necessità di ripetere l’autenticazione forte.",
+      "source": "phase-a/phase-a.tex",
+      "line": 2069,
+      "snapshot": "local-2026-10-27"
+    },
+    {
       "text": "da R-01; evidenze ID-01, ID-05",
       "source": "phase-a/phase-a.tex",
       "line": 2329,
@@ -3149,6 +3161,12 @@
     }
   ],
   "REQ-04": [
+    {
+      "text": "Percorso di prenotazione articolato in passaggi riconoscibili, con indicazione dell’avanzamento, riepilogo prima della conferma e accesso visibile alle opzioni di assistenza disponibili.",
+      "source": "phase-a/phase-a.tex",
+      "line": 2090,
+      "snapshot": "local-2026-10-27"
+    },
     {
       "text": "da R-04; evidenza ID-05",
       "source": "phase-a/phase-a.tex",
@@ -3197,6 +3215,12 @@
     }
   ],
   "P-01": [
+    {
+      "text": "Autenticazione a basso carico mnemonico e recupero guidato; accessi successivi semplificati dal computer abituale.",
+      "source": "phase-b/phase-b.tex",
+      "line": 117,
+      "snapshot": "local-2026-10-27"
+    },
     {
       "text": "da ID-01, ID-05; REQ-01, REQ-04",
       "source": "phase-b/phase-b.tex",
