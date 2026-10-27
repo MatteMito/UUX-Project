@@ -1862,17 +1862,21 @@ pagamento (\reqref{ID-13}).
 \item
   \hypertarget{req:ID-13}{}\textbf{ID-13}: \textbf{Posizione:} preparazione dei dati e compilazione
   del modulo di pagamento. Difficoltà nel riconoscere quali informazioni
-  inserire e su quale documento reperirle; origine: esigenza indicata dal
-  team ed esplorata nel racconto di Giorgio
-  (\docref{a}{04a}). L'ipotesi riguarda il percorso e i documenti di pagamento ed è distinta dalla frammentazione dei domini (\reqref{ID-02}). Impatto,
-  persistenza e frequenza non sono valutati; non deriva dai task T1--T3
+  inserire e su quale documento reperirle; origine: racconto di Giorgio
+  (\docref{a}{04a}). La criticità riguarda il percorso e i documenti di
+  pagamento ed è distinta dalla frammentazione dei domini (\reqref{ID-02}).
+  Impatto: alto (3), perché l'incertezza interrompe la compilazione autonoma;
+  persistenza: media (2), perché un chiarimento sul documento e sulla
+  posizione dei dati può consentire di proseguire. I punteggi esprimono
+  giudizi progettuali sul caso descritto; la frequenza non è disponibile
+  e il pagamento non rientra nei task T1--T3.
 \end{itemize}
 
 Le frequenze mantengono i denominatori delle schede di test: quattro
 profili su due tool, con sottoinsiemi diversi secondo task e problema.
 Per \reqref{ID-01}--\reqref{ID-07} sono disponibili giudizi qualitativi dell'assessment,
-non frequenze d'uso. \reqref{ID-13} resta fuori dal confronto quantitativo finché
-non saranno disponibili riscontri specifici.
+non frequenze d'uso. Per \reqref{ID-13}, impatto e persistenza sono
+valutati sul caso narrativo; non è disponibile una frequenza nei test.
 
 \subsection[Risultati SUS]{Valutazione quantitativa dell\textquotesingle usabilità: Matrice di risposta SUS}
 
@@ -1930,9 +1934,12 @@ insieme agli esiti e ai comportamenti descritti nelle schede.
 
 \subsection{Curva di urgenza}
 
-La curva conserva la valutazione di \reqref{ID-01}--\reqref{ID-12}. \reqref{ID-13} è escluso perché
-privo di giudizi documentati su impatto e persistenza. Le valutazioni sono
-priorità progettuali, non stime della prevalenza dei problemi nel target.
+La curva comprende le criticità \reqref{ID-01}--\reqref{ID-13}. Per
+\reqref{ID-13}, i giudizi progettuali di impatto alto (3) e persistenza
+media (2) derivano dal caso di Giorgio: la difficoltà interrompe la
+compilazione autonoma, ma può essere superata con un chiarimento.
+Le valutazioni esprimono priorità progettuali, non stime della prevalenza
+dei problemi nel target.
 La relazione impatto × persistenza è rappresentata con impatto e
 persistenza convertiti in scala numerica (basso/basso-medio=1/1,5,
 medio=2, medio-alto=2,5, alto=3) e soglia di urgenza motivata: gli
@@ -1960,6 +1967,7 @@ iterazione di design.
 \reqref{ID-10} & 3 & 3 & 6 & Immediata \\
 \reqref{ID-11} & 3 & 2 (da confermare) & 5 & Prossima release \\
 \reqref{ID-12} & 2,5 & 3 & 5,5 & Immediata \\
+\reqref{ID-13} & 3 & 2 & 5 & Prossima release \\
 \bottomrule
 \end{tabular}
 \end{minipage}
@@ -1999,6 +2007,9 @@ x y Class Label
 2.05 2.95 prossima ID-11
 3.05 2.45 urgente ID-12
 };
+\addplot[only marks,mark=*,blue,forget plot] coordinates {(2,3)};
+\draw[blue!65] (axis cs:2,3) -- (axis cs:1.65,3.35)
+  node[above,font=\tiny,text=black]{ID-13};
 \addplot[domain=1.9:3.6, samples=2, dashed, thick, black] {5.5-x};
 \legend{Immediata,Prossima release,Soglia (somma=5{,}5)}
 \end{axis}
