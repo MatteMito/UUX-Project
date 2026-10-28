@@ -1,286 +1,476 @@
 % !TEX root = ../hphp-project-report.tex
-% Generated from HPHP_Documentazione_Completa_EDITABILE.docx.
-% I termini tecnici seguono la terminologia delle checklist di progetto.
-\chapter{Fase B --- Feasibility Study}
+% Gerarchia: chapter = fase; cardsection = card; subsection = blocco;
+% subsubsection = caso/dettaglio; fieldheading = campo della card.
+\chapter{Fase B: Studio di fattibilità}
 
-\section{Documento 01 --- Team card}
+La Fase B (\emph{Feasibility Study}) traduce le evidenze qualitative ed empiriche raccolte nella Fase A in modelli d'uso operativi per la progettazione. L'obiettivo è definire i profili e le competenze del cast di personas, formalizzarne i comportamenti in scenari d'uso realistici e ricavare implicazioni progettuali e requisiti cumulativi per le fasi successive.
 
-Vedi Fase A, Documento 01 --- Team Affordance (Matteo Boscherini,
-Alessandro Campedelli, Francesco Maria Fuligni).
+\section{Contesto d'uso e costruzione del cast}
 
-\cardsection{Documento 02a --- Persona and Use Case card: protagonista}
+Il cast comprende quattro personas (\textbf{Pina}, \textbf{Elena}, \textbf{Renato}, \textbf{Amina}) costruite come sintesi archetipiche dei due segmenti prioritari, secondo il \emph{persona design} di Cooper et al. \cite{cooperAboutFace2014}. I profili integrano dati ISTAT e CNEL, criticità riportate nei test preliminari su CUPweb e MioDottore e bisogni illustrati nei racconti qualitativi della Fase A. Biografie, frasi rappresentative e scenari sono costruzioni progettuali; le durate indicate negli scenari sono stime.
 
-{\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}
-  >{\centering\arraybackslash}p{(\linewidth - 0\tabcolsep) * \real{1.0000}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\todoinline{Sostituire questo placeholder con una fotografia di Pina
-utilizzabile con licenza adeguata.} \\
-\end{longtable}
-}
+Gli scenari applicano le modalità co-pilota e delega completa alla prenotazione e alla disdetta; Renato esplora anche il pagamento accessorio. Il contesto assume la postazione da computer (PC desktop o portatile) come canale primario per il redesign della web application, relegando lo smartphone al ruolo di supporto accessorio (ricezione OTP via SMS, notifiche bidirezionali) e garantendo una copertura responsive secondaria per la continuità d'uso essenziale, escludendo l'app nativa ER Salute. Le relazioni di derivazione sono raccolte nell'appendice~\ref{app:traceability}.
 
-\fieldheading{Nome della persona}
+\begingroup
+\small
+\renewcommand{\arraystretch}{0.95}
+\setlength{\tabcolsep}{4pt}
+\noindent\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.20\linewidth}>{\raggedright\arraybackslash}p{\dimexpr0.80\linewidth-2\tabcolsep\relax}@{}}
+\toprule
+\textbf{Dimensione} & \textbf{Contesto considerato} \\
+\midrule
+Ambienti & Postazione con scrivania o tavolo a casa per Pina, Amina e Renato; ufficio con postazione PC a più schermi per Elena. Rumore, interruzioni, luce riflessa e assenza di supporto tecnico immediato sono variabili frequenti. \\
+Dispositivi & PC desktop e portatili con tastiera e mouse come dispositivi primari di interazione per tutte le personas; smartphone personale come dispositivo accessorio d'appoggio per autenticazione (ricezione codici OTP via SMS) e notifiche di promemoria, nonché per la consultazione responsive secondaria. \\
+Tempo e pressione & Pina procede con cautela davanti al monitor del computer; Elena interviene in finestre di 3--5 minuti dal PC dell'ufficio tra riunioni e buste paga; Renato vuole concludere in 8--10 minuti in autonomia dal suo desktop; Amina opera dal portatile di casa gestendo frequenti pause per le richieste familiari. \\
+Vincoli & Affaticamento visivo da schermo, precisione motoria fine nell'uso del mouse (difficoltà di puntamento e doppio clic), gestione delle credenziali SPID su PC, linguaggio sanitario opaco e interruzioni operative. \\
+Attività esterne & Recuperare ricetta NRE cartacea, consultare calendario e orari dei trasporti, confrontare costi e sedi a monitor, coordinarsi con familiari, tradurre o chiarire termini amministrativi. \\
+Assistenza & Supporto in modalità co-pilota o esecuzione in modalità delega completa, in presenza o a distanza secondo il contesto: sostenere l'autonomia al computer senza sostituzione sistematica e senza presumere omogeneità di competenze informatiche. \\
+\bottomrule
+\end{tabular}
+\endgroup
+\par\vspace{2pt}
+La gerarchia è intenzionale: \textbf{Pina} è la protagonista e il riferimento per i requisiti inclusivi di accessibilità su PC (contrasto visivo, bersagli di puntamento ampi, assenza di vicoli ciechi); \textbf{Elena} e \textbf{Amina} sono due personaggi secondari complementari, rispettivamente caregiver a distanza su PC d'ufficio e caregiver convivente su computer portatile condiviso; \textbf{Renato} è il personaggio aggiuntivo di livello inferiore che controlla che la semplificazione desktop non diventi lenta, paternalistica o limitante per un anziano più competente con postazione fissa a grande schermo. Amina amplia il cast senza essere una variante cosmetica: introduce una storia migratoria, una competenza linguistica asimmetrica e un'organizzazione familiare con uso discontinuo del PC, tutte pertinenti al compito.
 
-Giuseppina "Pina" Ferretti
+\clearpage
+% --- Card 02a ----------------------------------------------------
+\cardsection[Giuseppina ``Pina'' Ferretti (protagonista)]{Documento 02a: Persona e Use Case card (protagonista)}\label{doc:b:02a}
 
-\begin{quote}
-\emph{``Se non c\textquotesingle è qualcuno che mi aiuta, io non riesco
-a prenotare niente da sola.''}
-\end{quote}
+\subsection{Profilo e competenze}
 
-\fieldheading{Segmento corrispondente}
+\begin{personacard}{Giuseppina ``Pina'' Ferretti --- Protagonista}
 
-Segmento A di Fase A --- Paziente anziano con bassa autonomia digitale, 75-85 anni,
-patologia cronica, utente diretto del servizio.
+\noindent\begin{minipage}[t]{0.24\linewidth}
+  \centering
+  \vspace{0pt}
+  \includegraphics[width=\linewidth,height=2.9cm,keepaspectratio]{assets/phase-b-persona-pina.jpeg}\\[1.5mm]
+  {\small\bfseries\color{personaaccent} PROTAGONISTA}\\[1mm]
+  {\scriptsize\bfseries\color{personamuted} Segmento A $\cdot$ Utente diretta}
+\end{minipage}\hfill
+\noindent\begin{minipage}[t]{0.72\linewidth}
+  \vspace{0pt}
+  {\Large\bfseries\color{personaaccent} Giuseppina ``Pina'' Ferretti}\\[0.5mm]
+  {\small\color{personamuted} Paziente anziana con bassa autonomia digitale}\\[1mm]
+  {\color{personarule}\hrule height 0.5pt}\vspace{4pt}
 
-\fieldheading{Descrizione della persona}
+  \noindent\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{\dimexpr0.78\linewidth-2\tabcolsep\relax}@{}}
+    \textcolor{personaaccent}{\textbf{Profilo:}} & 78 anni, vedova, ex operaia tessile a Ravenna (San Biagio); diabete di tipo 2 e ipertensione; forte attaccamento alla propria autonomia. \\
+    \textcolor{personaaccent}{\textbf{Dispositivi:}} & PC portatile con monitor 17'', mouse esterno e risoluzione al 125\%; cellulare base accanto per chiamate e OTP. \\
+    \textcolor{personaaccent}{\textbf{Vincoli:}} & Presbiopia, rigidità e tremore alle dita (puntamento fine e doppio clic critici col mouse), memoria SPID labile, ansia da errore bloccante.
+  \end{tabular}
 
-\fieldheading{Dati di base}
+\end{minipage}
 
-\begin{itemize}
-\item
-  78 anni, donna, italiana, pensionata (ex operaia tessile)
-\item
-  Vive sola in un appartamento a Ravenna; il marito è mancato 6 anni fa
-\item
-  Diabete di tipo 2 e ipertensione: visite diabetologiche ed esami del
-  sangue ogni 4-6 mesi
-\item
-  Lieve difficoltà visiva (porta occhiali da presbite) e un leggero
-  tremore alle mani che rende difficile toccare con precisione elementi
-  piccoli su schermo
-\item
-  Possiede uno smartphone Android semplice, regalato dalla figlia due
-  anni fa
+\begin{personaquote}
+``Le date le segno sul calendario vicino al monitor; quando muovo la freccia del mouse ho sempre paura di cliccare la cosa sbagliata.''
+\end{personaquote}
+
+\personafield{Comportamenti, esperienza e rete di aiuto}
+
+Pina conserva ricette dematerializzate (NRE), ricevute e promemoria nella ``busta blu'' in corridoio; il calendario murale di Frate Indovino è il suo riferimento per incrociare farmaci, bus linea 1 e mercato del martedì. Ha un PC portatile con mouse esterno donato dalla figlia, ma lo usa con timore reverenziale. Ha provato ad accedere a CUPweb dal browser con SPID tenendo il telefono accanto per l'OTP: i menu fitti, i caratteri minuscoli, i link difficili da centrare con il mouse per via dell'artrosi e il timeout l'hanno mandata nel panico, spingendola a rinunciare. Telefona a Elena solo se teme conseguenze irreversibili, provando disagio all'idea di essere un peso. Si fida quando a monitor trova pulsanti ampi facili da cliccare, linguaggio comune, conferme visibili e recupero privo di giudizio, con visite dopo le 10:00 per i bus.
+
+\personafield{Competenze e abilità (C\&A)}
+
+\noindent\begin{minipage}[c]{0.30\linewidth}
+  \centering
+  \includegraphics[width=\linewidth,height=2.4cm,keepaspectratio]{assets/phase-b-persona-pina-skills.png}
+\end{minipage}\hfill
+\noindent\begin{minipage}[c]{0.67\linewidth}
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \renewcommand{\arraystretch}{0.88}
+  \noindent\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.29\linewidth}>{\centering\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{\dimexpr0.63\linewidth-4\tabcolsep\relax}@{}}
+  \toprule
+  \textbf{Dimensione} & \textbf{1--5} & \textbf{Motivazione} \\
+  \midrule
+  Tecnica & \textcolor{personaaccent}{\textbf{1}} & Uso incerto di PC e mouse; dipende da aiuto per credenziali e flussi. \\
+  Dominio & \textcolor{personaaccent}{\textbf{2}} & Visite note; ignora canali, agende e regimi amministrativi. \\
+  Linguistica & \textcolor{personaaccent}{\textbf{4}} & Italiano comune OK; il lessico burocratico a schermo crea esitazione. \\
+  Fisica e visiva & \textcolor{personaaccent}{\textbf{2}} & Presbiopia e tremore: puntamento fine con mouse e testi minuscoli critici. \\
+  Motivazione & \textcolor{personaaccent}{\textbf{3}} & Vuole autonomia, ma l'ansia cresce se il puntatore non è stabile. \\
+  Concentrazione & \textcolor{personaaccent}{\textbf{3}} & Accurata, ma errori e dubbi visivi spezzano la continuità. \\
+  \bottomrule
+  \end{tabular}
+\end{minipage}
+
+\end{personacard}
+
+\clearpage
+
+\subsection[Scenario e obiettivo]{Scenario: la visita diabetologica di controllo e il timore dell'errore irreversibile}
+
+\textbf{Contesto e innesco:} È il primo pomeriggio a Ravenna; seduta al tavolo del soggiorno davanti al computer portatile con mouse collegato, Pina deve prenotare il controllo diabetologico semestrale prescritto dal diabetologo. Recupera il promemoria cartaceo con il codice NRE dalla busta di plastica blu dove custodisce la documentazione medica e consulta il calendario murale di Frate Indovino per escludere il martedì mattina, riservato al mercato rionale. Non guidando su percorsi extraurbani, deve tassativamente verificare che la sede proposta sia raggiungibile con la linea~1 dell'autobus urbano.
+
+\textbf{Svolgimento dell'esperienza e attrito cognitivo:} Pina accende il computer e apre il browser web per accedere a CUPweb. L'accesso tramite SPID genera subito forte apprensione: deve digitare utente e password memorizzati su un foglietto, attendere il codice OTP via SMS sul telefono cellulare poggiato accanto alla tastiera e inserirlo prima della scadenza del timer. Superata l'autenticazione, la complessità dell'interfaccia desktop di CUPweb la disorienta del tutto: la pagina presenta menu orizzontali fitti, etichette minuscole e tabelle dense in cui \enquote{Prenota con ricetta} e \enquote{Consulta appuntamenti} risultano poco evidenti. A causa della rigidità alle dita e del lieve tremore, manovrare il puntatore del mouse su link testuali sottili richiede sforzi frustranti e produce continui clic a vuoto. Temendo che un clic involontario cancelli visite precedenti o confermi una prestazione errata a pagamento, si blocca davanti a un messaggio d'errore generico con codice alfanumerico. Dopo due tentativi a vuoto, decide di chiudere la finestra del browser e telefonare alla figlia Elena per chiederle aiuto.
+
+\textbf{Stima temporale e criteri di successo:}
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item \textit{Stima temporale:} 10--15 minuti di navigazione al computer prima dell'insorgenza del blocco e della richiesta d'aiuto.
+\item \textit{Criteri di successo:} Comprensione del passo corrente a schermo, selezione autonoma e agevole con il mouse di data e sede raggiungibile tramite ampi pulsanti desktop (click target generosi), rilascio di un promemoria finale stampabile e assenza di sostituzione passiva da parte del caregiver.
+\item \textit{Rischi principali:} Selezione errata con il puntatore del mouse, frustrazione da time-out di sessione, esproprio operativo della figlia e rinuncia definitiva al canale digitale con ritorno allo sportello fisico.
 \end{itemize}
 
-\fieldheading{Esperienza pregressa e caratteristiche psicologiche}
-
-Pina ha lavorato tutta la vita in una manifattura tessile, senza mai
-usare un computer per lavoro. È abituata a gestire le pratiche di
-persona: sportelli, farmacie, ambulatori. È una donna precisa,
-orgogliosa della propria indipendenza, ma consapevole dei propri limiti
-con la tecnologia. Teme di "rompere qualcosa" o di essere truffata
-online, e prova un certo imbarazzo nel dover chiedere aiuto
-continuamente alla figlia, pur dipendendo da lei per quasi tutte le
-pratiche digitali. Ha un desiderio latente --- mai dichiarato
-apertamente --- di riuscire a fare almeno le cose più semplici da sola.
-
-\includegraphics[width=3.95833in,height=3.95833in]{assets/phase-b-persona-pina-skills.png}
-
-\fieldheading{Use Case \#1 --- La visita diabetologica di controllo}
-
-\fieldheading{Use Case Narrative}
-
-Pina deve prenotare la visita diabetologica di controllo semestrale.
-Prova ad aprire l\textquotesingle app ER Salute sul suo telefono, ma non
-ricorda la password SPID e non riesce a distinguere tra i pulsanti
-"Prenota" e "Informazioni", entrambi presentati come semplice testo.
-Dopo due tentativi falliti e un messaggio di errore che non capisce,
-chiama la figlia Elena, interrompendola durante una riunione di lavoro.
-Pina si sente in colpa per il disturbo arrecato e, la volta successiva,
-rinuncia a riprovare da sola, rafforzando così la propria dipendenza
-dalla figlia invece di ridurla.
-
-\fieldheading{Considerazioni conclusive}
-
+\subsection[Implicazioni progettuali]{Considerazioni conclusive e implicazioni di design}
+\vspace{-2pt}
 \fieldheading{Impatto della persona sul design}
-
-\begin{itemize}
-\item
-  {[}P-01{]} L\textquotesingle autenticazione deve avere
-  un\textquotesingle alternativa a bassa soglia per compiti a basso
-  rischio (consultare, non modificare), rimandando SPID solo quando
-  serve davvero
-\item
-  {[}P-02{]} I pulsanti di azione devono essere visivamente distinti
-  (colore, forma, icona) e non semplice testo, per compensare le
-  difficoltà visive e di precisione motoria
-\item
-  {[}P-03{]} Il linguaggio deve essere semplice e rassicurante, con
-  conferme esplicite che riducano la paura di "sbagliare" o "rompere
-  qualcosa"
+Le limitazioni motorie, l'ansia tecnologica e il timore di commettere errori irreversibili impongono un'interfaccia protettiva e rassicurante su desktop:
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item \hypertarget{req:P-01}{}\textbf{P-01}: L'autenticazione desktop deve ridurre il carico di memoria e offrire recupero guidato (supportando l'inserimento del codice OTP ricevuto su telefono); gli accessi successivi dal computer abituale devono essere semplificati.
+\item \hypertarget{req:P-02}{}\textbf{P-02}: Bersagli di puntamento (click target) su desktop devono essere ampi, ben distanziati e distinti per forma, testo e icona, non soltanto per colore, prevenendo selezioni accidentali dovute a ridotta precisione motoria con il mouse.
+\item \hypertarget{req:P-03}{}\textbf{P-03}: Il linguaggio a schermo deve essere semplice e rassicurante, con conseguenze esplicite, conferme reversibili con tasti di annullamento evidenti e assenza di tecnicismi informatici.
 \end{itemize}
 
-\fieldheading{Impatto dello Use Case \#1 sul design}
-
-\begin{itemize}
-\item
-  {[}U1-01{]} Il flusso di prenotazione per patologie croniche dovrebbe
-  permettere di richiedere una visita di controllo ricorrente con un
-  numero minimo di passaggi, riconoscendo lo storico del paziente
-\item
-  {[}U1-02{]} In caso di errore, il sistema deve offrire un percorso di
-  recupero chiaro (es. \textquotesingle chiedi aiuto
-  ora\textquotesingle{} con contatto diretto) prima che
-  l\textquotesingle utente abbandoni e rinunci definitivamente
+\fieldheading{Impatto del caso d'uso sul design}
+La gestione di controlli clinici ricorrenti richiede continuità di contesto e supporto al recupero su desktop. Se il servizio propone un pagamento, Pina deve comprenderne lo scopo e l'eventuale cambio di destinazione a monitor; in modalità co-pilota, scelta e azione al computer restano a lei con il supporto del caregiver senza che l'esecuzione le venga sottratta passivamente.
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item \hypertarget{req:U1-01}{}\textbf{U1-01}: Il percorso desktop per una visita ricorrente deve conservare il contesto, proporre sedi compatibili con la mobilità e ridurre i passaggi tramite un layout lineare a grandi riquadri; in modalità co-pilota, scelta e azione al computer restano all'utente con il supporto del caregiver senza decidere al suo posto.
+\item \hypertarget{req:U1-02}{}\textbf{U1-02}: Prima dell'abbandono, un errore a monitor deve indicare con chiarezza causa, modalità di recupero e canali di assistenza in linguaggio naturale, senza azzerare i campi già compilati nel modulo web.
 \end{itemize}
 
-\cardsection{Documento 02b --- Persona and Use Case card: non protagonista}
+\clearpage
+% --- Card 02b ----------------------------------------------------
+\cardsection[Elena Ferretti (secondaria)]{Documento 02b: Persona e Use Case card (personaggio secondario)}\label{doc:b:02b}
 
-{\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}
-  >{\centering\arraybackslash}p{(\linewidth - 0\tabcolsep) * \real{1.0000}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\todoinline{Sostituire questo placeholder con una fotografia di Elena
-utilizzabile con licenza adeguata.} \\
-\end{longtable}
-}
+\subsection{Profilo e competenze}
 
-\fieldheading{Nome della persona}
+\begin{personacard}{Elena Ferretti --- Personaggio Secondario}
 
-Elena Ferretti
+\noindent\begin{minipage}[t]{0.24\linewidth}
+  \centering
+  \vspace{0pt}
+  \includegraphics[width=\linewidth,height=3.8cm,keepaspectratio]{assets/phase-b-persona-elena.jpeg}\\[1.5mm]
+  {\small\bfseries\color{personaaccent} CAREGIVER A DISTANZA}\\[1mm]
+  {\scriptsize\bfseries\color{personamuted} Segmento B $\cdot$ Intermediaria}
+\end{minipage}\hfill
+\noindent\begin{minipage}[t]{0.72\linewidth}
+  \vspace{0pt}
+  {\Large\bfseries\color{personaaccent} Elena Ferretti}\\[0.5mm]
+  {\small\color{personamuted} Caregiver familiare sempre reperibile a distanza}\\[1mm]
+  {\color{personarule}\hrule height 0.5pt}\vspace{4pt}
 
-\begin{quote}
-\emph{``Vorrei che mia madre potesse cavarsela da sola per le cose
-semplici, così mi preoccuperei solo per l\textquotesingle importante.''}
-\end{quote}
+  \noindent\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{\dimexpr0.78\linewidth-2\tabcolsep\relax}@{}}
+    \textcolor{personaaccent}{\textbf{Profilo:}} & 52 anni, resp.~amministrativa e paghe in una coop a Bologna; vive con compagno e figlio universitario; assiste a distanza Pina a Ravenna. \\
+    \textcolor{personaaccent}{\textbf{Dispositivi:}} & PC a doppio monitor in ufficio, smartphone personale sempre attivo con notifiche sincronizzate e app bancarie/sanitarie. \\
+    \textcolor{personaaccent}{\textbf{Vincoli:}} & Finestre di 3--5 min tra riunioni e buste paga, continue interruzioni, carico da \emph{sandwich generation} e timore di confondere profili.
+  \end{tabular}
 
-\fieldheading{Segmento corrispondente}
+\end{minipage}
 
-Segmento B di Fase A --- Caregiver familiare sempre reperibile a distanza,
-45-60 anni, intermediario del servizio.
+\begin{personaquote}
+``Se la guido al telefono per dieci minuti, poi non so se l'ho aiutata o se ho fatto tutto io.''
+\end{personaquote}
 
-\fieldheading{Descrizione della persona}
+\personafield{Comportamenti, esperienza e rete di aiuto}
 
-\fieldheading{Dati di base}
+Elena contrassegna gli appuntamenti della madre con un'etichetta rossa nel proprio Google Calendar e custodisce tessere sanitarie, codici fiscali e note per le visite in un'app protetta da impronta digitale, rifiutando scambi di credenziali in chat. Coordina prenotazioni e disdette da remoto durante le pause lavorative. Conosce bene CUPweb e Fascicolo Sanitario, ma si scontra con la rigidità dei cambi profilo e delle deleghe: per fare in fretta è spesso tentata di utilizzare le credenziali di Pina, pur sapendo che ciò espropria l'autonomia della madre e viola la sicurezza. Accetta la delega solo se il sistema rende inequivocabile per chi sta operando e se Pina riceve conferme chiare; teme notifiche carenti, errori di omonimia e che l'efficienza digitale trasformi l'assistenza affettuosa in controllo permanente.
 
-\begin{itemize}
-\item
-  52 anni, donna, italiana, impiegata amministrativa a tempo pieno
-\item
-  Vive a Bologna, a circa un\textquotesingle ora di auto/treno dalla
-  madre Pina, che vive a Ravenna
-\item
-  Sposata, due figli adolescenti; gestisce famiglia, lavoro e assistenza
-  alla madre contemporaneamente
-\item
-  Buona competenza digitale, usa quotidianamente PC e smartphone per
-  lavoro
+\personafield{Competenze e abilità (C\&A)}
+
+\noindent\begin{minipage}[c]{0.30\linewidth}
+  \centering
+  \includegraphics[width=\linewidth,height=3.3cm,keepaspectratio]{assets/phase-b-persona-elena-skills.png}
+\end{minipage}\hfill
+\noindent\begin{minipage}[c]{0.67\linewidth}
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \renewcommand{\arraystretch}{0.92}
+  \noindent\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.29\linewidth}>{\centering\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{\dimexpr0.63\linewidth-4\tabcolsep\relax}@{}}
+  \toprule
+  \textbf{Dimensione} & \textbf{1--5} & \textbf{Motivazione} \\
+  \midrule
+  Tecnica & \textcolor{personaaccent}{\textbf{5}} & Usa quotidianamente PC, smartphone e servizi autenticati. \\
+  Dominio & \textcolor{personaaccent}{\textbf{3}} & Esperienza pratica; deve verificare prescrizioni e regimi. \\
+  Linguistica & \textcolor{personaaccent}{\textbf{5}} & Legge e comprende rapidamente il testo amministrativo. \\
+  Fisica e visiva & \textcolor{personaaccent}{\textbf{5}} & Nessuna limitazione rilevante per il compito digitale. \\
+  Motivazione & \textcolor{personaaccent}{\textbf{4}} & Motivata a proteggere Pina e ridurre le emergenze. \\
+  Concentrazione & \textcolor{personaaccent}{\textbf{3}} & Richieste frammentate da carichi di lavoro e familiari. \\
+  \bottomrule
+  \end{tabular}
+\end{minipage}
+
+\end{personacard}
+
+\clearpage
+
+\subsection[Scenario e obiettivo]{Scenario: la disdetta urgente durante la chiusura delle paghe}
+
+
+\textbf{Contesto e innesco:} È il 26 del mese, ore 11:20: Elena è nel suo ufficio presso la cooperativa sociale di Bologna, concentrata sulla complessa chiusura mensile dei cedolini paga. Tra meno di dieci minuti deve entrare in una riunione direzionale con il revisore dei conti. Lo smartphone sulla scrivania squilla: è la madre Pina, in preda all'agitazione perché un improvviso contrattempo le impedisce di recarsi alla visita diabetologica fissata per l'indomani, esponendola al rischio della sanzione economica da mancata disdetta (malus ticket).
+\par\vspace{2pt}
+\textbf{Svolgimento dell'esperienza e attrito cognitivo:} Elena non ha tempo per telefonare al call center CUP né può assentarsi dalla scrivania. Apre una scheda del browser sul PC dell'ufficio per accedere al portale CUPweb, mentre una collega alla porta le chiede a voce la convalida di un prospetto ferie. La tentazione operativa più rapida sarebbe farsi dettare le credenziali SPID materne in chat, ma Elena ne riconosce la scorrettezza e il rischio per la sicurezza. Attiva quindi la propria funzione di delega formale: necessita di passare istantaneamente al profilo della madre, individuare l'appuntamento specifico tra le visite pregresse senza confonderlo con i propri appuntamenti personali nel pannello multi-colonna del desktop, e cancellarlo in pochi clic. La sua ansia principale è causata dal dubbio che l'azione non vada a buon fine prima del meeting o che il sistema non certifichi l'avvenuta disdetta a entrambe le parti. Non ha tempo per telefonare a Pina per rassicurarla e ha bisogno che il portale invii in automatico un SMS o una notifica di avvenuto annullamento sul telefono della madre.
+
+\textbf{Stima temporale e criteri di successo:}
+\begin{itemize}[leftmargin=*,topsep=1pt,itemsep=0pt,parsep=0pt]
+\item \textit{Stima temporale:} 3--5 minuti di esecuzione rapida, all'interno di una finestra lavorativa compressa e frammentata.
+\item \textit{Criteri di successo:} Disdetta conclusa e verificabile con codice identificativo prima della riunione; invio contestuale di una notifica di avvenuto annullamento a Pina; verifica inequivocabile del profilo assistito su cui è stata eseguita l'operazione.
+\item \textit{Rischi principali:} Annullamento della visita errata per fretta o distrazione, confusione tra profilo personale e delegato, e innesco di una dinamica di sostituzione permanente che espropria Pina di ogni autonomia residua.
 \end{itemize}
 
-\fieldheading{Esperienza pregressa e caratteristiche psicologiche}
-
-Elena è cresciuta con la tecnologia e non ha alcuna difficoltà a usare
-app e siti web. Gestisce da anni le pratiche sanitarie della madre,
-spesso interrompendo il proprio lavoro per farlo. È una persona
-organizzata ed efficiente, ma il carico di responsabilità che si
-accumula col tempo --- lavoro, figli, madre --- la porta a momenti di
-stanchezza e frustrazione. Non vuole "sostituirsi" completamente alla
-madre: vorrebbe piuttosto che Pina potesse gestire in autonomia almeno i
-compiti più semplici, così da poter concentrare il proprio tempo
-limitato sulle situazioni davvero complesse.
-
-\includegraphics[width=3.95833in,height=3.95833in]{assets/phase-b-persona-elena-skills.png}
-
-\fieldheading{Use Case \#1 --- La disdetta urgente dall\textquotesingle ufficio}
-
-\fieldheading{Use Case Narrative}
-
-Elena riceve, durante l\textquotesingle orario di lavoro, una chiamata
-dalla madre Pina che non riesce a disdire una visita già prenotata
-perché è cambiato un impegno di famiglia. Elena deve interrompere il
-proprio lavoro, aprire l\textquotesingle app da remoto, capire quale
-prenotazione tra quelle associate al profilo del genitore va disdetta, e
-risolvere il problema in pochi minuti prima di tornare a una riunione.
-Vorrebbe che la madre potesse gestire da sola almeno la disdetta ---
-un\textquotesingle azione che considera semplice --- ma il sistema
-attuale non la rende comprensibile per lei.
-
-\fieldheading{Considerazioni conclusive}
-
+\subsection[Implicazioni progettuali]{Considerazioni conclusive e implicazioni di design}
+\vspace{-2pt}
 \fieldheading{Impatto della persona sul design}
-
-\begin{itemize}
-\item
-  {[}P-04{]} Il design deve offrire a un caregiver a distanza una
-  visibilità chiara (non invasiva) sulle prenotazioni del familiare
-  associato, senza dover richiamare a memoria dettagli specifici ogni
-  volta
-\item
-  {[}P-05{]} Deve esistere un meccanismo di delega progressiva: azioni
-  semplici e a basso rischio (es. disdetta) rese eseguibili in autonomia
-  dal paziente, con il caregiver informato ma non necessariamente
-  coinvolto
+Il sovraccarico cognitivo da frammentazione e la responsabilità dell'intermediazione impongono trasparenza assoluta su ruoli e identità:
+\begin{itemize}[leftmargin=*,topsep=1pt,itemsep=0pt,parsep=0pt]
+\item \hypertarget{req:P-04}{}\textbf{P-04}: In entrambe le modalità (co-pilota e delega completa), la visibilità del caregiver sulle prenotazioni deve essere proporzionata al ruolo; devono restare sempre riconoscibili l'identità di chi opera e quella del familiare interessato, con un indicatore visivo persistente dell'identità attiva.
+\item \hypertarget{req:P-05}{}\textbf{P-05}: La modalità co-pilota deve sostenere l'azione dell'interessato senza sostituirlo; la modalità delega completa deve consentire al caregiver l'esecuzione autorizzata per suo conto entro i limiti ricevuti, senza comportare una sorveglianza continuativa o escludere l'assistito dalle operazioni ordinarie.
 \end{itemize}
 
-\fieldheading{Impatto dello Use Case \#1 sul design}
-
-\begin{itemize}
-\item
-  {[}U2-01{]} La disdetta di un appuntamento dovrebbe essere
-  l\textquotesingle azione più semplice e accessibile del sistema
-  (minimo numero di passaggi, nessuna scelta ambigua tra più
-  prenotazioni simili)
-\item
-  {[}U2-02{]} Il caregiver dovrebbe poter ricevere notifiche automatiche
-  sullo stato delle prenotazioni del familiare, riducendo la necessità
-  di intervenire solo su chiamata d\textquotesingle emergenza
+\vspace{-2pt}
+\fieldheading{Impatto del caso d'uso sul design}
+La disdetta eseguita da Elena per conto di Pina concretizza la modalità delega completa in condizioni di forte pressione temporale. Le medesime distinzioni di identità e autorizzazione devono restare comprensibili ed esplicite in un eventuale pagamento assistito o delegato, senza presumere che la delega si estenda automaticamente o indiscriminatamente a ogni operazione finanziaria o sanitaria.
+\begin{itemize}[leftmargin=*,topsep=1pt,itemsep=0pt,parsep=0pt]
+\item \hypertarget{req:U2-01}{}\textbf{U2-01}: In modalità delega completa, la procedura di disdetta deve richiedere pochissimi passaggi guidati, distinguere chiaramente visite multiple o appuntamenti ravvicinati ed esplicitare l'assenza di penali prima della conferma definitiva.
+\item \hypertarget{req:U2-02}{}\textbf{U2-02}: L'aggiornamento di stato deve essere in tempo reale e generare notifiche concordate verso entrambi i soggetti (SMS/notifica all'assistito e al delegato), riducendo l'ansia e la necessità di telefonate di verifica post-operazione.
 \end{itemize}
 
-\cardsection{Documento 03 --- Cast card}
+\clearpage
+% --- Card 02c ----------------------------------------------------
+\cardsection[Renato Bellini (aggiuntivo)]{Documento 02c: Persona e Use Case card (personaggio aggiuntivo)}\label{doc:b:02c}
 
-\fieldheading{Cast con ruoli e segmenti}
+\subsection{Profilo e competenze}
 
-\begin{itemize}
-\item
-  Protagonista: Giuseppina "Pina" Ferretti --- Segmento A (paziente
-  anziano, utente diretto)
-\item
-  Non protagonista: Elena Ferretti --- Segmento B (caregiver familiare,
-  intermediario)
+\begin{personacard}{Renato Bellini --- Personaggio Aggiuntivo}
+
+\noindent\begin{minipage}[t]{0.24\linewidth}
+  \centering
+  \vspace{0pt}
+  \includegraphics[width=\linewidth,height=3.8cm,keepaspectratio]{assets/phase-b-persona-renato.jpeg}\\[1.5mm]
+  {\small\bfseries\color{personaaccent} CONTROLLO}\\[1mm]
+  {\scriptsize\bfseries\color{personamuted} Segmento A $\cdot$ Utente diretto}
+\end{minipage}\hfill
+\noindent\begin{minipage}[t]{0.72\linewidth}
+  \vspace{0pt}
+  {\Large\bfseries\color{personaaccent} Renato Bellini}\\[0.5mm]
+  {\small\color{personamuted} ``Nuovo utente digitale'' 65--74, moderatamente autonomo}\\[1mm]
+  {\color{personarule}\hrule height 0.5pt}\vspace{4pt}
+
+  \noindent\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{\dimexpr0.78\linewidth-2\tabcolsep\relax}@{}}
+    \textcolor{personaaccent}{\textbf{Profilo:}} & 70 anni, ex bibliotecario comunale in pensione a Forlì; cataloga fondi fotografici per l'archivio storico; coniugato con Paola; figlio adulto vicino. \\
+    \textcolor{personaaccent}{\textbf{Dispositivi:}} & PC desktop nello studio domestico (schermo 24''), tablet 10'' per ricerche al tavolo, smartphone con SPID e home banking. \\
+    \textcolor{personaaccent}{\textbf{Vincoli:}} & Vista affaticata (lenti progressive), rigidità articolare alle dita al mattino, forte esitazione su acronimi sanitari e tariffe opache.
+  \end{tabular}
+
+\end{minipage}
+
+\begin{personaquote}
+``Non mi serve che mi dicano che è facile: mi serve capire costo e conseguenze prima di confermare.''
+\end{personaquote}
+
+\personafield{Comportamenti, esperienza e rete di aiuto}
+
+Renato usa il PC desktop nello studio domestico o il tablet in soggiorno, tenendo accanto un taccuino dove appunta date, codici ricetta e costi preventivati; prima di confermare consulta l'agenda condivisa con Paola per non sovrapporsi ai turni all'archivio storico. Salva o stampa sempre il riepilogo in PDF per la bacheca magnetica in corridoio. Prenota in autonomia se riconosce prestazione e regime; quando incontra sigle oscure (es. SSN vs libera professione, classi U/B/D/P) telefona o chiede al figlio una verifica puntuale, rifiutando categoricamente di cedergli l'azione. Si sente sicuro se può procedere con calma, rileggere il riepilogo e tornare indietro senza perdere le selezioni già fatte; rigetta con forza interfacce paternalistiche con grafiche infantili o spiegazioni ovvie non disattivabili.
+
+\personafield{Competenze e abilità (C\&A)}
+
+\noindent\begin{minipage}[c]{0.30\linewidth}
+  \centering
+  \includegraphics[width=\linewidth,height=3.3cm,keepaspectratio]{assets/phase-b-persona-renato-skills.png}
+\end{minipage}\hfill
+\noindent\begin{minipage}[c]{0.67\linewidth}
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \renewcommand{\arraystretch}{0.92}
+  \noindent\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.29\linewidth}>{\centering\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{\dimexpr0.63\linewidth-4\tabcolsep\relax}@{}}
+  \toprule
+  \textbf{Dimensione} & \textbf{1--5} & \textbf{Motivazione} \\
+  \midrule
+  Tecnica & \textcolor{personaaccent}{\textbf{3}} & Usa servizi comuni e SPID; non automatizza novità. \\
+  Dominio & \textcolor{personaaccent}{\textbf{3}} & Conosce il percorso di cura; esita su regimi e costi. \\
+  Linguistica & \textcolor{personaaccent}{\textbf{5}} & Ottima comprensione; la terminologia ambigua è il limite. \\
+  Fisica e visiva & \textcolor{personaaccent}{\textbf{3}} & Vista e rigidità richiedono testo e comandi ampi. \\
+  Motivazione & \textcolor{personaaccent}{\textbf{4}} & Preferisce operare da solo; aiuto solo come controllo. \\
+  Concentrazione & \textcolor{personaaccent}{\textbf{4}} & Segue il flusso con pause; non deve perdere scelte. \\
+  \bottomrule
+  \end{tabular}
+\end{minipage}
+
+\end{personacard}
+
+\clearpage
+
+\subsection[Scenario e obiettivo]{Scenario: il controllo oculistico e il dilemma delle tariffe opache}
+
+\textbf{Contesto e innesco:} È giovedì mattina, ore 09:30, a Forlì: terminata la colazione, Renato si accomoda nello studio davanti al suo PC desktop (schermo da 24'' e mouse ergonomico), con un taccuino e gli occhiali da vista per prenotare il controllo oculistico prescritto dal medico. Sul tavolo consulta l'agenda cartacea condivisa con la moglie Paola, per escludere con certezza i giorni dedicati al volontariato culturale presso l'archivio diocesano.
+
+\textbf{Svolgimento dell'esperienza e attrito cognitivo:} Renato esegue l'accesso SPID con familiarità tramite notifica sul cellulare. Aperta la scheda del browser desktop su CUPweb, giunge alla scelta delle date dove trova una presentazione opaca: il portale propone disponibilità eterogenee in tabelle dense tra SSN (con quota ticket) e libera professione intramoenia (ALPI, con tariffe e medici distinti). Renato non comprende se la prima data utile comporti una spesa privata elevata o una compartecipazione parziale, e teme costi occulti. Vorrebbe approfondire i dettagli della prestazione senza perdere la selezione temporale già effettuata nel form. Rifiuta categoricamente di delegare la procedura al figlio, difendendo la propria autonomia, ma vive con frustrazione l'opacità burocratica e la rigidità del portale.
+
+\textbf{Episodio accessorio: preparare un pagamento.} In un momento distinto dalla prenotazione, Renato apre il collegamento al pagamento di una prestazione. Il diverso indirizzo lo induce a cercare il nome del servizio e una spiegazione della destinazione. Poi affianca al modulo il promemoria della ricetta: alcune richieste non gli risultano riconoscibili e non sa se il documento contenga tutti i dati necessari. Prima di proseguire vuole sapere quale documento usare e dove leggere ciascun valore. Può chiedere al figlio un controllo puntuale, mantenendo l'esecuzione. L'episodio deriva dall'ipotesi \reqref{ID-13} e dal problema di continuità \reqref{ID-02}; non presume un pagamento immediato o necessario per ogni prenotazione.
+
+\textbf{Stima temporale e criteri di successo:}
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item \textit{Stima temporale:} 8--10 minuti di navigazione autonoma sul percorso di prenotazione; l'episodio accessorio di pagamento non è incluso nella stima temporale.
+\item \textit{Criteri di successo:} Individuazione autonoma e consapevole della combinazione ottimale di data, sede e regime tariffario; trasparenza assoluta sull'importo economico dovuto prima della convalida; generazione di un promemoria PDF chiaro e completo da stampare per la bacheca domestica.
+\item \textit{Rischi principali:} Affaticamento visivo dovuto a caratteri densi, prenotazione involontaria di prestazioni a tariffa privata e rinuncia al servizio per la scarsa trasparenza percepita.
 \end{itemize}
 
-\fieldheading{Grafico cumulativo dei tratti di personalità}
-
-\includegraphics[width=3.95833in,height=3.95833in]{assets/phase-b-personas-comparison.png}
-
-\emph{Il file Excel "HPHP\_FaseB\_PersonasAndCast.xlsx" allegato
-contiene i dati sorgente e i grafici radar nativi, modificabili.}
-
-\fieldheading{Impatto sul design}
-
-\fieldheading{Impatto del cast sul design (sintesi cumulativa)}
-
-\begin{itemize}
-\item
-  {[}C-01{]} (= P-01+P-02+P-03) Il design deve essere utilizzabile con
-  competenza tecnica minima, alta chiarezza visiva del linguaggio e
-  delle azioni, e un tono rassicurante che riduca
-  l\textquotesingle ansia da errore --- requisiti derivati dal profilo
-  di Pina, il più critico del cast su queste dimensioni
-\item
-  {[}C-02{]} (= P-04+P-05) Il design deve offrire al caregiver uno
-  strumento di supervisione leggera e delega progressiva, che riduca il
-  carico di intervento diretto senza eliminarne il controllo ---
-  requisito derivato dal profilo di Elena
-\item
-  {[}C-03{]} Poiché il cast comprende due profili agli estremi opposti
-  sulla dimensione tecnica (Pina=1, Elena=5), il sistema deve poter
-  presentare esperienze differenziate (o adattive) per i due ruoli, pur
-  restando parte dello stesso ecosistema di prodotto
+\subsection[Implicazioni progettuali]{Considerazioni conclusive e implicazioni di design}
+\vspace{-2pt}
+\fieldheading{Impatto della persona sul design}
+Il profilo di un anziano autonomo ma diffidente esige efficienza, controllo informativo e rispetto della dignità d'uso:
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item \hypertarget{req:P-06}{}\textbf{P-06}: Le note esplicative devono essere progressive e consultabili su richiesta nei punti di dubbio, evitando schermate dense che rallentino chi padroneggia già il flusso. Nei moduli di pagamento devono indicare documento e posizione del dato, con un esempio illustrativo contestuale (\reqref{REQ-10}).
+\item \hypertarget{req:P-07}{}\textbf{P-07}: Tipografia, spaziatura dei paragrafi e tabelle su schermi ampi devono garantire leggibilità e confronto immediato senza affaticamento visivo o ambiguità di selezione con il mouse.
+\item \hypertarget{req:P-08}{}\textbf{P-08}: Regime erogativo, costi a carico del cittadino e vincoli di accesso devono essere dichiarati con linguaggio chiaro e neutrale, senza toni condiscendenti o paternalistici. Nell'eventuale passaggio al pagamento devono essere immediatamente riconoscibili destinazione e motivo del cambio (\reqref{REQ-02}).
 \end{itemize}
 
-\fieldheading{Impatto degli Use Case sul design (sintesi cumulativa)}
+\fieldheading{Impatto del caso d'uso sul design}
+Il caso d'uso richiede di confrontare analiticamente le alternative e verificarle prima della conferma definitiva, conservando il contesto quando si consultano approfondimenti. Per la preparazione al pagamento, la guida contestuale a destinazione e documenti confluisce in \reqref{C-13}.
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item \hypertarget{req:U3-01}{}\textbf{U3-01}: La consultazione di schede informative o il ritorno a passaggi precedenti non devono in alcun caso azzerare i criteri di ricerca e i filtri già impostati.
+\item \hypertarget{req:U3-02}{}\textbf{U3-02}: Prima della convalida definitiva, una schermata di riepilogo organica deve evidenziare con chiarezza prestazione, medico, presidio, data, regime contrattuale e costo effettivo.
+\end{itemize}
+
+\clearpage
+% --- Card 02d ----------------------------------------------------
+\cardsection[Amina Rahman (secondaria)]{Documento 02d: Persona e Use Case card (personaggio secondario)}\label{doc:b:02d}
+
+\subsection{Profilo e competenze}
+
+\begin{personacard}{Amina Rahman --- Personaggio Secondario}
+
+\noindent\begin{minipage}[t]{0.24\linewidth}
+  \centering
+  \vspace{0pt}
+  \includegraphics[width=\linewidth,height=3.0cm,keepaspectratio]{assets/phase-b-persona-amina.jpeg}\\[1.5mm]
+  {\small\bfseries\color{personaaccent} CAREGIVER CONVIVENTE}\\[1mm]
+  {\scriptsize\bfseries\color{personamuted} Segmento B $\cdot$ Intermediaria}
+\end{minipage}\hfill
+\noindent\begin{minipage}[t]{0.72\linewidth}
+  \vspace{0pt}
+  {\Large\bfseries\color{personaaccent} Amina Rahman}\\[0.5mm]
+  {\small\color{personamuted} Caregiver familiare in presenza, competenza digitale media}\\[1mm]
+  {\color{personarule}\hrule height 0.5pt}\vspace{4pt}
+
+  \noindent\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{\dimexpr0.78\linewidth-2\tabcolsep\relax}@{}}
+    \textcolor{personaaccent}{\textbf{Profilo:}} & 47 anni, originaria di Dhaka, a Ravenna dal 2004 con cittadinanza; part-time mensa; vive con marito operaio, figlia studentessa e suocera Nasima (76 anni, artrosi). \\
+    \textcolor{personaaccent}{\textbf{Dispositivi:}} & PC portatile di casa (condiviso con la figlia); smartphone Android personale (tastiere IT/bengalese, WhatsApp) per coordinamento e notifiche. \\
+    \textcolor{personaaccent}{\textbf{Vincoli:}} & Lessico burocratico ostico a monitor, turni mattutini, attenzione frammentata da interruzioni familiari durante l'uso del PC.
+  \end{tabular}
+
+\end{minipage}
+
+\begin{personaquote}
+``Le cose di casa le organizzo io; quando mi metto al computer per le visite di mia suocera, però, certe parole dell'ospedale devo prima capirle bene.''
+\end{personaquote}
+
+\personafield{Comportamenti, esperienza e rete di aiuto}
+
+Amina coordina visite e terapie per la suocera Nasima con un calendario murale bilingue in cucina. Per le prenotazioni complesse si siede al tavolo davanti al PC portatile di famiglia, connesso a internet e condiviso con la figlia. Ha buona dimestichezza con il web comune, ma si blocca davanti al gergo amministrativo sul desktop (classi di priorità D/P, ``primo accesso'' vs ``controllo'', quesiti clinici). Per chiarimenti si rivolge alla figlia o al medico di base; non delega all'esterno per preservare le preferenze di Nasima. Teme gli errori irreversibili, la perdita dei dati se il PC va in standby durante un'interruzione e il rischio di doppie prenotazioni con il marito o i cognati.
+
+\personafield{Competenze e abilità (C\&A)}
+
+\noindent\begin{minipage}[c]{0.30\linewidth}
+  \centering
+  \includegraphics[width=\linewidth,height=2.5cm,keepaspectratio]{assets/phase-b-persona-amina-skills.png}
+\end{minipage}\hfill
+\noindent\begin{minipage}[c]{0.67\linewidth}
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \renewcommand{\arraystretch}{0.88}
+  \noindent\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.29\linewidth}>{\centering\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{\dimexpr0.63\linewidth-4\tabcolsep\relax}@{}}
+  \toprule
+  \textbf{Dimensione} & \textbf{1--5} & \textbf{Motivazione} \\
+  \midrule
+  Tecnica & \textcolor{personaaccent}{\textbf{3}} & Usa browser web e posta su PC portatile; competenza SPID non documentata. \\
+  Dominio & \textcolor{personaaccent}{\textbf{3}} & Conosce bisogni e routine; no deleghe e burocrazia. \\
+  Linguistica & \textcolor{personaaccent}{\textbf{2}} & Comprende l'italiano parlato; fatica con il lessico sanitario scritto a monitor. \\
+  Fisica e visiva & \textcolor{personaaccent}{\textbf{5}} & Nessuna limitazione fisica o visiva rilevante. \\
+  Motivazione & \textcolor{personaaccent}{\textbf{5}} & Massima dedizione alla suocera e al coordinamento. \\
+  Concentrazione & \textcolor{personaaccent}{\textbf{2}} & Turni, cucina e richieste familiari frammentano l'uso del PC. \\
+  \bottomrule
+  \end{tabular}
+\end{minipage}
+
+\end{personacard}
+
+\clearpage
+
+\subsection[Scenario e obiettivo]{Scenario: la fisioterapia all'alba e l'ostacolo del gergo amministrativo}
+
+\textbf{Contesto e innesco:} Ore 5:50 a Ravenna: prima del turno delle 6:30 in mensa scolastica, Amina deve prenotare il primo ciclo di fisioterapia per la suocera convivente Nasima (76 anni, artrosi severa). Si siede al tavolo della cucina e avvia il computer portatile di famiglia, affiancando alla tastiera il promemoria cartaceo NRE, gli orari del bus e il calendario familiare. Accede al portale CUPweb dal browser web per risolvere la pratica prima di uscire di casa.
+
+\textbf{Svolgimento dell'esperienza e attrito cognitivo:} Aperta la schermata di CUPweb su computer, Amina è disorientata dalla complessità del portale desktop: un layout fuso e denso di opzioni con un lessico burocratico ostico, codici prestazione specialistici, classi di priorità (D, P) e la scelta ambigua tra \enquote{primo accesso} e \enquote{controllo}. Teme che un'interpretazione errata del testo o un clic sbagliato annulli la ricetta o prenoti una prestazione a pagamento. Mentre cerca di decifrare le diciture a schermo, la figlia le chiede indicazioni per la scuola e Nasima la chiama dalla camera per ricordarle che il cognato ha forse già parlato con il medico: l'attenzione di Amina è frammentata e il computer va in standby per timeout dopo qualche minuto di inattività. Al risveglio, teme di aver perso tutti i dati inseriti nel modulo web o di dover ricominciare daccapo mentre i minuti per recarsi al lavoro scorrono inesorabili.
+
+\textbf{Stima temporale e criteri di successo:}
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item \textit{Stima temporale:} 7--12 minuti complessivi al PC, frammentati da pause forzate, consultazioni verbali e interruzioni ambientali.
+\item \textit{Criteri di successo:} Conclusione della prenotazione su interfaccia desktop in data compatibile con i turni di lavoro e i mezzi pubblici; conservazione dello stato e dei dati compilati durante le interruzioni; generazione di una conferma visuale chiara (stampabile o condivisibile via messaggio con i familiari) per certificare la conclusione della pratica.
+\item \textit{Rischi principali:} Interpretazione scorretta della priorità clinica sul modulo web, abbandono del flusso per timore del gergo burocratico e duplicazione involontaria della prenotazione da parte di altri membri del nucleo familiare.
+\end{itemize}
+
+\subsection[Implicazioni progettuali]{Considerazioni conclusive e implicazioni di design}
+\vspace{-2pt}
+\fieldheading{Impatto della persona sul design}
+La mediazione linguistica asimmetrica e l'attenzione frammentata richiedono chiarezza semantica immediata e tolleranza all'interruzione nell'ambiente desktop:
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item \hypertarget{req:P-09}{}\textbf{P-09}: La terminologia clinica e burocratica essenziale su interfaccia desktop deve essere affiancata da definizioni in linguaggio semplice (Plain Language), con glosse, tooltip ed esempi applicativi concreti.
+\item \hypertarget{req:P-10}{}\textbf{P-10}: L'identità dell'assistito, il ruolo di chi effettua l'operazione e i canali di contatto devono restare chiaramente visibili nella testata del cruscotto desktop durante tutto il percorso, gestendo anagrafiche non coincidenti.
+\item \hypertarget{req:P-11}{}\textbf{P-11}: La sessione web desktop deve sostenere l'uso discontinuo e le pause d'inattività, tollerando standby del sistema e cambi di finestra senza disconnessioni premature o perdita di lavoro compilato, garantendo continuità anche nell'eventuale consultazione responsive da smartphone.
+\end{itemize}
+
+\fieldheading{Impatto del caso d'uso sul design}
+La gestione delegata su computer domestico condiviso esige resilienza di sessione e strumenti di coordinamento per il nucleo familiare:
+\begin{itemize}[leftmargin=*,topsep=1.5pt,itemsep=0.5pt,parsep=0pt]
+\item \hypertarget{req:U4-01}{}\textbf{U4-01}: Le interruzioni temporanee o la consultazione di aiuti testuali su schermo non devono provocare la perdita dei dati inseriti; al rientro deve essere segnalato con esattezza il passo raggiunto nel percorso di prenotazione desktop.
+\item \hypertarget{req:U4-02}{}\textbf{U4-02}: L'esito finale della procedura desktop deve produrre un riepilogo sintetico facilmente stampabile e condivisibile sui canali ordinari di messaggistica/email, attestando lo stato concluso dell'operazione per prevenire prenotazioni doppie tra familiari.
+\end{itemize}
+
+\clearpage
+% --- Card 03 ----------------------------------------------------
+\cardsection{Documento 03: Scheda del cast}\label{doc:b:03}
+
+\subsection{Gerarchia, relazioni e funzioni nel cast}
+
+\begin{enumerate}
+\item \textbf{Pina --- protagonista.} Caso guida per accessibilità, fiducia e autonomia minima.
+\item \textbf{Elena --- secondaria.} Caregiver a distanza collegata a Pina; rende visibile il conflitto tra assistenza e sostituzione.
+\item \textbf{Amina --- secondaria.} Caregiver convivente; rende visibili mediazione linguistica, coordinamento familiare e gestione da PC condiviso con frequenti pause e interruzioni (preservando al contempo la continuità d'uso con la copertura responsive secondaria).
+\item \textbf{Renato --- aggiuntivo.} Controlla che le soluzioni per Pina non penalizzino efficienza, dignità e autonomia di un anziano più competente con postazione desktop a grande schermo.
+\end{enumerate}
+
+\begin{center}
+\includegraphics[width=0.72\linewidth]{assets/phase-b-personas-comparison.png}\\[3mm]
+\includegraphics[width=0.68\linewidth]{assets/phase-b-personas-overlay.png}
+\end{center}
+
+La visualizzazione comparativa sintetizza le sei dimensioni C\&A del cast su scala diretta 1--5 (1 al centro, 5 al perimetro esterno). La sovrapposizione evidenzia la complementarietà dei profili: l'area interna copre l'alta fragilità di Pina, mentre le estensioni di Elena (tecnica), Renato (linguistica e dominio) e Amina (motivazione) presidiano gli estremi dell'esperienza d'uso senza ridondanze.
+
+\subsection{Motivazione della selezione e alternative scartate}
+
+Pina copre l'utente diretto con bassa autonomia su PC. Elena e Amina appartengono al Segmento B, ma non sono intercambiabili: la prima assiste a distanza con alta competenza digitale da PC d'ufficio e scarsità di tempo; la seconda assiste in presenza, conosce il contesto familiare ma affronta mediazione linguistica e attenzione frammentata al computer portatile di casa. Renato introduce una variazione interna al Segmento A e verifica il bilanciamento tra semplicità ed efficienza su postazione desktop a grande schermo. La selezione cerca varietà di età, genere, origine, lingua, composizione familiare e rapporto con il digitale solo quando queste differenze cambiano concretamente scenario o requisiti; evita di usare la diversità come tratto decorativo. Sono state rinviate: una figura sanitaria o di farmacia, perché esterna ai segmenti intervistati; una persona completamente dipendente, perché sarebbe un caso limite artificiale senza evidenze sufficienti; un caregiver con profilo quasi identico a Elena, perché non genererebbe nuove implicazioni. Anche gli scenari di sola consultazione e di modifica anagrafica sono rinviati perché meno rappresentativi del problema di prenotazione ed emersi in Fase A. Il pagamento resta un episodio circoscritto: esplora continuità e preparazione dei dati senza introdurre un nuovo scenario principale.
+
+\subsection{Conflitti progettuali}
 
 \begin{itemize}
-\item
-  {[}C-04{]} (= U1-01+U1-02) Le prenotazioni ricorrenti per patologie
-  croniche vanno semplificate riconoscendo lo storico del paziente, con
-  un percorso di recupero assistito in caso di errore
-\item
-  {[}C-05{]} (= U2-01+U2-02) La disdetta deve essere
-  l\textquotesingle azione più semplice del sistema, e il caregiver deve
-  poter essere informato automaticamente senza dover intervenire ogni
-  volta di persona
-\item
-  Questi requisiti, numerati con codice {[}C-0x{]}, saranno ripresi
-  esplicitamente nella Fase C, nelle fasi di architettura
-  dell'informazione, progettazione dell'interazione e wireframe.
+\item Una guida sempre visibile su desktop sostiene Pina ma può rallentare Renato: servono spiegazioni progressive e pannelli richiudibili.
+\item Le scorciatoie utili a Elena non devono nascondere identità, stato o conseguenze dell'azione.
+\item Il supporto in modalità co-pilota non deve trasferire l'esecuzione al caregiver; la modalità delega completa consente invece un intervento autorizzato, senza trasformarlo in sostituzione sistematica o sorveglianza.
+\item Controlli grandi e ben spaziati a monitor devono convivere con una densità informativa efficiente per chi opera rapidamente su schermi ampi.
+\item Il linguaggio semplice aiuta Pina e Amina, ma deve conservare la precisione richiesta da Elena e Renato, evitando etichette vaghe.
+\item La condivisione familiare riduce il lavoro di Amina, ma non deve esporre dati sanitari o autorizzare automaticamente chi riceve una conferma.
 \end{itemize}
+
+\noindent\begin{minipage}{\linewidth}
+\subsection{Requisiti cumulativi del cast}
+
+\begingroup
+\noindent\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{\dimexpr0.88\linewidth-2\tabcolsep\relax}@{}}
+\toprule
+\textbf{ID} & \textbf{Descrizione} \\
+\midrule
+\hypertarget{req:C-01}{}\textbf{C-01}: & Il servizio deve essere utilizzabile con competenza tecnica minima, azioni visibili e tono rassicurante. \\[2pt]
+\hypertarget{req:C-02}{}\textbf{C-02}: & La modalità co-pilota deve sostenere l'azione dell'interessato senza sostituirlo; la modalità delega completa deve consentire al caregiver l'esecuzione autorizzata per suo conto. \\[2pt]
+\hypertarget{req:C-03}{}\textbf{C-03}: & Prenotazione ricorrente e disdetta devono ridurre passaggi e ambiguità mantenendo il controllo dell'utente. \\[2pt]
+\hypertarget{req:C-04}{}\textbf{C-04}: & Errori e cambi di stato devono offrire recupero comprensibile e notifiche concordate. \\[2pt]
+\hypertarget{req:C-05}{}\textbf{C-05}: & Chi opera, l'interessato, la modalità adottata, l'oggetto e le conseguenze dell'azione devono essere riconoscibili durante l'uso assistito o delegato. \\[2pt]
+\hypertarget{req:C-06}{}\textbf{C-06}: & Spiegazioni progressive devono chiarire termini, regime, costo e conseguenze senza infantilizzare. \\[2pt]
+\hypertarget{req:C-07}{}\textbf{C-07}: & Gerarchia visiva desktop, leggibilità, contrasto, spaziatura e dimensione generosa dei bersagli di puntamento (mouse/tastiera) devono supportare vincoli visivi e motori. \\[2pt]
+\hypertarget{req:C-08}{}\textbf{C-08}: & Il sistema deve conservare le scelte durante consultazione e aiuto, quindi mostrare un riepilogo completo prima della conferma. \\[2pt]
+\hypertarget{req:C-09}{}\textbf{C-09}: & La terminologia deve consentire la mediazione linguistica senza perdere la precisione delle condizioni e delle conseguenze dell'azione. \\[2pt]
+\hypertarget{req:C-10}{}\textbf{C-10}: & Ruoli, autorizzazioni e limiti devono restare espliciti in entrambe le modalità; la delega completa riguarda l'esecuzione del compito e non implica accesso illimitato ai dati sanitari. \\[2pt]
+\hypertarget{req:C-11}{}\textbf{C-11}: & La sessione web su desktop deve tollerare le pause d'inattività senza perdita di lavoro compilato, garantendo continuità anche nella copertura responsive secondaria per schermi mobili. \\[2pt]
+\hypertarget{req:C-12}{}\textbf{C-12}: & Stati e conferme condivisibili devono coordinare i familiari senza creare duplicazioni o accessi impliciti ai dati. \\[2pt]
+\hypertarget{req:C-13}{}\textbf{C-13}: & Il pagamento accessorio deve spiegare l'eventuale destinazione esterna e aiutare a individuare documento e dati richiesti, con esempi contestuali consultabili senza perdere la compilazione (\reqref{P-06}, \reqref{P-08}; \reqref{REQ-02}, \reqref{REQ-10}). \\
+\bottomrule
+\end{tabular}
+\endgroup
+\end{minipage}
