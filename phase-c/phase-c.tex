@@ -128,20 +128,29 @@ Seguendo la tassonomia dell'architettura dell'informazione definita da Rosenfeld
 
 \subsection{Inquadramento metodologico}
 
-In coerenza con il piano della struttura (\emph{Structure Plane}) di Garrett~\cite{garrettElements2011} e Rosenfeld e Morville~\cite{rosenfeldMorville2002}, la configurazione logico-funzionale del portale è rappresentata attraverso \textbf{sei Structure Blueprints}. I diagrammi mappano la gerarchia delle pagine, le scorciatoie di flusso (come la prenotazione rapida dalla Home o dall'archivio ricette), i bivi decisionali o temporali e la commutazione di contesto nella modalità delegata:
+In coerenza con il piano della struttura (\emph{Structure Plane}) di Garrett~\cite{garrettElements2011} e Rosenfeld e Morville~\cite{rosenfeldMorville2002}, la configurazione logico-funzionale del portale è rappresentata attraverso \textbf{sei Structure Blueprints}. I diagrammi mappano la gerarchia delle pagine, le scorciatoie di flusso (come la prenotazione rapida dalla Home o dall'archivio ricette), i bivi decisionali e la commutazione di contesto nella modalità delegata:
 
 \begin{enumerate}
 \item \textbf{Blueprint 1 -- Accesso al portale e Homepage:} struttura d'ingresso e diramazione verso tutte le sezioni principali, di supporto e di piè di pagina;
 \item \textbf{Blueprint 2 -- Flusso di prenotazione:} percorso guidato con o senza ricetta fino alla conferma e alle azioni successive;
-\item \textbf{Blueprint 3 -- Gestione appuntamenti:} consultazione delle visite, spostamento data, pagamento e disdetta con recupero entro 10 minuti;
+\item \textbf{Blueprint 3 -- Gestione appuntamenti:} consultazione delle visite, spostamento data, pagamento e disdetta con recupero della visita;
 \item \textbf{Blueprint 4 -- Ricette e prescrizioni:} consultazione delle impegnative elettroniche e innesto diretto nella prenotazione;
-\item \textbf{Blueprint 5 -- Deleghe:} gestione degli assistiti (\emph{Chi assisto}) e delle proprie deleghe (\emph{Le mie deleghe});
+\item \textbf{Blueprint 5 -- Deleghe:} gestione degli assistiti e delle proprie deleghe;
 \item \textbf{Blueprint 6 -- Serve aiuto?:} salvataggio e ripresa della sessione tramite codice, assistenza scritta e numero verde.
 \end{enumerate}
 
+\subsubsection{Legenda dei Blueprint}
+
+La legenda (Figura~\ref{fig:bp-key}) riassume la notazione grafica adottata nei diagrammi: il rettangolo rosso indica la pagina di atterraggio iniziale (\emph{Landing page}), quello azzurro il menù principale della Homepage, i rettangoli grigi le singole pagine (o un insieme di pagine se sovrapposti) e quelli bianchi con bordo nero i componenti o le azioni interne alla pagina. I riquadri tratteggiati identificano le funzioni globali di testata e la navigazione del piè di pagina, mentre il bordo arancione segnala gli elementi attivi durante l'operatività in delega; infine, la freccia indica il punto di accesso e le linee continue i legami di contenimento e navigazione.
+
+\begin{center}
+\includegraphics[width=0.50\linewidth]{phase-c/blueprints/0-key.png}
+\captionof{figure}{Legenda dei simboli adottati negli Structure Blueprints.}\label{fig:bp-key}
+\end{center}
+
 \subsubsection{Blueprint 1: Accesso al portale e Architettura della Homepage}
 
-Il primo diagramma (Figura~\ref{fig:bp-01}) rappresenta la struttura generale del portale. All'ingresso l'utente incontra il bivio tra l'accesso rapido con PIN (per i dispositivi già registrati nei 30 giorni precedenti) e l'accesso con SPID o CIE. Entrambi i percorsi conducono alla Homepage, dalla quale si diramano le altre quattro aree principali (\emph{Prenota} con la scorciatoia di \emph{Prenotazione rapida}, \emph{I miei appuntamenti} con l'accesso diretto ai \emph{Dettagli appuntamento}, \emph{Ricette e prescrizioni}, \emph{Deleghe}), le funzioni trasversali (\emph{Pagamento}, \emph{Serve aiuto?}, \emph{Chiedi al caregiver} e \emph{Logout}) e la navigazione secondaria del piè di pagina (\emph{Cerca medico}, \emph{Tempi di attesa}, \emph{Privacy}).
+Il primo diagramma (Figura~\ref{fig:bp-01}) rappresenta la struttura generale del portale. All'ingresso l'utente incontra il bivio tra l'accesso rapido con PIN (per i dispositivi già registrati nei 30 giorni precedenti) e l'accesso con SPID o CIE. Entrambi i percorsi conducono al menù della Homepage, affiancato dalle funzioni globali (\emph{Chiedi a X} e regolazione della dimensione del testo), dal quale si diramano le sezioni principali (\emph{Prenota} con la scorciatoia di \emph{Prenotazione rapida}, \emph{I miei appuntamenti} con l'accesso diretto ai \emph{Dettagli appuntamento}, \emph{Ricette e prescrizioni}, \emph{Deleghe}), le voci trasversali (\emph{Pagamento}, \emph{Serve aiuto?} e \emph{Logout}) e la navigazione secondaria del piè di pagina (\emph{Cerca medico}, \emph{Tempi di attesa}, \emph{Privacy}).
 
 \begin{center}
 \includegraphics[width=0.95\linewidth]{phase-c/blueprints/1-LoginHomePage.png}
@@ -152,10 +161,10 @@ Il primo diagramma (Figura~\ref{fig:bp-01}) rappresenta la struttura generale de
 
 Il secondo diagramma (Figura~\ref{fig:bp-02}) modella il percorso di prenotazione. Dalla sezione \emph{Prenota} il flusso si divide in base al possesso dell'impegnativa:
 \begin{itemize}
-\item Con ricetta medica, l'utente seleziona l'impegnativa disponibile e passa alla scelta del canale e del costo della prestazione; questo stesso punto è raggiungibile direttamente dalla Homepage tramite la scorciatoia di \emph{Prenotazione rapida}, saltando il primo passaggio;
-\item Senza ricetta, l'utente seleziona la prestazione desiderata tra quelle ad accesso diretto o in libera professione.
+\item Con ricetta medica, l'utente seleziona l'impegnativa disponibile e passa alla scelta del regime della prestazione; questo stesso punto è raggiungibile direttamente dalla Homepage tramite la scorciatoia di \emph{Prenotazione rapida}, saltando il primo passaggio;
+\item Senza ricetta, l'utente seleziona la prestazione desiderata.
 \end{itemize}
-I due rami convergono nella sequenza lineare composta da scelta dell'ospedale, scelta di data e ora, riepilogo e conferma finale della prenotazione. Dalla schermata di conferma si diramano cinque azioni: stampa del promemoria, invio via SMS, invio dei dettagli al caregiver, aggiunta al calendario e gestione del pagamento (paga ora online oppure scarica il bollettino).
+I due rami convergono nella sequenza lineare composta da scelta della sede, scelta di data e ora, riepilogo e conferma finale della prenotazione. Dalla schermata di conferma si diramano cinque azioni: stampa del promemoria, invio via SMS, invio dei dettagli al caregiver, aggiunta al calendario e gestione del pagamento (paga ora online con stampa della ricevuta oppure scarica il bollettino).
 
 \begin{center}
 \includegraphics[width=0.95\linewidth]{phase-c/blueprints/2-Prenotazione.png}
@@ -164,53 +173,54 @@ I due rami convergono nella sequenza lineare composta da scelta dell'ospedale, s
 
 \subsubsection{Blueprint 3: Gestione ``I miei appuntamenti'', Spostamento e Disdetta}
 
-Il terzo diagramma (Figura~\ref{fig:bp-03}) illustra la gestione degli appuntamenti. Dall'elenco delle visite in programma, l'apertura dei dettagli di un appuntamento mette a disposizione cinque rami operativi:
+Il terzo diagramma (Figura~\ref{fig:bp-03}) illustra la gestione degli appuntamenti. Dalla sezione \emph{I miei appuntamenti} è possibile ripristinare una visita appena cancellata (\emph{Recupero disdetta visita}) oppure aprire i dettagli di un appuntamento, che mettono a disposizione cinque rami operativi:
 \begin{enumerate}
 \item \textbf{Sposta appuntamento:} consente di scegliere una nuova data e ora mantenendo invariata la prestazione, passando poi per riepilogo e conferma;
-\item \textbf{Disdici appuntamento:} richiede la conferma di cancellazione tramite finestra modale e attiva la fase di recupero della disdetta, regolata da una condizione temporale: entro 10 minuti l'utente può annullare la disdetta riportando la visita allo stato confermato, mentre dopo 10 minuti subentra la scadenza definitiva;
-\item \textbf{Pagamento:} se non ancora effettuato, permette di pagare tramite pagoPA (online o scaricando il bollettino); se già effettuato, consente di stampare la ricevuta;
+\item \textbf{Disdici appuntamento:} permette di annullare la prenotazione;
+\item \textbf{Pagamento:} se già effettuato, consente di stampare la ricevuta; se non ancora effettuato, permette di pagare ora (con stampa della ricevuta) o di scaricare il bollettino;
 \item \textbf{Stampa dettagli} e \textbf{Torna all'elenco} per la gestione documentale e la navigazione di ritorno.
 \end{enumerate}
 
 \begin{center}
-\includegraphics[width=0.96\linewidth]{phase-c/blueprints/3-AppuntamentiSemplificato.png}
-\captionof{figure}{Blueprint 3: Flusso ``I miei appuntamenti'' con spostamento data, pagamento e disdetta dotata di finestra di recupero entro 10 minuti.}\label{fig:bp-03}
+\includegraphics[width=0.96\linewidth]{phase-c/blueprints/3-Appuntamenti.png}
+\captionof{figure}{Blueprint 3: Flusso ``I miei appuntamenti'' con recupero disdetta, spostamento data e gestione del pagamento.}\label{fig:bp-03}
 \end{center}
 
 \subsubsection{Blueprint 4: Archivio ``Ricette e prescrizioni''}
 
-Il quarto diagramma (Figura~\ref{fig:bp-04}) descrive la sezione dedicata alle prescrizioni mediche. L'elenco principale è suddiviso nelle due viste \emph{Da prenotare} e \emph{Ricette passate}. Selezionando l'azione di prenotazione da una ricetta attiva, il sistema pre-carica i dati dell'impegnativa e immette l'utente direttamente nel passaggio di scelta del canale e del costo della prestazione, proseguendo poi lungo il normale flusso di scelta dell'ospedale, data e ora, riepilogo e conferma.
+Il quarto diagramma (Figura~\ref{fig:bp-04}) descrive la sezione dedicata alle prescrizioni mediche. L'elenco principale è suddiviso nelle due viste \emph{Ricette da prenotare} e \emph{Ricette passate}. Selezionando l'azione di prenotazione da una ricetta attiva, il sistema pre-carica i dati dell'impegnativa e immette l'utente direttamente nel passaggio di scelta del regime, proseguendo poi lungo il normale flusso di scelta della sede, data e ora, riepilogo, conferma e azioni successive.
 
 \begin{center}
 \includegraphics[width=0.92\linewidth]{phase-c/blueprints/4-RicettePrescrizioni.png}
-\captionof{figure}{Blueprint 4: Sezione ``Ricette e prescrizioni'' con innesto diretto dalla prescrizione allo step di scelta del canale e del costo.}\label{fig:bp-04}
+\captionof{figure}{Blueprint 4: Sezione ``Ricette e prescrizioni'' con innesto diretto dalla prescrizione alla scelta del regime.}\label{fig:bp-04}
 \end{center}
 
 \subsubsection{Blueprint 5: Gestione ``Deleghe''}
 
 Il quinto diagramma (Figura~\ref{fig:bp-05}) rappresenta il funzionamento delle deleghe familiari, articolato in due percorsi:
 \begin{itemize}
-\item \textbf{Chi assisto:} mostra l'elenco dei familiari assistiti. Selezionando un assistito, il caregiver accede alla Homepage riferita al suo profilo e può svolgere le operazioni consentite dalla delega ricevuta. La concessione, modifica e revoca delle deleghe rimangono riservate all'interessato sul proprio profilo. Il caregiver può concludere la sessione delegata tramite il comando \emph{Termina delega};
-\item \textbf{Le mie deleghe:} mostra l'elenco dei caregiver autorizzati dall'utente e permette di aggiungere e confermare una nuova delega.
+\item \textbf{Assistiti:} permette al caregiver di operare per conto di un familiare, accedendo al menù dell'assistito per svolgere le operazioni consentite dalla delega e potendo chiudere la sessione delegata tramite il comando \emph{Termina delega};
+\item \textbf{Le mie deleghe:} consente all'utente di aggiungere una nuova delega per autorizzare un caregiver sul proprio profilo.
 \end{itemize}
 
 \begin{center}
-\includegraphics[width=0.95\linewidth]{phase-c/blueprints/5-Delega.png}
-\captionof{figure}{Blueprint 5: Sezione ``Deleghe'' articolata tra ``Chi assisto'' (ingresso nella Homepage dell'assistito) e ``Le mie deleghe''.}\label{fig:bp-05}
+\includegraphics[width=0.90\linewidth]{phase-c/blueprints/5-Delega.png}
+\captionof{figure}{Blueprint 5: Sezione ``Deleghe'' articolata tra ``Assistiti'' (ingresso nel menù dell'assistito) e ``Le mie deleghe''.}\label{fig:bp-05}
 \end{center}
 
 \subsubsection{Blueprint 6: Sistema di Supporto ``Serve aiuto?''}
 
-Il sesto diagramma (Figura~\ref{fig:bp-06}) illustra il modulo di assistenza contestuale, suddiviso in tre blocchi funzionali:
+Il sesto diagramma (Figura~\ref{fig:bp-06}) illustra il modulo di assistenza contestuale, articolato in quattro funzioni:
 \begin{enumerate}
-\item \textbf{Salva il tuo punto:} se l'utente non possiede ancora un codice, può generare un codice Salva-Sessione per congelare la pratica; se possiede già un codice, può inserirlo per riprendere direttamente la procedura di prenotazione dal punto interrotto;
-\item \textbf{Chiedi all'assistente:} consente di inviare una domanda scritta e visualizzare la relativa risposta;
+\item \textbf{Recupera sessione da codice:} consente di inserire un codice salvato per riprendere direttamente l'ultima sessione interrotta;
+\item \textbf{Genera codice Salva-Sessione:} permette di congelare la pratica corrente tramite codice;
+\item \textbf{Chiedi all'assistente:} consente di richiedere supporto tramite chat testuale;
 \item \textbf{Numero verde:} fornisce i riferimenti per il supporto telefonico regionale.
 \end{enumerate}
 
 \begin{center}
 \includegraphics[width=0.92\linewidth]{phase-c/blueprints/6-ServeAiuto?.png}
-\captionof{figure}{Blueprint 6: Struttura del modulo ``Serve aiuto?'' con gestione del codice Salva-Sessione, assistente testuale e Numero Verde.}\label{fig:bp-06}
+\captionof{figure}{Blueprint 6: Struttura del modulo ``Serve aiuto?'' con recupero e generazione del codice Salva-Sessione, assistente testuale e Numero Verde.}\label{fig:bp-06}
 \end{center}
 
 % --- Card 04 ----------------------------------------------------
