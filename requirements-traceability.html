@@ -1402,8 +1402,8 @@
     "id": "ID-02",
     "layer": 0,
     "title": "Frammentazione tra domini",
-    "urg": "Urgente (3+3=6)",
-    "desc": "Passaggi non annunciati fra domini del servizio. Nel pagamento la destinazione può essere percepita come estranea alla pratica; conseguenza progettuale illustrata nel caso di Giorgio.",
+    "urg": "Urgente (2,5+3=5,5)",
+    "desc": "Passaggi non annunciati fra domini del servizio. Nel pagamento la destinazione può essere percepita come estranea alla pratica; conseguenza progettuale illustrata nel caso di Giorgio. Impatto medio-alto (2,5): incertezza senza blocco tecnico; persistenza alta (3): passaggio ricorrente fra servizi. Somma 5,5, priorità immediata.",
     "source": "05a; episodio narrativo aggiuntivo in 04a, non un nuovo test"
   },
   "ID-03": {
@@ -1425,9 +1425,9 @@
   "ID-05": {
     "id": "ID-05",
     "layer": 0,
-    "title": "Assenza percorso guidato",
-    "urg": "Urgente (3+3=6)",
-    "desc": "Assenza di un percorso guidato o dimostrativo per il nuovo utente al primo accesso.",
+    "title": "Orientamento nel percorso di prenotazione",
+    "urg": "Urgente (3+2,5=5,5)",
+    "desc": "Scarsa riconoscibilità della sequenza dei passaggi e dell’avanzamento verso la conferma, soprattutto al primo utilizzo. Impatto alto (3); persistenza medio-alta (2,5): la familiarità può attenuare il disorientamento senza risolvere la scarsa visibilità dell’avanzamento. Somma 5,5, priorità immediata.",
     "source": "05a; esigenze esplorate nei racconti generati del segmento A"
   },
   "ID-06": {
@@ -1490,8 +1490,8 @@
     "id": "ID-13",
     "layer": 0,
     "title": "Reperire i dati per il pagamento",
-    "urg": "Prossima release (3+2=5)",
-    "desc": "Difficoltà nel collegare i campi ai documenti corretti. Giudizi progettuali sul caso di Giorgio: impatto alto (3), persistenza media (2), somma 5. Frequenza non disponibile; il pagamento non rientra nei task T1–T3.",
+    "urg": "Urgente (3+3=6)",
+    "desc": "Difficoltà nel collegare i campi ai documenti corretti. Giudizi progettuali sul caso di Giorgio: impatto alto (3), persistenza alta (3), somma 6. La difficoltà può ripresentarsi con avvisi e prestazioni diversi senza indicazioni nel modulo. Priorità immediata, sopra la soglia di 5,5. Frequenza non disponibile; il pagamento non rientra nei task T1–T3.",
     "source": "Racconto di Giorgio (04a); valutazione progettuale di impatto e persistenza"
   },
   "R-01": {
@@ -1515,8 +1515,8 @@
   "R-04": {
     "id": "R-04",
     "layer": 1,
-    "title": "Flusso guidato con conferme",
-    "desc": "Flusso passo-passo per il primo utilizzo con conferme esplicite e supporto richiamabile senza ansia."
+    "title": "Passaggi riconoscibili e assistenza",
+    "desc": "Rendere riconoscibili i passaggi della prenotazione, mostrando l’avanzamento e un riepilogo prima della conferma, con accesso alle opzioni di assistenza disponibili."
   },
   "R-05": {
     "id": "R-05",
@@ -3040,6 +3040,20 @@
 };
 
     const TRACE_DETAILS = {
+  "ID-05": [
+    {
+      "text": "Scarsa riconoscibilità della sequenza dei passaggi e dell’avanzamento verso la conferma, soprattutto al primo utilizzo. Impatto alto (3); persistenza medio-alta (2,5): la familiarità può attenuare il disorientamento senza risolvere la scarsa visibilità dell’avanzamento. Somma 5,5, priorità immediata.",
+      "source": "phase-a/phase-a.tex",
+      "line": 1751,
+      "snapshot": "local-2026-10-29-priority-refinement"
+    },
+    {
+      "text": "Scarsa riconoscibilità della sequenza dei passaggi e dell’avanzamento verso la conferma, soprattutto al primo utilizzo.",
+      "source": "phase-a/phase-a.tex",
+      "line": 1749,
+      "snapshot": "local-2026-10-29"
+    }
+  ],
   "R-01": [
     {
       "text": "Ridurre il carico dell’autenticazione, semplificando gli accessi successivi dal computer abituale.",
@@ -3077,6 +3091,12 @@
     }
   ],
   "R-04": [
+    {
+      "text": "Rendere riconoscibili i passaggi della prenotazione, mostrando l’avanzamento e un riepilogo prima della conferma, con accesso alle opzioni di assistenza disponibili.",
+      "source": "phase-a/phase-a.tex",
+      "line": 1999,
+      "snapshot": "local-2026-10-29"
+    },
     {
       "text": "collegata a ID-05, ID-08; confermata da Giorgio e Carla su CUPweb, che individuano il pulsante corretto ma evitano di premerlo per timore di un' azione irreversibile",
       "source": "phase-a/phase-a.tex",
@@ -3481,6 +3501,18 @@
     }
   ],
   "ID-13": [
+    {
+      "text": "Difficoltà nel collegare i campi ai documenti corretti. Giudizi progettuali sul caso di Giorgio: impatto alto (3), persistenza alta (3), somma 6. La difficoltà può ripresentarsi con avvisi e prestazioni diversi senza indicazioni nel modulo. Priorità immediata, sopra la soglia di 5,5. Frequenza non disponibile; il pagamento non rientra nei task T1–T3.",
+      "source": "phase-a/phase-a.tex",
+      "line": 1817,
+      "snapshot": "local-2026-10-29"
+    },
+    {
+      "text": "Difficoltà nel collegare i campi ai documenti corretti. Giudizi progettuali sul caso di Giorgio: impatto alto (3), persistenza media (2), somma 5. Priorità immediata per rimuovere l’ostacolo al pagamento autonomo, in deroga alla soglia di 5,5. Frequenza non disponibile; il pagamento non rientra nei task T1–T3.",
+      "source": "phase-a/phase-a.tex",
+      "line": 1863,
+      "snapshot": "local-2026-10-28"
+    },
     {
       "text": "Difficoltà nel collegare i campi ai documenti corretti. Giudizi progettuali sul caso di Giorgio: impatto alto (3), persistenza media (2), somma 5. Frequenza non disponibile; il pagamento non rientra nei task T1–T3.",
       "source": "phase-a/phase-a.tex",
@@ -5432,7 +5464,7 @@
       { id: "REQ-01", title: "Accesso leggero senza SPID", short: "PIN personale 4 cifre", prio: "Alta" },
       { id: "REQ-02", title: "Integrazione domini e FSE", short: "Prenotazione, FSE e pagoPA", prio: "Alta" },
       { id: "REQ-03", title: "Trasparenza SSN/ALPI", short: "Confronto tariffe e Plain Language", prio: "Media" },
-      { id: "REQ-04", title: "Wizard a 4 passi e disdetta", short: "Flusso guidato e ripensamento 10m", prio: "Alta" },
+      { id: "REQ-04", title: "Prenotazione a passaggi e assistenza", short: "Avanzamento visibile, riepilogo e aiuto accessibile", prio: "Alta" },
       { id: "REQ-05", title: "Accessibilità visiva", short: "Selettore A/A+ e bersagli grandi", prio: "Media" },
       { id: "REQ-06", title: "Supporto Co-pilota e Deleghe", short: "Doppio canale assistenza familiare", prio: "Alta" },
       { id: "REQ-07", title: "Identità e promemoria", short: "Profilo attivo e riepilogo WhatsApp", prio: "Alta" },
