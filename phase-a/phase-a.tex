@@ -682,49 +682,7 @@ restano distinte dall'ispezione diretta.
 \emph{Analisi diretta secondo categorie consolidate di usabilità:
 navigazione, ricerca, organizzazione e
 struttura dei contenuti, contenuti e titoli, impaginazione,
-completamento del compito (qui: prenotazione), fiducia e credibilità.
-La tabella~\ref{tab:a-3} sintetizza i giudizi; l'appendice~\ref{app:guideline}
-riporta le singole voci e le rispettive motivazioni.}
-
-\fieldheading{Sintesi quantitativa del foglio di valutazione delle linee guida (CUPweb vs.\ MioDottore)}
-
-La griglia di valutazione comprende 88 voci, organizzate in nove categorie
-e applicate a entrambi i servizi. Il riepilogo per categoria distingue i
-giudizi di conformità dalle verifiche non completate:
-
-\begin{center}
-\begin{minipage}{\linewidth}
-\centering
-\captionof{table}{Sintesi della valutazione delle linee guida: CUPweb e MioDottore}\label{tab:a-3}
-\small
-\noindent\begin{tabular}{@{}lcccccc@{}}
-\toprule
-  & \multicolumn{3}{c}{\textbf{CUPweb}} & \multicolumn{3}{c}{\textbf{MioDottore}} \\
-\textbf{Categoria} & Conf. & Parz. & Non conf. & Conf. & Parz. & Non conf. \\
-\midrule
-Usabilità della home page & 1 & 1 & 1 & 2 & 0 & 0 \\
-Orientamento al compito & 0 & 1 & 2 & 2 & 0 & 0 \\
-Navigazione e architettura dell\textquotesingle informazione & 0 & 0 & 2 & 2 & 0 & 0 \\
-Moduli e inserimento dati & 0 & 2 & 0 & 1 & 0 & 0 \\
-Fiducia e credibilità & 2 & 0 & 1 & 1 & 1 & 0 \\
-Qualità della scrittura e dei contenuti & 0 & 1 & 1 & 1 & 0 & 0 \\
-Impaginazione e design visivo & 0 & 0 & 2 & 2 & 0 & 0 \\
-Usabilità della ricerca & 0 & 0 & 0 & 4 & 0 & 0 \\
-Aiuto, feedback e tolleranza agli errori & 1 & 2 & 3 & 2 & 1 & 0 \\
-\midrule
-\textbf{Totale} & \textbf{4} & \textbf{7} & \textbf{12} & \textbf{17} & \textbf{2} & \textbf{0} \\
-\bottomrule
-\end{tabular}
-\end{minipage}
-\end{center}
-
-Restano \emph{Non verificato} 64 giudizi su 88 per CUPweb e 69 su 88 per MioDottore; un'ulteriore voce CUPweb è \emph{N/A}, categoria distinta dal non verificato. Le motivazioni registrate nella griglia richiamano spesso l'accesso autenticato, ma alcune motivazioni sono generiche e riguardano anche guideline riferite alla pagina iniziale. Il vincolo di autenticazione non può pertanto essere assunto come spiegazione sufficiente per tutte le voci.
-
-L'appendice~\ref{app:guideline} permette di risalire da ciascun giudizio
-alla relativa motivazione. I valori sono conservati senza completarli per
-inferenza. Le voci pubblicamente osservabili richiedono un riesame; per
-quelle protette occorre precisare schermata e prerequisiti di accesso.
-I task preliminari coprono soltanto i percorsi descritti nelle schede.
+completamento del compito (qui: prenotazione), fiducia e credibilità.}
 
 \fieldheading{Elenco delle criticità principali}
 
@@ -750,8 +708,9 @@ I task preliminari coprono soltanto i percorsi descritti nelle schede.
 \item
   {[}Completamento del compito{]} Prenotazione, disdetta, modifica e consultazione delle proprie
   prenotazioni richiedono autenticazione SPID (livello 2)/CIE/CNS; la home page offre
-  senza autenticazione soltanto "Paga una prestazione". Manca un percorso
-  dimostrativo o guidato per il nuovo utente
+  senza autenticazione soltanto "Paga una prestazione". Nel percorso di
+  prenotazione, la sequenza dei passaggi e l’avanzamento verso la conferma
+  risultano poco riconoscibili, soprattutto al primo utilizzo
 \item
   {[}Accessibility{]} Segnalazioni pubbliche di incompatibilità con
   screen reader per utenti non vedenti, nonostante
@@ -867,16 +826,6 @@ sovraccarico da filtri nell'analisi inversa.
 usabilità applicate a CUPweb (\docref{a}{05a}): navigazione, ricerca,
 organizzazione e struttura dei contenuti, contenuti e titoli,
 impaginazione, completamento del compito, fiducia e credibilità.}
-
-\fieldheading{Sintesi quantitativa del foglio di valutazione delle linee guida}
-
-Il riepilogo quantitativo comparato CUPweb / MioDottore, categoria per
-categoria, è riportato nel \docref{a}{05a}. Su 88 guideline valutate per
-MioDottore risultano 17 \emph{Conforme}, 2 \emph{Parzialmente
-conforme}, 0 \emph{Non conforme} e 69 \emph{Non verificato} (voci non
-ispezionabili senza un account attivo o non coperte dai task testati
-nello User Testing preliminare). Il dettaglio dei giudizi e delle note è
-riportato nell'appendice~\ref{app:guideline}.
 
 \fieldheading{Elenco delle criticità principali}
 
@@ -1781,7 +1730,9 @@ pagamento (\reqref{ID-13}).
   servizio. Frammentazione tra domini scollegati tra loro (cupweb.it,
   pagonlinesanita.it, fascicolo-sanitario.it). Nel pagamento, la destinazione
   non annunciata può essere percepita come estranea alla pratica; impatto:
-  alto; persistenza: alta; metodo di scoperta: analisi diretta (\docref{a}{05a}).
+  medio-alto (2,5), perché il cambio di dominio genera incertezza senza
+  impedire tecnicamente la prosecuzione; persistenza: alta (3), perché
+  il passaggio si ripete fra servizi; metodo di scoperta: analisi diretta (\docref{a}{05a}).
   Il racconto del caso di Giorgio ne illustra una possibile
   conseguenza
 \item
@@ -1797,9 +1748,12 @@ pagamento (\reqref{ID-13}).
   scoperta: analisi diretta e inversa (\docref{a}{05a}), illustrato nel caso di Giorgio
   attraverso il dubbio SSN/Libera Professione
 \item
-  \hypertarget{req:ID-05}{}\textbf{ID-05}: \textbf{Posizione:} intero flusso del primo utilizzo.
-  Assenza di un percorso guidato/dimostrativo per il nuovo utente,
-  impatto: alto; persistenza: alta; metodo di scoperta: analisi diretta
+  \hypertarget{req:ID-05}{}\textbf{ID-05}: \textbf{Posizione:} percorso di prenotazione.
+  Scarsa riconoscibilità della sequenza dei passaggi e dell’avanzamento
+  verso la conferma, soprattutto al primo utilizzo;
+  impatto: alto (3); persistenza: medio-alta (2,5), perché la familiarità
+  con il percorso può attenuare il disorientamento senza risolvere la
+  scarsa visibilità dell’avanzamento; metodo di scoperta: analisi diretta
   (\docref{a}{05a}), coerente con le esigenze descritte nei due casi del segmento A
 \item
   \hypertarget{req:ID-06}{}\textbf{ID-06}: \textbf{Posizione:} intera web application (desktop e mobile), per utenti con
@@ -1866,10 +1820,11 @@ pagamento (\reqref{ID-13}).
   (\docref{a}{04a}). La criticità riguarda il percorso e i documenti di
   pagamento ed è distinta dalla frammentazione dei domini (\reqref{ID-02}).
   Impatto: alto (3), perché l'incertezza interrompe la compilazione autonoma;
-  persistenza: media (2), perché un chiarimento sul documento e sulla
-  posizione dei dati può consentire di proseguire. I punteggi esprimono
+  persistenza: alta (3), perché, senza indicazioni nel modulo, la difficoltà
+  di associare documenti e campi può ripresentarsi per avvisi e prestazioni diversi. I punteggi esprimono
   giudizi progettuali sul caso descritto; la frequenza non è disponibile
-  e il pagamento non rientra nei task T1--T3.
+  e il pagamento non rientra nei task T1--T3. La priorità progettuale è
+  immediata, per rimuovere l’ostacolo al completamento autonomo del pagamento.
 \end{itemize}
 
 Le frequenze mantengono i denominatori delle schede di test: quattro
@@ -1936,16 +1891,18 @@ insieme agli esiti e ai comportamenti descritti nelle schede.
 
 La curva comprende le criticità \reqref{ID-01}--\reqref{ID-13}. Per
 \reqref{ID-13}, i giudizi progettuali di impatto alto (3) e persistenza
-media (2) derivano dal caso di Giorgio: la difficoltà interrompe la
-compilazione autonoma, ma può essere superata con un chiarimento.
+alta (3) derivano dal caso di Giorgio: la difficoltà interrompe la
+compilazione autonoma e può ripresentarsi con avvisi e prestazioni diversi
+se il modulo non chiarisce la corrispondenza fra documenti e campi.
 Le valutazioni esprimono priorità progettuali, non stime della prevalenza
 dei problemi nel target.
 La relazione impatto × persistenza è rappresentata con impatto e
 persistenza convertiti in scala numerica (basso/basso-medio=1/1,5,
-medio=2, medio-alto=2,5, alto=3) e soglia di urgenza motivata: gli
+medio=2, medio-alto=2,5, alto=3; per la persistenza,
+medio-alta=2,5) e soglia di urgenza motivata: gli
 elementi con \textbf{impatto + persistenza $\geq$ 5,5} sono trattati
-come interventi immediati, gli altri come rimandabili alla prossima
-iterazione di design.
+come interventi immediati. Le criticità sotto soglia sono rimandate
+alla prossima iterazione di design.
 
 \begin{center}
 \begin{minipage}{\linewidth}
@@ -1956,10 +1913,10 @@ iterazione di design.
 \textbf{ID} & \textbf{Impatto} & \textbf{Persistenza} & \textbf{Somma} & \textbf{Urgenza} \\
 \midrule
 \reqref{ID-01} & 3 & 3 & 6 & Immediata \\
-\reqref{ID-02} & 3 & 3 & 6 & Immediata \\
+\reqref{ID-02} & 2,5 & 3 & 5,5 & Immediata \\
 \reqref{ID-03} & 2 & 3 & 5 & Prossima release \\
 \reqref{ID-04} & 2 & 2 & 4 & Prossima release \\
-\reqref{ID-05} & 3 & 3 & 6 & Immediata \\
+\reqref{ID-05} & 3 & 2,5 & 5,5 & Immediata \\
 \reqref{ID-06} & 3 & 2 & 5 & Prossima release \\
 \reqref{ID-07} & 1,5 & 2 & 3,5 & Prossima release \\
 \reqref{ID-08} & 3 & 3 & 6 & Immediata \\
@@ -1967,7 +1924,7 @@ iterazione di design.
 \reqref{ID-10} & 3 & 3 & 6 & Immediata \\
 \reqref{ID-11} & 3 & 2 (da confermare) & 5 & Prossima release \\
 \reqref{ID-12} & 2,5 & 3 & 5,5 & Immediata \\
-\reqref{ID-13} & 3 & 2 & 5 & Prossima release \\
+\reqref{ID-13} & 3 & 3 & 6 & Immediata \\
 \bottomrule
 \end{tabular}
 \end{minipage}
@@ -1976,53 +1933,44 @@ iterazione di design.
 \begin{center}
 \begin{tikzpicture}
 \begin{axis}[
-  width=0.85\linewidth, height=7cm,
+  width=0.90\linewidth, height=7.8cm,
   xlabel={Persistenza}, ylabel={Impatto},
-  xmin=0.8, xmax=3.6, ymin=0.8, ymax=3.6,
+  xmin=0.8, xmax=3.6, ymin=0.8, ymax=3.75,
   xtick={1,2,3}, xticklabels={Bassa,Media,Alta},
   ytick={1,2,3}, yticklabels={Basso,Medio,Alto},
   grid=both, grid style={gray!20},
-  legend style={at={(0.5,-0.22)},anchor=north,legend columns=-1,font=\footnotesize,draw=none},
-  scatter/classes={
-    urgente={mark=*,red},
-    prossima={mark=*,blue}
-  },
+  clip=false,
+  legend style={at={(0.5,-0.22)},anchor=north,legend columns=2,
+    font=\scriptsize,draw=none,cells={anchor=west},
+    column sep=12pt,row sep=4pt},
 ]
-\addplot[scatter,only marks,scatter src=explicit symbolic,
-  nodes near coords*={\Label},
-  visualization depends on={value \thisrow{Label} \as \Label},
-  every node near coord/.append style={font=\tiny, anchor=west, xshift=2pt}]
-  table[meta=Class] {
-x y Class Label
-2.85 3.05 urgente ID-01
-2.95 3.10 urgente ID-02
-3.00 2.00 prossima ID-03
-2.00 2.00 prossima ID-04
-3.05 3.10 urgente ID-05
-1.95 3.05 prossima ID-06
-2.00 1.50 prossima ID-07
-3.15 3.05 urgente ID-08
-2.95 2.55 urgente ID-09
-3.00 2.95 urgente ID-10
-2.05 2.95 prossima ID-11
-3.05 2.45 urgente ID-12
-};
-\addplot[only marks,mark=*,blue,forget plot] coordinates {(2,3)};
-\draw[blue!65] (axis cs:2,3) -- (axis cs:1.65,3.35)
-  node[above,font=\tiny,text=black]{ID-13};
-\addplot[domain=1.9:3.6, samples=2, dashed, thick, black] {5.5-x};
-\legend{Immediata,Prossima release,Soglia (somma=5{,}5)}
+\addplot[only marks,mark=*,red,mark size=2.5pt] coordinates {(3,3) (3,2.5) (2.5,3)};
+\addlegendentry{Immediata}
+\addplot[only marks,mark=*,blue,mark size=2.5pt] coordinates {(3,2) (2,2) (2,1.5) (2,3)};
+\addlegendentry{Prossima release}
+\addplot[domain=1.75:3.6,samples=2,dashed,thick,black] {5.5-x};
+\addlegendentry{Soglia ordinaria: somma = 5,5}
+\draw[black] (axis cs:3,3) -- (axis cs:2.92,3.28)
+  node[above,align=center,font=\scriptsize,text=black]{ID-01, ID-08\\ID-10, ID-13};
+\draw[black] (axis cs:3,2.5) -- (axis cs:3.12,2.72)
+  node[right,align=left,font=\scriptsize,text=black]{ID-02, ID-09\\ID-12};
+\node[anchor=south,font=\scriptsize,yshift=5pt] at (axis cs:2.5,3) {ID-05};
+\draw[black] (axis cs:2,3) -- (axis cs:1.48,3.17)
+  node[left,align=right,font=\scriptsize,text=black]{ID-06, ID-11};
+\node[anchor=west,font=\scriptsize,xshift=5pt] at (axis cs:3,2) {ID-03};
+\node[anchor=west,font=\scriptsize,xshift=5pt] at (axis cs:2,2) {ID-04};
+\node[anchor=west,font=\scriptsize,xshift=5pt] at (axis cs:2,1.5) {ID-07};
 \end{axis}
 \end{tikzpicture}
-\captionof{figure}{Distribuzione delle criticità per impatto e persistenza}\label{fig:urgenza}
+\captionof{figure}{Distribuzione delle criticità per impatto e persistenza. Gli ID con punteggi uguali condividono il punto; i richiami neri collegano le etichette ai gruppi coincidenti.}\label{fig:urgenza}
 \end{center}
 
-I sette elementi sopra soglia (\reqref{ID-01}, \reqref{ID-02}, \reqref{ID-05}, \reqref{ID-08}, \reqref{ID-09},
-\reqref{ID-10}, \reqref{ID-12}) coincidono in larga parte con le criticità legate
+Gli otto elementi sulla soglia o al di sopra di essa (\reqref{ID-01}, \reqref{ID-02}, \reqref{ID-05}, \reqref{ID-08}, \reqref{ID-09},
+\reqref{ID-10}, \reqref{ID-12}, \reqref{ID-13}) coincidono in larga parte con le criticità legate
 all\textquotesingle autenticazione, alla frammentazione dei domini,
-all\textquotesingle assenza di un percorso guidato e alla mancanza di
-conferme condivisibili. La soglia ordina gli interventi sulla base dei
-giudizi riportati.
+alla difficoltà di orientamento nel percorso e alla mancanza di
+conferme condivisibili e alla preparazione dei dati di pagamento.
+La soglia ordina gli interventi sulla base dei giudizi riportati.
 
 \subsection[Raccomandazioni progettuali]{Raccomandazioni progettuali preliminari}
 
@@ -2048,8 +1996,9 @@ In entrambe le modalità, l'accesso ai dati sanitari segue le autorizzazioni ric
   touchpoint, spiegando destinazione e motivo degli eventuali passaggi esterni.
 \item \hypertarget{req:R-03}{}\textbf{R-03}: Rendere riconoscibili le azioni e comprensibile il lessico
   attraverso gerarchia visiva e spiegazioni contestuali.
-\item \hypertarget{req:R-04}{}\textbf{R-04}: Guidare il primo utilizzo nei passaggi critici, offrendo
-  conferme esplicite e accesso all'assistenza senza stigmatizzare la richiesta.
+\item \hypertarget{req:R-04}{}\textbf{R-04}: Rendere riconoscibili i passaggi della prenotazione,
+  mostrando l’avanzamento e un riepilogo prima della conferma, con accesso
+  alle opzioni di assistenza disponibili.
 \item \hypertarget{req:R-05}{}\textbf{R-05}: Verificare la compatibilità con tecnologie assistive,
   coerentemente con la dichiarazione di accessibilità.
   La raccomandazione deriva dall'assessment (\docref{a}{05a}); i test
