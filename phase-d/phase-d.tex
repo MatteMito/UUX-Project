@@ -116,7 +116,23 @@ Il redesign riduce del 87,1\% le digitazioni, perché la ricetta si seleziona da
 
 \fieldheading{Versione valutata, metodo e procedura}
 
-L'ispezione ha riguardato la versione v0 al completo (19 schermate e 6 blueprint) e ha usato due riferimenti: le 10 euristiche di Nielsen e le nove categorie della griglia di 88 linee guida già applicata a CUPweb e MioDottore in Fase A (\docref{a}{05a}), così da rendere confrontabili i risultati prima e dopo. Boscherini, Campedelli e Fuligni hanno valutato individualmente il 19 ottobre 2026 (90 minuti ciascuno) e hanno riconciliato i finding in una plenaria il 20 ottobre.
+L'ispezione ha riguardato la versione v0 al completo (19 schermate e 6 blueprint) e ha adottato due riferimenti metodologici:
+\begin{itemize}
+\item le 10 euristiche di Nielsen;
+\item le nove categorie della griglia di 88 linee guida già applicata a CUPweb e MioDottore in Fase A (\docref{a}{05a}):
+  \begin{itemize}
+  \item Usabilità della home page;
+  \item Orientamento al compito;
+  \item Navigazione e architettura dell'informazione;
+  \item Moduli e inserimento dati;
+  \item Fiducia e credibilità;
+  \item Qualità della scrittura e dei contenuti;
+  \item Impaginazione e design visivo;
+  \item Usabilità della ricerca;
+  \item Aiuto, feedback ed errori.
+  \end{itemize}
+\item Boscherini, Campedelli e Fuligni hanno svolto la valutazione individuale il 19 ottobre 2026 (90 minuti ciascuno) e hanno riconciliato i finding in una plenaria il 20 ottobre.
+\end{itemize}
 
 La severità segue la scala di Nielsen: 0 non è un problema, 1 cosmetico, 2 minore, 3 maggiore (da correggere prima dei test con utenti), 4 catastrofico (blocca il compito o induce errori irreversibili).
 
@@ -153,9 +169,9 @@ La severità segue la scala di Nielsen: 0 non è un problema, 1 cosmetico, 2 min
 \end{longtable}
 \end{center}
 
-\subsection{Finding dell'Heuristic Analysis}
+\subsection{Finding dell'Heuristic Analysis (v0)}
 
-La Tabella~\ref{tab:d-heuristic-findings} censisce gli otto problemi individuati sulla versione v0.
+La Tabella~\ref{tab:d-heuristic-findings} censisce gli otto problemi specifici individuati sulla versione v0, classificati per schermata, euristica violata e livello di gravità.
 
 \Needspace{9\baselineskip}
 \begin{center}
@@ -221,27 +237,27 @@ Prima dello User Testing il team ha recepito tutte le raccomandazioni (W-01--W-0
 \endhead
 \bottomrule
 \endlastfoot
-W-01, \reqref{H-01} & WF-01 & Nota sulla validità di 30 giorni, comando ``Cancella cifre'' e messaggio non colpevolizzante per PIN dimenticato o scaduto, con rimando a SPID/CIE o al caregiver. \\
+W-01, \reqref{H-01} & WF-01 & Esplicitazione della validità di 30 giorni del PIN, comando ``Cancella cifre'' e messaggio non colpevolizzante per PIN errato/scaduto con link di recupero o assistenza caregiver. \\
 \addlinespace
-W-02 & WF-02 & Scorciatoia rinominata ``Prenotazione rapida'', con il nome della visita ricorrente sincronizzata dal Fascicolo. \\
+W-02 & WF-02 & Scorciatoia nel cruscotto rinominata ``Prenotazione rapida'', con indicazione esplicita del nome della visita periodica sincronizzata dal Fascicolo. \\
 \addlinespace
-W-03 & WF-03, WF-16 & Ricette del selettore arricchite con medico, data e ultime 4 cifre dell'NRE. \\
+W-03 & WF-03, WF-16 & Schede delle ricette arricchite con medico prescrittore, data di emissione e ultime 4 cifre dell'NRE per facilitare il confronto con il foglio cartaceo. \\
 \addlinespace
-W-04, \reqref{H-07} & WF-04 & Confronto a due colonne con importo calcolato in chiaro (``0,00~€, esenzione applicata'') contro la tariffa privata, e glosse in linguaggio semplice. \\
+W-04, \reqref{H-07} & WF-04 & Confronto a due colonne con evidenza dell'esenzione (``Costo per te: 0,00~€'') affiancata alla tariffa ALPI, con glossa esplicativa in linguaggio comune. \\
 \addlinespace
-W-05 & WF-05, WF-06 & Badge di distanza, parcheggio e linea autobus, indicazione ``compatibile con gli orari dell'autobus'' sulla fascia mattutina e giorni pieni inibiti con spiegazione. \\
+W-05 & WF-05, WF-06 & Badge informativi di prossimità (distanza in km, linee bus, parcheggio) e motivazione chiara sui giorni non disponibili. \\
 \addlinespace
-W-06, \reqref{H-04} & WF-09 & Countdown rosso sostituito da un banner rassicurante (``Orario riservato per te per 15 minuti''). \\
+W-06, \reqref{H-04} & WF-09 & Timer di 15 minuti riformulato come garanzia di riserva temporanea del posto anziché conto alla rovescia d'emergenza, con riepilogo rassicurante delle condizioni. \\
 \addlinespace
-W-07 & WF-10 & Quattro pulsanti di condivisione (stampa, SMS, WhatsApp al caregiver, calendario) con conferma visiva dell'invio, senza dati clinici eccedenti. \\
+W-07 & WF-10 & Opzioni di condivisione (stampa A4, SMS, WhatsApp al caregiver) con feedback visivo immediato e persistente dell'avvenuto invio. \\
 \addlinespace
-\reqref{H-02} & WF-07, WF-19 & Pulsante ``Termina condivisione con Elena'' nel banner arancione e tasto di chiusura più ampio nel pannello di aiuto. \\
+\reqref{H-02} & WF-07, WF-19 & Pulsante evidente ``Termina condivisione'' nel banner arancione e comando di chiusura ingrandito nel pannello di aiuto in sovrimpressione. \\
 \addlinespace
-\reqref{H-03} & WF-17, WF-18 & Fac-simile annotato del bollettino con richiami numerici, Codice Avviso a blocchi con validazione immediata e scheda per scaricare la ricevuta. \\
+\reqref{H-03} & WF-17, WF-18 & Fac-simile annotato del bollettino pagoPA con richiami numerici ai campi, Codice Avviso raggruppato in quartine e convalida sintattica immediata. \\
 \addlinespace
-\reqref{H-05}, \reqref{H-06} & WF-15 e testata & Banner arancione persistente in delega (``Stai operando per: Giuseppina Ferretti'') con tasto ``Termina delega'' e contatori di visite e ricette sulle card dei familiari. \\
+\reqref{H-05}, \reqref{H-06} & WF-15 e testata & Banner persistente dell'assistito attivo (``Stai operando per: Giuseppina Ferretti'') con tasto ``Termina delega'' e contatori di scadenze sulle card dei familiari. \\
 \addlinespace
-\reqref{H-08} & WF-12, WF-13, WF-14 & Checklist spuntabile ``Cosa mettere nella borsa'', comandi ``Sposta'' e ``Disdici'' separati, modale sull'assenza di sanzioni e banner di recupero entro 10 minuti. \\
+\reqref{H-08} & WF-12, WF-13, WF-14 & Separazione grafica netta tra ``Sposta data'' e ``Disdici'', modale informativa sull'assenza di sanzioni con ripensamento di 10 minuti e checklist ``Cosa portare''. \\
 \end{longtable}
 \end{center}
 
@@ -637,7 +653,14 @@ Varianza del SUS ($s^2$) & 177,08 & 227,08 & \textbf{41,88} & $-$76,4\% \\
 
 \subsection{Problemi residui e curva d'urgenza}
 
-L'osservazione ha rivelato quattro micro-criticità residue (RES-01--RES-04), anche se tutti i 15 task sono stati completati. Valutate con il metodo della Fase A (\docref{a}{07}: impatto e persistenza da 1 a 3, soglia di emergenza 5,5), nessuna supera la soglia: tutte hanno somma non superiore a 4,0 (Tabella~\ref{tab:d-residual-urgency}, Figura~\ref{fig:d-urgenza}).
+L'osservazione dei test utente ha rivelato quattro micro-criticità residue (RES-01--RES-04), nessuna delle quali ha impedito il completamento con successo dei compiti. Valutate con la matrice di Fase A (\docref{a}{07}: impatto e persistenza da 1 a 3, soglia di emergenza 5,5), tutte presentano una somma contenuta compresa tra 3,0 e 4,0 (Tabella~\ref{tab:d-residual-urgency}).
+
+La Figura~\ref{fig:d-urgenza} inserisce i rilievi di Fase D nel quadro complessivo dell'evoluzione del servizio rispetto alle 13 criticità censite in Fase A:
+\begin{itemize}
+\item \textbf{Criticità prioritarie di Fase A (risolte):} gli otto problemi storici collocati sulla soglia o sopra di essa (\reqref{ID-01}, \reqref{ID-02}, \reqref{ID-05}, \reqref{ID-08}, \reqref{ID-09}, \reqref{ID-10}, \reqref{ID-12}, \reqref{ID-13}), che costituivano i requisiti inderogabili del redesign, sono stati tutti risolti, come dimostrato dall'azzeramento dei blocchi procedurali e dal 100\% di successo nei test.
+\item \textbf{Criticità secondarie di Fase A (differite a backlog):} i cinque problemi che in Fase A si attestavano al di sotto della soglia ordinaria di emergenza (\reqref{ID-03}, \reqref{ID-04}, \reqref{ID-06}, \reqref{ID-07}, \reqref{ID-11}) erano stati differiti alla release successiva. Di questi, tre sono stati comunque mitigati dal redesign (l'impaginazione pulita e ariosa attenua ID-03; il confronto a due colonne di WF-04 chiarisce ID-04; il codice di salvataggio sessione di WF-19 risolve ID-11), mentre l'introduzione di una ricerca testuale libera (ID-06) e l'ulteriore scomposizione analitica delle tariffe accessorie (ID-07) restano pianificate per sviluppi futuri.
+\item \textbf{Problemi residui di Fase D:} i quattro rilievi emersi su v1 (RES-01--RES-04) si collocano tutti ampiamente nella fascia di non emergenza, a distanza di sicurezza dalla soglia critica di 5,5.
+\end{itemize}
 
 \Needspace{9\baselineskip}
 \begin{center}
@@ -662,38 +685,48 @@ RES-04 & WF-15 & Manca una vista tabellare compatta per chi assiste più di due 
 \begin{center}
 \begin{tikzpicture}
 \begin{axis}[
-  width=0.82\linewidth, height=6.5cm,
-  xlabel={Persistenza (1 = bassa, 3 = alta)},
-  ylabel={Impatto (1 = basso, 3 = alto)},
-  xmin=0.8, xmax=3.6, ymin=0.8, ymax=3.6,
-  xtick={1,2,3}, xticklabels={1,2,3},
-  ytick={1,2,3}, yticklabels={1,2,3},
+  width=0.90\linewidth, height=7.5cm,
+  xlabel={Persistenza},
+  ylabel={Impatto},
+  xmin=0.8, xmax=3.85, ymin=0.8, ymax=3.85,
+  xtick={1,2,3}, xticklabels={Bassa,Media,Alta},
+  ytick={1,2,3}, yticklabels={Basso,Medio,Alto},
   grid=both, grid style={gray!20},
-  legend style={at={(0.5,-0.24)},anchor=north,legend columns=-1,font=\footnotesize,draw=none},
-  scatter/classes={
-    risolti={mark=triangle*,gray!60},
-    residui={mark=*,blue!80!black}
-  },
+  clip=false,
+  legend style={at={(0.5,-0.22)},anchor=north,legend columns=2,font=\scriptsize,draw=none,cells={anchor=west},column sep=12pt,row sep=4pt},
 ]
-\addplot[scatter,only marks,scatter src=explicit symbolic,
-  nodes near coords*={\Label},
-  visualization depends on={value \thisrow{Label} \as \Label},
-  every node near coord/.append style={font=\tiny, anchor=west, xshift=2pt}]
-  table[meta=Class] {
-x y Class Label
-1.50 1.50 residui RES-01
-2.00 2.00 residui RES-02
-1.50 2.00 residui RES-03
-2.00 1.50 residui RES-04
-3.00 3.00 risolti {ID-01/08/10/13 (risolti)}
-3.00 2.50 risolti {ID-02/09/12 (risolti)}
-2.50 3.00 risolti {ID-05 (risolto)}
-};
-\addplot[domain=1.9:3.6, samples=2, dashed, thick, red!80!black] {5.5-x};
-\legend{Criticità di Fase A (risolte),Problemi residui di Fase D,Soglia di emergenza (somma = 5{,}5)}
+\addplot[only marks, mark=triangle*, color=red!85!black, mark size=2.8pt]
+  coordinates {(3,3) (3,2.5) (2.5,3)};
+\addlegendentry{Criticità Fase A (risolte)}
+
+\addplot[only marks, mark=square*, color=blue!80!black, mark size=2.5pt]
+  coordinates {(3,2) (1.92,2.08) (2,3) (1.92,1.58)};
+\addlegendentry{Criticità Fase A (differite a backlog)}
+
+\addplot[only marks, mark=*, color=orange!90!black, mark size=2.6pt]
+  coordinates {(1.5,1.5) (2.08,1.92) (1.5,2) (2.08,1.42)};
+\addlegendentry{Problemi residui Fase D}
+
+\addplot[domain=1.75:3.6, samples=2, dashed, thick, black] {5.5-x};
+\addlegendentry{Soglia ordinaria: somma = 5{,}5}
+
+% Etichette posizionate senza sovrapposizioni
+\node[font=\tiny, anchor=west, xshift=3pt] at (axis cs:3,3) {ID-01/08/10/13 (risolti)};
+\node[font=\tiny, anchor=west, xshift=3pt] at (axis cs:3,2.5) {ID-02/09/12 (risolti)};
+\node[font=\tiny, anchor=south, yshift=4pt, fill=white, inner sep=1pt] at (axis cs:2.5,3) {ID-05 (risolto)};
+
+\node[font=\tiny, anchor=west, xshift=3pt, fill=white, inner sep=1pt] at (axis cs:3,2) {ID-03 (differita)};
+\node[font=\tiny, anchor=south east] at (axis cs:1.92,2.08) {ID-04 (differita)};
+\node[font=\tiny, anchor=east, xshift=-3pt] at (axis cs:2,3) {ID-06/11 (differite)};
+\node[font=\tiny, anchor=south east] at (axis cs:1.92,1.58) {ID-07 (differita)};
+
+\node[font=\tiny, anchor=north, yshift=-3pt] at (axis cs:1.5,1.5) {RES-01};
+\node[font=\tiny, anchor=north west] at (axis cs:2.08,1.92) {RES-02};
+\node[font=\tiny, anchor=east, xshift=-3pt] at (axis cs:1.5,2) {RES-03};
+\node[font=\tiny, anchor=north west] at (axis cs:2.08,1.42) {RES-04};
 \end{axis}
 \end{tikzpicture}
-\captionof{figure}{Curva d'urgenza di Fase D: i quattro problemi residui restano sotto la soglia di emergenza.}\label{fig:d-urgenza}
+\captionof{figure}{Curva d'urgenza comparata: le 8 criticità prioritarie di Fase A risultano superate dal redesign; le 5 criticità storiche differite a backlog e i 4 problemi residui del test (RES-01--RES-04) si collocano stabilmente sotto la soglia ordinaria.}\label{fig:d-urgenza}
 \end{center}
 
 % --- Card 04 ----------------------------------------------------
