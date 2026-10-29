@@ -1,814 +1,791 @@
 % !TEX root = ../hphp-project-report.tex
-% Generated from HPHP_Documentazione_Completa_EDITABILE.docx.
-% I termini tecnici seguono la terminologia delle checklist di progetto.
+% Fase D: valutazione del redesign (HPHP - Team Affordance).
 % Gerarchia: chapter = fase; cardsection = card; subsection = blocco;
 % subsubsection = caso/dettaglio; fieldheading = campo della card.
+% La scheda del gruppo non è ripetuta: vedi Fase A, Documento 01.
+
+% Larghezza di colonna proporzionale: \pw{spazi tra colonne}{percentuale}.
+\newcommand{\pw}[2]{\dimexpr(\linewidth-#1\tabcolsep)*#2/100\relax}
+
 \chapter{Fase D: Valutazione del redesign}
 
-\fieldheading{Versione di riferimento e limiti di confronto}
-Le schede di ispezione e i protocolli seguenti conservano il precedente percorso con autenticazione via SMS e schermate numerate 1--6. La proposta desktop di Fase C introduce una diversa sequenza WF e l'alternativa di accesso con PIN: i giudizi e le raccomandazioni storiche non ne costituiscono una valutazione. Prima di applicare questi protocolli alla nuova baseline occorre riallineare schermate, compiti e condizioni, mantenendo separati gli esiti delle diverse versioni. Il pagamento accessorio richiede una verifica specifica e non è coperto dai task storici.
-
-% --- Card 01 ----------------------------------------------------
-\cardsection{Documento 01: Scheda del gruppo}\label{doc:d:01}
-
-Vedi Fase A, \docref{a}{01}, Team Affordance (Matteo Boscherini,
-Alessandro Campedelli, Francesco Maria Fuligni).
+La Fase D valuta il redesign desktop di CUPweb sviluppato in Fase C in due momenti, coerenti con il ciclo di progettazione centrata sull'umano~\cite{iso9241210_2019}. Un'ispezione interna sulla versione iniziale dei wireframe (v0), basata su Cognitive Walkthrough con Action Analysis (\docref{d}{02a}) e su Heuristic Analysis (\docref{d}{02b}), ha prodotto la versione congelata v1. Uno User Testing con cinque partecipanti reali su v1 (\docref{d}{03}) ha poi riproposto protocollo, compiti e metriche della Fase A, compresa la scala SUS~\cite{brookeSUS1996}. Il \docref{d}{04} confronta obiettivi e risultati e formula le raccomandazioni per il cliente.
 
 % --- Card 02a ----------------------------------------------------
-\cardsection{Documento 02a: Scheda di ispezione: Cognitive Walkthrough}\label{doc:d:02a}
+\cardsection{Documento 02a: Scheda di ispezione: Cognitive Walkthrough e Action Analysis}\label{doc:d:02a}
 
 \subsection{Impostazione dell'ispezione}
 
 \fieldheading{Versione valutata}
 
-Versione 0: v0\_wireframe\_iniziale (Fase C, Documenti 03-05:
-blueprint, wireframe, confronto prima/dopo)
+Versione v0: le 19 schermate desktop (WF-01--WF-19) e i sei Structure Blueprint di Fase C (\docref{c}{03}, \docref{c}{04}), congelate prima dell'ispezione per correggere gli attriti cognitivi, lessicali e visivi prima del test con persone reali.
 
-\fieldheading{Contesto dell'ispezione}
+\fieldheading{Contesto e ruoli}
 
+Sessione in presenza del 18 ottobre 2026 (14:30--17:30) in laboratorio, su monitor desktop da 24'' a 1920$\times$1080. I ruoli erano tre:
 \begin{itemize}
-\item
-  Data e ora: \todoinline{Inserire la data reale della sessione.}
-\item
-  Membri del team coinvolti e ruoli: un membro nel ruolo di Narratore
-  (guida il walkthrough seguendo il compito), un membro nel ruolo di
-  Ascoltatore/verbalizzatore (annota risposte e criticità), un membro
-  nel ruolo di \textquotesingle persona\textquotesingle{} (risponde alle
-  domande impersonando Pina in base al suo profilo di Fase B)
+\item \textbf{Narratore:} Matteo Boscherini, che presenta gli stati dei wireframe seguendo lo scenario;
+\item \textbf{Interprete di Pina:} Alessandro Campedelli, che risponde attenendosi al profilo della protagonista (78 anni, competenza tecnica 1/5, abilità fisica e visiva 2/5, forte timore di errori irreversibili, \docref{b}{02a});
+\item \textbf{Verbalizzatore:} Francesco Maria Fuligni, che registra le risposte, conta le azioni per l'Action Analysis e codifica le raccomandazioni W-01--W-07.
 \end{itemize}
 
-\fieldheading{Metodo di ispezione}
+\fieldheading{Metodi e compiti}
 
+Il Cognitive Walkthrough pone a ogni passo quattro domande: (1) l'utente cercherà di ottenere l'effetto giusto? (2) noterà che l'azione corretta è disponibile? (3) la assocerà all'effetto desiderato? (4) riceverà un feedback di progresso? L'Action Analysis scompone invece il compito primario in azioni elementari (clic, digitazioni, cambi di dominio) per confrontare il carico procedurale di CUPweb e del redesign.
+
+I compiti sono due, entrambi sul profilo di Pina:
 \begin{itemize}
-\item
-  Cognitive Walkthrough
+\item \textbf{CW-T1, prenotazione guidata:} prenotare la visita diabetologica di controllo con ricetta NRE in regime pubblico, scegliendo una sede raggiungibile con l'autobus dopo le 10:00, verificando costi e pagamento e inviando il promemoria alla figlia Elena (WF-01--WF-10, con WF-07 e WF-17);
+\item \textbf{CW-T2, disdetta protetta:} consultare ``I miei appuntamenti'' e annullare una visita senza sanzioni (WF-11--WF-14).
 \end{itemize}
 
-\fieldheading{Compito valutato}
+\subsection{Analisi passo-passo del Cognitive Walkthrough (v0)}
 
-Compito equivalente a quello di Fase B (scheda della persona protagonista): Pina
-prenota la visita diabetologica di controllo semestrale, usando le
-schermate wireframe 1→5 (pagina iniziale, scelta prestazione, autenticazione
-leggera, data/ora, riepilogo/conferma).
+La Tabella~\ref{tab:d-cw} riporta le risposte alle quattro domande per ciascun passo (S = sì, P = parziale) e, per le risposte parziali, il problema rilevato con la relativa raccomandazione.
 
-\emph{Per ciascun passo, il walkthrough risponde alle 4 domande
-standard: (1) L\textquotesingle utente cercherà di ottenere
-l\textquotesingle effetto giusto? (2) L\textquotesingle utente noterà
-che l\textquotesingle azione corretta è disponibile? (3)
-L\textquotesingle utente assocerà l\textquotesingle azione corretta
-all\textquotesingle effetto desiderato? (4) Se l\textquotesingle azione
-corretta viene eseguita, l\textquotesingle utente vedrà che sta facendo
-progressi?}
-
-\subsection{Analisi dei passi}
-
-\par
-\begin{minipage}{\linewidth}
-\textbf{Passo 1: Dalla pagina iniziale, toccare \textquotesingle Prenota una
-visita\textquotesingle{} (wireframe schermata 1)}
-
-{\def\LTcaptype{none} % do not increment counter
-\par\medskip
-\noindent\begin{tabular}{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2600}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1200}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.6200}}@{}}
+\Needspace{9\baselineskip}
+\begin{center}
+\footnotesize
+\begin{longtable}{@{}
+  >{\raggedright\arraybackslash}p{\pw{10}{19}}
+  >{\centering\arraybackslash}p{\pw{10}{6}}
+  >{\centering\arraybackslash}p{\pw{10}{6}}
+  >{\centering\arraybackslash}p{\pw{10}{6}}
+  >{\centering\arraybackslash}p{\pw{10}{6}}
+  >{\raggedright\arraybackslash}p{\pw{10}{57}}@{}}
+\caption{Cognitive Walkthrough sulla versione v0 (persona Pina)}\label{tab:d-cw}\\
 \toprule
-\textbf{Domanda} & \textbf{Risposta} & \textbf{Motivazione} \\
-(1) Effetto giusto? & Sì & La visita di controllo è
-l\textquotesingle obiettivo esplicito di Pina; l\textquotesingle azione
-\textquotesingle Prenota una visita\textquotesingle{} è coerente con
-questo obiettivo fin dal titolo. \\
-(2) Azione disponibile notata? & Sì & Il pulsante è il più grande e
-colorato della schermata, unico elemento con quel colore: alta salienza
-visiva anche per chi ha lieve difficoltà visiva (persona Pina,
-Fitness=2). \\
-(3) Associazione corretta? & Sì & L\textquotesingle etichetta
-\textquotesingle Prenota una visita\textquotesingle{} è in linguaggio
-naturale e coincide quasi letteralmente con l\textquotesingle obiettivo
-di Pina, riducendo il carico interpretativo (Domain=2, Technical=1). \\
-(4) Percezione del progresso? & Sì & Il tocco porta immediatamente alla
-schermata 2, con transizione visibile e nuovo titolo in alto. \\
-\bottomrule
-\end{tabular}
-\par\medskip
-}
-\end{minipage}
-\par
-
-\fieldheading{Esito del passo}
-
-Successo previsto. Nessuna criticità rilevata su questo passo.
-
-\par
-\begin{minipage}{\linewidth}
-\textbf{Passo 2: Selezionare \textquotesingle Diabetologia (di
-nuovo...)\textquotesingle{} (wireframe schermata 2)}
-
-{\def\LTcaptype{none} % do not increment counter
-\par\medskip
-\noindent\begin{tabular}{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2600}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1200}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.6200}}@{}}
+\textbf{Passo (schermata)} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{Problema rilevato e raccomandazione} \\
+\midrule
+\endfirsthead
 \toprule
-\textbf{Domanda} & \textbf{Risposta} & \textbf{Motivazione} \\
-(1) Effetto giusto? & Sì & L\textquotesingle opzione evidenziata
-corrisponde esattamente alla prestazione ricorrente di Pina. \\
-(2) Azione disponibile notata? & Sì & L\textquotesingle opzione è la
-prima della lista ed è evidenziata con colore e bordo distinti dalle
-altre tre. \\
-(3) Associazione corretta? & Parziale & Il testo aggiuntivo
-\textquotesingle(di nuovo, come l\textquotesingle ultima
-volta)\textquotesingle{} è utile, ma per un utente con bassa competenza
-tecnica (Technical=1) il concetto di
-\textquotesingle ripetere\textquotesingle{} un\textquotesingle azione
-digitale potrebbe non essere immediatamente familiare quanto lo è nel
-mondo fisico (es. richiedere la stessa cosa allo sportello). \\
-(4) Percezione del progresso? & Sì & Il tocco porta alla schermata 3 con
-un nuovo titolo chiaro (\textquotesingle Conferma la tua
-identità\textquotesingle). \\
+\textbf{Passo (schermata)} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{Problema rilevato e raccomandazione} \\
+\midrule
+\endhead
 \bottomrule
-\end{tabular}
-\par\medskip
-}
-\end{minipage}
-\par
+\endlastfoot
+Accesso con PIN a 4 cifre (WF-01) & S & S & P & S & Non è spiegato cosa accade se il PIN è errato o scaduto, e Pina teme di bloccare la tessera sanitaria. \textbf{W-01:} nota rassicurante sulla validità di 30 giorni e pulsante ``Cancella cifre''. \\
+\addlinespace
+Cruscotto e avvio prenotazione (WF-02) & S & S & P & S & La scorciatoia ``Ripeti ultima prestazione (R)'' non è associata alla ricetta cartacea. \textbf{W-02:} ``Prenotazione rapida'' con il nome esteso della visita. \\
+\addlinespace
+Scelta della ricetta (WF-03) & S & S & P & S & La voce ``89.01'' non è confrontabile con il foglio cartaceo. \textbf{W-03:} medico prescrittore, data e ultime 4 cifre dell'NRE. \\
+\addlinespace
+Confronto pubblico/privato (WF-04) & S & S & P & S & L'esenzione non compare in cifre grandi accanto al costo privato. \textbf{W-04:} ``Costo per te: 0,00~€'' contrapposto alla tariffa intera. \\
+\addlinespace
+Struttura, giorno e orario (WF-05, WF-06) & S & S & S & P & Nessun messaggio sui giorni pieni e nessuna fermata dell'autobus. \textbf{W-05:} tooltip sui giorni grigi e badge di mobilità. \\
+\addlinespace
+Riepilogo e conferma (WF-09) & S & S & P & S & Il timer rosso di 15 minuti è letto come una minaccia. \textbf{W-06:} banner azzurro rassicurante e pulsante ``Chiedi a Elena''. \\
+\addlinespace
+Promemoria e guida pagoPA (WF-10, WF-17) & S & S & S & P & Dopo l'invio su WhatsApp non c'è conferma di ricezione. \textbf{W-07:} conferma visiva persistente dell'invio. \\
+\addlinespace
+Appuntamenti e disdetta (WF-11--WF-14) & S & S & S & S & Nessun problema: comandi separati, modale che esclude le sanzioni, 10 minuti di ripensamento. \\
+\end{longtable}
+\end{center}
 
-\fieldheading{Esito del passo}
+Delle 32 risposte, 25 sono positive e 7 parziali, nessuna negativa. Le parziali riguardano sempre il microcopy o il feedback, non la struttura del flusso, e hanno prodotto le sette raccomandazioni W-01--W-07. Il passo di disdetta è l'unico privo di criticità e risolve il blocco osservato in Fase A su Carla e Giorgio.
 
-Successo previsto, con un\textquotesingle incertezza minore sul punto
-(3).
+\subsection{Action Analysis: CUPweb originale vs redesign}
 
-\fieldheading{Valutazione assegnata}
+La Tabella~\ref{tab:d-action-analysis} confronta il carico procedurale del compito di prenotazione con ricetta elettronica sul portale originale e sul redesign.
 
-Buono (non Eccellente, per l\textquotesingle incertezza sul punto 3).
-
-\fieldheading{Raccomandazioni progettuali}
-
-{[}W-01{]} Sostituire o affiancare l\textquotesingle icona
-\textquotesingle R\textquotesingle{} con un\textquotesingle icona più
-universalmente riconoscibile (es. una freccia circolare) e valutare, in
-una versione ad alta fedeltà, un micro-test linguistico con utenti reali
-sul termine più efficace (\textquotesingle ripeti\textquotesingle,
-\textquotesingle prenota di nuovo\textquotesingle, \textquotesingle come
-l\textquotesingle ultima volta\textquotesingle).
-
-\par
-\begin{minipage}{\linewidth}
-\textbf{Passo 3: Inserire il codice SMS e confermare (wireframe schermata 3)}
-
-{\def\LTcaptype{none} % do not increment counter
-\par\medskip
-\noindent\begin{tabular}{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2600}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1200}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.6200}}@{}}
+\Needspace{9\baselineskip}
+\begin{center}
+\captionof{table}{Action Analysis del compito di prenotazione con ricetta e pagamento}\label{tab:d-action-analysis}
+\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\centering\arraybackslash}p{0.17\linewidth} >{\centering\arraybackslash}p{0.19\linewidth} >{\centering\arraybackslash}p{0.17\linewidth}@{}}
 \toprule
-\textbf{Domanda} & \textbf{Risposta} & \textbf{Motivazione} \\
-(1) Effetto giusto? & Sì & Il testo spiega esplicitamente perché è
-richiesto il codice, riducendo l\textquotesingle ambiguità
-sull\textquotesingle obiettivo del passo. \\
-(2) Azione disponibile notata? & Sì & Un solo campo di inserimento,
-isolato visivamente, e un solo pulsante di conferma sotto di esso. \\
-(3) Associazione corretta? & Parziale & Pina non ha mai usato
-l\textquotesingle autenticazione a due fattori: il concetto di
-\textquotesingle codice temporaneo via SMS\textquotesingle{} è nuovo per
-lei, anche se più semplice di SPID. Il rischio è che non capisca da dove
-prendere il codice (deve uscire dall\textquotesingle app e controllare
-gli SMS). \\
-(4) Percezione del progresso? & Sì & Dopo la conferma si passa alla
-schermata 4 (calendario), con contenuto chiaramente diverso. \\
+\textbf{Parametro} & \textbf{CUPweb originale} & \textbf{Redesign (v1)} & \textbf{Variazione} \\
+\midrule
+Cambi di dominio web & 3 & 1 ambiente unico & $-$66,7\% \\
+Autenticazioni bloccanti & Ogni sessione (SPID + OTP) & 1 PIN, valido 30 giorni & $-$100\% \\
+Caratteri da digitare & $\geq$ 31 & 4 (solo PIN) & $-$87,1\% \\
+Schermate per una visita ricorrente & 8 & 3 & $-$62,5\% \\
+Clic per una prenotazione standard & 14 & 6 & $-$57,1\% \\
+Condivisione del promemoria & Non supportata & 1 clic & Introdotta \\
+Annullamento di una disdetta & Impossibile & 1 clic entro 10 minuti & Introdotto \\
 \bottomrule
-\end{tabular}
-\par\medskip
-}
-\end{minipage}
-\par
+\end{tabularx}
+\end{center}
 
-\fieldheading{Valutazione assegnata}
-
-Scarso, per il punto (3): è il passo più a rischio
-dell\textquotesingle intero flusso per il profilo di Pina.
-
-\fieldheading{Raccomandazioni progettuali}
-
-{[}W-02{]} Aggiungere un\textquotesingle istruzione esplicita e
-illustrata (\textquotesingle Controlla i messaggi SMS del tuo telefono,
-poi torna qui\textquotesingle) e valutare, in una versione successiva,
-un meccanismo di autofill del codice quando tecnicamente disponibile sul
-dispositivo, per eliminare il passaggio manuale tra app di messaggistica
-e app di prenotazione.
-
-\par
-\begin{minipage}{\linewidth}
-\textbf{Passo 4: Scegliere data e ora (wireframe schermata 4)}
-
-{\def\LTcaptype{none} % do not increment counter
-\par\medskip
-\noindent\begin{tabular}{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2600}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1200}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.6200}}@{}}
-\toprule
-\textbf{Domanda} & \textbf{Risposta} & \textbf{Motivazione} \\
-(1) Effetto giusto? & Sì & Scegliere quando andare alla visita è un
-obiettivo intermedio ovvio per l\textquotesingle utente. \\
-(2) Azione disponibile notata? & Sì & Gli slot disponibili sono
-evidenziati a colore rispetto a quelli non disponibili; lo slot
-\textquotesingle consigliato\textquotesingle{} ha ulteriore enfasi. \\
-(3) Associazione corretta? & Sì & Toccare una data/ora per sceglierla è
-un\textquotesingle azione fisica coerente con
-l\textquotesingle esperienza pregressa di Pina (calendari cartacei,
-sportelli). \\
-(4) Percezione del progresso? & Sì & La selezione aggiorna visivamente
-lo slot scelto prima di passare al riepilogo. \\
-\bottomrule
-\end{tabular}
-\par\medskip
-}
-\end{minipage}
-\par
-
-\fieldheading{Valutazione assegnata}
-
-Eccellente.
-
-\par
-\begin{minipage}{\linewidth}
-\textbf{Passo 5: Confermare la prenotazione (wireframe schermata 5)}
-
-{\def\LTcaptype{none} % do not increment counter
-\par\medskip
-\noindent\begin{tabular}{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2600}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1200}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.6200}}@{}}
-\toprule
-\textbf{Domanda} & \textbf{Risposta} & \textbf{Motivazione} \\
-(1) Effetto giusto? & Sì & Il riepilogo motiva chiaramente perché si sta
-per confermare. \\
-(2) Azione disponibile notata? & Sì & Un solo pulsante primario ben
-distinto da \textquotesingle Torna indietro\textquotesingle. \\
-(3) Associazione corretta? & Sì & \textquotesingle Conferma
-prenotazione\textquotesingle{} è inequivocabile rispetto
-all\textquotesingle obiettivo. \\
-(4) Percezione del progresso? & Parziale & Il wireframe non mostra
-esplicitamente una schermata di
-\textquotesingle successo\textquotesingle{} dopo la conferma (fuori
-scope del set attuale di schermate): l\textquotesingle utente potrebbe
-restare incerto se l\textquotesingle azione sia realmente completata. \\
-\bottomrule
-\end{tabular}
-\par\medskip
-}
-\end{minipage}
-\par
-
-\fieldheading{Valutazione assegnata}
-
-Buono.
-
-\fieldheading{Raccomandazioni progettuali}
-
-{[}W-03{]} Aggiungere alla versione successiva una schermata di conferma
-esplicita post-azione (\textquotesingle Prenotazione confermata
-$\checkmark$\textquotesingle, con riepilogo e opzione per aggiungere al calendario
-del telefono), oggi non presente nel set di wireframe.
-
-\subsection{Esito del Cognitive Walkthrough}
-
-Il flusso è nel complesso ben allineato al profilo di Pina, con due
-punti di attenzione: il passo 3 (autenticazione leggera via SMS) resta
-il più rischioso, poiché introduce comunque un concetto nuovo per
-l\textquotesingle utente; e l\textquotesingle assenza di una schermata
-di conferma esplicita a fine flusso (punto 4 del passo 5) rischia di
-lasciare l\textquotesingle utente in una condizione di incertezza subito
-dopo l\textquotesingle azione più importante del compito.
-
-\fieldheading{Versione riprogettata (se risultante dall'ispezione)}
-
-\projecttodo{Produrre la versione \path{v1_dopo_ispezione} se il
-team decide di implementare le raccomandazioni {[}W-01{]}, {[}W-02{]},
-{[}W-03{]} prima di procedere con i test formativi/conclusivi. In tal caso,
-aggiornare anche la scheda di sintesi del progetto di Fase C (Documento 06).}
+Il redesign riduce del 87,1\% le digitazioni, perché la ricetta si seleziona dal Fascicolo Sanitario invece di trascrivere le 15 cifre dell'NRE, e del 57,1\% i clic, azzerando i salti tra domini diversi che in Fase A avevano compromesso la fiducia (\reqref{ID-02}).
 
 % --- Card 02b ----------------------------------------------------
-\cardsection{Documento 02b: Scheda di ispezione: Heuristic Analysis}\label{doc:d:02b}
+\cardsection{Documento 02b: Scheda di ispezione: Heuristic Analysis e Changelog da v0 a v1}\label{doc:d:02b}
 
-\subsection{Impostazione dell'ispezione}
+\subsection{Impostazione dell'ispezione euristica}
 
-\fieldheading{Versione valutata}
+\fieldheading{Versione valutata, metodo e procedura}
 
-Versione 0: v0\_wireframe\_iniziale (Fase C, Documenti 03-05)
+L'ispezione ha riguardato la versione v0 al completo (19 schermate e 6 blueprint) e ha usato due riferimenti: le 10 euristiche di Nielsen e le nove categorie della griglia di 88 linee guida già applicata a CUPweb e MioDottore in Fase A (\docref{a}{05a}), così da rendere confrontabili i risultati prima e dopo. Boscherini, Campedelli e Fuligni hanno valutato individualmente il 19 ottobre 2026 (90 minuti ciascuno) e hanno riconciliato i finding in una plenaria il 20 ottobre.
 
-\fieldheading{Contesto dell'ispezione}
+La severità segue la scala di Nielsen: 0 non è un problema, 1 cosmetico, 2 minore, 3 maggiore (da correggere prima dei test con utenti), 4 catastrofico (blocca il compito o induce errori irreversibili).
 
-\begin{itemize}
-\item
-  Data e ora: \todoinline{Inserire data e ora.}
-\item
-  Membri del team coinvolti: valutazione condotta indipendentemente da
-  ciascun membro del team e poi discussa in gruppo, secondo prassi
-  standard dell\textquotesingle analisi euristica
-\end{itemize}
+\subsection{Valutazione sulle 10 euristiche di Nielsen}
 
-\fieldheading{Metodo di ispezione}
-
-\begin{itemize}
-\item
-  Heuristic Analysis, 10 euristiche di Nielsen, applicate
-  all\textquotesingle intero insieme di wireframe (schermate 1-7) e al
-  blueprint
-\end{itemize}
-
-\subsection{Risultati dell'analisi}
-
-{\def\LTcaptype{none} % do not increment counter
+\Needspace{9\baselineskip}
+\begin{center}
+\footnotesize
 \begin{longtable}{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2600}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1200}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.6200}}@{}}
+  >{\raggedright\arraybackslash}p{\pw{4}{29}}
+  >{\centering\arraybackslash}p{\pw{4}{12}}
+  >{\raggedright\arraybackslash}p{\pw{4}{59}}@{}}
+\caption{Valutazione euristica della suite desktop (v0)}\label{tab:d-heuristics-overview}\\
 \toprule
-\textbf{Euristica} & \textbf{Grado} & \textbf{Giustificazione} \\
+\textbf{Euristica} & \textbf{Giudizio v0} & \textbf{Motivazione} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Euristica} & \textbf{Giudizio v0} & \textbf{Motivazione} \\
 \midrule
 \endhead
 \bottomrule
-\endfoot
-
-1. Visibilità dello stato del sistema & Buono & Il
-\textquotesingle Prossimo appuntamento\textquotesingle{} nella pagina iniziale e il
-calendario con slot evidenziati mostrano sempre lo stato corrente; manca
-però una conferma esplicita di successo a fine flusso (vedi
-{[}W-03{]}). \\
-2. Corrispondenza sistema-mondo reale & Eccellente & Linguaggio naturale
-(\textquotesingle Prenota una visita\textquotesingle, \textquotesingle I
-miei appuntamenti\textquotesingle) al posto di nomi di sistema; metafora
-del calendario cartaceo per la selezione data/ora. \\
-3. Controllo e libertà dell\textquotesingle utente & Buono &
-\textquotesingle Torna indietro\textquotesingle{} presente nel
-riepilogo; manca però un tasto di annullamento esplicito durante il
-passo di autenticazione leggera (schermata 3). \\
-4. Coerenza e standard & Eccellente & Barra di navigazione identica su
-tutte le schermate; stile dei pulsanti (colore verde = azione primaria)
-coerente in tutto il set. \\
-5. Prevenzione degli errori & Scarso & Nella schermata 4 (data/ora) non
-è ancora chiaro cosa succeda se l\textquotesingle utente prova a toccare
-uno slot non disponibile (grigio): il wireframe non specifica un
-feedback di errore/impedimento. \\
-6. Riconoscimento piuttosto che ricordo & Eccellente & La prestazione
-ricorrente è mostrata direttamente nella pagina iniziale; l\textquotesingle utente non
-deve ricordare nulla per avviare il compito più frequente. \\
-7. Flessibilità ed efficienza d\textquotesingle uso & Buono & La
-scorciatoia \textquotesingle ripeti\textquotesingle{} per Pina è
-efficiente; per un utente esperto come Elena (persona caregiver) manca
-però una vista compatta/tabellare pensata per la velocità, oggi la
-dashboard \textquotesingle Chi assisto\textquotesingle{} è pensata
-principalmente in stile mobile semplice. \\
-8. Design estetico e minimalista & Eccellente & Ogni schermata contiene
-solo gli elementi strettamente necessari al passo corrente, coerente con
-il requisito \reqref{P-02} di Fase B (bassa competenza tecnica di Pina). \\
-9. Aiutare a riconoscere e recuperare dagli errori & Scarso & Il set di
-wireframe attuale non include una schermata di errore (es. codice SMS
-errato, slot non più disponibile al momento della conferma):
-comportamento non specificato. \\
-10. Guida e documentazione & Buono & La voce \textquotesingle Serve
-aiuto?\textquotesingle{} in barra di navigazione è sempre presente; il
-suo contenuto interno non è stato ancora progettato in questa iterazione
-(fuori dall'ambito dei 7 wireframe realizzati). \\
+\endlastfoot
+1. Visibilità dello stato del sistema & Buono & Stepper a 4 passi, breadcrumb e indicatore del profilo attivo. Mancava la conferma dopo l'invio del promemoria (W-07). \\
+2. Corrispondenza con il mondo reale & Eccellente & Compiti in linguaggio naturale e bollettino pagoPA riprodotto fedelmente. Frizioni solo su ``Ripeti prestazione (R)'' e sulle sigle di esenzione (W-02, W-04). \\
+3. Controllo e libertà dell'utente & Buono & Ritorno ai passi precedenti senza perdere le scelte e ripensamento di 10 minuti. Mancavano l'uscita dal Co-pilota e l'annullamento nel pannello di aiuto (H-02). \\
+4. Coerenza e standard & Eccellente & Codifica cromatica costante: verde per le azioni primarie, blu per i pagamenti, arancione per il caregiver, rosso solo per la disdetta. \\
+5. Prevenzione degli errori & Buono & Bersagli ampi e comandi ``Sposta'' e ``Disdici'' distanziati. Mancavano la validazione del Codice Avviso (H-03) e un indicatore forte del profilo assistito (H-05). \\
+6. Riconoscimento anziché ricordo & Eccellente & Ricette pre-caricate, strutture ordinate per distanza e guida ``Dove trovo i dati?'' eliminano la trascrizione di codici. \\
+7. Flessibilità ed efficienza d'uso & Buono & Prenotazione rapida e innesto dall'archivio ricette. Mancava il riepilogo delle scadenze sulle schede dei familiari (H-06). \\
+8. Design estetico e minimalista & Eccellente & Un solo compito decisionale per schermata, alto contrasto e selettore del testo A/A+ sempre presente. \\
+9. Recupero dagli errori & Buono & WF-08 offre due orari alternativi a un clic. Mancavano i messaggi per PIN o Codice Avviso errati (H-01) e il timer rosso era ansiogeno (H-04). \\
+10. Aiuto e documentazione & Eccellente & Il pannello ``Serve aiuto?'' offre codice di salvataggio, chat scritta e Numero Verde senza lasciare la pratica. \\
 \end{longtable}
-}
+\end{center}
 
-\subsection{Raccomandazioni progettuali}
+\subsection{Finding dell'Heuristic Analysis}
 
-\begin{itemize}
-\item
-  {[}H-01{]} (euristica 5, 9) Aggiungere alla prossima iterazione due
-  schermate di errore esplicite: codice SMS errato/scaduto, e slot non
-  più disponibile al momento della conferma, entrambe con messaggio
-  in linguaggio semplice e azione di recupero chiara
-\item
-  {[}H-02{]} (euristica 3) Aggiungere un\textquotesingle azione di
-  annullamento esplicita anche nel passo di autenticazione (schermata
-  3), non solo nel riepilogo finale
-\item
-  {[}H-03{]} (euristica 7) Valutare, in una versione successiva o in una
-  variante \textquotesingle desktop\textquotesingle{} per il caregiver,
-  una vista più densa e tabellare della dashboard \textquotesingle Chi
-  assisto\textquotesingle, più adatta a un utente esperto come Elena che
-  gestisce più familiari o più appuntamenti contemporaneamente
-\end{itemize}
+La Tabella~\ref{tab:d-heuristic-findings} censisce gli otto problemi individuati sulla versione v0.
 
-\fieldheading{Versione riprogettata (se risultante dall'ispezione)}
+\Needspace{9\baselineskip}
+\begin{center}
+\footnotesize
+\begin{longtable}{@{}
+  >{\raggedright\arraybackslash}p{\pw{8}{7}}
+  >{\raggedright\arraybackslash}p{\pw{8}{14}}
+  >{\raggedright\arraybackslash}p{\pw{8}{18}}
+  >{\centering\arraybackslash}p{\pw{8}{9}}
+  >{\raggedright\arraybackslash}p{\pw{8}{52}}@{}}
+\caption{Finding dell'Heuristic Analysis sulla versione v0}\label{tab:d-heuristic-findings}\\
+\toprule
+\textbf{ID} & \textbf{Schermata} & \textbf{Euristica violata} & \textbf{Gravità} & \textbf{Descrizione e impatto} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{ID} & \textbf{Schermata} & \textbf{Euristica violata} & \textbf{Gravità} & \textbf{Descrizione e impatto} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+\hypertarget{req:H-01}{}\textbf{H-01} & WF-01, WF-18 & 9. Recupero dagli errori & 3 & Non è definito il messaggio per un PIN errato o scaduto o per un Codice Avviso inesistente. Rischio di blocco emotivo per il Segmento A, analogo a quello di Carla su SPID in Fase A. \\
+\addlinespace
+\hypertarget{req:H-02}{}\textbf{H-02} & WF-07, WF-19 & 3. Controllo e libertà & 2 & Il comando per interrompere la condivisione dello schermo non è abbastanza visibile e il tasto di chiusura del pannello di aiuto è piccolo. \\
+\addlinespace
+\hypertarget{req:H-03}{}\textbf{H-03} & WF-17, WF-18 & 5. Prevenzione errori & 3 & Il Codice Avviso di 18 cifre è una stringa continua, senza raggruppamento a blocchi né validazione immediata. Alta probabilità di errori di trascrizione. \\
+\addlinespace
+\hypertarget{req:H-04}{}\textbf{H-04} & WF-09 & 1. Stato del sistema & 3 & Il timer di 15 minuti per la riserva dell'orario ha colore d'allarme (rosso) e genera ansia da prestazione. \\
+\addlinespace
+\hypertarget{req:H-05}{}\textbf{H-05} & WF-15 e schermate in delega & 5. Prevenzione errori & 3 & L'assistito attivo compare solo in testata e può uscire dal campo visivo scorrendo, con rischio di confusione tra profilo personale e profilo del familiare. \\
+\addlinespace
+\hypertarget{req:H-06}{}\textbf{H-06} & WF-15 & 7. Flessibilità ed efficienza & 2 & Le card dei familiari non mostrano ricette in scadenza e visite già fissate, rallentando la verifica rapida del caregiver. \\
+\addlinespace
+\hypertarget{req:H-07}{}\textbf{H-07} & WF-04, WF-09 & 2. Mondo reale & 2 & Termini come ``Libera Professione (ALPI)'' richiedono una glossa in linguaggio quotidiano nella card stessa. \\
+\addlinespace
+\hypertarget{req:H-08}{}\textbf{H-08} & WF-12 & 6. Riconoscimento & 1 & La lista ``Cosa mettere nella borsa'' non ha caselle di spunta interattive e stampabili. \\
+\end{longtable}
+\end{center}
 
-\projecttodo{Come per il Cognitive Walkthrough, produrre la versione
-\path{v1_dopo_ispezione} se le raccomandazioni
-{[}H-01{]}/{[}H-02{]}/{[}H-03{]} vengono implementate prima delle fasi
-di test con utenti reali.}
+\subsection{Riesame delle linee guida di Fase A su v1}
+
+Applicata a v1 la stessa griglia di Fase A (\docref{a}{05a}), risultano superate tutte le 12 non conformità e le 7 conformità parziali rilevate su CUPweb: l'esplorazione non è più bloccata da SPID, la navigazione segue i compiti dell'utente, prenotazione, ricette e pagamento stanno in un unico ambiente, i termini tecnici sono spiegati, la gerarchia visiva usa icone, colore e testo ridimensionabile, e il sistema offre ripresa della sessione, conferma delle azioni irreversibili e assistenza scritta.
+
+\subsection{Changelog da v0 a v1}
+
+Prima dello User Testing il team ha recepito tutte le raccomandazioni (W-01--W-07 e H-01--H-08) e ha congelato la versione v1, coincidente con le 19 schermate presentate in Fase C (\docref{c}{04}). La Tabella~\ref{tab:d-changelog-v0-v1} lega ogni raccomandazione alla modifica introdotta.
+
+\Needspace{9\baselineskip}
+\begin{center}
+\footnotesize
+\begin{longtable}{@{}
+  >{\raggedright\arraybackslash}p{\pw{4}{15}}
+  >{\raggedright\arraybackslash}p{\pw{4}{13}}
+  >{\raggedright\arraybackslash}p{\pw{4}{72}}@{}}
+\caption{Changelog: dall'ispezione su v0 ai wireframe v1}\label{tab:d-changelog-v0-v1}\\
+\toprule
+\textbf{Origine} & \textbf{Schermate} & \textbf{Modifica in v1} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Origine} & \textbf{Schermate} & \textbf{Modifica in v1} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+W-01, \reqref{H-01} & WF-01 & Nota sulla validità di 30 giorni, comando ``Cancella cifre'' e messaggio non colpevolizzante per PIN dimenticato o scaduto, con rimando a SPID/CIE o al caregiver. \\
+\addlinespace
+W-02 & WF-02 & Scorciatoia rinominata ``Prenotazione rapida'', con il nome della visita ricorrente sincronizzata dal Fascicolo. \\
+\addlinespace
+W-03 & WF-03, WF-16 & Ricette del selettore arricchite con medico, data e ultime 4 cifre dell'NRE. \\
+\addlinespace
+W-04, \reqref{H-07} & WF-04 & Confronto a due colonne con importo calcolato in chiaro (``0,00~€, esenzione applicata'') contro la tariffa privata, e glosse in linguaggio semplice. \\
+\addlinespace
+W-05 & WF-05, WF-06 & Badge di distanza, parcheggio e linea autobus, indicazione ``compatibile con gli orari dell'autobus'' sulla fascia mattutina e giorni pieni inibiti con spiegazione. \\
+\addlinespace
+W-06, \reqref{H-04} & WF-09 & Countdown rosso sostituito da un banner rassicurante (``Orario riservato per te per 15 minuti''). \\
+\addlinespace
+W-07 & WF-10 & Quattro pulsanti di condivisione (stampa, SMS, WhatsApp al caregiver, calendario) con conferma visiva dell'invio, senza dati clinici eccedenti. \\
+\addlinespace
+\reqref{H-02} & WF-07, WF-19 & Pulsante ``Termina condivisione con Elena'' nel banner arancione e tasto di chiusura più ampio nel pannello di aiuto. \\
+\addlinespace
+\reqref{H-03} & WF-17, WF-18 & Fac-simile annotato del bollettino con richiami numerici, Codice Avviso a blocchi con validazione immediata e scheda per scaricare la ricevuta. \\
+\addlinespace
+\reqref{H-05}, \reqref{H-06} & WF-15 e testata & Banner arancione persistente in delega (``Stai operando per: Giuseppina Ferretti'') con tasto ``Termina delega'' e contatori di visite e ricette sulle card dei familiari. \\
+\addlinespace
+\reqref{H-08} & WF-12, WF-13, WF-14 & Checklist spuntabile ``Cosa mettere nella borsa'', comandi ``Sposta'' e ``Disdici'' separati, modale sull'assenza di sanzioni e banner di recupero entro 10 minuti. \\
+\end{longtable}
+\end{center}
 
 % --- Card 03 ----------------------------------------------------
-\cardsection{Documento 03: Scheda dei test formativi}\label{doc:d:03}
-
-\emph{Una scheda per ogni versione testata. Questa scheda riguarda la
-Versione 0 (o la v1\_dopo\_ispezione, se prodotta). Il protocollo
-sottostante è pronto per l\textquotesingle esecuzione; le sezioni che
-richiedono soggetti reali sono segnalate esplicitamente.}
+\cardsection{Documento 03: Scheda di User Testing del Redesign}\label{doc:d:03}
 
 \subsection{Protocollo di valutazione}
 
-\fieldheading{Nome della versione}
+\fieldheading{Versione testata e pilot}
 
-\todoinline{Indicare Versione 0 oppure \path{v1_dopo_ispezione}, secondo
-quanto deciso dal team dopo la scheda d'ispezione.}
+La versione testata è la v1 (WF-01--WF-19, \docref{c}{04}), proposta come prototipo cliccabile e congelata il 20 ottobre 2026: non è stata modificata durante la campagna. Il 21 ottobre un pilot interno di 22 minuti ha verificato transizioni e consegne e ha suggerito di far controllare ai partecipanti, dentro T1, anche il pagamento assistito (WF-17, WF-18), così da validare la risoluzione di \reqref{ID-13} senza alterare la struttura dei tre compiti di Fase A.
 
-\fieldheading{Configurazione della sessione di test}
+\fieldheading{Configurazione delle sessioni}
 
-Test in presenza, sugli stessi dispositivi/soggetti già coinvolti nello
-test utente preliminare di Fase A quando possibile (per continuità e
-confrontabilità), altrimenti su nuovi soggetti reclutati con gli stessi
-criteri. Il wireframe puo essere mostrato tramite prototipo cliccabile
-(consigliato, es. esportando le slide come immagini navigabili) o, in
-alternativa, tramite simulazione \textquotesingle Mago di
-Oz\textquotesingle{} guidata da un membro del team che mostra la
-schermata successiva a ogni tocco del soggetto.
+In Fase A Giorgio aveva usato un tablet mentre gli altri partecipanti usavano il PC (\docref{a}{06a}). In Fase D tutte le sessioni si sono svolte su computer con schermo ampio e mouse, in presenza (Carla, Sergio, Laura) o in videochiamata con schermo condiviso (Silvia, Giorgio), con dati fittizi e senza mai toccare dati sanitari o bancari reali.
 
-\fieldheading{Metodo di test}
+\fieldheading{Compiti e metriche}
 
+I compiti ripropongono quelli di Fase A (\docref{a}{06a}), dal tentativo esplorativo al completamento end-to-end:
 \begin{itemize}
-\item
-  Test di usabilità essenziale (3-5 persone)
+\item \textbf{T1, accesso e prenotazione guidata (Thinking Aloud):} dalla schermata iniziale, entrare, scegliere la prestazione, confrontare i costi tra servizio pubblico e Libera Professione, scegliere sede e orario al mattino, controllare il riepilogo con il pagamento pagoPA e confermare (WF-01--WF-10, WF-17);
+\item \textbf{T2, gestione e disdetta di un appuntamento (Bottom Line Data):} trovare la visita fissata, aprirne i dettagli e disdirla (WF-11--WF-14), senza commentare ad alta voce;
+\item \textbf{T3, supporto, continuità e condivisione (Thinking Aloud):} chiedere aiuto o salvare il punto raggiunto (WF-19), attivare il Co-pilota (WF-07) o passare al profilo del familiare in delega (WF-15), inviare o stampare il promemoria (WF-10).
 \end{itemize}
+Le metriche sono il successo (sì = 100\%, parziale = 50\%, no = 0\%), il tempo per task e per sessione in mm:ss, il numero e il tipo di errori (slip motori o mistake cognitivi), la learnability e la soddisfazione, misurata con i 10 item standard della SUS su scala da 1 a 5 (Tabella~\ref{tab:d-sus-items}).
 
-\fieldheading{Compiti del test}
-
-\begin{itemize}
-\item
-  T1: Dalla pagina iniziale, prenotare la visita diabetologica di controllo
-  ricorrente (schermate 1→5)
-\item
-  T2: Individuare come disdire un appuntamento già fissato (schermata
-  6)
-\item
-  T3: (solo per soggetti nel ruolo caregiver) Individuare lo stato
-  dell\textquotesingle ultimo appuntamento del familiare assistito
-  (schermata 7)
-\end{itemize}
-
-\fieldheading{Modalità di conduzione del test}
-
-\begin{itemize}
-\item
-  Thinking Aloud per T1 e T3
-\item
-  Bottom Line Data per T2
-\end{itemize}
-
-\fieldheading{Metriche del test}
-
-\begin{itemize}
-\item
-  Success, Efficiency, Efficacy, Errors, Learnability, Satisfaction
-  (SUS)
-\end{itemize}
-
-\subsection{Reclutamento e raccolta dei dati}
-
-\fieldheading{Reclutamento dei soggetti (persone reali)}
-
-\projecttodo{Completare con soggetti reali, con le
-stesse caratteristiche indicate per il test utente preliminare di Fase
-A (segmento A: 65-85 anni, bassa/media competenza digitale; segmento B:
-caregiver familiare 45-60 anni). Nome fittizio, età, genere, competenza
-tecnica, somiglianza al segmento, relazione col team.}
-
-\fieldheading{Modalità di reclutamento dei soggetti}
-
-\projecttodo{Dichiarare in modo trasparente come sono stati trovati i
-soggetti.}
-
-\fieldheading{Motivazione della scelta dei soggetti}
-
-\projecttodo{Motivare in modo trasparente la scelta dei soggetti.}
-
-\projecttodo{Aggiungere le sezioni \textquotesingle Test \#1:
-Soggetto\ldots\textquotesingle{} (una per soggetto reale, con dati
-qualitativi/quantitativi, punteggio SUS dal modulo Google del corso,
-riflessioni utili per il design) e la sezione conclusiva
-\textquotesingle media e varianza SUS / esiti e riflessioni
-(\textasciitilde300 parole) / curva di urgenza / nome della versione
-ridisegnata\textquotesingle{} non appena i test saranno stati condotti.}
-
-% --- Card 04 ----------------------------------------------------
-\cardsection{Documento 04: Scheda dei test sommativi}\label{doc:d:04}
-
-\emph{Una sola scheda, sulla versione finale del progetto ("o la va o la
-spacca"). Da eseguire solo dopo aver chiuso il ciclo di test formativi e
-le relative modifiche.}
-
-\subsection{Protocollo di valutazione}
-
-\fieldheading{Nome della versione finale}
-
-\projecttodo{Inserire il nome della versione finale
-(cartella principale di Fase C, eventualmente aggiornata in base agli esiti dei
-test formativi).}
-
-\fieldheading{Configurazione della sessione di test}
-
-Stesso impianto metodologico del test formativo, preferibilmente con
-soggetti nuovi rispetto a quelli già esposti al progetto nei cicli
-precedenti, per evitare effetti di apprendimento che falsino il
-risultato conclusivo.
-
-\fieldheading{Metodo di test}
-
-\begin{itemize}
-\item
-  Test di usabilità essenziale (2-5 persone) oppure test di usabilità completo
-  (20-50 persone), a seconda del tempo disponibile al team; indicare la
-  scelta effettiva
-\end{itemize}
-
-\fieldheading{Compiti del test}
-
-\begin{itemize}
-\item
-  Stesso insieme di compiti del test formativo (T1, T2, T3), per garantire la
-  confrontabilità dei risultati prima/dopo
-\end{itemize}
-
-\fieldheading{Modalità di conduzione del test}
-
-\begin{itemize}
-\item
-  Thinking Aloud per T1/T3, Bottom Line Data per T2, coerentemente con
-  il test formativo
-\end{itemize}
-
-\fieldheading{Metriche del test}
-
-\begin{itemize}
-\item
-  Success, Efficiency, Efficacy, Errors, Learnability, Satisfaction
-  (SUS), obbligatoria la Satisfaction come richiesto dalla card
-\end{itemize}
-
-\subsection{Reclutamento e raccolta dei dati}
-
-\fieldheading{Reclutamento dei soggetti (persone reali)}
-
-\projecttodo{Completare con soggetti reali al termine
-del ciclo di test formativi, seguendo gli stessi criteri di
-rappresentatività dei segmenti A e B.}
-
-\fieldheading{Motivazione della scelta dei soggetti}
-
-\projecttodo{Motivare in modo trasparente la scelta dei soggetti.}
-
-\projecttodo{Aggiungere le sezioni \textquotesingle Test \#1:
-Soggetto\ldots\textquotesingle{} e la sezione conclusiva finale (media e
-varianza SUS, altre metriche quantitative, conclusioni) al termine
-dell\textquotesingle esecuzione dei test. Condurre
-questa valutazione per ultima, a valle di tutte le altre fasi.}
-
-\subsection{Protocollo rapido di test}
-
-Sessione unica: 15/20 minuti a persona
-
-\emph{Copre insieme: test utente preliminare (Fase A) + test formativo
-(Fase D)}
-
-\fieldheading{Team Affordance: HPHP}
-
-Stampate questo documento e portatelo con voi durante il test.
-
-Prima di iniziare
-
-\fieldheading{Cosa vi serve}
-
-\begin{itemize}
-\item
-  Questo documento stampato (o su un secondo dispositivo)
-\item
-  Un dispositivo (PC o smartphone della persona stessa) con il
-  sito cupweb.it aperto nel browser
-\item
-  Le sette schermate del wireframe v1 pronte da mostrare in sequenza,
-  su schermo oppure stampate
-\item
-  Un modo per prendere appunti (questo documento stesso, o un foglio a
-  parte)
-\item
-  Il link al modulo Google SUS fornito dal corso, aperto e pronto
-\end{itemize}
-
-\fieldheading{Chi coinvolgere}
-
-Bastano 2-3 persone. L\textquotesingle ideale è chi assomiglia il più
-possibile ai due segmenti di Fase A: una persona 65-85 anni con
-bassa/media familiarità col digitale (segmento A), e/o una persona 45-60
-anni che gestisce le pratiche di un familiare anziano (segmento B). Va
-benissimo se sono conoscenti o parenti: basta dichiararlo onestamente
-nella card, come richiesto dal corso stesso.
-
-\fieldheading{Ruoli nel team (se siete in due)}
-
-\begin{itemize}
-\item
-  Conduttore: legge le istruzioni, osserva, non aiuta se non richiesto
-  esplicitamente
-\item
-  Verbalizzatore: prende appunti su questo documento durante il test
-\end{itemize}
-
-\textbf{DA LEGGERE AD ALTA VOCE:} \emph{"Grazie per il tuo aiuto. Ti
-mostrerò due cose legate al servizio web per prenotare visite
-mediche, e ti chiederò di provare a fare alcune azioni pensando ad alta
-voce, cioè dicendomi cosa stai guardando e cosa stai per fare. Non
-c\textquotesingle è nulla di giusto o sbagliato: sto testando
-il sistema, non te. Se ti blocchi va benissimo, è
-un\textquotesingle informazione utile. Possiamo interrompere quando
-vuoi."}
-
-Parte 1: Il sito reale (5 minuti)
-
-\fieldheading{Tempo stimato: circa 5 minuti}
-
-\emph{Copre: scheda del test utente preliminare, Fase A (Documento 06a).}
-
-\textbf{DA LEGGERE AD ALTA VOCE:} \emph{"Apri il sito cupweb.it dal browser
-come se dovessi prenotare una visita di
-controllo per te stesso/a. Dimmi ad alta voce cosa stai guardando e cosa
-faresti."}
-
-\fieldheading{Task A: Trovare come prenotare (senza completare la
-prenotazione)}
-
-Lascia che la persona esplori per un massimo di 2 minuti. Non
-intervenire, annota dove clicca, dove esita, cosa dice.
-
-\fieldheading{Task B: Trovare come si disdirebbe un appuntamento}
-
-Chiedi: "Se avessi già una visita prenotata e non potessi più andarci,
-dove andresti a guardare per disdirla?" Lascia indicare senza completare
-l\textquotesingle azione.
-
-\fieldheading{Annotazioni: Task A e B}
-
-{\def\LTcaptype{none} % do not increment counter
-\par\medskip
-\noindent\begin{tabular}{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3500}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6500}}@{}}
+\Needspace{9\baselineskip}
+\begin{center}
+\captionof{table}{Item della SUS e calcolo del punteggio}\label{tab:d-sus-items}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}c >{\raggedright\arraybackslash}X@{}}
 \toprule
-\textbf{Osservazione} & \textbf{Note} \\
-Riesce a capire dove cliccare per prenotare? & \\
-Momenti di esitazione o confusione (dove, cosa ha detto) & \\
-Riesce a individuare la disdetta? & \\
-Commenti spontanei rilevanti (citazioni dirette) & \\
-\bottomrule
-\end{tabular}
-\par\medskip
-}
-
-Parte 2: Il nuovo progetto, wireframe v1 (7 minuti)
-
-\fieldheading{Tempo stimato: circa 7 minuti}
-
-\emph{Copre: scheda del test formativo, Fase D (\docref{d}{03}). Mostrate le
-schermate del wireframe v1 una alla volta, come se fosse
-l\textquotesingle app vera.}
-
-\textbf{DA LEGGERE AD ALTA VOCE:} \emph{"Ora ti mostro una proposta di
-come potrebbe diventare questa app. Immagina che sia già installata sul
-tuo telefono. Ti chiedo di nuovo di pensare ad alta voce."}
-
-\fieldheading{Task C: Prenotare la visita ricorrente (schermate 1→5b)}
-
-Mostra la schermata 1 (pagina iniziale). Chiedi: "Come prenoteresti la tua prossima
-visita di controllo?" Segui il suo percorso mostrando le schermate
-corrispondenti a ogni tocco/scelta indicata.
-
-\fieldheading{Task D: Disdire un appuntamento (schermata 6)}
-
-Mostra la schermata 6. Chiedi: "E se dovessi disdire, cosa faresti qui?",
-questo compito va lasciato ai dati sul risultato finale: osserva senza
-commentare durante l\textquotesingle esecuzione.
-
-\fieldheading{Annotazioni: Task C e D}
-
-{\def\LTcaptype{none} % do not increment counter
-\par\medskip
-\noindent\begin{tabular}{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3500}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6500}}@{}}
-\toprule
-\textbf{Osservazione} & \textbf{Note} \\
-Trova subito il pulsante \textquotesingle Prenota una
-visita\textquotesingle? & \\
-Capisce il passo di autenticazione via SMS (schermata 3)? & \\
-Reazione alla schermata di conferma finale (5b) & \\
-Riesce a trovare \textquotesingle Disdici\textquotesingle{} senza aiuto?
-& \\
-Confronto spontaneo con la Parte 1 (dice se gli sembra più
-semplice/difficile) & \\
-\bottomrule
-\end{tabular}
-\par\medskip
-}
-
-Parte 3: Questionario e chiusura (3-5 minuti)
-
-\fieldheading{Tempo stimato: circa 3--5 minuti}
-
-\textbf{DA LEGGERE AD ALTA VOCE:} \emph{"Ultima cosa: ti faccio 10
-semplici domande a cui rispondere con un punteggio da 1 a 5, riferendoti
-alla nuova versione che ti ho appena mostrato. Non c\textquotesingle è
-una risposta giusta."}
-
-\textbf{Somministrare il modulo Google SUS del corso (schermate v1). Non
-modificare l\textquotesingle ordine né le parole delle prime 10
-domande.}
-
-\emph{Promemoria delle 10 domande standard SUS (in italiano), da usare
-solo come riferimento, la somministrazione ufficiale avviene tramite
-il modulo Google del corso:}
-
-{\def\LTcaptype{none} % do not increment counter
-\begin{longtable}{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3500}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6500}}@{}}
-\toprule
-\textbf{\#} & \textbf{Domanda} \\
+\textbf{\#} & \textbf{Affermazione} \\
 \midrule
-\endhead
-\bottomrule
-\endfoot
-
 1 & Penso che mi piacerebbe usare questo sistema frequentemente \\
 2 & Ho trovato il sistema inutilmente complesso \\
 3 & Ho trovato il sistema facile da usare \\
-4 & Penso che avrei bisogno del supporto di una persona tecnica per
-usare questo sistema \\
-5 & Ho trovato che le varie funzioni di questo sistema fossero ben
-integrate \\
+4 & Penso che avrei bisogno del supporto di una persona tecnica per usare questo sistema \\
+5 & Ho trovato che le varie funzioni di questo sistema fossero ben integrate \\
 6 & Ho trovato troppa incoerenza in questo sistema \\
-7 & Immagino che la maggior parte delle persone imparerebbe a usare
-questo sistema molto rapidamente \\
+7 & Immagino che la maggior parte delle persone imparerebbe a usare questo sistema molto rapidamente \\
 8 & Ho trovato il sistema molto scomodo da usare \\
-9 & Mi sono sentito/a molto sicuro/a nell\textquotesingle usare questo
-sistema \\
-10 & Ho avuto bisogno di imparare molte cose prima di riuscire ad usare
-questo sistema \\
-\end{longtable}
-}
+9 & Mi sono sentito/a molto sicuro/a nell'usare questo sistema \\
+10 & Ho avuto bisogno di imparare molte cose prima di riuscire ad usare questo sistema \\
+\bottomrule
+\end{tabularx}
+\par\smallskip
+{\footnotesize Contributo di ogni item: voto $-$ 1 per gli item dispari, 5 $-$ voto per i pari; il punteggio SUS è la somma dei contributi per 2,5.}
+\end{center}
 
-\fieldheading{Domande di chiusura (facoltative, in linguaggio libero)}
+\subsection{Reclutamento e mitigazione del recall bias}
+
+Il campione è misto, su cinque persone reali. Tre partecipanti sono richiamati dalla Fase A (Carla B., Silvia F., Giorgio M.), così da misurare il miglioramento sulla stessa persona e superare il minimo di due richiamati. Il recall bias è mitigato da un intervallo di 31 giorni tra i test di Fase A (22--24 settembre 2026) e quelli di Fase D (23--26 ottobre), senza contatti con le bozze del progetto, e dal fatto che architettura e interazione del redesign sono molto diverse da CUPweb. Altri due partecipanti, mai esposti al progetto, fungono da controllo: Sergio V. per l'utenza anziana diretta e Laura G. per i caregiver, scelta nella fascia 45--60 anni per correggere il limite emerso in Fase A con Fatima R. (35 anni, \docref{a}{04b}).
+
+\Needspace{9\baselineskip}
+\begin{center}
+\captionof{table}{Partecipanti alla valutazione di Fase D}\label{tab:d-participants}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.14\linewidth} c >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{0.21\linewidth} >{\raggedright\arraybackslash}p{0.2\linewidth}@{}}
+\toprule
+\textbf{Partecipante} & \textbf{Età} & \textbf{Segmento e ruolo} & \textbf{Reclutamento} & \textbf{Rispetto a Fase A} \\
+\midrule
+Carla B. & 79 & A1, utente diretta fragile & Rete familiare & Richiamata (SUS 22,5) \\
+\addlinespace[2pt]
+Silvia F. & 46 & B1, caregiver lavoratrice a distanza & Rete amicale & Richiamata (SUS 55,0) \\
+\addlinespace[2pt]
+Giorgio M. & 69 & A2, nuovo utente digitale autonomo & Rete amicale & Richiamato (SUS 40,0) \\
+\addlinespace[2pt]
+Sergio V. & 76 & A1, paziente cronico anziano & Vicinato & Nuovo \\
+\addlinespace[2pt]
+Laura G. & 52 & B2, caregiver convivente e operatrice CAF & Rete professionale & Nuova \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{Schede dati individuali (Test Data Card 1--5)}
+
+Ogni scheda riporta le osservazioni per task, le citazioni, gli esiti quantitativi e le 10 risposte SUS con il punteggio finale. Nelle tabelle SUS, Σ è la somma dei contributi.
+
+% --- TEST 1: CARLA B. --------------------------------------------
+\subsubsection{Test 1: Carla B. (Segmento A1, richiamata)}
 
 \begin{itemize}
-\item
-  C\textquotesingle è qualcosa che ti ha confuso più di altro?
-\item
-  Cosa cambieresti, se potessi cambiare una sola cosa?
-\item
-  Ti fideresti a usare questa versione da solo/a, senza chiedere aiuto a
-  nessuno?
+\item \textbf{Data e conduttori:} 24/10/2026, ore 10:30; conduttore A. Campedelli, osservatore F. M. Fuligni.
+\item \textbf{Contesto:} a casa della partecipante, su portatile da 17'' con mouse esterno. Durata 16 minuti senza pause (in Fase A erano 26, con una pausa per ansia).
+\item \textbf{Baseline di Fase A (\docref{a}{06a}):} T1 no (03:00, 2 errori, blocco su SPID), T2 parziale (06:10, 3 errori), T3 no (03:00, 1 errore); tempo totale 12:10, 6 errori, SUS 22,5.
 \end{itemize}
 
-\textbf{DA LEGGERE AD ALTA VOCE:} \emph{"Grazie mille per il tempo che
-mi hai dedicato, sei stato/a davvero utile."}
+\fieldheading{Osservazioni (Carla B.)}
 
-\projecttodo{Compilare una copia della scheda soggetto seguente dopo ogni
-sessione di test.}
+\begin{itemize}
+\item \textbf{T1:} inserisce senza esitazione il PIN di WF-01 ed entra nel cruscotto in 18 secondi, evitando il blocco SPID. Ingrandisce il testo con A+, legge in WF-04 ``Costo per te: 0,00~€'' e sorride, sceglie sede e orario con l'indicazione dell'autobus e conferma in autonomia. Davanti al bollettino annotato di WF-17 commenta: \enquote{Ecco, col disegno del foglio capisco dove guardare, senza disegno cercavo sulla ricetta!}
+\item \textbf{T2:} esita 8 secondi sulla lista ``Cosa mettere nella borsa'' di WF-12 prima di trovare il pulsante ``Disdici'' (1 clic di esplorazione), poi conferma. Davanti al banner di WF-14: \enquote{L'altra volta avevo paura che toccando mi togliessero la visita per sempre. Qui mi dice che non pago multe e che se sbaglio ho dieci minuti per riprenderla!}
+\item \textbf{T3:} indica subito il pulsante ``Chiedi a Elena'' (WF-07) e ``Serve aiuto?'' (WF-19), a differenza della Fase A, quando cercava aiuto nelle Impostazioni. Dice: \enquote{Se c'è il bottone arancione col nome di mia figlia là sopra, io provo a fare da sola perché so che se mi fermo la chiamo lì.}
+\end{itemize}
 
-\emph{Compilate una copia di questa pagina per ciascuna persona testata.
-I dati confluiranno nelle card ufficiali (Fase A, \docref{a}{06a}; Fase D, \docref{d}{03}).}
-
-{\def\LTcaptype{none} % do not increment counter
-\begin{longtable}{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3500}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.6500}}@{}}
+\Needspace{9\baselineskip}
+\begin{center}
+\captionof{table}{Esiti dei task: Carla B.}\label{tab:d-test-carla}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X c c c c c@{}}
 \toprule
-\textbf{Campo} & \textbf{Valore} \\
+\textbf{Task} & \textbf{Esito} & \textbf{Tempo} & \textbf{Errori} & \textbf{Fase A} & \textbf{Variazione tempo} \\
 \midrule
-\endhead
+T1 Prenotazione e costi & Sì & 02:15 & 0 & No (03:00) & $-$25,0\% \\
+T2 Disdetta protetta & Sì & 01:30 & 1 & Parz. (06:10) & $-$75,7\% \\
+T3 Supporto e caregiver & Sì & 01:10 & 0 & No (03:00) & $-$61,1\% \\
+\midrule
+\textbf{Totale} & \textbf{3/3} & \textbf{04:55} & \textbf{1} & \textbf{12:10 (6 err.)} & \textbf{$-$59,6\%} \\
 \bottomrule
-\endfoot
+\end{tabularx}
+\end{center}
 
-Nome (fittizio, per anonimizzare) & \\
-Età & \\
-Genere & \\
-Esperienza tecnica (1 riga) & \\
-Somiglianza al segmento (A: paziente / B: caregiver) & \\
-Relazione con il team & \\
-Data e ora del test & \\
-Assistente del test (membro del team) & \\
-Durata effettiva & \\
-Compito A completato? (sì/no/parziale) & \\
-Compito B completato? (sì/no/parziale) & \\
-Compito C completato? (sì/no/parziale) & \\
-Compito D completato? (sì/no/parziale) & \\
-Punteggio SUS totale (dal modulo Google) & \\
-Citazione/osservazione più utile per il design & \\
-\end{longtable}
-}
+\Needspace{9\baselineskip}
+\begin{center}
+\captionof{table}{Risposte SUS: Carla B.}\label{tab:d-sus-carla}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}l *{10}{c} c c@{}}
+\toprule
+\textbf{Item} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & $\Sigma$ & \textbf{SUS} \\
+\midrule
+Fase A & 1 & 2 & 1 & 2 & 2 & 5 & 1 & 5 & 2 & 4 & 9 & 22,5 \\
+Fase D & 4 & 2 & 4 & 3 & 4 & 1 & 4 & 1 & 4 & 2 & 31 & \textbf{77,5} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\fieldheading{Riflessioni (Carla B.)}
+Il SUS passa da 22,5 a 77,5 (+55,0 punti), oltre la soglia di 68. Il voto 3 sull'item 4 è coerente con il profilo del Segmento A1: Carla completa tutto da sola, ma dichiara che il pulsante ``Chiedi a Elena'' sempre disponibile le dà il coraggio di iniziare. L'esitazione in WF-12 è registrata come problema residuo RES-03.
+
+% --- TEST 2: SILVIA F. -------------------------------------------
+\subsubsection{Test 2: Silvia F. (Segmento B1, richiamata)}
+
+\begin{itemize}
+\item \textbf{Data e conduttori:} 24/10/2026, ore 18:30; conduttore M. Boscherini, osservatore F. M. Fuligni.
+\item \textbf{Contesto:} in videochiamata dopo l'orario d'ufficio, con schermo condiviso dal PC della partecipante.
+\item \textbf{Baseline di Fase A (\docref{a}{06a}):} T1 sì (01:35, 0 errori, ma disorientamento sul cambio di dominio), T2 sì (02:05, 1 errore, conferma muta), T3 parziale (02:50, 1 errore, nessun canale scritto); tempo totale 06:30, 2 errori, SUS 55,0.
+\end{itemize}
+
+\fieldheading{Osservazioni (Silvia F.)}
+
+\begin{itemize}
+\item \textbf{T1:} apre ``Deleghe'' (WF-15), nota il contatore ``1 ricetta da prenotare'' sulla card della madre e opera per suo conto, con il banner arancione che le conferma per chi sta agendo. Seleziona la ricetta, verifica l'esenzione, sceglie sede e orario in 20 secondi e apprezza che prenotazione e pagamento non aprano siti esterni. Dice: \enquote{Finalmente vedo scritto in arancione grande per chi sto prenotando in cima a ogni pagina, e non mi butta mai fuori su un altro sito.}
+\item \textbf{T2:} completa la disdetta in 50 secondi senza errori. Trova subito ``Disdici appuntamento'' e verifica che la modale riporti visita, data e nome della madre, con SMS di conferma a entrambe. Dice: \enquote{Nella vecchia versione usciva solo `operazione eseguita' e dovevo fare una foto allo schermo per mia madre. Qui c'è scritto tutto e le arriva l'SMS.}
+\item \textbf{T3:} individua la chat scritta e il codice ``Salva il tuo punto'', e sottolinea che in ufficio poter scrivere o congelare la sessione, senza telefonare, risolve il suo problema principale. Suggerisce una vista tabellare compatta per chi assiste più di due familiari (RES-04).
+\end{itemize}
+
+\Needspace{9\baselineskip}
+\begin{center}
+\captionof{table}{Esiti dei task: Silvia F.}\label{tab:d-test-silvia}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X c c c c c@{}}
+\toprule
+\textbf{Task} & \textbf{Esito} & \textbf{Tempo} & \textbf{Errori} & \textbf{Fase A} & \textbf{Variazione tempo} \\
+\midrule
+T1 Prenotazione in delega & Sì & 01:05 & 0 & Sì (01:35) & $-$31,6\% \\
+T2 Disdetta trasparente & Sì & 00:50 & 0 & Sì (02:05) & $-$60,0\% \\
+T3 Supporto scritto e delega & Sì & 00:55 & 0 & Parz. (02:50) & $-$67,6\% \\
+\midrule
+\textbf{Totale} & \textbf{3/3} & \textbf{02:50} & \textbf{0} & \textbf{06:30 (2 err.)} & \textbf{$-$56,4\%} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\Needspace{9\baselineskip}
+\begin{center}
+\captionof{table}{Risposte SUS: Silvia F.}\label{tab:d-sus-silvia}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}l *{10}{c} c c@{}}
+\toprule
+\textbf{Item} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & $\Sigma$ & \textbf{SUS} \\
+\midrule
+Fase A & 1 & 1 & 1 & 1 & 4 & 2 & 2 & 1 & 2 & 3 & 22 & 55,0 \\
+Fase D & 4 & 1 & 5 & 1 & 5 & 1 & 4 & 1 & 4 & 2 & 36 & \textbf{90,0} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\fieldheading{Riflessioni (Silvia F.)}
+Silvia dimezza il tempo (da 06:30 a 02:50, $-$56,4\%), azzera gli errori e porta il SUS da 55,0 a 90,0 (+35,0 punti), oltre l'80,0 che aveva assegnato in Fase A al benchmark MioDottore, privo degli strumenti di delega e condivisione familiare.
+
+% --- TEST 3: GIORGIO M. ------------------------------------------
+\subsubsection{Test 3: Giorgio M. (Segmento A2, richiamato)}
+
+\begin{itemize}
+\item \textbf{Data e conduttori:} 23/10/2026, ore 15:00; conduttore F. M. Fuligni, osservatore A. Campedelli.
+\item \textbf{Contesto:} da remoto, dalla propria abitazione, su PC desktop da 22'' con mouse (in Fase A aveva usato un tablet).
+\item \textbf{Baseline di Fase A (\docref{a}{06a}):} T1 parziale (03:05, 1 errore, opacità dei costi pubblico/privato), T2 no (05:00, 2 errori, confusione tra modifica e disdetta), T3 sì (01:45, 1 errore); tempo totale 09:50, 4 errori, SUS 40,0.
+\end{itemize}
+
+\fieldheading{Osservazioni (Giorgio M.)}
+
+\begin{itemize}
+\item \textbf{T1:} si sofferma su WF-04 e dichiara che il confronto affiancato dei costi risolve il motivo per cui in Fase A si era rifiutato di proseguire. In WF-17 e WF-18 verifica che il dominio non cambia e che i richiami numerati indicano dove leggere il Codice Avviso. Dice: \enquote{Ecco, questo è parlare chiaro: vedo subito quanto costa col pubblico e quanto col privato prima di scegliere la data, e per pagare mi fa vedere il disegno del bollettino senza mandarmi su un altro sito.}
+\item \textbf{T2:} distingue subito ``Sposta data'' da ``Disdici appuntamento'', legge l'assenza di penali e conclude in 01:15 senza errori, mentre in Fase A aveva fallito dopo 5 minuti per paura di cancellare per errore.
+\item \textbf{T3:} apre ``Serve aiuto?'' in 55 secondi, apprezza che si apra in sovrimpressione senza perdere la pagina e valuta utile il codice ``Salva il tuo punto'' per una verifica telefonica con il figlio.
+\end{itemize}
+
+\Needspace{9\baselineskip}
+\begin{center}
+\captionof{table}{Esiti dei task: Giorgio M.}\label{tab:d-test-giorgio}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X c c c c c@{}}
+\toprule
+\textbf{Task} & \textbf{Esito} & \textbf{Tempo} & \textbf{Errori} & \textbf{Fase A} & \textbf{Variazione tempo} \\
+\midrule
+T1 Prenotazione e pagoPA & Sì & 01:50 & 0 & Parz. (03:05) & $-$40,5\% \\
+T2 Disdetta trasparente & Sì & 01:15 & 0 & No (05:00) & $-$75,0\% \\
+T3 Supporto e salvataggio & Sì & 00:55 & 0 & Sì (01:45) & $-$47,6\% \\
+\midrule
+\textbf{Totale} & \textbf{3/3} & \textbf{04:00} & \textbf{0} & \textbf{09:50 (4 err.)} & \textbf{$-$59,3\%} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\Needspace{9\baselineskip}
+\begin{center}
+\captionof{table}{Risposte SUS: Giorgio M.}\label{tab:d-sus-giorgio}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}l *{10}{c} c c@{}}
+\toprule
+\textbf{Item} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & $\Sigma$ & \textbf{SUS} \\
+\midrule
+Fase A & 1 & 1 & 1 & 1 & 1 & 5 & 3 & 3 & 1 & 1 & 16 & 40,0 \\
+Fase D & 4 & 1 & 4 & 1 & 4 & 1 & 4 & 1 & 4 & 2 & 34 & \textbf{85,0} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\fieldheading{Riflessioni (Giorgio M.)}
+Il SUS passa da 40,0 a 85,0 (+45,0 punti), superando anche il 72,5 attribuito a MioDottore. Il test indica che l'interfaccia è rassicurante per l'anziano fragile senza risultare paternalistica per quello competente, come richiesto dalla persona di controllo Renato (\docref{b}{02c}).
+
+% --- TEST 4: SERGIO V. -------------------------------------------
+\subsubsection{Test 4: Sergio V. (Segmento A1, nuovo partecipante)}
+
+\begin{itemize}
+\item \textbf{Data e conduttori:} 25/10/2026, ore 11:00; conduttore A. Campedelli, osservatore F. M. Fuligni.
+\item \textbf{Contesto e profilo:} in presenza a Ravenna, su portatile da 17'' con mouse esterno. Sergio ha 76 anni, è un ex caposquadra in pensione con una cardiopatia cronica e usa il PC solo saltuariamente; per le prenotazioni va di solito allo sportello CUP o in farmacia. Non ha partecipato alla Fase A.
+\end{itemize}
+
+\fieldheading{Osservazioni (Sergio V.)}
+
+\begin{itemize}
+\item \textbf{T1:} comprende subito il PIN di WF-01, attiva A+ e apprezza di non dover copiare le 15 cifre dell'impegnativa. In WF-05 commette un errore non bloccante: clicca l'etichetta statica ``Più vicino a te (1,2 km)'' scambiandola per un pulsante (RES-01). Conferma in 02:35. Dice: \enquote{Non avevo mai visto questo programma, ma i passi numerati 1, 2, 3, 4 là in alto ti portano per mano come i numeri allo sportello.}
+\item \textbf{T2:} completa la disdetta in 01:40 senza errori né aiuti, leggendo ad alta voce la checklist di WF-12 e apprezzando l'assenza di penali in WF-13.
+\item \textbf{T3:} trova in 01:20 il pannello ``Serve aiuto?'' e il pulsante ``Stampa promemoria A4''; annota su un foglietto il codice di salvataggio per mostrarlo al farmacista o al figlio.
+\end{itemize}
+
+\Needspace{9\baselineskip}
+\begin{center}
+\captionof{table}{Esiti dei task: Sergio V.}\label{tab:d-test-sergio}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X c c c >{\centering\arraybackslash}p{0.27\linewidth}@{}}
+\toprule
+\textbf{Task} & \textbf{Esito} & \textbf{Tempo} & \textbf{Errori} & \textbf{Media Segmento A, Fase A} \\
+\midrule
+T1 Prenotazione e pagoPA & Sì & 02:35 & 1 & 03:03 (0\% sì pieni) \\
+T2 Disdetta protetta & Sì & 01:40 & 0 & 05:35 (0\% sì pieni) \\
+T3 Supporto e promemoria & Sì & 01:20 & 0 & 02:23 (50\% sì) \\
+\midrule
+\textbf{Totale} & \textbf{3/3} & \textbf{05:35} & \textbf{1} & \textbf{11:00 (5,0 err.)} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\Needspace{9\baselineskip}
+\begin{center}
+\captionof{table}{Risposte SUS: Sergio V.}\label{tab:d-sus-sergio}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}l *{10}{c} c c@{}}
+\toprule
+\textbf{Item} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & $\Sigma$ & \textbf{SUS} \\
+\midrule
+Fase D & 4 & 2 & 4 & 3 & 4 & 2 & 4 & 1 & 4 & 2 & 30 & \textbf{75,0} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\fieldheading{Riflessioni (Sergio V.)}
+Sergio completa tutti i task con SUS 75,0, sopra la soglia di 68 al primo impatto e senza alcuna esposizione precedente: il risultato di Carla (77,5) non dipende quindi dal recall bias.
+
+% --- TEST 5: LAURA G. --------------------------------------------
+\subsubsection{Test 5: Laura G. (Segmento B2, nuova partecipante)}
+
+\begin{itemize}
+\item \textbf{Data e conduttori:} 26/10/2026, ore 13:15; conduttore M. Boscherini, osservatore A. Campedelli.
+\item \textbf{Contesto e profilo:} in presenza, su PC desktop durante la pausa pranzo. Laura ha 52 anni, lavora part-time presso uno sportello CAF/patronato ed è caregiver convivente del padre 83enne, ipovedente e cardiopatico. Rappresenta la fascia 45--60 anni del Segmento B2 e il punto di vista di chi assiste ogni giorno utenti anziani.
+\end{itemize}
+
+\fieldheading{Osservazioni (Laura G.)}
+
+\begin{itemize}
+\item \textbf{T1:} attiva il profilo dell'assistito da ``Chi assisto'' (WF-15) e prenota in 01:20 senza errori. Apprezza le glosse di WF-04 e l'abbinamento tra bollettino annotato (WF-17) e scarico della ricevuta con codice fiscale pre-compilato (WF-18). Dice: \enquote{Allo sportello le persone anziane ci portano il bollettino pagoPA e la ricetta senza sapere quale codice copiare. Mettere il disegno del bollettino coi numeri 1 e 2 e lo scarico immediato della ricevuta fa risparmiare mezz'ora di spiegazioni.}
+\item \textbf{T2:} completa la disdetta in 00:55 senza errori. Si chiede se l'SMS al familiare parta subito o dopo i 10 minuti di ripensamento e suggerisce di specificarlo nel banner (RES-02).
+\item \textbf{T3:} in 01:05 genera il codice ``Salva il tuo punto'', che risolve il problema del timeout dopo una telefonata incontrato da Fatima in Fase A, e usa ``Invia su WhatsApp al familiare'' per un riepilogo senza dettagli clinici, evitando gli screenshot manuali.
+\end{itemize}
+
+\Needspace{9\baselineskip}
+\begin{center}
+\captionof{table}{Esiti dei task: Laura G.}\label{tab:d-test-laura}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X c c c >{\centering\arraybackslash}p{0.27\linewidth}@{}}
+\toprule
+\textbf{Task} & \textbf{Esito} & \textbf{Tempo} & \textbf{Errori} & \textbf{Fase A, Seg. B2 (Fatima)} \\
+\midrule
+T1 Prenotazione e pagoPA & Sì & 01:20 & 0 & Parz. (02:40) \\
+T2 Disdetta trasparente & Sì & 00:55 & 0 & Sì (03:15) \\
+T3 Salvataggio e WhatsApp & Sì & 01:05 & 0 & Parz. (02:20) \\
+\midrule
+\textbf{Totale} & \textbf{3/3} & \textbf{03:20} & \textbf{0} & \textbf{08:15 (2 err.)} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\Needspace{9\baselineskip}
+\begin{center}
+\captionof{table}{Risposte SUS: Laura G.}\label{tab:d-sus-laura}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}l *{10}{c} c c@{}}
+\toprule
+\textbf{Item} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & $\Sigma$ & \textbf{SUS} \\
+\midrule
+Fase D & 4 & 1 & 5 & 1 & 4 & 1 & 4 & 1 & 4 & 2 & 35 & \textbf{87,5} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\fieldheading{Riflessioni (Laura G.)}
+Laura chiude la sessione in 03:20 senza errori con SUS 87,5, contro il 37,5 di Fatima in Fase A (+50,0 punti): il test valida su una caregiver della fascia target il codice di salvataggio, il linguaggio chiaro e il modulo pagoPA con recupero della ricevuta.
+
+\subsection{Risultati aggregati e confronto con la Fase A}
+
+\fieldheading{Punteggi SUS}
+
+La Tabella~\ref{tab:d-sus-matrix} affianca i punteggi SUS della baseline (\docref{a}{07}) a quelli del redesign, con media $\bar{x}$, varianza campionaria $s^2$ e deviazione standard $s$.
+
+\Needspace{9\baselineskip}
+\begin{center}
+\captionof{table}{Punteggi SUS: CUPweb (Fase A) e redesign (Fase D)}\label{tab:d-sus-matrix}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X *{4}{c} *{5}{c}@{}}
+\toprule
+& \multicolumn{4}{c}{\textbf{Fase A: CUPweb}} & \multicolumn{5}{c}{\textbf{Fase D: redesign (v1)}} \\
+\cmidrule(lr){2-5} \cmidrule(lr){6-10}
+& \textbf{Gio} & \textbf{Car} & \textbf{Sil} & \textbf{Fat} & \textbf{Car*} & \textbf{Sil*} & \textbf{Gio*} & \textbf{Ser\dag} & \textbf{Lau\dag} \\
+\midrule
+Somma dei contributi (max 40) & 16 & 9 & 22 & 15 & 31 & 36 & 34 & 30 & 35 \\
+Punteggio SUS (0--100) & 40,0 & 22,5 & 55,0 & 37,5 & 77,5 & 90,0 & 85,0 & 75,0 & 87,5 \\
+\midrule
+Media $\bar{x}$ & \multicolumn{4}{c}{\textbf{38,75}} & \multicolumn{5}{c}{\textbf{83,00}} \\
+Varianza $s^2$ (dev. st. $s$) & \multicolumn{4}{c}{177,08 (13,31)} & \multicolumn{5}{c}{41,88 (6,47)} \\
+Media Segmento A / B & \multicolumn{4}{c}{31,25 / 46,25} & \multicolumn{5}{c}{79,17 / 88,75} \\
+\bottomrule
+\end{tabularx}
+\par\smallskip
+{\footnotesize * partecipanti richiamati (media da 39,17 a 84,17, +45,00 punti); \dag{} partecipanti nuovi (media 81,25).}
+\end{center}
+
+\fieldheading{Confronto globale}
+
+La Tabella~\ref{tab:d-global-comparison} riassume tutte le metriche per CUPweb e MioDottore (Fase A) e per il redesign (Fase D).
+
+\Needspace{9\baselineskip}
+\begin{center}
+\captionof{table}{Confronto aggregato: Fase A (CUPweb, MioDottore) e Fase D (redesign)}\label{tab:d-global-comparison}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\centering\arraybackslash}p{0.15\linewidth} >{\centering\arraybackslash}p{0.15\linewidth} >{\centering\arraybackslash}p{0.15\linewidth} >{\centering\arraybackslash}p{0.17\linewidth}@{}}
+\toprule
+\textbf{Metrica} & \textbf{CUPweb} & \textbf{MioDottore} & \textbf{Redesign} & \textbf{Variazione vs CUPweb} \\
+\midrule
+Successo pieno & 33,3\% (4/12) & 75,0\% (9/12) & \textbf{100\% (15/15)} & +66,7 p.p. \\
+Successo ponderato (parz. = 50\%) & 54,2\% & 83,3\% & \textbf{100\%} & +45,8 p.p. \\
+Blocchi sull'accesso (T1) & 25,0\% & 0,0\% & \textbf{0,0\%} & Azzerati \\
+Tempo medio T1 & 02:35 & 01:54 & \textbf{01:49} & $-$29,7\% \\
+Tempo medio T2 & 04:08 & 02:58 & \textbf{01:14} & $-$70,2\% \\
+Tempo medio T3 & 02:29 & 01:11 & \textbf{01:05} & $-$56,4\% \\
+Tempo medio della sessione & 09:11 & 06:05 & \textbf{04:08} & $-$55,0\% \\
+Tempo medio dei richiamati & 09:30 & 06:25 & \textbf{03:55} & $-$58,8\% \\
+Errori medi per sessione & 3,50 & 1,25 & \textbf{0,40} & $-$88,6\% \\
+SUS medio (0--100) & 38,75 & 66,25 & \textbf{83,00} & +44,25 pt \\
+SUS minimo & 22,50 & 45,00 & \textbf{75,00} & +52,50 pt \\
+Varianza del SUS ($s^2$) & 177,08 & 227,08 & \textbf{41,88} & $-$76,4\% \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{Problemi residui e curva d'urgenza}
+
+L'osservazione ha rivelato quattro micro-criticità residue (RES-01--RES-04), anche se tutti i 15 task sono stati completati. Valutate con il metodo della Fase A (\docref{a}{07}: impatto e persistenza da 1 a 3, soglia di emergenza 5,5), nessuna supera la soglia: tutte hanno somma non superiore a 4,0 (Tabella~\ref{tab:d-residual-urgency}, Figura~\ref{fig:d-urgenza}).
+
+\Needspace{9\baselineskip}
+\begin{center}
+\captionof{table}{Impatto, persistenza e urgenza dei problemi residui}\label{tab:d-residual-urgency}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.08\linewidth} >{\raggedright\arraybackslash}p{0.11\linewidth} >{\raggedright\arraybackslash}X c c c >{\raggedright\arraybackslash}p{0.2\linewidth}@{}}
+\toprule
+\textbf{ID} & \textbf{Schermata} & \textbf{Problema residuo} & \textbf{Imp.} & \textbf{Pers.} & \textbf{Somma} & \textbf{Esito} \\
+\midrule
+RES-01 & WF-05 & L'etichetta statica ``Più vicino a te'' somiglia a un pulsante e ha indotto un clic a vuoto in Sergio V. & 1,5 & 1,5 & 3,0 & Bordo neutro non cliccabile \\
+\addlinespace[2pt]
+RES-02 & WF-14 & Il banner di ripensamento non indica quando parte l'SMS al familiare (Laura G.). & 2,0 & 2,0 & 4,0 & Nota ``L'SMS parte dopo i 10 minuti'' \\
+\addlinespace[2pt]
+RES-03 & WF-12 & Carla B. ha impiegato 8 secondi per trovare ``Disdici'' sotto la checklist. & 2,0 & 1,5 & 3,5 & Ancora rapida a inizio scheda \\
+\addlinespace[2pt]
+RES-04 & WF-15 & Manca una vista tabellare compatta per chi assiste più di due familiari (Silvia F.). & 1,5 & 2,0 & 3,5 & Roadmap futura \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.82\linewidth, height=6.5cm,
+  xlabel={Persistenza (1 = bassa, 3 = alta)},
+  ylabel={Impatto (1 = basso, 3 = alto)},
+  xmin=0.8, xmax=3.6, ymin=0.8, ymax=3.6,
+  xtick={1,2,3}, xticklabels={1,2,3},
+  ytick={1,2,3}, yticklabels={1,2,3},
+  grid=both, grid style={gray!20},
+  legend style={at={(0.5,-0.24)},anchor=north,legend columns=-1,font=\footnotesize,draw=none},
+  scatter/classes={
+    risolti={mark=triangle*,gray!60},
+    residui={mark=*,blue!80!black}
+  },
+]
+\addplot[scatter,only marks,scatter src=explicit symbolic,
+  nodes near coords*={\Label},
+  visualization depends on={value \thisrow{Label} \as \Label},
+  every node near coord/.append style={font=\tiny, anchor=west, xshift=2pt}]
+  table[meta=Class] {
+x y Class Label
+1.50 1.50 residui RES-01
+2.00 2.00 residui RES-02
+1.50 2.00 residui RES-03
+2.00 1.50 residui RES-04
+2.90 3.05 risolti {ID-01/02/05/08/10 (risolti)}
+2.95 2.50 risolti {ID-09/12 (risolti)}
+};
+\addplot[domain=1.9:3.6, samples=2, dashed, thick, red!80!black] {5.5-x};
+\legend{Criticità di Fase A (risolte),Problemi residui di Fase D,Soglia di emergenza (somma = 5{,}5)}
+\end{axis}
+\end{tikzpicture}
+\captionof{figure}{Curva d'urgenza di Fase D: i quattro problemi residui restano sotto la soglia di emergenza.}\label{fig:d-urgenza}
+\end{center}
+
+% --- Card 04 ----------------------------------------------------
+\cardsection{Documento 04: Scheda Conclusioni e Raccomandazioni}\label{doc:d:04}
+
+\subsection{Obiettivi iniziali e risultati raggiunti}
+
+HPHP (\docref{a}{02}) mirava a ridurre le barriere digitali di CUPweb nella prenotazione, nella disdetta e nella preparazione al pagamento da computer, sostenendo l'autonomia protetta dell'anziano cronico (Segmento A) e il coordinamento non sostitutivo del caregiver (Segmento B). La Tabella~\ref{tab:d-goals-validation} confronta gli obiettivi di Fase A/B con i risultati misurati in Fase D (\docref{d}{03}).
+
+\Needspace{9\baselineskip}
+\begin{center}
+\captionof{table}{Obiettivi di progetto e risultati misurati}\label{tab:d-goals-validation}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.2\linewidth} >{\raggedright\arraybackslash}p{0.22\linewidth} >{\raggedright\arraybackslash}X >{\centering\arraybackslash}p{0.1\linewidth}@{}}
+\toprule
+\textbf{Obiettivo} & \textbf{Target di Fase A} & \textbf{Risultato di Fase D} & \textbf{Esito} \\
+\midrule
+Tempo medio di esecuzione & Riduzione $> 50\%$ sulla baseline (09:11) & 04:08 su tutto il campione ($-$55,0\%) e 03:55 sui richiamati ($-$58,8\%) & Superato \\
+\addlinespace[2pt]
+Blocchi sull'accesso & Zero blocchi per gli anziani fragili (25\% in Fase A) & Zero blocchi su 5 utenti grazie al PIN di WF-01; Carla passa dal blocco totale a 18 secondi & Raggiunto \\
+\addlinespace[2pt]
+Soddisfazione (SUS) & Media $> 68/100$ su entrambi i segmenti & Media 83,00 (+44,25 punti); Segmento A 79,17 (minimo 75,0), Segmento B 88,75 & Superato \\
+\addlinespace[2pt]
+Continuità e trasparenza dei costi & Nessun salto di dominio né dubbio tra pubblico e privato & T1 completato da tutti senza esitazioni sui costi; Giorgio passa da T1 parziale a 01:50 senza errori & Raggiunto \\
+\addlinespace[2pt]
+Disdetta senza ansia & Nessun abbandono per timore di irreversibilità & Tempo medio di T2 da 04:08 a 01:14 ($-$70,2\%), con modale senza sanzioni e 10 minuti di ripensamento & Superato \\
+\addlinespace[2pt]
+Co-pilota e delega & Profili distinguibili e promemoria condivisibile & Nessun errore di profilo con il banner arancione; promemoria inviato con un clic & Raggiunto \\
+\addlinespace[2pt]
+Interruzioni e pagamento & Ripresa dopo il timeout e guida al bollettino & Codice di salvataggio e bollettino annotato usati con successo da tutti i partecipanti & Raggiunto \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{Interpretazione dei dati, punti di forza e di debolezza}
+
+\fieldheading{Lettura dei risultati}
+
+I dati sostengono tre conclusioni, senza generalizzare oltre il campione:
+\begin{enumerate}
+\item \textbf{Riduzione del divario tra utenti.} Oltre alla media SUS (da 38,75 a 83,00), la varianza scende da 177,08 a 41,88. In Fase A il divario tra Carla (22,5) e Silvia (55,0) era di 32,5 punti; con il redesign Carla (77,5) e Silvia (90,0) distano 12,5 punti e sono entrambe sopra la soglia.
+\item \textbf{Il miglioramento non dipende dall'apprendimento.} I tre richiamati ottengono in media 84,17 e i due partecipanti nuovi 81,25: l'effetto è attribuibile all'interfaccia e non alla memoria dei task.
+\item \textbf{Superamento del benchmark commerciale.} In Fase A MioDottore superava CUPweb (66,25 contro 38,75) ma non sosteneva la coppia caregiver--assistito (\docref{a}{06b}); il redesign lo supera di 16,75 punti SUS rendendo nativa e sicura l'assistenza familiare.
+\end{enumerate}
+
+\fieldheading{Punti di forza}
+
+\begin{itemize}
+\item \textbf{Meno attrito cognitivo e motorio:} PIN a 4 cifre valido 30 giorni, ricette pre-compilate dal Fascicolo (niente digitazione dell'NRE) e bersagli ampi per chi usa il mouse con tremore.
+\item \textbf{Rassicurazione e reversibilità:} confronto dei costi prima della scelta, posto riservato per 15 minuti, modale senza sanzioni e 10 minuti di ripensamento dopo la disdetta.
+\item \textbf{Paradigma duale Co-pilota e delega:} lo schermo condiviso con cursore remoto del familiare (WF-07) sostiene l'autonomia assistita senza togliere il mouse all'anziano, e la delega formale (WF-15) copre i casi di esecuzione per conto di altri.
+\end{itemize}
+
+\fieldheading{Punti di debolezza e limiti}
+
+\begin{itemize}
+\item \textbf{Primo innesco del PIN:} richiede una prima autenticazione con SPID/CIE, o un'attivazione assistita, e va rinnovato ogni 30 giorni; per un anziano isolato e senza SPID restano necessari il canale fisico o telefonico.
+\item \textbf{Complessità del Co-pilota:} prenotazione, delega e guida pagoPA poggiano su servizi regionali esistenti, mentre il co-browsing con audio e trascrizione richiede un'infrastruttura dedicata e una valutazione privacy GDPR.
+\item \textbf{Campione ristretto:} $N=5$, reclutato per prossimità al team, e compatibilità con le tecnologie assistive progettata ma non verificata con utenti non vedenti.
+\end{itemize}
+
+\subsection{Errori del team e correzioni}
+
+Il Team Affordance ha riconosciuto e corretto quattro errori:
+\begin{enumerate}
+\item \textbf{Canale di accesso.} Le prime ipotesi tra Fase B e Fase C prevedevano un flusso mobile con codice SMS a ogni accesso. Il riesame delle personas (\docref{b}{02a}, \docref{b}{02c}) ha mostrato che per un anziano al PC leggere un SMS sul telefono riproduce la barriera a due fattori di SPID; il team ha riprogettato la Fase C come suite desktop con PIN valido 30 giorni.
+\item \textbf{Reclutamento in Fase A.} Fatima R. (35 anni) era fuori dalla fascia target 45--60 del Segmento B (\docref{a}{04b}). Il limite è stato dichiarato senza alterare il dato e corretto in Fase D reclutando Laura G. (52 anni).
+\item \textbf{Dispositivi diversi in Fase A.} Giorgio aveva usato un tablet e gli altri un PC (\docref{a}{06a}), introducendo una variabile confondente; in Fase D tutte le sessioni si sono svolte su PC con mouse.
+\item \textbf{Timer di riserva rosso.} Nella v0 il conto alla rovescia di WF-09 generava ansia anziché sicurezza (W-06, \reqref{H-04}); nella v1 è un messaggio statico rassicurante, apprezzato da tutti i partecipanti.
+\end{enumerate}
+
+\subsection{Raccomandazioni per il cliente}
+
+Per portare il prototipo in produzione, Regione Emilia-Romagna e Lepida S.c.p.A. dovrebbero seguire tre direttrici.
+
+\begin{enumerate}
+\item \textbf{Affidabilità statistica e accessibilità.}
+  \begin{itemize}
+  \item Condurre test sommativi su 30--50 cittadini reclutati fuori dalla rete del team, presso Case della Comunità, sportelli CUP e farmacie.
+  \item Verificare l'accessibilità con 4--6 utenti ipovedenti o non vedenti e screen reader (NVDA, JAWS, VoiceOver).
+  \item Monitorare per 60 giorni il rinnovo del PIN a 30 giorni e l'uso effettivo del codice di salvataggio.
+  \end{itemize}
+\item \textbf{Scalabilità del servizio.}
+  \begin{itemize}
+  \item Estendere ``Salva il tuo punto'' agli operatori delle farmacie e del call center, così che il cittadino possa dettare il codice e proseguire senza ripartire da zero.
+  \item Integrare le deleghe con l'ANPR e con il Fascicolo Sanitario Elettronico 2.0, aggiungendo la vista tabellare compatta per chi assiste più familiari (RES-04).
+  \item Estendere la guida visiva pensata per pagoPA ai moduli di autocertificazione di reddito ed esenzione.
+  \end{itemize}
+\item \textbf{Rifinitura dell'usabilità (RES-01--RES-03).}
+  \begin{itemize}
+  \item Distinguere graficamente i badge informativi dai pulsanti in WF-05.
+  \item Indicare nel banner di WF-14 che l'SMS di disdetta parte allo scadere dei 10 minuti.
+  \item Aggiungere in testa a WF-12 un collegamento rapido ai comandi di spostamento e disdetta.
+  \end{itemize}
+\end{enumerate}
