@@ -107,7 +107,7 @@ Annullamento di una disdetta & Impossibile & 1 clic entro 10 minuti & Introdotto
 \end{tabularx}
 \end{center}
 
-Il redesign riduce del 87,1\% le digitazioni, perché la ricetta si seleziona dal Fascicolo Sanitario invece di trascrivere le 15 cifre dell'NRE, e del 57,1\% i clic, azzerando i salti tra domini diversi che in Fase A avevano compromesso la fiducia (\reqref{ID-02}).
+Il redesign riduce dell'87,1\% le digitazioni, perché la ricetta si seleziona dal Fascicolo Sanitario invece di trascrivere le 15 cifre dell'NRE, e del 57,1\% i clic, azzerando i salti tra domini diversi che in Fase A avevano compromesso la fiducia (\reqref{ID-02}).
 
 % --- Card 02b ----------------------------------------------------
 \cardsection{Documento 02b: Scheda di ispezione: Heuristic Analysis e conformità del redesign}\label{doc:d:02b}
@@ -131,8 +131,9 @@ L'ispezione ha riguardato l'intera suite progettuale (19 schermate e 6 blueprint
   \item Usabilità della ricerca;
   \item Aiuto, feedback ed errori.
   \end{itemize}
-\item Boscherini, Campedelli e Fuligni hanno svolto la valutazione individuale il 19 ottobre 2026 (90 minuti ciascuno) e hanno riconciliato i finding in una plenaria il 20 ottobre.
 \end{itemize}
+
+I tre valutatori (Boscherini, Campedelli e Fuligni) hanno svolto la valutazione individuale in parallelo il 19 ottobre 2026 (90 minuti ciascuno) e hanno successivamente riconciliato i finding in una sessione plenaria collegiale il 20 ottobre.
 
 La severità segue la scala di Nielsen: 0 non è un problema, 1 cosmetico, 2 minore, 3 maggiore (da correggere prima dei test con utenti), 4 catastrofico (blocca il compito o induce errori irreversibili).
 
@@ -162,7 +163,7 @@ La Tabella~\ref{tab:d-heuristics-overview} sintetizza il grado complessivo di ad
 2. Corrispondenza con il mondo reale & Eccellente & Compiti in linguaggio naturale, bollettino pagoPA riprodotto fedelmente con richiami numerici ai campi (WF-17) e glossa esplicativa per la Libera Professione. \\
 3. Controllo e libertà dell'utente & Buono & Ritorno ai passi precedenti senza perdere le scelte, comando evidente ``Termina condivisione'' nel Co-pilota (WF-07) e ripensamento di 10 minuti sulla disdetta (WF-14). \\
 4. Coerenza e standard & Eccellente & Codifica cromatica costante: verde per le azioni primarie, blu per i pagamenti, arancione per il caregiver, rosso solo per la disdetta. Il badge statico in WF-05 richiede solo di non apparire cliccabile (\reqref{H-01}). \\
-5. Prevenzione degli errori & Eccellente & Bersagli ampi, raggruppamento in quartine e convalida sintattica del Codice Avviso pagoPA (WF-18), e comandi ``Sposta'' e ``Disdici'' nettamente distanziati. \\
+5. Prevenzione degli errori & Eccellente & Bersagli ampi, raggruppamento in quartine e convalida sintattica del Codice Avviso pagoPA (WF-17, WF-18), e comandi ``Sposta'' e ``Disdici'' nettamente distanziati. \\
 6. Riconoscimento anziché ricordo & Eccellente & Ricette pre-caricate dal Fascicolo, strutture ordinate per distanza e fac-simile annotato pagoPA eliminano ogni trascrizione mnemonica di codici. Il pulsante ``Disdici'' in WF-12 beneficia di un'ancora visiva in testa alla scheda (\reqref{H-03}). \\
 7. Flessibilità ed efficienza d'uso & Buono & Prenotazione rapida da cruscotto e delega diretta; con tre o più assistiti le card di WF-15 traggono vantaggio da una vista compatta (\reqref{H-04}). \\
 8. Design estetico e minimalista & Eccellente & Un solo compito decisionale per schermata, alto contrasto, assenza di elementi decorativi superflui e selettore del testo A/A+ sempre presente. \\
@@ -195,7 +196,7 @@ La Tabella~\ref{tab:d-heuristic-findings} censisce i quattro punti di attenzione
 \endhead
 \bottomrule
 \endlastfoot
-\hypertarget{req:H-01}{}\textbf{H-01} & WF-05 & 4. Coerenza e standard & 2 & Il badge statico ``Consigliata · Più vicina'' presenta un trattamento visivo a chip simile a un selettore interattivo, rischiando di indurre clic a vuoto in utenti con ridotta padronanza grafica (anticipa \reqref{RES-01}). \\
+\hypertarget{req:H-01}{}\textbf{H-01} & WF-05 & 4. Coerenza e standard & 2 & Il badge statico di prossimità (``Consigliata · Più vicina a te'') presenta un trattamento visivo a chip simile a un selettore interattivo, rischiando di indurre clic a vuoto in utenti con ridotta padronanza grafica (anticipa \reqref{RES-01}). \\
 \addlinespace
 \hypertarget{req:H-02}{}\textbf{H-02} & WF-14 & 1. Stato del sistema & 2 & Il banner di ripensamento di 10 minuti non esplicita il momento esatto di invio dell'SMS di notifica al caregiver, lasciando un lieve dubbio sulla tempestività del recapito (anticipa \reqref{RES-02}). \\
 \addlinespace
@@ -619,7 +620,7 @@ La Figura~\ref{fig:d-urgenza} inserisce i rilievi di Fase D nel quadro complessi
 \toprule
 \textbf{ID} & \textbf{Schermata} & \textbf{Problema residuo} & \textbf{Imp.} & \textbf{Pers.} & \textbf{Somma} & \textbf{Esito} \\
 \midrule
-\hypertarget{req:RES-01}{}\textbf{RES-01} & WF-05 & L'etichetta statica ``Più vicino a te'' somiglia a un pulsante e ha indotto un clic a vuoto in Sergio V. & 1,5 & 1,5 & 3,0 & Bordo neutro non cliccabile \\
+\hypertarget{req:RES-01}{}\textbf{RES-01} & WF-05 & L'etichetta statica di prossimità (``Più vicina a te'') somiglia a un pulsante e ha indotto un clic a vuoto in Sergio V. & 1,5 & 1,5 & 3,0 & Bordo neutro non cliccabile \\
 \addlinespace[2pt]
 \hypertarget{req:RES-02}{}\textbf{RES-02} & WF-14 & Il banner di ripensamento non indica quando parte l'SMS al familiare (Laura G.). & 2,0 & 2,0 & 4,0 & Nota ``L'SMS parte dopo i 10 minuti'' \\
 \addlinespace[2pt]
@@ -744,7 +745,7 @@ Il Team Affordance ha riconosciuto e corretto quattro errori:
 \item \textbf{Canale di accesso.} Le prime ipotesi tra Fase B e Fase C prevedevano un flusso mobile con codice SMS a ogni accesso. Il riesame delle personas (\docref{b}{02a}, \docref{b}{02c}) ha mostrato che per un anziano al PC leggere un SMS sul telefono riproduce la barriera a due fattori di SPID; il team ha riprogettato la Fase C come suite desktop con PIN valido 30 giorni.
 \item \textbf{Reclutamento in Fase A.} Fatima R. (35 anni) era fuori dalla fascia target 45--60 del Segmento B (\docref{a}{04b}). Il limite è stato dichiarato senza alterare il dato e corretto in Fase D reclutando Laura G. (52 anni).
 \item \textbf{Dispositivi diversi in Fase A.} Giorgio aveva usato un tablet e gli altri un PC (\docref{a}{06a}), introducendo una variabile confondente; in Fase D tutte le sessioni si sono svolte su PC con mouse.
-\item \textbf{Timer di riserva dell'orario.} Durante le primissime bozze ideative di WF-09 antecedenti al congelamento dei wireframe, l'ipotesi di un conto alla rovescia rosso a secondi generava ansia anziché sicurezza; la scelta di convertirlo in un messaggio di garanzia temporanea di 15 minuti è stata apprezzata da tutti i partecipanti, azzerando l'ansia da scadenza.
+\item \textbf{Copertura del pagamento nel protocollo di test.} La formulazione iniziale del compito T1 replicava strettamente il perimetro di Fase A, fermandosi alla conferma della prenotazione ed escludendo la fase di pagamento pagoPA (\reqref{ID-13}); durante il pilot interno del 21 ottobre il team ha rilevato la lacuna e ha esteso T1 alla consultazione guidata del bollettino (WF-17, WF-18), consentendo di verificare direttamente con gli utenti la rimozione delle barriere di comprensione economica.
 \end{enumerate}
 
 \subsection{Raccomandazioni per il cliente}
