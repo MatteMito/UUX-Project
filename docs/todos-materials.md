@@ -1,120 +1,109 @@
-# HPHP - Project Deliverables & Materials Todo List
+# HPHP - Materiali per sezione
 
-Questa checklist operativa raccoglie e traccia in modo granulare tutti i **materiali, artefatti, file supplementari e revisioni di design** da produrre e consegnare per il progetto HPHP, integrando le specifiche dei materiali con la todo list principale.
+Materiali da produrre, completare o verificare per ogni sezione del [report](todos.md). Una spunta indica un materiale già disponibile per l’attività descritta.
 
----
+## Fase A — Analisi etnografica e assessment
 
-## Fase A — Research, Assessment & User Testing
+### 1.1 Business Purpose
 
-### 1. Market Research & Fonti Supplementari
-- [ ] **Screenshot ISTAT & CNEL-Censis**
-  - [ ] Individuare le pagine esatte dei report ISTAT e CNEL-Censis citati nel Documento 02 (Market Research).
-  - [ ] Catturare screenshot ad alta risoluzione e leggibili con intestazione e fonte ben visibili.
-  - [ ] Salvare i file nella cartella dedicata: `/research-materials/screenshot-fonti-statistiche/`.
-  - [ ] Verificare la perfetta corrispondenza di fonte, anno, pagina e didascalia con i riferimenti nel report LaTeX.
+- [ ] Team Card e Client Card con servizio, obiettivi e indicatori.
 
-### 2. Assessment delle Risorse Esistenti (Card 05a / 05b)
-- [ ] **Verifica del Workbook Excel (`HPHP_FaseA_GuidelineChecklist.xlsx`)**
-  - [ ] Revisionare riga per riga il foglio di lavoro verificando completezza di giudizio, evidenza e motivazione per ogni guideline.
-  - [ ] Censire e distinguere le voci marcate `Non verificato`:
-    - [ ] Identificare quelle motivate da vincolo tecnico (richiedono credenziali reali SPID/CIE/account personale).
-    - [ ] Sanare eventuali voci rimaste incomplete per altri motivi prima delle sessioni di test.
-  - [ ] Assicurarsi che l'Excel finale sia pulito e pronto per essere incluso come allegato supplementare ufficiale.
-- [ ] **Integrazione Metodologica nel Report LaTeX**
-  - [ ] Incollare in calce alla sezione *Metodo di ispezione* di entrambe le Card 05a e 05b la nota di chiarimento sul file Excel:
-    > *"Il dettaglio guideline-per-guideline (punteggi, note per singola voce) è mantenuto nel file separato `HPHP_FaseA_GuidelineChecklist.xlsx`, allegato come materiale supplementare — qui si riporta solo la sintesi delle criticità principali, come previsto dal formato del corso. Le voci contrassegnate 'Non verificato' corrispondono a funzionalità raggiungibili solo dietro autenticazione (SPID/CIE/account personale), non testabili in fase di expert review senza credenziali reali: verranno verificate nello User Testing preliminare (Documento 06a/06b) con soggetti che dispongono di credenziali proprie."*
+### 1.2 Segmentazione del target
 
-### 3. Reclutamento & Conduzione Preliminary User Testing (06a / 06b)
-- [ ] **Piano di Reclutamento Partecipanti**
-  - [ ] Reclutare **Segmento A** (anziani): 2–3 persone (65–85 anni, competenza digitale bassa/media).
-  - [ ] Reclutare **Segmento B** (caregiver familiari): 2–3 persone (45–60 anni).
-  - [ ] Assicurare la disponibilità di almeno **2 partecipanti complessivi** per la seconda sessione di test comparativo in Fase D.
-  - [ ] Compilare e mantenere aggiornato il foglio/tracker partecipanti nel materiale supplementare:
-    - [ ] Contatti inviati tramite i messaggi template (Segmento A / Segmento B).
-    - [ ] Registrazione disponibilità Fase D comunicata post-test.
-- [ ] **Esecuzione Test e Raccolta Dati Empirici**
-  - [ ] Somministrare i test su tool del cliente (06a) e competitor (06b).
-  - [ ] Documentare task completati, errori, note qualitative e trascrizioni think-aloud.
-  - [ ] Raccogliere i questionari SUS compilati da utenti reali (non simulati).
-  - [ ] Calcolare metriche oggettive: punteggi medi SUS, varianza, tassi di successo dei task.
+- [ ] User Segmentation Card con segmenti, criteri e motivazione della scelta.
 
-### 4. Conclusions and Design Recommendations (Sezione 07)
-- [ ] **Matrice di Sintesi & Prioritizzazione**
-  - [ ] Popolare la tabella raccomandazioni a partire dai dati reali di assessment e test preliminari (`ID-01` ... `ID-07`).
-  - [ ] Compilare per ciascun ID: Fonte, Evidenza empirica dai test, Raccomandazione progettuale, Priorità (*urgente* / *prossima release*).
-  - [ ] Calcolare e tracciare la curva di urgenza (Impatto × Frequenza) basata sulle evidenze raccolte.
-  - [ ] Allineare la numerazione e gli identificativi per il riutilizzo diretto come requisiti formali in Fase B e Fase C.
+### 1.3 User Research
 
----
+- [ ] Due Market Research Card con sintesi delle evidenze, fonti e limiti del campione.
+- [x] [Screenshot delle fonti statistiche](../research-materials/screenshot-fonti-statistiche/) raccolti e controllati.
+- [ ] Copie anonimizzate delle evidenze di ricerca da allegare, con riferimenti alle fonti nel report.
 
-## Fase B — Requirements & Alignment
+### 2.1 Expert Usability Review
 
-- [ ] **Controllo di Coerenza Requisiti**
-  - [ ] Verificare la piena rispondenza tra le raccomandazioni finali di Fase A (`ID-01`...`ID-07`) e i requisiti/personas definiti in Fase B.
-  - [ ] Assicurare l'allineamento dei casi d'uso con gli scenari del blueprint di Fase C.
+- [ ] Assessment Card 05a e 05b con prima ispezione, screenshot, analisi diretta e inversa e riepiloghi quantitativi.
+- [ ] [Workbook UserFocus completo](../phase-a/phase-a-guideline-checklist.xlsx) per i supplementi, con giudizi, evidenze e motivazioni. Distinguere le voci che richiedono autenticazione dagli altri casi non verificati.
 
----
+### 2.2 User Testing preliminare
 
-## Fase C — Design Artefacts & Wireframes
+- [ ] Card 06a e 06b con protocollo, 3–4 task e documentazione del campione di 2–6 utenti reali.
+- [ ] Test Data Card, log anonimizzati, risposte SUS e questionario di apprezzamento, con tabelle e calcoli verificabili.
+- [ ] Curva d’urgenza con assi, soglia e problemi coerenti con le evidenze.
+- [ ] [Tracker di reclutamento](../research-materials/tracker-reclutamento.md) anonimizzato per i supplementi.
 
-### 1. Service Blueprint
-- [ ] **Finalizzazione Artefatto Blueprint**
-  - [ ] Verificare la copertura completa dello scenario primario (prenotazione ricorrente di Pina).
-  - [ ] Valutare la necessità di un secondo blueprint per casi secondari/critici (es. disdetta/modifica appuntamento).
-  - [ ] Verificare la conformità ai criteri del corso: rappresentazione chiara di flusso end-to-end, touchpoint, frontstage, backstage, processi di supporto e dipendenze di sistema.
-  - [ ] Assicurare l'esportazione in alta definizione per il PDF e/o cartella allegati.
+### Conclusioni e raccomandazioni di Fase A
 
-### 2. Before/After Artefact
-- [ ] **Tavola Comparativa Visiva**
-  - [ ] Acquisire gli screenshot reali dell'interfaccia attuale (CUPweb).
-  - [ ] Affiancare a ogni schermata attuale il corrispondente wireframe riprogettato a parità di stato e task (requisito esplicito del corso).
-  - [ ] Annotare puntualmente: problema riscontrato nell'originale, evidenza empirica/euristica, modifica apportata nel redesign e risultato atteso.
+- [ ] Conclusion Card e matrice con evidenze, criticità, priorità, raccomandazioni e requisiti. Verificare gli ID contro il Documento 07.
 
-### 3. Produzione Wireframe `v1` (Post-Inspection / Change Spec)
-- [ ] **Generazione Schermate `v1_dopo_inspection`**
-  - [ ] **Schermata 2 (Scelta prestazione)**: Sostituire l'icona "R" con etichetta esplicita *"Prenota di nuovo"* + icona freccia circolare (`W-01`).
-  - [ ] **Schermata 3 (Autenticazione leggera SMS)**:
-    - [ ] Inserire istruzione illustrata: *"Controlla i messaggi SMS del tuo telefono, poi torna qui"* (`W-02`).
-    - [ ] Inserire opzione/pulsante esplicito di annullamento/uscita dal flusso (`H-02`).
-  - [ ] **Schermata 4 (Data/ora)**: Implementare stato/feedback per slot non disponibili (*"Questo orario non è più disponibile, scegline un altro"*) (`H-01`).
-  - [ ] **Nuova Schermata — Errore SMS**: Disegnare schermata di errore codice SMS errato/scaduto con azione di recupero (*"Invia di nuovo il codice"*) (`H-01`).
-  - [ ] **Nuova Schermata — Slot non più disponibile**: Disegnare schermata di collisione slot al checkout con redirect pulito alla selezione data/ora (`H-01`).
-  - [ ] **Nuova Schermata — Conferma post-prenotazione**: Disegnare schermata finale esplicita (*"Prenotazione confermata ✓"*, riepilogo dati, azione *"Aggiungi al calendario del telefono"*) (`W-03`).
-  - [ ] *(Facoltativo / Backlog)* **Schermata 7 (Dashboard "Chi assisto")**: Valutare vista tabellare densa per profilo caregiver esperto (`H-03`).
-- [ ] **Organizzazione Cartella & Asset**
-  - [ ] Archiviare ordinatamente i file nella directory `phase-c/v1_dopo_inspection/`.
+## Fase B — Studio di fattibilità
 
-### 4. Design Summary Card (Documento 06)
-- [ ] **Compilazione Registro Versioni**
-  - [ ] Inserire la voce relativa a `v1_dopo_inspection`:
-    - Nome cartella: `v1_dopo_inspection`
-    - Data completamento: `[Data]`
-    - Tipo di valutazione generatrice: `Cognitive Walkthrough (Doc. 02a) + Heuristic Analysis (Doc. 02b)`
-    - Modifiche introdotte: `[W-01] [W-02] [W-03] [H-01] [H-02]` (con annotazione di `H-03` differito).
-    - Criticità risolte: collegamento formale agli ID criticità di Fase A.
-  - [ ] Rimuovere tutti i placeholder e i TODO interni ancora presenti nella card.
+### 3.1 Context of Use
 
----
+- [ ] Team Card identica a quella di Fase A e Cast Card con segmenti, contesti, vincoli e motivazione della composizione del cast.
 
-## Fase D — Evaluation & Inspection Validation
+### 3.2 Scenarios
 
-- [ ] **Inspection Cards & Tracciabilità**
-  - [ ] Verificare che le schede di Cognitive Walkthrough e Heuristic Analysis contengano i riferimenti precisi (`W-01`...`W-03`, `H-01`...`H-03`).
-  - [ ] Documentare la sequenza formale di iterazione: `Wireframe v0` → `Expert Inspection` → `Raccomandazioni` → `Wireframe v1`.
-- [ ] **Test Utente Formativi/Sommativi**
-  - [ ] Ri-contattare i partecipanti reclutati in Fase A per il test comparativo prima/dopo su `v1`.
-  - [ ] Registrare metriche di completamento ed esiti del re-test.
+- [ ] Schede di scenari e casi d’uso con obiettivi, task, tempi e criteri di successo. Registrare gli scenari scartati nella Cast Card.
 
----
+### 3.3 Personas
 
-## Packaging, Delivery & Controllo Finale
+- [x] Quattro Persona Card e visual C&A già prodotti, con radar individuali, heatmap e confronto del cast.
+- [ ] Versioni verificate delle schede e del [workbook C&A](../phase-b/phase-b-personas-and-cast-v2.xlsx). Registrare le personas scartate nella Cast Card.
 
-- [ ] **Verifica della Nomenclatura e Riferimenti Incrociati**
-  - [ ] Uniformare ID raccomandazioni, codici wireframe, denominazione file e tabelle tra report LaTeX, roadmap e checklist.
-- [ ] **Controllo Materiali Supplementari**
-  - [ ] `/research-materials/screenshot-fonti-statistiche/` (screenshot ISTAT/CNEL nominati chiaramente).
-  - [ ] `HPHP_FaseA_GuidelineChecklist.xlsx` (foglio ripulito senza note interne).
-  - [ ] `phase-c/v1_dopo_inspection/` (esportazioni grafiche PNG/SVG/PDF dei wireframe aggiornati).
-  - [ ] Tracker reclutamento anonimizzato e compilato.
-- [ ] **Final Polish**
-  - [ ] Assicurarsi che nel report principale e negli allegati non rimanga alcun TODO residuo, testo segnaposto o nota di bozza.
+### 3.4 Recommendations for Design
+
+- [ ] Matrice di tracciabilità tra evidenze, raccomandazioni, requisiti, personas e scenari.
+
+## Fase C — Proposta progettuale
+
+### 4.0 Adoption of a Design Model
+
+- [ ] Documento sul modello adottato, i principi, la strategia desktop-first e i requisiti guida.
+
+### 4.1 Information Architecture
+
+- [ ] Information Architecture Card con struttura di contenuti e servizi, etichette e navigazione.
+
+### 4.3 Interaction Design
+
+- [ ] Flussi dei task e dell’assistenza, con ruoli, passaggi, stati e azioni di recupero.
+
+### 4.4 Structure Blueprint
+
+- [ ] [Blueprint](../phase-c/blueprints/) ed esportazioni leggibili per i flussi rilevanti, con touchpoint, frontstage, backstage e dipendenze.
+
+### 4.5 Wireframes
+
+- [ ] [Suite wireframe](../phase-c/wireframes/) ed esportazioni delle schermate significative, con testi, comandi e feedback.
+- [ ] Versioni iniziale, post-ispezione, testata e post-test, se prodotta. Verificare le modifiche a etichette, SMS, recupero errori, slot e conferma rispetto alle raccomandazioni dell’ispezione.
+
+### Before/After
+
+- [ ] [Tavole comparative](../phase-c/before-after/) con screenshot reali di CUPweb e schermate del redesign per gli stessi task e stati.
+
+### Design Card
+
+- [ ] Design Card con motivazioni delle scelte, contributo delle personas, registro delle versioni e riferimenti alle alternative scartate.
+
+## Fase D — Valutazione del design
+
+### 5.1 Inspection
+
+- [ ] Team Card identica alle precedenti e Inspection Card con versione, task, criteri e risultati delle tecniche usate.
+- [ ] Registro che collega i problemi dell’ispezione alle modifiche del redesign.
+
+### 5.2 User Testing del redesign
+
+- [ ] Redesign User Testing Card con protocollo, versione testata, campione e confronto con la baseline. Verificare nei materiali originali i partecipanti richiamati.
+- [ ] Test Data Card, log anonimizzati, misura di soddisfazione e tabelle individuali e aggregate.
+
+### 6 Conclusions and Recommendations
+
+- [ ] Project Conclusion Card con confronto quantitativo e qualitativo, interpretazione, limiti e raccomandazioni. Allegare il piano di un’altra iterazione se gli esiti lo richiedono.
+
+## Consegna
+
+### Consegna finale
+
+- [ ] PDF unico con card A–D, tabelle quantitative e Before/After.
+- [ ] Cartella supplementare con workbook di assessment, fonti, protocolli, test, dati anonimizzati, tabelle, versioni e scelte scartate.
+- [ ] ZIP unico con PDF e cartella supplementare, pronto per Virtuale.

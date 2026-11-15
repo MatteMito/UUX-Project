@@ -1,89 +1,39 @@
-# HPHP - Todo List
+# HPHP - TODO del report
 
-Questa checklist raccoglie esclusivamente le attività ancora da verificare o completare rispetto al report LaTeX corrente. Per il percorso complessivo del progetto fare riferimento alla [roadmap](roadmap.md) e alle checklist delle singole fasi.
+Una casella per sezione del progetto. La spunta indica una sezione chiusa. Le sezioni già redatte possono restare aperte per verifiche. I relativi materiali sono in [todos-materials.md](todos-materials.md). Numerazione e requisiti seguono le [specifiche del corso](specs.md#struttura-generale).
 
-## Fase A
+## Fase A — Analisi etnografica e assessment
 
-### Market research - Segmento A (sezione 04 1/2)
+- [ ] **1.1 Business Purpose** — Verificare Team Card, Client Card, obiettivi e indicatori di successo.
+- [ ] **1.2 Segmentazione del target** — Verificare la User Segmentation Card e la motivazione della scelta dei due segmenti prioritari.
+- [ ] **1.3 User Research** — Verificare le due Market Research Card rispetto alle fonti e al campione. Screenshot delle fonti già raccolti e controllati.
+- [ ] **2.1 Expert Usability Review** — Verificare le Assessment Card 05a e 05b e motivare i giudizi «Non verificato».
+- [ ] **2.2 User Testing preliminare** — Card 06a e 06b già redatte. Verificare originali, comparabilità dei task, SUS, questionario di apprezzamento e curva d’urgenza.
+- [ ] **Conclusioni e raccomandazioni di Fase A** — Rivedere il Documento 07 e verificare i collegamenti tra evidenze, priorità e requisiti.
 
-- [x] Recuperare le pagine esatte dei report ISTAT citati.
-- [x] Inserire gli screenshot leggibili nel materiale supplementare.
-- [x] Verificare che fonte, anno, pagina e didascalia coincidano con le citazioni nel report.
+## Fase B — Studio di fattibilità
 
-### Market research - Segmento B (sezione 04 2/2)
+- [ ] **3.1 Context of Use** — Verificare contesti e vincoli rispetto ai segmenti. Controllare che la Team Card riprenda quella della Fase A.
+- [ ] **3.2 Scenarios** — Verificare obiettivi, task, tempi e criteri di successo. Il cast e gli scenari sono già documentati.
+- [ ] **3.3 Personas** — Quattro Persona Card e grafici C&A già prodotti. Verificare evidenze, ipotesi narrative e punteggi.
+- [ ] **3.4 Recommendations for Design** — Verificare il collegamento tra raccomandazioni di Fase A, requisiti, personas e scenari.
 
-- [x] Recuperare le pagine esatte di tutti i report citati.
-- [x] Inserire gli screenshot leggibili nel materiale supplementare.
-- [x] Verificare che fonte, anno, pagina e didascalia coincidano con le citazioni nel report.
+## Fase C — Proposta progettuale
 
-### Assessment delle risorse esistenti (sezioni 05a e 05b)
+- [ ] **4.0 Adoption of a Design Model** — Verificare modello, principi e strategia desktop-first.
+- [ ] **4.1 Information Architecture** — Verificare organizzazione di contenuti e servizi, etichette e navigazione.
+- [ ] **4.3 Interaction Design** — Verificare i flussi, i ruoli di assistenza, gli stati di errore e le azioni di recupero.
+- [ ] **4.4 Structure Blueprint** — Verificare copertura dei flussi end-to-end, passaggi di responsabilità e dipendenze.
+- [ ] **4.5 Wireframes** — Verificare completezza delle schermate e tracciabilità delle revisioni post-ispezione.
+- [ ] **Before/After** — Verificare la comparabilità di schermate, task e stati.
+- [ ] **Design Card** — Verificare il contributo delle personas alle scelte e la cronologia delle versioni.
 
-- [ ] Riesaminare il workbook [guideline checklist](../phase-a/phase-a-guideline-checklist.xlsx).
-- [ ] Individuare tutte le guideline marcate `Non verificato`.
-- [ ] Stabilire quali verifiche richiedono autenticazione tramite SPID, CIE o account.
-- [ ] Verificare tali aspetti con soggetti reali durante lo user testing oppure documentarne esplicitamente il rinvio e il limite.
-- [ ] Accertare che ogni riga del workbook abbia giudizio, evidenza e motivazione sufficienti.
-- [ ] Decidere il livello di dettaglio da mantenere nel report: sintesi delle criticità principali nel PDF e risultati completi nel workbook supplementare.
-- [ ] Inserire nel report un riferimento esplicito al workbook e agli aspetti non verificati.
+## Fase D — Valutazione del design
 
-### Preliminary user testing (sezioni 06a e 06b)
+- [ ] **5.1 Inspection** — Verificare la versione ispezionata e collegare problemi e raccomandazioni alle modifiche introdotte. Controllare la Team Card.
+- [ ] **5.2 User Testing del redesign** — Il report descrive cinque partecipanti, tre dalla baseline. Verificare originali, versione testata, condizioni di confronto e risultati.
+- [ ] **6 Conclusions and Recommendations** — Verificare il confronto quantitativo e qualitativo con CUPweb. Se i risultati sono ambigui o insoddisfacenti, documentare il piano per un’altra iterazione.
 
-- [x] Verificare e completare la card relativa al tool del cliente.
-- [x] Verificare e completare la card relativa al competitor.
-- [ ] Controllare che task, partecipanti, metriche, dati, SUS e limiti siano documentati per entrambi i tool.
+## Consegna
 
-### Conclusions and design recommendations (sezione 07)
-
-- [ ] Rivedere integralmente la sezione.
-- [ ] Ricostruire le conclusioni a partire dai risultati di assessment e user testing.
-- [ ] Collegare ogni raccomandazione a evidenze precise e assegnarle priorità e identificativo.
-- [ ] Verificare che le raccomandazioni siano utilizzabili come requisiti nelle Fasi B e C.
-
-## Fase B
-
-- [x] Consolidare il cast: Pina protagonista; Elena e Amina personaggi secondari; Renato personaggio aggiuntivo.
-- [x] Completare le quattro Persona card con storia, obiettivi, vincoli, scenario, criteri di successo e implicazioni di design.
-- [x] Aggiornare workbook e visual C\&A: quattro radar individuali, heatmap comparativa e radar sovrapposto con scala diretta (5 sul bordo esterno).
-- [x] Allineare le personas alle domande e ai segmenti della Fase A, dichiarando esplicitamente le ipotesi narrative da validare.
-- [x] Eseguire il controllo di coerenza con lo stato corrente della Fase A e verificare la resa del PDF e del workbook.
-- [ ] Rivalidare personas, citazioni, punteggi C\&A e requisiti dopo le interviste e le raccomandazioni finali della Fase A.
-
-## Fase C
-
-### Blueprint
-
-- [ ] Stabilire se il blueprint attuale copre tutti gli scenari rilevanti.
-- [ ] Decidere se servono blueprint aggiuntivi e documentare il criterio usato.
-- [ ] Verificare se l'artefatto attuale è sufficientemente chiaro e completo oppure se va ricostruito con uno strumento dedicato.
-- [ ] Controllare che siano rappresentati flusso end-to-end, frontstage, backstage, processi di supporto e dipendenze pertinenti.
-
-### Versioni dei wireframe
-
-- [ ] Documentare chiaramente il passaggio da `v0` a `v1`.
-- [ ] Collegare le modifiche di `v1` alle raccomandazioni `W-01`, `W-03` e `H-01`-`H-03` emerse durante l'ispezione.
-- [ ] Chiarire nel report che `v0` è la proposta iniziale di Fase C e `v1` è la revisione post-ispezione prodotta nel ciclo di Fase D.
-- [ ] Decidere dove presentare `v0` e `v1` nel documento principale e nei supplementi, mantenendo esplicita la cronologia anche se i file restano raccolti nella directory `phase-c`.
-
-### Before/After
-
-- [ ] Verificare se gli elaborati attuali hanno qualità e comparabilità sufficienti.
-- [ ] Se necessario, ricostruirli con uno strumento dedicato.
-- [ ] Confrontare gli stessi task e stati, annotando problema, evidenza, modifica e risultato atteso.
-
-### Design summary card
-
-- [ ] Chiarire nel testo lo scopo della card: sintetizzare il legame tra ricerca, personas, requisiti e decisioni di design.
-- [ ] Individuare i tre placeholder o todo ancora presenti nella card.
-- [ ] Completare i tre punti e rimuovere ogni nota interna dal report finale.
-
-## Fase D
-
-- [ ] Verificare che le Inspection card documentino le raccomandazioni che hanno generato i wireframe `v1`.
-- [ ] Rendere tracciabile la sequenza `wireframe v0 -> inspection -> raccomandazioni -> wireframe v1`.
-- [ ] Aggiornare checklist, changelog e riferimenti incrociati dopo la decisione editoriale sulle versioni.
-
-## Controllo conclusivo
-
-- [ ] Ogni punto completato è supportato da un artefatto o da un riferimento nel report.
-- [ ] La todo list, la roadmap, le checklist di fase e il PDF usano gli stessi nomi e identificativi.
-- [ ] Nel documento finale non rimangono placeholder, todo interni o riferimenti ai vecchi nomi dei file.
+- [ ] **Consegna finale** — Verificare l’unico PDF con le card A–D e l’unico ZIP con i supplementi per Virtuale.

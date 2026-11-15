@@ -104,4 +104,4 @@ Per ogni persona:
 
 - [x] Specificare tre casi principali da computer e il caso responsive secondario di Amina.
 - [x] Esplicitare laptop familiare e supporto di Elena nello scenario co-pilota di Pina, mantenendo i punteggi C&A.
-- [x] Allineare testo e [workbook v2](phase-b-personas-and-cast-v2.xlsx), preservando l’originale e i diagrammi.
+- [x] Allineare testo e [workbook v2](phase-b-personas-and-cast-v2.xlsx), preservando i diagrammi. Il workbook originale è recuperabile da Git al commit `dcea72f`.

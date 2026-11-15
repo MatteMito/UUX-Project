@@ -220,7 +220,7 @@ Misura la capacità di convincere il cliente della qualità del progetto. La per
 - Devono essere seguite fasi, attività e risultati precisi.
 - Un buon prodotto con documentazione scadente viene valutato peggio di un prodotto debole ben documentato.
 - La documentazione deve essere completa ma non inutilmente lunga.
-- Devono essere usati i template a card forniti dal corso.
+- I template a card forniti dal corso sono obbligatori per gli studenti di giugno e facoltativi per gli altri (slide 63).
 - Il progetto si svolge in ordine A, B, C, D.
 - La valutazione considera le fasi nell'ordine A, B, D, C.
 
@@ -239,10 +239,13 @@ Misura la capacità di convincere il cliente della qualità del progetto. La per
    - personas;
    - raccomandazioni per il design.
 4. Design proposal:
-   - information architecture;
-   - interaction design approach;
-   - structure blueprint;
-   - wireframes.
+   - **4.0** Adoption of a Design Model;
+   - **4.1** Information Architecture;
+   - **4.3** Interaction Design;
+   - **4.4** Structure Blueprint;
+   - **4.5** Wireframes.
+
+   Numerazione della slide 84. Il riepilogo a slide 38 usa una numerazione diversa.
 5. Valutazione del design:
    - inspection;
    - user testing.
@@ -605,15 +608,17 @@ La conclusione deve spiegare:
 - [ ] Tool esistente necessario e non liberamente sostituibile.
 - [ ] Contenuti informativi e servizi attivi.
 - [ ] Ricerca con dati reali e limiti dichiarati.
-- [ ] Assessment del sistema attuale e di alternative.
-- [ ] Test preliminare con 2-6 persone reali, SUS e curva d'urgenza.
+- [ ] Assessment del sistema attuale e di almeno un’alternativa, con ispezione iniziale, analisi diretta e inversa e workbook completo nei supplementi.
+- [ ] Test preliminare con 2–6 persone reali, 3–4 task completi, protocollo, una Test Data Card per partecipante, SUS e questionario di apprezzamento.
+- [ ] Curva d’urgenza e raccomandazioni specifiche e misurabili collegate all’assessment o ai test.
 - [ ] Personas, scenari e C&A collegati alle evidenze.
-- [ ] IA, interaction design, blueprint e wireframe completi.
+- [ ] Modello di design, IA, interaction design, blueprint e wireframe completi. Design Card con il contributo delle personas alle scelte.
 - [ ] Inspection interna del redesign.
 - [ ] Test del redesign con almeno due partecipanti della prima sessione.
-- [ ] Iterazione aggiuntiva in caso di risultati ambigui.
+- [ ] Piano per un’altra iterazione di design e test se i risultati sono ambigui o insoddisfacenti.
 - [ ] Tabelle quantitative e conclusioni verificabili.
 - [ ] Confronto Before/After.
 - [ ] Versioni e design scartati documentati.
-- [ ] Unico PDF, cartella supplementare e unico ZIP.
+- [ ] Card delle Fasi A–D integrate in un unico PDF. Team Card identica in A, B e D.
+- [ ] Unico ZIP con PDF e cartella supplementare, pronto per il caricamento su Virtuale.
 - [ ] Presentazione capace di spiegare processo e valore per il cliente.

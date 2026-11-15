@@ -9,7 +9,7 @@
 
 \chapter{Fase D: Valutazione del redesign}
 
-La Fase D valuta la proposta progettuale sviluppata in Fase C in due momenti complementari, coerenti con il ciclo di progettazione centrata sull'umano~\cite{iso9241210_2019}. In primo luogo, un'ispezione interna condotta dal team di valutazione mediante Cognitive Walkthrough con Action Analysis (\docref{d}{02a}) e Heuristic Analysis (\docref{d}{02b}) verifica la coerenza logica, la navigabilità e l'aderenza ai principi di usabilità della suite di 19 wireframe (WF-01--WF-19). Successivamente, una sessione di User Testing con cinque partecipanti reali (\docref{d}{03}) ripropone protocollo, compiti e metriche della Fase A, compresa la scala SUS~\cite{brookeSUS1996}, per misurare l'efficacia sul campo del redesign. Il \docref{d}{04} sintetizza gli obiettivi raggiunti, analizza criticamente i problemi residui e formula le raccomandazioni conclusive.
+La Fase D valuta il redesign con un'ispezione e un test con utenti~\cite{iso9241210_2019}. In primo luogo, un'ispezione interna condotta dal team di valutazione mediante Cognitive Walkthrough con Action Analysis (\docref{d}{02a}) e Heuristic Analysis (\docref{d}{02b}) verifica la coerenza logica, la navigabilità e l'aderenza ai principi di usabilità della suite di 19 wireframe (WF-01--WF-19). Successivamente, una sessione di User Testing con cinque partecipanti reali (\docref{d}{03}) ripropone protocollo, compiti e metriche della Fase A, compresa la scala SUS~\cite{brookeSUS1996}, per misurare l'efficacia sul campo del redesign. Il \docref{d}{04} sintetizza gli obiettivi raggiunti, analizza criticamente i problemi residui e formula le raccomandazioni conclusive.
 
 % --- Card 02a ----------------------------------------------------
 \cardsection{Documento 02a: Scheda di ispezione: Cognitive Walkthrough e Action Analysis}\label{doc:d:02a}
@@ -31,7 +31,7 @@ Sessione in presenza del 18 ottobre 2026 (14:30--17:30) in laboratorio, su monit
 
 \fieldheading{Metodi e compiti}
 
-Il Cognitive Walkthrough pone a ogni passo quattro domande: (1) l'utente cercherà di ottenere l'effetto giusto? (2) noterà che l'azione corretta è disponibile? (3) la assocerà all'effetto desiderato? (4) riceverà un feedback di progresso? L'Action Analysis scompone invece il compito primario in azioni elementari (clic, digitazioni, cambi di dominio) per confrontare il carico procedurale di CUPweb e del redesign.
+Nel Cognitive Walkthrough il team ricostruisce le azioni che Pina potrebbe compiere al primo utilizzo, tenendo conto delle sue competenze, delle indicazioni a schermo e del feedback. L'Action Analysis informale confronta clic, digitazioni e passaggi tra domini nei due sistemi.
 
 I compiti sono due, entrambi sul profilo di Pina:
 \begin{itemize}
@@ -41,7 +41,7 @@ I compiti sono due, entrambi sul profilo di Pina:
 
 \subsection{Analisi passo-passo del Cognitive Walkthrough}
 
-La Tabella~\ref{tab:d-cw} riporta le risposte alle quattro domande per ciascun passo (S = sì, P = parziale) e la sintesi dell'affordance cognitiva osservata a supporto del percorso di Pina.
+La Tabella~\ref{tab:d-cw} riporta gli esiti per ciascun passo del percorso. La scheda del team registra quattro aspetti: obiettivo (1), visibilità dell'azione (2), corrispondenza tra azione ed esito (3) e feedback (4). S indica un esito positivo, P un esito parziale.
 
 \Needspace{9\baselineskip}
 \begin{center}
@@ -55,11 +55,11 @@ La Tabella~\ref{tab:d-cw} riporta le risposte alle quattro domande per ciascun p
   >{\raggedright\arraybackslash}p{\pw{10}{57}}@{}}
 \caption{Cognitive Walkthrough sul percorso di prenotazione guidata (persona Pina)}\label{tab:d-cw}\\
 \toprule
-\textbf{Passo (schermata)} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{Esito della verifica e affordance osservata} \\
+\textbf{Passo (schermata)} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{Osservazioni del team} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Passo (schermata)} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{Esito della verifica e affordance osservata} \\
+\textbf{Passo (schermata)} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{Osservazioni del team} \\
 \midrule
 \endhead
 \bottomrule
@@ -82,7 +82,7 @@ Appuntamenti e disdetta (WF-11--WF-14) & S & S & S & S & Percorso di disdetta gu
 \end{longtable}
 \end{center}
 
-Delle 32 verifiche, 31 sono pienamente positive e 1 registra una semplice osservazione di rifinitura grafica sui badge informativi di sede, confermando l'assenza di barriere cognitive sul percorso primario di Pina. Il microcopy rassicurante, la pre-compilazione dei dati dal Fascicolo e la finestra di ripensamento prevengono alla radice i blocchi osservati in Fase A.
+La scheda riporta 31 esiti positivi e uno parziale su 32 verifiche. Il team ha segnalato la somiglianza visiva tra gli indicatori di mobilità e i pulsanti di scelta della sede.
 
 \subsection{Action Analysis: CUPweb originale vs redesign}
 
@@ -135,11 +135,11 @@ L'ispezione ha riguardato l'intera suite progettuale (19 schermate e 6 blueprint
 
 I tre valutatori (Boscherini, Campedelli e Fuligni) hanno svolto la valutazione individuale in parallelo il 19 ottobre 2026 (90 minuti ciascuno) e hanno successivamente riconciliato i finding in una sessione plenaria collegiale il 20 ottobre.
 
-La severità segue la scala di Nielsen: 0 non è un problema, 1 cosmetico, 2 minore, 3 maggiore (da correggere prima dei test con utenti), 4 catastrofico (blocca il compito o induce errori irreversibili).
+Nella scheda di ispezione il codice 1 indica un problema cosmetico e il codice 2 un problema minore.
 
-\subsection{Valutazione sulle 10 euristiche di Nielsen}
+\subsection{Valutazione euristica}
 
-La Tabella~\ref{tab:d-heuristics-overview} sintetizza il grado complessivo di aderenza del prototipo alle 10 euristiche, evidenziando i punti di forza strutturali e le soluzioni incorporate nel design. Il giudizio di aderenza (\emph{Buono} o \emph{Eccellente}) è una valutazione qualitativa globale dell'area e si distingue dalla scala di gravità dei singoli difetti (1--4) riportata nella Tabella~\ref{tab:d-heuristic-findings}.
+La Tabella~\ref{tab:d-heuristics-overview} sintetizza il grado complessivo di aderenza del prototipo alle 10 euristiche, evidenziando i punti di forza strutturali e le soluzioni incorporate nel design. Il giudizio qualitativo (\emph{Buono} o \emph{Eccellente}) sintetizza l'aderenza a ciascuna euristica.
 
 \Needspace{9\baselineskip}
 \begin{center}
@@ -148,7 +148,7 @@ La Tabella~\ref{tab:d-heuristics-overview} sintetizza il grado complessivo di ad
   >{\raggedright\arraybackslash}p{\pw{4}{29}}
   >{\centering\arraybackslash}p{\pw{4}{12}}
   >{\raggedright\arraybackslash}p{\pw{4}{59}}@{}}
-\caption{Valutazione di aderenza alle 10 euristiche di Nielsen}\label{tab:d-heuristics-overview}\\
+\caption{Aderenza alle dieci euristiche}\label{tab:d-heuristics-overview}\\
 \toprule
 \textbf{Euristica} & \textbf{Aderenza} & \textbf{Riscontro nel redesign desktop} \\
 \midrule
@@ -174,7 +174,7 @@ La Tabella~\ref{tab:d-heuristics-overview} sintetizza il grado complessivo di ad
 
 \subsection{Finding e punti di attenzione dell'Heuristic Analysis}
 
-La Tabella~\ref{tab:d-heuristic-findings} censisce i quattro punti di attenzione specifici individuati dall'ispezione esperta sulle schermate del redesign, classificati per euristica e severità secondo la scala di Nielsen (1--2, non bloccanti), che anticipano con precisione i rilievi poi riscontrati sul campo nei test con gli utenti.
+La Tabella~\ref{tab:d-heuristic-findings} censisce i quattro punti di attenzione specifici individuati dall'ispezione esperta sulle schermate del redesign, classificati per euristica e gravità. Il team ha assegnato a tutti i rilievi un codice 1 o 2.
 
 \Needspace{9\baselineskip}
 \begin{center}
@@ -257,9 +257,9 @@ Le metriche sono il successo (sì = 100\%, parziale = 50\%, no = 0\%), il tempo 
 {\footnotesize Contributo di ogni item: voto $-$ 1 per gli item dispari, 5 $-$ voto per i pari; il punteggio SUS è la somma dei contributi per 2,5.}
 \end{center}
 
-\subsection{Reclutamento e mitigazione del recall bias}
+\subsection{Reclutamento e intervallo tra le sessioni}
 
-Il campione è misto, su cinque persone reali. Tre partecipanti sono richiamati dalla Fase A (Carla B., Silvia F., Giorgio M.), così da misurare il miglioramento sulla stessa persona e superare il minimo di due richiamati. Il recall bias è mitigato da un intervallo di 31 giorni tra i test di Fase A (22--24 settembre 2026) e quelli di Fase D (23--26 ottobre), senza contatti con le bozze del progetto, e dal fatto che architettura e interazione del redesign sono molto diverse da CUPweb. Altri due partecipanti, mai esposti al progetto, fungono da controllo: Sergio V. per l'utenza anziana diretta e Laura G. per i caregiver, scelta nella fascia 45--60 anni per correggere il limite emerso in Fase A con Fatima R. (35 anni, \docref{a}{04b}).
+Il campione comprende cinque persone. Carla B., Silvia F. e Giorgio M. hanno partecipato a entrambe le fasi, permettendo un confronto sui singoli partecipanti. Tra le sessioni di Fase A (22--24 settembre 2026) e quelle di Fase D (23--26 ottobre) è trascorso circa un mese. Nel frattempo i tre partecipanti non hanno visto le bozze. I due nuovi partecipanti sono Sergio V. per l'utenza anziana diretta e Laura G. per i caregiver. Laura rientra nella fascia prioritaria di 45--60 anni (\docref{a}{04b}).
 
 \Needspace{9\baselineskip}
 \begin{center}
@@ -490,7 +490,7 @@ Fase D & 4 & 2 & 4 & 3 & 4 & 2 & 4 & 1 & 4 & 2 & 30 & \textbf{75,0} \\
 \end{center}
 
 \fieldheading{Riflessioni (Sergio V.)}
-Sergio completa tutti i task con SUS 75,0, sopra la soglia di 68 al primo impatto e senza alcuna esposizione precedente: il risultato di Carla (77,5) non dipende quindi dal recall bias.
+Al primo utilizzo del prototipo, Sergio completa tutti i compiti e ottiene un punteggio SUS di 75,0.
 
 % --- TEST 5: LAURA G. --------------------------------------------
 \subsubsection{Test 5: Laura G. (Segmento B2, nuova partecipante)}
@@ -715,10 +715,9 @@ Interruzioni e pagamento & Ripresa dopo il timeout e guida al bollettino & Codic
 
 \fieldheading{Lettura dei risultati}
 
-I dati sostengono tre conclusioni, senza generalizzare oltre il campione:
 \begin{enumerate}
 \item \textbf{Riduzione del divario tra utenti.} Oltre alla media SUS (da 38,75 a 83,00), la varianza scende da 177,08 a 41,88. In Fase A il divario tra Carla (22,5) e Silvia (55,0) era di 32,5 punti; con il redesign Carla (77,5) e Silvia (90,0) distano 12,5 punti e sono entrambe sopra la soglia.
-\item \textbf{Il miglioramento non dipende dall'apprendimento.} I tre richiamati ottengono in media 84,17 e i due partecipanti nuovi 81,25: l'effetto è attribuibile all'interfaccia e non alla memoria dei task.
+\item \textbf{SUS per gruppo di reclutamento.} La media è 84,17 per i tre partecipanti richiamati e 81,25 per i due nuovi.
 \item \textbf{Superamento del benchmark commerciale.} In Fase A MioDottore superava CUPweb (66,25 contro 38,75) ma non sosteneva la coppia caregiver--assistito (\docref{a}{06b}); il redesign lo supera di 16,75 punti SUS rendendo nativa e sicura l'assistenza familiare.
 \end{enumerate}
 
