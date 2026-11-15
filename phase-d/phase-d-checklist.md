@@ -1,6 +1,6 @@
 # Phase D Checklist
 
-> Le spunte attestano quanto documentato nelle [schede di Fase D](phase-d.tex). Il report descrive cinque partecipanti, tre già coinvolti nella baseline. Le voci sulla partecipazione effettiva e sulla verifica dei dati grezzi restano aperte fino al riscontro sugli originali. Il test sommativo separato compare tra le attività future.
+> Le spunte attestano quanto documentato nelle [schede di Fase D](phase-d.typ). Il report descrive cinque partecipanti, tre già coinvolti nella baseline. Le voci sulla partecipazione effettiva e sulla verifica dei dati grezzi restano aperte fino al riscontro sugli originali. Il test sommativo separato compare tra le attività future.
 
 Riferimento: [specifiche complete](../docs/specs.md).
 

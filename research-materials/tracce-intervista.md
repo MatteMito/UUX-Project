@@ -1,6 +1,6 @@
 # Tracce di intervista --- ricerca utenti Fase A
 
-Versione stampabile delle tracce già abbozzate nelle Market Research card (Documento 04a/04b) di `phase-a.tex`, pronte da portare sul campo.
+Versione stampabile delle tracce già abbozzate nelle Market Research card (Documento 04a/04b) di `phase-a.typ`, pronte da portare sul campo.
 
 Per ciascuna intervista annotare: nome fittizio, data, durata, chi conduce, chi prende appunti, e recuperare almeno una citazione testuale per domanda quando possibile (per la sezione "citazioni" richiesta dalla checklist).
 

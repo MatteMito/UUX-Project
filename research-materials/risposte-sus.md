@@ -2,7 +2,7 @@
 
 Dettaglio delle 10 risposte del System Usability Scale per ciascuna delle 8 sessioni di test (Documenti 06a/06b), raccolte tramite il modulo Google SUS del corso. Scala 1-5 ("fortemente in disaccordo" a "fortemente d'accordo"), come da protocollo (`protocollo-test-utente.md`).
 
-I punteggi finali (0-100) calcolati da questi dati sono già riportati nella tabella riassuntiva del Documento 07 (`phase-a.tex`); questo file conserva il dettaglio per singola domanda a supporto di un'analisi più fine (es. quale item pesa di più sul punteggio basso).
+I punteggi finali (0-100) calcolati da questi dati sono già riportati nella tabella riassuntiva del Documento 07 (`phase-a.typ`); questo file conserva il dettaglio per singola domanda a supporto di un'analisi più fine (es. quale item pesa di più sul punteggio basso).
 
 ## Le 10 affermazioni standard
 

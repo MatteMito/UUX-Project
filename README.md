@@ -4,14 +4,15 @@ HPHP (Help People Help People) project for the Usability and User Experience Des
 
 ## Report and materials
 
-- `hphp-project-report.tex` and `report-style.tex`: report source and shared layout.
+- `hphp-project-report.typ`: report entry point and configuration for the Grape Suite seminar paper template.
 - `phase-a/` through `phase-d/`: chapters, checklists and editable artifacts.
-- `assets/`, `references/` and `research-materials/`: figures, bibliography and source materials.
+- `appendices/phase-ab-evidence.typ`: supplementary traceability tables kept outside the main report.
+- `assets/`, `references/` and `research-materials/`: figures, bibliography, web references and source materials.
 - `docs/`: project specifications, roadmap and task lists.
 - `hphp-project-report.pdf` and `requirements-traceability.html`: readable deliverables.
 
 ## Build
 
-Run `make report` (or `make pdf`) with XeLaTeX, latexmk, Biber and the required LaTeX packages installed. The PDF is generated in the repository root; intermediate files are kept in the ignored `.build/` directory. The ignored SyncTeX file remains beside the PDF for editor synchronization.
+Run `make report` or `make pdf` with Typst 0.15 or later. On the first build Typst downloads `grape-suite:4.0.0` and its dependencies that are missing from its package cache. The build writes `hphp-project-report.pdf` to the repository root.
 
-Run `make clean` to remove disposable compilation files, including saved error files, while retaining the PDF. `LATEXMK` and `BIBER` can be overridden to select local executables.
+Set `TYPST` to use a different compiler executable.

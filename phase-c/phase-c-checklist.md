@@ -1,6 +1,6 @@
 # Phase C Checklist
 
-> Le spunte si basano sui [documenti 01–05 della Fase C](phase-c.tex), sui [blueprint](blueprints/), sui [wireframe](wireframes/), sulle [tavole Before/After](before-after/) e sulla descrizione della suite testata in [Fase D](../phase-d/phase-d.tex). Restano aperte le verifiche di accessibilità, dei sorgenti e della cronologia delle versioni.
+> Le spunte si basano sui [documenti 01–05 della Fase C](phase-c.typ), sui [blueprint](blueprints/), sui [wireframe](wireframes/), sulle [tavole Before/After](before-after/) e sulla descrizione della suite testata in [Fase D](../phase-d/phase-d.typ). Restano aperte le verifiche di accessibilità, dei sorgenti e della cronologia delle versioni.
 
 Riferimento: [specifiche complete](../docs/specs.md).
 

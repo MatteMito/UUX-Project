@@ -48,7 +48,7 @@ Non fornire suggerimenti su dove cliccare. Se il soggetto è completamente blocc
 Prima di condurre i test con i soggetti reali definitivi, eseguire **un pilot** con una persona disponibile (anche non perfettamente in target) per verificare che: i task siano comprensibili, il tempo totale sia ragionevole (~20-30 minuti), la scheda dati sia compilabile in tempo reale. Annotare qui eventuali modifiche al protocollo emerse dal pilot:
 
 - Data pilot: 21/09/2026
-- Modifiche apportate dopo il pilot: dry run interno al team (un membro nel ruolo di partecipante, un secondo come conduttore/osservatore) su CUPweb; ha portato a consolidare 7 regole operative (conduttore non suggerisce il percorso, richieste di aiuto spontanee annotate prima di aiutare, intervento minimo consentito solo su blocco totale, tempi registrati al netto delle interruzioni, errori/esitazioni/richieste di rassicurazione come eventi distinti, nessuna azione reale di prenotazione/disdetta, citazioni testuali separate dall'interpretazione). Dettaglio completo in Documento 06 (`phase-a.tex`).
+- Modifiche apportate dopo il pilot: dry run interno al team (un membro nel ruolo di partecipante, un secondo come conduttore/osservatore) su CUPweb; ha portato a consolidare 7 regole operative (conduttore non suggerisce il percorso, richieste di aiuto spontanee annotate prima di aiutare, intervento minimo consentito solo su blocco totale, tempi registrati al netto delle interruzioni, errori/esitazioni/richieste di rassicurazione come eventi distinti, nessuna azione reale di prenotazione/disdetta, citazioni testuali separate dall'interpretazione). Dettaglio completo in Documento 06 (`phase-a.typ`).
 
 ## 5. Scheda dati (da compilare durante il test, per soggetto)
 
@@ -92,33 +92,33 @@ Learnability (solo se un task viene ripetuto o se emergono differenze tra primo 
 - [ ] Trascrivere la scheda dati in digitale entro 24h.
 - [ ] Calcolare il punteggio SUS individuale (formula standard: item dispari punteggio-1, item pari 5-punteggio, somma ×2,5).
 - [ ] Aggiornare la tabella riassuntiva SUS (Documento 07) con media e varianza una volta raccolti tutti i soggetti.
-- [ ] Copiare i risultati nella card "Test #N: Soggetto..." dedicata in `phase-a.tex` (vedi template più sotto).
+- [ ] Copiare i risultati nella card "Test #N: Soggetto..." dedicata in `phase-a.typ` (vedi template più sotto).
 
 ---
 
-## Template LaTeX per la card individuale di partecipante
+## Template Typst per la card individuale di partecipante
 
-Da copiare e compilare, una volta per soggetto, sotto la relativa card 06a o 06b in `phase-a.tex` (sostituisce i placeholder `\projecttodo` corrispondenti):
+Da copiare e compilare una volta per soggetto nel Documento 06a o 06b di `phase-a/phase-a.typ`.
 
-```latex
-\fieldheading{Test \#1 --- Soggetto: [nome fittizio]}
+```typst
+=== Test \#1 --- Soggetto: \[nome fittizio\]
 
-\textbf{Data:} [gg/mm/aaaa] \quad \textbf{Assistente/conduttore:} [nome] \quad \textbf{Osservatore:} [nome]
+*Data:* \[gg/mm/aaaa\] \
+*Assistente/conduttore:* \[nome\] \
+*Osservatore:* \[nome\]
 
-\textbf{Contesto:} [dove si è svolto il test, dispositivo usato, presenza di terzi]
+*Contesto:* \[dove si è svolto il test, dispositivo usato, presenza di terzi\]
 
-\textbf{Risultati per task:}
-\begin{itemize}
-\item T1 --- Successo: [sì/no/parziale]; Tempo: [mm:ss]; Errori: [n. e tipo]; Note: [...]
-\item T2 --- Successo: [sì/no/parziale]; Tempo: [mm:ss]; Errori: [n. e tipo]; Note: [...]
-\item T3 --- Successo: [sì/no/parziale]; Tempo: [mm:ss]; Errori: [n. e tipo]; Note: [...]
-\end{itemize}
+*Risultati per task:*
+- T1 --- Successo: \[sì/no/parziale\]; Tempo: \[mm:ss\]; Errori: \[n. e tipo\]; Note: \[...\]
+- T2 --- Successo: \[sì/no/parziale\]; Tempo: \[mm:ss\]; Errori: \[n. e tipo\]; Note: \[...\]
+- T3 --- Successo: \[sì/no/parziale\]; Tempo: \[mm:ss\]; Errori: \[n. e tipo\]; Note: \[...\]
 
-\textbf{Punteggio SUS:} [0-100]
+*Punteggio SUS:* \[0-100\]
 
-\textbf{Citazioni significative:} "[...]"
+*Citazioni significative:* "\[...\]"
 
-\textbf{Suggerimenti del soggetto:} [...]
+*Suggerimenti del soggetto:* \[...\]
 
-\textbf{Riflessioni utili per il design:} [...]
+*Riflessioni utili per il design:* \[...\]
 ```
