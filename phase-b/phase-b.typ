@@ -47,10 +47,19 @@ La gerarchia è intenzionale: #strong[Pina] è la protagonista e il riferimento 
 
 === Profilo e competenze
 
-#block(width: 100%, inset: (left: 10pt, right: 7pt, y: 5pt), stroke: (left: 1pt + grape-purple.lighten(85%)))[
+#block(
+  width: 100%,
+  inset: 11pt,
+  radius: 7pt,
+  stroke: 0.65pt + grape-purple.lighten(75%),
+  fill: grape-purple.lighten(98%),
+  breakable: false,
+)[
+// Keep the persona profile, quotation, and skill overview within one card.
+#set text(size: 10.5pt)
 #set par(leading: 0.73em, spacing: 1.02em, justify: false)
 #grid(
-  columns: (24%, 1fr), gutter: 9pt, align: (top, top),
+  columns: (24%, 1fr), gutter: 12pt, align: (top, top),
   [#align(center)[
 #image("../assets/phase-b-persona-pina.jpeg", width: 100%, height: 2.9cm, fit: "contain") #linebreak()
 #[#set text(size: 10pt); #set text(weight: "bold"); #set text(fill: grape-purple);  PROTAGONISTA] #linebreak()
@@ -166,10 +175,19 @@ La gestione di controlli clinici ricorrenti richiede continuità di contesto e s
 
 === Profilo e competenze
 
-#block(width: 100%, inset: (left: 10pt, right: 7pt, y: 5pt), stroke: (left: 1pt + grape-purple.lighten(85%)))[
+#block(
+  width: 100%,
+  inset: 11pt,
+  radius: 7pt,
+  stroke: 0.65pt + grape-purple.lighten(75%),
+  fill: grape-purple.lighten(98%),
+  breakable: false,
+)[
+// Keep the persona profile, quotation, and skill overview within one card.
+#set text(size: 10.5pt)
 #set par(leading: 0.73em, spacing: 1.02em, justify: false)
 #grid(
-  columns: (24%, 1fr), gutter: 9pt, align: (top, top),
+  columns: (24%, 1fr), gutter: 12pt, align: (top, top),
   [#align(center)[
 #image("../assets/phase-b-persona-elena.jpeg", width: 100%, height: 3.8cm, fit: "contain") #linebreak()
 #[#set text(size: 10pt); #set text(weight: "bold"); #set text(fill: grape-purple);  CAREGIVER A DISTANZA] #linebreak()
@@ -284,10 +302,19 @@ La disdetta eseguita da Elena per conto di Pina concretizza la modalità delega 
 
 === Profilo e competenze
 
-#block(width: 100%, inset: (left: 10pt, right: 7pt, y: 5pt), stroke: (left: 1pt + grape-purple.lighten(85%)))[
+#block(
+  width: 100%,
+  inset: 11pt,
+  radius: 7pt,
+  stroke: 0.65pt + grape-purple.lighten(75%),
+  fill: grape-purple.lighten(98%),
+  breakable: false,
+)[
+// Keep the persona profile, quotation, and skill overview within one card.
+#set text(size: 10.5pt)
 #set par(leading: 0.73em, spacing: 1.02em, justify: false)
 #grid(
-  columns: (24%, 1fr), gutter: 9pt, align: (top, top),
+  columns: (24%, 1fr), gutter: 12pt, align: (top, top),
   [#align(center)[
 #image("../assets/phase-b-persona-renato.jpeg", width: 100%, height: 3.8cm, fit: "contain") #linebreak()
 #[#set text(size: 10pt); #set text(weight: "bold"); #set text(fill: grape-purple);  CONTROLLO] #linebreak()
@@ -405,10 +432,19 @@ Il caso d'uso richiede di confrontare analiticamente le alternative e verificarl
 
 === Profilo e competenze
 
-#block(width: 100%, inset: (left: 10pt, right: 7pt, y: 5pt), stroke: (left: 1pt + grape-purple.lighten(85%)))[
+#block(
+  width: 100%,
+  inset: 11pt,
+  radius: 7pt,
+  stroke: 0.65pt + grape-purple.lighten(75%),
+  fill: grape-purple.lighten(98%),
+  breakable: false,
+)[
+// Keep the persona profile, quotation, and skill overview within one card.
+#set text(size: 10.5pt)
 #set par(leading: 0.73em, spacing: 1.02em, justify: false)
 #grid(
-  columns: (24%, 1fr), gutter: 9pt, align: (top, top),
+  columns: (24%, 1fr), gutter: 12pt, align: (top, top),
   [#align(center)[
 #image("../assets/phase-b-persona-amina.jpeg", width: 100%, height: 3.0cm, fit: "contain") #linebreak()
 #[#set text(size: 10pt); #set text(weight: "bold"); #set text(fill: grape-purple);  CAREGIVER CONVIVENTE] #linebreak()

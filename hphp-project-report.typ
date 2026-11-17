@@ -33,13 +33,13 @@
 
 // Keep the inline quotations and multipage tables used in the report.
 #set quote(block: false)
-#set par(leading: 0.9em, spacing: 1.2em, first-line-indent: 0pt)
-#set list(spacing: 0.5em)
-#set enum(spacing: 0.5em)
+#set par(leading: 0.82em, spacing: 1.2em, first-line-indent: 0pt)
+#set list(tight: false, spacing: 0.85em)
+#set enum(tight: false, spacing: 0.85em)
 #show heading: it => block(
-  above: if it.level <= 2 { 1.15em } else if it.level == 3 { 0.9em } else { 0.7em },
+  above: if it.level <= 2 { 1.65em } else if it.level == 3 { 1.3em } else { 1em },
   sticky: true,
-  pad(bottom: if it.level <= 2 { 5pt } else { 3.5pt }, it),
+  pad(bottom: if it.level <= 2 { 6pt } else { 4.5pt }, it),
 )
 #show figure.where(kind: table): set block(breakable: true)
 #show table.cell: set par(first-line-indent: 0pt, leading: 0.65em)
