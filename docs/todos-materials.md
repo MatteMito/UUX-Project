@@ -15,20 +15,20 @@ Materiali da produrre, completare o verificare per ogni sezione del [report](tod
 ### 1.3 User Research
 
 - [ ] Due Market Research Card con sintesi delle evidenze, fonti e limiti del campione.
-- [x] [Screenshot delle fonti statistiche](../research-materials/screenshot-fonti-statistiche/) raccolti e controllati.
+- [x] [Screenshot delle fonti statistiche](../phase-a/research-materials/screenshot-fonti-statistiche/) raccolti e controllati.
 - [ ] Copie anonimizzate delle evidenze di ricerca da allegare, con riferimenti alle fonti nel report.
 
 ### 2.1 Expert Usability Review
 
 - [ ] Assessment Card 05a e 05b con prima ispezione, screenshot, analisi diretta e inversa e riepiloghi quantitativi.
-- [ ] [Workbook UserFocus completo](../phase-a/phase-a-guideline-checklist.xlsx) per i supplementi, con giudizi, evidenze e motivazioni. Distinguere le voci che richiedono autenticazione dagli altri casi non verificati.
+- [ ] [Workbook UserFocus completo](../phase-a/assessment/phase-a-guideline-checklist.xlsx) per i supplementi, con giudizi, evidenze e motivazioni. Distinguere i criteri legati all’autenticazione dagli altri limiti di copertura.
 
 ### 2.2 User Testing preliminare
 
 - [ ] Card 06a e 06b con protocollo, 3–4 task e documentazione del campione di 2–6 utenti reali.
 - [ ] Test Data Card, log anonimizzati, risposte SUS e questionario di apprezzamento, con tabelle e calcoli verificabili.
 - [ ] Curva d’urgenza con assi, soglia e problemi coerenti con le evidenze.
-- [ ] [Tracker di reclutamento](../research-materials/tracker-reclutamento.md) anonimizzato per i supplementi.
+- [ ] [Tracker di reclutamento](../phase-a/testing/tracker-reclutamento.md) anonimizzato per i supplementi.
 
 ### Conclusioni e raccomandazioni di Fase A
 

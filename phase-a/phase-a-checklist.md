@@ -68,7 +68,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Collegare ogni giudizio non conforme o parziale a un'evidenza.
 - [x] Includere i risultati quantitativi nella documentazione.
 - [x] Conservare checklist completa e screenshot (checklist: file xlsx consegnato a parte; screenshot: incorporati nel PDF).
-- [x] Individuare gli elementi `Non verificato` e distinguerli da quelli non conformi.
+- [x] Distinguere i criteri fuori copertura dalle non conformità osservate.
 - [x] Verificare con soggetti reali gli elementi che richiedono autenticazione oppure documentarne esplicitamente il rinvio.
 
 **Deliverable:** una Assessment card per ogni tool e workbook delle guideline.
@@ -126,7 +126,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 Le spunte precedenti descrivono i contenuti predisposti; non sostituiscono la verifica delle fonti primarie.
 
 - [x] Allineare il tracker all'età riportata nell'intervista di Fatima (35 anni), esplicitando che il caso è fuori dalla fascia target 45–60.
-- [ ] Riesaminare le 64/69 voci non verificate e sostituire le motivazioni generiche con schermata, prerequisito e verifica prevista. Vedere il censimento derivato nei materiali di ricerca.
+- [ ] Consultare il [registro di copertura](assessment/registro-copertura-guideline.md) per i 64 criteri CUPweb e i 69 MioDottore fuori copertura. Le note riportano i prerequisiti registrati e il dettaglio disponibile per schermata.
 - [ ] Recuperare o localizzare le attestazioni individuali del consenso e i verbali originali; non risultano rintracciabili nel repository esaminato.
 - [ ] Recuperare o localizzare l'esportazione originale dei questionari SUS e riconciliarla con le risposte conservate.
 

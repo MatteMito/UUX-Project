@@ -1,8 +1,8 @@
 # Tracce di intervista --- ricerca utenti Fase A
 
-Versione stampabile delle tracce già abbozzate nelle Market Research card (Documento 04a/04b) di `phase-a.typ`, pronte da portare sul campo.
+Tracce d’intervista per le Market Research card (Documenti 04a e 04b) del report.
 
-Per ciascuna intervista annotare: nome fittizio, data, durata, chi conduce, chi prende appunti, e recuperare almeno una citazione testuale per domanda quando possibile (per la sezione "citazioni" richiesta dalla checklist).
+Per ciascuna intervista annotare: codice partecipante, data, durata, chi conduce, chi prende appunti, e recuperare almeno una citazione testuale per domanda quando possibile (per la sezione "citazioni" richiesta dalla checklist).
 
 ---
 
@@ -54,4 +54,4 @@ Per ciascuna intervista annotare: nome fittizio, data, durata, chi conduce, chi 
 
 - Trascrivere entro 24h le citazioni più significative, segnalando quelle da poter riportare nel report (in forma anonima).
 - Annotare limiti/bias osservati (es. soggetto reclutato per vicinanza/disponibilità e non rappresentatività, presenza di un familiare durante l'intervista che potrebbe aver influenzato le risposte, ecc.) per la sezione "limiti e bias" della checklist.
-- Aggiornare il [tracker di reclutamento](tracker-reclutamento.md).
+- Aggiornare il [tracker di reclutamento](../testing/tracker-reclutamento.md).

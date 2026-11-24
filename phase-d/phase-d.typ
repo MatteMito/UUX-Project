@@ -233,7 +233,7 @@ La suite testata coincide con le 19 schermate desktop (WF-01--WF-19, #link(<doc:
 
 #heading(level: 5, numbering: none, outlined: false)[Configurazione delle sessioni]
 
-In Fase A Giorgio aveva usato un tablet mentre gli altri partecipanti usavano il PC (#link(<doc:a:06a>)[Documento~06a]). In Fase D tutte le sessioni si sono svolte su computer con schermo ampio e mouse, in presenza (Carla, Sergio, Laura) o in videochiamata con schermo condiviso (Silvia, Giorgio), con dati fittizi e senza mai toccare dati sanitari o bancari reali.
+In Fase A Giorgio aveva usato un tablet mentre gli altri partecipanti usavano il PC (#link(<doc:a:06a>)[Documento~06a]). In Fase D tutte le sessioni si sono svolte su computer con schermo ampio e mouse, in presenza (Carla, Sergio, Laura) o in videochiamata con schermo condiviso (Silvia, Giorgio), con dati di test, senza utilizzare dati sanitari o bancari dei partecipanti.
 
 #heading(level: 5, numbering: none, outlined: false)[Compiti e metriche]
 
@@ -877,7 +877,7 @@ HPHP (#link(<doc:a:02>)[Documento~02]) mirava a ridurre le barriere digitali di 
 #list(
   [#strong[Primo innesco del PIN:] richiede una prima autenticazione con SPID/CIE, o un'attivazione assistita, e va rinnovato ogni 30 giorni; per un anziano isolato e senza SPID restano necessari il canale fisico o telefonico.],
   [#strong[Complessità del Co-pilota:] prenotazione, delega e guida pagoPA poggiano su servizi regionali esistenti, mentre il co-browsing con audio e trascrizione richiede un'infrastruttura dedicata e una valutazione privacy GDPR.],
-  [#strong[Campione ristretto:] $N=5$, reclutato per prossimità al team, e compatibilità con le tecnologie assistive progettata ma non verificata con utenti non vedenti.],
+  [#strong[Campione ristretto:] $N=5$, reclutato per prossimità al team, e valutazione condotta senza partecipanti non vedenti, per i quali è previsto l’uso di tecnologie assistive.],
 )
 ]
 

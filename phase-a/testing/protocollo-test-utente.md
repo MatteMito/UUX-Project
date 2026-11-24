@@ -4,7 +4,7 @@ Vale sia per il test sul tool del cliente (CUPweb, 06a) sia per il test sul comp
 
 ## 1. Prima della sessione
 
-- [ ] Verificare che il soggetto rientri nel segmento A o B (vedi [tracce-intervista.md](tracce-intervista.md) per i criteri).
+- [ ] Verificare che il soggetto rientri nel segmento A o B (vedi [tracce-intervista.md](../interviews/tracce-intervista.md) per i criteri).
 - [ ] Preparare account demo/test (dove possibile) così da non toccare dati sanitari reali del soggetto.
 - [ ] Preparare dispositivo del team preconfigurato identico, come backup se il soggetto non vuole usare il proprio.
 - [ ] Stampare: questo protocollo, scheda dati, questionario di gradimento; avere pronto il link al modulo Google SUS del corso.
@@ -27,7 +27,7 @@ Dispositivi delle sessioni riportate: Giorgio su tablet; Carla, Silvia e Fatima 
 | # | Task | Metodologia |
 |---|---|---|
 | T1 | Accedere a CUPweb dal browser e individuare come prenotare una visita specialistica (senza completare la prenotazione) | Thinking Aloud |
-| T2 | Disdire un appuntamento fittizio già presente nell'account demo/test | Bottom Line Data (non interrompere, non aiutare) |
+| T2 | Disdire l’appuntamento predisposto nell’account di test | Bottom Line Data (non interrompere, non aiutare) |
 | T3 | Individuare dove e come chiedere aiuto/assistenza in caso di difficoltà | Thinking Aloud |
 
 ### 06b --- MioDottore
@@ -52,7 +52,7 @@ Prima di condurre i test con i soggetti reali definitivi, eseguire **un pilot** 
 
 ## 5. Scheda dati (da compilare durante il test, per soggetto)
 
-Tool testato: __________  Nome fittizio soggetto: __________  Data: __________  Conduttore: __________  Osservatore: __________
+Tool testato: __________  Codice partecipante: __________  Data: __________  Conduttore: __________  Osservatore: __________
 
 | Task | Successo (sì/no/parziale) | Tempo impiegato | N. errori | Tipo di errori | Aiuti richiesti (sì/no, quali) | Citazioni/osservazioni rilevanti |
 |---|---|---|---|---|---|---|
@@ -101,7 +101,7 @@ Learnability (solo se un task viene ripetuto o se emergono differenze tra primo 
 Da copiare e compilare una volta per soggetto nel Documento 06a o 06b di `phase-a/phase-a.typ`.
 
 ```typst
-=== Test \#1 --- Soggetto: \[nome fittizio\]
+=== Test \#1 --- Soggetto: \[codice partecipante\]
 
 *Data:* \[gg/mm/aaaa\] \
 *Assistente/conduttore:* \[nome\] \

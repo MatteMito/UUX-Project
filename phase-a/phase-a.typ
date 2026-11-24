@@ -642,7 +642,7 @@ azioni pubbliche e quelle protette; le segnalazioni sull'uso autenticato
 restano distinte dall'ispezione diretta.
 
 #figure(
-  [#image("../research-materials/screenshot-cupweb-miodottore/cupweb-home.png", width: 85%)],
+  [#image("screenshots/cupweb-home.png", width: 85%)],
   kind: image,
   caption: [Home page del servizio CUPweb],
 ) <fig:cupweb-home>
@@ -742,7 +742,7 @@ standard commerciali attuali (ricerca a faccette, card con foto,
 recensioni a stelle, iconografia chiara).
 
 #figure(
-  [#image("../research-materials/screenshot-cupweb-miodottore/miodottore-home.png", width: 85%)],
+  [#image("screenshots/miodottore-home.png", width: 85%)],
   kind: image,
   caption: [Home page di MioDottore],
 ) <fig:miodottore-home>
@@ -960,7 +960,7 @@ individuali riferite ai profili di Giorgio, Carla, Silvia e Fatima.
 #list(
   [T1: Accedere a CUPweb dal browser e individuare come prenotare una visita
   specialistica (senza completare la prenotazione)],
-  [T2: Disdire un appuntamento fittizio già presente
+  [T2: Disdire un appuntamento predisposto per il test e già presente
   nell’account demo/test],
   [T3: Individuare dove e come chiedere aiuto/assistenza in caso di
   difficoltà],
@@ -2075,10 +2075,10 @@ mantiene distinti i propri obiettivi da quelli dei test storici.
   [#strong[REQ-10]<req:REQ-10>: Prima di compilare il pagamento, l'utente deve poter
   riconoscere quali documenti preparare. Accanto a ciascun campo devono
   essere disponibili una spiegazione, l'indicazione di dove reperire il
-  dato e un esempio illustrativo con dati fittizi, distinguibile dai valori
+  dato e un esempio illustrativo chiaramente distinto dai valori
   da inserire. Le istruzioni devono riferirsi al documento effettivamente
   richiesto, senza assumere che tutto sia riportato sulla ricetta, ed
-  essere consultabili senza perdere quanto già compilato. I campi e gli
-  esempi saranno definiti sulla base del percorso verificato. Priorità
-  progettuale: media; validazione specifica non ancora disponibile.],
+  essere consultabili senza perdere quanto già compilato. Il percorso osservato orienta la scelta dei campi e degli esempi. La
+  valutazione documentata riguarda il percorso complessivo. Priorità
+  progettuale: media.],
 )

@@ -1,6 +1,6 @@
 # Tracker di reclutamento: Fase A
 
-Da tenere aggiornato durante interviste (Documento 04a/04b) e user testing preliminare (Documento 06a/06b). Non contiene dati identificativi reali: usare solo nomi fittizi già dalla prima riga.
+Registro del reclutamento per le interviste (Documenti 04a e 04b) e i test preliminari (Documenti 06a e 06b). I partecipanti sono indicati con gli identificativi usati nel report.
 
 Requisiti minimi (da `phase-a-checklist.md` / `docs/specs-summary.md`):
 - Segmento A: 2-3 persone, 65-85 anni, competenza digitale bassa/media.
@@ -9,19 +9,17 @@ Requisiti minimi (da `phase-a-checklist.md` / `docs/specs-summary.md`):
 
 ## Segmento A: pazienti anziani
 
-| Nome fittizio | Età | Genere | Competenza tecnica/dominio | Relazione con il team | Canale/modalità di reclutamento | Data contatto | Intervista fatta | Test 06a fatto | Test 06b fatto | Disponibile per Fase D |
+| Partecipante | Età | Genere | Competenza tecnica/dominio | Relazione con il team | Canale/modalità di reclutamento | Data contatto | Intervista fatta | Test 06a fatto | Test 06b fatto | Disponibile per Fase D |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Carla B. | 75-85+ | F | Bassa autonomia digitale | Nonna di Alessandro Campedelli | Rete familiare (nonna di un membro del team) | 19/09/2026 | Sì (in presenza, 17 min) | Sì (23/09/2026, SUS 22,5/100) | Sì (24/09/2026, SUS 45/100) | Sì |
 | Giorgio M. | 65-74 | M | Nuovo utente digitale | Amico di famiglia di Francesco Maria Fuligni | Rete familiare/amicale | 20/09/2026 | Sì (telefonica, 13 min) | Sì (22/09/2026, SUS 40/100) | Sì (23/09/2026, SUS 72,5/100) | Sì |
-| | | | | | | | | | | |
 
 ## Segmento B: caregiver familiari
 
-| Nome fittizio | Età | Genere | Competenza tecnica/dominio | Relazione con il team | Canale/modalità di reclutamento | Data contatto | Intervista fatta | Test 06a fatto | Test 06b fatto | Disponibile per Fase D |
+| Partecipante | Età | Genere | Competenza tecnica/dominio | Relazione con il team | Canale/modalità di reclutamento | Data contatto | Intervista fatta | Test 06a fatto | Test 06b fatto | Disponibile per Fase D |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Silvia F. | 45-60 | F | Caregiver a distanza | Amica di Matteo Boscherini | Rete amicale | 21/09/2026 | Sì (telefonica, 10 min) | Sì (23/09/2026, SUS 55/100) | Sì (23/09/2026, SUS 80/100) | |
 | Fatima R. | 35 (come riportato nell’intervista) | F | Caregiver convivente | Segretaria dell'azienda di tirocinio di Matteo Boscherini | Rete professionale | 21/09/2026 | Sì (in presenza, 17 min) | Sì (24/09/2026, SUS 37,5/100) | Sì (24/09/2026, SUS 67,5/100) | |
-| | | | | | | | | | | |
 
 ## Note su modalità di reclutamento
 
@@ -31,7 +29,7 @@ Compilare onestamente (richiesto esplicitamente dal formato del corso): indicare
 
 ## Follow-up Fase D
 
-Elencare qui i nomi fittizi dei partecipanti che hanno accettato di essere ricontattati, con un promemoria di contatto (indicativo, senza dati reali):
+Partecipanti che hanno dato disponibilità al ricontatto. Il registro riporta solo il promemoria relativo alla Fase D.
 
 - [x] Carla B. (segmento A, avvisata, contattare entro Fase D)
 - [x] Giorgio M. (segmento A, avvisato, contattare entro Fase D)

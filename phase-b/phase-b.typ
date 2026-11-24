@@ -72,7 +72,7 @@ Gli scenari riguardano la prenotazione ricorrente di #link(<doc:b:02a>)[Pina], l
 #grid(
   columns: (24%, 1fr), gutter: 12pt, align: (top, top),
   [#align(center)[
-#image("../assets/phase-b-persona-pina.jpeg", width: 100%, height: 2.9cm, fit: "contain") #linebreak()
+#image("portraits/phase-b-persona-pina.jpeg", width: 100%, height: 2.9cm, fit: "contain") #linebreak()
 #[#set text(size: 10pt); #set text(weight: "bold"); #set text(fill: grape-purple);  PROTAGONISTA] #linebreak()
 #[#set text(size: 8pt); #set text(weight: "bold"); #set text(fill: luma(90));  Segmento A $dot$ Utente diretta]
 ]],
@@ -108,7 +108,7 @@ Pina conserva ricette dematerializzate (NRE), ricevute e promemoria nella “bus
 #grid(
   columns: (30%, 1fr), gutter: 9pt, align: (center + horizon, top),
   [#align(center)[
-#image("../assets/phase-b-persona-pina-skills.png", width: 100%, height: 2.4cm, fit: "contain")
+#image("charts/phase-b-persona-pina-skills.png", width: 100%, height: 2.4cm, fit: "contain")
 ]],
   [#[
 #set text(size: 10pt)
@@ -200,7 +200,7 @@ La gestione di controlli clinici ricorrenti richiede continuità di contesto e s
 #grid(
   columns: (24%, 1fr), gutter: 12pt, align: (top, top),
   [#align(center)[
-#image("../assets/phase-b-persona-elena.jpeg", width: 100%, height: 3.8cm, fit: "contain") #linebreak()
+#image("portraits/phase-b-persona-elena.jpeg", width: 100%, height: 3.8cm, fit: "contain") #linebreak()
 #[#set text(size: 10pt); #set text(weight: "bold"); #set text(fill: grape-purple);  CAREGIVER A DISTANZA] #linebreak()
 #[#set text(size: 8pt); #set text(weight: "bold"); #set text(fill: luma(90));  Segmento B $dot$ Intermediaria]
 ]],
@@ -236,7 +236,7 @@ Elena contrassegna gli appuntamenti della madre con un'etichetta rossa nel propr
 #grid(
   columns: (30%, 1fr), gutter: 9pt, align: (center + horizon, top),
   [#align(center)[
-#image("../assets/phase-b-persona-elena-skills.png", width: 100%, height: 3.3cm, fit: "contain")
+#image("charts/phase-b-persona-elena-skills.png", width: 100%, height: 3.3cm, fit: "contain")
 ]],
   [#[
 #set text(size: 10pt)
@@ -327,7 +327,7 @@ La disdetta eseguita da Elena per conto di Pina concretizza la modalità delega 
 #grid(
   columns: (24%, 1fr), gutter: 12pt, align: (top, top),
   [#align(center)[
-#image("../assets/phase-b-persona-renato.jpeg", width: 100%, height: 3.8cm, fit: "contain") #linebreak()
+#image("portraits/phase-b-persona-renato.jpeg", width: 100%, height: 3.8cm, fit: "contain") #linebreak()
 #[#set text(size: 10pt); #set text(weight: "bold"); #set text(fill: grape-purple);  CONTROLLO] #linebreak()
 #[#set text(size: 8pt); #set text(weight: "bold"); #set text(fill: luma(90));  Segmento A $dot$ Utente diretto]
 ]],
@@ -363,7 +363,7 @@ Renato usa il PC desktop nello studio domestico o il tablet in soggiorno, tenend
 #grid(
   columns: (30%, 1fr), gutter: 9pt, align: (center + horizon, top),
   [#align(center)[
-#image("../assets/phase-b-persona-renato-skills.png", width: 100%, height: 3.3cm, fit: "contain")
+#image("charts/phase-b-persona-renato-skills.png", width: 100%, height: 3.3cm, fit: "contain")
 ]],
   [#[
 #set text(size: 10pt)
@@ -457,7 +457,7 @@ Il caso d'uso richiede di confrontare analiticamente le alternative e verificarl
 #grid(
   columns: (24%, 1fr), gutter: 12pt, align: (top, top),
   [#align(center)[
-#image("../assets/phase-b-persona-amina.jpeg", width: 100%, height: 3.0cm, fit: "contain") #linebreak()
+#image("portraits/phase-b-persona-amina.jpeg", width: 100%, height: 3.0cm, fit: "contain") #linebreak()
 #[#set text(size: 10pt); #set text(weight: "bold"); #set text(fill: grape-purple);  CAREGIVER CONVIVENTE] #linebreak()
 #[#set text(size: 8pt); #set text(weight: "bold"); #set text(fill: luma(90));  Segmento B $dot$ Intermediaria]
 ]],
@@ -493,7 +493,7 @@ Amina coordina visite e terapie per la suocera Nasima con un calendario murale b
 #grid(
   columns: (30%, 1fr), gutter: 9pt, align: (center + horizon, top),
   [#align(center)[
-#image("../assets/phase-b-persona-amina-skills.png", width: 100%, height: 2.5cm, fit: "contain")
+#image("charts/phase-b-persona-amina-skills.png", width: 100%, height: 2.5cm, fit: "contain")
 ]],
   [#[
 #set text(size: 10pt)
@@ -577,8 +577,8 @@ La gestione delegata su computer domestico condiviso esige resilienza di session
 )
 
 #align(center)[
-  #image("../assets/phase-b-personas-comparison.png", width: 72%) \
-  #image("../assets/phase-b-personas-overlay.png", width: 68%)
+  #image("charts/phase-b-personas-comparison.png", width: 72%) \
+  #image("charts/phase-b-personas-overlay.png", width: 68%)
 ]
 
 La visualizzazione comparativa sintetizza le sei dimensioni C&A del cast su scala diretta 1--5 (1 al centro, 5 al perimetro esterno). La sovrapposizione evidenzia la complementarietà dei profili: l'area interna copre l'alta fragilità di Pina, mentre le estensioni di Elena (tecnica), Renato (linguistica e dominio) e Amina (motivazione) presidiano gli estremi dell'esperienza d'uso senza ridondanze.

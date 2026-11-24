@@ -7,7 +7,9 @@ HPHP (Help People Help People) project for the Usability and User Experience Des
 - `hphp-project-report.typ`: report entry point and configuration for the Grape Suite seminar paper template.
 - `phase-a/` through `phase-d/`: chapters, checklists and editable artifacts.
 - `appendices/phase-ab-evidence.typ`: supplementary traceability tables kept outside the main report.
-- `assets/`, `references/` and `research-materials/`: figures, bibliography, web references and source materials.
+- `phase-a/`: assessment, interviews, preliminary user testing, evidence register and screenshots in dedicated folders.
+- `phase-b/portraits/` and `phase-b/charts/`: persona portraits and competency charts.
+- `assets/` and `references/`: report figures, bibliography and source copies.
 - `docs/`: project specifications, roadmap and task lists.
 - `hphp-project-report.pdf` and `requirements-traceability.html`: readable deliverables.
 

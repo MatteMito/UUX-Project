@@ -7,7 +7,7 @@ Una casella per sezione del progetto. La spunta indica una sezione chiusa. Le se
 - [ ] **1.1 Business Purpose** — Verificare Team Card, Client Card, obiettivi e indicatori di successo.
 - [ ] **1.2 Segmentazione del target** — Verificare la User Segmentation Card e la motivazione della scelta dei due segmenti prioritari.
 - [ ] **1.3 User Research** — Verificare le due Market Research Card rispetto alle fonti e al campione. Screenshot delle fonti già raccolti e controllati.
-- [ ] **2.1 Expert Usability Review** — Verificare le Assessment Card 05a e 05b e motivare i giudizi «Non verificato».
+- [ ] **2.1 Expert Usability Review** — Verificare le Assessment Card 05a e 05b e documentare la copertura dell’ispezione.
 - [ ] **2.2 User Testing preliminare** — Card 06a e 06b già redatte. Verificare originali, comparabilità dei task, SUS, questionario di apprezzamento e curva d’urgenza.
 - [ ] **Conclusioni e raccomandazioni di Fase A** — Rivedere il Documento 07 e verificare i collegamenti tra evidenze, priorità e requisiti.
 
