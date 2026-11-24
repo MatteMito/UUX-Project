@@ -489,9 +489,9 @@ La proposta HPHP introduce inoltre funzionalità di cooperazione e assistenza #s
 
 #heading(level: 3, numbering: none)[Documento 06: Scheda di progettazione] <doc:c:06>
 
-- La prenotazione ricorrente di #link(<doc:b:02a>)[Pina] ha motivato la scorciatoia dalla Home e il percorso guidato. Il co-pilota le consente di ricevere assistenza da Elena mantenendo il controllo dell’interazione.
-- Lo scenario di #link(<doc:b:02b>)[Elena] ha motivato la gestione in delega e l’indicazione del profilo attivo. La finestra di ripensamento permette di correggere una disdetta eseguita in fretta.
-- Il confronto di #link(<doc:b:02c>)[Renato] ha motivato l’affiancamento di servizio pubblico e libera professione, con costi ed esenzioni visibili prima di scegliere sede e orario.
-- Le interruzioni nello scenario di #link(<doc:b:02d>)[Amina] hanno motivato il salvataggio e la ripresa della pratica dopo un’interruzione. La copertura da smartphone resta secondaria.
+- La prenotazione ricorrente di #link(<doc:b:02a>)[Pina] ha motivato la scorciatoia dalla #link(<fig:wf-02>)[Home] e il percorso guidato. Il #link(<fig:wf-07>)[Co-pilota] le consente di ricevere assistenza da Elena mantenendo il controllo dei comandi.
+- La disdetta urgente nello scenario di #link(<doc:b:02b>)[Elena] ha motivato la #link(<fig:wf-15>)[gestione in delega] e l’indicazione del profilo attivo. La #link(<fig:wf-14>)[finestra di ripensamento] consente di correggere una disdetta eseguita in fretta.
+- Il confronto di #link(<doc:b:02c>)[Renato] ha motivato l’#link(<fig:wf-04>)[affiancamento dei due regimi], con costi ed esenzioni visibili prima di scegliere sede e orario.
+- Le interruzioni nello scenario di #link(<doc:b:02d>)[Amina] hanno motivato il #link(<fig:wf-19>)[salvataggio e la ripresa della pratica]. Il #link(<fig:wf-10>)[promemoria condivisibile] permette ai familiari di coordinarsi dopo la prenotazione.
 
-Il #link(<doc:d:03>)[protocollo di valutazione] documenta la suite WF-01–WF-19 e l’estensione del primo compito al pagamento assistito dopo il pilota. Le #link(<doc:d:04>)[conclusioni] riportano le correzioni proposte a partire dai problemi residui.
+Il #link(<fig:wf-01>)[PIN sul computer abituale] sostituisce l’ipotesi di un SMS a ogni accesso, che riproponeva il passaggio al telefono richiesto da SPID. Il #link(<doc:d:03>)[protocollo] documenta l’aggiunta del pagamento assistito dopo il pilota. Le #link(<doc:d:04>)[conclusioni] riportano le correzioni proposte.
