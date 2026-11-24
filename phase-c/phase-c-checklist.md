@@ -1,6 +1,6 @@
 # Phase C Checklist
 
-> Le spunte si basano sui [documenti 01–05 della Fase C](phase-c.typ), sui [blueprint](blueprints/), sui [wireframe](wireframes/), sulle [tavole Before/After](before-after/) e sulla descrizione della suite testata in [Fase D](../phase-d/phase-d.typ). Restano aperte le verifiche di accessibilità, dei sorgenti e della cronologia delle versioni.
+> Le spunte si basano sui [documenti 01–06 della Fase C](phase-c.typ), sui [blueprint](blueprints/), sui [wireframe](wireframes/), sulle [tavole Before/After](before-after/), sugli [appunti di progettazione](wireframes/appunti-progettazione.md) e sulla descrizione della suite testata in [Fase D](../phase-d/phase-d.typ).
 
 Riferimento: [specifiche complete](../docs/specs.md).
 
@@ -35,7 +35,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Progettare feedback, conferme e notifiche.
 - [x] Progettare annullamento, errori e recupero.
 - [x] Definire il ruolo dell'intermediario nei diversi passaggi.
-- [ ] Verificare coerenza con scenari e personas.
+- [x] Collegare gli scenari delle quattro personas ai flussi e alle schermate nel Documento 06.
 
 ## 4. Blueprint
 
@@ -54,7 +54,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 
 ## 5. Wireframe e prototipo
 
-- [ ] Definire il livello di fedeltà.
+- [x] Consegnare una rappresentazione coerente delle 19 schermate desktop, con interfaccia e contenuti di dettaglio.
 - [x] Creare un wireframe per ogni schermata significativa.
 - [x] Includere testi, immagini, comandi ed etichette necessari ai task.
 - [x] Inserire contenuti realistici quando influenzano tono o comprensione.
@@ -65,8 +65,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [ ] Verificare coerenza tra IA, flussi, blueprint e schermate.
 - [x] Rendere navigabili i task principali.
 - [x] Eseguire un controllo interno prima della Fase D.
-- [ ] Congelare e nominare la versione iniziale.
-- [ ] Identificare la versione iniziale come `v0` e conservarla come baseline pre-ispezione.
+- [x] Identificare la suite sottoposta alla valutazione e descriverne il congelamento nel protocollo di Fase D.
 
 **Deliverable:** wireframe e prototipo testabile.
 
@@ -84,18 +83,13 @@ Riferimento: [specifiche complete](../docs/specs.md).
 
 **Deliverable:** confronto Before/After approfondito.
 
-## 7. Design card e versioni
+## 7. Design card e appunti di progettazione
 
 - [x] Spiegare come le personas hanno influenzato il design.
 - [x] Collegare le decisioni alle evidenze e ai requisiti.
-- [ ] Documentare alternative e design scartati.
-- [ ] Assegnare un nome stabile a ogni versione.
-- [ ] Conservare un changelog con input, modifica e motivazione.
-- [ ] Archiviare la versione iniziale prima dell'ispezione.
-- [ ] Archiviare separatamente le versioni successive.
-- [ ] Collegare `v1` alle raccomandazioni dell'ispezione di Fase D e renderne esplicita la cronologia.
+- [x] Documentare le alternative accantonate e le correzioni proposte negli [appunti di progettazione](wireframes/appunti-progettazione.md). La consegna del gruppo usa gli elaborati definitivi e la nota discorsiva.
 - [x] Completare e rivedere la Design summary card per la consegna.
-- [ ] Dichiarare assunzioni, limiti e aspetti fuori scope.
+- [x] Dichiarare il perimetro desktop, la copertura responsive secondaria e le scelte rinviate. Le verifiche di accessibilità e degli stati restano aperte nelle sezioni sopra.
 
 **Deliverable:** Design card.
 

@@ -6,7 +6,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 
 ## 1. Team card
 
-- [ ] Ripetere la Team card della Fase A senza variazioni non motivate. Il report presenta la scheda una sola volta, in Fase A.
+Per la consegna del gruppo, la Team card compare una sola volta nel Documento 01 della [Fase A](../phase-a/phase-a.typ).
 
 ## 2. Context of use
 
@@ -39,7 +39,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Verificare che le personas suggeriscano scelte di design non ovvie.
 - [x] Diversificare il cast per genere, origine, lingua e struttura familiare quando tali differenze producono scenari e requisiti pertinenti.
 - [x] Evitare sia stereotipi sia variazioni puramente decorative: ogni personaggio deve avere storia, abitudini e conflitti specifici.
-- [x] Inserire foto personas 
+- [x] Inserire i [ritratti delle personas](portraits/).
 
 ## 5. Competenze e abilità
 
@@ -83,14 +83,13 @@ Per ogni persona:
 
 - [x] Aggiornare e uniformare le quattro Persona card nel report e nel workbook.
 - [x] Rendere coerenti ruoli, segmenti, scenari, C\&A, requisiti e stato dell'evidenza.
-- [x] Realizzare quattro radar individuali, heatmap comparativa e radar sovrapposto del cast.
+- [x] Conservare i [grafici C&A](charts/): quattro radar individuali, confronto delle competenze e radar sovrapposto del cast.
 - [x] Usare la scala diretta nei radar: 1 vicino al centro e 5 verso il bordo esterno.
 - [x] Verificare formule e riferimenti del workbook.
 - [x] Compilare il PDF e controllare la leggibilità delle pagine della Fase B.
 
 ## Controllo finale della fase
 
-- [ ] Team card ripetuta nella fase. La scheda è in Fase A, Documento 01.
 - [x] Context of use documentato.
 - [x] Scenari completi e non dipendenti da un'interfaccia già decisa.
 - [x] Cast card completa di alternative scartate.
@@ -104,4 +103,4 @@ Per ogni persona:
 
 - [x] Specificare tre casi principali da computer e il caso responsive secondario di Amina.
 - [x] Esplicitare laptop familiare e supporto di Elena nello scenario co-pilota di Pina, mantenendo i punteggi C&A.
-- [x] Allineare testo e [workbook v2](phase-b-personas-and-cast-v2.xlsx), preservando i diagrammi. Il workbook originale è recuperabile da Git al commit `dcea72f`.
+- [x] Allineare testo e [workbook del cast](phase-b-personas-and-cast-v2.xlsx), preservando i diagrammi.

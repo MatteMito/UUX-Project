@@ -1,39 +1,53 @@
-# HPHP - TODO del report
+# HPHP · Checklist del report
 
-Una casella per sezione del progetto. La spunta indica una sezione chiusa. Le sezioni già redatte possono restare aperte per verifiche. I relativi materiali sono in [todos-materials.md](todos-materials.md). Numerazione e requisiti seguono le [specifiche del corso](specs.md#struttura-generale).
+Le spunte attestano la presenza delle sezioni nel [report unico](../hphp-project-report.pdf). Gli allegati sono elencati nella [checklist dei materiali](todos-materials.md). Le verifiche ancora aperte sono distinte dalla stesura delle card.
 
-## Fase A — Analisi etnografica e assessment
+## Fase A · Analisi etnografica e assessment
 
-- [ ] **1.1 Business Purpose** — Verificare Team Card, Client Card, obiettivi e indicatori di successo.
-- [ ] **1.2 Segmentazione del target** — Verificare la User Segmentation Card e la motivazione della scelta dei due segmenti prioritari.
-- [ ] **1.3 User Research** — Verificare le due Market Research Card rispetto alle fonti e al campione. Screenshot delle fonti già raccolti e controllati.
-- [ ] **2.1 Expert Usability Review** — Verificare le Assessment Card 05a e 05b e documentare la copertura dell’ispezione.
-- [ ] **2.2 User Testing preliminare** — Card 06a e 06b già redatte. Verificare originali, comparabilità dei task, SUS, questionario di apprezzamento e curva d’urgenza.
-- [ ] **Conclusioni e raccomandazioni di Fase A** — Rivedere il Documento 07 e verificare i collegamenti tra evidenze, priorità e requisiti.
+- [x] **1.1 Business Purpose** — Team card e Client card con servizio, obiettivi e indicatori.
+- [x] **1.2 Segmentazione del target** — User Segmentation card con criteri e motivazione dei segmenti prioritari.
+- [x] **1.3 User Research** — Market Research card per i due segmenti, con fonti, interviste, analisi dei task e limiti del campione.
+- [x] **2.1 Expert Usability Review** — Assessment card 05a e 05b, con copertura dell’ispezione documentata nel [registro dei criteri](../phase-a/assessment/registro-copertura-guideline.md).
+- [x] **2.2 User Testing preliminare** — Card 06a e 06b, protocollo, schede individuali e risultati SUS.
+- [x] **Conclusioni e raccomandazioni** — Documento 07 con curva d’urgenza, evidenze, priorità e requisiti.
+- [ ] **Gradimento** — Il questionario è pronto. Non è stato somministrato durante i test preliminari.
 
-## Fase B — Studio di fattibilità
+[Checklist Fase A](../phase-a/phase-a-checklist.md)
 
-- [ ] **3.1 Context of Use** — Verificare contesti e vincoli rispetto ai segmenti. Controllare che la Team Card riprenda quella della Fase A.
-- [ ] **3.2 Scenarios** — Verificare obiettivi, task, tempi e criteri di successo. Il cast e gli scenari sono già documentati.
-- [ ] **3.3 Personas** — Quattro Persona Card e grafici C&A già prodotti. Verificare evidenze, ipotesi narrative e punteggi.
-- [ ] **3.4 Recommendations for Design** — Verificare il collegamento tra raccomandazioni di Fase A, requisiti, personas e scenari.
+## Fase B · Studio di fattibilità
 
-## Fase C — Proposta progettuale
+- [x] **3.1 Context of Use** — Utenti, segmenti, compiti, ambienti e vincoli.
+- [x] **3.2 Scenarios** — Quattro scenari con obiettivi, compiti e implicazioni per il design.
+- [x] **3.3 Personas** — Quattro Persona card, Cast card, competenze e alternative scartate.
+- [x] **3.4 Recommendations for Design** — Requisiti derivati dalle evidenze e dagli scenari.
 
-- [ ] **4.0 Adoption of a Design Model** — Verificare modello, principi e strategia desktop-first.
-- [ ] **4.1 Information Architecture** — Verificare organizzazione di contenuti e servizi, etichette e navigazione.
-- [ ] **4.3 Interaction Design** — Verificare i flussi, i ruoli di assistenza, gli stati di errore e le azioni di recupero.
-- [ ] **4.4 Structure Blueprint** — Verificare copertura dei flussi end-to-end, passaggi di responsabilità e dipendenze.
-- [ ] **4.5 Wireframes** — Verificare completezza delle schermate e tracciabilità delle revisioni post-ispezione.
-- [ ] **Before/After** — Verificare la comparabilità di schermate, task e stati.
-- [ ] **Design Card** — Verificare il contributo delle personas alle scelte e la cronologia delle versioni.
+La Team card compare una sola volta nel Documento 01 della Fase A, secondo la scelta del gruppo.
 
-## Fase D — Valutazione del design
+[Checklist Fase B](../phase-b/phase-b-checklist.md)
 
-- [ ] **5.1 Inspection** — Verificare la versione ispezionata e collegare problemi e raccomandazioni alle modifiche introdotte. Controllare la Team Card.
-- [ ] **5.2 User Testing del redesign** — Il report descrive cinque partecipanti, tre dalla baseline. Verificare originali, versione testata, condizioni di confronto e risultati.
-- [ ] **6 Conclusions and Recommendations** — Verificare il confronto quantitativo e qualitativo con CUPweb. Se i risultati sono ambigui o insoddisfacenti, documentare il piano per un’altra iterazione.
+## Fase C · Proposta progettuale
+
+- [x] **4.0 Adoption of a Design Model** — Modello, principi e strategia desktop-first.
+- [x] **4.1 Information Architecture** — Metadati, organizzazione, etichette e navigazione.
+- [x] **4.3 Interaction Design** — Flussi, ruoli di assistenza, feedback e recupero.
+- [x] **4.4 Structure Blueprint** — Sei diagrammi di struttura e legenda.
+- [x] **4.5 Wireframes** — Diciannove schermate desktop.
+- [x] **Before/After** — Quattro confronti con il servizio esistente.
+- [x] **Design Card** — Documento 06 aggiornato, con collegamenti dalle personas alle schermate. Gli [appunti](../phase-c/wireframes/appunti-progettazione.md) riportano anche le alternative accantonate e le correzioni proposte.
+
+[Checklist Fase C](../phase-c/phase-c-checklist.md)
+
+## Fase D · Valutazione del design
+
+- [x] **5.1 Inspection** — Cognitive Walkthrough, Action Analysis e analisi euristica, Documenti 02a e 02b.
+- [x] **5.2 User Testing del redesign** — Documento 03 con protocollo, pilot, schede individuali, SUS e tabelle. Il report documenta cinque partecipanti, tre richiamati dalla Fase A.
+- [x] **6 Conclusions and Recommendations** — Documento 04 con confronto, limiti, problemi residui e raccomandazioni.
+- [ ] **Comparabilità dei tempi A–D** — Riesaminare l’interpretazione dei tempi di T1 e T3 e del tempo complessivo. I compiti cambiano perimetro e T1/T3 usano Thinking Aloud.
+- [ ] **Riscontro sugli originali** — Verificare le schede e i registri di sessione, se disponibili.
+
+[Checklist Fase D](../phase-d/phase-d-checklist.md)
 
 ## Consegna
 
-- [ ] **Consegna finale** — Verificare l’unico PDF con le card A–D e l’unico ZIP con i supplementi per Virtuale.
+- [x] PDF unico con le card A–D e le tabelle quantitative.
+- [ ] Assemblare il pacchetto supplementare per fase e lo ZIP unico per Virtuale.

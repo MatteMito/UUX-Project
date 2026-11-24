@@ -1,109 +1,46 @@
-# HPHP - Materiali per sezione
+# HPHP · Checklist dei materiali
 
-Materiali da produrre, completare o verificare per ogni sezione del [report](todos.md). Una spunta indica un materiale già disponibile per l’attività descritta.
+La checklist segue la [consegna HPHP](hphp-course-project-2026.pdf). Una spunta indica che il requisito è documentato nel PDF o che l’allegato richiesto è disponibile. Per le verifiche metodologiche, vedere la [checklist del report](todos.md).
 
-## Fase A — Analisi etnografica e assessment
+## Fase A · Analisi etnografica e assessment (pp. 64–67)
 
-### 1.1 Business Purpose
+- [x] Team card, Client card, User Segmentation card e due Market Research card nel report.
+- [x] Assessment card 05a e 05b, con analisi diretta e inversa, risultati quantitativi e [screenshot dell’ispezione](../phase-a/screenshots/).
+- [x] [Workbook UserFocus con la griglia di assessment](../phase-a/assessment/phase-a-guideline-checklist.xlsx).
+- [x] Preliminary User Testing card 06a e 06b, [protocollo](../phase-a/testing/protocollo-test-utente.md) e schede per i quattro partecipanti nel PDF.
+- [x] Risultati SUS nel Documento 07 e [registro Excel](../phase-a/testing/risposte-sus.xlsx) con risposte per item, punteggi, medie e varianze.
+- [x] [Questionario di gradimento compilabile](../phase-a/testing/questionario-gradimento.md).
+- [ ] Somministrazione del questionario di gradimento. Il modulo non è stato somministrato durante le sessioni preliminari.
+- [x] Conclusion card con sintesi, curva d’urgenza e raccomandazioni collegate alle evidenze nel Documento 07.
 
-- [ ] Team Card e Client Card con servizio, obiettivi e indicatori.
+Materiali di supporto disponibili: [fonti](../references/downloaded/), [tracce d’intervista](../phase-a/interviews/tracce-intervista.md), [registro di copertura](../phase-a/assessment/registro-copertura-guideline.md) e [tracker di reclutamento](../phase-a/testing/tracker-reclutamento.md).
 
-### 1.2 Segmentazione del target
+## Fase B · Studio di fattibilità (p. 82)
 
-- [ ] User Segmentation Card con segmenti, criteri e motivazione della scelta.
+- [x] Cast card con segmenti, contesto d’uso, scelte sul cast e alternative accantonate.
+- [x] Quattro Persona card con scenari, competenze e implicazioni per il design.
 
-### 1.3 User Research
+Materiali di supporto disponibili: [workbook del cast](../phase-b/phase-b-personas-and-cast-v2.xlsx), [ritratti](../phase-b/portraits/), [grafici C&A](../phase-b/charts/) e [matrice di tracciabilità](requirements-traceability.html). La Team card resta nel Documento 01 della Fase A, secondo la scelta del gruppo.
 
-- [ ] Due Market Research Card con sintesi delle evidenze, fonti e limiti del campione.
-- [x] [Screenshot delle fonti statistiche](../phase-a/research-materials/screenshot-fonti-statistiche/) raccolti e controllati.
-- [ ] Copie anonimizzate delle evidenze di ricerca da allegare, con riferimenti alle fonti nel report.
+## Fase C · Proposta progettuale (pp. 84–90 e 101)
 
-### 2.1 Expert Usability Review
+- [x] Modello di design, Information Architecture card e descrizione dell’Interaction Design nel PDF.
+- [x] [Sei blueprint e legenda](../phase-c/blueprints/).
+- [x] [Diciannove wireframe desktop](../phase-c/wireframes/).
+- [x] [Quattro tavole Before/After](../phase-c/before-after/).
+- [x] Design card nel Documento 06, con collegamenti tra personas e scelte d’interfaccia.
+- [x] [Appunti di progettazione](../phase-c/wireframes/appunti-progettazione.md) con scelte adottate e accantonate, passaggio al pilot e correzioni proposte dopo i test.
 
-- [ ] Assessment Card 05a e 05b con prima ispezione, screenshot, analisi diretta e inversa e riepiloghi quantitativi.
-- [ ] [Workbook UserFocus completo](../phase-a/assessment/phase-a-guideline-checklist.xlsx) per i supplementi, con giudizi, evidenze e motivazioni. Distinguere i criteri legati all’autenticazione dagli altri limiti di copertura.
+## Fase D · Valutazione del design (pp. 93–96)
 
-### 2.2 User Testing preliminare
+- [x] Inspection Card nei Documenti 02a e 02b, con tecniche, compiti, risultati e raccomandazioni.
+- [x] Redesign User Testing Card nel Documento 03, con protocollo, suite testata, schede individuali, SUS e tabelle quantitative. Il report documenta tre partecipanti richiamati dalla Fase A, oltre il minimo di due.
+- [x] Project Conclusion Card nel Documento 04, con interpretazione, limiti, correzioni e lavoro futuro.
 
-- [ ] Card 06a e 06b con protocollo, 3–4 task e documentazione del campione di 2–6 utenti reali.
-- [ ] Test Data Card, log anonimizzati, risposte SUS e questionario di apprezzamento, con tabelle e calcoli verificabili.
-- [ ] Curva d’urgenza con assi, soglia e problemi coerenti con le evidenze.
-- [ ] [Tracker di reclutamento](../phase-a/testing/tracker-reclutamento.md) anonimizzato per i supplementi.
+Gli originali delle sessioni e una copia navigabile del prototipo non risultano nel checkout. Le slide non li elencano come allegati autonomi obbligatori.
 
-### Conclusioni e raccomandazioni di Fase A
+## Consegna (p. 100)
 
-- [ ] Conclusion Card e matrice con evidenze, criticità, priorità, raccomandazioni e requisiti. Verificare gli ID contro il Documento 07.
-
-## Fase B — Studio di fattibilità
-
-### 3.1 Context of Use
-
-- [ ] Team Card identica a quella di Fase A e Cast Card con segmenti, contesti, vincoli e motivazione della composizione del cast.
-
-### 3.2 Scenarios
-
-- [ ] Schede di scenari e casi d’uso con obiettivi, task, tempi e criteri di successo. Registrare gli scenari scartati nella Cast Card.
-
-### 3.3 Personas
-
-- [x] Quattro Persona Card e visual C&A già prodotti, con radar individuali, heatmap e confronto del cast.
-- [ ] Versioni verificate delle schede e del [workbook C&A](../phase-b/phase-b-personas-and-cast-v2.xlsx). Registrare le personas scartate nella Cast Card.
-
-### 3.4 Recommendations for Design
-
-- [ ] Matrice di tracciabilità tra evidenze, raccomandazioni, requisiti, personas e scenari.
-
-## Fase C — Proposta progettuale
-
-### 4.0 Adoption of a Design Model
-
-- [ ] Documento sul modello adottato, i principi, la strategia desktop-first e i requisiti guida.
-
-### 4.1 Information Architecture
-
-- [ ] Information Architecture Card con struttura di contenuti e servizi, etichette e navigazione.
-
-### 4.3 Interaction Design
-
-- [ ] Flussi dei task e dell’assistenza, con ruoli, passaggi, stati e azioni di recupero.
-
-### 4.4 Structure Blueprint
-
-- [ ] [Blueprint](../phase-c/blueprints/) ed esportazioni leggibili per i flussi rilevanti, con touchpoint, frontstage, backstage e dipendenze.
-
-### 4.5 Wireframes
-
-- [ ] [Suite wireframe](../phase-c/wireframes/) ed esportazioni delle schermate significative, con testi, comandi e feedback.
-- [ ] Versioni iniziale, post-ispezione, testata e post-test, se prodotta. Verificare le modifiche a etichette, SMS, recupero errori, slot e conferma rispetto alle raccomandazioni dell’ispezione.
-
-### Before/After
-
-- [ ] [Tavole comparative](../phase-c/before-after/) con screenshot reali di CUPweb e schermate del redesign per gli stessi task e stati.
-
-### Design Card
-
-- [ ] Design Card con motivazioni delle scelte, contributo delle personas, registro delle versioni e riferimenti alle alternative scartate.
-
-## Fase D — Valutazione del design
-
-### 5.1 Inspection
-
-- [ ] Team Card identica alle precedenti e Inspection Card con versione, task, criteri e risultati delle tecniche usate.
-- [ ] Registro che collega i problemi dell’ispezione alle modifiche del redesign.
-
-### 5.2 User Testing del redesign
-
-- [ ] Redesign User Testing Card con protocollo, versione testata, campione e confronto con la baseline. Verificare nei materiali originali i partecipanti richiamati.
-- [ ] Test Data Card, log anonimizzati, misura di soddisfazione e tabelle individuali e aggregate.
-
-### 6 Conclusions and Recommendations
-
-- [ ] Project Conclusion Card con confronto quantitativo e qualitativo, interpretazione, limiti e raccomandazioni. Allegare il piano di un’altra iterazione se gli esiti lo richiedono.
-
-## Consegna
-
-### Consegna finale
-
-- [ ] PDF unico con card A–D, tabelle quantitative e Before/After.
-- [ ] Cartella supplementare con workbook di assessment, fonti, protocolli, test, dati anonimizzati, tabelle, versioni e scelte scartate.
-- [ ] ZIP unico con PDF e cartella supplementare, pronto per Virtuale.
+- [x] [PDF unico](../hphp-project-report.pdf) con card A–D, tabelle quantitative e Before/After.
+- [ ] Assemblare la cartella di materiali supplementari con gli allegati selezionati per fase.
+- [ ] Preparare lo ZIP unico per Virtuale.

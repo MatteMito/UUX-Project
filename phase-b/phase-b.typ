@@ -2,6 +2,18 @@
 #import seminar-paper: notice
 #import colors: purple as grape-purple
 
+// Crop the source photograph in place, keeping a matching square for every card.
+#let persona-portrait(path, source-width, source-height, crop-width, crop-x, crop-y) = {
+  let size = 3cm
+  let scale = size / crop-width
+  box(width: size, height: size, clip: true, place(
+    top + left,
+    dx: -crop-x * scale,
+    dy: -crop-y * scale,
+    image(path, width: source-width * scale, height: source-height * scale),
+  ))
+}
+
 #heading(level: 1, numbering: none)[FASE B]
 #block(sticky: true)[#text(size: 13pt, weight: "semibold")[Studio di fattibilità]]
 
@@ -72,7 +84,7 @@ Gli scenari riguardano la prenotazione ricorrente di #link(<doc:b:02a>)[Pina], l
 #grid(
   columns: (24%, 1fr), gutter: 12pt, align: (top, top),
   [#align(center)[
-#image("portraits/phase-b-persona-pina.jpeg", width: 100%, height: 2.9cm, fit: "contain") #linebreak()
+#persona-portrait("portraits/phase-b-persona-pina.jpeg", 415, 739, 320, 78, 130) #linebreak()
 #[#set text(size: 10pt); #set text(weight: "bold"); #set text(fill: grape-purple);  PROTAGONISTA] #linebreak()
 #[#set text(size: 8pt); #set text(weight: "bold"); #set text(fill: luma(90));  Segmento A $dot$ Utente diretta]
 ]],
@@ -200,7 +212,7 @@ La gestione di controlli clinici ricorrenti richiede continuità di contesto e s
 #grid(
   columns: (24%, 1fr), gutter: 12pt, align: (top, top),
   [#align(center)[
-#image("portraits/phase-b-persona-elena.jpeg", width: 100%, height: 3.8cm, fit: "contain") #linebreak()
+#persona-portrait("portraits/phase-b-persona-elena.jpeg", 400, 500, 390, 10, 0) #linebreak()
 #[#set text(size: 10pt); #set text(weight: "bold"); #set text(fill: grape-purple);  CAREGIVER A DISTANZA] #linebreak()
 #[#set text(size: 8pt); #set text(weight: "bold"); #set text(fill: luma(90));  Segmento B $dot$ Intermediaria]
 ]],
@@ -327,7 +339,7 @@ La disdetta eseguita da Elena per conto di Pina concretizza la modalità delega 
 #grid(
   columns: (24%, 1fr), gutter: 12pt, align: (top, top),
   [#align(center)[
-#image("portraits/phase-b-persona-renato.jpeg", width: 100%, height: 3.8cm, fit: "contain") #linebreak()
+#persona-portrait("portraits/phase-b-persona-renato.jpeg", 600, 800, 480, 0, 8) #linebreak()
 #[#set text(size: 10pt); #set text(weight: "bold"); #set text(fill: grape-purple);  CONTROLLO] #linebreak()
 #[#set text(size: 8pt); #set text(weight: "bold"); #set text(fill: luma(90));  Segmento A $dot$ Utente diretto]
 ]],
@@ -457,7 +469,7 @@ Il caso d'uso richiede di confrontare analiticamente le alternative e verificarl
 #grid(
   columns: (24%, 1fr), gutter: 12pt, align: (top, top),
   [#align(center)[
-#image("portraits/phase-b-persona-amina.jpeg", width: 100%, height: 3.0cm, fit: "contain") #linebreak()
+#persona-portrait("portraits/phase-b-persona-amina.jpeg", 1300, 1168, 630, 345, 18) #linebreak()
 #[#set text(size: 10pt); #set text(weight: "bold"); #set text(fill: grape-purple);  CAREGIVER CONVIVENTE] #linebreak()
 #[#set text(size: 8pt); #set text(weight: "bold"); #set text(fill: luma(90));  Segmento B $dot$ Intermediaria]
 ]],

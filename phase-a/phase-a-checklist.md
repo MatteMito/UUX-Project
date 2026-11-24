@@ -2,6 +2,8 @@
 
 Riferimento: [specifiche complete](../docs/specs.md).
 
+Le spunte sui test indicano quanto documentato nel report e nei materiali della fase. Il riscontro sugli originali è riportato nelle verifiche residue.
+
 ## 1. Team card
 
 - [x] Inserire nomi e identità dei componenti.
@@ -43,7 +45,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Reclutare persone reali appartenenti ai segmenti scelti.
 - [x] Raccogliere dati, osservazioni e citazioni.
 - [x] Verificare fonte, anno, popolazione e pagina dei dati quantitativi.
-- [x] Allegare screenshot leggibili delle pagine esatte delle fonti citate (conservati nei materiali di ricerca allegati; tabelle di sintesi con citazioni puntuali incorporate nel PDF).
+- [x] Indicare nel PDF le fonti statistiche e conservare le [copie delle fonti](../references/downloaded/).
 - [x] Analizzare bisogni, barriere e differenze tra segmenti.
 - [x] Dichiarare limiti e bias.
 - [x] Elencare le idee di design non banali emerse.
@@ -54,7 +56,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 
 - [x] Selezionare il tool del cliente.
 - [x] Selezionare almeno un competitor o prodotto ispiratore.
-- [x] Acquisire screenshot datati dei sistemi.
+- [x] Conservare gli [screenshot dei sistemi](screenshots/). Le date di acquisizione delle schermate non sono documentate per tutte le immagini.
 - [x] Raccogliere e giustificare le guideline.
 - [x] Numerare le guideline.
 - [x] Esplorare i sistemi prima insieme e poi individualmente.
@@ -67,7 +69,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Per ogni problema indicare persistenza, impatto e frequenza quando supportati dai dati.
 - [x] Collegare ogni giudizio non conforme o parziale a un'evidenza.
 - [x] Includere i risultati quantitativi nella documentazione.
-- [x] Conservare checklist completa e screenshot (checklist: file xlsx consegnato a parte; screenshot: incorporati nel PDF).
+- [x] Conservare il [workbook UserFocus](assessment/phase-a-guideline-checklist.xlsx) e gli screenshot. Il report include le schermate di riferimento.
 - [x] Distinguere i criteri fuori copertura dalle non conformità osservate.
 - [x] Verificare con soggetti reali gli elementi che richiedono autenticazione oppure documentarne esplicitamente il rinvio.
 
@@ -79,20 +81,21 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Scegliere discount o full usability testing.
 - [x] Definire Thinking Aloud, Bottom Line Data o una combinazione motivata.
 - [x] Definire metriche di successo, efficienza, efficacia, errori, learnability e soddisfazione.
-- [x] Preparare introduzione, protocollo, scheda dati e questionario finale.
+- [x] Preparare introduzione, [protocollo](testing/protocollo-test-utente.md), scheda dati e [questionario di gradimento](testing/questionario-gradimento.md).
 - [x] Reclutare 2-6 partecipanti reali pertinenti.
 - [x] Informare almeno due partecipanti che saranno ricontattati nella Fase D.
 - [x] Eseguire un test pilota.
 - [x] Condurre tutti i task senza guidare il partecipante. (unica eccezione: Test #2, Carla, rientrante nella regola "salvo bloccaggio totale" già prevista dallo script di apertura, si veda Documento 06a)
 - [x] Registrare contesto, tempo, risultato, errori, esitazioni, aiuti e citazioni.
 - [x] Compilare una Test Data card per partecipante.
-- [x] Somministrare sempre il SUS standard e il questionario di gradimento.
+- [x] Somministrare il SUS standard.
+- [ ] Somministrare il questionario di gradimento. Il modulo è disponibile, l’attività non è stata svolta durante i test preliminari.
 - [x] Calcolare SUS individuale, media e varianza.
 - [x] Analizzare dati soggettivi e oggettivi.
 - [x] Integrare i problemi con quelli dell'expert review.
 - [x] Costruire una curva d'urgenza con soglia motivata.
 - [x] Verificare separatamente la completezza della card del tool cliente e di quella del competitor.
-- [x] Riportare le 10 risposte grezze per domanda SUS di ciascuna sessione (incorporate direttamente nel PDF, Documento 07).
+- [x] Riportare le dieci risposte SUS di ciascuna delle otto sessioni nel Documento 07 e nel [registro Excel](testing/risposte-sus.xlsx).
 
 **Deliverable:** Preliminary User Testing card, card individuali, dati, SUS e curva d'urgenza.
 
@@ -116,17 +119,18 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [x] Segmentazione specifica e motivata.
 - [x] Ricerca basata anche su persone reali.
 - [x] Assessment del tool corrente e delle alternative.
-- [x] Test preliminari documentati con dati reali.
+- [x] Test preliminari documentati con schede individuali e risultati per compito.
 - [x] SUS e curva d'urgenza verificabili.
 - [x] Raccomandazioni collegate alle evidenze.
-- [x] Dati grezzi e screenshot di assessment/test incorporati nel PDF; screenshot fonti statistiche e checklist guideline consegnati come materiali allegati separati.
+- [x] Raccogliere workbook, screenshot, protocollo e registro SUS nelle cartelle di Fase A.
+- [ ] Registrare gli esiti del questionario di gradimento, se raccolti.
 
-## Verifiche residue di chiusura — 9 ottobre 2026
+## Verifiche residue
 
 Le spunte precedenti descrivono i contenuti predisposti; non sostituiscono la verifica delle fonti primarie.
 
 - [x] Allineare il tracker all'età riportata nell'intervista di Fatima (35 anni), esplicitando che il caso è fuori dalla fascia target 45–60.
-- [ ] Consultare il [registro di copertura](assessment/registro-copertura-guideline.md) per i 64 criteri CUPweb e i 69 MioDottore fuori copertura. Le note riportano i prerequisiti registrati e il dettaglio disponibile per schermata.
+- [x] Documentare nel [registro di copertura](assessment/registro-copertura-guideline.md) i 64 criteri CUPweb e i 69 MioDottore fuori copertura, con i prerequisiti disponibili.
 - [ ] Recuperare o localizzare le attestazioni individuali del consenso e i verbali originali; non risultano rintracciabili nel repository esaminato.
 - [ ] Recuperare o localizzare l'esportazione originale dei questionari SUS e riconciliarla con le risposte conservate.
 
@@ -140,4 +144,4 @@ Le spunte precedenti descrivono i contenuti predisposti; non sostituiscono la ve
 
 - [x] Allineati 06a/06b alla conferma del responsabile: Giorgio su tablet; Carla, Silvia e Fatima su PC.
 - [x] Sintesi di Fatima centrata su termini burocratici, coordinamento e interruzioni; citazioni e dati quantitativi preservati.
-- [x] Protocollo e registro delle evidenze allineati; originali di sessione ancora da acquisire.
+- [x] Protocollo e schede di test allineati ai dispositivi riportati. Gli originali di sessione restano tra le verifiche sopra indicate.
