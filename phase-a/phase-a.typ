@@ -7,76 +7,28 @@
 
 // I termini tecnici seguono la terminologia delle checklist di progetto.
 
-= Fase A: Ricerca etnografica e valutazione del servizio
+#heading(level: 1, numbering: none)[FASE A]
+#block(sticky: true)[#text(size: 13pt, weight: "semibold")[Analisi etnografica e valutazione delle risorse esistenti]]
+
+#set heading(numbering: none)
 
 // --- Card 01 ----------------------------------------------------
 
 == Documento 01: Scheda del gruppo <doc:a:01>
 
-#strong[Nome del gruppo:] Team Affordance
-
-#heading(level: 5, numbering: none, outlined: false)[Componenti del gruppo]
-
-#[
-#set text(size: 10pt)
-#set par(justify: false)
-#table(
-  columns: (28fr, 72fr,),
-  align: (left, left,),
-  inset: (x: 4pt, y: 3.5pt),
-  stroke: none,
-  table.hline(stroke: 0.75pt),
-  [Nome], [Matteo Boscherini],
-  [Matricola], [0001239423],
-  [E-mail], [matteo.boscherini\@studio.unibo.it],
-  [Corso di studi], [Informatica Magistrale, Curriculum B],
-  table.hline(stroke: 0.75pt),
-)
-]
-
-#[
-#set text(size: 10pt)
-#set par(justify: false)
-#table(
-  columns: (28fr, 72fr,),
-  align: (left, left,),
-  inset: (x: 4pt, y: 3.5pt),
-  stroke: none,
-  table.hline(stroke: 0.75pt),
-  [Nome], [Alessandro Campedelli],
-  [Matricola], [0001242904],
-  [E-mail], [alessandr.campedell3\@studio.unibo.it],
-  [Corso di studi], [Informatica Magistrale, Curriculum B],
-  table.hline(stroke: 0.75pt),
-)
-]
-
-#[
-#set text(size: 10pt)
-#set par(justify: false)
-#table(
-  columns: (28fr, 72fr,),
-  align: (left, left,),
-  inset: (x: 4pt, y: 3.5pt),
-  stroke: none,
-  table.hline(stroke: 0.75pt),
-  [Nome], [Francesco Maria Fuligni],
-  [Matricola], [0001246029],
-  [E-mail], [francesco.fuligni\@studio.unibo.it],
-  [Corso di studi], [Informatica Magistrale, Curriculum C],
-  table.hline(stroke: 0.75pt),
-)
-]
+#include "team-card.typ"
 
 // --- Card 02 ----------------------------------------------------
 
-== Documento 02: Scheda del cliente <doc:a:02>
+#heading(level: 2, numbering: none)[1\. Analisi etnografica]
 
-=== Cliente e servizio
+#heading(level: 3, numbering: none)[1.1 Finalità del committente]
 
-#heading(level: 5, numbering: none, outlined: false)[Nome del cliente]
+==== Documento 02: Scheda del cliente <doc:a:02>
 
-Regione Emilia-Romagna, Assessorato alle Politiche per la Salute, in
+#heading(level: 5, numbering: none, outlined: false)[Cliente e servizio]
+
+#strong[Nome del cliente.] Regione Emilia-Romagna, Assessorato alle Politiche per la Salute, in
 collaborazione con Lepida S.c.p.A., società in-house che gestisce
 tecnicamente il sistema regionale di prenotazione sanitaria CUPweb
 per conto delle Aziende USL
@@ -96,9 +48,7 @@ proposta per conto di Lepida. Questa cornice definisce il destinatario e
 le ragioni dell'investimento; non descrive un incarico professionale
 ricevuto dalla Regione.
 
-#heading(level: 5, numbering: none, outlined: false)[Nome del servizio]
-
-CUPweb (www.cupweb.it), servizio web di prenotazione delle prestazioni
+#strong[Nome del servizio.] CUPweb (www.cupweb.it), servizio web di prenotazione delle prestazioni
 sanitarie specialistiche della Regione Emilia-Romagna, disponibile
 gratuitamente 24/7~#cite(<rerPrenotare>).
 
@@ -115,7 +65,7 @@ Via browser web all’indirizzo www.cupweb.it, tramite credenziali SPID, CIE o c
 CUPweb; consente di prenotare, disdire o modificare visite ed esami per sé
 stessi e per i familiari o assistiti delegati.
 
-=== Obiettivi della riprogettazione
+#heading(level: 5, numbering: none, outlined: false)[Obiettivi della riprogettazione]
 
 #heading(level: 5, numbering: none, outlined: false)[Motivazioni per il finanziamento della riprogettazione]
 
@@ -151,7 +101,7 @@ servizi. La promessa di una sanità digitale inclusiva deve trovare
 riscontro in percorsi comprensibili, possibilità di recupero e assistenza
 riconoscibile.
 
-=== Indicatori di successo
+#heading(level: 5, numbering: none, outlined: false)[Indicatori di successo]
 
 I dati di esercizio servono a misurare prenotazioni, abbandoni e chiamate.
 Tempi e SUS si rilevano con test che usano compiti e condizioni comparabili.
@@ -169,9 +119,11 @@ Tempi e SUS si rilevano con test che usano compiti e condizioni comparabili.
 
 // --- Card 03 ----------------------------------------------------
 
-== Documento 03: Scheda di segmentazione degli utenti <doc:a:03>
+#heading(level: 3, numbering: none)[1.2 Segmentazione del pubblico di riferimento]
 
-=== Criteri di segmentazione
+==== Documento 03: Scheda di segmentazione degli utenti <doc:a:03>
+
+#heading(level: 5, numbering: none, outlined: false)[Criteri di segmentazione]
 
 #heading(level: 5, numbering: none, outlined: false)[Dimensioni di segmentazione scelte]
 
@@ -194,7 +146,7 @@ lo assiste o svolge le pratiche per suo conto. Età, autonomia digitale e
 contesto di assistenza permettono di descrivere quando il supporto è
 necessario e quando può favorire la partecipazione diretta del paziente.
 
-=== Segmenti e combinazioni
+#heading(level: 5, numbering: none, outlined: false)[Segmenti e combinazioni]
 
 #heading(level: 5, numbering: none, outlined: false)[Segmenti nella dimensione \#1: Utenti diretti (per età e
 autonomia digitale)]
@@ -224,7 +176,7 @@ con l’assistito)]
 
 2 (utenti diretti) × 2 (intermediari) = 4 combinazioni possibili.
 
-=== Target prioritario e implicazioni
+#heading(level: 5, numbering: none, outlined: false)[Target prioritario e implicazioni]
 
 #heading(level: 5, numbering: none, outlined: false)[Combinazioni di segmentazione scelte]
 
@@ -258,9 +210,11 @@ raccomandazioni e requisiti.
 
 // --- Card 04a ----------------------------------------------------
 
-== Documento 04a: Scheda di ricerca di mercato (segmento A) <doc:a:04a>
+#heading(level: 3, numbering: none)[1.3 Ricerca sugli utenti]
 
-=== Profilo del segmento
+==== Documento 04a: Scheda di ricerca di mercato (segmento A) <doc:a:04a>
+
+#heading(level: 5, numbering: none, outlined: false)[Profilo del segmento]
 
 #heading(level: 5, numbering: none, outlined: false)[Segmento selezionato]
 
@@ -277,7 +231,7 @@ deve dimostrare il maggiore impatto.
 
 // Titolo breve: Statistiche disponibili
 
-=== Metodo di ricerca utilizzato: statistiche disponibili
+#heading(level: 5, numbering: none, outlined: false)[Metodo di ricerca utilizzato: statistiche disponibili]
 
 I dati provengono dai rapporti ISTAT #emph[Cittadini e ICT, Anno 2024]~#cite(<istatICT2024>)
 e #emph[Cittadini e ICT, Anno 2025]~#cite(<istatICT2025>). Sono state escluse dalla sintesi le fonti
@@ -325,7 +279,7 @@ attività online della PA non ne identifica, da solo, le cause.
 
 // Titolo breve: Interviste qualitative
 
-=== Metodo di ricerca utilizzato: interviste qualitative
+#heading(level: 5, numbering: none, outlined: false)[Metodo di ricerca utilizzato: interviste qualitative]
 
 Le due interviste seguono una traccia semi-strutturata sul
 percorso di prenotazione: apertura, domande e chiusura sulla disponibilità
@@ -399,7 +353,7 @@ dell'errore; Giorgio incertezza sulle condizioni della prestazione. Nei due
 racconti, la richiesta di assistenza è distinta dalla rinuncia al controllo
 dell'azione. Le implicazioni sono sviluppate nel campo “Impatto sulla progettazione”.
 
-=== Analisi dei compiti
+#heading(level: 5, numbering: none, outlined: false)[Analisi dei compiti]
 
 #emph[Sequenza dei passi che un paziente anziano segue oggi per
 prenotare una visita specialistica, dentro e fuori dallo strumento,
@@ -436,7 +390,7 @@ ricostruita a partire dalla conoscenza di dominio del team.]
   struttura, spesso accompagnato.],
 )
 
-=== Sintesi e implicazioni progettuali
+#heading(level: 5, numbering: none, outlined: false)[Sintesi e implicazioni progettuali]
 
 #heading(level: 5, numbering: none, outlined: false)[Limiti della ricerca]
 
@@ -466,9 +420,9 @@ sono formalizzate nelle raccomandazioni del #link(<doc:a:07>)[Documento~07].
 
 // --- Card 04b ----------------------------------------------------
 
-== Documento 04b: Scheda di ricerca di mercato (segmento B) <doc:a:04b>
+==== Documento 04b: Scheda di ricerca di mercato (segmento B) <doc:a:04b>
 
-=== Profilo del segmento
+#heading(level: 5, numbering: none, outlined: false)[Profilo del segmento]
 
 #heading(level: 5, numbering: none, outlined: false)[Segmento selezionato]
 
@@ -486,7 +440,7 @@ caro, un obiettivo centrale del progetto HPHP.
 
 // Titolo breve: Statistiche disponibili
 
-=== Metodo di ricerca utilizzato: statistiche disponibili
+#heading(level: 5, numbering: none, outlined: false)[Metodo di ricerca utilizzato: statistiche disponibili]
 
 I dati provengono dal rapporto CNEL--Censis #emph[Il valore sociale del caregiver]
 (2024)~#cite(<cnelCaregiver2024>) e dal rapporto ISTAT #emph[Indicatori demografici, Anno 2025]
@@ -527,7 +481,7 @@ popolazione.
 
 // Titolo breve: Interviste qualitative
 
-=== Metodo di ricerca utilizzato: interviste qualitative
+#heading(level: 5, numbering: none, outlined: false)[Metodo di ricerca utilizzato: interviste qualitative]
 
 La traccia del segmento A è adattata al carico di
 mediazione e al trasferimento di compiti al familiare. Silvia rappresenta
@@ -571,7 +525,7 @@ richiedono un esito verificabile e informazioni sufficienti a coordinarsi
 con chi viene assistito. Le implicazioni specifiche sono raccolte nel campo
 “Impatto sulla progettazione”.
 
-=== Analisi dei compiti
+#heading(level: 5, numbering: none, outlined: false)[Analisi dei compiti]
 
 #emph[Sequenza dei passi che un caregiver a distanza segue oggi per
 gestire la prenotazione per conto del genitore, dentro e fuori dallo
@@ -599,7 +553,7 @@ strumento.]
   genitore.],
 )
 
-=== Sintesi e implicazioni progettuali
+#heading(level: 5, numbering: none, outlined: false)[Sintesi e implicazioni progettuali]
 
 #heading(level: 5, numbering: none, outlined: false)[Limiti della ricerca]
 
@@ -627,18 +581,22 @@ Il #link(<doc:a:07>)[Documento~07] integra queste indicazioni con assessment e t
 
 // --- Card 05a ----------------------------------------------------
 
-== Documento 05a: Scheda di valutazione del servizio esistente (cliente) <doc:a:05a>
+#heading(level: 2, numbering: none)[2\. Valutazione delle risorse esistenti]
 
-=== Inquadramento del servizio
+#heading(level: 3, numbering: none)[2.1 Valutazione esperta di usabilità]
 
-#heading(level: 5, numbering: none, outlined: false)[Nome del servizio]
+#heading(level: 4, numbering: none)[2.1.1 Scelta delle linee guida]
 
-CUPweb (web application, www.cupweb.it), Regione
+Le analisi di CUPweb e MioDottore adottano la griglia di usabilità web~#cite(<userfocusGuidelines>).
+
+==== Documento 05a: Scheda di valutazione del servizio esistente (cliente) <doc:a:05a>
+
+===== 2.1.2 Prima ispezione del sistema
+
+#strong[Nome del servizio.] CUPweb (web application, www.cupweb.it), Regione
 Emilia-Romagna.
 
-#heading(level: 5, numbering: none, outlined: false)[Piattaforme]
-
-Web Application fruibile tramite browser web da personal computer
+#strong[Piattaforme.] Web Application fruibile tramite browser web da personal computer
 (desktop) e da dispositivi mobili (smartphone/tablet). L’attuale
 implementazione presenta una responsività fortemente limitata su schermi
 piccoli (layout desktop miniaturizzato non ottimizzato per touch screen).
@@ -691,9 +649,7 @@ restano distinte dall'ispezione diretta.
 
 // Titolo breve: Analisi diretta
 
-=== Prime impressioni: analisi diretta
-
-Le analisi di CUPweb e MioDottore adottano la griglia di usabilità web~#cite(<userfocusGuidelines>).
+===== 2.1.3 Analisi diretta
 
 #emph[Analisi diretta secondo categorie consolidate di usabilità:
 navigazione, ricerca, organizzazione e
@@ -731,7 +687,7 @@ completamento del compito (qui: prenotazione), fiducia e credibilità.]
 
 // Titolo breve: Analisi inversa
 
-=== Prime impressioni: analisi inversa
+===== 2.1.4 Analisi inversa
 
 #emph[Analisi condotta simulando il compito "disdire un appuntamento già
 fissato, partendo da un link ricevuto per SMS, senza credenziali SPID
@@ -761,18 +717,14 @@ anziano).]
 
 // --- Card 05b ----------------------------------------------------
 
-== Documento 05b: Scheda di valutazione del servizio esistente (concorrente) <doc:a:05b>
+==== Documento 05b: Scheda di valutazione del servizio esistente (concorrente) <doc:a:05b>
 
-=== Inquadramento del servizio
+===== 2.1.2 Prima ispezione del sistema
 
-#heading(level: 5, numbering: none, outlined: false)[Nome del servizio]
-
-MioDottore (Doctolib Italia), piattaforma privata di prenotazione di
+#strong[Nome del servizio.] MioDottore (Doctolib Italia), piattaforma privata di prenotazione di
 visite mediche.
 
-#heading(level: 5, numbering: none, outlined: false)[Piattaforme]
-
-Sito web (miodottore.it) responsive, oggetto del confronto con CUPweb.
+#strong[Piattaforme.] Sito web (miodottore.it) responsive, oggetto del confronto con CUPweb.
 La piattaforma dispone anche di app native Android e iOS, esterne a questo
 assessment.
 
@@ -827,7 +779,7 @@ sovraccarico da filtri nell'analisi inversa.
 
 // Titolo breve: Analisi diretta
 
-=== Prime impressioni: analisi diretta
+===== 2.1.3 Analisi diretta
 
 #emph[Analisi diretta secondo le stesse categorie consolidate di
 usabilità applicate a CUPweb (#link(<doc:a:05a>)[Documento~05a]): navigazione, ricerca,
@@ -851,7 +803,7 @@ impaginazione, completamento del compito, fiducia e credibilità.]
 
 // Titolo breve: Analisi inversa
 
-=== Prime impressioni: analisi inversa
+===== 2.1.4 Analisi inversa
 
 #emph[Analisi condotta simulando il compito "trovare e prenotare una visita
 specialistica vicino a casa, come utente al primo accesso".]
@@ -870,7 +822,13 @@ specialistica vicino a casa, come utente al primo accesso".]
 
 // --- Card 06 ----------------------------------------------------
 
-== Documento 06: Test pilota del protocollo di usabilità <doc:a:06>
+#heading(level: 3, numbering: none)[2.2 Test con utenti]
+
+#heading(level: 4, numbering: none)[2.2.1 Definizione del protocollo di test]
+
+Il pilota e le schede dei test documentano il protocollo per il #link(<doc:a:06a>)[servizio del cliente] e per il #link(<doc:a:06b>)[concorrente].
+
+==== Documento 06: Test pilota del protocollo di usabilità <doc:a:06>
 
 #heading(level: 5, numbering: none, outlined: false)[Obiettivo del pilot]
 
@@ -943,18 +901,16 @@ l'intervento; il caso riportato è Carla, T1 (#link(<doc:a:06a>)[Documento~06a])
 
 // --- Card 06a ----------------------------------------------------
 
-== Documento 06a: Scheda dei test preliminari di usabilità (cliente) <doc:a:06a>
+==== Documento 06a: Scheda dei test preliminari di usabilità (cliente) <doc:a:06a>
 
 Le schede preliminari confrontano CUPweb e MioDottore su tablet per
 Giorgio e su PC per Carla, Silvia e Fatima. Il confronto riguarda i compiti
 di prenotazione, disdetta e ricerca di assistenza. La comparabilità dei tempi
 dipende anche dal dispositivo usato in ciascuna sessione.
 
-=== Protocollo e organizzazione
+#heading(level: 5, numbering: none, outlined: false)[Protocollo e organizzazione]
 
-#heading(level: 5, numbering: none, outlined: false)[Nome del servizio]
-
-CUPweb (www.cupweb.it)
+#strong[Nome del servizio.] CUPweb (www.cupweb.it)
 
 #heading(level: 5, numbering: none, outlined: false)[Protocollo di test]
 
@@ -1040,7 +996,7 @@ La selezione descritta è di convenienza. L'ordine riportato parte da
 Giorgio, più autonomo di Carla e già abituato a tablet e SPID, per verificare
 la conduzione con un profilo meno fragile.
 
-=== Test \#1: Soggetto Giorgio
+#heading(level: 5, numbering: none, outlined: false)[Test \#1: Soggetto Giorgio]
 
 #strong[Data:] 22/09/2026
 
@@ -1120,7 +1076,7 @@ come irreversibile. Il sistema dovrebbe offrire
 microcopy contestuale, conferme leggibili e la possibilità di
 verificare una scelta senza perdere il lavoro già svolto.
 
-=== Test \#2: Soggetto Carla
+#heading(level: 5, numbering: none, outlined: false)[Test \#2: Soggetto Carla]
 
 #strong[Data:] 23/09/2026
 
@@ -1204,7 +1160,7 @@ irreversibile. La richiesta di rassicurazione rivolta al conduttore
 motiva l'ipotesi di un aiuto contestuale nel punto della decisione,
 da confrontare con una pagina di assistenza separata.
 
-=== Test \#3: Soggetto Silvia
+#heading(level: 5, numbering: none, outlined: false)[Test \#3: Soggetto Silvia]
 
 #strong[Data:] 23/09/2026, ore 18:45
 
@@ -1283,7 +1239,7 @@ condivisibile. La richiesta di visibilità e supporto,
 coerente con il racconto del caso, motiva la modalità co-pilota proposta
 nel #link(<doc:a:07>)[Documento~07].
 
-=== Test \#4: Soggetto Fatima
+#heading(level: 5, numbering: none, outlined: false)[Test \#4: Soggetto Fatima]
 
 #strong[Data:] 24/09/2026, ore 13:10
 
@@ -1368,13 +1324,11 @@ e conciliarli con gli impegni lavorativi.
 
 // --- Card 06b ----------------------------------------------------
 
-== Documento 06b: Scheda dei test preliminari di usabilità (concorrente) <doc:a:06b>
+==== Documento 06b: Scheda dei test preliminari di usabilità (concorrente) <doc:a:06b>
 
-=== Protocollo e organizzazione
+#heading(level: 5, numbering: none, outlined: false)[Protocollo e organizzazione]
 
-#heading(level: 5, numbering: none, outlined: false)[Nome del servizio]
-
-MioDottore (Doctolib Italia)
+#strong[Nome del servizio.] MioDottore (Doctolib Italia)
 
 #heading(level: 5, numbering: none, outlined: false)[Protocollo di test]
 
@@ -1435,7 +1389,7 @@ ma non isola l'effetto del design: task, familiarità con il servizio e
 ordine delle sessioni possono influire sugli esiti. La selezione resta di
 convenienza, come nel #link(<doc:a:06a>)[Documento~06a].
 
-=== Test \#1: Soggetto Giorgio
+#heading(level: 5, numbering: none, outlined: false)[Test \#1: Soggetto Giorgio]
 
 #strong[Data:] 23/09/2026
 
@@ -1517,7 +1471,7 @@ attribuire alla sola trasparenza del costo la differenza tra gli esiti. Il conta
 rassicura più di un numero generale. Da non replicare: recensioni
 percepite come poco affidabili e annullamento legato all’account.
 
-=== Test \#2: Soggetto Carla
+#heading(level: 5, numbering: none, outlined: false)[Test \#2: Soggetto Carla]
 
 #strong[Data:] 24/09/2026
 
@@ -1598,7 +1552,7 @@ coincidono con i punti in cui lo strumento la riconduce a un canale
 familiare (telefono, indirizzo, foto del medico) e con la tolleranza
 all’errore di digitazione.
 
-=== Test \#3: Soggetto Silvia
+#heading(level: 5, numbering: none, outlined: false)[Test \#3: Soggetto Silvia]
 
 #strong[Data:] 23/09/2026, ore 18:30
 
@@ -1678,7 +1632,7 @@ caregiver-assistito: nessuna condivisione della visita o dei
 promemoria con il familiare. Il bisogno di co-gestione non è coperto nemmeno dal benchmark, ed è quindi
 una direzione progettuale per distinguere l'assistenza dall'uso individuale.
 
-=== Test \#4: Soggetto Fatima
+#heading(level: 5, numbering: none, outlined: false)[Test \#4: Soggetto Fatima]
 
 #strong[Data:] 24/09/2026, ore 13:30
 
@@ -1755,11 +1709,19 @@ minima già emerso in intervista e nel test di Silvia.
 
 // --- Card 07 ----------------------------------------------------
 
-== Documento 07: Conclusioni e Design Recommendation card <doc:a:07>
+#heading(level: 4, numbering: none)[2.2.3 Analisi dei dati soggettivi e oggettivi]
+
+La scheda conclusiva riporta l’elenco delle criticità e la #link(<sec:a:sus>)[matrice delle risposte SUS].
+
+#heading(level: 4, numbering: none)[2.2.4 Curva di urgenza]
+
+La #link(<sec:a:urgency>)[curva di urgenza] integra i problemi emersi dall’ispezione e dai test.
+
+== Documento 07: Scheda conclusiva — Raccomandazioni finali della Fase A <doc:a:07>
 
 // Titolo breve: Criticità e priorità
 
-=== Elenco delle criticità per importanza
+#heading(level: 3, numbering: none, outlined: false)[Elenco delle criticità per importanza]
 
 L'elenco distingue le criticità dell'assessment (#link(<req:ID-01>)[ID-01]--#link(<req:ID-07>)[ID-07]), quelle
 riportate nelle schede dei test (#link(<req:ID-08>)[ID-08]--#link(<req:ID-12>)[ID-12]) e l'ipotesi aggiuntiva sul
@@ -1870,7 +1832,7 @@ valutati sul caso narrativo; non è disponibile una frequenza nei test.
 
 // Titolo breve: Risultati SUS
 
-=== Valutazione quantitativa dell’usabilità: Matrice di risposta SUS
+#heading(level: 3, numbering: none, outlined: false)[Valutazione quantitativa dell’usabilità: Matrice di risposta SUS] <sec:a:sus>
 
 Le otto schede preliminari riportano le risposte al #emph[System Usability
 Scale] (SUS): dieci affermazioni su scala Likert 1--5
@@ -1934,7 +1896,7 @@ la media è più bassa di quella di MioDottore. Il confronto è descrittivo:
 il SUS misura l'usabilità percepita complessiva e viene interpretato
 insieme agli esiti e ai comportamenti descritti nelle schede.
 
-=== Curva di urgenza
+#heading(level: 3, numbering: none, outlined: false)[Curva di urgenza] <sec:a:urgency>
 
 La curva comprende le criticità #link(<req:ID-01>)[ID-01]--#link(<req:ID-13>)[ID-13]. Per
 #link(<req:ID-13>)[ID-13], i giudizi progettuali di impatto alto (3) e persistenza
@@ -2001,7 +1963,7 @@ conferme condivisibili e alla preparazione dei dati di pagamento.
 
 // Titolo breve: Raccomandazioni progettuali
 
-=== Raccomandazioni progettuali preliminari
+#heading(level: 3, numbering: none, outlined: false)[Raccomandazioni progettuali preliminari]
 
 Le raccomandazioni traducono l'analisi in direzioni di intervento:
 #link(<req:R-01>)[R-01]--#link(<req:R-06>)[R-06] riprendono i bisogni iniziali e l'assessment; #link(<req:R-07>)[R-07]--#link(<req:R-09>)[R-09]
@@ -2050,7 +2012,7 @@ In entrambe le modalità, l'accesso ai dati sanitari segue le autorizzazioni ric
 
 // Titolo breve: Requisiti per il redesign
 
-=== Requisiti progettuali numerati per le fasi B e C
+#heading(level: 3, numbering: none, outlined: false)[Requisiti progettuali numerati per le fasi B e C]
 
 I requisiti traducono le direzioni #link(<req:R-01>)[R-01]--#link(<req:R-10>)[R-10] in comportamenti attesi del
 servizio, mantenendo identificativi e priorità progettuali. L'esperienza

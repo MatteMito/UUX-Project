@@ -2,11 +2,16 @@
 #import seminar-paper: notice
 #import colors: purple as grape-purple
 
-= Fase B: Studio di fattibilità
+#heading(level: 1, numbering: none)[FASE B]
+#block(sticky: true)[#text(size: 13pt, weight: "semibold")[Studio di fattibilità]]
+
+#set heading(numbering: none)
 
 La Fase B (#emph[Feasibility Study]) traduce le evidenze qualitative ed empiriche raccolte nella Fase A in modelli d'uso operativi per la progettazione. L'obiettivo è definire i profili e le competenze del cast di personas, formalizzarne i comportamenti in scenari d'uso realistici e ricavare implicazioni progettuali e requisiti cumulativi per le fasi successive.
 
-== Contesto d'uso e costruzione del cast
+#heading(level: 2, numbering: none)[3\. Studio di fattibilità]
+
+#heading(level: 3, numbering: none)[3.1 Contesto d’uso]
 
 Il cast comprende quattro personas (#strong[Pina], #strong[Elena], #strong[Renato], #strong[Amina]) che rappresentano i due segmenti prioritari~#cite(<cooperAboutFace2007>). I profili integrano dati ISTAT e CNEL, criticità riportate nei test preliminari su CUPweb e MioDottore e bisogni illustrati nei racconti qualitativi della Fase A. Biografie, frasi rappresentative e scenari sono costruzioni progettuali; le durate indicate negli scenari sono stime.
 
@@ -43,9 +48,15 @@ La gerarchia è intenzionale: #strong[Pina] è la protagonista e il riferimento 
 
 // Titolo breve: Giuseppina “Pina” Ferretti (protagonista)
 
-== Documento 02a: Persona e Use Case card (protagonista) <doc:b:02a>
+#heading(level: 3, numbering: none)[3.2 Scenari]
 
-=== Profilo e competenze
+Gli scenari riguardano la prenotazione ricorrente di #link(<doc:b:02a>)[Pina], la disdetta in delega di #link(<doc:b:02b>)[Elena], il confronto dei costi di #link(<doc:b:02c>)[Renato] e la prenotazione da computer in un contesto di interruzioni di #link(<doc:b:02d>)[Amina]. I dettagli sono nelle rispettive schede.
+
+#heading(level: 3, numbering: none)[3.3 Personas]
+
+==== Documento 02a: Persona e Use Case card (protagonista) <doc:b:02a>
+
+#heading(level: 5, numbering: none, outlined: false)[Profilo e competenze]
 
 #block(
   width: 100%,
@@ -128,7 +139,7 @@ Pina conserva ricette dematerializzate (NRE), ricevute e promemoria nella “bus
 
 // Titolo breve: Scenario e obiettivo
 
-=== Scenario: la visita diabetologica di controllo e il timore dell'errore irreversibile
+#heading(level: 5, numbering: none, outlined: false)[Scenario: la visita diabetologica di controllo e il timore dell'errore irreversibile]
 
 #strong[Contesto e innesco:] È il primo pomeriggio a Ravenna; seduta al tavolo del soggiorno davanti al computer portatile con mouse collegato, Pina deve prenotare il controllo diabetologico semestrale prescritto dal diabetologo. Recupera il promemoria cartaceo con il codice NRE dalla busta di plastica blu dove custodisce la documentazione medica e consulta il calendario murale di Frate Indovino per escludere il martedì mattina, riservato al mercato rionale. Non guidando su percorsi extraurbani, deve tassativamente verificare che la sede proposta sia raggiungibile con la linea~1 dell'autobus urbano.
 
@@ -144,7 +155,7 @@ Pina conserva ricette dematerializzate (NRE), ricevute e promemoria nella “bus
 
 // Titolo breve: Implicazioni progettuali
 
-=== Considerazioni conclusive e implicazioni di design
+#heading(level: 5, numbering: none, outlined: false)[Considerazioni conclusive e implicazioni di design]
 
 #heading(level: 5, numbering: none, outlined: false)[Impatto della persona sul design]
 
@@ -171,9 +182,9 @@ La gestione di controlli clinici ricorrenti richiede continuità di contesto e s
 
 // Titolo breve: Elena Ferretti (secondaria)
 
-== Documento 02b: Persona e Use Case card (personaggio secondario) <doc:b:02b>
+==== Documento 02b: Persona e Use Case card (personaggio secondario) <doc:b:02b>
 
-=== Profilo e competenze
+#heading(level: 5, numbering: none, outlined: false)[Profilo e competenze]
 
 #block(
   width: 100%,
@@ -256,7 +267,7 @@ Elena contrassegna gli appuntamenti della madre con un'etichetta rossa nel propr
 
 // Titolo breve: Scenario e obiettivo
 
-=== Scenario: la disdetta urgente durante la chiusura delle paghe
+#heading(level: 5, numbering: none, outlined: false)[Scenario: la disdetta urgente durante la chiusura delle paghe]
 
 #strong[Contesto e innesco:] È il 26 del mese, ore 11:20: Elena è nel suo ufficio presso la cooperativa sociale di Bologna, concentrata sulla complessa chiusura mensile dei cedolini paga. Tra meno di dieci minuti deve entrare in una riunione direzionale con il revisore dei conti. Lo smartphone sulla scrivania squilla: è la madre Pina, in preda all'agitazione perché un improvviso contrattempo le impedisce di recarsi alla visita diabetologica fissata per l'indomani, esponendola al rischio della sanzione economica da mancata disdetta (malus ticket).
 
@@ -272,7 +283,7 @@ Elena contrassegna gli appuntamenti della madre con un'etichetta rossa nel propr
 
 // Titolo breve: Implicazioni progettuali
 
-=== Considerazioni conclusive e implicazioni di design
+#heading(level: 5, numbering: none, outlined: false)[Considerazioni conclusive e implicazioni di design]
 
 #heading(level: 5, numbering: none, outlined: false)[Impatto della persona sul design]
 
@@ -298,9 +309,9 @@ La disdetta eseguita da Elena per conto di Pina concretizza la modalità delega 
 
 // Titolo breve: Renato Bellini (aggiuntivo)
 
-== Documento 02c: Persona e Use Case card (personaggio aggiuntivo) <doc:b:02c>
+==== Documento 02c: Persona e Use Case card (personaggio aggiuntivo) <doc:b:02c>
 
-=== Profilo e competenze
+#heading(level: 5, numbering: none, outlined: false)[Profilo e competenze]
 
 #block(
   width: 100%,
@@ -383,7 +394,7 @@ Renato usa il PC desktop nello studio domestico o il tablet in soggiorno, tenend
 
 // Titolo breve: Scenario e obiettivo
 
-=== Scenario: il controllo oculistico e il dilemma delle tariffe opache
+#heading(level: 5, numbering: none, outlined: false)[Scenario: il controllo oculistico e il dilemma delle tariffe opache]
 
 #strong[Contesto e innesco:] È giovedì mattina, ore 09:30, a Forlì: terminata la colazione, Renato si accomoda nello studio davanti al suo PC desktop (schermo da 24” e mouse ergonomico), con un taccuino e gli occhiali da vista per prenotare il controllo oculistico prescritto dal medico. Sul tavolo consulta l'agenda cartacea condivisa con la moglie Paola, per escludere con certezza i giorni dedicati al volontariato culturale presso l'archivio diocesano.
 
@@ -401,7 +412,7 @@ Renato usa il PC desktop nello studio domestico o il tablet in soggiorno, tenend
 
 // Titolo breve: Implicazioni progettuali
 
-=== Considerazioni conclusive e implicazioni di design
+#heading(level: 5, numbering: none, outlined: false)[Considerazioni conclusive e implicazioni di design]
 
 #heading(level: 5, numbering: none, outlined: false)[Impatto della persona sul design]
 
@@ -428,9 +439,9 @@ Il caso d'uso richiede di confrontare analiticamente le alternative e verificarl
 
 // Titolo breve: Amina Rahman (secondaria)
 
-== Documento 02d: Persona e Use Case card (personaggio secondario) <doc:b:02d>
+==== Documento 02d: Persona e Use Case card (personaggio secondario) <doc:b:02d>
 
-=== Profilo e competenze
+#heading(level: 5, numbering: none, outlined: false)[Profilo e competenze]
 
 #block(
   width: 100%,
@@ -513,7 +524,7 @@ Amina coordina visite e terapie per la suocera Nasima con un calendario murale b
 
 // Titolo breve: Scenario e obiettivo
 
-=== Scenario: la fisioterapia all'alba e l'ostacolo del gergo amministrativo
+#heading(level: 5, numbering: none, outlined: false)[Scenario: la fisioterapia all'alba e l'ostacolo del gergo amministrativo]
 
 #strong[Contesto e innesco:] Ore 5:50 a Ravenna: prima del turno delle 6:30 in mensa scolastica, Amina deve prenotare il primo ciclo di fisioterapia per la suocera convivente Nasima (76 anni, artrosi severa). Si siede al tavolo della cucina e avvia il computer portatile di famiglia, affiancando alla tastiera il promemoria cartaceo NRE, gli orari del bus e il calendario familiare. Accede al portale CUPweb dal browser web per risolvere la pratica prima di uscire di casa.
 
@@ -529,7 +540,7 @@ Amina coordina visite e terapie per la suocera Nasima con un calendario murale b
 
 // Titolo breve: Implicazioni progettuali
 
-=== Considerazioni conclusive e implicazioni di design
+#heading(level: 5, numbering: none, outlined: false)[Considerazioni conclusive e implicazioni di design]
 
 #heading(level: 5, numbering: none, outlined: false)[Impatto della persona sul design]
 
@@ -554,9 +565,9 @@ La gestione delegata su computer domestico condiviso esige resilienza di session
 
 // --- Card 03 ----------------------------------------------------
 
-== Documento 03: Scheda del cast <doc:b:03>
+=== Documento 03: Scheda del cast <doc:b:03>
 
-=== Gerarchia, relazioni e funzioni nel cast
+#heading(level: 4, numbering: none, outlined: false)[Gerarchia, relazioni e funzioni nel cast]
 
 #enum(
   [#strong[Pina --- protagonista.] Caso guida per accessibilità, fiducia e autonomia minima.],
@@ -572,11 +583,11 @@ La gestione delegata su computer domestico condiviso esige resilienza di session
 
 La visualizzazione comparativa sintetizza le sei dimensioni C&A del cast su scala diretta 1--5 (1 al centro, 5 al perimetro esterno). La sovrapposizione evidenzia la complementarietà dei profili: l'area interna copre l'alta fragilità di Pina, mentre le estensioni di Elena (tecnica), Renato (linguistica e dominio) e Amina (motivazione) presidiano gli estremi dell'esperienza d'uso senza ridondanze.
 
-=== Motivazione della selezione e alternative scartate
+#heading(level: 4, numbering: none, outlined: false)[Motivazione della selezione e alternative scartate]
 
 Pina copre l'utente diretto con bassa autonomia su PC. Elena e Amina appartengono al Segmento B, ma non sono intercambiabili: la prima assiste a distanza con alta competenza digitale da PC d'ufficio e scarsità di tempo; la seconda assiste in presenza, conosce il contesto familiare ma affronta mediazione linguistica e attenzione frammentata al computer portatile di casa. Renato introduce una variazione interna al Segmento A e verifica il bilanciamento tra semplicità ed efficienza su postazione desktop a grande schermo. La selezione cerca varietà di età, genere, origine, lingua, composizione familiare e rapporto con il digitale solo quando queste differenze cambiano concretamente scenario o requisiti; evita di usare la diversità come tratto decorativo. Sono state rinviate: una figura sanitaria o di farmacia, perché esterna ai segmenti intervistati; una persona completamente dipendente, perché sarebbe un caso limite artificiale senza evidenze sufficienti; un caregiver con profilo quasi identico a Elena, perché non genererebbe nuove implicazioni. Anche gli scenari di sola consultazione e di modifica anagrafica sono rinviati perché meno rappresentativi del problema di prenotazione ed emersi in Fase A. Il pagamento resta un episodio circoscritto: esplora continuità e preparazione dei dati senza introdurre un nuovo scenario principale.
 
-=== Conflitti progettuali
+#heading(level: 4, numbering: none, outlined: false)[Conflitti progettuali]
 
 #list(
   [Le istruzioni essenziali devono essere visibili nei passaggi della prenotazione; spiegazioni aggiuntive e pannelli di aiuto devono essere disponibili su richiesta e richiudibili, per sostenere Pina senza rallentare Renato.],
@@ -588,7 +599,7 @@ Pina copre l'utente diretto con bassa autonomia su PC. Elena e Amina appartengon
 )
 
 #block(breakable: false)[
-=== Requisiti cumulativi del cast
+#heading(level: 3, numbering: none)[3.4 Raccomandazioni per la progettazione]
 
 #[
 #set text(size: 10pt)

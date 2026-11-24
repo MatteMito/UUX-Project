@@ -2,11 +2,14 @@
 #counter(figure.where(kind: image)).update(0)
 #counter(figure.where(kind: table)).update(0)
 
-= Fase C: Proposta progettuale
+#heading(level: 1, numbering: none)[FASE C]
+#block(sticky: true)[#text(size: 13pt, weight: "semibold")[Proposta progettuale]]
 
-== Documento 01: Modello di design e strategia metodologica <doc:c:01>
+#set heading(numbering: none)
 
-=== Adozione del modello di design
+#heading(level: 2, numbering: none)[4\. Proposta progettuale]
+
+#heading(level: 3, numbering: none)[Documento 01: 4.0 Adozione di un modello di progettazione] <doc:c:01>
 
 Il team parte dagli obiettivi degli utenti emersi nelle Fasi A e B~#cite(<cooperAboutFace2007>) e sviluppa la proposta con un processo iterativo~#cite(<iso9241210_2010>). Le scelte progettuali sono organizzate in cinque piani~#cite(<garrettElements2011>).
 
@@ -20,7 +23,7 @@ Il team parte dagli obiettivi degli utenti emersi nelle Fasi A e B~#cite(<cooper
 
 L'architettura combina un approccio #strong[top-down], che deriva le macro-aree del portale dagli obiettivi degli utenti e dal principio di #emph[empowerment non sostitutivo] dell'anziano, con un approccio #strong[bottom-up], che parte dai documenti e dati reali del dominio sanitario (impegnative del Fascicolo Sanitario Elettronico, agende CUP, esenzioni, avvisi pagoPA e deleghe) per ricomporli in flussi lineari pre-compilati.
 
-=== Sintesi dei requisiti guida
+#heading(level: 4, numbering: none, outlined: false)[Sintesi dei requisiti guida]
 
 La proposta recepisce i requisiti definiti nelle conclusioni di Fase A (#link(<req:REQ-01>)[REQ-01]--#link(<req:REQ-10>)[REQ-10]) e nelle schede di Fase B. La tabella seguente riassume le principali scelte progettuali adottate.
 
@@ -62,7 +65,7 @@ La proposta recepisce i requisiti definiti nelle conclusioni di Fase A (#link(<r
 )
 ]]
 
-=== Principi comunicativi e strategia Desktop-First
+#heading(level: 4, numbering: none, outlined: false)[Principi comunicativi e strategia Desktop-First]
 
 L'interfaccia segue tre linee guida comunicative costanti:
 
@@ -76,15 +79,15 @@ Il progetto si concentra sulla riprogettazione di #strong[CUPweb come portale we
 
 // --- Card 02 ----------------------------------------------------
 
-== Documento 02: Scheda di architettura dell'informazione <doc:c:02>
+#heading(level: 3, numbering: none)[Documento 02: 4.1 Architettura dell’informazione] <doc:c:02>
 
-=== Razionale e approccio architetturale
+#heading(level: 4, numbering: none, outlined: false)[Razionale e approccio architetturale]
 
 L'analisi di Fase A ha evidenziato che la principale barriera di CUPweb deriva dalla frammentazione del servizio tra portali separati (prenotazione, Fascicolo Sanitario Elettronico, pagamento) e dalla suddivisione iniziale in quattro silos amministrativi (#emph[specialistica], #emph[esami di laboratorio], #emph[sanità pubblica], #emph[medicina dello sport]) che costringono il cittadino a conoscere la struttura burocratica dell'ente (#link(<req:ID-02>)[ID-02], #link(<req:ID-05>)[ID-05]).
 
 Per superare questa impostazione, la nuova architettura dell'informazione adotta un modello #strong[orientato ai compiti (#emph[Task-Driven])] basato su una sintesi tra approccio top-down (articolazione delle sezioni di primo livello secondo gli obiettivi reali del cittadino) e bottom-up (aggregazione di ricette elettroniche, esenzioni, distanze chilometriche, fermate dei mezzi pubblici e avvisi di pagamento nei punti decisionali opportuni). L'utente non deve più classificare a priori la propria prestazione: avvia la prenotazione da un unico punto di accesso, seleziona la ricetta già sincronizzata dal Fascicolo Sanitario (o procede senza ricetta) e confronta in modo trasparente canale pubblico e libera professione.
 
-=== Organizzazione e sistema di etichettatura
+#heading(level: 4, numbering: none, outlined: false)[Organizzazione e sistema di etichettatura]
 
 La barra di navigazione globale del portale è organizzata in #strong[cinque sezioni principali] allineate a sinistra e #strong[due presidi di supporto] allineati a destra:
 
@@ -103,7 +106,7 @@ Sul lato destro della barra sono sempre disponibili:
   [#strong[Chiedi a \[Caregiver\]] (es.~#emph[Chiedi ad Elena]): pulsante arancione visibile al paziente assistito per avviare in qualsiasi momento la condivisione dello schermo in modalità co-pilota.],
 )
 
-=== Sintesi delle componenti di Information Architecture
+#heading(level: 4, numbering: none, outlined: false)[Sintesi delle componenti di Information Architecture]
 
 Le componenti dell'architettura dell'informazione sono organizzate in quattro gruppi~#cite(<morvilleRosenfeld2006>).
 
@@ -145,9 +148,15 @@ Le componenti dell'architettura dell'informazione sono organizzate in quattro gr
 
 // --- Card 03 ----------------------------------------------------
 
-== Documento 03: Blueprint di struttura <doc:c:03>
+#heading(level: 3, numbering: none)[4.3 Progettazione dell’interazione]
 
-=== Inquadramento metodologico
+La prenotazione guidata rende visibili il passo corrente e le scelte già effettuate. L’utente può tornare al passo precedente e scegliere un orario alternativo se lo slot viene occupato. Dopo la disdetta, una finestra di ripensamento consente di recuperare l’appuntamento.
+
+In modalità co-pilota, l’utente assistito mantiene il controllo del puntatore. In modalità delega, il caregiver opera per conto del familiare e l’interfaccia rende riconoscibile il profilo attivo. I passaggi sono documentati nei #link(<doc:c:03>)[blueprint] e nei #link(<doc:c:04>)[wireframe].
+
+#heading(level: 3, numbering: none)[Documento 03: 4.4 Blueprint di struttura] <doc:c:03>
+
+#heading(level: 4, numbering: none, outlined: false)[Inquadramento metodologico]
 
 #strong[Sei blueprint] rappresentano la struttura del portale~#cite(<garrettElements2011>) #cite(<morvilleRosenfeld2006>). I diagrammi mappano la gerarchia delle pagine, le scorciatoie di flusso (come la prenotazione rapida dalla Home o dall'archivio ricette), i bivi decisionali e la commutazione di contesto nella modalità delegata:
 
@@ -258,13 +267,13 @@ Il sesto diagramma (Figura~#ref(<fig:bp-06>, supplement: none)) illustra il modu
 
 // --- Card 04 ----------------------------------------------------
 
-== Documento 04: Wireframe e stati dell'interfaccia <doc:c:04>
+#heading(level: 3, numbering: none)[Documento 04: 4.5 Wireframe] <doc:c:04>
 
-=== Impostazione generale della suite di Wireframe
+#heading(level: 4, numbering: none, outlined: false)[Impostazione generale della suite di Wireframe]
 
 La proposta progettuale è rappresentata attraverso diciannove schermate desktop (WF-01--WF-19) che traducono visivamente l'architettura dell'informazione e i flussi definiti nei blueprint. Tutte le viste mantengono un'impostazione costante: intestazione superiore con selettore di dimensione del testo e profilo attivo, barra di navigazione globale con le cinque sezioni principali a sinistra e i due comandi di supporto a destra, e una codifica cromatica chiara che distingue le azioni ordinarie e le conferme (verde), i pagamenti pagoPA (blu), le funzioni legate al caregiver (arancione) e i comandi di cancellazione (rosso).
 
-=== Accesso e Cruscotto iniziale (WF-01 -- WF-02)
+#heading(level: 4, numbering: none, outlined: false)[Accesso e Cruscotto iniziale (WF-01 -- WF-02)]
 
 Le prime due schermate gestiscono l'ingresso nel portale e l'orientamento iniziale dell'utente:
 
@@ -285,7 +294,7 @@ Le prime due schermate gestiscono l'ingresso nel portale e l'orientamento inizia
   caption: [WF-02: Cruscotto iniziale con il prossimo appuntamento in evidenza, la prenotazione rapida e l'accesso al pagamento pagoPA.],
 ) <fig:wf-02>
 
-=== Flusso di prenotazione guidata, Co-pilota e recupero errori (WF-03 -- WF-10)
+#heading(level: 4, numbering: none, outlined: false)[Flusso di prenotazione guidata, Co-pilota e recupero errori (WF-03 -- WF-10)]
 
 Il percorso di prenotazione è scandito da uno stepper orizzontale a quattro passaggi e include la gestione del supporto a distanza e degli imprevisti sugli orari:
 
@@ -348,7 +357,7 @@ Il percorso di prenotazione è scandito da uno stepper orizzontale a quattro pas
   caption: [WF-10: Conferma della prenotazione con distribuzione multicanale del promemoria e opzioni di pagamento pagoPA.],
 ) <fig:wf-10>
 
-=== Gestione appuntamenti e disdetta con ripensamento (WF-11 -- WF-14)
+#heading(level: 4, numbering: none, outlined: false)[Gestione appuntamenti e disdetta con ripensamento (WF-11 -- WF-14)]
 
 Questo gruppo di schermate copre la consultazione delle visite prenotate, la preparazione pratica all'esame e il flusso protetto di cancellazione:
 
@@ -383,7 +392,7 @@ Questo gruppo di schermate copre la consultazione delle visite prenotate, la pre
   caption: [WF-14: Stato post-disdetta con banner temporizzato di 10 minuti per annullare la cancellazione e recuperare l'appuntamento.],
 ) <fig:wf-14>
 
-=== Deleghe, Ricette, Pagamento assistito, Ricevute e Supporto (WF-15 -- WF-19)
+#heading(level: 4, numbering: none, outlined: false)[Deleghe, Ricette, Pagamento assistito, Ricevute e Supporto (WF-15 -- WF-19)]
 
 Le ultime cinque schermate completano le sezioni di gestione familiare, archivio prescrizioni, pagamento e recupero ricevute pagoPA, e assistenza contestuale:
 
@@ -427,11 +436,11 @@ Le ultime cinque schermate completano le sezioni di gestione familiare, archivio
 
 // --- Card 05 ----------------------------------------------------
 
-== Documento 05: Confronto prima/dopo <doc:c:05>
+#heading(level: 3, numbering: none)[Documento 05: Confronto prima/dopo] <doc:c:05>
 
 Di seguito vengono messi a confronto diretto i quattro snodi principali dell'esperienza d'uso tra l'attuale portale CUPweb (Prima, a sinistra) e la proposta di riprogettazione desktop HPHP (Dopo, a destra).
 
-=== Accesso e orientamento iniziale
+#heading(level: 4, numbering: none, outlined: false)[Accesso e orientamento iniziale]
 
 L'attuale CUPweb si presenta con una home page testuale frammentata in silos amministrativi (#emph[Disdici], #emph[Prenota], #emph[Paga]) e richiede l'autenticazione SPID/CIE con OTP a ogni accesso. Il redesign HPHP introduce l'accesso rapido con PIN di 4 cifre (valido 30 giorni) e accoglie l'utente con un cruscotto orientato ai compiti: prossimo appuntamento in evidenza, pulsante primario di prenotazione, scorciatoia per l'ultima ricetta del medico e accesso diretto a pagoPA (Figura~#ref(<fig:comp-home>, supplement: none)).
 
@@ -441,7 +450,7 @@ L'attuale CUPweb si presenta con una home page testuale frammentata in silos amm
   caption: [Confronto prima/dopo per l'accesso e orientamento iniziale: CUPweb attuale (sinistra) vs Cruscotto HPHP WF-02 (destra).],
 ) <fig:comp-home>
 
-=== Le mie prescrizioni
+#heading(level: 4, numbering: none, outlined: false)[Le mie prescrizioni]
 
 In CUPweb l'elenco delle ricette è subordinato al flusso di prenotazione specialistica, richiede l'inserimento manuale del codice NRE di 15 cifre o rimanda a portali esterni per consultare il Fascicolo Sanitario. In HPHP la sezione #emph[Ricette e prescrizioni] è integrata nella navigazione principale, sincronizza in automatico le impegnative del Fascicolo (suddivise tra #emph[Da prenotare] e #emph[Ricette passate]) con diciture comprensibili e consente di avviare la prenotazione con un clic (Figura~#ref(<fig:comp-ricette>, supplement: none)).
 
@@ -451,7 +460,7 @@ In CUPweb l'elenco delle ricette è subordinato al flusso di prenotazione specia
   caption: [Confronto prima/dopo per le prescrizioni: Elenco specialistica CUPweb (sinistra) vs Sezione Ricette HPHP WF-16 (destra).],
 ) <fig:comp-ricette>
 
-=== I miei appuntamenti
+#heading(level: 4, numbering: none, outlined: false)[I miei appuntamenti]
 
 Il sistema originale separa visite attive e storico in voci distinte; la ricerca delle prestazioni passate è una tabella tecnica con filtri obbligatori per anno e AUSL ed etichette sanitarie complesse. Nel redesign HPHP l'archivio unificato #emph[I miei appuntamenti] raggruppa tutte le prenotazioni con le schede #emph[Visite in programma] e #emph[Visite passate], rendendo immediati lo stato del pagamento, le istruzioni di preparazione e la disdetta protetta (Figura~#ref(<fig:comp-appuntamenti>, supplement: none)).
 
@@ -461,7 +470,7 @@ Il sistema originale separa visite attive e storico in voci distinte; la ricerca
   caption: [Confronto prima/dopo per la gestione appuntamenti: Storico visite CUPweb (sinistra) vs Archivio appuntamenti HPHP WF-11 (destra).],
 ) <fig:comp-appuntamenti>
 
-=== Pagamento
+#heading(level: 4, numbering: none, outlined: false)[Pagamento]
 
 Il pagamento online e il recupero delle ricevute in CUPweb rinviano a un portale esterno privo di aiuto visivo per reperire i dati sul bollettino cartaceo. In HPHP il pagamento pagoPA (WF-17) e lo scaricamento delle ricevute (WF-18) sono integrati nativamente e corredati dalla guida visiva annotata #emph[Dove trovo i dati?], con richiami numerati per codice avviso di 18 cifre e importo, e verifica immediata della validità (Figura~#ref(<fig:comp-pagamento>, supplement: none)).
 
@@ -471,8 +480,18 @@ Il pagamento online e il recupero delle ricevute in CUPweb rinviano a un portale
   caption: [Confronto prima/dopo per il pagamento: Portale esterno pagoOnline (sinistra) vs Pagamento pagoPA HPHP WF-17 con guida visiva (destra).],
 ) <fig:comp-pagamento>
 
-=== Supporto collaborativo e continuità operativa (novità assenti in CUPweb)
+#heading(level: 4, numbering: none, outlined: false)[Supporto collaborativo e continuità operativa (novità assenti in CUPweb)]
 
 #block(breakable: false)[
 La proposta HPHP introduce inoltre funzionalità di cooperazione e assistenza #strong[completamente assenti nell'attuale CUPweb]: la #strong[Modalità Co-pilota] (WF-07), che consente la condivisione dello schermo con audio e puntatore remoto del caregiver senza cedere il controllo del mouse; la sezione #strong[Deleghe] (WF-15) per l'operatività trasparente a favore dei familiari assistiti; e il modulo #strong[Salva il tuo punto] (WF-19), che genera un codice temporizzato (24h) per sospendere e riprendere la sessione senza perdere il lavoro svolto.
 ]
+
+
+#heading(level: 3, numbering: none)[Documento 06: Scheda di progettazione] <doc:c:06>
+
+- La prenotazione ricorrente di #link(<doc:b:02a>)[Pina] ha motivato la scorciatoia dalla Home e il percorso guidato. Il co-pilota le consente di ricevere assistenza da Elena mantenendo il controllo dell’interazione.
+- Lo scenario di #link(<doc:b:02b>)[Elena] ha motivato la gestione in delega e l’indicazione del profilo attivo. La finestra di ripensamento permette di correggere una disdetta eseguita in fretta.
+- Il confronto di #link(<doc:b:02c>)[Renato] ha motivato l’affiancamento di servizio pubblico e libera professione, con costi ed esenzioni visibili prima di scegliere sede e orario.
+- Le interruzioni nello scenario di #link(<doc:b:02d>)[Amina] hanno motivato il salvataggio e la ripresa della pratica dopo un’interruzione. La copertura da smartphone resta secondaria.
+
+Il #link(<doc:d:03>)[protocollo di valutazione] documenta la suite WF-01–WF-19 e l’estensione del primo compito al pagamento assistito dopo il pilota. Le #link(<doc:d:04>)[conclusioni] riportano le correzioni proposte a partire dai problemi residui.

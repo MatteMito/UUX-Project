@@ -6,7 +6,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 
 ## 1. Team card
 
-- [x] Ripetere la Team card della Fase A senza variazioni non motivate.
+- [ ] Ripetere la Team card della Fase A senza variazioni non motivate. Il report presenta la scheda una sola volta, in Fase A.
 
 ## 2. Context of use
 
@@ -90,7 +90,7 @@ Per ogni persona:
 
 ## Controllo finale della fase
 
-- [x] Team card presente.
+- [ ] Team card ripetuta nella fase. La scheda è in Fase A, Documento 01.
 - [x] Context of use documentato.
 - [x] Scenari completi e non dipendenti da un'interfaccia già decisa.
 - [x] Cast card completa di alternative scartate.

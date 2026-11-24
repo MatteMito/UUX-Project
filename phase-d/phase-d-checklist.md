@@ -6,7 +6,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 
 ## 1. Team card
 
-- [ ] Ripetere la Team card delle fasi precedenti senza variazioni non motivate.
+- [ ] Ripetere la Team card delle fasi precedenti senza variazioni non motivate. Il report presenta la scheda una sola volta, in Fase A.
 
 ## 2. Preparazione della valutazione
 
@@ -93,7 +93,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 
 ## Controllo finale della fase
 
-- [ ] Team card presente.
+- [ ] Team card ripetuta nella fase. La scheda è in Fase A, Documento 01.
 - [x] Versione valutata identificata senza ambiguità.
 - [x] Inspection documentata.
 - [ ] Test svolti con persone reali.

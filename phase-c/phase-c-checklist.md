@@ -94,7 +94,7 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [ ] Archiviare la versione iniziale prima dell'ispezione.
 - [ ] Archiviare separatamente le versioni successive.
 - [ ] Collegare `v1` alle raccomandazioni dell'ispezione di Fase D e renderne esplicita la cronologia.
-- [ ] Verificare che la Design summary card sia completa e priva di placeholder o note interne.
+- [x] Verificare che la Design summary card sia completa e priva di placeholder o note interne.
 - [ ] Dichiarare assunzioni, limiti e aspetti fuori scope.
 
 **Deliverable:** Design card.
@@ -107,5 +107,5 @@ Riferimento: [specifiche complete](../docs/specs.md).
 - [ ] Tutti gli elementi che trasmettono tono e messaggio sono progettati.
 - [x] Prototipo sufficiente per eseguire i task della Fase D.
 - [x] Before/After basato su elementi equivalenti.
-- [ ] Design card collegata a personas ed evidenze.
+- [x] Design card collegata a personas ed evidenze.
 - [x] Versione da valutare congelata e identificata.

@@ -7,17 +7,22 @@
 
 // Fase D: valutazione del redesign (HPHP - Team Affordance).
 
-// La scheda del gruppo non è ripetuta: vedi Fase A, Documento 01.
+#heading(level: 1, numbering: none)[FASE D]
+#block(sticky: true)[#text(size: 13pt, weight: "semibold")[Valutazione del redesign]]
 
-= Fase D: Valutazione del redesign
+#set heading(numbering: none)
+
+#heading(level: 2, numbering: none)[5\. Valutazione del progetto]
 
 La Fase D valuta il redesign con un'ispezione e un test con utenti~#cite(<iso9241210_2010>). In primo luogo, un'ispezione interna condotta dal team di valutazione mediante Cognitive Walkthrough con Action Analysis (#link(<doc:d:02a>)[Documento~02a]) e Heuristic Analysis (#link(<doc:d:02b>)[Documento~02b]) verifica la coerenza logica, la navigabilità e l'aderenza ai principi di usabilità della suite di 19 wireframe (WF-01--WF-19). Successivamente, una sessione di User Testing con cinque partecipanti reali (#link(<doc:d:03>)[Documento~03]) ripropone protocollo, compiti e metriche della Fase A, compresa la scala SUS~#cite(<sauroSUS2011>), per misurare l'efficacia sul campo del redesign. Il #link(<doc:d:04>)[Documento~04] sintetizza gli obiettivi raggiunti, analizza criticamente i problemi residui e formula le raccomandazioni conclusive.
 
 // --- Card 02a ----------------------------------------------------
 
-== Documento 02a: Scheda di ispezione: Cognitive Walkthrough e Action Analysis <doc:d:02a>
+#heading(level: 3, numbering: none)[5.1 Ispezione]
 
-=== Impostazione dell'ispezione
+==== Documento 02a: Scheda di ispezione: Cognitive Walkthrough e Action Analysis <doc:d:02a>
+
+#heading(level: 5, numbering: none, outlined: false)[Impostazione dell'ispezione]
 
 #heading(level: 5, numbering: none, outlined: false)[Oggetto della valutazione]
 
@@ -44,7 +49,7 @@ I compiti sono due, entrambi sul profilo di Pina:
   [#strong[CW-T2, disdetta protetta:] consultare “I miei appuntamenti” e annullare una visita senza sanzioni (WF-11--WF-14).],
 )
 
-=== Analisi passo-passo del Cognitive Walkthrough
+#heading(level: 5, numbering: none, outlined: false)[Analisi passo-passo del Cognitive Walkthrough]
 
 La Tabella~#ref(<tab:d-cw>, supplement: none) riporta gli esiti per ciascun passo del percorso. La scheda del team registra quattro aspetti: obiettivo (1), visibilità dell'azione (2), corrispondenza tra azione ed esito (3) e feedback (4). S indica un esito positivo, P un esito parziale.
 
@@ -79,7 +84,7 @@ La Tabella~#ref(<tab:d-cw>, supplement: none) riporta gli esiti per ciascun pass
 
 La scheda riporta 31 esiti positivi e uno parziale su 32 verifiche. Il team ha segnalato la somiglianza visiva tra gli indicatori di mobilità e i pulsanti di scelta della sede.
 
-=== Action Analysis: CUPweb originale vs redesign
+#heading(level: 5, numbering: none, outlined: false)[Action Analysis: CUPweb originale vs redesign]
 
 La Tabella~#ref(<tab:d-action-analysis>, supplement: none) confronta il carico procedurale del compito di prenotazione con ricetta elettronica sul portale originale e sul redesign.
 
@@ -117,9 +122,9 @@ Il redesign riduce dell'87,1% le digitazioni, perché la ricetta si seleziona da
 
 // --- Card 02b ----------------------------------------------------
 
-== Documento 02b: Scheda di ispezione: Heuristic Analysis e conformità del redesign <doc:d:02b>
+==== Documento 02b: Scheda di ispezione: Heuristic Analysis e conformità del redesign <doc:d:02b>
 
-=== Impostazione dell'ispezione euristica
+#heading(level: 5, numbering: none, outlined: false)[Impostazione dell'ispezione euristica]
 
 #heading(level: 5, numbering: none, outlined: false)[Versione valutata, metodo e procedura]
 
@@ -146,7 +151,7 @@ I tre valutatori (Boscherini, Campedelli e Fuligni) hanno svolto la valutazione 
 
 Nella scheda di ispezione il codice 1 indica un problema cosmetico e il codice 2 un problema minore.
 
-=== Valutazione euristica
+#heading(level: 5, numbering: none, outlined: false)[Valutazione euristica]
 
 La Tabella~#ref(<tab:d-heuristics-overview>, supplement: none) sintetizza il grado complessivo di aderenza del prototipo alle 10 euristiche, evidenziando i punti di forza strutturali e le soluzioni incorporate nel design. Il giudizio qualitativo (#emph[Buono] o #emph[Eccellente]) sintetizza l'aderenza a ciascuna euristica.
 
@@ -181,7 +186,7 @@ La Tabella~#ref(<tab:d-heuristics-overview>, supplement: none) sintetizza il gra
   caption: figure.caption(position: top, [Aderenza alle dieci euristiche]),
 ) <tab:d-heuristics-overview>
 
-=== Finding e punti di attenzione dell'Heuristic Analysis
+#heading(level: 5, numbering: none, outlined: false)[Finding e punti di attenzione dell'Heuristic Analysis]
 
 La Tabella~#ref(<tab:d-heuristic-findings>, supplement: none) censisce i quattro punti di attenzione specifici individuati dall'ispezione esperta sulle schermate del redesign, classificati per euristica e gravità. Il team ha assegnato a tutti i rilievi un codice 1 o 2.
 
@@ -210,15 +215,17 @@ La Tabella~#ref(<tab:d-heuristic-findings>, supplement: none) censisce i quattro
   caption: figure.caption(position: top, [Punti di attenzione e finding dell'Heuristic Analysis]),
 ) <tab:d-heuristic-findings>
 
-=== Riesame delle linee guida di Fase A sul redesign
+#heading(level: 5, numbering: none, outlined: false)[Riesame delle linee guida di Fase A sul redesign]
 
 Applicata al redesign la stessa griglia di Fase A (#link(<doc:a:05a>)[Documento~05a]), risultano superate tutte le 12 non conformità e le 7 conformità parziali rilevate su CUPweb: l'esplorazione non è più bloccata da SPID, la navigazione segue i compiti dell'utente, prenotazione, ricette e pagamento stanno in un unico ambiente, i termini tecnici sono spiegati, la gerarchia visiva usa icone, colore e testo ridimensionabile, e il sistema offre ripresa della sessione, conferma delle azioni irreversibili e assistenza scritta.
 
 // --- Card 03 ----------------------------------------------------
 
-== Documento 03: Scheda di User Testing del Redesign <doc:d:03>
+#heading(level: 3, numbering: none)[5.2 Test con utenti]
 
-=== Protocollo di valutazione
+#heading(level: 4, numbering: none)[Documento 03: Scheda dei test con utenti sul redesign] <doc:d:03>
+
+#heading(level: 5, numbering: none, outlined: false)[Protocollo di valutazione]
 
 #heading(level: 5, numbering: none, outlined: false)[Versione testata e pilot]
 
@@ -275,7 +282,7 @@ Le metriche sono il successo (sì = 100%, parziale = 50%, no = 0%), il tempo per
 
 #[#set text(size: 9pt); Contributo di ogni item: voto − 1 per gli item dispari, 5 − voto per i pari; il punteggio SUS è la somma dei contributi per 2,5.]
 
-=== Reclutamento e intervallo tra le sessioni
+#heading(level: 5, numbering: none, outlined: false)[Reclutamento e intervallo tra le sessioni]
 
 Il campione comprende cinque persone. Carla B., Silvia F. e Giorgio M. hanno partecipato a entrambe le fasi, permettendo un confronto sui singoli partecipanti. Tra le sessioni di Fase A (22--24 settembre 2026) e quelle di Fase D (23--26 ottobre) è trascorso circa un mese. Nel frattempo i tre partecipanti non hanno visto le bozze. I due nuovi partecipanti sono Sergio V. per l'utenza anziana diretta e Laura G. per i caregiver. Laura rientra nella fascia prioritaria di 45--60 anni (#link(<doc:a:04b>)[Documento~04b]).
 
@@ -307,7 +314,7 @@ Il campione comprende cinque persone. Carla B., Silvia F. e Giorgio M. hanno par
 ]
 ]
 
-=== Schede dati individuali (Test Data Card 1--5)
+#heading(level: 5, numbering: none, outlined: false)[Schede dati individuali (Test Data Card 1--5)]
 
 Ogni scheda riporta le osservazioni per task, le citazioni, gli esiti quantitativi e le 10 risposte SUS con il punteggio finale. Nelle tabelle SUS, Σ è la somma dei contributi.
 
@@ -682,7 +689,7 @@ Al primo utilizzo del prototipo, Sergio completa tutti i compiti e ottiene un pu
 
 Laura chiude la sessione in 03:20 senza errori con SUS 87,5, contro il 37,5 di Fatima in Fase A (+50,0 punti): il test valida su una caregiver della fascia target il codice di salvataggio, il linguaggio chiaro e il modulo pagoPA con recupero della ricevuta.
 
-=== Risultati aggregati e confronto con la Fase A
+#heading(level: 5, numbering: none, outlined: false)[Risultati aggregati e confronto con la Fase A]
 
 #heading(level: 5, numbering: none, outlined: false)[Punteggi SUS]
 
@@ -761,7 +768,7 @@ La Tabella~#ref(<tab:d-global-comparison>, supplement: none) riassume tutte le m
 ]
 ]
 
-=== Problemi residui e curva d'urgenza
+#heading(level: 5, numbering: none, outlined: false)[Problemi residui e curva d'urgenza]
 
 L'osservazione dei test utente ha rivelato quattro micro-criticità residue (RES-01--RES-04), nessuna delle quali ha impedito il completamento con successo dei compiti. Valutate con la matrice di Fase A (#link(<doc:a:07>)[Documento~07]: impatto e persistenza da 1 a 3, soglia di emergenza 5,5), tutte presentano una somma contenuta compresa tra 3,0 e 4,0 (Tabella~#ref(<tab:d-residual-urgency>, supplement: none)).
 
@@ -808,9 +815,11 @@ La Figura~#ref(<fig:d-urgenza>, supplement: none) inserisce i rilievi di Fase D 
 
 // --- Card 04 ----------------------------------------------------
 
-== Documento 04: Scheda Conclusioni e Raccomandazioni <doc:d:04>
+#heading(level: 2, numbering: none)[6\. Conclusioni e raccomandazioni]
 
-=== Obiettivi iniziali e risultati raggiunti
+#heading(level: 3, numbering: none)[Documento 04: Scheda conclusiva del progetto] <doc:d:04>
+
+#heading(level: 3, numbering: none, outlined: false)[Obiettivi iniziali e risultati raggiunti]
 
 HPHP (#link(<doc:a:02>)[Documento~02]) mirava a ridurre le barriere digitali di CUPweb nella prenotazione, nella disdetta e nella preparazione al pagamento da computer, sostenendo l'autonomia protetta dell'anziano cronico (Segmento A) e il coordinamento non sostitutivo del caregiver (Segmento B). La Tabella~#ref(<tab:d-goals-validation>, supplement: none) confronta gli obiettivi di Fase A/B con i risultati misurati in Fase D (#link(<doc:d:03>)[Documento~03]).
 
@@ -844,7 +853,7 @@ HPHP (#link(<doc:a:02>)[Documento~02]) mirava a ridurre le barriere digitali di 
 ]
 ]
 
-=== Interpretazione dei dati, punti di forza e di debolezza
+#heading(level: 3, numbering: none, outlined: false)[Interpretazione dei dati, punti di forza e di debolezza]
 
 #heading(level: 5, numbering: none, outlined: false)[Lettura dei risultati]
 
@@ -872,7 +881,7 @@ HPHP (#link(<doc:a:02>)[Documento~02]) mirava a ridurre le barriere digitali di 
 )
 ]
 
-=== Errori del team e correzioni
+#heading(level: 3, numbering: none, outlined: false)[Errori del team e correzioni]
 
 Il Team Affordance ha riconosciuto e corretto quattro errori:
 
@@ -883,7 +892,7 @@ Il Team Affordance ha riconosciuto e corretto quattro errori:
   [#strong[Copertura del pagamento nel protocollo di test.] La formulazione iniziale del compito T1 replicava strettamente il perimetro di Fase A, fermandosi alla conferma della prenotazione ed escludendo la fase di pagamento pagoPA (#link(<req:ID-13>)[ID-13]); durante il pilot interno del 21 ottobre il team ha rilevato la lacuna e ha esteso T1 alla consultazione guidata del bollettino (WF-17, WF-18), consentendo di verificare direttamente con gli utenti la rimozione delle barriere di comprensione economica.],
 )
 
-=== Raccomandazioni per il cliente
+#heading(level: 3, numbering: none, outlined: false)[Raccomandazioni per il cliente]
 
 Per portare il prototipo in produzione, Regione Emilia-Romagna e Lepida S.c.p.A. dovrebbero seguire tre direttrici.
 

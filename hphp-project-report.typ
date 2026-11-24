@@ -1,4 +1,4 @@
-#import "@preview/grape-suite:4.0.0": seminar-paper
+#import "@preview/grape-suite:4.0.0": seminar-paper, colors
 
 #set text(lang: "it")
 #let authors = ("Matteo Boscherini", "Alessandro Campedelli", "Francesco Maria Fuligni")
@@ -36,11 +36,26 @@
 #set par(leading: 0.82em, spacing: 1.2em, first-line-indent: 0pt)
 #set list(tight: false, spacing: 0.85em)
 #set enum(tight: false, spacing: 0.85em)
-#show heading: it => block(
-  above: if it.level <= 2 { 1.65em } else if it.level == 3 { 1.3em } else { 1em },
-  sticky: true,
-  pad(bottom: if it.level <= 2 { 6pt } else { 4.5pt }, it),
-)
+// Course sections, document titles and fields use distinct visual levels.
+#show heading: it => {
+  let document = repr(it.body).contains("Documento ")
+  let size = if it.level == 1 { 19pt } else if document { 12pt } else if it.outlined and it.level == 2 { 16pt } else if it.outlined and it.level == 3 { 13.5pt } else if it.level >= 5 { 10pt } else { 11pt }
+  let title = if it.numbering == none { it.body } else { it }
+  block(sticky: true)[
+    #if document {
+      line(length: 100%, stroke: 0.45pt + luma(175))
+    }
+    #block[
+      #show regex("^(Documento [0-9]+[a-z]?:( [0-9]+(\\.[0-9]+)+)?|[0-9]+(\\.[0-9]+)*\\.?) "): prefix => text(
+        size: 0.88em,
+        weight: "regular",
+        fill: colors.purple.lighten(22%),
+        prefix,
+      )
+      #text(size: size, weight: "bold", fill: if it.level == 1 { colors.purple } else { black }, title)
+    ]
+  ]
+}
 #show figure.where(kind: table): set block(breakable: true)
 #show table.cell: set par(first-line-indent: 0pt, leading: 0.65em)
 #set figure(gap: 0.65em)
@@ -79,7 +94,7 @@ redesign.
 #show bibliography: set text(size: 10pt)
 #show bibliography: set par(leading: 0.65em, justify: false, first-line-indent: 0pt)
 
-#heading(level: 1, numbering: "1.")[Riferimenti]
+#heading(level: 1, numbering: none)[Riferimenti]
 
 La bibliografia raccoglie libri, capitoli, articoli e rapporti, anche quando
 disponibili online; la sitografia raccoglie le pagine e le risorse web.
