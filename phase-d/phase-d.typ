@@ -14,7 +14,7 @@
 
 #heading(level: 2, numbering: none)[5\. Valutazione del progetto]
 
-La Fase D valuta il redesign con un'ispezione e un test con utenti~#cite(<iso9241210_2010>). In primo luogo, un'ispezione interna condotta dal team di valutazione mediante Cognitive Walkthrough con Action Analysis (#link(<doc:d:02a>)[Documento~02a]) e Heuristic Analysis (#link(<doc:d:02b>)[Documento~02b]) verifica la coerenza logica, la navigabilità e l'aderenza ai principi di usabilità della suite di 19 wireframe (WF-01--WF-19). Successivamente, una sessione di User Testing con cinque partecipanti reali (#link(<doc:d:03>)[Documento~03]) ripropone protocollo, compiti e metriche della Fase A, compresa la scala SUS~#cite(<sauroSUS2011>), per misurare l'efficacia sul campo del redesign. Il #link(<doc:d:04>)[Documento~04] sintetizza gli obiettivi raggiunti, analizza criticamente i problemi residui e formula le raccomandazioni conclusive.
+La Fase D valuta il redesign con un'ispezione e un test con utenti~#cite(<iso9241210_2010>). In primo luogo, un'ispezione interna condotta dal team di valutazione mediante Cognitive Walkthrough con Action Analysis (#link(<doc:d:02a>)[Documento~02a]) e Heuristic Analysis (#link(<doc:d:02b>)[Documento~02b]) verifica la coerenza logica, la navigabilità e l'aderenza ai principi di usabilità della suite di 19 wireframe (da WF-01 a WF-19). Successivamente, una sessione di User Testing con cinque partecipanti reali (#link(<doc:d:03>)[Documento~03]) ripropone protocollo, compiti e metriche della Fase A, compresa la scala SUS~#cite(<sauroSUS2011>), per misurare l'efficacia sul campo del redesign. Il #link(<doc:d:04>)[Documento~04] sintetizza gli obiettivi raggiunti, analizza criticamente i problemi residui e formula le raccomandazioni conclusive.
 
 // --- Card 02a ----------------------------------------------------
 
@@ -26,11 +26,11 @@ La Fase D valuta il redesign con un'ispezione e un test con utenti~#cite(<iso924
 
 #heading(level: 5, numbering: none, outlined: false)[Oggetto della valutazione]
 
-La suite completa di 19 schermate desktop (WF-01--WF-19) e i sei Structure Blueprint definiti in Fase C (#link(<doc:c:03>)[Documento~03], #link(<doc:c:04>)[Documento~04]), valutati per verificare la rimozione degli attriti cognitivi, lessicali e visivi riscontrati su CUPweb prima della validazione sul campo con persone reali.
+La suite completa di 19 schermate desktop (da WF-01 a WF-19) e i sei Structure Blueprint definiti in Fase C (#link(<doc:c:03>)[Documento~03], #link(<doc:c:04>)[Documento~04]), valutati per verificare la rimozione degli attriti cognitivi, lessicali e visivi riscontrati su CUPweb prima della validazione sul campo con persone reali.
 
 #heading(level: 5, numbering: none, outlined: false)[Contesto e ruoli]
 
-Sessione in presenza del 18 ottobre 2026 (14:30--17:30) in laboratorio, su monitor desktop da 24” a 1920$times$1080. I ruoli erano tre:
+Sessione in presenza del 18 ottobre 2026 (14:30-17:30) in laboratorio, su monitor desktop da 24” a 1920$times$1080. I ruoli erano tre:
 
 #list(
   [#strong[Narratore:] Matteo Boscherini, che presenta gli stati dei wireframe seguendo lo scenario;],
@@ -45,8 +45,8 @@ Nel Cognitive Walkthrough il team ricostruisce le azioni che Pina potrebbe compi
 I compiti sono due, entrambi sul profilo di Pina:
 
 #list(
-  [#strong[CW-T1, prenotazione guidata:] prenotare la visita diabetologica di controllo con ricetta NRE in regime pubblico, scegliendo una sede raggiungibile con l'autobus dopo le 10:00, verificando costi e pagamento e inviando il promemoria alla figlia Elena (WF-01--WF-10, con WF-07 e WF-17);],
-  [#strong[CW-T2, disdetta protetta:] consultare “I miei appuntamenti” e annullare una visita senza sanzioni (WF-11--WF-14).],
+  [#strong[CW-T1, prenotazione guidata:] prenotare la visita diabetologica di controllo con ricetta NRE in regime pubblico, scegliendo una sede raggiungibile con l'autobus dopo le 10:00, verificando costi e pagamento e inviando il promemoria alla figlia Elena (da WF-01 a WF-10, con WF-07 e WF-17);],
+  [#strong[CW-T2, disdetta protetta:] consultare “I miei appuntamenti” e annullare una visita senza sanzioni (da WF-11 a WF-14).],
 )
 
 #heading(level: 5, numbering: none, outlined: false)[Analisi passo-passo del Cognitive Walkthrough]
@@ -75,7 +75,7 @@ La Tabella~#ref(<tab:d-cw>, supplement: none) riporta gli esiti per ciascun pass
   [Struttura, giorno e orario (WF-05, WF-06)], [S], [S], [S], [P], [I badge di mobilità (distanza, bus) orientano la scelta verso l'ospedale abituale. Rilevata solo una nota grafica: mantenere il badge statico visivamente distinto dai pulsanti.],
   [Riepilogo e conferma (WF-09)], [S], [S], [S], [S], [Il banner verde di riserva temporanea per 15 minuti protegge la scelta senza l'effetto ansiogeno di un conto alla rovescia d'emergenza.],
   [Promemoria e guida pagoPA (WF-10, WF-17)], [S], [S], [S], [S], [La condivisione con un clic (WhatsApp al caregiver) e il fac-simile annotato del bollettino pagoPA offrono una rassicurazione tangibile.],
-  [Appuntamenti e disdetta (WF-11--WF-14)], [S], [S], [S], [S], [Percorso di disdetta guidato e rassicurante: pulsante dedicato, modale che certifica l'assenza di sanzioni e finestra di 10 minuti per eventuale ripensamento.],
+  [Appuntamenti e disdetta (da WF-11 a WF-14)], [S], [S], [S], [S], [Percorso di disdetta guidato e rassicurante: pulsante dedicato, modale che certifica l'assenza di sanzioni e finestra di 10 minuti per eventuale ripensamento.],
   table.hline(stroke: 0.75pt),
 )],
   kind: table,
@@ -229,7 +229,7 @@ Applicata al redesign la stessa griglia di Fase A (#link(<doc:a:05a>)[Documento~
 
 #heading(level: 5, numbering: none, outlined: false)[Versione testata e pilot]
 
-La suite testata coincide con le 19 schermate desktop (WF-01--WF-19, #link(<doc:c:04>)[Documento~04]), predisposta come prototipo interattivo e congelata prima della campagna: non è stata modificata durante lo svolgimento dei test. Il 21 ottobre un pilot interno di 22 minuti ha verificato transizioni e consegne e ha suggerito di far controllare ai partecipanti, dentro T1, anche il pagamento assistito (WF-17, WF-18), così da validare la risoluzione di #link(<req:ID-13>)[ID-13] senza alterare la struttura dei tre compiti di Fase A.
+La suite testata coincide con le 19 schermate desktop (da WF-01 a WF-19, #link(<doc:c:04>)[Documento~04]), predisposta come prototipo interattivo e congelata prima della campagna: non è stata modificata durante lo svolgimento dei test. Il 21 ottobre un pilot interno di 22 minuti ha verificato transizioni e consegne e ha suggerito di far controllare ai partecipanti, dentro T1, anche il pagamento assistito (WF-17, WF-18), così da validare la risoluzione di #link(<req:ID-13>)[ID-13] senza alterare la struttura dei tre compiti di Fase A.
 
 #heading(level: 5, numbering: none, outlined: false)[Configurazione delle sessioni]
 
@@ -240,8 +240,8 @@ In Fase A Giorgio aveva usato un tablet mentre gli altri partecipanti usavano il
 I compiti ripropongono quelli di Fase A (#link(<doc:a:06a>)[Documento~06a]), dal tentativo esplorativo al completamento end-to-end:
 
 #list(
-  [#strong[T1, accesso e prenotazione guidata (Thinking Aloud):] dalla schermata iniziale, entrare, scegliere la prestazione, confrontare i costi tra servizio pubblico e Libera Professione, scegliere sede e orario al mattino, controllare il riepilogo con il pagamento pagoPA e confermare (WF-01--WF-10, WF-17);],
-  [#strong[T2, gestione e disdetta di un appuntamento (Bottom Line Data):] trovare la visita fissata, aprirne i dettagli e disdirla (WF-11--WF-14), senza commentare ad alta voce;],
+  [#strong[T1, accesso e prenotazione guidata (Thinking Aloud):] dalla schermata iniziale, entrare, scegliere la prestazione, confrontare i costi tra servizio pubblico e Libera Professione, scegliere sede e orario al mattino, controllare il riepilogo con il pagamento pagoPA e confermare (da WF-01 a WF-10, WF-17);],
+  [#strong[T2, gestione e disdetta di un appuntamento (Bottom Line Data):] trovare la visita fissata, aprirne i dettagli e disdirla (da WF-11 a WF-14), senza commentare ad alta voce;],
   [#strong[T3, supporto, continuità e condivisione (Thinking Aloud):] chiedere aiuto o salvare il punto raggiunto (WF-19), attivare il Co-pilota (WF-07) o passare al profilo del familiare in delega (WF-15), inviare o stampare il promemoria (WF-10).],
 )
 
@@ -284,7 +284,7 @@ Le metriche sono il successo (sì = 100%, parziale = 50%, no = 0%), il tempo per
 
 #heading(level: 5, numbering: none, outlined: false)[Reclutamento e intervallo tra le sessioni]
 
-Il campione comprende cinque persone. Carla B., Silvia F. e Giorgio M. hanno partecipato a entrambe le fasi, permettendo un confronto sui singoli partecipanti. Tra le sessioni di Fase A (22--24 settembre 2026) e quelle di Fase D (23--26 ottobre) è trascorso circa un mese. Nel frattempo i tre partecipanti non hanno visto le bozze. I due nuovi partecipanti sono Sergio V. per l'utenza anziana diretta e Laura G. per i caregiver. Laura rientra nella fascia prioritaria di 45--60 anni (#link(<doc:a:04b>)[Documento~04b]).
+Il campione comprende cinque persone. Carla B., Silvia F. e Giorgio M. hanno partecipato a entrambe le fasi, permettendo un confronto sui singoli partecipanti. Tra le sessioni di Fase A (22-24 settembre 2026) e quelle di Fase D (23-26 ottobre) è trascorso circa un mese. Nel frattempo i tre partecipanti non hanno visto le bozze. I due nuovi partecipanti sono Sergio V. per l'utenza anziana diretta e Laura G. per i caregiver. Laura rientra nella fascia prioritaria di 45-60 anni (#link(<doc:a:04b>)[Documento~04b]).
 
 #block(width: 100%, breakable: false)[
 #align(center)[
@@ -314,7 +314,7 @@ Il campione comprende cinque persone. Carla B., Silvia F. e Giorgio M. hanno par
 ]
 ]
 
-#heading(level: 5, numbering: none, outlined: false)[Schede dati individuali (Test Data Card 1--5)]
+#heading(level: 5, numbering: none, outlined: false)[Schede dati individuali (Test Data Card 1-5)]
 
 Ogni scheda riporta le osservazioni per task, le citazioni, gli esiti quantitativi e le 10 risposte SUS con il punteggio finale. Nelle tabelle SUS, Σ è la somma dei contributi.
 
@@ -622,7 +622,7 @@ Al primo utilizzo del prototipo, Sergio completa tutti i compiti e ottiene un pu
 
 #list(
   [#strong[Data e conduttori:] 26/10/2026, ore 13:15; conduttore M. Boscherini, osservatore A. Campedelli.],
-  [#strong[Contesto e profilo:] in presenza, su PC desktop durante la pausa pranzo. Laura ha 52 anni, lavora part-time presso uno sportello CAF/patronato ed è caregiver convivente del padre 83enne, ipovedente e cardiopatico. Rappresenta la fascia 45--60 anni del Segmento B2 e il punto di vista di chi assiste ogni giorno utenti anziani.],
+  [#strong[Contesto e profilo:] in presenza, su PC desktop durante la pausa pranzo. Laura ha 52 anni, lavora part-time presso uno sportello CAF/patronato ed è caregiver convivente del padre 83enne, ipovedente e cardiopatico. Rappresenta la fascia 45-60 anni del Segmento B2 e il punto di vista di chi assiste ogni giorno utenti anziani.],
 )
 
 #heading(level: 5, numbering: none, outlined: false)[Osservazioni (Laura G.)]
@@ -714,7 +714,7 @@ La Tabella~#ref(<tab:d-sus-matrix>, supplement: none) affianca i punteggi SUS de
     table.hline(stroke: 0.45pt + luma(150)),
   ),
   [Somma dei contributi (max 40)], [16], [9], [22], [15], [31], [36], [34], [30], [35],
-  [Punteggio SUS (0--100)], [40,0], [22,5], [55,0], [37,5], [77,5], [90,0], [85,0], [75,0], [87,5],
+  [Punteggio SUS (0-100)], [40,0], [22,5], [55,0], [37,5], [77,5], [90,0], [85,0], [75,0], [87,5],
   table.hline(stroke: 0.45pt + luma(170)),
   [Media $macron(x)$], table.cell(colspan: 4, align: center)[#strong[38,75]], table.cell(colspan: 5, align: center)[#strong[83,00]],
   [Varianza $s^2$ (dev. st. $s$)], table.cell(colspan: 4, align: center)[177,08 (13,31)], table.cell(colspan: 5, align: center)[41,88 (6,47)],
@@ -757,7 +757,7 @@ La Tabella~#ref(<tab:d-global-comparison>, supplement: none) riassume tutte le m
   [Tempo medio della sessione], [09:11], [06:05], [#strong[04:08]], [−55,0%],
   [Tempo medio dei richiamati], [09:30], [06:25], [#strong[03:55]], [−58,8%],
   [Errori medi per sessione], [3,50], [1,25], [#strong[0,40]], [−88,6%],
-  [SUS medio (0--100)], [38,75], [66,25], [#strong[83,00]], [+44,25 pt],
+  [SUS medio (0-100)], [38,75], [66,25], [#strong[83,00]], [+44,25 pt],
   [SUS minimo], [22,50], [45,00], [#strong[75,00]], [+52,50 pt],
   [Varianza del SUS ($s^2$)], [177,08], [227,08], [#strong[41,88]], [−76,4%],
   table.hline(stroke: 0.75pt),
@@ -770,14 +770,14 @@ La Tabella~#ref(<tab:d-global-comparison>, supplement: none) riassume tutte le m
 
 #heading(level: 5, numbering: none, outlined: false)[Problemi residui e curva d'urgenza]
 
-L'osservazione dei test utente ha rivelato quattro micro-criticità residue (RES-01--RES-04), nessuna delle quali ha impedito il completamento con successo dei compiti. Valutate con la matrice di Fase A (#link(<doc:a:07>)[Documento~07]: impatto e persistenza da 1 a 3, soglia di emergenza 5,5), tutte presentano una somma contenuta compresa tra 3,0 e 4,0 (Tabella~#ref(<tab:d-residual-urgency>, supplement: none)).
+L'osservazione dei test utente ha rivelato quattro micro-criticità residue (da RES-01 a RES-04), nessuna delle quali ha impedito il completamento con successo dei compiti. Valutate con la matrice di Fase A (#link(<doc:a:07>)[Documento~07]: impatto e persistenza da 1 a 3, soglia di emergenza 5,5), tutte presentano una somma contenuta compresa tra 3,0 e 4,0 (Tabella~#ref(<tab:d-residual-urgency>, supplement: none)).
 
 La Figura~#ref(<fig:d-urgenza>, supplement: none) inserisce i rilievi di Fase D nel quadro complessivo dell'evoluzione del servizio rispetto alle 13 criticità censite in Fase A:
 
 #list(
   [#strong[Criticità prioritarie di Fase A (risolte):] gli otto problemi storici collocati sulla soglia o sopra di essa (#link(<req:ID-01>)[ID-01], #link(<req:ID-02>)[ID-02], #link(<req:ID-05>)[ID-05], #link(<req:ID-08>)[ID-08], #link(<req:ID-09>)[ID-09], #link(<req:ID-10>)[ID-10], #link(<req:ID-12>)[ID-12], #link(<req:ID-13>)[ID-13]), che costituivano i requisiti inderogabili del redesign, sono stati tutti risolti, come dimostrato dall'azzeramento dei blocchi procedurali e dal 100% di successo nei test.],
   [#strong[Criticità secondarie di Fase A (differite a backlog):] i cinque problemi che in Fase A si attestavano al di sotto della soglia ordinaria di emergenza (#link(<req:ID-03>)[ID-03], #link(<req:ID-04>)[ID-04], #link(<req:ID-06>)[ID-06], #link(<req:ID-07>)[ID-07], #link(<req:ID-11>)[ID-11]) erano stati differiti alla release successiva. Di questi, tre sono stati comunque mitigati dal redesign (l'impaginazione pulita e ariosa attenua ID-03; il confronto a due colonne di WF-04 chiarisce ID-04; il codice di salvataggio sessione di WF-19 risolve ID-11), mentre l'introduzione di una ricerca testuale libera (ID-06) e l'ulteriore scomposizione analitica delle tariffe accessorie (ID-07) restano pianificate per sviluppi futuri.],
-  [#strong[Problemi residui di Fase D:] i quattro rilievi emersi dai test (RES-01--RES-04) si collocano tutti ampiamente nella fascia ordinaria di non emergenza, a distanza di sicurezza dalla soglia critica di 5,5.],
+  [#strong[Problemi residui di Fase D:] i quattro rilievi emersi dai test (da RES-01 a RES-04) si collocano tutti ampiamente nella fascia ordinaria di non emergenza, a distanza di sicurezza dalla soglia critica di 5,5.],
 )
 
 #block(width: 100%, breakable: false)[
@@ -810,7 +810,7 @@ La Figura~#ref(<fig:d-urgenza>, supplement: none) inserisce i rilievi di Fase D 
 #figure(
   [#image("../assets/phase-d-urgency-comparison.svg", width: 96%, alt: "Impatto e persistenza delle criticità risolte, differite e residue, con soglia a 5,5.")],
   kind: image,
-  caption: [Curva d'urgenza comparata: le 8 criticità prioritarie di Fase A risultano superate dal redesign; le 5 criticità storiche differite a backlog e i 4 problemi residui del test (RES-01--RES-04) si collocano stabilmente sotto la soglia ordinaria.],
+  caption: [Curva d'urgenza comparata: le 8 criticità prioritarie di Fase A risultano superate dal redesign; le 5 criticità storiche differite a backlog e i 4 problemi residui del test (da RES-01 a RES-04) si collocano stabilmente sotto la soglia ordinaria.],
 ) <fig:d-urgenza>
 
 // --- Card 04 ----------------------------------------------------
@@ -860,7 +860,7 @@ HPHP (#link(<doc:a:02>)[Documento~02]) mirava a ridurre le barriere digitali di 
 #enum(
   [#strong[Riduzione del divario tra utenti.] Oltre alla media SUS (da 38,75 a 83,00), la varianza scende da 177,08 a 41,88. In Fase A il divario tra Carla (22,5) e Silvia (55,0) era di 32,5 punti; con il redesign Carla (77,5) e Silvia (90,0) distano 12,5 punti e sono entrambe sopra la soglia.],
   [#strong[SUS per gruppo di reclutamento.] La media è 84,17 per i tre partecipanti richiamati e 81,25 per i due nuovi.],
-  [#strong[Superamento del benchmark commerciale.] In Fase A MioDottore superava CUPweb (66,25 contro 38,75) ma non sosteneva la coppia caregiver--assistito (#link(<doc:a:06b>)[Documento~06b]); il redesign lo supera di 16,75 punti SUS rendendo nativa e sicura l'assistenza familiare.],
+  [#strong[Superamento del benchmark commerciale.] In Fase A MioDottore superava CUPweb (66,25 contro 38,75) ma non sosteneva la coppia caregiver-assistito (#link(<doc:a:06b>)[Documento~06b]); il redesign lo supera di 16,75 punti SUS rendendo nativa e sicura l'assistenza familiare.],
 )
 
 #heading(level: 5, numbering: none, outlined: false)[Punti di forza]
@@ -887,7 +887,7 @@ Il Team Affordance ha riconosciuto e corretto quattro errori:
 
 #enum(
   [#strong[Canale di accesso.] Le prime ipotesi tra Fase B e Fase C prevedevano un flusso mobile con codice SMS a ogni accesso. Il riesame delle personas (#link(<doc:b:02a>)[Documento~02a], #link(<doc:b:02c>)[Documento~02c]) ha mostrato che per un anziano al PC leggere un SMS sul telefono riproduce la barriera a due fattori di SPID; il team ha riprogettato la Fase C come suite desktop con PIN valido 30 giorni.],
-  [#strong[Reclutamento in Fase A.] Fatima R. (35 anni) era fuori dalla fascia target 45--60 del Segmento B (#link(<doc:a:04b>)[Documento~04b]). Il limite è stato dichiarato senza alterare il dato e corretto in Fase D reclutando Laura G. (52 anni).],
+  [#strong[Reclutamento in Fase A.] Fatima R. (35 anni) era fuori dalla fascia target 45-60 del Segmento B (#link(<doc:a:04b>)[Documento~04b]). Il limite è stato dichiarato senza alterare il dato e corretto in Fase D reclutando Laura G. (52 anni).],
   [#strong[Dispositivi diversi in Fase A.] Giorgio aveva usato un tablet e gli altri un PC (#link(<doc:a:06a>)[Documento~06a]), introducendo una variabile confondente; in Fase D tutte le sessioni si sono svolte su PC con mouse.],
   [#strong[Copertura del pagamento nel protocollo di test.] La formulazione iniziale del compito T1 replicava strettamente il perimetro di Fase A, fermandosi alla conferma della prenotazione ed escludendo la fase di pagamento pagoPA (#link(<req:ID-13>)[ID-13]); durante il pilot interno del 21 ottobre il team ha rilevato la lacuna e ha esteso T1 alla consultazione guidata del bollettino (WF-17, WF-18), consentendo di verificare direttamente con gli utenti la rimozione delle barriere di comprensione economica.],
 )
@@ -900,8 +900,8 @@ Per portare il prototipo in produzione, Regione Emilia-Romagna e Lepida S.c.p.A.
   [#strong[Affidabilità statistica e accessibilità.]
 
 #list(
-  [Condurre test sommativi su 30--50 cittadini reclutati fuori dalla rete del team, presso Case della Comunità, sportelli CUP e farmacie.],
-  [Verificare l'accessibilità con 4--6 utenti ipovedenti o non vedenti e screen reader (NVDA, JAWS, VoiceOver).],
+  [Condurre test sommativi su 30-50 cittadini reclutati fuori dalla rete del team, presso Case della Comunità, sportelli CUP e farmacie.],
+  [Verificare l'accessibilità con 4-6 utenti ipovedenti o non vedenti e screen reader (NVDA, JAWS, VoiceOver).],
   [Monitorare per 60 giorni il rinnovo del PIN a 30 giorni e l'uso effettivo del codice di salvataggio.],
 )],
   [#strong[Scalabilità del servizio.]
@@ -911,7 +911,7 @@ Per portare il prototipo in produzione, Regione Emilia-Romagna e Lepida S.c.p.A.
   [Integrare le deleghe con l'ANPR e con il Fascicolo Sanitario Elettronico 2.0, aggiungendo la vista tabellare compatta per chi assiste più familiari (RES-04).],
   [Estendere la guida visiva pensata per pagoPA ai moduli di autocertificazione di reddito ed esenzione.],
 )],
-  [#strong[Rifinitura dell'usabilità (RES-01--RES-03).]
+  [#strong[Rifinitura dell'usabilità (da RES-01 a RES-03).]
 
 #list(
   [Distinguere graficamente i badge informativi dai pulsanti in WF-05.],

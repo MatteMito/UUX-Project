@@ -25,7 +25,7 @@ L'architettura combina un approccio #strong[top-down], che deriva le macro-aree 
 
 #heading(level: 4, numbering: none, outlined: false)[Sintesi dei requisiti guida]
 
-La proposta recepisce i requisiti definiti nelle conclusioni di Fase A (#link(<req:REQ-01>)[REQ-01]--#link(<req:REQ-10>)[REQ-10]) e nelle schede di Fase B. La tabella seguente riassume le principali scelte progettuali adottate.
+La proposta recepisce i requisiti definiti nelle conclusioni di Fase A (da #link(<req:REQ-01>)[REQ-01] a #link(<req:REQ-10>)[REQ-10]) e nelle schede di Fase B. La tabella seguente riassume le principali scelte progettuali adottate.
 
 #[#[
 #set text(size: 10pt)
@@ -161,12 +161,12 @@ In modalità co-pilota, l’utente assistito mantiene il controllo del puntatore
 #strong[Sei blueprint] rappresentano la struttura del portale~#cite(<garrettElements2011>) #cite(<morvilleRosenfeld2006>). I diagrammi mappano la gerarchia delle pagine, le scorciatoie di flusso (come la prenotazione rapida dalla Home o dall'archivio ricette), i bivi decisionali e la commutazione di contesto nella modalità delegata:
 
 #enum(
-  [#strong[Blueprint 1 -- Accesso al portale e Homepage:] struttura d'ingresso e diramazione verso tutte le sezioni principali, di supporto e di piè di pagina;],
-  [#strong[Blueprint 2 -- Flusso di prenotazione:] percorso guidato con o senza ricetta fino alla conferma e alle azioni successive;],
-  [#strong[Blueprint 3 -- Gestione appuntamenti:] consultazione delle visite, spostamento data, pagamento e disdetta con recupero della visita;],
-  [#strong[Blueprint 4 -- Ricette e prescrizioni:] consultazione delle impegnative elettroniche e innesto diretto nella prenotazione;],
-  [#strong[Blueprint 5 -- Deleghe:] gestione degli assistiti e delle proprie deleghe;],
-  [#strong[Blueprint 6 -- Serve aiuto?:] salvataggio e ripresa della sessione tramite codice, assistenza scritta e numero verde.],
+  [#strong[Blueprint 1. Accesso al portale e Homepage:] struttura d'ingresso e diramazione verso tutte le sezioni principali, di supporto e di piè di pagina;],
+  [#strong[Blueprint 2. Flusso di prenotazione:] percorso guidato con o senza ricetta fino alla conferma e alle azioni successive;],
+  [#strong[Blueprint 3. Gestione appuntamenti:] consultazione delle visite, spostamento data, pagamento e disdetta con recupero della visita;],
+  [#strong[Blueprint 4. Ricette e prescrizioni:] consultazione delle impegnative elettroniche e innesto diretto nella prenotazione;],
+  [#strong[Blueprint 5. Deleghe:] gestione degli assistiti e delle proprie deleghe;],
+  [#strong[Blueprint 6. Serve aiuto?:] salvataggio e ripresa della sessione tramite codice, assistenza scritta e numero verde.],
 )
 
 #heading(level: 4, numbering: none, outlined: false)[Legenda dei Blueprint]
@@ -271,9 +271,9 @@ Il sesto diagramma (Figura~#ref(<fig:bp-06>, supplement: none)) illustra il modu
 
 #heading(level: 4, numbering: none, outlined: false)[Impostazione generale della suite di Wireframe]
 
-La proposta progettuale è rappresentata attraverso diciannove schermate desktop (WF-01--WF-19) che traducono visivamente l'architettura dell'informazione e i flussi definiti nei blueprint. Tutte le viste mantengono un'impostazione costante: intestazione superiore con selettore di dimensione del testo e profilo attivo, barra di navigazione globale con le cinque sezioni principali a sinistra e i due comandi di supporto a destra, e una codifica cromatica chiara che distingue le azioni ordinarie e le conferme (verde), i pagamenti pagoPA (blu), le funzioni legate al caregiver (arancione) e i comandi di cancellazione (rosso).
+La proposta progettuale è rappresentata attraverso diciannove schermate desktop (da WF-01 a WF-19) che traducono visivamente l'architettura dell'informazione e i flussi definiti nei blueprint. Tutte le viste mantengono un'impostazione costante: intestazione superiore con selettore di dimensione del testo e profilo attivo, barra di navigazione globale con le cinque sezioni principali a sinistra e i due comandi di supporto a destra, e una codifica cromatica chiara che distingue le azioni ordinarie e le conferme (verde), i pagamenti pagoPA (blu), le funzioni legate al caregiver (arancione) e i comandi di cancellazione (rosso).
 
-#heading(level: 4, numbering: none, outlined: false)[Accesso e Cruscotto iniziale (WF-01 -- WF-02)]
+#heading(level: 4, numbering: none, outlined: false)[Accesso e Cruscotto iniziale (WF-01 e WF-02)]
 
 Le prime due schermate gestiscono l'ingresso nel portale e l'orientamento iniziale dell'utente:
 
@@ -294,18 +294,18 @@ Le prime due schermate gestiscono l'ingresso nel portale e l'orientamento inizia
   caption: [WF-02: Cruscotto iniziale con il prossimo appuntamento in evidenza, la prenotazione rapida e l'accesso al pagamento pagoPA.],
 ) <fig:wf-02>
 
-#heading(level: 4, numbering: none, outlined: false)[Flusso di prenotazione guidata, Co-pilota e recupero errori (WF-03 -- WF-10)]
+#heading(level: 4, numbering: none, outlined: false)[Flusso di prenotazione guidata, Co-pilota e recupero errori (da WF-03 a WF-10)]
 
 Il percorso di prenotazione è scandito da uno stepper orizzontale a quattro passaggi e include la gestione del supporto a distanza e degli imprevisti sugli orari:
 
 #list(
-  [#strong[Passo 1 -- Scelta della prestazione (WF-03, Figura~#ref(<fig:wf-03>, supplement: none)):] propone un bivio semplice tra la prenotazione con ricetta medica (selezionabile direttamente da un menu a tendina che mostra le ricette già presenti nel Fascicolo Sanitario, senza dover digitare il codice NRE) e la prenotazione di prestazioni senza ricetta.],
-  [#strong[Passo 2 -- Canale e costi (WF-04, Figura~#ref(<fig:wf-04>, supplement: none)):] affianca in modo trasparente le due opzioni disponibili per la visita selezionata, permettendo di confrontare a colpo d'occhio il Servizio Sanitario Pubblico (con eventuale esenzione già applicata, prima data disponibile e attesa media) e la Libera Professione in ospedale (con importo totale e prima data utile ravvicinata).],
-  [#strong[Passo 3a -- Scelta della struttura (WF-05, Figura~#ref(<fig:wf-05>, supplement: none)):] presenta a sinistra l'elenco degli ospedali e poliambulatori ordinati per vicinanza da casa (corredati da distanza in chilometri, prima data utile e icone per parcheggio e mezzi pubblici) e a destra la mappa interattiva del territorio.],
-  [#strong[Passo 3b -- Scelta di giorno e orario (WF-06, Figura~#ref(<fig:wf-06>, supplement: none)):] affianca il calendario mensile, dove i giorni disponibili sono evidenziati in verde, e l'elenco degli orari suddivisi tra mattina (con indicazione di compatibilità con le linee autobus) e pomeriggio.],
+  [#strong[Passo 1. Scelta della prestazione (WF-03, Figura~#ref(<fig:wf-03>, supplement: none)):] propone un bivio semplice tra la prenotazione con ricetta medica (selezionabile direttamente da un menu a tendina che mostra le ricette già presenti nel Fascicolo Sanitario, senza dover digitare il codice NRE) e la prenotazione di prestazioni senza ricetta.],
+  [#strong[Passo 2. Canale e costi (WF-04, Figura~#ref(<fig:wf-04>, supplement: none)):] affianca in modo trasparente le due opzioni disponibili per la visita selezionata, permettendo di confrontare a colpo d'occhio il Servizio Sanitario Pubblico (con eventuale esenzione già applicata, prima data disponibile e attesa media) e la Libera Professione in ospedale (con importo totale e prima data utile ravvicinata).],
+  [#strong[Passo 3a. Scelta della struttura (WF-05, Figura~#ref(<fig:wf-05>, supplement: none)):] presenta a sinistra l'elenco degli ospedali e poliambulatori ordinati per vicinanza da casa (corredati da distanza in chilometri, prima data utile e icone per parcheggio e mezzi pubblici) e a destra la mappa interattiva del territorio.],
+  [#strong[Passo 3b. Scelta di giorno e orario (WF-06, Figura~#ref(<fig:wf-06>, supplement: none)):] affianca il calendario mensile, dove i giorni disponibili sono evidenziati in verde, e l'elenco degli orari suddivisi tra mattina (con indicazione di compatibilità con le linee autobus) e pomeriggio.],
   [#strong[Modalità Co-pilota attiva (WF-07, Figura~#ref(<fig:wf-07>, supplement: none)):] mostra l'interfaccia quando l'anziano attiva il supporto del caregiver cliccando su #emph[Chiedi ad Elena]. Un banner arancione in alto segnala la condivisione attiva; lo schermo mantiene a sinistra la pagina di prenotazione su cui compare il cursore arancione remoto della figlia, e apre a destra il pannello vocale con la trascrizione in tempo reale dei suggerimenti del caregiver.],
   [#strong[Recupero per orario appena occupato (WF-08, Figura~#ref(<fig:wf-08>, supplement: none)):] se l'orario selezionato viene confermato da un altro utente, il sistema evita messaggi d'errore bloccanti e propone subito due alternative vicine nella stessa struttura (un altro orario nello stesso giorno o lo stesso orario nel giorno successivo), confermabili con un solo clic.],
-  [#strong[Passo 4 -- Riepilogo (WF-09, Figura~#ref(<fig:wf-09>, supplement: none)):] riassume tutti i dati della visita, mostra in alto un timer di 15 minuti che garantisce la riserva temporanea del posto, permette di scegliere se pagare subito online con pagoPA o successivamente tramite avviso cartaceo e ricorda la possibilità di disdire senza sanzioni con un anticipo di almeno due giorni lavorativi.],
+  [#strong[Passo 4. Riepilogo (WF-09, Figura~#ref(<fig:wf-09>, supplement: none)):] riassume tutti i dati della visita, mostra in alto un timer di 15 minuti che garantisce la riserva temporanea del posto, permette di scegliere se pagare subito online con pagoPA o successivamente tramite avviso cartaceo e ricorda la possibilità di disdire senza sanzioni con un anticipo di almeno due giorni lavorativi.],
   [#strong[Conferma della prenotazione (WF-10, Figura~#ref(<fig:wf-10>, supplement: none)):] certifica l'avvenuta prenotazione mostrando a sinistra le opzioni per conservare o condividere il promemoria (stampa A4, invio SMS, invio su WhatsApp al caregiver, aggiunta al calendario) e a destra il pulsante per procedere al pagamento pagoPA o scaricare il bollettino.],
 )
 
@@ -357,7 +357,7 @@ Il percorso di prenotazione è scandito da uno stepper orizzontale a quattro pas
   caption: [WF-10: Conferma della prenotazione con distribuzione multicanale del promemoria e opzioni di pagamento pagoPA.],
 ) <fig:wf-10>
 
-#heading(level: 4, numbering: none, outlined: false)[Gestione appuntamenti e disdetta con ripensamento (WF-11 -- WF-14)]
+#heading(level: 4, numbering: none, outlined: false)[Gestione appuntamenti e disdetta con ripensamento (da WF-11 a WF-14)]
 
 Questo gruppo di schermate copre la consultazione delle visite prenotate, la preparazione pratica all'esame e il flusso protetto di cancellazione:
 
@@ -392,7 +392,7 @@ Questo gruppo di schermate copre la consultazione delle visite prenotate, la pre
   caption: [WF-14: Stato post-disdetta con banner temporizzato di 10 minuti per annullare la cancellazione e recuperare l'appuntamento.],
 ) <fig:wf-14>
 
-#heading(level: 4, numbering: none, outlined: false)[Deleghe, Ricette, Pagamento assistito, Ricevute e Supporto (WF-15 -- WF-19)]
+#heading(level: 4, numbering: none, outlined: false)[Deleghe, Ricette, Pagamento assistito, Ricevute e Supporto (da WF-15 a WF-19)]
 
 Le ultime cinque schermate completano le sezioni di gestione familiare, archivio prescrizioni, pagamento e recupero ricevute pagoPA, e assistenza contestuale:
 

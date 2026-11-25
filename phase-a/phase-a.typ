@@ -135,7 +135,7 @@ Tempi e SUS si rilevano con test che usano compiti e condizioni comparabili.
   motivazione all’autonomia],
   [Contestuale: dispositivo disponibile, presenza fisica o meno del
   caregiver al momento del bisogno, distanza abitativa
-  caregiver--assistito],
+  caregiver-assistito],
 )
 
 #heading(level: 5, numbering: none, outlined: false)[Motivazione della scelta e relazione con il servizio del cliente]
@@ -442,7 +442,7 @@ caro, un obiettivo centrale del progetto HPHP.
 
 #heading(level: 5, numbering: none, outlined: false)[Metodo di ricerca utilizzato: statistiche disponibili]
 
-I dati provengono dal rapporto CNEL--Censis #emph[Il valore sociale del caregiver]
+I dati provengono dal rapporto CNEL-Censis #emph[Il valore sociale del caregiver]
 (2024)~#cite(<cnelCaregiver2024>) e dal rapporto ISTAT #emph[Indicatori demografici, Anno 2025]
 (dati al 1° gennaio 2026)~#cite(<istatDemografia2025>, supplement: [pp.~1, 9]).
 
@@ -465,10 +465,10 @@ popolazione.
     [#strong[Indicatore demografico e sociale]], [#strong[Fonte di riferimento]], [#strong[Dato rilevato]],
     table.hline(stroke: 0.45pt + luma(150)),
   ),
-  [Caregiver non retribuiti (assistenza almeno settimanale ad anziani, disabili o familiari non autosufficienti)], [CNEL--Censis (2024)], [$> 7$ milioni],
-  [Composizione di genere dei caregiver], [CNEL--Censis (2024)], [58% donne],
-  [Fascia anagrafica prevalente (45--64 anni)], [CNEL--Censis (2024)], [56% del totale],
-  [Difficoltà conciliazione lavoro/cura], [CNEL--Censis (2024)], [38% F / 34% M],
+  [Caregiver non retribuiti (assistenza almeno settimanale ad anziani, disabili o familiari non autosufficienti)], [CNEL-Censis (2024)], [$> 7$ milioni],
+  [Composizione di genere dei caregiver], [CNEL-Censis (2024)], [58% donne],
+  [Fascia anagrafica prevalente (45-64 anni)], [CNEL-Censis (2024)], [56% del totale],
+  [Difficoltà conciliazione lavoro/cura], [CNEL-Censis (2024)], [38% F / 34% M],
   [Popolazione over 65 (1 gennaio 2026)], [ISTAT (2025)], [14,8 mln (25,1%)],
   [Popolazione over 85 (1 gennaio 2026)], [ISTAT (2025)], [$> 2,5$ milioni],
   table.hline(stroke: 0.75pt),
@@ -499,7 +499,7 @@ Per fidarsi e delegare nuovamente, Silvia non chiede che la madre faccia tutto d
 
 #heading(level: 4, numbering: none, outlined: false)[Soggetto: Fatima R.]
 
- (35 anni secondo la descrizione dell'intervista; impiegata, convive con il proprio nucleo familiare allargato), rappresenta il ruolo di caregiver convivente che assiste quotidianamente la suocera anziana ipovedente. L'età riportata la colloca fuori dalla fascia target 45--60 anni: il suo contributo va quindi interpretato come caso esplorativo sul ruolo di assistenza, non come copertura anagrafica del segmento.
+ (35 anni secondo la descrizione dell'intervista; impiegata, convive con il proprio nucleo familiare allargato), rappresenta il ruolo di caregiver convivente che assiste quotidianamente la suocera anziana ipovedente. L'età riportata la colloca fuori dalla fascia target 45-60 anni: il suo contributo va quindi interpretato come caso esplorativo sul ruolo di assistenza, non come copertura anagrafica del segmento.
 
 Fatima gestisce le pratiche sanitarie della famiglia tra gli impegni
 lavorativi e domestici, coordinandosi con il cognato per i trasporti e
@@ -1012,20 +1012,20 @@ reali.
 #strong[Risultati per task:]
 
 #list(
-  [#strong[T1 --- Individuare come prenotare una visita specialistica.]
+  [#strong[T1: Individuare come prenotare una visita specialistica.]
   Il partecipante
   individua il percorso di prenotazione, ma manifesta incertezza
   davanti alla scelta tra Servizio Sanitario Nazionale e Libera
   Professione, esprime il timore di incorrere in costi non
   chiaramente esplicitati e decide di non proseguire. Citazione: "Non
   so se scegliendo una cosa poi pago. Preferisco non andare avanti."],
-  [#strong[T2 --- Individuare come disdire un appuntamento.] Il partecipante individua la sezione
+  [#strong[T2: Individuare come disdire un appuntamento.] Il partecipante individua la sezione
   relativa agli appuntamenti, ma confonde le opzioni di modifica e
   disdetta, apre un percorso non pertinente e interrompe la ricerca
   per timore di modificare accidentalmente l’appuntamento.
   Citazione: "Non voglio rischiare di modificare qualcosa per
   sbaglio."],
-  [#strong[T3 --- Individuare dove chiedere assistenza.] Con esitazione, il partecipante individua
+  [#strong[T3: Individuare dove chiedere assistenza.] Con esitazione, il partecipante individua
   la sezione di assistenza e riconosce la presenza di contatti
   telefonici, ma manifesta incertezza sulla distinzione tra assistenza
   generale e assistenza relativa ai singoli servizi. Citazione: "Se
@@ -1095,7 +1095,7 @@ prenotazione o disdetta reale.
 #strong[Risultati per task:]
 
 #list(
-  [#strong[T1 --- Individuare come prenotare una visita specialistica.]
+  [#strong[T1: Individuare come prenotare una visita specialistica.]
   La partecipante scambia "Paga
   una prestazione", unica azione visibile senza accesso, per
   l’ingresso alla prenotazione. Raggiunge poi
@@ -1104,14 +1104,14 @@ prenotazione o disdetta reale.
   errore; alla soglia dei 3 minuti il conduttore inserisce le
   credenziali per permettere di proseguire. Citazione: "Mi dice che è
   sbagliato. Non so cosa ho sbagliato."],
-  [#strong[T2 --- Disdire un appuntamento.] La partecipante trova la sezione delle
+  [#strong[T2: Disdire un appuntamento.] La partecipante trova la sezione delle
   prenotazioni e riconosce con soddisfazione la propria visita, tocca
   però "Modifica" invece di "Disdici" e, quando individua il pulsante
   corretto, rinuncia a premerlo per timore di perdere definitivamente
   l’appuntamento. Citazione: "Se poi me la tolgono e
   non me la ridanno più? La visita l’ho aspettata tre
   mesi."],
-  [#strong[T3 --- Individuare dove chiedere assistenza.] La prima risposta della partecipante è
+  [#strong[T3: Individuare dove chiedere assistenza.] La prima risposta della partecipante è
   esterna allo strumento ("Io chiamo mia figlia"). Cerca poi
   l’aiuto in "Impostazioni" senza trovarlo e conclude
   che si rivolgerebbe alla farmacia; task non completato entro la
@@ -1177,20 +1177,20 @@ prenotazione o disdetta reale.
 #strong[Risultati per task:]
 
 #list(
-  [#strong[T1 --- Individuare come prenotare una visita specialistica.]
+  [#strong[T1: Individuare come prenotare una visita specialistica.]
   La partecipante si autentica
   senza esitazioni e individua il percorso di prenotazione. Nota
   spontaneamente il cambio di dominio, che secondo lei spingerebbe la
   madre ad abbandonare per timore di una truffa, e non trova subito
   dove selezionare il familiare per cui prenota. Citazione: "Io lo so,
   ma mia madre qui chiude tutto pensando a una truffa."],
-  [#strong[T2 --- Disdire un appuntamento.] La partecipante cerca inizialmente la disdetta dentro
+  [#strong[T2: Disdire un appuntamento.] La partecipante cerca inizialmente la disdetta dentro
   "Modifica", poi individua "Disdici" e completa l’operazione,
   ma critica la conferma finale, generica e priva di un riepilogo
   della visita disdetta e del paziente. Citazione: "Mi dice solo
   ’operazione eseguita’. Quale visita?
   Di chi?"],
-  [#strong[T3 --- Individuare dove chiedere assistenza.] La partecipante trova le domande
+  [#strong[T3: Individuare dove chiedere assistenza.] La partecipante trova le domande
   frequenti e il numero verde, ma cerca un canale scritto compatibile
   con i suoi orari di lavoro e non lo trova; un collegamento di
   supporto la porta su un altro dominio. Citazione: "Ho trovato dove
@@ -1259,19 +1259,19 @@ fermato). Nessuna prenotazione o disdetta reale.
 #strong[Risultati per task:]
 
 #list(
-  [#strong[T1 --- Individuare come prenotare una visita specialistica.]
+  [#strong[T1: Individuare come prenotare una visita specialistica.]
   La partecipante trova
   subito "Prenota", ma si ferma sul codice NRE dell’impegnativa
   e sulla scelta tra "prima visita" e "controllo", lo stesso dubbio
   riportato in intervista; preferisce non proseguire senza una
   conferma del medico di famiglia. Citazione: "Non vado avanti se non
   sono sicura."],
-  [#strong[T2 --- Disdire un appuntamento.] Dopo un’interruzione
+  [#strong[T2: Disdire un appuntamento.] Dopo un’interruzione
   di 40 secondi la sessione del browser su CUPweb è scaduta e la
   partecipante deve ripetere l’autenticazione; seleziona poi
   "Modifica" prima di individuare "Disdici" e completa la disdetta.
   Citazione: "Ecco, ho perso tutto. Sempre così."],
-  [#strong[T3 --- Individuare dove chiedere assistenza.] La partecipante trova il numero
+  [#strong[T3: Individuare dove chiedere assistenza.] La partecipante trova il numero
   verde ma dichiara di preferire un canale scritto, che le
   permetterebbe di rileggere e chiarire i termini che non capisce; non trovandolo,
   sceglierebbe lo sportello. Citazione: "Preferisco scrivere, così
@@ -1406,7 +1406,7 @@ CUPweb (#link(<doc:a:06a>)[Documento~06a]), senza eseguire prenotazioni reali.
 #strong[Risultati per task:]
 
 #list(
-  [#strong[T1 --- Cercare uno specialista nella propria città.]
+  [#strong[T1: Cercare uno specialista nella propria città.]
   Il partecipante utilizza la
   ricerca per specializzazione e città senza difficoltà. Esita
   brevemente sul filtro "Visita online" e nota spontaneamente il
@@ -1414,14 +1414,14 @@ CUPweb (#link(<doc:a:06a>)[Documento~06a]), senza eseguire prenotazioni reali.
   nascosti espresso su CUPweb. Esprime dubbi sull’affidabilità
   delle recensioni. Citazione: "Qui c’è scritto il
   prezzo della visita. Questo mi piace, almeno so cosa spendo prima."],
-  [#strong[T2 --- Individuare come si annullerebbe un appuntamento.]
+  [#strong[T2: Individuare come si annullerebbe un appuntamento.]
   Il partecipante cerca
   inizialmente l’opzione di annullamento nel profilo
   del medico, poi individua il centro assistenza in fondo alla pagina
   e ricava che l’annullamento richiede l’account
   personale o il link nell’email di conferma.
   Citazione: "Quindi serve l’account."],
-  [#strong[T3 --- Individuare come contattare il professionista.]
+  [#strong[T3: Individuare come contattare il professionista.]
   Il partecipante individua
   subito il numero di telefono dello studio e il pulsante per inviare
   un messaggio, che richiede l’account. Preferisce
@@ -1489,21 +1489,21 @@ dal conduttore. Nessuna prenotazione reale.
 #strong[Risultati per task:]
 
 #list(
-  [#strong[T1 --- Cercare uno specialista nella propria città.]
+  [#strong[T1: Cercare uno specialista nella propria città.]
   Con esitazione, la
   partecipante usa la casella di ricerca; il suggerimento automatico
   corregge un errore di digitazione. Attiva per errore un filtro e si
   preoccupa del cambiamento della lista, ma lo rimuove da sola; le
   foto dei medici e la mappa la aiutano a scegliere. Citazione: "Oh,
   ha capito lui. Bravo."],
-  [#strong[T2 --- Individuare come si annullerebbe un appuntamento.]
+  [#strong[T2: Individuare come si annullerebbe un appuntamento.]
   La partecipante cerca
   l’annullamento all’interno del
   profilo della dottoressa e apre per errore la pagina di
   prenotazione; il concetto di area personale non emerge e la
   partecipante si ferma senza individuare il percorso. Citazione: "Ma
   se non ho ancora prenotato, come faccio ad annullare?"],
-  [#strong[T3 --- Individuare come contattare il professionista.]
+  [#strong[T3: Individuare come contattare il professionista.]
   La partecipante individua
   subito il numero di telefono e l’indirizzo dello
   studio, e dichiara con sicurezza che telefonerebbe: è il momento di
@@ -1571,20 +1571,20 @@ precede quello su CUPweb (#link(<doc:a:06a>)[Documento~06a]). Nessuna prenotazio
 #strong[Risultati per task:]
 
 #list(
-  [#strong[T1 --- Cercare uno specialista nella propria città.]
+  [#strong[T1: Cercare uno specialista nella propria città.]
   La partecipante cerca
   l’ortopedico nella città della madre, cambiando la
   località predefinita, e usa il filtro per disponibilità per trovare
   il primo posto libero, senza esitazioni. Citazione: "Qui ci metto un
   minuto, con il CUP ci metto mezz’ora."],
-  [#strong[T2 --- Individuare come si annullerebbe un appuntamento.]
+  [#strong[T2: Individuare come si annullerebbe un appuntamento.]
   La partecipante accede
   direttamente all’area personale e individua
   l’annullamento nell’elenco delle
   visite future; il successo è favorito dall’esperienza
   pregressa sulla piattaforma. Citazione: "In realtà l’ho
   già fatto una volta per mia mamma."],
-  [#strong[T3 --- Individuare come contattare il professionista.]
+  [#strong[T3: Individuare come contattare il professionista.]
   La partecipante individua
   subito la messaggistica con il professionista e ne apprezza la
   natura asincrona, ma osserva che le risposte arrivano solo a lei e
@@ -1648,19 +1648,19 @@ prenotazione reale.
 #strong[Risultati per task:]
 
 #list(
-  [#strong[T1 --- Cercare uno specialista nella propria città.]
+  [#strong[T1: Cercare uno specialista nella propria città.]
   La partecipante cerca
   l’oculista per la suocera e usa il filtro per
   distanza in modo mirato ("lei non guida"), senza esitazioni.
   Citazione: "Deve essere vicino, lei non guida."],
-  [#strong[T2 --- Individuare come si annullerebbe un appuntamento.]
+  [#strong[T2: Individuare come si annullerebbe un appuntamento.]
   La partecipante apre la
   pagina di accesso pensando di doversi registrare e la chiude; trova
   l’informazione nelle domande frequenti
   (annullamento tramite l’email di conferma), ma non
   il punto dell’interfaccia in cui farlo. Citazione:
   "Si fa con l’email di conferma, credo."],
-  [#strong[T3 --- Individuare come contattare il professionista.]
+  [#strong[T3: Individuare come contattare il professionista.]
   La partecipante individua
   subito la messaggistica e la preferisce al telefono, ma osserva che
   la conferma arriva solo a chi prenota e che per informare il marito
@@ -1717,14 +1717,14 @@ La scheda conclusiva riporta l’elenco delle criticità e la #link(<sec:a:sus>)
 
 La #link(<sec:a:urgency>)[curva di urgenza] integra i problemi emersi dall’ispezione e dai test.
 
-== Documento 07: Scheda conclusiva — Raccomandazioni finali della Fase A <doc:a:07>
+== Documento 07: Scheda conclusiva e raccomandazioni finali della Fase A <doc:a:07>
 
 // Titolo breve: Criticità e priorità
 
 #heading(level: 3, numbering: none, outlined: false)[Elenco delle criticità per importanza]
 
-L'elenco distingue le criticità dell'assessment (#link(<req:ID-01>)[ID-01]--#link(<req:ID-07>)[ID-07]), quelle
-riportate nelle schede dei test (#link(<req:ID-08>)[ID-08]--#link(<req:ID-12>)[ID-12]) e l'ipotesi aggiuntiva sul
+L'elenco distingue le criticità dell'assessment (da #link(<req:ID-01>)[ID-01] a #link(<req:ID-07>)[ID-07]), quelle
+riportate nelle schede dei test (da #link(<req:ID-08>)[ID-08] a #link(<req:ID-12>)[ID-12]) e l'ipotesi aggiuntiva sul
 pagamento (#link(<req:ID-13>)[ID-13]).
 
 #list(
@@ -1819,13 +1819,13 @@ pagamento (#link(<req:ID-13>)[ID-13]).
   persistenza: alta (3), perché, senza indicazioni nel modulo, la difficoltà
   di associare documenti e campi può ripresentarsi per avvisi e prestazioni diversi. I punteggi esprimono
   giudizi progettuali sul caso descritto; la frequenza non è disponibile
-  e il pagamento non rientra nei task T1--T3. La priorità progettuale è
+  e il pagamento non rientra nei task da T1 a T3. La priorità progettuale è
   immediata, per rimuovere l’ostacolo al completamento autonomo del pagamento.],
 )
 
 Le frequenze mantengono i denominatori delle schede di test: quattro
 profili su due tool, con sottoinsiemi diversi secondo task e problema.
-Per #link(<req:ID-01>)[ID-01]--#link(<req:ID-07>)[ID-07] sono disponibili giudizi qualitativi dell'assessment,
+Per le criticità da #link(<req:ID-01>)[ID-01] a #link(<req:ID-07>)[ID-07] sono disponibili giudizi qualitativi dell'assessment,
 non frequenze d'uso. Per #link(<req:ID-13>)[ID-13], impatto e persistenza sono
 valutati sul caso narrativo; non è disponibile una frequenza nei test.
 
@@ -1834,12 +1834,12 @@ valutati sul caso narrativo; non è disponibile una frequenza nei test.
 #heading(level: 3, numbering: none, outlined: false)[Valutazione quantitativa dell’usabilità: Matrice di risposta SUS] <sec:a:sus>
 
 Le otto schede preliminari riportano le risposte al #emph[System Usability
-Scale] (SUS): dieci affermazioni su scala Likert 1--5
+Scale] (SUS): dieci affermazioni su scala Likert 1-5
 #cite(<sauroSUS2011>), riferite a quattro profili su due servizi.
 La Tabella~#ref(<tab:a-12>, supplement: none) mantiene i singoli valori e rende verificabile
 il calcolo: per gli item dispari si sottrae 1 al voto; per quelli pari si
 sottrae il voto da 5. La somma dei contributi è moltiplicata per 2,5 per
-ottenere il punteggio su scala 0--100.
+ottenere il punteggio su scala 0-100.
 
 #block(width: 100%, breakable: false)[
 #align(center)[
@@ -1870,7 +1870,7 @@ ottenere il punteggio su scala 0--100.
   [9. Mi sono sentito/a molto sicuro/a nell’usarlo], [1], [2], [2], [2], [4], [1], [4], [5],
   [10. Ho dovuto imparare molte cose prima dell’uso], [1], [4], [3], [1], [2], [3], [1], [3],
   table.hline(stroke: 0.45pt + luma(170)),
-  [#strong[Punteggio SUS normalizzato (0--100)]], [#strong[40,0]], [#strong[22,5]], [#strong[55,0]], [#strong[37,5]], [#strong[72,5]], [#strong[45,0]], [#strong[80,0]], [#strong[67,5]],
+  [#strong[Punteggio SUS normalizzato (0-100)]], [#strong[40,0]], [#strong[22,5]], [#strong[55,0]], [#strong[37,5]], [#strong[72,5]], [#strong[45,0]], [#strong[80,0]], [#strong[67,5]],
   table.hline(stroke: 0.45pt + luma(170)),
   [#strong[Media campionaria per sistema]], table.cell(colspan: 4, align: center)[#strong[38,75] (non accettabile)], table.cell(colspan: 4, align: center)[#strong[66,25] (marginale, \< 68)],
   [#strong[Varianza campionaria ($s^2$)]], table.cell(colspan: 4, align: center)[#strong[177,08]], table.cell(colspan: 4, align: center)[#strong[227,08]],
@@ -1897,7 +1897,7 @@ insieme agli esiti e ai comportamenti descritti nelle schede.
 
 #heading(level: 3, numbering: none, outlined: false)[Curva di urgenza] <sec:a:urgency>
 
-La curva comprende le criticità #link(<req:ID-01>)[ID-01]--#link(<req:ID-13>)[ID-13]. Per
+La curva comprende le criticità da #link(<req:ID-01>)[ID-01] a #link(<req:ID-13>)[ID-13]. Per
 #link(<req:ID-13>)[ID-13], i giudizi progettuali di impatto alto (3) e persistenza
 alta (3) derivano dal caso di Giorgio: la difficoltà interrompe la
 compilazione autonoma e può ripresentarsi con avvisi e prestazioni diversi
@@ -1949,7 +1949,7 @@ alla prossima iterazione di design.
 ]
 
 #figure(
-  [#image("../assets/phase-a-impact-persistence.svg", width: 96%, alt: "Diagramma delle criticità ID-01–ID-13 per persistenza e impatto, con soglia a 5,5.")],
+  [#image("../assets/phase-a-impact-persistence.svg", width: 96%, alt: "Diagramma delle criticità da ID-01 a ID-13 per persistenza e impatto, con soglia a 5,5.")],
   kind: image,
   caption: [Distribuzione delle criticità per impatto e persistenza. Gli ID con punteggi uguali condividono il punto; i richiami neri collegano le etichette ai gruppi coincidenti.],
 ) <fig:urgenza>
@@ -1965,7 +1965,7 @@ conferme condivisibili e alla preparazione dei dati di pagamento.
 #heading(level: 3, numbering: none, outlined: false)[Raccomandazioni progettuali preliminari]
 
 Le raccomandazioni traducono l'analisi in direzioni di intervento:
-#link(<req:R-01>)[R-01]--#link(<req:R-06>)[R-06] riprendono i bisogni iniziali e l'assessment; #link(<req:R-07>)[R-07]--#link(<req:R-09>)[R-09]
+le raccomandazioni da #link(<req:R-01>)[R-01] a #link(<req:R-06>)[R-06] riprendono i bisogni iniziali e l'assessment; quelle da #link(<req:R-07>)[R-07] a #link(<req:R-09>)[R-09]
 rispondono alle criticità delle schede di test; #link(<req:R-10>)[R-10] affronta l'ipotesi
 aggiuntiva sulla preparazione al pagamento.
 
@@ -2013,7 +2013,7 @@ In entrambe le modalità, l'accesso ai dati sanitari segue le autorizzazioni ric
 
 #heading(level: 3, numbering: none, outlined: false)[Requisiti progettuali numerati per le fasi B e C]
 
-I requisiti traducono le direzioni #link(<req:R-01>)[R-01]--#link(<req:R-10>)[R-10] in comportamenti attesi del
+I requisiti traducono le direzioni da #link(<req:R-01>)[R-01] a #link(<req:R-10>)[R-10] in comportamenti attesi del
 servizio, mantenendo identificativi e priorità progettuali. L'esperienza
 principale è progettata per computer; l'adattamento responsive estende
 gli stessi obiettivi agli altri dispositivi. Il pagamento è accessorio e

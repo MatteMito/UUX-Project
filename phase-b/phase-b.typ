@@ -44,7 +44,7 @@ Gli scenari applicano le modalità co-pilota e delega completa alla prenotazione
   ),
   [Ambienti], [Postazione con scrivania o tavolo a casa per Pina, Amina e Renato; ufficio con postazione PC a più schermi per Elena. Rumore, interruzioni, luce riflessa e assenza di supporto tecnico immediato sono variabili frequenti.],
   [Dispositivi], [PC desktop e portatili con tastiera e mouse come dispositivi primari di interazione per tutte le personas; smartphone personale come dispositivo accessorio d'appoggio per autenticazione (ricezione codici OTP via SMS) e notifiche di promemoria, nonché per la consultazione responsive secondaria.],
-  [Tempo e pressione], [Pina procede con cautela davanti al monitor del computer; Elena interviene in finestre di 3--5 minuti dal PC dell'ufficio tra riunioni e buste paga; Renato vuole concludere in 8--10 minuti in autonomia dal suo desktop; Amina opera dal portatile di casa gestendo frequenti pause per le richieste familiari.],
+  [Tempo e pressione], [Pina procede con cautela davanti al monitor del computer; Elena interviene in finestre di 3-5 minuti dal PC dell'ufficio tra riunioni e buste paga; Renato vuole concludere in 8-10 minuti in autonomia dal suo desktop; Amina opera dal portatile di casa gestendo frequenti pause per le richieste familiari.],
   [Vincoli], [Affaticamento visivo da schermo, precisione motoria fine nell'uso del mouse (difficoltà di puntamento e doppio clic), gestione delle credenziali SPID su PC, linguaggio sanitario opaco e interruzioni operative.],
   [Attività esterne], [Recuperare ricetta NRE cartacea, consultare calendario e orari dei trasporti, confrontare costi e sedi a monitor, coordinarsi con familiari, tradurre o chiarire termini amministrativi.],
   [Assistenza], [Supporto in modalità co-pilota o esecuzione in modalità delega completa, in presenza o a distanza secondo il contesto: sostenere l'autonomia al computer senza sostituzione sistematica e senza presumere omogeneità di competenze informatiche.],
@@ -132,7 +132,7 @@ Pina conserva ricette dematerializzate (NRE), ricevute e promemoria nella “bus
   stroke: none,
   table.hline(stroke: 0.75pt),
   table.header(
-    [#strong[Dimensione]], [#strong[1--5]], [#strong[Motivazione]],
+    [#strong[Dimensione]], [#strong[1-5]], [#strong[Motivazione]],
     table.hline(stroke: 0.45pt + luma(150)),
   ),
   [Tecnica], [#text(fill: grape-purple)[#strong[1]]], [Uso incerto di PC e mouse; dipende da aiuto per credenziali e flussi.],
@@ -160,7 +160,7 @@ Pina conserva ricette dematerializzate (NRE), ricevute e promemoria nella “bus
 #strong[Stima temporale e criteri di successo:]
 
 #list(
-  [#emph[Stima temporale:] 10--15 minuti di navigazione al computer prima dell'insorgenza del blocco e della richiesta d'aiuto.],
+  [#emph[Stima temporale:] 10-15 minuti di navigazione al computer prima dell'insorgenza del blocco e della richiesta d'aiuto.],
   [#emph[Criteri di successo:] Comprensione del passo corrente a schermo, selezione autonoma e agevole con il mouse di data e sede raggiungibile tramite ampi pulsanti desktop (click target generosi), rilascio di un promemoria finale stampabile e assenza di sostituzione passiva da parte del caregiver.],
   [#emph[Rischi principali:] Selezione errata con il puntatore del mouse, frustrazione da time-out di sessione, esproprio operativo della figlia e rinuncia definitiva al canale digitale con ritorno allo sportello fisico.],
 )
@@ -231,7 +231,7 @@ La gestione di controlli clinici ricorrenti richiede continuità di contesto e s
   table.hline(stroke: 0.75pt),
   [#text(fill: grape-purple)[#strong[Profilo:]]], [52 anni, resp.~amministrativa e paghe in una coop a Bologna; vive con compagno e figlio universitario; assiste a distanza Pina a Ravenna.],
   [#text(fill: grape-purple)[#strong[Dispositivi:]]], [PC a doppio monitor in ufficio, smartphone personale sempre attivo con notifiche sincronizzate e app bancarie/sanitarie.],
-  [#text(fill: grape-purple)[#strong[Vincoli:]]], [Finestre di 3--5 min tra riunioni e buste paga, continue interruzioni, carico da #emph[sandwich generation] e timore di confondere profili.],
+  [#text(fill: grape-purple)[#strong[Vincoli:]]], [Finestre di 3-5 min tra riunioni e buste paga, continue interruzioni, carico da #emph[sandwich generation] e timore di confondere profili.],
   table.hline(stroke: 0.75pt),
 )
 ]],
@@ -260,7 +260,7 @@ Elena contrassegna gli appuntamenti della madre con un'etichetta rossa nel propr
   stroke: none,
   table.hline(stroke: 0.75pt),
   table.header(
-    [#strong[Dimensione]], [#strong[1--5]], [#strong[Motivazione]],
+    [#strong[Dimensione]], [#strong[1-5]], [#strong[Motivazione]],
     table.hline(stroke: 0.45pt + luma(150)),
   ),
   [Tecnica], [#text(fill: grape-purple)[#strong[5]]], [Usa quotidianamente PC, smartphone e servizi autenticati.],
@@ -288,7 +288,7 @@ Elena contrassegna gli appuntamenti della madre con un'etichetta rossa nel propr
 #strong[Stima temporale e criteri di successo:]
 
 #list(
-  [#emph[Stima temporale:] 3--5 minuti di esecuzione rapida, all'interno di una finestra lavorativa compressa e frammentata.],
+  [#emph[Stima temporale:] 3-5 minuti di esecuzione rapida, all'interno di una finestra lavorativa compressa e frammentata.],
   [#emph[Criteri di successo:] Disdetta conclusa e verificabile con codice identificativo prima della riunione; invio contestuale di una notifica di avvenuto annullamento a Pina; verifica inequivocabile del profilo assistito su cui è stata eseguita l'operazione.],
   [#emph[Rischi principali:] Annullamento della visita errata per fretta o distrazione, confusione tra profilo personale e delegato, e innesco di una dinamica di sostituzione permanente che espropria Pina di ogni autonomia residua.],
 )
@@ -344,7 +344,7 @@ La disdetta eseguita da Elena per conto di Pina concretizza la modalità delega 
 #[#set text(size: 8pt); #set text(weight: "bold"); #set text(fill: luma(90));  Segmento A $dot$ Utente diretto]
 ]],
   [#[#set text(size: 15pt); #set text(weight: "bold"); #set text(fill: grape-purple);  Renato Bellini] #linebreak()
-#[#set text(size: 10pt); #set text(fill: luma(90));  “Nuovo utente digitale” 65--74, moderatamente autonomo] #linebreak()
+#[#set text(size: 10pt); #set text(fill: luma(90));  “Nuovo utente digitale” 65-74, moderatamente autonomo] #linebreak()
 #[#set text(fill: grape-purple.lighten(85%)); #line(length: 100%, stroke: 0.5pt + grape-purple.lighten(85%))]
 
 #[
@@ -387,7 +387,7 @@ Renato usa il PC desktop nello studio domestico o il tablet in soggiorno, tenend
   stroke: none,
   table.hline(stroke: 0.75pt),
   table.header(
-    [#strong[Dimensione]], [#strong[1--5]], [#strong[Motivazione]],
+    [#strong[Dimensione]], [#strong[1-5]], [#strong[Motivazione]],
     table.hline(stroke: 0.45pt + luma(150)),
   ),
   [Tecnica], [#text(fill: grape-purple)[#strong[3]]], [Usa servizi comuni e SPID; non automatizza novità.],
@@ -417,7 +417,7 @@ Renato usa il PC desktop nello studio domestico o il tablet in soggiorno, tenend
 #strong[Stima temporale e criteri di successo:]
 
 #list(
-  [#emph[Stima temporale:] 8--10 minuti di navigazione autonoma sul percorso di prenotazione; l'episodio accessorio di pagamento non è incluso nella stima temporale.],
+  [#emph[Stima temporale:] 8-10 minuti di navigazione autonoma sul percorso di prenotazione; l'episodio accessorio di pagamento non è incluso nella stima temporale.],
   [#emph[Criteri di successo:] Individuazione autonoma e consapevole della combinazione ottimale di data, sede e regime tariffario; trasparenza assoluta sull'importo economico dovuto prima della convalida; generazione di un promemoria PDF chiaro e completo da stampare per la bacheca domestica.],
   [#emph[Rischi principali:] Affaticamento visivo dovuto a caratteri densi, prenotazione involontaria di prestazioni a tariffa privata e rinuncia al servizio per la scarsa trasparenza percepita.],
 )
@@ -517,7 +517,7 @@ Amina coordina visite e terapie per la suocera Nasima con un calendario murale b
   stroke: none,
   table.hline(stroke: 0.75pt),
   table.header(
-    [#strong[Dimensione]], [#strong[1--5]], [#strong[Motivazione]],
+    [#strong[Dimensione]], [#strong[1-5]], [#strong[Motivazione]],
     table.hline(stroke: 0.45pt + luma(150)),
   ),
   [Tecnica], [#text(fill: grape-purple)[#strong[3]]], [Usa browser web e posta su PC portatile; competenza SPID non documentata.],
@@ -545,7 +545,7 @@ Amina coordina visite e terapie per la suocera Nasima con un calendario murale b
 #strong[Stima temporale e criteri di successo:]
 
 #list(
-  [#emph[Stima temporale:] 7--12 minuti complessivi al PC, frammentati da pause forzate, consultazioni verbali e interruzioni ambientali.],
+  [#emph[Stima temporale:] 7-12 minuti complessivi al PC, frammentati da pause forzate, consultazioni verbali e interruzioni ambientali.],
   [#emph[Criteri di successo:] Conclusione della prenotazione su interfaccia desktop in data compatibile con i turni di lavoro e i mezzi pubblici; conservazione dello stato e dei dati compilati durante le interruzioni; generazione di una conferma visuale chiara (stampabile o condivisibile via messaggio con i familiari) per certificare la conclusione della pratica.],
   [#emph[Rischi principali:] Interpretazione scorretta della priorità clinica sul modulo web, abbandono del flusso per timore del gergo burocratico e duplicazione involontaria della prenotazione da parte di altri membri del nucleo familiare.],
 )
@@ -582,10 +582,10 @@ La gestione delegata su computer domestico condiviso esige resilienza di session
 #heading(level: 4, numbering: none, outlined: false)[Gerarchia, relazioni e funzioni nel cast]
 
 #enum(
-  [#strong[Pina --- protagonista.] Caso guida per accessibilità, fiducia e autonomia minima.],
-  [#strong[Elena --- secondaria.] Caregiver a distanza collegata a Pina; rende visibile il conflitto tra assistenza e sostituzione.],
-  [#strong[Amina --- secondaria.] Caregiver convivente; rende visibili mediazione linguistica, coordinamento familiare e gestione da PC condiviso con frequenti pause e interruzioni (preservando al contempo la continuità d'uso con la copertura responsive secondaria).],
-  [#strong[Renato --- aggiuntivo.] Controlla che le soluzioni per Pina non penalizzino efficienza, dignità e autonomia di un anziano più competente con postazione desktop a grande schermo.],
+  [#strong[Pina, protagonista.] Caso guida per accessibilità, fiducia e autonomia minima.],
+  [#strong[Elena, secondaria.] Caregiver a distanza collegata a Pina; rende visibile il conflitto tra assistenza e sostituzione.],
+  [#strong[Amina, secondaria.] Caregiver convivente; rende visibili mediazione linguistica, coordinamento familiare e gestione da PC condiviso con frequenti pause e interruzioni (preservando al contempo la continuità d'uso con la copertura responsive secondaria).],
+  [#strong[Renato, aggiuntivo.] Controlla che le soluzioni per Pina non penalizzino efficienza, dignità e autonomia di un anziano più competente con postazione desktop a grande schermo.],
 )
 
 #align(center)[
@@ -593,7 +593,7 @@ La gestione delegata su computer domestico condiviso esige resilienza di session
   #image("charts/phase-b-personas-overlay.png", width: 68%)
 ]
 
-La visualizzazione comparativa sintetizza le sei dimensioni C&A del cast su scala diretta 1--5 (1 al centro, 5 al perimetro esterno). La sovrapposizione evidenzia la complementarietà dei profili: l'area interna copre l'alta fragilità di Pina, mentre le estensioni di Elena (tecnica), Renato (linguistica e dominio) e Amina (motivazione) presidiano gli estremi dell'esperienza d'uso senza ridondanze.
+La visualizzazione comparativa sintetizza le sei dimensioni C&A del cast su scala diretta 1-5 (1 al centro, 5 al perimetro esterno). La sovrapposizione evidenzia la complementarietà dei profili: l'area interna copre l'alta fragilità di Pina, mentre le estensioni di Elena (tecnica), Renato (linguistica e dominio) e Amina (motivazione) presidiano gli estremi dell'esperienza d'uso senza ridondanze.
 
 #heading(level: 4, numbering: none, outlined: false)[Motivazione della selezione e alternative scartate]
 

@@ -16,7 +16,7 @@
   institute: none,
   seminar: [Usability & User Experience Design],
   instructor: none,
-  semester: [Anno accademico 2025–2026],
+  semester: [Anno accademico 2025-2026],
   date: none,
   submit-to: [Corso],
   submit-by: [Team Affordance],
