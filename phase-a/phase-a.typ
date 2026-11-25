@@ -622,14 +622,14 @@ fascicolo-sanitario.it, support.fascicolo-sanitario.it).
 
 #list(
   [Gratuito e disponibile 24/7, riduce la necessità di recarsi
-  fisicamente a uno sportello],
+  fisicamente a uno sportello.],
   [Integrazione con gli standard nazionali di identità digitale
-  (SPID/CIE/CNS), coerente con l’infrastruttura pubblica],
+  (SPID/CIE/CNS), coerente con l’infrastruttura pubblica.],
   [Copertura territoriale capillare su tutta la Regione Emilia-Romagna,
   con canali alternativi complementari (farmacie FarmaCUP, centri telefonici,
-  sportelli fisici) per chi non può/vuole usare il digitale],
+  sportelli fisici) per chi non può/vuole usare il digitale.],
   [È il servizio scelto per il caso progettuale: l'analisi dei percorsi
-  esistenti permette di motivare il redesign rispetto a problemi specifici],
+  esistenti permette di motivare il redesign rispetto a problemi specifici.],
 )
 
 #heading(level: 5, numbering: none, outlined: false)[Principali punti di debolezza]
@@ -670,19 +670,19 @@ completamento del compito (qui: prenotazione), fiducia e credibilità.]
   progettuale dell'ispezione, non un esito aggiuntivo dei test.],
   [#[\[]Impaginazione#[\]] Assenza di elementi visivi (icone, immagini, colori
   distintivi) che aiutino il riconoscimento rapido delle azioni
-  disponibili; il testo è l’unico veicolo informativo],
+  disponibili; il testo è l’unico veicolo informativo.],
   [#[\[]Contenuti e titoli#[\]] Terminologia tecnico-burocratica non spiegata
   in linguaggio semplice (es. "CNS", "SPID", "impegnativa
-  dematerializzata") esposta senza tooltip o spiegazioni contestuali],
+  dematerializzata") esposta senza tooltip o spiegazioni contestuali.],
   [#[\[]Completamento del compito#[\]] Prenotazione, disdetta, modifica e consultazione delle proprie
   prenotazioni richiedono autenticazione SPID (livello 2)/CIE/CNS; la home page offre
   senza autenticazione soltanto "Paga una prestazione". Nel percorso di
   prenotazione, la sequenza dei passaggi e l’avanzamento verso la conferma
-  risultano poco riconoscibili, soprattutto al primo utilizzo],
+  risultano poco riconoscibili, soprattutto al primo utilizzo.],
   [#[\[]Accessibility#[\]] Segnalazioni pubbliche di incompatibilità con
   screen reader per utenti non vedenti, nonostante
   l’esistenza di una dichiarazione di accessibilità
-  formale],
+  formale.],
 )
 
 // Titolo breve: Analisi inversa
@@ -751,21 +751,21 @@ recensioni a stelle, iconografia chiara).
 
 #list(
   [Un solo dominio, un solo brand coerente per tutto il flusso, nessun
-  salto percepito di fiducia come invece accade in CUPweb],
+  salto percepito di fiducia come invece accade in CUPweb.],
   [Registrazione/accesso semplificato (email o numero di telefono), senza
   richiedere un’identità digitale certificata come SPID
-  per la sola consultazione o prenotazione],
+  per la sola consultazione o prenotazione.],
   [Interfaccia fortemente visiva: foto dei professionisti, valutazioni a
   stelle, filtri chiari, mappa, riduce il carico cognitivo rispetto
-  al solo testo],
+  al solo testo.],
   [Promemoria automatici e possibilità di messaggistica diretta col
-  professionista, elementi di rassicurazione assenti in CUPweb],
+  professionista, elementi di rassicurazione assenti in CUPweb.],
   [È stato scelto come termine di paragone perché, pur avendo uno scopo
   diverso (mercato privato vs. sanità pubblica), rappresenta un
   benchmark di riferimento per gli standard di semplicità che un utente
   anziano o il suo caregiver oggi si aspettano da un moderno servizio
   di prenotazione sanitaria, avendola probabilmente già vista usare da
-  altri familiari],
+  altri familiari.],
 )
 
 #heading(level: 5, numbering: none, outlined: false)[Principali punti di debolezza]
@@ -782,7 +782,7 @@ sovraccarico da filtri nell'analisi inversa.
 ===== 2.1.3 Analisi diretta
 
 #emph[Analisi diretta secondo le stesse categorie consolidate di
-usabilità applicate a CUPweb (#link(<doc:a:05a>)[Documento~05a]): navigazione, ricerca,
+usabilità applicate a CUPweb: navigazione, ricerca,
 organizzazione e struttura dei contenuti, contenuti e titoli,
 impaginazione, completamento del compito, fiducia e credibilità.]
 
@@ -792,13 +792,13 @@ impaginazione, completamento del compito, fiducia e credibilità.]
   [#[\[]Fiducia e credibilità#[\]] Il sistema di recensioni moderate genera
   sospetto in una parte degli utenti, minando proprio
   l’elemento di fiducia che dovrebbe essere il punto di
-  forza],
+  forza.],
   [#[\[]Completamento del compito#[\]] Il login, secondo segnalazioni reali, può
   risultare inutilmente lungo (redirect multipli tra app e browser) su
-  alcuni dispositivi],
+  alcuni dispositivi.],
   [#[\[]Navigazione#[\]] Buona nel complesso: ricerca a faccette e mappa
   riducono il carico di navigazione libera, un pattern che vale la pena
-  studiare per il redesign],
+  studiare per il redesign.],
 )
 
 // Titolo breve: Analisi inversa
@@ -813,11 +813,11 @@ specialistica vicino a casa, come utente al primo accesso".]
 #list(
   [Il primo accesso è comunque mediato da un passaggio di registrazione,
   anche se più leggero di SPID, un piccolo attrito resta anche nel
-  miglior competitor osservato],
+  miglior competitor osservato.],
   [La grande quantità di filtri e opzioni (assicurazione, videoconsulto,
   tipo di visita) può risultare eccessiva per un utente che cerca
   semplicemente "la prossima visita disponibile", un rischio di
-  sovraccarico da tenere presente anche nel nostro redesign],
+  sovraccarico da tenere presente anche nel nostro redesign.],
 )
 
 // --- Card 06 ----------------------------------------------------
@@ -1731,43 +1731,42 @@ pagamento (#link(<req:ID-13>)[ID-13]).
   [#strong[ID-01]<req:ID-01>: #strong[Posizione:] flusso di autenticazione, primo passo
   di ogni azione. Autenticazione obbligatoria complessa (SPID/CIE)
   richiesta fin dal primo passo, anche per compiti semplici, impatto:
-  alto; persistenza: alta; metodo di scoperta: analisi diretta (#link(<doc:a:05a>)[Documento~05a]),
+  alto; persistenza: alta; metodo di scoperta: analisi diretta,
   illustrato nel racconto di Carla; il caso di Giorgio distingue invece
-  l'accesso tecnico dalla comprensione delle condizioni],
+  l'accesso tecnico dalla comprensione delle condizioni.],
   [#strong[ID-02]<req:ID-02>: #strong[Posizione:] passaggio tra domini/sottodomini del
   servizio. Frammentazione tra domini scollegati tra loro (cupweb.it,
   pagonlinesanita.it, fascicolo-sanitario.it). Nel pagamento, la destinazione
   non annunciata può essere percepita come estranea alla pratica; impatto:
   medio-alto (2,5), perché il cambio di dominio genera incertezza senza
   impedire tecnicamente la prosecuzione; persistenza: alta (3), perché
-  il passaggio si ripete fra servizi; metodo di scoperta: analisi diretta (#link(<doc:a:05a>)[Documento~05a]).
+  il passaggio si ripete fra servizi; metodo di scoperta: analisi diretta.
   Il racconto del caso di Giorgio ne illustra una possibile
-  conseguenza],
+  conseguenza.],
   [#strong[ID-03]<req:ID-03>: #strong[Posizione:] impaginazione generale del sito.
   Interfaccia poco gerarchizzata, prevalentemente testuale, priva di
   elementi visivi di orientamento, impatto: medio; persistenza: alta;
-  metodo di scoperta: analisi diretta (#link(<doc:a:05a>)[Documento~05a])],
+  metodo di scoperta: analisi diretta.],
   [#strong[ID-04]<req:ID-04>: #strong[Posizione:] pagina di scelta del canale (SSN /
   Libera Professione) e contenuti informativi in generale. Terminologia
   tecnico-burocratica non spiegata (SPID, CNS, impegnativa
   dematerializzata), impatto: medio; persistenza: media; metodo di
-  scoperta: analisi diretta e inversa (#link(<doc:a:05a>)[Documento~05a]), illustrato nel caso di Giorgio
-  attraverso il dubbio SSN/Libera Professione],
+  scoperta: analisi diretta e inversa, illustrato nel caso di Giorgio
+  attraverso il dubbio SSN/Libera Professione.],
   [#strong[ID-05]<req:ID-05>: #strong[Posizione:] percorso di prenotazione.
   Scarsa riconoscibilità della sequenza dei passaggi e dell’avanzamento
   verso la conferma, soprattutto al primo utilizzo;
   impatto: alto (3); persistenza: medio-alta (2,5), perché la familiarità
   con il percorso può attenuare il disorientamento senza risolvere la
-  scarsa visibilità dell’avanzamento; metodo di scoperta: analisi diretta
-  (#link(<doc:a:05a>)[Documento~05a]), coerente con le esigenze descritte nei due casi del segmento A],
+  scarsa visibilità dell’avanzamento; metodo di scoperta: analisi diretta, coerente con le esigenze descritte nei due casi del segmento A.],
   [#strong[ID-06]<req:ID-06>: #strong[Posizione:] intera web application (desktop e mobile), per utenti con
   tecnologie assistive. Problemi di accessibilità, impatto: alto (per
   il sottoinsieme di utenti coinvolti); persistenza: media; metodo di
-  scoperta: analisi diretta (#link(<doc:a:05a>)[Documento~05a]), da segnalazioni pubbliche],
+  scoperta: analisi diretta, da segnalazioni pubbliche.],
   [#strong[ID-07]<req:ID-07>: #strong[Posizione:] sezione cronologia e gestione appuntamenti
   su browser mobile. Tabelle dense e non responsive, elenco non agevolmente
   ordinabile o filtrabile per data su schermo piccolo, impatto: basso-medio;
-  persistenza: media; metodo di scoperta: analisi inversa (#link(<doc:a:05a>)[Documento~05a]), da
+  persistenza: media; metodo di scoperta: analisi inversa, da
   segnalazioni di utenti reali su mobile. Pertinenza per il redesign:
   adattamento responsive secondario.],
   [#strong[ID-08]<req:ID-08>: #strong[Posizione:] schermata di modifica/disdetta di un
@@ -1779,7 +1778,7 @@ pagamento (#link(<req:ID-13>)[ID-13]).
   frequenza: 2/4 soggetti testati sul task T2 (Giorgio e Carla;
   Silvia e Fatima completano l’azione senza questa
   esitazione; #link(<doc:a:06a>)[Documento~06a]); metodo di scoperta: test utente (#link(<doc:a:06a>)[Documento~06a]),
-  non emerso dall’expert review],
+  non emerso dall’expert review.],
   [#strong[ID-09]<req:ID-09>: #strong[Posizione:] messaggio di conferma dopo la
   disdetta o la prenotazione di un appuntamento (task T2/T3). La
   conferma è generica ("operazione eseguita") o comunque visibile solo
@@ -1788,14 +1787,14 @@ pagamento (#link(<req:ID-13>)[ID-13]).
   manuale); impatto: medio-alto (soprattutto per il Segmento B);
   persistenza: alta; frequenza: 2/2 soggetti del Segmento B che hanno
   affrontato il tema (Silvia, #link(<doc:a:06a>)[Documento~06a]\; Fatima, #link(<doc:a:06b>)[Documento~06b]);
-  metodo di scoperta: test utente (#link(<doc:a:06a>)[Documento~06a] e #link(<doc:a:06b>)[Documento~06b])],
+  metodo di scoperta: test utente (#link(<doc:a:06a>)[Documento~06a] e #link(<doc:a:06b>)[Documento~06b]).],
   [#strong[ID-10]<req:ID-10>: #strong[Posizione:] flusso di prenotazione per conto di
   un familiare associato (task T1). La selezione del familiare per cui
   si sta prenotando non è visibile o chiara nel punto del flusso in
   cui serve; impatto: alto (ostacola l’uso
   multi-profilo tipico del caregiver, centrale per il progetto HPHP);
   persistenza: alta; metodo di scoperta: test utente (#link(<doc:a:06a>)[Documento~06a]), soggetto
-  Silvia],
+  Silvia.],
   [#strong[ID-11]<req:ID-11>: #strong[Posizione:] gestione della sessione durante
   un’interruzione (task T2). Un’interruzione
   esterna (es. una telefonata) fa scadere la sessione autenticata e
@@ -1803,14 +1802,14 @@ pagamento (#link(<req:ID-13>)[ID-13]).
   del lavoro già svolto; impatto: alto per l’uso reale
   al computer, tra attività lavorative e familiari; persistenza:
   da confermare con più soggetti; metodo di scoperta: test utente
-  (#link(<doc:a:06a>)[Documento~06a]), soggetto Fatima],
+  (#link(<doc:a:06a>)[Documento~06a]), soggetto Fatima.],
   [#strong[ID-12]<req:ID-12>: #strong[Posizione:] sezione di assistenza/aiuto.
   Assenza di un canale di assistenza scritto/asincrono: è disponibile
   solo il numero verde telefonico, inadeguato per chi ha vincoli di
   orario lavorativo o necessità di chiarire i termini della procedura;
   impatto: medio-alto; persistenza: alta; frequenza: 2/2 soggetti che
   hanno cercato un canale scritto sul task T3 (Silvia, #link(<doc:a:06a>)[Documento~06a]\;
-  Fatima, #link(<doc:a:06a>)[Documento~06a]); metodo di scoperta: test utente (#link(<doc:a:06a>)[Documento~06a])],
+  Fatima, #link(<doc:a:06a>)[Documento~06a]); metodo di scoperta: test utente (#link(<doc:a:06a>)[Documento~06a]).],
   [#strong[ID-13]<req:ID-13>: #strong[Posizione:] preparazione dei dati e compilazione
   del modulo di pagamento. Difficoltà nel riconoscere quali informazioni
   inserire e su quale documento reperirle; origine: racconto di Giorgio
@@ -1995,7 +1994,7 @@ In entrambe le modalità, l'accesso ai dati sanitari segue le autorizzazioni ric
   alle opzioni di assistenza disponibili.],
   [#strong[R-05]<req:R-05>: Verificare la compatibilità con tecnologie assistive,
   coerentemente con la dichiarazione di accessibilità.
-  La raccomandazione deriva dall'assessment (#link(<doc:a:05a>)[Documento~05a]); i test
+  La raccomandazione deriva dall'assessment; i test
   preliminari non includono partecipanti con disabilità visiva.],
   [#strong[R-06]<req:R-06>: Distinguere il supporto all'autonomia in modalità
   co-pilota dall'esecuzione autorizzata per conto dell'interessato in
