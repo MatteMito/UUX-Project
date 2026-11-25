@@ -835,11 +835,11 @@ Il pilota e le schede dei test documentano il protocollo per il #link(<doc:a:06a
 Il pilot interno verifica istruzioni, durata e neutralità della conduzione.
 Il conteggio dei partecipanti riguarda le sessioni con gli utenti.
 
-#heading(level: 5, numbering: none, outlined: false)[Partecipanti alla simulazione]
+#heading(level: 5, numbering: none, outlined: false)[Partecipanti al pilot]
 
 #strong[Data:] 21/09/2026
 
-#strong[Partecipante simulato:] membro del team, scelto per
+#strong[Partecipante:] membro del team, scelto per
 rappresentare un utente con competenze digitali di base e una
 familiarità limitata con il flusso di prenotazione sanitaria online.
 
@@ -849,7 +849,7 @@ delle successive sessioni di User Testing.
 #strong[Osservatore:] secondo membro del team, incaricato di annotare
 tempi, punti di ambiguità e possibili interferenze del conduttore.
 
-#strong[Modalità:] simulazione individuale, utilizzando il medesimo
+#strong[Modalità:] sessione pilota individuale, utilizzando il medesimo
 ambiente e la medesima configurazione prevista per le sessioni successive.
 
 #heading(level: 5, numbering: none, outlined: false)[Protocollo verificato]
@@ -859,7 +859,7 @@ richiesta di verbalizzare pensieri e aspettative, task senza indicazioni
 sul percorso, registrazione di errori e richieste di conferma, commenti
 conclusivi ed eventuale questionario SUS.
 
-#heading(level: 5, numbering: none, outlined: false)[Task simulati]
+#heading(level: 5, numbering: none, outlined: false)[Task del pilot]
 
 #list(
   [#strong[T1:] individuare autonomamente il percorso di prenotazione,
@@ -870,7 +870,7 @@ conclusivi ed eventuale questionario SUS.
   senza inviare una richiesta.],
 )
 
-#heading(level: 5, numbering: none, outlined: false)[Esito della simulazione]
+#heading(level: 5, numbering: none, outlined: false)[Esito del pilot]
 
 Il dry run evidenzia due rischi: suggerire il percorso durante un'esitazione
 e confondere errori, richieste di conferma e blocchi per credenziali o dati
