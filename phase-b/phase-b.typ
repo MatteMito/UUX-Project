@@ -638,7 +638,7 @@ Pina copre l'utente diretto con bassa autonomia su PC. Elena e Amina appartengon
   [#strong[C-10]<req:C-10>:], [Ruoli, autorizzazioni e limiti devono restare espliciti in entrambe le modalità; la delega completa riguarda l'esecuzione del compito e non implica accesso illimitato ai dati sanitari.],
   [#strong[C-11]<req:C-11>:], [La sessione web su desktop deve tollerare le pause d'inattività senza perdita di lavoro compilato, garantendo continuità anche nella copertura responsive secondaria per schermi mobili.],
   [#strong[C-12]<req:C-12>:], [Stati e conferme condivisibili devono coordinare i familiari senza creare duplicazioni o accessi impliciti ai dati.],
-  [#strong[C-13]<req:C-13>:], [Il pagamento accessorio deve spiegare l'eventuale destinazione esterna e aiutare a individuare documento e dati richiesti, con esempi contestuali consultabili senza perdere la compilazione (#link(<req:P-06>)[P-06], #link(<req:P-08>)[P-08]\; #link(<req:REQ-02>)[REQ-02], #link(<req:REQ-10>)[REQ-10]).],
+  [#strong[C-13]<req:C-13>:], [Il pagamento accessorio deve spiegare l'eventuale destinazione esterna e aiutare a individuare documento e dati richiesti, con esempi contestuali consultabili senza perdere la compilazione.],
   table.hline(stroke: 0.75pt),
 )
 ]
