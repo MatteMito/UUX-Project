@@ -104,7 +104,7 @@ Da copiare e compilare una volta per soggetto nel Documento 06a o 06b di `phase-
 === Test \#1 --- Soggetto: \[codice partecipante\]
 
 *Data:* \[gg/mm/aaaa\] \
-*Assistente/conduttore:* \[nome\] \
+*Conduttore:* \[nome\] \
 *Osservatore:* \[nome\]
 
 *Contesto:* \[dove si è svolto il test, dispositivo usato, presenza di terzi\]

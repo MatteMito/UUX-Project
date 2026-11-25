@@ -1000,7 +1000,7 @@ la conduzione con un profilo meno fragile.
 
 #strong[Data:] 22/09/2026
 
-#strong[Assistente/conduttore:] Francesco Maria Fuligni
+#strong[Conduttore:] Francesco Maria Fuligni
 
 #strong[Osservatore:] Alessandro Campedelli
 
@@ -1080,7 +1080,7 @@ verificare una scelta senza perdere il lavoro già svolto.
 
 #strong[Data:] 23/09/2026
 
-#strong[Assistente/conduttore:] Alessandro Campedelli
+#strong[Conduttore:] Alessandro Campedelli
 
 #strong[Osservatore:] Francesco Maria Fuligni
 
@@ -1164,7 +1164,7 @@ da confrontare con una pagina di assistenza separata.
 
 #strong[Data:] 23/09/2026, ore 18:45
 
-#strong[Assistente/conduttore:] Matteo Boscherini
+#strong[Conduttore:] Matteo Boscherini
 
 #strong[Osservatore:] Francesco Maria Fuligni
 
@@ -1243,7 +1243,7 @@ nel #link(<doc:a:07>)[Documento~07].
 
 #strong[Data:] 24/09/2026, ore 13:10
 
-#strong[Assistente/conduttore:] Matteo Boscherini
+#strong[Conduttore:] Matteo Boscherini
 
 #strong[Osservatore:] Alessandro Campedelli
 
@@ -1393,7 +1393,7 @@ convenienza, come nel #link(<doc:a:06a>)[Documento~06a].
 
 #strong[Data:] 23/09/2026
 
-#strong[Assistente/conduttore:] Francesco Maria Fuligni
+#strong[Conduttore:] Francesco Maria Fuligni
 
 #strong[Osservatore:] Alessandro Campedelli
 
@@ -1475,7 +1475,7 @@ percepite come poco affidabili e annullamento legato all’account.
 
 #strong[Data:] 24/09/2026
 
-#strong[Assistente/conduttore:] Alessandro Campedelli
+#strong[Conduttore:] Alessandro Campedelli
 
 #strong[Osservatore:] Francesco Maria Fuligni
 
@@ -1556,7 +1556,7 @@ all’errore di digitazione.
 
 #strong[Data:] 23/09/2026, ore 18:30
 
-#strong[Assistente/conduttore:] Matteo Boscherini
+#strong[Conduttore:] Matteo Boscherini
 
 #strong[Osservatore:] Francesco Maria Fuligni
 
@@ -1636,7 +1636,7 @@ una direzione progettuale per distinguere l'assistenza dall'uso individuale.
 
 #strong[Data:] 24/09/2026, ore 13:30
 
-#strong[Assistente/conduttore:] Matteo Boscherini
+#strong[Conduttore:] Matteo Boscherini
 
 #strong[Osservatore:] Alessandro Campedelli
 
