@@ -94,16 +94,10 @@ redesign.
 #show bibliography: set text(size: 10pt)
 #show bibliography: set par(leading: 0.65em, justify: false, first-line-indent: 0pt)
 
-#heading(level: 1, numbering: none)[Riferimenti]
+#heading(level: 1, numbering: none)[Fonti]
 
-La bibliografia raccoglie libri, capitoli, articoli e rapporti, anche quando
-disponibili online; la sitografia raccoglie le pagine e le risorse web.
-Le date di consultazione si riferiscono all'accesso agli URL indicati.
-
-== Bibliografia
-
-#bibliography("references/references.bib", title: none)
-
-== Sitografia
-
-#bibliography("references/web-references.bib", title: none)
+#bibliography(
+  ("references/references.bib", "references/web-references.bib"),
+  title: none,
+  style: "references/fonti.csl",
+)

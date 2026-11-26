@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" default-locale="it-IT">
+  <info>
+    <title>HPHP Fonti</title>
+    <id>hphp-fonti</id>
+    <updated>2026-11-26T00:00:00+00:00</updated>
+  </info>
+  <!-- Compact numeric list: books without URLs, reports and web pages on one uniform line. -->
+  <macro name="author">
+    <names variable="author">
+      <name initialize-with=". " delimiter=", "/>
+    </names>
+  </macro>
+  <macro name="year">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+  <macro name="access">
+    <group delimiter=" ">
+      <text variable="URL"/>
+      <group prefix="(" suffix=")">
+        <text value="consultato: "/>
+        <date variable="accessed" delimiter="/">
+          <date-part name="day" form="numeric-leading-zeros"/>
+          <date-part name="month" form="numeric-leading-zeros"/>
+          <date-part name="year"/>
+        </date>
+      </group>
+    </group>
+  </macro>
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout prefix="[" suffix="]" delimiter=", ">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+  <bibliography second-field-align="flush" entry-spacing="0">
+    <layout suffix=".">
+      <text variable="citation-number" prefix="[" suffix="]"/>
+      <group delimiter=", ">
+        <text macro="author"/>
+        <text variable="title" font-style="italic"/>
+        <choose>
+          <if type="book">
+            <group>
+              <text variable="edition"/>
+              <text value="ª ed."/>
+            </group>
+            <text variable="publisher"/>
+            <text macro="year"/>
+          </if>
+          <else>
+            <text macro="year"/>
+            <text macro="access"/>
+          </else>
+        </choose>
+      </group>
+    </layout>
+  </bibliography>
+</style>

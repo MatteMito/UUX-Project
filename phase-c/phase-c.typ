@@ -11,7 +11,7 @@
 
 #heading(level: 3, numbering: none)[Documento 01: 4.0 Adozione di un modello di progettazione] <doc:c:01>
 
-Il team parte dagli obiettivi degli utenti emersi nelle Fasi A e B~#cite(<cooperAboutFace2007>) e sviluppa la proposta con un processo iterativo~#cite(<iso9241210_2010>). Le scelte progettuali sono organizzate in cinque piani~#cite(<garrettElements2011>).
+Il team parte dagli obiettivi degli utenti emersi nelle Fasi A e B~#cite(<cooperAboutFace2007>) e sviluppa la proposta con un processo iterativo~#cite(<iso9241210_2019>). Le scelte progettuali sono organizzate in cinque piani~#cite(<garrettElements2011>).
 
 #enum(
   [#strong[Strategy Plane:] allinea gli obiettivi del servizio sanitario regionale (riduzione dell'abbandono digitale e inclusione delle fasce fragili) ai bisogni emersi dalle quattro personas: autonomia protetta sul PC di casa per Pina, rapidità di gestione per Elena, trasparenza dei costi per Renato e continuità operativa per Amina.],
