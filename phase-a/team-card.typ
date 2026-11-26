@@ -1,4 +1,4 @@
-#strong[Nome del gruppo:] Team Affordance
+#strong[Nome del gruppo:] Team Ctrl+Salute
 
 #heading(level: 5, numbering: none, outlined: false)[Componenti del gruppo]
 

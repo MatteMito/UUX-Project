@@ -5,7 +5,7 @@
 #counter(figure.where(kind: image)).update(0)
 #counter(figure.where(kind: table)).update(0)
 
-// Fase D: valutazione del redesign (HPHP - Team Affordance).
+// Fase D: valutazione del redesign (HPHP - Team Ctrl+Salute).
 
 #heading(level: 1, numbering: none)[FASE D]
 #block(sticky: true)[#text(size: 13pt, weight: "semibold")[Valutazione del redesign]]
@@ -883,7 +883,7 @@ HPHP (#link(<doc:a:02>)[Documento~02]) mirava a ridurre le barriere digitali di 
 
 #heading(level: 3, numbering: none, outlined: false)[Errori del team e correzioni]
 
-Il Team Affordance ha riconosciuto e corretto quattro errori:
+Il Team Ctrl+Salute ha riconosciuto e corretto quattro errori:
 
 #enum(
   [#strong[Canale di accesso.] Le prime ipotesi tra Fase B e Fase C prevedevano un flusso mobile con codice SMS a ogni accesso. Il riesame delle personas (#link(<doc:b:02a>)[Documento~02a], #link(<doc:b:02c>)[Documento~02c]) ha mostrato che per un anziano al PC leggere un SMS sul telefono riproduce la barriera a due fattori di SPID; il team ha riprogettato la Fase C come suite desktop con PIN valido 30 giorni.],
